@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (
 )
 
 from . import oauth, winutil
+from .i18n import tr
 from .settings import APP_TITLE
 
 QSS = """
@@ -42,7 +43,7 @@ class OAuthDialog(QDialog):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle(f"{APP_TITLE} – bejelentkezés")
+        self.setWindowTitle(f"{APP_TITLE} – " + tr("dlg.login_title"))
         self.setWindowIcon(winutil.app_icon())
         self.setStyleSheet(QSS)
         self.setMinimumWidth(460)
@@ -50,31 +51,29 @@ class OAuthDialog(QDialog):
         self._verifier, challenge = oauth.new_pkce()
         self._url, self._state = oauth.build_authorize(self._verifier, challenge)
 
-        intro = QLabel("Bejelentkezés a claude.ai-fiókodba a saját böngésződben "
-                       "(ott a jelszavaid és passkey-d már működnek).")
+        intro = QLabel(tr("dlg.intro"))
         intro.setWordWrap(True)
 
-        s1 = QLabel("1. lépés")
+        s1 = QLabel(tr("dlg.step1"))
         s1.setObjectName("big")
-        btn_open = QPushButton("Bejelentkezés megnyitása a böngészőben")
+        btn_open = QPushButton(tr("dlg.open_browser"))
         btn_open.setObjectName("link")
         btn_open.clicked.connect(self._open_browser)
-        hint1 = QLabel("A megnyíló oldalon lépj be és engedélyezd a hozzáférést. "
-                       "A végén kapsz egy kódot.")
+        hint1 = QLabel(tr("dlg.hint1"))
         hint1.setObjectName("step")
         hint1.setWordWrap(True)
 
-        s2 = QLabel("2. lépés")
+        s2 = QLabel(tr("dlg.step2"))
         s2.setObjectName("big")
-        hint2 = QLabel("Másold be ide a kapott kódot:")
+        hint2 = QLabel(tr("dlg.paste_label"))
         hint2.setObjectName("step")
         self.ed = QLineEdit()
-        self.ed.setPlaceholderText("kód beillesztése ide")
+        self.ed.setPlaceholderText(tr("dlg.paste_placeholder"))
         self.ed.returnPressed.connect(self._submit)
 
         self.buttons = QDialogButtonBox()
-        self.btn_ok = self.buttons.addButton("Bejelentkezés", QDialogButtonBox.ButtonRole.AcceptRole)
-        self.btn_cancel = self.buttons.addButton("Mégse", QDialogButtonBox.ButtonRole.RejectRole)
+        self.btn_ok = self.buttons.addButton(tr("dlg.signin"), QDialogButtonBox.ButtonRole.AcceptRole)
+        self.btn_cancel = self.buttons.addButton(tr("dlg.cancel"), QDialogButtonBox.ButtonRole.RejectRole)
         self.btn_ok.clicked.connect(self._submit)
         self.btn_cancel.clicked.connect(self.reject)
 
@@ -110,26 +109,18 @@ class OAuthDialog(QDialog):
             pasted = f"{code}#{state}" if code else pasted
 
         self.btn_ok.setEnabled(False)
-        self.btn_ok.setText("Ellenőrzés…")
+        self.btn_ok.setText(tr("dlg.checking"))
         QGuiApplication.processEvents()
 
         tokens, err = oauth.exchange_code(pasted, self._verifier, self._state)
         self.btn_ok.setEnabled(True)
-        self.btn_ok.setText("Bejelentkezés")
+        self.btn_ok.setText(tr("dlg.signin"))
 
         if tokens and tokens.get("access_token"):
             self.succeeded.emit(tokens)
             self.accept()
         elif "429" in err or "rate_limit" in err:
-            QMessageBox.warning(
-                self, APP_TITLE,
-                "Túl sok bejelentkezési próbálkozás rövid idő alatt.\n\n"
-                "A szerver átmenetileg korlátoz. Zárd be ezt az ablakot, várj\n"
-                "10–15 percet (ne próbálkozz közben), majd indíts EGYETLEN új\n"
-                "böngészős bejelentkezést friss kóddal.")
+            QMessageBox.warning(self, APP_TITLE, tr("dlg.err_ratelimit"))
         else:
-            QMessageBox.warning(
-                self, APP_TITLE,
-                "A kód nem fogadható el.\n\n" + (err or "Ismeretlen hiba.") +
-                "\n\nEllenőrizd, hogy a teljes kódot másoltad-e be, vagy próbáld újra "
-                "a böngészős bejelentkezést (mindig friss kód kell).")
+            QMessageBox.warning(self, APP_TITLE,
+                                tr("dlg.err_badcode", err or tr("dlg.unknown_err")))

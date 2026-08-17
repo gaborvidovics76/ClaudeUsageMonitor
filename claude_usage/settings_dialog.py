@@ -30,6 +30,7 @@ from PySide6.QtWidgets import (
 from . import winutil
 from .datasource import default_data_path
 from .settings import APP_TITLE, Settings, config_dir
+from .i18n import tr
 from .theme import THEMES, rgba_to_hex
 
 LAYOUTS = [("postit", "Post-it kártya"), ("compact", "Vékony sáv"), ("ring", "Körgyűrűk")]
@@ -69,20 +70,20 @@ class SettingsDialog(QDialog):
         super().__init__(parent)
         self.s = settings
         self._loading = True
-        self.setWindowTitle(f"{APP_TITLE} – beállítások")
+        self.setWindowTitle(f"{APP_TITLE} – " + tr("set.title"))
         self.setWindowIcon(winutil.app_icon())
         self.setStyleSheet(DIALOG_QSS)
         self.setMinimumWidth(430)
 
         tabs = QTabWidget(self)
-        tabs.addTab(self._tab_appearance(), "Megjelenés")
-        tabs.addTab(self._tab_content(), "Tartalom")
-        tabs.addTab(self._tab_alerts(), "Riasztások")
-        tabs.addTab(self._tab_data(orgs), "Adatforrás")
-        tabs.addTab(self._tab_system(), "Rendszer")
+        tabs.addTab(self._tab_appearance(), tr("set.tab_appearance"))
+        tabs.addTab(self._tab_content(), tr("set.tab_content"))
+        tabs.addTab(self._tab_alerts(), tr("set.tab_alerts"))
+        tabs.addTab(self._tab_data(orgs), tr("set.tab_data"))
+        tabs.addTab(self._tab_system(), tr("set.tab_system"))
 
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Close, self)
-        buttons.button(QDialogButtonBox.StandardButton.Close).setText("Bezárás")
+        buttons.button(QDialogButtonBox.StandardButton.Close).setText(tr("set.close"))
         buttons.rejected.connect(self.accept)
         buttons.accepted.connect(self.accept)
 
@@ -145,79 +146,78 @@ class SettingsDialog(QDialog):
         page, form = self._page()
 
         self.cb_theme = QComboBox()
-        for key, data in THEMES.items():
-            self.cb_theme.addItem(str(data["label"]), key)
+        for key in THEMES:
+            self.cb_theme.addItem(tr("theme." + key), key)
         idx = self.cb_theme.findData(self.s["theme"])
         self.cb_theme.setCurrentIndex(max(0, idx))
         self.cb_theme.currentIndexChanged.connect(
             lambda: self._set("theme", self.cb_theme.currentData()))
-        form.addRow("Téma", self.cb_theme)
+        form.addRow(tr("set.theme"), self.cb_theme)
 
         accent_box = QWidget()
         alay = QHBoxLayout(accent_box)
         alay.setContentsMargins(0, 0, 0, 0)
-        self.btn_accent = QPushButton("Szín választása…")
+        self.btn_accent = QPushButton(tr("set.pick_color"))
         self.btn_accent.clicked.connect(self._pick_accent)
-        btn_clear = QPushButton("Alap")
-        btn_clear.setFixedWidth(56)
+        btn_clear = QPushButton(tr("set.default"))
         btn_clear.clicked.connect(lambda: (self._set("accent", ""), self._refresh_accent()))
         alay.addWidget(self.btn_accent, 1)
         alay.addWidget(btn_clear)
-        form.addRow("Kiemelőszín", accent_box)
+        form.addRow(tr("set.accent"), accent_box)
         self._refresh_accent()
 
         self.cb_layout = QComboBox()
-        for key, label in LAYOUTS:
-            self.cb_layout.addItem(label, key)
+        for key, _label in LAYOUTS:
+            self.cb_layout.addItem(tr("layout." + key), key)
         self.cb_layout.setCurrentIndex(max(0, self.cb_layout.findData(self.s["layout"])))
         self.cb_layout.currentIndexChanged.connect(
             lambda: self._set("layout", self.cb_layout.currentData()))
-        form.addRow("Elrendezés", self.cb_layout)
+        form.addRow(tr("set.layout"), self.cb_layout)
 
-        form.addRow("Méret", self._slider("scale", 70, 200, 0.01, "×"))
-        form.addRow("Átlátszatlanság", self._slider("opacity", 25, 100, 0.01, ""))
+        form.addRow(tr("set.size"), self._slider("scale", 70, 200, 0.01, "×"))
+        form.addRow(tr("set.opacity"), self._slider("opacity", 25, 100, 0.01, ""))
 
-        form.addRow("", self._check("visible", "Lebegő panel látszik"))
-        form.addRow("", self._check("always_on_top", "Mindig a többi ablak felett"))
-        form.addRow("", self._check("locked", "Pozíció rögzítése (nem húzható)"))
-        form.addRow("", self._check("snap_edges", "Tapadás a képernyő széléhez"))
-        form.addRow("", self._check("show_in_taskbar", "Megjelenés a tálcán (ablakként)"))
-        ct = self._check("click_through", "Kattintás-átengedés (csak dísz, nem fogad egeret)")
+        form.addRow("", self._check("visible", tr("set.visible")))
+        form.addRow("", self._check("always_on_top", tr("set.always_top")))
+        form.addRow("", self._check("locked", tr("set.lock")))
+        form.addRow("", self._check("snap_edges", tr("set.snap")))
+        form.addRow("", self._check("show_in_taskbar", tr("set.taskbar")))
+        ct = self._check("click_through", tr("set.click_through"))
         form.addRow("", ct)
 
-        hint = QLabel("Tipp: a panelt bal gombbal húzhatod, Ctrl+görgő méretez,\n"
-                      "jobb gomb = menü, dupla kattintás = előzmények.")
+        hint = QLabel(tr("set.tip"))
         hint.setObjectName("hint")
         form.addRow("", hint)
         return page
 
     def _refresh_accent(self) -> None:
         value = self.s["accent"]
-        self.btn_accent.setText(value.upper() if value else "Téma szerinti")
+        self.btn_accent.setText(value.upper() if value else tr("set.theme_default"))
 
     def _pick_accent(self) -> None:
         current = QColor(self.s["accent"] or "#7AA2FF")
-        color = QColorDialog.getColor(current, self, "Kiemelőszín")
+        color = QColorDialog.getColor(current, self, tr("set.accent"))
         if color.isValid():
             self._set("accent", color.name())
             self._refresh_accent()
 
     def _tab_content(self) -> QWidget:
         page, form = self._page()
-        form.addRow("", self._check("show_five_hour", "5 órás ablak mutatása"))
-        form.addRow("", self._check("show_weekly", "Heti keret mutatása"))
-        form.addRow("", self._check("show_spark", "Trendgörbe (sparkline)"))
-        form.addRow("", self._check("show_burn", "Fogyási ütem (%/óra, %/nap)"))
-        form.addRow("", self._check("show_reset", "Visszaszámlálás a resetig"))
-        form.addRow("", self._check("show_age", "Adat frissessége"))
+        form.addRow("", self._check("show_five_hour", tr("set.show_five_hour")))
+        form.addRow("", self._check("show_weekly", tr("set.show_weekly")))
+        form.addRow("", self._check("show_spark", tr("set.show_spark")))
+        form.addRow("", self._check("show_burn", tr("set.show_burn")))
+        form.addRow("", self._check("show_reset", tr("set.show_reset")))
+        form.addRow("", self._check("show_age", tr("set.show_age")))
 
         self.cb_tray = QComboBox()
-        for key, label in TRAY_METRICS:
-            self.cb_tray.addItem(label, key)
+        _tm = {"five_hour": "five", "weekly": "weekly", "max": "max"}
+        for key, _label in TRAY_METRICS:
+            self.cb_tray.addItem(tr("set.tray_" + _tm[key]), key)
         self.cb_tray.setCurrentIndex(max(0, self.cb_tray.findData(self.s["tray_metric"])))
         self.cb_tray.currentIndexChanged.connect(
             lambda: self._set("tray_metric", self.cb_tray.currentData()))
-        form.addRow("Tálcaikon értéke", self.cb_tray)
+        form.addRow(tr("set.tray_value"), self.cb_tray)
         return page
 
     def _tab_alerts(self) -> QWidget:
@@ -228,20 +228,20 @@ class SettingsDialog(QDialog):
         self.sp_warn.setSuffix(" %")
         self.sp_warn.setValue(int(self.s["warn_threshold"]))
         self.sp_warn.valueChanged.connect(lambda v: self._set("warn_threshold", v))
-        form.addRow("Figyelmeztetés", self.sp_warn)
+        form.addRow(tr("set.warn"), self.sp_warn)
 
         self.sp_danger = QSpinBox()
         self.sp_danger.setRange(2, 100)
         self.sp_danger.setSuffix(" %")
         self.sp_danger.setValue(int(self.s["danger_threshold"]))
         self.sp_danger.valueChanged.connect(lambda v: self._set("danger_threshold", v))
-        form.addRow("Vészjelzés", self.sp_danger)
+        form.addRow(tr("set.danger"), self.sp_danger)
 
-        form.addRow("", self._check("notify_enabled", "Értesítés a küszöbök átlépésekor"))
-        form.addRow("", self._check("notify_on_reset", "Értesítés, ha egy keret lenullázódott"))
-        form.addRow("", self._check("notify_stale", "Értesítés, ha elavul az adat"))
+        form.addRow("", self._check("notify_enabled", tr("set.notify_enabled")))
+        form.addRow("", self._check("notify_on_reset", tr("set.notify_reset")))
+        form.addRow("", self._check("notify_stale", tr("set.notify_stale")))
 
-        hint = QLabel("A színek a küszöbök szerint váltanak: zöld → sárga → piros.")
+        hint = QLabel(tr("set.color_hint"))
         hint.setObjectName("hint")
         form.addRow("", hint)
         return page
@@ -252,11 +252,11 @@ class SettingsDialog(QDialog):
         from . import secretstore
 
         self.cb_source = QComboBox()
-        self.cb_source.addItem("Helyi napló – csak ez a gép", "local")
-        self.cb_source.addItem("claude.ai – minden eszköz (bejelentkezés kell)", "api")
+        self.cb_source.addItem(tr("set.source_local"), "local")
+        self.cb_source.addItem(tr("set.source_api"), "api")
         self.cb_source.setCurrentIndex(max(0, self.cb_source.findData(self.s["source"])))
         self.cb_source.currentIndexChanged.connect(self._on_source_changed)
-        form.addRow("Mérés forrása", self.cb_source)
+        form.addRow(tr("set.source_label"), self.cb_source)
 
         login_box = QWidget()
         llay = QHBoxLayout(login_box)
@@ -268,20 +268,20 @@ class SettingsDialog(QDialog):
         self._refresh_login_button()
 
         self.cb_org = QComboBox()
-        self.cb_org.addItem("Automatikus (legutóbb használt)", "")
+        self.cb_org.addItem(tr("set.profile_auto"), "")
         for i, org in enumerate(orgs):
-            label = f"Profil {i + 1} – …{org[-8:]}" if org else org
+            label = tr("set.profile_n", i + 1, org[-8:]) if org else org
             self.cb_org.addItem(label, org)
         self.cb_org.setCurrentIndex(max(0, self.cb_org.findData(self.s["org"])))
         self.cb_org.currentIndexChanged.connect(lambda: self._set("org", self.cb_org.currentData()))
-        form.addRow("Profil / fiók", self.cb_org)
+        form.addRow(tr("set.profile"), self.cb_org)
 
         self.sp_refresh = QSpinBox()
         self.sp_refresh.setRange(2, 120)
-        self.sp_refresh.setSuffix(" mp")
+        self.sp_refresh.setSuffix(tr("set.sec_suffix"))
         self.sp_refresh.setValue(int(self.s["refresh_seconds"]))
         self.sp_refresh.valueChanged.connect(lambda v: self._set("refresh_seconds", v))
-        form.addRow("Frissítés", self.sp_refresh)
+        form.addRow(tr("set.refresh"), self.sp_refresh)
 
         path_box = QWidget()
         play = QHBoxLayout(path_box)
@@ -294,7 +294,7 @@ class SettingsDialog(QDialog):
         btn.clicked.connect(self._pick_path)
         play.addWidget(self.ed_path, 1)
         play.addWidget(btn)
-        form.addRow("Adatfájl", path_box)
+        form.addRow(tr("set.datafile"), path_box)
 
         info = QLabel(
             "Helyi napló: a Claude Desktop plan-usage-history.json fájlja. Nem kell\n"
@@ -310,9 +310,9 @@ class SettingsDialog(QDialog):
         from . import secretstore
 
         if secretstore.has_secret():
-            self.btn_login.setText("Kijelentkezés a claude.ai-ról")
+            self.btn_login.setText(tr("set.login_btn_in"))
         else:
-            self.btn_login.setText("Bejelentkezés a claude.ai-ra…")
+            self.btn_login.setText(tr("set.login_btn_out"))
 
     def _on_login_clicked(self) -> None:
         from . import secretstore
@@ -339,8 +339,8 @@ class SettingsDialog(QDialog):
 
     def _pick_path(self) -> None:
         start = self.s["data_path"] or default_data_path()
-        path, _ = QFileDialog.getOpenFileName(self, "Használati napló kiválasztása",
-                                              start, "JSON (*.json);;Minden fájl (*.*)")
+        path, _ = QFileDialog.getOpenFileName(self, tr("set.pick_file_title"),
+                                              start, tr("set.file_filter"))
         if path:
             self.ed_path.setText(path)
             self._set("data_path", path)
@@ -348,32 +348,32 @@ class SettingsDialog(QDialog):
     def _tab_system(self) -> QWidget:
         page, form = self._page()
 
-        self.cb_auto = QCheckBox("Induljon a Windowsszal")
+        self.cb_auto = QCheckBox(tr("menu.autostart"))
         self.cb_auto.setChecked(winutil.autostart_enabled())
         self.cb_auto.toggled.connect(self._toggle_autostart)
         form.addRow("", self.cb_auto)
 
-        btn_dir = QPushButton("Beállítások mappa megnyitása")
+        btn_dir = QPushButton(tr("set.open_config"))
         btn_dir.clicked.connect(lambda: os.startfile(config_dir()))
         form.addRow("", btn_dir)
 
-        btn_reset = QPushButton("Alapértelmezések visszaállítása")
+        btn_reset = QPushButton(tr("set.restore"))
         btn_reset.clicked.connect(self._reset)
         form.addRow("", btn_reset)
 
-        about = QLabel(f"{APP_TITLE}\nHelyi adatokból dolgozik, semmit nem küld sehova.")
+        about = QLabel(tr("set.about", APP_TITLE))
         about.setObjectName("hint")
         form.addRow("", about)
         return page
 
     def _toggle_autostart(self, value: bool) -> None:
         if not winutil.set_autostart(value):
-            QMessageBox.warning(self, APP_TITLE, "Az automatikus indítást nem sikerült beállítani.")
+            QMessageBox.warning(self, APP_TITLE, tr("notify.autostart_fail"))
             return
         self._set("autostart", value)
 
     def _reset(self) -> None:
-        if QMessageBox.question(self, APP_TITLE, "Biztosan visszaállítod az alapértelmezett beállításokat?") \
+        if QMessageBox.question(self, APP_TITLE, tr("set.reset_confirm")) \
                 == QMessageBox.StandardButton.Yes:
             self.resetRequested.emit()
             self.accept()

@@ -20,10 +20,12 @@ from PySide6.QtWidgets import (
 
 from . import winutil
 from .datasource import Sample, UsageReader
+from .i18n import tr
 from .settings import APP_TITLE, Settings
 from .theme import Palette, qc, rgba_to_hex, with_alpha
 
-RANGES = [("6 óra", 6 * 3600), ("24 óra", 24 * 3600), ("7 nap", 7 * 86400), ("Teljes", 0)]
+RANGES = [("hist.range_6h", 6 * 3600), ("hist.range_24h", 24 * 3600),
+          ("hist.range_7d", 7 * 86400), ("hist.range_all", 0)]
 
 QSS = """
 QDialog { background: #16181d; }
@@ -76,7 +78,7 @@ class Chart(QWidget):
 
         if len(self.rows) < 2:
             p.setPen(QPen(qc(pal.dim)))
-            p.drawText(r, Qt.AlignmentFlag.AlignCenter, "Nincs elég adat ehhez az időszakhoz.")
+            p.drawText(r, Qt.AlignmentFlag.AlignCenter, tr("hist.no_data"))
             return
 
         t0, t1 = self.rows[0].t, max(self.rows[-1].t, int(time.time() * 1000))
@@ -142,7 +144,7 @@ class HistoryWindow(QDialog):
         self.s = settings
         self.reader = reader
         self.pal = Palette(settings["theme"], settings["accent"])
-        self.setWindowTitle(f"{APP_TITLE} – előzmények")
+        self.setWindowTitle(f"{APP_TITLE} – " + tr("hist.title"))
         self.setWindowIcon(winutil.app_icon())
         self.setStyleSheet(QSS)
         self.resize(640, 420)
@@ -151,7 +153,7 @@ class HistoryWindow(QDialog):
         self.group = QButtonGroup(self)
         self.group.setExclusive(True)
         for i, (label, span) in enumerate(RANGES):
-            b = QPushButton(label)
+            b = QPushButton(tr(label))
             b.setCheckable(True)
             b.setChecked(span == 24 * 3600)
             self.group.addButton(b, i)
@@ -160,8 +162,8 @@ class HistoryWindow(QDialog):
         legend = QLabel("● 5 órás ablak    ● heti keret")
         legend.setStyleSheet(f"color: {self.pal.dim[0]:02x};")
         legend.setText(
-            f'<span style="color:rgb{self.pal.ok[:3]}">●</span> 5 órás ablak &nbsp;&nbsp;'
-            f'<span style="color:rgb{self.pal.accent[:3]}">●</span> heti keret'
+            f'<span style="color:rgb{self.pal.ok[:3]}">●</span> ' + tr("hist.legend_5h") + ' &nbsp;&nbsp;'
+            f'<span style="color:rgb{self.pal.accent[:3]}">●</span> ' + tr("hist.legend_week")
         )
         top.addWidget(legend)
         self.group.idClicked.connect(self.refresh)
@@ -170,13 +172,13 @@ class HistoryWindow(QDialog):
 
         self.stats = QHBoxLayout()
         self.stat_labels = {}
-        for key, label in (("now", "Jelenlegi heti"), ("peak", "Heti csúcs"),
-                           ("burn", "Napi átlag fogyás"), ("sessions", "5 órás ablakok"),
-                           ("forecast", "Hét végére – előrejelzés")):
+        for key, lkey in (("now", "hist.stat_now"), ("peak", "hist.stat_peak"),
+                          ("burn", "hist.stat_burn"), ("sessions", "hist.stat_sessions"),
+                          ("forecast", "hist.stat_forecast")):
             box = QVBoxLayout()
             value = QLabel("–")
             value.setObjectName("stat")
-            cap = QLabel(label)
+            cap = QLabel(tr(lkey))
             cap.setObjectName("statlabel")
             box.addWidget(value)
             box.addWidget(cap)
@@ -215,7 +217,7 @@ class HistoryWindow(QDialog):
             if b.sd > a.sd:
                 gained += b.sd - a.sd
         per_day = gained / span_days
-        self.stat_labels["burn"].setText(f"{per_day:.1f}%/nap")
+        self.stat_labels["burn"].setText(tr("panel.per_day", f"{per_day:.1f}"))
 
         sessions = sum(1 for a, b in zip(rows, rows[1:]) if a.fh <= 0 < b.fh)
         self.stat_labels["sessions"].setText(str(sessions))
