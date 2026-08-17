@@ -66,6 +66,7 @@ DEFAULTS: Dict[str, Any] = {
 
     # --- rendszer
     "autostart": False,
+    "start_menu": True,              # parancsikon a Start menüben
     "first_run_done": False,
 }
 

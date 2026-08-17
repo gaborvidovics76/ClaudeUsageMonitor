@@ -63,6 +63,9 @@ class MonitorApp:
         # Ha az exe időközben átkerült máshova, igazítsuk az indítóbejegyzést.
         self.settings["autostart"] = winutil.sync_autostart()
         self.settings.save()
+        # Start menü parancsikon (csak a csomagolt exe-nél, ha kérve van és még nincs)
+        if self.settings["start_menu"]:
+            winutil.ensure_start_menu_shortcut()
         self.local_reader = UsageReader(self.settings.resolved_data_path())
         self.api_reader = ApiReader(
             tokens=secretstore.load_tokens(),
@@ -279,6 +282,11 @@ class MonitorApp:
         auto.setCheckable(True)
         auto.setChecked(winutil.autostart_enabled())
         auto.toggled.connect(self._toggle_autostart)
+
+        startm = menu.addAction(tr("menu.start_menu"))
+        startm.setCheckable(True)
+        startm.setChecked(winutil.start_menu_exists())
+        startm.toggled.connect(self._toggle_start_menu)
         menu.addSeparator()
 
         src_menu = menu.addMenu(tr("menu.source"))
@@ -360,6 +368,14 @@ class MonitorApp:
         self.settings.save()
         self.apply_settings()
         self.notify(APP_TITLE, tr("notify.logout"))
+
+    def _toggle_start_menu(self, enabled: bool) -> None:
+        self.settings["start_menu"] = enabled
+        self.settings.save()
+        if enabled:
+            winutil.create_start_menu_shortcut()
+        else:
+            winutil.remove_start_menu_shortcut()
 
     def _toggle_autostart(self, enabled: bool) -> None:
         if not winutil.set_autostart(enabled):

@@ -351,6 +351,14 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "it": "Esci", "pt": "Sair", "pl": "Zakończ", "nl": "Afsluiten", "ru": "Выход",
         "cs": "Ukončit", "tr": "Çıkış",
     },
+    "menu.start_menu": {
+        "en": "Show in Start menu", "hu": "Start menüben megjelenítés", "de": "Im Startmenü anzeigen",
+        "fr": "Afficher dans le menu Démarrer", "es": "Mostrar en el menú Inicio",
+        "it": "Mostra nel menu Start", "pt": "Mostrar no menu Iniciar",
+        "pl": "Pokaż w menu Start", "nl": "In Startmenu tonen",
+        "ru": "Показывать в меню «Пуск»", "cs": "Zobrazit v nabídce Start",
+        "tr": "Başlat menüsünde göster",
+    },
     "menu.language": {
         "en": "Language", "hu": "Nyelv", "de": "Sprache", "fr": "Langue", "es": "Idioma",
         "it": "Lingua", "pt": "Idioma", "pl": "Język", "nl": "Taal", "ru": "Язык",

@@ -98,6 +98,56 @@ def exe_path() -> str:
     return sys.executable.replace("python.exe", "pythonw.exe")
 
 
+# ------------------------------------------------- Start menü parancsikon
+
+START_MENU_NAME = "Claude Usage Monitor"
+
+
+def start_menu_path() -> str:
+    appdata = os.environ.get("APPDATA") or os.path.expanduser("~\\AppData\\Roaming")
+    return os.path.join(appdata, "Microsoft", "Windows", "Start Menu",
+                        "Programs", START_MENU_NAME + ".lnk")
+
+
+def start_menu_exists() -> bool:
+    return os.path.exists(start_menu_path())
+
+
+def create_start_menu_shortcut() -> bool:
+    """Parancsikon a Start menübe (WScript.Shell COM-on át, PowerShell segéddel)."""
+    target = exe_path()
+    lnk = start_menu_path()
+    workdir = os.path.dirname(target)
+    ps = (
+        "$w = New-Object -ComObject WScript.Shell; "
+        f"$s = $w.CreateShortcut('{lnk}'); "
+        f"$s.TargetPath = '{target}'; "
+        f"$s.WorkingDirectory = '{workdir}'; "
+        f"$s.IconLocation = '{target},0'; "
+        "$s.Description = 'Claude Usage Monitor'; "
+        "$s.Save()"
+    )
+    try:
+        os.makedirs(os.path.dirname(lnk), exist_ok=True)
+        res = _run_hidden(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", ps])
+        return res.returncode == 0 and start_menu_exists()
+    except OSError:
+        return False
+
+
+def remove_start_menu_shortcut() -> None:
+    try:
+        os.remove(start_menu_path())
+    except OSError:
+        pass
+
+
+def ensure_start_menu_shortcut() -> None:
+    """Csak a csomagolt exe-nél, és csak ha még nincs – így nem tolakodó."""
+    if getattr(sys, "frozen", False) and not start_menu_exists():
+        create_start_menu_shortcut()
+
+
 # ------------------------------------------------- ütemezett feladat (elsődleges)
 
 
