@@ -11,6 +11,9 @@ __pycache__/
 .venv/
 venv/
 
+# Release csomagok
+*.zip
+
 # Naplók, ideiglenes
 *.log
 build_final.log
