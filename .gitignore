@@ -1,0 +1,24 @@
+# Build kimenetek
+/dist/
+/build/
+*.spec
+app.ico
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Naplók, ideiglenes
+*.log
+build_final.log
+_*.ps1
+_*.txt
+
+# OS / IDE
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
