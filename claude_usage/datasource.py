@@ -1,10 +1,10 @@
-"""A Claude Desktop által írt plan-usage-history.json olvasása és kiértékelése.
+"""Reading and evaluating the plan-usage-history.json written by Claude Desktop.
 
-A fájl formátuma (v2):
+File format (v2):
     {"version":2,"samples":[{"t":<epoch ms>,"org":"<uuid>","u":{"fh":<0-100>,"sd":<0-100>}}, ...]}
 
-    fh = az 5 órás ablak kihasználtsága százalékban
-    sd = a 7 napos (heti) keret kihasználtsága százalékban
+    fh = utilization of the 5-hour window, in percent
+    sd = utilization of the 7-day (weekly) limit, in percent
 """
 
 from __future__ import annotations
@@ -34,14 +34,14 @@ class Sample:
 
 @dataclass
 class Gauge:
-    """Egy keret (5 órás vagy heti) aktuális állapota."""
+    """The current state of one limit (5-hour or weekly)."""
 
     value: float = 0.0
     reset_at: Optional[int] = None      # epoch ms
     reset_certain: bool = False
-    burn: float = 0.0                   # %/óra
-    eta_ms: Optional[int] = None        # mennyi idő múlva érné el a 100%-ot
-    pace: Optional[float] = None        # tényleges - ideális fogyás (%), csak a hetinél
+    burn: float = 0.0                   # %/hour
+    eta_ms: Optional[int] = None        # time until it would reach 100%
+    pace: Optional[float] = None        # actual - ideal consumption (%), weekly only
     spark: List[float] = field(default_factory=list)
 
     @property
@@ -111,7 +111,7 @@ def fmt_age(seconds: Optional[float]) -> str:
 
 
 class UsageReader:
-    """Fájl-alapú olvasó. Csak akkor parse-ol újra, ha változott a fájl."""
+    """File-based reader. Re-parses only when the file changed."""
 
     def __init__(self, path: Optional[str] = None):
         self.path = path or default_data_path()
@@ -126,7 +126,7 @@ class UsageReader:
         try:
             st = os.stat(self.path)
         except OSError:
-            self._error = "A használati fájl nem található.\nFut a Claude Desktop?"
+            self._error = tr("err.file_not_found")
             self._samples = []
             self._stamp = None
             return
@@ -139,9 +139,9 @@ class UsageReader:
             with open(self.path, "r", encoding="utf-8") as fh:
                 raw = json.load(fh)
         except (OSError, ValueError):
-            # Épp írás alatt lehet a fájl – marad az előző jó állapot.
+            # The file may be mid-write - keep the previous good state.
             if not self._samples:
-                self._error = "A használati fájl jelenleg nem olvasható."
+                self._error = tr("err.file_unreadable")
             return
 
         samples: List[Sample] = []
@@ -162,18 +162,18 @@ class UsageReader:
         samples.sort(key=lambda s: s.t)
         self._samples = samples
         self._stamp = stamp
-        self._error = "" if samples else "A használati fájl üres."
+        self._error = "" if samples else tr("err.file_empty")
 
         seen: Dict[str, int] = {}
         for s in samples:
             seen[s.org] = s.t
         self._orgs = [o for o, _ in sorted(seen.items(), key=lambda kv: -kv[1]) if o]
 
-    # -------------------------------------------------------------- elemzés
+    # -------------------------------------------------------------- analysis
 
     @staticmethod
     def _window_start(rows: List[Tuple[int, float]], span_ms: int) -> Tuple[Optional[int], bool]:
-        """Megkeresi az aktuális keret kezdetét. (kezdet_ms, biztos-e)"""
+        """Find the start of the current window. (start_ms, is_certain)"""
         if not rows or rows[-1][1] <= 0:
             return None, False
 
@@ -182,18 +182,18 @@ class UsageReader:
             t_cur, v_cur = rows[i]
             t_prev, v_prev = rows[i - 1]
             if t_cur - t_prev > span_ms:
-                # Hosszú mintavételi szünet: a keret kezdete bizonytalan.
+                # Long sampling gap: the window start is uncertain.
                 return t_cur, False
             if v_prev <= 0 < v_cur:
-                return t_cur, True          # nulláról indult -> pontos kezdet
+                return t_cur, True          # started from zero -> exact start
             if v_prev - v_cur > 5:
-                return t_cur, True          # jelentős visszaesés -> új keret
+                return t_cur, True          # significant drop -> new window
             i -= 1
         return rows[0][0], False
 
     @staticmethod
     def _burn(rows: List[Tuple[int, float]], now_ms: int, window_ms: int) -> float:
-        """Fogyás %/óra az elmúlt `window_ms` alatt."""
+        """Consumption in %/hour over the last `window_ms`."""
         pts = [r for r in rows if r[0] >= now_ms - window_ms]
         if len(pts) < 2:
             return 0.0
@@ -211,14 +211,14 @@ class UsageReader:
         step = len(pts) / points
         return [pts[min(len(pts) - 1, int(i * step))] for i in range(points)]
 
-    # --------------------------------------------------------------- publikus
+    # --------------------------------------------------------------- public
 
     def organizations(self) -> List[str]:
         self._load()
         return list(self._orgs)
 
     def series(self, org: Optional[str] = None, since_ms: Optional[int] = None) -> List[Sample]:
-        """Nyers minták az előzmény-ablakhoz."""
+        """Raw samples for the history window."""
         self._load()
         org = org if org in self._orgs else (self._orgs[0] if self._orgs else "")
         rows = [s for s in self._samples if not org or s.org == org]
@@ -231,13 +231,13 @@ class UsageReader:
         m = Metrics(orgs=list(self._orgs))
 
         if not self._samples:
-            m.error = self._error or "Nincs használati adat."
+            m.error = self._error or tr("err.no_usage_data")
             return m
 
         org = org if org in self._orgs else (self._orgs[0] if self._orgs else "")
         rows = [s for s in self._samples if not org or s.org == org]
         if not rows:
-            m.error = "Ehhez a profilhoz nincs adat."
+            m.error = tr("err.no_data_profile")
             return m
 
         last = rows[-1]
@@ -250,7 +250,7 @@ class UsageReader:
         fh_rows = [(s.t, s.fh) for s in rows]
         sd_rows = [(s.t, s.sd) for s in rows]
 
-        # --- 5 órás ablak
+        # --- 5-hour window
         g = m.five_hour
         g.value = last.fh
         start, certain = self._window_start(fh_rows, FIVE_HOURS_MS)
@@ -262,7 +262,7 @@ class UsageReader:
             g.eta_ms = int(g.remaining / g.burn * 3_600_000)
         g.spark = self._spark(fh_rows, now_ms, FIVE_HOURS_MS, 48)
 
-        # --- heti keret
+        # --- weekly limit
         w = m.weekly
         w.value = last.sd
         wstart, wcertain = self._window_start(sd_rows, WEEK_MS)

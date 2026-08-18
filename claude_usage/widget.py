@@ -1,4 +1,4 @@
-"""A lebegő ("post-it") panel – teljesen saját rajzolású, keret nélküli ablak."""
+"""The floating ("post-it") panel - a fully custom-drawn, frameless window."""
 
 from __future__ import annotations
 
@@ -50,12 +50,12 @@ class UsageWidget(QWidget):
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
         self.setAttribute(Qt.WidgetAttribute.WA_AlwaysShowToolTips, True)
         self.setMouseTracking(True)
-        # Az árnyékot kézzel rajzoljuk: a QGraphicsDropShadowEffect áttetsző,
-        # keret nélküli ablakon gyorsítótárazza a képet, és az update() után is
-        # a régi tartalom maradt a képernyőn.
+        # We draw the shadow by hand: QGraphicsDropShadowEffect caches the image on
+        # a translucent, frameless window, so the old content stayed on screen even
+        # after update().
         self.apply_settings()
 
-    # ------------------------------------------------------------- beállítás
+    # ------------------------------------------------------------- setup
 
     def apply_settings(self) -> None:
         self.palette_ = Palette(self.s["theme"], self.s["accent"])
@@ -67,8 +67,8 @@ class UsageWidget(QWidget):
         if self.s["click_through"]:
             flags |= Qt.WindowType.WindowTransparentForInput
         was_visible = self.isVisible()
-        # A setWindowFlags elrejti az ablakot, ezért csak tényleges változáskor hívjuk
-        # (különben minden csúszkamozgatásnál villogna a panel).
+        # setWindowFlags hides the window, so we call it only on an actual change
+        # (otherwise the panel would flicker on every slider move).
         flags_changed = flags != getattr(self, "_flags", None)
         if flags_changed:
             self._flags = flags
@@ -80,14 +80,14 @@ class UsageWidget(QWidget):
         if x is not None and y is not None and self._on_any_screen(int(x), int(y)):
             self.move(int(x), int(y))
         else:
-            # Nincs mentett pozíció, vagy az a monitor már nem létezik.
+            # No saved position, or that monitor no longer exists.
             self._default_position()
         if flags_changed and (was_visible or self.s["visible"]):
             self.show()
         self.update()
 
     def _on_any_screen(self, x: int, y: int) -> bool:
-        """A panel közepe rajta van-e még valamelyik csatlakoztatott monitoron?"""
+        """Is the panel's center still on one of the connected monitors?"""
         center = QPoint(x + self.width() // 2, y + self.height() // 2)
         return any(s.geometry().contains(center) for s in QGuiApplication.screens())
 
@@ -102,7 +102,7 @@ class UsageWidget(QWidget):
         self.metrics = metrics
         self.update()
 
-    # ------------------------------------------------------------- méretezés
+    # ------------------------------------------------------------- sizing
 
     @property
     def k(self) -> float:
@@ -125,7 +125,7 @@ class UsageWidget(QWidget):
             h = 44 + gauges * 52 + (24 if self.s["show_spark"] else 0)
         self.setFixedSize(int(w * k) + 2 * SHADOW_MARGIN, int(h * k) + 2 * SHADOW_MARGIN)
 
-    # ------------------------------------------------------------- interakció
+    # ------------------------------------------------------------- interaction
 
     def mousePressEvent(self, e) -> None:
         if e.button() == Qt.MouseButton.LeftButton and not self.s["locked"]:
@@ -188,7 +188,7 @@ class UsageWidget(QWidget):
         self._hover = False
         self.update()
 
-    # ---------------------------------------------------------------- rajzolás
+    # ---------------------------------------------------------------- drawing
 
     def paintEvent(self, _e) -> None:
         p = QPainter(self)
@@ -214,7 +214,7 @@ class UsageWidget(QWidget):
         p.setPen(pen)
         p.drawPath(path)
 
-        # felső fényvonal
+        # top highlight line
         p.setPen(QPen(qc(with_alpha((255, 255, 255, 255), 26 if pal.dark else 120)), 1.0))
         p.drawLine(body.left() + radius, body.top() + 1.4, body.right() - radius, body.top() + 1.4)
 
@@ -231,10 +231,10 @@ class UsageWidget(QWidget):
         else:
             self._paint_postit(p, inner)
 
-    # ---- részek
+    # ---- parts
 
     def _paint_shadow(self, p: QPainter, body: QRectF, radius: float) -> None:
-        """Lágy vetett árnyék egymásra rétegzett, halvány lekerekített téglalapokból."""
+        """A soft drop shadow made of stacked, faint rounded rectangles."""
         pal = self.palette_
         steps = 9
         layer = max(3, int(pal.shadow[3] / (steps * 1.8)))
@@ -344,7 +344,7 @@ class UsageWidget(QWidget):
             fill.addRoundedRect(fr, rad, rad)
             p.fillPath(fill, QBrush(grad))
 
-        # ütem-jelölés a heti sávon (hol tartanál egyenletes fogyasztással)
+        # pace marks on the weekly bar (where you'd be at even consumption)
         p.setPen(QPen(qc(with_alpha(pal.text, 38)), 1.0))
         for q in (0.25, 0.5, 0.75):
             x = r.left() + r.width() * q

@@ -1,4 +1,4 @@
-"""Beállítások ablak."""
+"""Settings window."""
 
 from __future__ import annotations
 
@@ -33,8 +33,8 @@ from .settings import APP_TITLE, Settings, config_dir
 from .i18n import tr
 from .theme import THEMES, rgba_to_hex
 
-LAYOUTS = [("postit", "Post-it kártya"), ("compact", "Vékony sáv"), ("ring", "Körgyűrűk")]
-TRAY_METRICS = [("five_hour", "5 órás ablak"), ("weekly", "Heti keret"), ("max", "Amelyik magasabb")]
+LAYOUTS = [("postit", "Post-it card"), ("compact", "Slim bar"), ("ring", "Rings")]
+TRAY_METRICS = [("five_hour", "5-hour window"), ("weekly", "Weekly limit"), ("max", "Whichever is higher")]
 
 DIALOG_QSS = """
 QDialog { background: #16181d; }
@@ -95,7 +95,7 @@ class SettingsDialog(QDialog):
 
         self._loading = False
 
-    # ------------------------------------------------------------- segédek
+    # ------------------------------------------------------------- helpers
 
     @staticmethod
     def _page():
@@ -296,12 +296,7 @@ class SettingsDialog(QDialog):
         play.addWidget(btn)
         form.addRow(tr("set.datafile"), path_box)
 
-        info = QLabel(
-            "Helyi napló: a Claude Desktop plan-usage-history.json fájlja. Nem kell\n"
-            "bejelentkezés, de csak ezt a gépet méri, és kb. 5 percenként frissül.\n\n"
-            "claude.ai: a beépített bejelentkezés után a szerverről kérdez le. Minden\n"
-            "eszközöd használatát látod, pontos reset-időkkel, gyakoribb frissítéssel."
-        )
+        info = QLabel(tr("set.data_hint"))
         info.setObjectName("hint")
         form.addRow("", info)
         return page

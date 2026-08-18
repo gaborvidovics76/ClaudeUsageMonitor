@@ -1,4 +1,4 @@
-"""Bejelentkező párbeszéd: rendszerböngésző + kód visszamásolása."""
+"""Sign-in dialog: system browser + pasting the code back."""
 
 from __future__ import annotations
 
@@ -37,7 +37,7 @@ QPushButton#link { background: #262b34; border-color: #343b47; }
 
 
 class OAuthDialog(QDialog):
-    """Sikeres belépéskor a `succeeded` jel a token-szótárat adja."""
+    """On success the `succeeded` signal carries the token dict."""
 
     succeeded = Signal(dict)
 
@@ -98,7 +98,7 @@ class OAuthDialog(QDialog):
 
     def _submit(self) -> None:
         pasted = self.ed.text().strip()
-        # kényelmi másolás: néha a teljes URL-t másolják be
+        # convenience: sometimes the whole URL is pasted
         if "code=" in pasted:
             import urllib.parse
 

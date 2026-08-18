@@ -1,4 +1,4 @@
-"""Windows-specifikus apróságok: automatikus indítás, ikonkészítés."""
+"""Windows-specific helpers: autostart, Start menu, icon generation."""
 
 from __future__ import annotations
 
@@ -13,14 +13,14 @@ RUN_KEY = r"Software\Microsoft\Windows\CurrentVersion\Run"
 RUN_VALUE = "ClaudeUsageMonitor"
 TASK_NAME = "ClaudeUsageMonitor"
 
-# A Run kulcs bejelentkezéskor néha egyszerűen nem fut le (AV-ellenőrzés, korai
-# indulás, a Windows "startup impact" szabályozása). Az ütemezett feladat
-# megbízhatóbb, és késleltetést is tud, ezért az az elsődleges módszer.
+# The Run key sometimes just does not fire at logon (AV scan, early startup,
+# Windows "startup impact" throttling). A scheduled task is more reliable and
+# can add a delay, so it is the primary method.
 
 TASK_XML = """<?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
-    <Description>Claude Usage Monitor indítása bejelentkezéskor</Description>
+    <Description>Start Claude Usage Monitor at logon</Description>
     <URI>\\{name}</URI>
   </RegistrationInfo>
   <Triggers>
@@ -92,13 +92,13 @@ def _run_hidden(args: list) -> "subprocess.CompletedProcess":
 
 
 def exe_path() -> str:
-    """Az indítandó fájl (fagyasztva az exe, fejlesztéskor a pythonw)."""
+    """The file to launch (the exe when frozen, pythonw during development)."""
     if getattr(sys, "frozen", False):
         return sys.executable
     return sys.executable.replace("python.exe", "pythonw.exe")
 
 
-# ------------------------------------------------- Start menü parancsikon
+# ------------------------------------------------- Start menu shortcut
 
 START_MENU_NAME = "Claude Usage Monitor"
 
@@ -114,7 +114,7 @@ def start_menu_exists() -> bool:
 
 
 def create_start_menu_shortcut() -> bool:
-    """Parancsikon a Start menübe (WScript.Shell COM-on át, PowerShell segéddel)."""
+    """Shortcut into the Start menu (via WScript.Shell COM, using PowerShell)."""
     target = exe_path()
     lnk = start_menu_path()
     workdir = os.path.dirname(target)
@@ -143,16 +143,16 @@ def remove_start_menu_shortcut() -> None:
 
 
 def ensure_start_menu_shortcut() -> None:
-    """Csak a csomagolt exe-nél, és csak ha még nincs – így nem tolakodó."""
+    """Only for the packaged exe, and only if missing - so it is not intrusive."""
     if getattr(sys, "frozen", False) and not start_menu_exists():
         create_start_menu_shortcut()
 
 
-# ------------------------------------------------- ütemezett feladat (elsődleges)
+# ------------------------------------------------- scheduled task (primary)
 
 
 def task_command() -> Optional[str]:
-    """A feladathoz bejegyzett futtatandó parancs, vagy None, ha nincs feladat."""
+    """The command registered for the task, or None if there is no task."""
     res = _run_hidden(["schtasks", "/Query", "/TN", TASK_NAME, "/XML"])
     if res.returncode != 0 or not res.stdout:
         return None
@@ -172,8 +172,8 @@ def set_task_autostart(enabled: bool) -> bool:
 
     command = exe_path()
     if not getattr(sys, "frozen", False):
-        # Fejlesztéskor a main.py-t kell átadni argumentumként – a Task Scheduler
-        # <Arguments> nélkül nem tudná, mit indítson, ezért ilyenkor a Run kulcs marad.
+        # During development main.py must be passed as an argument - without
+        # <Arguments> the Task Scheduler would not know what to run, so the Run key stays.
         return False
 
     user = os.environ.get("USERNAME", "")
@@ -197,11 +197,11 @@ def set_task_autostart(enabled: bool) -> bool:
             pass
 
 
-# ------------------------------------------------------- Run kulcs (tartalék)
+# ------------------------------------------------------- Run key (fallback)
 
 
 def autostart_command() -> Optional[str]:
-    """A jelenleg beregisztrált indítóparancs, vagy None."""
+    """The currently registered launch command, or None."""
     try:
         import winreg
 
@@ -229,11 +229,11 @@ def set_run_key(enabled: bool) -> bool:
         return False
 
 
-# ------------------------------------------------------------ közös felület
+# ------------------------------------------------------------ common interface
 
 
 def autostart_method() -> str:
-    """'task', 'run' vagy '' (nincs bekapcsolva)."""
+    """'task', 'run', or '' (not enabled)."""
     if task_command() is not None:
         return "task"
     if autostart_command() is not None:
@@ -246,22 +246,22 @@ def autostart_enabled() -> bool:
 
 
 def set_autostart(enabled: bool) -> bool:
-    """Bekapcsoláskor elsődlegesen ütemezett feladat, tartalékként Run kulcs.
-    Kikapcsoláskor mindkettőt eltávolítjuk."""
+    """On enable: primarily a scheduled task, with the Run key as a fallback.
+    On disable: remove both."""
     if not enabled:
         ok_task = set_task_autostart(False)
         ok_run = set_run_key(False)
         return ok_task and ok_run
 
     if set_task_autostart(True):
-        set_run_key(False)          # ne induljon el kétszer
+        set_run_key(False)          # do not start twice
         return True
     return set_run_key(True)
 
 
 def sync_autostart() -> bool:
-    """Ha be van kapcsolva, de elavult útvonalra mutat (áthelyezett vagy
-    átnevezett exe), frissítjük a bejegyzést."""
+    """If enabled but pointing at a stale path (moved or renamed exe),
+    refresh the entry."""
     method = autostart_method()
     if not method:
         return False
@@ -274,11 +274,11 @@ def sync_autostart() -> bool:
     return True
 
 
-# ------------------------------------------------------------------ ikonok
+# ------------------------------------------------------------------ icons
 
 
 def app_pixmap(size: int = 256, accent: str = "#D97757") -> QPixmap:
-    """Az alkalmazás logója: lekerekített négyzet egy csillag-szikrával."""
+    """The app logo: a rounded square with a starburst spark."""
     pm = QPixmap(size, size)
     pm.fill(Qt.GlobalColor.transparent)
     p = QPainter(pm)
@@ -306,7 +306,7 @@ def app_pixmap(size: int = 256, accent: str = "#D97757") -> QPixmap:
 
 
 def tray_pixmap(value: float, color: QColor, bg: Optional[QColor] = None, size: int = 64) -> QPixmap:
-    """Tálcaikon: a százalék nagy számmal; nagyobb méretben körgyűrűvel is."""
+    """Tray icon: the percentage as a big number; a progress ring at larger sizes."""
     from PySide6.QtGui import QFontMetrics
 
     pm = QPixmap(size, size)
@@ -319,7 +319,7 @@ def tray_pixmap(value: float, color: QColor, bg: Optional[QColor] = None, size: 
         path.addRoundedRect(QRectF(1, 1, size - 2, size - 2), size * 0.24, size * 0.24)
         p.fillPath(path, bg)
 
-    compact = size <= 28          # a Windows tálca általában 16-24 px-en rajzol
+    compact = size <= 28          # the Windows tray usually renders at 16-24 px
     if not compact:
         pen = p.pen()
         pen.setColor(QColor(color.red(), color.green(), color.blue(), 70))
@@ -364,7 +364,7 @@ def app_icon(accent: str = "#D97757") -> QIcon:
 
 
 def write_ico(path: str, accent: str = "#D97757") -> str:
-    """ICO fájl írása PyInstaller számára (beágyazott PNG-kkel)."""
+    """Write an ICO file for PyInstaller (with embedded PNGs)."""
     import struct
 
     sizes = [16, 24, 32, 48, 64, 128, 256]

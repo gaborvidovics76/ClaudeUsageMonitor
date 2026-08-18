@@ -1,4 +1,4 @@
-"""Vezérlő: tálcaikon, időzítő, menü, értesítések."""
+"""Controller: tray icon, timer, menu, notifications."""
 
 from __future__ import annotations
 
@@ -40,7 +40,7 @@ QMenu::indicator { width: 14px; height: 14px; left: 8px; }
 
 
 def log(message: str) -> None:
-    """Indítási napló – enélkül egy bejelentkezéskori hiba láthatatlan marad."""
+    """Startup log - without it a logon-time error would be invisible."""
     try:
         path = os.path.join(config_dir(), "startup.log")
         if os.path.exists(path) and os.path.getsize(path) > 60_000:
@@ -58,12 +58,12 @@ class MonitorApp:
     def __init__(self, app: QApplication):
         self.app = app
         self.settings = Settings()
-        # nyelv: mentett érték, vagy a rendszer nyelve (ha támogatott), különben angol
+        # language: saved value, or the system language (if supported), else English
         set_language(self.settings["language"] or system_language())
-        # Ha az exe időközben átkerült máshova, igazítsuk az indítóbejegyzést.
+        # If the exe moved in the meantime, fix the autostart entry.
         self.settings["autostart"] = winutil.sync_autostart()
         self.settings.save()
-        # Start menü parancsikon (csak a csomagolt exe-nél, ha kérve van és még nincs)
+        # Start menu shortcut (packaged exe only, if requested and not yet present)
         if self.settings["start_menu"]:
             winutil.ensure_start_menu_shortcut()
         self.local_reader = UsageReader(self.settings.resolved_data_path())
@@ -71,7 +71,7 @@ class MonitorApp:
             tokens=secretstore.load_tokens(),
             on_tokens_changed=self._on_tokens_changed,
         )
-        self.reader = self.local_reader     # apply_settings állítja be a valósat
+        self.reader = self.local_reader     # apply_settings sets the real one
         self.metrics = Metrics()
 
         self.widget = UsageWidget(self.settings)
@@ -99,19 +99,19 @@ class MonitorApp:
             self.settings.save()
             self.notify(APP_TITLE, tr("notify.first_run"))
 
-    # ------------------------------------------------------------ beállítás
+    # ------------------------------------------------------------ setup
 
     def apply_settings(self) -> None:
         s = self.settings
         self.local_reader.path = s.resolved_data_path()
 
-        # forrásválasztás: "api" csak akkor, ha van érvényes bejelentkezés
+        # source selection: "api" only if there is a valid sign-in
         use_api = s["source"] == "api" and self.api_reader.has_tokens()
         self.reader = self.api_reader if use_api else self.local_reader
 
-        # A kijelzőt sűrűn frissítjük (age-számláló, kész lekérdezés felszedése).
-        # A tényleges szerverhívást az ApiReader belül fojtja 60 mp-re, tehát a
-        # sűrű tick nem terheli a szervert.
+        # We refresh the display often (age counter, picking up a completed query).
+        # The actual server call is throttled to 60s inside ApiReader, so the
+        # frequent tick does not burden the server.
         interval = 10 if use_api else max(2, int(s["refresh_seconds"]))
 
         self.widget.apply_settings()
@@ -119,7 +119,7 @@ class MonitorApp:
         self.timer.start(interval * 1000)
         self.refresh()
 
-    # -------------------------------------------------------------- adatok
+    # -------------------------------------------------------------- data
 
     def refresh(self) -> None:
         self.metrics = self.reader.read(self.settings["org"] or None)
@@ -130,10 +130,10 @@ class MonitorApp:
             self.history.refresh()
 
     def force_refresh(self) -> None:
-        """Kézi 'Frissítés most' – API-módban azonnali szerverhívást kényszerít."""
+        """Manual 'Refresh now' - forces an immediate server call in API mode."""
         if self.reader is self.api_reader:
             self.api_reader.force_refresh()
-            # a fetch aszinkron; szedjük fel az eredményt kis késleltetéssel
+            # the fetch is async; pick up the result after a short delay
             QTimer.singleShot(1500, self.refresh)
             QTimer.singleShot(3500, self.refresh)
         self.refresh()
@@ -203,7 +203,7 @@ class MonitorApp:
         if self.tray.isSystemTrayAvailable():
             self.tray.showMessage(title, message, winutil.app_icon(), 6000)
 
-    # ---------------------------------------------------------------- menü
+    # ---------------------------------------------------------------- menu
 
     def _tray_activated(self, reason) -> None:
         if reason == QSystemTrayIcon.ActivationReason.Trigger:
@@ -320,7 +320,7 @@ class MonitorApp:
         set_language(code)
         self.settings["language"] = code
         self.settings.save()
-        # az egész felület újrarajzolása az új nyelvvel
+        # redraw the whole UI in the new language
         self.widget.update()
         self.refresh()
         if self.dialog is not None and self.dialog.isVisible():
@@ -339,7 +339,7 @@ class MonitorApp:
         self.apply_settings()
 
     def login(self) -> bool:
-        """OAuth bejelentkezés a rendszerböngészőn keresztül. True, ha sikerült."""
+        """OAuth sign-in through the system browser. True on success."""
         from .authdialog import OAuthDialog
 
         dlg = OAuthDialog()
@@ -358,7 +358,7 @@ class MonitorApp:
         self.apply_settings()
 
     def _on_tokens_changed(self, tokens: dict) -> None:
-        # a háttérszál frissítette a tokent – mentsük el
+        # the background thread refreshed the token - save it
         secretstore.save_tokens(tokens)
 
     def logout(self) -> None:
@@ -424,7 +424,7 @@ class MonitorApp:
         self.apply_settings()
 
     def show_history(self) -> None:
-        # mindig az aktuális forrással (helyi/API váltás után se legyen elavult)
+        # always with the current source (not stale after a local/API switch)
         if self.history is None:
             self.history = HistoryWindow(self.settings, self.reader)
         else:
@@ -441,14 +441,14 @@ class MonitorApp:
 
 
 def _handle_cli(argv) -> Optional[int]:
-    """Néhány kapcsoló ablak nélkül, parancssorból is elérhető."""
+    """A few switches available from the command line, without a window."""
     if "--enable-autostart" in argv or "--disable-autostart" in argv:
         want = "--enable-autostart" in argv
         ok = winutil.set_autostart(want)
-        log(f"CLI autostart={want} siker={ok} mód={winutil.autostart_method() or 'nincs'}")
+        log(f"CLI autostart={want} ok={ok} mode={winutil.autostart_method() or 'none'}")
         return 0 if ok else 1
     if "--autostart-status" in argv:
-        log(f"CLI állapot: mód={winutil.autostart_method() or 'nincs'}")
+        log(f"CLI status: mode={winutil.autostart_method() or 'none'}")
         return 0
     return None
 
@@ -458,7 +458,7 @@ def run() -> int:
     if code is not None:
         return code
 
-    log(f"indul – exe={sys.executable} frozen={getattr(sys, 'frozen', False)}")
+    log(f"starting - exe={sys.executable} frozen={getattr(sys, 'frozen', False)}")
     try:
         QApplication.setAttribute(Qt.ApplicationAttribute.AA_DontShowIconsInMenus, False)
         app = QApplication(sys.argv)
@@ -466,22 +466,22 @@ def run() -> int:
         app.setQuitOnLastWindowClosed(False)
         app.setWindowIcon(winutil.app_icon())
 
-        # egyszerre csak egy példány fusson
+        # only one instance at a time
         lock = QSharedMemory("ClaudeUsageMonitor-single-instance")
         if lock.attach():
-            log("már fut egy példány, kilépés")
+            log("another instance is already running, exiting")
             QMessageBox.information(None, APP_TITLE, tr("err.already_running"))
             return 0
         lock.create(1)
         app._lock = lock
 
         if not QSystemTrayIcon.isSystemTrayAvailable():
-            log("figyelmeztetés: nincs rendszertálca")
+            log("warning: no system tray")
 
         monitor = MonitorApp(app)
-        app._monitor = monitor  # referencia megtartása
-        log(f"elindult – autostart={winutil.autostart_method() or 'nincs'}")
+        app._monitor = monitor  # keep a reference
+        log(f"started - autostart={winutil.autostart_method() or 'none'}")
         return app.exec()
     except BaseException:
-        log("HIBA:\n" + traceback.format_exc())
+        log("ERROR:\n" + traceback.format_exc())
         raise

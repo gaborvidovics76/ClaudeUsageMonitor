@@ -1,4 +1,4 @@
-"""Beállítások: egyszerű JSON fájl a %APPDATA%\\ClaudeUsageMonitor mappában."""
+"""Settings: a simple JSON file in %APPDATA%\\ClaudeUsageMonitor."""
 
 from __future__ import annotations
 
@@ -24,31 +24,31 @@ def config_path() -> str:
 
 
 DEFAULTS: Dict[str, Any] = {
-    # --- nyelv
-    "language": "",                  # üres = a rendszer nyelve (ha támogatott), különben angol
+    # --- language
+    "language": "",                  # empty = system language (if supported), else English
 
-    # --- profil / adatforrás
-    "source": "local",               # local = Claude Desktop napló | api = claude.ai szerver
-    "org": "",                       # üres = a legutóbb használt profil
-    "data_path": "",                 # üres = alapértelmezett Claude útvonal
+    # --- profile / data source
+    "source": "local",               # local = Claude Desktop log | api = claude.ai server
+    "org": "",                       # empty = the most recently used profile
+    "data_path": "",                 # empty = default Claude path
     "refresh_seconds": 5,
 
-    # --- megjelenés
-    "visible": True,                 # látszik-e a lebegő panel (False = csak tálca)
+    # --- appearance
+    "visible": True,                 # whether the floating panel is shown (False = tray only)
     "layout": "postit",              # postit | compact | ring
-    "theme": "midnight",             # lásd theme.THEMES
-    "accent": "",                    # egyedi kiemelőszín (#RRGGBB), üres = téma szerinti
-    "scale": 1.0,                    # 0.7 – 2.0
+    "theme": "midnight",             # see theme.THEMES
+    "accent": "",                    # custom accent color (#RRGGBB), empty = theme default
+    "scale": 1.0,                    # 0.7 - 2.0
     "opacity": 1.0,
     "always_on_top": True,
     "click_through": False,
-    "locked": False,                 # helyben rögzítve (nem mozgatható)
+    "locked": False,                 # locked in place (not draggable)
     "pos_x": None,
     "pos_y": None,
     "snap_edges": True,
     "show_in_taskbar": False,
 
-    # --- tartalom
+    # --- content
     "show_five_hour": True,
     "show_weekly": True,
     "show_spark": True,
@@ -57,16 +57,16 @@ DEFAULTS: Dict[str, Any] = {
     "show_age": True,
     "tray_metric": "five_hour",      # five_hour | weekly | max
 
-    # --- riasztások
+    # --- alerts
     "warn_threshold": 70,
     "danger_threshold": 90,
     "notify_enabled": True,
     "notify_on_reset": True,
     "notify_stale": True,
 
-    # --- rendszer
+    # --- system
     "autostart": False,
-    "start_menu": True,              # parancsikon a Start menüben
+    "start_menu": True,              # shortcut in the Start menu
     "first_run_done": False,
 }
 
@@ -98,7 +98,7 @@ class Settings:
         except OSError:
             pass
 
-    # ------------------------------------------------------------ elérés
+    # ------------------------------------------------------------ access
 
     def __getitem__(self, key: str) -> Any:
         return self._data.get(key, DEFAULTS.get(key))
@@ -119,7 +119,7 @@ class Settings:
         self._data = dict(DEFAULTS)
         self._data["first_run_done"] = True
 
-    # ------------------------------------------------------ származtatott
+    # ------------------------------------------------------ derived
 
     def resolved_data_path(self) -> str:
         return self["data_path"] or default_data_path()

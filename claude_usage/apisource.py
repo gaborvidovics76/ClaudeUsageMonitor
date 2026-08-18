@@ -1,10 +1,10 @@
-"""Szerveroldali használat a https://api.anthropic.com/api/oauth/usage végpontról,
-OAuth Bearer tokennel (lásd oauth.py).
+"""Server-side usage from the https://api.anthropic.com/api/oauth/usage endpoint,
+with an OAuth Bearer token (see oauth.py).
 
-A válasz `limits` tömböt ad, elemenként:
+The response returns a `limits` array, each item:
     {kind, group, percent, resets_at (ISO|null), scope:{model,surface}}
-Ebből az 5 órás ablakot és a heti keretet emeljük ki, és a widget által használt
-Metrics szerkezetbe töltjük.
+We pick the 5-hour window and the weekly limit out of it and load them into the
+Metrics structure the widget uses.
 """
 
 from __future__ import annotations
@@ -15,11 +15,12 @@ from datetime import datetime
 from typing import Callable, List, Optional, Tuple
 
 from . import oauth
+from .i18n import tr
 from .datasource import FIVE_HOURS_MS, WEEK_MS, Metrics, Sample
 
 
 def _dbg(msg: str) -> None:
-    """Diagnosztikai napló az API-lekérdezésekről (%APPDATA%\\ClaudeUsageMonitor\\api.log)."""
+    """Diagnostic log of API queries (%APPDATA%\\ClaudeUsageMonitor\\api.log)."""
     try:
         import os
         from datetime import datetime as _dt
@@ -51,8 +52,8 @@ def _parse_iso_ms(value) -> Optional[int]:
 
 
 class ApiReader:
-    """UsageReader-kompatibilis felület: read() -> Metrics. A hálózat háttérszálon
-    fut, a read() sosem blokkol; token lejártakor magától frissít."""
+    """UsageReader-compatible interface: read() -> Metrics. The network runs on a
+    background thread, read() never blocks; refreshes the token on expiry."""
 
     def __init__(self, tokens: Optional[dict] = None,
                  on_tokens_changed: Optional[Callable[[dict], None]] = None):
@@ -63,8 +64,8 @@ class ApiReader:
         self._fetched_at: Optional[int] = None
         self._error = ""
         self._inflight = False
-        self._last_fetch = 0.0        # utolsó hálózati próba ideje (mp)
-        self._min_interval = 60.0     # ennél sűrűbben nem hívjuk a szervert
+        self._last_fetch = 0.0        # time of the last network attempt (s)
+        self._min_interval = 60.0     # do not call the server more often than this
         self._series: List[Sample] = []
 
     # ------------------------------------------------------------------ token
@@ -80,7 +81,7 @@ class ApiReader:
             return bool(self._tokens.get("access_token"))
 
     def _valid_access_token(self) -> Tuple[str, str]:
-        """Érvényes access tokent ad (szükség esetén frissít). (token, hiba)."""
+        """Returns a valid access token (refreshing if needed). (token, error)."""
         with self._lock:
             tokens = dict(self._tokens)
         access = tokens.get("access_token", "")
@@ -94,12 +95,12 @@ class ApiReader:
                 if self._on_tokens_changed:
                     self._on_tokens_changed(new)
                 return new["access_token"], ""
-            return "", err or "A munkamenet lejárt, jelentkezz be újra."
+            return "", err or tr("err.session_expired")
         if not access:
-            return "", "Nincs bejelentkezés."
+            return "", tr("err.not_signed_in")
         return access, ""
 
-    # ------------------------------------------------------------------ hálózat
+    # ------------------------------------------------------------------ network
 
     def refresh_async(self, force: bool = False) -> None:
         now = time.time()
@@ -107,18 +108,18 @@ class ApiReader:
             if self._inflight:
                 return
             if not force and (now - self._last_fetch) < self._min_interval:
-                return          # túl korai – a szervert nem terheljük
+                return          # too soon - do not burden the server
             self._inflight = True
             self._last_fetch = now
         threading.Thread(target=self._worker, daemon=True).start()
 
     def force_refresh(self) -> None:
-        """Azonnali hálózati lekérdezés (a "Frissítés most" ezt hívja)."""
+        """Immediate network query (called by "Refresh now")."""
         self.refresh_async(force=True)
 
     def _worker(self) -> None:
-        # KRITIKUS: bármi is történjék, a végén _inflight visszaáll – különben a
-        # jelző igazon ragad, és soha többé nem indul új lekérdezés.
+        # CRITICAL: whatever happens, _inflight is reset at the end - otherwise the
+        # flag stays true and no new query ever starts again.
         try:
             access, err = self._valid_access_token()
             if not access:
@@ -129,7 +130,7 @@ class ApiReader:
 
             raw, status, ferr = oauth.fetch_usage(access)
             if status == 401 and self._tokens.get("refresh_token"):
-                _dbg("401 -> token frissítés és újrapróba")
+                _dbg("401 -> token refresh and retry")
                 new, rerr = oauth.refresh(self._tokens["refresh_token"])
                 if new and new.get("access_token"):
                     with self._lock:
@@ -138,7 +139,7 @@ class ApiReader:
                         self._on_tokens_changed(new)
                     raw, status, ferr = oauth.fetch_usage(new["access_token"])
                 else:
-                    _dbg(f"token frissítés sikertelen: {rerr}")
+                    _dbg(f"token refresh failed: {rerr}")
 
             now = int(time.time() * 1000)
             with self._lock:
@@ -149,21 +150,21 @@ class ApiReader:
                     self._append_series(raw, now)
                     _dbg("OK 200")
                 elif status in (401, 403):
-                    self._error = "A munkamenet lejárt.\nJelentkezz be újra."
+                    self._error = tr("err.session_expired_nl")
                     _dbg(f"{status} auth hiba")
                 else:
-                    self._error = ferr or f"Lekérdezési hiba (HTTP {status})."
+                    self._error = ferr or tr("err.query_http", status)
                     _dbg(f"hiba: status={status} ferr={ferr}")
-        except Exception as e:  # noqa: BLE001 – a szál soha ne haljon el csendben
+        except Exception as e:  # noqa: BLE001 - the thread must never die silently
             import traceback
             with self._lock:
-                self._error = f"Váratlan hiba: {e}"
-            _dbg("KIVÉTEL:\n" + traceback.format_exc())
+                self._error = tr("err.unexpected", e)
+            _dbg("EXCEPTION:\n" + traceback.format_exc())
         finally:
             with self._lock:
                 self._inflight = False
 
-    # ------------------------------------------------------------------ elemzés
+    # ------------------------------------------------------------------ analysis
 
     @staticmethod
     def _pick(raw: dict) -> Tuple[Tuple[float, Optional[int]], Tuple[float, Optional[int]]]:
@@ -174,7 +175,7 @@ class ApiReader:
 
         five = (0.0, None)
         weekly = (0.0, None)
-        weekly_scoped = (0.0, None)  # tartalék, ha nincs modell nélküli heti
+        weekly_scoped = (0.0, None)  # fallback if there is no model-less weekly
 
         for lim in limits:
             if not isinstance(lim, dict):
@@ -224,7 +225,7 @@ class ApiReader:
             return 0.0
         return max(0.0, (pts[-1][1] - pts[0][1]) / dt_h)
 
-    # ------------------------------------------------------------------ publikus
+    # ------------------------------------------------------------------ public
 
     def organizations(self) -> List[str]:
         return []
@@ -246,7 +247,7 @@ class ApiReader:
 
         m = Metrics()
         if raw is None:
-            m.error = err or "Bejelentkezés / lekérdezés folyamatban…"
+            m.error = err or tr("err.loading")
             return m
 
         (fh_val, fh_reset), (sd_val, sd_reset) = self._pick(raw)

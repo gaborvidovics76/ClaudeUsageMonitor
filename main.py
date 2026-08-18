@@ -1,4 +1,4 @@
-"""Claude Usage Monitor – belépési pont."""
+"""Claude Usage Monitor - entry point."""
 
 import sys
 

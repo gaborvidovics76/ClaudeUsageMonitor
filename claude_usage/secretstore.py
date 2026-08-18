@@ -1,7 +1,7 @@
-"""A munkamenet-kulcs titkosított tárolása Windows DPAPI-val.
+"""Encrypted storage of the session key with Windows DPAPI.
 
-A DPAPI a bejelentkezett felhasználó fiókjához köti a titkot: más felhasználó
-vagy másik gép nem tudja visszafejteni. Nincs hozzá külső függőség (ctypes).
+DPAPI binds the secret to the signed-in user's account: another user or
+another machine cannot decrypt it. No external dependency (ctypes).
 """
 
 from __future__ import annotations
@@ -86,7 +86,7 @@ def has_secret() -> bool:
     return os.path.exists(_path())
 
 
-# --- kényelmi réteg: token-szótár (access/refresh/expiry) tárolása ---
+# --- convenience layer: store a token dict (access/refresh/expiry) ---
 
 def save_tokens(tokens: dict) -> bool:
     import json

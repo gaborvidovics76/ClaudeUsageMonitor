@@ -1,4 +1,4 @@
-"""Színtémák. Minden szín (r, g, b, a) tuple."""
+"""Color themes. Every color is an (r, g, b, a) tuple."""
 
 from __future__ import annotations
 
@@ -137,7 +137,7 @@ DEFAULT_THEME = "midnight"
 
 
 class Palette:
-    """Egy témából + egyedi kiemelőszínből összeállított paletta."""
+    """A palette built from a theme plus an optional custom accent color."""
 
     def __init__(self, name: str, accent_hex: str = ""):
         data = THEMES.get(name) or THEMES[DEFAULT_THEME]
@@ -160,7 +160,7 @@ class Palette:
         return self.ok
 
     def gauge_colors(self, value: float, warn: float, danger: float) -> Tuple[RGBA, RGBA]:
-        """A sáv színátmenetének két vége."""
+        """The two ends of the bar's gradient."""
         end = self.status(value, warn, danger)
         start = mix(self.accent, end, 0.55)
         return start, end

@@ -1,4 +1,4 @@
-"""Előzmények ablak: idővonal, statisztikák – a használat kontrollálásához."""
+"""History window: timeline and statistics - to keep usage under control."""
 
 from __future__ import annotations
 
@@ -59,7 +59,7 @@ class Chart(QWidget):
 
         p.fillRect(self.rect(), qc((22, 24, 29, 255)))
 
-        # rács + skála
+        # grid + scale
         p.setFont(QFont("Segoe UI", 7))
         for frac, label in ((0.0, "100"), (0.25, "75"), (0.5, "50"), (0.75, "25"), (1.0, "0")):
             y = r.top() + r.height() * frac
@@ -69,7 +69,7 @@ class Chart(QWidget):
             p.drawText(QRectF(0, y - 8, 28, 16),
                        Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter, label)
 
-        # küszöbvonalak
+        # threshold lines
         for value, color in ((self.s["warn_threshold"], pal.warn), (self.s["danger_threshold"], pal.danger)):
             y = r.bottom() - r.height() * (float(value) / 100.0)
             pen = QPen(qc(with_alpha(color, 110)), 1, Qt.PenStyle.DashLine)
@@ -85,7 +85,7 @@ class Chart(QWidget):
         if t1 <= t0:
             t1 = t0 + 1
 
-        gap_ms = 20 * 60 * 1000     # ennél nagyobb szünet = megszakadt mérés
+        gap_ms = 20 * 60 * 1000     # a gap larger than this = a broken measurement
 
         def draw(series: List[Tuple[int, float]], color, fill: bool) -> None:
             segments: List[List[Tuple[int, float]]] = [[]]
@@ -126,7 +126,7 @@ class Chart(QWidget):
         if self.s["show_five_hour"]:
             draw([(s.t, s.fh) for s in self.rows], pal.ok, False)
 
-        # időtengely
+        # time axis
         p.setPen(QPen(qc((120, 128, 146, 255))))
         p.setFont(QFont("Segoe UI", 7))
         for frac in (0.0, 0.25, 0.5, 0.75, 1.0):
@@ -159,7 +159,7 @@ class HistoryWindow(QDialog):
             self.group.addButton(b, i)
             top.addWidget(b)
         top.addStretch(1)
-        legend = QLabel("● 5 órás ablak    ● heti keret")
+        legend = QLabel()
         legend.setStyleSheet(f"color: {self.pal.dim[0]:02x};")
         legend.setText(
             f'<span style="color:rgb{self.pal.ok[:3]}">●</span> ' + tr("hist.legend_5h") + ' &nbsp;&nbsp;'

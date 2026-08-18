@@ -1,15 +1,15 @@
-"""OAuth bejelentkezés a rendszerböngészőn keresztül (PKCE, manuális kód).
+"""OAuth sign-in through the system browser (PKCE, manual code).
 
-Ugyanaz a folyamat, amit a Claude Code használ:
-  1. a program a RENDSZERBÖNGÉSZŐDBEN nyitja meg a bejelentkezést (ott a jelszavaid,
-     passkey-d már működnek),
-  2. a bejelentkezés végén kapsz egy kódot,
-  3. azt bemásolod a programba, ami tokenre váltja.
+The same flow Claude Code uses:
+  1. the app opens the sign-in IN YOUR SYSTEM BROWSER (your passwords and passkeys
+     already work there),
+  2. at the end of sign-in you receive a code,
+  3. you paste it into the app, which exchanges it for a token.
 
-A tokennel utána a https://api.anthropic.com/api/oauth/usage kérdezhető le – ez adja
-a szerveroldali használatot (minden eszközöd, pontos reset-időkkel).
+With the token it then queries https://api.anthropic.com/api/oauth/usage - this gives
+the server-side usage (all your devices, with exact reset times).
 
-Nincs szükség beágyazott böngészőre.
+No embedded browser is needed.
 """
 
 from __future__ import annotations
@@ -25,11 +25,12 @@ import urllib.parse
 import urllib.request
 from typing import Dict, Optional, Tuple
 
-# A Claude Code nyilvános OAuth-kliense (a felhasználó saját fiókjához).
+# Claude Code's public OAuth client (for the user's own account).
+from .i18n import tr
 CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
 AUTHORIZE_URL = "https://claude.ai/oauth/authorize"
-# A jelenlegi Claude Code a platform.claude.com-ot hasznalja; a regi
-# console.anthropic.com/v1/oauth/token 404-et ad (megszunt route).
+# The current Claude Code uses platform.claude.com; the old
+# console.anthropic.com/v1/oauth/token returns 404 (removed route).
 TOKEN_URL = "https://platform.claude.com/v1/oauth/token"
 REDIRECT_URI = "https://platform.claude.com/oauth/code/callback"
 SCOPE = "org:create_api_key user:profile user:inference"
@@ -37,11 +38,10 @@ SCOPE = "org:create_api_key user:profile user:inference"
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 BETA_HEADER = "oauth-2025-04-20"
 
-# A token-végpont Cloudflare mögött van, ami a Python alap User-Agentjét
-# "Error 1010"-zel blokkolja, a böngésző-UA-t pedig szigorúan rate-limiteli.
-# Ezért PONTOSAN a valódi Claude Code fejléceit használjuk – így a kérés
-# megkülönböztethetetlen a hivatalos klienstől (átjut a Cloudflare-en és normál
-# limitet kap).
+# The token endpoint is behind Cloudflare, which blocks Python's default
+# User-Agent with "Error 1010" and heavily rate-limits a browser UA. So we use
+# EXACTLY the real Claude Code headers - this makes the request indistinguishable
+# from the official client (passes Cloudflare and gets normal limits).
 CLI_UA = "claude-cli/2.1.229 (external)"
 
 
@@ -62,14 +62,14 @@ def _b64url(data: bytes) -> str:
 
 
 def new_pkce() -> Tuple[str, str]:
-    """(code_verifier, code_challenge) S256 párost ad."""
+    """Returns an (code_verifier, code_challenge) S256 pair."""
     verifier = _b64url(secrets.token_bytes(32))
     challenge = _b64url(hashlib.sha256(verifier.encode("ascii")).digest())
     return verifier, challenge
 
 
 def build_authorize(verifier: str, challenge: str) -> Tuple[str, str]:
-    """(authorize_url, state) – a böngészőben megnyitandó cím."""
+    """(authorize_url, state) - the URL to open in the browser."""
     state = _b64url(secrets.token_bytes(24))
     params = {
         "code": "true",
@@ -99,18 +99,18 @@ def _post_token(payload: dict) -> Tuple[Optional[dict], str]:
         body = e.read().decode("utf-8", "replace")
         return None, f"HTTP {e.code}: {body[:200]}"
     except urllib.error.URLError as e:
-        return None, f"hálózati hiba: {e.reason}"
+        return None, tr("err.network", e.reason)
     except ValueError:
-        return None, "érvénytelen válasz a token-végponttól"
-    except Exception as e:  # noqa: BLE001 – minden más hálózati hiba
-        return None, f"kapcsolati hiba: {e}"
+        return None, tr("err.bad_token_resp")
+    except Exception as e:  # noqa: BLE001 - any other network error
+        return None, tr("err.connection", e)
 
 
 def exchange_code(pasted: str, verifier: str, state: str) -> Tuple[Optional[dict], str]:
-    """A bemásolt kódot tokenre váltja. A visszamásolt szöveg `kód#state` alakú."""
+    """Exchanges the pasted code for a token. The pasted text has the form `code#state`."""
     pasted = pasted.strip()
     if not pasted:
-        return None, "Nincs beillesztett kód."
+        return None, tr("err.no_code")
     code = pasted
     got_state = state
     if "#" in pasted:
@@ -139,7 +139,7 @@ def refresh(refresh_token: str) -> Tuple[Optional[dict], str]:
     if tokens is None:
         return None, err
     norm = _normalize(tokens)
-    # a szerver néha nem küld új refresh tokent – tartsuk meg a régit
+    # the server sometimes sends no new refresh token - keep the old one
     if not norm.get("refresh_token"):
         norm["refresh_token"] = refresh_token
     return norm, ""
@@ -149,7 +149,7 @@ def _normalize(tokens: dict) -> dict:
     expires_in = tokens.get("expires_in")
     expires_at = None
     if isinstance(expires_in, (int, float)):
-        expires_at = int(time.time()) + int(expires_in) - 60  # kis ráhagyás
+        expires_at = int(time.time()) + int(expires_in) - 60  # small margin
     return {
         "access_token": tokens.get("access_token", ""),
         "refresh_token": tokens.get("refresh_token", ""),
@@ -158,7 +158,7 @@ def _normalize(tokens: dict) -> dict:
 
 
 def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str]:
-    """(json, http_status, error). 401 esetén a hívó frissítsen és próbálja újra."""
+    """(json, http_status, error). On 401 the caller should refresh and retry."""
     req = urllib.request.Request(
         USAGE_URL,
         method="GET",
@@ -175,8 +175,8 @@ def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str]:
         body = e.read().decode("utf-8", "replace")
         return None, e.code, body[:200]
     except urllib.error.URLError as e:
-        return None, 0, f"hálózati hiba: {e.reason}"
+        return None, 0, tr("err.network", e.reason)
     except ValueError:
-        return None, 0, "érvénytelen válasz a usage-végponttól"
-    except Exception as e:  # noqa: BLE001 – minden más hálózati hiba
-        return None, 0, f"kapcsolati hiba: {e}"
+        return None, 0, tr("err.bad_usage_resp")
+    except Exception as e:  # noqa: BLE001 - any other network error
+        return None, 0, tr("err.connection", e)

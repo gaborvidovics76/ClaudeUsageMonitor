@@ -1,10 +1,10 @@
-"""Egyszerű, függőség nélküli lokalizáció.
+"""Simple, dependency-free localization.
 
-A `tr(key, *args)` a jelenlegi nyelven adja vissza a szöveget (hiányzó fordításnál
-angolra esik vissza). A nyelvet a beállítások tárolják; a `set_language` váltja.
+`tr(key, *args)` returns the text in the current language (falling back to English
+for a missing translation). The language is stored in settings; `set_language` switches it.
 
-Új nyelv hozzáadása: vedd fel a kódot a LANG_NAMES-be, és tölts a STRINGS minden
-kulcsához egy `"<kód>": "..."` bejegyzést. Ami hiányzik, angolul jelenik meg.
+Adding a language: add the code to LANG_NAMES, and add a `"<code>": "..."` entry to
+every key in STRINGS. Anything missing shows in English.
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from __future__ import annotations
 import locale
 from typing import Dict, List
 
-# A választható nyelvek – saját nevükön megjelenítve.
+# The available languages - shown in their own name.
 LANG_NAMES: Dict[str, str] = {
     "en": "English",
     "hu": "Magyar",
@@ -41,7 +41,7 @@ def language_name(code: str) -> str:
 
 
 def system_language() -> str:
-    """A Windows nyelvéből tippel egy támogatott kódot (különben angol)."""
+    """Guesses a supported code from the Windows language (else English)."""
     try:
         code = (locale.getdefaultlocale()[0] or "").split("_")[0].lower()
     except Exception:  # noqa: BLE001
@@ -70,8 +70,8 @@ def tr(key: str, *args) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Fordítások.  Kulcs -> { nyelvkód: szöveg }.  Az "en" mindig kötelező (fallback).
-# A {} helyőrzőkbe a tr() argumentumai kerülnek.
+# Translations.  key -> { lang code: text }.  "en" is always required (fallback).
+# The {} placeholders are filled with tr()'s arguments.
 # ---------------------------------------------------------------------------
 
 STRINGS: Dict[str, Dict[str, str]] = {
@@ -136,7 +136,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "nl": "Geen gegevens", "ru": "Нет данных", "cs": "Žádná data", "tr": "Veri yok",
     },
 
-    # ---- idő (fmt_age / fmt_delta) ----
+    # ---- time (fmt_age / fmt_delta) ----
     "time.none": {
         "en": "no data", "hu": "nincs adat", "de": "keine Daten", "fr": "aucune donnée",
         "es": "sin datos", "it": "nessun dato", "pt": "sem dados", "pl": "brak danych",
@@ -162,7 +162,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "it": "{} g", "pt": "{} d", "pl": "{} dni", "nl": "{} d", "ru": "{} дн",
         "cs": "{} dní", "tr": "{} gün",
     },
-    # rövid összetett alakok: "{d}{d} {h}{h}" stb.
+    # short compound forms: "{d}{d} {h}{h}" etc.
     "time.dh": {
         "en": "{}d {}h", "hu": "{}n {}ó", "de": "{}T {}Std", "fr": "{}j {}h",
         "es": "{}d {}h", "it": "{}g {}h", "pt": "{}d {}h", "pl": "{}d {}g",
@@ -179,7 +179,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "cs": "{}m", "tr": "{}dk",
     },
 
-    # ---- menü ----
+    # ---- menu ----
     "menu.panel_visible": {
         "en": "Show panel", "hu": "Panel látszik", "de": "Panel anzeigen",
         "fr": "Afficher le panneau", "es": "Mostrar panel", "it": "Mostra pannello",
@@ -365,7 +365,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "cs": "Jazyk", "tr": "Dil",
     },
 
-    # ---- tálca / értesítések ----
+    # ---- tray / notifications ----
     "tray.head": {
         "en": "5h: {}%   ·   Week: {}%", "hu": "5 óra: {}%   ·   Hét: {}%",
         "de": "5 Std: {}%   ·   Woche: {}%", "fr": "5 h : {} %   ·   Sem. : {} %",
@@ -490,7 +490,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "cs": "Aplikace už běží (viz lišta).", "tr": "Uygulama zaten çalışıyor (tepsiye bakın).",
     },
 
-    # ===================== bejelentkező ablak (authdialog) =====================
+    # ===================== sign-in window (authdialog) =====================
     "dlg.login_title": {
         "en": "sign in", "hu": "bejelentkezés", "de": "Anmeldung", "fr": "connexion",
         "es": "iniciar sesión", "it": "accesso", "pt": "entrar", "pl": "logowanie",
@@ -606,7 +606,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "Неизвестная ошибка.", "cs": "Neznámá chyba.", "tr": "Bilinmeyen hata.",
     },
 
-    # ===================== beállítások ablak (settings_dialog) =====================
+    # ===================== settings window (settings_dialog) =====================
     "set.title": {
         "en": "settings", "hu": "beállítások", "de": "Einstellungen", "fr": "paramètres",
         "es": "ajustes", "it": "impostazioni", "pt": "configurações", "pl": "ustawienia",
@@ -977,7 +977,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "tr": "Varsayılan ayarları geri yüklemek istediğine emin misin?",
     },
 
-    # ===================== előzmények ablak (history) =====================
+    # ===================== history window (history) =====================
     "hist.title": {
         "en": "history", "hu": "előzmények", "de": "Verlauf", "fr": "historique", "es": "historial",
         "it": "cronologia", "pt": "histórico", "pl": "historia", "nl": "geschiedenis", "ru": "история",
@@ -1046,5 +1046,123 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "pt": "Dados insuficientes para este período.", "pl": "Za mało danych dla tego okresu.",
         "nl": "Niet genoeg gegevens voor deze periode.", "ru": "Недостаточно данных за этот период.",
         "cs": "Pro toto období není dost dat.", "tr": "Bu dönem için yeterli veri yok.",
+    },
+
+    # ===================== állapot / hibaüzenetek (panel, dialógus) =====================
+    "err.file_not_found": {
+        "en": "Usage file not found.\nIs Claude Desktop running?",
+        "hu": "A használati fájl nem található.\nFut a Claude Desktop?",
+        "de": "Nutzungsdatei nicht gefunden.\nLäuft Claude Desktop?",
+        "fr": "Fichier d'usage introuvable.\nClaude Desktop est-il lancé ?",
+        "es": "Archivo de uso no encontrado.\n¿Claude Desktop está abierto?",
+        "it": "File d'uso non trovato.\nClaude Desktop è in esecuzione?",
+        "pt": "Ficheiro de uso não encontrado.\nO Claude Desktop está aberto?",
+        "pl": "Nie znaleziono pliku użycia.\nCzy Claude Desktop działa?",
+        "nl": "Gebruiksbestand niet gevonden.\nDraait Claude Desktop?",
+        "ru": "Файл использования не найден.\nClaude Desktop запущен?",
+        "cs": "Soubor s využitím nenalezen.\nBěží Claude Desktop?",
+        "tr": "Kullanım dosyası bulunamadı.\nClaude Desktop çalışıyor mu?",
+    },
+    "err.file_unreadable": {
+        "en": "The usage file is currently unreadable.", "hu": "A használati fájl jelenleg nem olvasható.",
+        "de": "Die Nutzungsdatei ist derzeit nicht lesbar.", "fr": "Le fichier d'usage est illisible pour l'instant.",
+        "es": "El archivo de uso no se puede leer ahora.", "it": "Il file d'uso non è leggibile al momento.",
+        "pt": "O ficheiro de uso está ilegível de momento.", "pl": "Plik użycia jest teraz nieczytelny.",
+        "nl": "Het gebruiksbestand is momenteel onleesbaar.", "ru": "Файл использования сейчас нечитаем.",
+        "cs": "Soubor s využitím je momentálně nečitelný.", "tr": "Kullanım dosyası şu an okunamıyor.",
+    },
+    "err.file_empty": {
+        "en": "The usage file is empty.", "hu": "A használati fájl üres.", "de": "Die Nutzungsdatei ist leer.",
+        "fr": "Le fichier d'usage est vide.", "es": "El archivo de uso está vacío.", "it": "Il file d'uso è vuoto.",
+        "pt": "O ficheiro de uso está vazio.", "pl": "Plik użycia jest pusty.", "nl": "Het gebruiksbestand is leeg.",
+        "ru": "Файл использования пуст.", "cs": "Soubor s využitím je prázdný.", "tr": "Kullanım dosyası boş.",
+    },
+    "err.no_usage_data": {
+        "en": "No usage data.", "hu": "Nincs használati adat.", "de": "Keine Nutzungsdaten.",
+        "fr": "Aucune donnée d'usage.", "es": "Sin datos de uso.", "it": "Nessun dato d'uso.",
+        "pt": "Sem dados de uso.", "pl": "Brak danych użycia.", "nl": "Geen gebruiksgegevens.",
+        "ru": "Нет данных об использовании.", "cs": "Žádná data o využití.", "tr": "Kullanım verisi yok.",
+    },
+    "err.no_data_profile": {
+        "en": "No data for this profile.", "hu": "Ehhez a profilhoz nincs adat.", "de": "Keine Daten für dieses Profil.",
+        "fr": "Aucune donnée pour ce profil.", "es": "Sin datos para este perfil.", "it": "Nessun dato per questo profilo.",
+        "pt": "Sem dados para este perfil.", "pl": "Brak danych dla tego profilu.", "nl": "Geen gegevens voor dit profiel.",
+        "ru": "Нет данных для этого профиля.", "cs": "Pro tento profil nejsou data.", "tr": "Bu profil için veri yok.",
+    },
+    "err.session_expired": {
+        "en": "The session has expired, sign in again.", "hu": "A munkamenet lejárt, jelentkezz be újra.",
+        "de": "Die Sitzung ist abgelaufen, melde dich erneut an.", "fr": "La session a expiré, reconnecte-toi.",
+        "es": "La sesión expiró, vuelve a iniciar sesión.", "it": "La sessione è scaduta, accedi di nuovo.",
+        "pt": "A sessão expirou, entra novamente.", "pl": "Sesja wygasła, zaloguj się ponownie.",
+        "nl": "De sessie is verlopen, meld je opnieuw aan.", "ru": "Сессия истекла, войдите снова.",
+        "cs": "Relace vypršela, přihlaste se znovu.", "tr": "Oturum süresi doldu, tekrar giriş yap.",
+    },
+    "err.session_expired_nl": {
+        "en": "The session has expired.\nSign in again.", "hu": "A munkamenet lejárt.\nJelentkezz be újra.",
+        "de": "Die Sitzung ist abgelaufen.\nMelde dich erneut an.", "fr": "La session a expiré.\nReconnecte-toi.",
+        "es": "La sesión expiró.\nVuelve a iniciar sesión.", "it": "La sessione è scaduta.\nAccedi di nuovo.",
+        "pt": "A sessão expirou.\nEntra novamente.", "pl": "Sesja wygasła.\nZaloguj się ponownie.",
+        "nl": "De sessie is verlopen.\nMeld je opnieuw aan.", "ru": "Сессия истекла.\nВойдите снова.",
+        "cs": "Relace vypršela.\nPřihlaste se znovu.", "tr": "Oturum süresi doldu.\nTekrar giriş yap.",
+    },
+    "err.not_signed_in": {
+        "en": "Not signed in.", "hu": "Nincs bejelentkezés.", "de": "Nicht angemeldet.",
+        "fr": "Non connecté.", "es": "Sin sesión iniciada.", "it": "Non connesso.",
+        "pt": "Sem sessão iniciada.", "pl": "Niezalogowano.", "nl": "Niet aangemeld.",
+        "ru": "Вход не выполнен.", "cs": "Nepřihlášeno.", "tr": "Giriş yapılmadı.",
+    },
+    "err.query_http": {
+        "en": "Query error (HTTP {}).", "hu": "Lekérdezési hiba (HTTP {}).", "de": "Abfragefehler (HTTP {}).",
+        "fr": "Erreur de requête (HTTP {}).", "es": "Error de consulta (HTTP {}).", "it": "Errore di query (HTTP {}).",
+        "pt": "Erro de consulta (HTTP {}).", "pl": "Błąd zapytania (HTTP {}).", "nl": "Query-fout (HTTP {}).",
+        "ru": "Ошибка запроса (HTTP {}).", "cs": "Chyba dotazu (HTTP {}).", "tr": "Sorgu hatası (HTTP {}).",
+    },
+    "err.unexpected": {
+        "en": "Unexpected error: {}", "hu": "Váratlan hiba: {}", "de": "Unerwarteter Fehler: {}",
+        "fr": "Erreur inattendue : {}", "es": "Error inesperado: {}", "it": "Errore imprevisto: {}",
+        "pt": "Erro inesperado: {}", "pl": "Nieoczekiwany błąd: {}", "nl": "Onverwachte fout: {}",
+        "ru": "Непредвиденная ошибка: {}", "cs": "Neočekávaná chyba: {}", "tr": "Beklenmeyen hata: {}",
+    },
+    "err.loading": {
+        "en": "Signing in / querying…", "hu": "Bejelentkezés / lekérdezés folyamatban…",
+        "de": "Anmeldung / Abfrage läuft…", "fr": "Connexion / requête en cours…",
+        "es": "Iniciando sesión / consultando…", "it": "Accesso / query in corso…",
+        "pt": "A entrar / a consultar…", "pl": "Logowanie / zapytanie w toku…",
+        "nl": "Aanmelden / opvragen…", "ru": "Вход / запрос…",
+        "cs": "Přihlašování / dotaz…", "tr": "Giriş / sorgu sürüyor…",
+    },
+    "err.network": {
+        "en": "network error: {}", "hu": "hálózati hiba: {}", "de": "Netzwerkfehler: {}",
+        "fr": "erreur réseau : {}", "es": "error de red: {}", "it": "errore di rete: {}",
+        "pt": "erro de rede: {}", "pl": "błąd sieci: {}", "nl": "netwerkfout: {}",
+        "ru": "сетевая ошибка: {}", "cs": "chyba sítě: {}", "tr": "ağ hatası: {}",
+    },
+    "err.connection": {
+        "en": "connection error: {}", "hu": "kapcsolati hiba: {}", "de": "Verbindungsfehler: {}",
+        "fr": "erreur de connexion : {}", "es": "error de conexión: {}", "it": "errore di connessione: {}",
+        "pt": "erro de ligação: {}", "pl": "błąd połączenia: {}", "nl": "verbindingsfout: {}",
+        "ru": "ошибка соединения: {}", "cs": "chyba připojení: {}", "tr": "bağlantı hatası: {}",
+    },
+    "err.bad_token_resp": {
+        "en": "invalid response from the token endpoint", "hu": "érvénytelen válasz a token-végponttól",
+        "de": "ungültige Antwort vom Token-Endpunkt", "fr": "réponse invalide du point de terminaison du jeton",
+        "es": "respuesta no válida del endpoint de token", "it": "risposta non valida dall'endpoint del token",
+        "pt": "resposta inválida do endpoint de token", "pl": "nieprawidłowa odpowiedź z punktu tokena",
+        "nl": "ongeldig antwoord van het token-eindpunt", "ru": "неверный ответ от token-эндпойнта",
+        "cs": "neplatná odpověď z tokenového endpointu", "tr": "token uç noktasından geçersiz yanıt",
+    },
+    "err.bad_usage_resp": {
+        "en": "invalid response from the usage endpoint", "hu": "érvénytelen válasz a usage-végponttól",
+        "de": "ungültige Antwort vom Usage-Endpunkt", "fr": "réponse invalide du point de terminaison d'usage",
+        "es": "respuesta no válida del endpoint de uso", "it": "risposta non valida dall'endpoint d'uso",
+        "pt": "resposta inválida do endpoint de uso", "pl": "nieprawidłowa odpowiedź z punktu użycia",
+        "nl": "ongeldig antwoord van het gebruik-eindpunt", "ru": "неверный ответ от usage-эндпойнта",
+        "cs": "neplatná odpověď z usage endpointu", "tr": "kullanım uç noktasından geçersiz yanıt",
+    },
+    "err.no_code": {
+        "en": "No code pasted.", "hu": "Nincs beillesztett kód.", "de": "Kein Code eingefügt.",
+        "fr": "Aucun code collé.", "es": "No se pegó ningún código.", "it": "Nessun codice incollato.",
+        "pt": "Nenhum código colado.", "pl": "Nie wklejono kodu.", "nl": "Geen code geplakt.",
+        "ru": "Код не вставлен.", "cs": "Nevložen žádný kód.", "tr": "Kod yapıştırılmadı.",
     },
 }
