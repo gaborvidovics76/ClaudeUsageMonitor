@@ -8,6 +8,7 @@ from PySide6.QtCore import QPoint, QPointF, QRectF, Qt, Signal
 from PySide6.QtGui import (
     QBrush,
     QFont,
+    QFontMetrics,
     QGuiApplication,
     QLinearGradient,
     QPainter,
@@ -100,7 +101,15 @@ class UsageWidget(QWidget):
 
     def set_metrics(self, metrics: Metrics) -> None:
         self.metrics = metrics
+        # the model gauge appears/disappears with the data -> re-measure the panel
+        shown = bool(self.s["show_model"]) and metrics.has_model
+        if shown != getattr(self, "_model_shown", False):
+            self._model_shown = shown
+            self._relayout()
         self.update()
+
+    def _model_on(self) -> bool:
+        return bool(self.s["show_model"]) and self.metrics.has_model
 
     # ------------------------------------------------------------- sizing
 
@@ -112,10 +121,11 @@ class UsageWidget(QWidget):
         k = self.k
         layout = self.s["layout"]
         gauges = int(bool(self.s["show_five_hour"])) + int(bool(self.s["show_weekly"]))
+        gauges += int(getattr(self, "_model_shown", False))
         gauges = max(1, gauges)
 
         if layout == "compact":
-            w = 128 + 132 * gauges
+            w = 128 + 140 * gauges
             h = 46
         elif layout == "ring":
             w = 92 + 104 * gauges
@@ -256,7 +266,7 @@ class UsageWidget(QWidget):
     def _paint_header(self, p: QPainter, r: QRectF) -> float:
         k, pal, m = self.k, self.palette_, self.metrics
         dot = QRectF(r.left(), r.top() + 3 * k, 8 * k, 8 * k)
-        worst = max(m.five_hour.value, m.weekly.value)
+        worst = max(m.five_hour.value, m.weekly.value, m.model.value if self._model_on() else 0.0)
         p.setPen(Qt.PenStyle.NoPen)
         p.setBrush(qc(pal.status(worst, self.s["warn_threshold"], self.s["danger_threshold"])))
         p.drawEllipse(dot)
@@ -281,6 +291,10 @@ class UsageWidget(QWidget):
         if self.s["show_five_hour"]:
             y = self._paint_block(p, QRectF(r.left(), y, r.width(), 60 * k), tr("panel.five_hour"),
                                   self.metrics.five_hour, hourly=True)
+        if self._model_on():
+            y = self._paint_block(p, QRectF(r.left(), y, r.width(), 60 * k),
+                                  tr("panel.model", self.metrics.model_name.upper()),
+                                  self.metrics.model, hourly=False)
         if self.s["show_weekly"]:
             y = self._paint_block(p, QRectF(r.left(), y, r.width(), 60 * k), tr("panel.weekly"),
                                   self.metrics.weekly, hourly=False)
@@ -385,6 +399,8 @@ class UsageWidget(QWidget):
         items = []
         if self.s["show_five_hour"]:
             items.append((tr("panel.five_hour_short"), self.metrics.five_hour))
+        if self._model_on():
+            items.append((self.metrics.model_name.upper(), self.metrics.model))
         if self.s["show_weekly"]:
             items.append((tr("panel.week_short"), self.metrics.weekly))
         if not items:
@@ -427,6 +443,8 @@ class UsageWidget(QWidget):
         items = []
         if self.s["show_five_hour"]:
             items.append((tr("panel.five_hour_short"), self.metrics.five_hour))
+        if self._model_on():
+            items.append((self.metrics.model_name.upper()[:6], self.metrics.model))
         if self.s["show_weekly"]:
             items.append((tr("panel.week_short"), self.metrics.weekly))
         if not items:
@@ -440,14 +458,20 @@ class UsageWidget(QWidget):
         x += 16 * k
 
         seg = (r.right() - x) / len(items)
+        label_font = _font(6.8 * k, QFont.Weight.DemiBold, 0.8 * k)
+        fm = QFontMetrics(label_font)
         for label, g in items:
+            # measure the label so longer names (e.g. "FABLE") never get clipped
+            lw = max(26 * k, fm.horizontalAdvance(label) + 6 * k)
             p.setPen(QPen(qc(pal.dim)))
-            p.setFont(_font(6.8 * k, QFont.Weight.DemiBold, 0.8 * k))
-            p.drawText(QRectF(x, r.top(), 26 * k, r.height()),
+            p.setFont(label_font)
+            p.drawText(QRectF(x, r.top(), lw, r.height()),
                        Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, label)
             p.setPen(QPen(qc(pal.status(g.value, self.s["warn_threshold"], self.s["danger_threshold"]))))
             p.setFont(_font(10 * k, QFont.Weight.Bold))
-            p.drawText(QRectF(x + 26 * k, r.top(), 38 * k, r.height()),
+            p.drawText(QRectF(x + lw, r.top(), 38 * k, r.height()),
                        Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, f"{g.value:.0f}%")
-            self._paint_bar(p, QRectF(x + 66 * k, r.center().y() - 3 * k, seg - 78 * k, 6 * k), g.value)
+            bar_x = x + lw + 40 * k
+            self._paint_bar(p, QRectF(bar_x, r.center().y() - 3 * k, max(20 * k, x + seg - 12 * k - bar_x), 6 * k),
+                            g.value)
             x += seg

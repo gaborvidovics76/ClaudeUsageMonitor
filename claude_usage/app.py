@@ -108,6 +108,7 @@ class MonitorApp:
         # source selection: "api" only if there is a valid sign-in
         use_api = s["source"] == "api" and self.api_reader.has_tokens()
         self.reader = self.api_reader if use_api else self.local_reader
+        self.api_reader.model_filter = (s["model_filter"] or "Fable").strip()
 
         # We refresh the display often (age counter, picking up a completed query).
         # The actual server call is throttled to 60s inside ApiReader, so the
@@ -130,12 +131,19 @@ class MonitorApp:
             self.history.refresh()
 
     def force_refresh(self) -> None:
-        """Manual 'Refresh now' - forces an immediate server call in API mode."""
+        """Manual 'Refresh now'.
+
+        API mode: forces an immediate server call (queued if one is already in
+        flight) and re-reads several times afterwards, so the result shows up even
+        on a slow network instead of waiting for the next 10 s tick.
+        Local mode: re-reads the log file even if its timestamp did not change.
+        """
         if self.reader is self.api_reader:
             self.api_reader.force_refresh()
-            # the fetch is async; pick up the result after a short delay
-            QTimer.singleShot(1500, self.refresh)
-            QTimer.singleShot(3500, self.refresh)
+            for delay_ms in (800, 2000, 4000, 7000, 12000):
+                QTimer.singleShot(delay_ms, self.refresh)
+        else:
+            self.local_reader.invalidate()
         self.refresh()
 
     def _tray_value(self) -> float:
@@ -159,14 +167,19 @@ class MonitorApp:
         self.tray.setIcon(winutil.tray_icon(value, color))
 
         fh, wk = m.five_hour, m.weekly
-        lines = [
-            APP_TITLE,
-            tr("tray.line", tr("panel.five_hour"), f"{fh.value:.0f}")
-            + (f"  ({tr('panel.reset', fmt_delta(fh.reset_in_ms))})" if fh.reset_in_ms is not None else ""),
-            tr("tray.line", tr("panel.weekly"), f"{wk.value:.0f}")
-            + (f"  ({tr('panel.reset', fmt_delta(wk.reset_in_ms))})" if wk.reset_in_ms is not None else ""),
-            tr("panel.updated", fmt_age(m.age_s)),
-        ]
+
+        def line(label: str, g) -> str:
+            reset = f"  ({tr('panel.reset', fmt_delta(g.reset_in_ms))})" if g.reset_in_ms is not None else ""
+            return tr("tray.line", label, f"{g.value:.0f}") + reset
+
+        lines = [APP_TITLE, line(tr("panel.five_hour"), fh)]
+        if self.settings["show_model"] and m.has_model:
+            lines.append(line(tr("panel.model", m.model_name.upper()), m.model))
+        lines.append(line(tr("panel.weekly"), wk))
+        lines.append(tr("panel.updated", fmt_age(m.age_s)))
+        # old data is still shown after a failed fetch - say why it is not fresher
+        if self.reader is self.api_reader and self.api_reader.last_error:
+            lines.append("! " + self.api_reader.last_error.replace("\n", " "))
         self.tray.setToolTip("\n".join(lines))
 
     def _check_alerts(self) -> None:
@@ -175,9 +188,10 @@ class MonitorApp:
             return
         warn, danger = float(s["warn_threshold"]), float(s["danger_threshold"])
 
-        for key, lkey, gauge in (("fh", "panel.five_hour", m.five_hour),
-                                 ("sd", "panel.weekly", m.weekly)):
-            label = tr(lkey)
+        gauges = [("fh", tr("panel.five_hour"), m.five_hour), ("sd", tr("panel.weekly"), m.weekly)]
+        if m.has_model:
+            gauges.append(("mo", tr("panel.model", m.model_name.upper()), m.model))
+        for key, label, gauge in gauges:
             prev = self._last.get(key)
             self._last[key] = gauge.value
             if prev is None:
@@ -238,6 +252,9 @@ class MonitorApp:
             return act
 
         toggle(tr("menu.panel_visible"), "visible")
+        toggle(tr("set.show_spark"), "show_spark")
+        model_act = toggle(tr("set.show_model"), "show_model")
+        model_act.setEnabled(self.reader is self.api_reader)   # data exists only in API mode
 
         layout_menu = menu.addMenu(tr("menu.layout"))
         group = QActionGroup(layout_menu)
@@ -465,6 +482,9 @@ def run() -> int:
         app.setApplicationName(APP_TITLE)
         app.setQuitOnLastWindowClosed(False)
         app.setWindowIcon(winutil.app_icon())
+
+        # language first, so even the "already running" message is localized
+        set_language(Settings()["language"] or system_language())
 
         # only one instance at a time
         lock = QSharedMemory("ClaudeUsageMonitor-single-instance")

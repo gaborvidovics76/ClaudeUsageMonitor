@@ -25,6 +25,9 @@ is passing.
 ## Features
 
 - **Both limits at a glance** — the 5-hour rolling window and the weekly quota, side by side.
+- **Per-model weekly limit** (claude.ai source) — a third gauge between them for the model you
+  care about (default **Fable**; change it in Settings → Content). Shown only when the server
+  reports a model-scoped limit.
 - **Pace warning** — not just "62% used", but *"+12% ahead of pace"*, so you know whether
   you'll run out before the week does.
 - **Projection to end of week** — turns red if your current rate would take you past 100%.
@@ -113,7 +116,7 @@ passwords and passkeys already work — there is no embedded browser:
 | Action | Effect |
 |---|---|
 | Left-click + drag | move the panel (snaps to screen edges) |
-| Right-click | menu (layout, theme, size, language, settings, quit) |
+| Right-click | menu (layout, theme, size, language, trend curve on/off, model gauge on/off, settings, quit) |
 | Double-click | history and statistics window |
 | Ctrl + scroll wheel | resize |
 | Tray icon: single click | hide / show the panel |
@@ -151,8 +154,8 @@ passwords and passkeys already work — there is no embedded browser:
   Post-it Yellow), custom accent color, 3 layouts (post-it card / thin bar / rings), size,
   opacity, always-on-top, lock position, edge snapping, show as taskbar window,
   click-through (decoration-only mode).
-- **Content** — which limit to show, trend curve, rate, countdown, freshness; which value
-  the tray icon displays.
+- **Content** — which limits to show (5-hour, per-model weekly, weekly), the model to track,
+  trend curve, rate, countdown, freshness; which value the tray icon displays.
 - **Alerts** — warning and critical thresholds (70% / 90% by default), notifications on
   threshold crossing, quota reset, and stale data.
 - **Data source** — profile (if you have multiple accounts), refresh interval, custom data file.

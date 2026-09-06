@@ -41,11 +41,21 @@ def language_name(code: str) -> str:
 
 
 def system_language() -> str:
-    """Guesses a supported code from the Windows language (else English)."""
+    """Guesses a supported code from the OS language (else English)."""
+    code = ""
     try:
-        code = (locale.getdefaultlocale()[0] or "").split("_")[0].lower()
-    except Exception:  # noqa: BLE001
-        code = ""
+        # Windows: the real UI language (locale.getlocale() may report the
+        # regional format instead, e.g. "hu_HU" for an English UI or vice versa).
+        import ctypes
+
+        lang_id = ctypes.windll.kernel32.GetUserDefaultUILanguage() & 0x3FF
+        code = {0x09: "en", 0x0E: "hu", 0x07: "de", 0x0C: "fr", 0x0A: "es", 0x10: "it",
+                0x16: "pt", 0x15: "pl", 0x13: "nl", 0x19: "ru", 0x05: "cs", 0x1F: "tr"}.get(lang_id, "")
+    except Exception:  # noqa: BLE001 - not Windows or lookup failed
+        try:
+            code = (locale.getlocale()[0] or "").split("_")[0].lower()
+        except Exception:  # noqa: BLE001
+            code = ""
     return code if code in LANG_NAMES else DEFAULT_LANG
 
 
@@ -87,6 +97,11 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "fr": "QUOTA HEBDO", "es": "LÍMITE SEMANAL", "it": "LIMITE SETTIMANALE",
         "pt": "LIMITE SEMANAL", "pl": "LIMIT TYGODNIOWY", "nl": "WEEKLIMIET",
         "ru": "НЕДЕЛЬНЫЙ ЛИМИТ", "cs": "TÝDENNÍ LIMIT", "tr": "HAFTALIK KOTA",
+    },
+    "panel.model": {
+        "en": "{} WEEKLY", "hu": "{} HETI", "de": "{} WÖCHENTLICH", "fr": "{} HEBDO",
+        "es": "{} SEMANAL", "it": "{} SETTIMANALE", "pt": "{} SEMANAL", "pl": "{} TYGODNIOWO",
+        "nl": "{} WEKELIJKS", "ru": "{} НЕДЕЛЯ", "cs": "{} TÝDNĚ", "tr": "{} HAFTALIK",
     },
     "panel.five_hour_short": {
         "en": "5H", "hu": "5 ÓRA", "de": "5 STD", "fr": "5 H", "es": "5 H",
@@ -751,6 +766,20 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "fr": "Afficher le quota hebdo", "es": "Mostrar límite semanal", "it": "Mostra limite settimanale",
         "pt": "Mostrar limite semanal", "pl": "Pokaż limit tygodniowy", "nl": "Weeklimiet tonen",
         "ru": "Показывать недельный лимит", "cs": "Zobrazit týdenní limit", "tr": "Haftalık kotayı göster",
+    },
+    "set.show_model": {
+        "en": "Show model weekly limit (claude.ai source)", "hu": "Modell heti keret mutatása (claude.ai forrás)",
+        "de": "Modell-Wochenlimit anzeigen (claude.ai-Quelle)", "fr": "Afficher le quota hebdo du modèle (source claude.ai)",
+        "es": "Mostrar límite semanal del modelo (origen claude.ai)", "it": "Mostra limite settimanale del modello (origine claude.ai)",
+        "pt": "Mostrar limite semanal do modelo (fonte claude.ai)", "pl": "Pokaż tygodniowy limit modelu (źródło claude.ai)",
+        "nl": "Weeklimiet van model tonen (claude.ai-bron)", "ru": "Показывать недельный лимит модели (источник claude.ai)",
+        "cs": "Zobrazit týdenní limit modelu (zdroj claude.ai)", "tr": "Model haftalık kotasını göster (claude.ai kaynağı)",
+    },
+    "set.model_filter": {
+        "en": "Model to track", "hu": "Figyelt modell", "de": "Zu verfolgendes Modell",
+        "fr": "Modèle à suivre", "es": "Modelo a seguir", "it": "Modello da seguire",
+        "pt": "Modelo a seguir", "pl": "Śledzony model", "nl": "Te volgen model",
+        "ru": "Отслеживаемая модель", "cs": "Sledovaný model", "tr": "İzlenecek model",
     },
     "set.show_spark": {
         "en": "Trend curve (sparkline)", "hu": "Trendgörbe (sparkline)", "de": "Trendkurve (Sparkline)",

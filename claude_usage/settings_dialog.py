@@ -204,6 +204,12 @@ class SettingsDialog(QDialog):
     def _tab_content(self) -> QWidget:
         page, form = self._page()
         form.addRow("", self._check("show_five_hour", tr("set.show_five_hour")))
+        form.addRow("", self._check("show_model", tr("set.show_model")))
+        self.ed_model = QLineEdit(self.s["model_filter"])
+        self.ed_model.setPlaceholderText("Fable")
+        self.ed_model.editingFinished.connect(
+            lambda: self._set("model_filter", self.ed_model.text().strip() or "Fable"))
+        form.addRow(tr("set.model_filter"), self.ed_model)
         form.addRow("", self._check("show_weekly", tr("set.show_weekly")))
         form.addRow("", self._check("show_spark", tr("set.show_spark")))
         form.addRow("", self._check("show_burn", tr("set.show_burn")))

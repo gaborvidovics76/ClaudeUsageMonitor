@@ -51,6 +51,8 @@ DEFAULTS: Dict[str, Any] = {
     # --- content
     "show_five_hour": True,
     "show_weekly": True,
+    "show_model": True,              # model-scoped weekly limit (claude.ai source only)
+    "model_filter": "Fable",         # which model's weekly limit to show (name substring)
     "show_spark": True,
     "show_burn": True,
     "show_reset": True,

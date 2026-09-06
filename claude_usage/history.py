@@ -159,13 +159,9 @@ class HistoryWindow(QDialog):
             self.group.addButton(b, i)
             top.addWidget(b)
         top.addStretch(1)
-        legend = QLabel()
-        legend.setStyleSheet(f"color: {self.pal.dim[0]:02x};")
-        legend.setText(
-            f'<span style="color:rgb{self.pal.ok[:3]}">●</span> ' + tr("hist.legend_5h") + ' &nbsp;&nbsp;'
-            f'<span style="color:rgb{self.pal.accent[:3]}">●</span> ' + tr("hist.legend_week")
-        )
-        top.addWidget(legend)
+        self.legend = QLabel()
+        self._update_legend()
+        top.addWidget(self.legend)
         self.group.idClicked.connect(self.refresh)
 
         self.chart = Chart(self.pal, settings)
@@ -194,7 +190,18 @@ class HistoryWindow(QDialog):
 
         self.refresh()
 
+    def _update_legend(self) -> None:
+        self.legend.setStyleSheet(f"color: {rgba_to_hex(self.pal.dim)};")
+        self.legend.setText(
+            f'<span style="color:rgb{self.pal.ok[:3]}">●</span> ' + tr("hist.legend_5h") + ' &nbsp;&nbsp;'
+            f'<span style="color:rgb{self.pal.accent[:3]}">●</span> ' + tr("hist.legend_week")
+        )
+
     def refresh(self, *_args) -> None:
+        # follow theme/accent changes made while the window is open
+        self.pal = Palette(self.s["theme"], self.s["accent"])
+        self.chart.pal = self.pal
+        self._update_legend()
         span = RANGES[max(0, self.group.checkedId())][1]
         since = int((time.time() - span) * 1000) if span else None
         rows = self.reader.series(self.s["org"] or None, since)

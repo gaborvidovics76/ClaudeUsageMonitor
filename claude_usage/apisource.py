@@ -64,9 +64,12 @@ class ApiReader:
         self._fetched_at: Optional[int] = None
         self._error = ""
         self._inflight = False
+        self._force_pending = False   # "Refresh now" arrived while a fetch was running
         self._last_fetch = 0.0        # time of the last network attempt (s)
         self._min_interval = 60.0     # do not call the server more often than this
         self._series: List[Sample] = []
+        self.model_filter = "Fable"   # which model-scoped weekly limit to surface
+        self._limits_logged = False
 
     # ------------------------------------------------------------------ token
 
@@ -79,6 +82,12 @@ class ApiReader:
     def has_tokens(self) -> bool:
         with self._lock:
             return bool(self._tokens.get("access_token"))
+
+    @property
+    def last_error(self) -> str:
+        """The most recent fetch error ("" when the last fetch succeeded)."""
+        with self._lock:
+            return self._error
 
     def _valid_access_token(self) -> Tuple[str, str]:
         """Returns a valid access token (refreshing if needed). (token, error)."""
@@ -106,6 +115,11 @@ class ApiReader:
         now = time.time()
         with self._lock:
             if self._inflight:
+                if force:
+                    # Do not drop a manual refresh: run it again as soon as the
+                    # in-flight fetch finishes (this was why "Refresh now"
+                    # sometimes appeared to do nothing).
+                    self._force_pending = True
                 return
             if not force and (now - self._last_fetch) < self._min_interval:
                 return          # too soon - do not burden the server
@@ -129,9 +143,11 @@ class ApiReader:
                 return
 
             raw, status, ferr = oauth.fetch_usage(access)
-            if status == 401 and self._tokens.get("refresh_token"):
+            with self._lock:
+                refresh_token = self._tokens.get("refresh_token")
+            if status == 401 and refresh_token:
                 _dbg("401 -> token refresh and retry")
-                new, rerr = oauth.refresh(self._tokens["refresh_token"])
+                new, rerr = oauth.refresh(refresh_token)
                 if new and new.get("access_token"):
                     with self._lock:
                         self._tokens = new
@@ -149,6 +165,16 @@ class ApiReader:
                     self._error = ""
                     self._append_series(raw, now)
                     _dbg("OK 200")
+                    if not self._limits_logged:
+                        # once per run: which limits the server reports (no secrets)
+                        self._limits_logged = True
+                        for lim in (raw.get("limits") or []):
+                            if isinstance(lim, dict):
+                                sc = lim.get("scope") or {}
+                                _dbg("limit kind=%s group=%s model=%s percent=%s" % (
+                                    lim.get("kind"), lim.get("group"),
+                                    (sc.get("model") or {}).get("display_name"),
+                                    lim.get("percent")))
                 elif status in (401, 403):
                     self._error = tr("err.session_expired_nl")
                     _dbg(f"{status} auth hiba")
@@ -163,6 +189,10 @@ class ApiReader:
         finally:
             with self._lock:
                 self._inflight = False
+                again = self._force_pending
+                self._force_pending = False
+            if again:
+                self.refresh_async(force=True)
 
     # ------------------------------------------------------------------ analysis
 
@@ -199,11 +229,44 @@ class ApiReader:
             weekly = weekly_scoped
         return five, weekly
 
+    @staticmethod
+    def _pick_model(raw: dict, filt: str) -> Tuple[float, Optional[int], str]:
+        """The model-scoped weekly limit whose name/kind matches `filt`
+        (e.g. "Fable"); falls back to the first model-scoped weekly.
+        Returns (pct, reset_ms, display_name) - name is "" when not found."""
+        limits = raw.get("limits") if isinstance(raw, dict) else None
+        if not isinstance(limits, list):
+            return 0.0, None, ""
+        filt = (filt or "").strip().lower()
+        first: Optional[Tuple[float, Optional[int], str]] = None
+        for lim in limits:
+            if not isinstance(lim, dict):
+                continue
+            kind = str(lim.get("kind", ""))
+            group = str(lim.get("group", ""))
+            scope = lim.get("scope") or {}
+            model = (scope.get("model") or {}).get("display_name")
+            if not model:
+                continue
+            is_weekly = kind.startswith("seven_day") or group in ("weekly", "weekly_all", "weekly_model")
+            if not is_weekly:
+                continue
+            pct = lim.get("percent")
+            pct = float(pct) if isinstance(pct, (int, float)) else 0.0
+            reset = _parse_iso_ms(lim.get("resets_at"))
+            entry = (pct, reset, str(model))
+            if filt and (filt in str(model).lower() or filt in kind.lower()):
+                return entry
+            if first is None:
+                first = entry
+        return first if first is not None else (0.0, None, "")
+
     def _append_series(self, raw: dict, now: int) -> None:
         (fh, _), (sd, _) = self._pick(raw)
+        mo, _, _ = self._pick_model(raw, self.model_filter)
         if self._series and now - self._series[-1].t < 1000:
             return
-        self._series.append(Sample(t=now, org="", fh=fh, sd=sd))
+        self._series.append(Sample(t=now, org="", fh=fh, sd=sd, mo=mo))
         cutoff = now - WEEK_MS
         self._series = [s for s in self._series if s.t >= cutoff][-4000:]
 
@@ -278,5 +341,22 @@ class ApiReader:
             ideal = max(0.0, min(1.0, elapsed)) * 100.0
             w.pace = w.value - ideal
         w.spark = self._spark("sd", WEEK_MS, 64)
+
+        # model-scoped weekly limit (e.g. Fable) - only when the server reports it
+        mo_val, mo_reset, mo_name = self._pick_model(raw, self.model_filter)
+        if mo_name:
+            mg = m.model
+            m.model_name = mo_name
+            mg.value = mo_val
+            mg.reset_at = mo_reset
+            mg.reset_certain = mo_reset is not None
+            mg.burn = self._burn(series, "mo", now, 6 * 60 * 60 * 1000)
+            if mg.burn > 0.05 and mg.value < 100:
+                mg.eta_ms = int(mg.remaining / mg.burn * 3_600_000)
+            if mo_reset is not None:
+                elapsed = 1.0 - max(0, mo_reset - now) / WEEK_MS
+                ideal = max(0.0, min(1.0, elapsed)) * 100.0
+                mg.pace = mg.value - ideal
+            mg.spark = self._spark("mo", WEEK_MS, 64)
 
         return m

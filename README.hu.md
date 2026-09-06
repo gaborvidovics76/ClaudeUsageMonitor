@@ -115,6 +115,10 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 
 - **5 órás ablak**: aktuális %, visszaszámlálás a resetig, fogyási ütem (%/óra) és
   becslés, mikor telne be az adott tempóval.
+- **Modell-szintű heti keret** (claude.ai forrásnál): harmadik mérő az 5 órás és a heti
+  között a figyelt modellhez (alapból **Fable**; Beállítások → Tartalom). Csak akkor
+  látszik, ha a szerver modell-bontású limitet küld. A jobb gombos menüből a trendgörbe és
+  ez a mérő is ki-be kapcsolható.
 - **Heti keret**: aktuális %, hátralévő idő a heti resetig, napi ütem, és a **tempó**:
   mennyivel vagy előrébb/hátrébb az egyenletes heti fogyasztáshoz képest
   (`+12% a tempóhoz` = túl gyorsan égeted a keretet).

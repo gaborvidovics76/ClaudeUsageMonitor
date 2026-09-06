@@ -356,10 +356,17 @@ def tray_icon(value: float, color: QColor) -> QIcon:
     return icon
 
 
+_ICON_CACHE: dict = {}
+
+
 def app_icon(accent: str = "#D97757") -> QIcon:
-    icon = QIcon()
-    for s in (16, 24, 32, 48, 64, 128, 256):
-        icon.addPixmap(app_pixmap(s, accent))
+    """Cached: it is requested on every notification and tray update."""
+    icon = _ICON_CACHE.get(accent)
+    if icon is None:
+        icon = QIcon()
+        for s in (16, 24, 32, 48, 64, 128, 256):
+            icon.addPixmap(app_pixmap(s, accent))
+        _ICON_CACHE[accent] = icon
     return icon
 
 

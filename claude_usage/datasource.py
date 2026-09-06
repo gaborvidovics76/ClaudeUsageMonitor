@@ -30,6 +30,7 @@ class Sample:
     org: str
     fh: float
     sd: float
+    mo: float = 0.0                     # model-scoped weekly (e.g. Fable), API mode only
 
 
 @dataclass
@@ -65,6 +66,14 @@ class Metrics:
     sample_count: int = 0
     five_hour: Gauge = field(default_factory=Gauge)
     weekly: Gauge = field(default_factory=Gauge)
+    # Model-scoped weekly limit (e.g. "Fable"). Only the claude.ai source has it;
+    # model_name is empty when the data is not available.
+    model: Gauge = field(default_factory=Gauge)
+    model_name: str = ""
+
+    @property
+    def has_model(self) -> bool:
+        return bool(self.model_name)
 
     @property
     def age_s(self) -> Optional[float]:
@@ -212,6 +221,10 @@ class UsageReader:
         return [pts[min(len(pts) - 1, int(i * step))] for i in range(points)]
 
     # --------------------------------------------------------------- public
+
+    def invalidate(self) -> None:
+        """Force a re-read on the next read() even if the file stamp is unchanged."""
+        self._stamp = None
 
     def organizations(self) -> List[str]:
         self._load()
