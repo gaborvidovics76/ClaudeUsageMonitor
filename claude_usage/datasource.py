@@ -20,8 +20,9 @@ WEEK_MS = 7 * 24 * 3600 * 1000
 
 
 def default_data_path() -> str:
-    appdata = os.environ.get("APPDATA") or os.path.expanduser("~\\AppData\\Roaming")
-    return os.path.join(appdata, "Claude", "plan-usage-history.json")
+    from .settings import user_data_root
+
+    return os.path.join(user_data_root(), "Claude", "plan-usage-history.json")
 
 
 @dataclass

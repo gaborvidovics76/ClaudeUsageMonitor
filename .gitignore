@@ -30,3 +30,15 @@ Thumbs.db
 release.local.psd1
 backup_profile.json
 _*.json
+
+# macOS build outputs and the colleague's upload account
+/.venv-macos/
+/build-macos/
+/dist-macos/
+macos/release.local.env
+macos-doctor-report.txt
+*.patch
+/handoff/
+
+# ...but the hand-written macOS spec belongs to the source
+!macos/*.spec

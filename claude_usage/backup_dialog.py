@@ -441,7 +441,4 @@ class BackupDialog(QDialog):
     def _open(url: QUrl) -> None:
         path = url.toLocalFile()
         if path and os.path.exists(path):
-            try:
-                os.startfile(path)
-            except OSError:
-                pass
+            winutil.open_path(path)

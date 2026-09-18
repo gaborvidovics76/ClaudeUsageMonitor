@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import ctypes
 import os
+import sys
 from ctypes import wintypes
 from typing import Optional
 
@@ -84,6 +85,11 @@ def clear_secret() -> None:
 
 def has_secret() -> bool:
     return os.path.exists(_path())
+
+
+if sys.platform == "darwin":
+    # macOS: the login Keychain takes the place of DPAPI (same four functions)
+    from .secretstore_mac import clear_secret, has_secret, load_secret, save_secret  # noqa: E402,F811
 
 
 # --- convenience layer: store a token dict (access/refresh/expiry) ---

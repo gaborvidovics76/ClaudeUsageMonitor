@@ -37,7 +37,10 @@ from typing import Callable, Dict, List, Optional, Tuple
 
 from . import __version__
 
-DEFAULT_MANIFEST_URL = "https://dinorr.hu/claude-usage-monitor/manifest.json"
+IS_MAC = sys.platform == "darwin"
+# every platform has its own manifest, so the Windows and the macOS releases never touch each other
+DEFAULT_MANIFEST_URL = ("https://dinorr.hu/claude-usage-monitor/macos/manifest.json" if IS_MAC
+                        else "https://dinorr.hu/claude-usage-monitor/manifest.json")
 EXE_NAME = "ClaudeUsageMonitor.exe"
 APP_DIR_IN_ZIP = ("app/ClaudeUsageMonitor/", "ClaudeUsageMonitor/")   # accepted package layouts
 MAX_PACKAGE_BYTES = 600 * 1024 * 1024
@@ -56,6 +59,7 @@ class UpdateInfo:
     size: int = 0
     released: str = ""
     page: str = ""
+    arch: str = ""                      # macOS builds: arm64 | x86_64 ("" = any)
     notes: Dict[str, List[str]] = field(default_factory=dict)   # language code -> lines
 
     def notes_for(self, lang: str) -> List[str]:
@@ -145,7 +149,18 @@ def fetch_manifest(url: str = "", timeout: float = 12.0) -> UpdateInfo:
         size = 0
     return UpdateInfo(version=version, url=dl, sha256=sha, size=size,
                       released=str(data.get("last_updated", "")),
-                      page=str(data.get("homepage", "")), notes=notes)
+                      page=str(data.get("homepage", "")), arch=str(data.get("arch", "")), notes=notes)
+
+
+def arch_ok(info: UpdateInfo) -> bool:
+    """An Intel build also runs on Apple Silicon (Rosetta); an arm64 build does not run on Intel."""
+    if not info.arch:
+        return True
+    import platform
+
+    machine = platform.machine().lower()
+    return info.arch.lower() in (machine, "x86_64", "universal2") if machine == "arm64" \
+        else info.arch.lower() in (machine, "universal2")
 
 
 def download(info: UpdateInfo, dest: str,
@@ -329,6 +344,27 @@ def launch_swap(new_dir: str, log_path: str) -> None:
     log(f"helper started (pid {proc.pid})")
 
 
+if IS_MAC:
+    # macOS: the unit that gets replaced is the .app bundle; unpacking and the swap differ
+    from . import updater_mac as _mac
+
+    install_dir = _mac.install_dir          # noqa: F811
+    can_self_update = _mac.can_self_update  # noqa: F811
+
+    def stage(zip_path: str, target: str) -> str:    # noqa: F811
+        try:
+            return _mac.stage(zip_path, target)
+        except _mac.MacUpdateError as e:
+            raise UpdateError(str(e)) from e
+
+    def launch_swap(new_dir: str, log_path: str) -> None:    # noqa: F811
+        try:
+            pid = _mac.launch_swap(new_dir, log_path)
+        except _mac.MacUpdateError as e:
+            raise UpdateError(str(e)) from e
+        log(f"helper started (pid {pid})")
+
+
 def update_log_path() -> str:
     from .settings import config_dir
 
@@ -392,7 +428,10 @@ class Updater:
     def _check(self) -> None:
         try:
             info = fetch_manifest(self.manifest_url)
-            if is_newer(info.version, __version__):
+            if is_newer(info.version, __version__) and not arch_ok(info):
+                self._set(state="uptodate", info=info)
+                log(f"check: {info.version} is for {info.arch}, not for this machine")
+            elif is_newer(info.version, __version__):
                 self._set(state="available", info=info)
                 log(f"check: {info.version} available (installed {__version__})")
             else:

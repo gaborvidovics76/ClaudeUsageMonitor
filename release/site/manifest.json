@@ -1,20 +1,26 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.5.1",
-    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.5.1.zip",
-    "sha256":  "ac60f56f6f4d8591ea4e0cadef818eaff7834db8bde1f5ee16367caa16c78cce",
-    "bytes":  48476498,
+    "version":  "2.6.0",
+    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.0.zip",
+    "sha256":  "aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570",
+    "bytes":  48683231,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://dinorr.hu/claude-usage-monitor/",
-    "last_updated":  "2026-09-18T14:04:28Z",
+    "last_updated":  "2026-09-18T14:27:09Z",
     "notes":  {
                   "en":  [
-                             "Fixed: an empty server placeholder (\"Nimbus Quill\", 0%, no reset time) showed up in the small list. Windows the server marks as not active, and code-name windows that are empty and never reset, are no longer shown. If such a window ever starts counting, it appears by itself."
+                             "New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.",
+                             "The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.",
+                             "For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.",
+                             "A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux."
                          ],
                   "hu":  [
-                             "Javítva: egy üres szerveroldali helyőrző („Nimbus Quill”, 0%, reset-időpont nélkül) megjelent a kis felsorolásban. Azok az ablakok, amelyeket a szerver nem aktívnak jelöl, illetve az üres, soha nem nullázódó kódnevű ablakok mostantól nem látszanak. Ha egy ilyen ablak egyszer számolni kezd, magától megjelenik."
+                             "Új: a program mostantól macOS-en is fut. Minden rendszerfüggő résznek van macOS-es megfelelője - a belépési token a Kulcskarikában, indulás bejelentkezéskor LaunchAgenttel, beállítások a ~/Library/Application Support alatt, az .app csomag önfrissítése -, miközben a Windows-verzió pontosan úgy működik, mint eddig.",
+                             "A macOS-kiadásnak saját manifestje van, így a Windows- és a macOS-kiadás egymástól függetlenül jelenik meg, és sosem írják felül egymást. Apple Silicon-os csomagot a program Inteles Macnek nem ajánl fel.",
+                             "Fejlesztőknek: a macos/build.sh egy paranccsal lefordítja a programot, a macos/release.sh becsomagolja, feltölti és ellenőrzi, a macos/doctor.sh diagnosztikát gyűjt. A Windows-kiadás marad az alap: macOS-kiadás csak olyan verzióból készülhet, ami Windowsra már megjelent.",
+                             "Egy összeomlás után hátramaradt egypéldányos zár többé nem akadályozza a következő indulást macOS-en/Linuxon."
                          ]
               }
 }

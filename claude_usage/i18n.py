@@ -56,6 +56,18 @@ def system_language() -> str:
             code = (locale.getlocale()[0] or "").split("_")[0].lower()
         except Exception:  # noqa: BLE001
             code = ""
+        if code not in LANG_NAMES:
+            # a GUI app on macOS usually has no POSIX locale - ask Qt for the UI language
+            try:
+                from PySide6.QtCore import QLocale
+
+                for name in QLocale.system().uiLanguages():
+                    short = name.replace("_", "-").split("-")[0].lower()
+                    if short in LANG_NAMES:
+                        code = short
+                        break
+            except Exception:  # noqa: BLE001
+                pass
     return code if code in LANG_NAMES else DEFAULT_LANG
 
 
@@ -1236,3 +1248,11 @@ STRINGS.update(_STRINGS_UPDATE)
 from .i18n_details import STRINGS_DETAILS as _STRINGS_DETAILS  # noqa: E402
 
 STRINGS.update(_STRINGS_DETAILS)
+
+# macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
+import sys as _sys  # noqa: E402
+
+if _sys.platform == "darwin":
+    from .i18n_mac import STRINGS_MAC as _STRINGS_MAC  # noqa: E402
+
+    STRINGS.update(_STRINGS_MAC)

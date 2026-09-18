@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from typing import Any, Dict
 
 from .datasource import default_data_path
@@ -12,9 +13,18 @@ APP_NAME = "ClaudeUsageMonitor"
 APP_TITLE = "Claude Usage Monitor"
 
 
+def user_data_root() -> str:
+    """Per-user application data: %APPDATA% on Windows, ~/Library/Application Support on macOS,
+    $XDG_CONFIG_HOME (~/.config) elsewhere."""
+    if sys.platform == "darwin":
+        return os.path.join(os.path.expanduser("~"), "Library", "Application Support")
+    if sys.platform.startswith("win"):
+        return os.environ.get("APPDATA") or os.path.expanduser("~\\AppData\\Roaming")
+    return os.environ.get("XDG_CONFIG_HOME") or os.path.join(os.path.expanduser("~"), ".config")
+
+
 def config_dir() -> str:
-    appdata = os.environ.get("APPDATA") or os.path.expanduser("~\\AppData\\Roaming")
-    path = os.path.join(appdata, APP_NAME)
+    path = os.path.join(user_data_root(), APP_NAME)
     os.makedirs(path, exist_ok=True)
     return path
 

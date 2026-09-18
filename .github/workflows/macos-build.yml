@@ -1,0 +1,36 @@
+# Builds the macOS app on GitHub's own Mac - a second way to get a build, no Mac needed.
+# Started by hand: GitHub > Actions > "macOS build" > Run workflow. It only builds and offers
+# the package for download; publishing to the release server stays a deliberate, manual step.
+name: macOS build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-14          # Apple Silicon
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build, package (no upload)
+        run: |
+          chmod +x macos/*.sh
+          ./macos/release.sh --no-upload --force
+      - name: Doctor report
+        if: always()
+        run: ./macos/doctor.sh || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ClaudeUsageMonitor-macOS
+          path: |
+            dist-macos/site/versions/*.zip
+            dist-macos/site/manifest.json
+            macos-doctor-report.txt
+            build-macos/pyinstaller.log
+          if-no-files-found: warn

@@ -396,6 +396,14 @@ def write_ico(path: str, accent: str = "#D97757") -> str:
     return path
 
 
+def open_path(path: str) -> None:
+    """Show a file or folder with the default application."""
+    try:
+        os.startfile(path)
+    except (OSError, AttributeError):
+        pass
+
+
 UNINSTALL_KEY = r"Software\Microsoft\Windows\CurrentVersion\Uninstall\ClaudeUsageMonitor"
 
 
@@ -418,3 +426,14 @@ def sync_installed_version(version: str) -> None:
                 winreg.SetValueEx(key, "DisplayVersion", 0, winreg.REG_SZ, version)
     except OSError:
         pass
+
+
+if sys.platform == "darwin":
+    # macOS: same names, other mechanisms (LaunchAgent instead of a scheduled task, no Start
+    # menu, no "Installed apps" entry). Icons above are plain Qt and shared by both systems.
+    from .macutil import (  # noqa: E402,F401,F811
+        autostart_command, autostart_enabled, autostart_method, create_start_menu_shortcut,
+        ensure_start_menu_shortcut, exe_path, launch_command, open_path,
+        remove_start_menu_shortcut, set_autostart, start_menu_exists, start_menu_path,
+        sync_autostart, sync_installed_version,
+    )

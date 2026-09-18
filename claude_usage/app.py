@@ -526,10 +526,11 @@ class MonitorApp:
         auto.setChecked(winutil.autostart_enabled())
         auto.toggled.connect(self._toggle_autostart)
 
-        startm = menu.addAction(tr("menu.start_menu"))
-        startm.setCheckable(True)
-        startm.setChecked(winutil.start_menu_exists())
-        startm.toggled.connect(self._toggle_start_menu)
+        if sys.platform.startswith("win"):
+            startm = menu.addAction(tr("menu.start_menu"))
+            startm.setCheckable(True)
+            startm.setChecked(winutil.start_menu_exists())
+            startm.toggled.connect(self._toggle_start_menu)
         menu.addSeparator()
 
         src_menu = menu.addMenu(tr("menu.source"))
@@ -743,6 +744,10 @@ def run() -> int:
 
         # only one instance at a time
         lock = QSharedMemory("ClaudeUsageMonitor-single-instance")
+        if not sys.platform.startswith("win") and lock.attach():
+            # Unix keeps the segment of a crashed instance; attaching and detaching frees an
+            # orphan, while a segment that a live instance holds survives this.
+            lock.detach()
         if lock.attach():
             log("another instance is already running, exiting")
             QMessageBox.information(None, APP_TITLE, tr("err.already_running"))

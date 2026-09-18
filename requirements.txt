@@ -1,1 +1,3 @@
 PySide6-Essentials>=6.6
+# macOS only: the sign-in token goes into the Keychain
+keyring>=24; sys_platform == "darwin"

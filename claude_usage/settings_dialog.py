@@ -553,7 +553,7 @@ class SettingsDialog(QDialog):
         form.addRow("", self.cb_auto)
 
         btn_dir = QPushButton(tr("set.open_config"))
-        btn_dir.clicked.connect(lambda: os.startfile(config_dir()))
+        btn_dir.clicked.connect(lambda: winutil.open_path(config_dir()))
         form.addRow("", btn_dir)
 
         btn_reset = QPushButton(tr("set.restore"))

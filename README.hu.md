@@ -222,3 +222,11 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 A build leállítja a futó példányokat, kizárja a felesleges Qt-modulokat, és a végén
 ellenőrzi a csomag épségét. A `dist/` és `build/` a `.gitignore`-ban van — a repo csak
 a forrást tartalmazza.
+
+## macOS
+
+Ugyanez a program macOS-en is fut (tálcaikon helyett menüsor-ikon, a belépési token a
+Kulcskarikában, indulás bejelentkezéskor LaunchAgenttel). Letölthető ugyanarról az oldalról, vagy
+Macen egy paranccsal lefordítható – lásd [macos/KEZDD-ITT.md](macos/KEZDD-ITT.md). A Windows-kiadás a
+projekt alapja; a macOS-csomag ugyanabból a forrásból készül, és külön jelenik meg, így a kettő sosem
+zavarja egymást.

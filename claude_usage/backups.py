@@ -28,6 +28,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import threading
 import time
 import zipfile
@@ -626,6 +627,8 @@ ConvertTo-Json -InputObject $r -Compress
 
 
 def query_tasks(name_filter: str) -> List[TaskInfo]:
+    if not sys.platform.startswith("win"):
+        return []                           # Task Scheduler is a Windows thing
     flt = re.sub(r"[^\w \-*?.()áéíóöőúüűÁÉÍÓÖŐÚÜŰ]", "", name_filter or "").strip()
     if not flt:
         return []

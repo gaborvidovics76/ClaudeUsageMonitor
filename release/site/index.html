@@ -50,6 +50,7 @@
   th { color: var(--dim); font-weight: 600; }
   footer { color: var(--dim); font-size: 14px; margin-top: 34px; }
   a { color: var(--accent); }
+  [hidden] { display: none !important; }
   [data-hu] { display: none; }
   html[lang="hu"] [data-hu] { display: revert; }
   html[lang="hu"] [data-en] { display: none; }
@@ -69,8 +70,8 @@
     </div>
   </header>
 
-  <p class="lead" data-en>An always-on-top panel for Windows that shows how much of your Claude subscription you have used – the 5-hour window, the weekly limit and the per-model limit – so you never run out by surprise.</p>
-  <p class="lead" data-hu>Mindig felül lévő panel Windowsra, ami mutatja, mennyit használtál el a Claude-előfizetésedből – az 5 órás ablakot, a heti keretet és a modellenkénti keretet –, hogy ne érjen meglepetés.</p>
+  <p class="lead" data-en>An always-on-top panel for Windows and macOS that shows how much of your Claude subscription you have used – the 5-hour window, the weekly limit and the per-model limit – so you never run out by surprise.</p>
+  <p class="lead" data-hu>Mindig felül lévő panel Windowsra és macOS-re, ami mutatja, mennyit használtál el a Claude-előfizetésedből – az 5 órás ablakot, a heti keretet és a modellenkénti keretet –, hogy ne érjen meglepetés.</p>
 
   <section class="card">
     <div class="dl">
@@ -80,6 +81,16 @@
       <div class="meta">
         <div><span data-en>Version</span><span data-hu>Verzió</span> <b id="version">…</b> · <span id="size"></span> · <span id="date"></span></div>
         <div>Windows 10 / 11, 64-bit · <span data-en>free, open source, no admin rights</span><span data-hu>ingyenes, nyílt forrású, rendszergazdai jog nélkül</span></div>
+      </div>
+    </div>
+    <div class="dl" id="mac-row" hidden style="margin-top:18px; padding-top:18px; border-top:1px solid var(--line)">
+      <a class="btn" id="download-mac" href="#" style="background:var(--ink); color:var(--bg)">
+        <span data-en>Download for macOS</span><span data-hu>Letöltés macOS-re</span>
+      </a>
+      <div class="meta">
+        <div><span data-en>Version</span><span data-hu>Verzió</span> <b id="mac-version"></b> · <span id="mac-size"></span> · <span id="mac-arch"></span> · <span id="mac-date"></span></div>
+        <div>macOS 12+ · <span data-en>drag to Applications; first start: right-click → Open</span><span data-hu>húzd az Alkalmazások mappába; első indítás: jobb gomb → Megnyitás</span></div>
+        <div class="sha" id="mac-sha" style="margin-top:6px; display:inline-block"></div>
       </div>
     </div>
     <details>
@@ -175,6 +186,18 @@
     if (/^https:\/\//.test(m.download_url)) a.href = m.download_url;
     renderNotes();
   }).catch(function () { document.getElementById('version').textContent = '?'; });
+
+  // the macOS build is published separately (its own manifest) - shown only when there is one
+  fetch('macos/manifest.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (m) {
+    if (!/^https:\/\//.test(m.download_url)) return;
+    document.getElementById('download-mac').href = m.download_url;
+    document.getElementById('mac-version').textContent = m.version;
+    document.getElementById('mac-size').textContent = mb(m.bytes);
+    document.getElementById('mac-date').textContent = day(m.last_updated);
+    document.getElementById('mac-arch').textContent = m.arch === 'arm64' ? 'Apple Silicon' : (m.arch === 'x86_64' ? 'Intel' : (m.arch || ''));
+    document.getElementById('mac-sha').textContent = m.sha256;
+    document.getElementById('mac-row').hidden = false;
+  }).catch(function () {});
 
   fetch('versions.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
     var table = document.getElementById('versions');

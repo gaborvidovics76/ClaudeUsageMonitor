@@ -1,0 +1,14 @@
+{
+  "en": [
+    "New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.",
+    "The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.",
+    "For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.",
+    "A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux."
+  ],
+  "hu": [
+    "Új: a program mostantól macOS-en is fut. Minden rendszerfüggő résznek van macOS-es megfelelője - a belépési token a Kulcskarikában, indulás bejelentkezéskor LaunchAgenttel, beállítások a ~/Library/Application Support alatt, az .app csomag önfrissítése -, miközben a Windows-verzió pontosan úgy működik, mint eddig.",
+    "A macOS-kiadásnak saját manifestje van, így a Windows- és a macOS-kiadás egymástól függetlenül jelenik meg, és sosem írják felül egymást. Apple Silicon-os csomagot a program Inteles Macnek nem ajánl fel.",
+    "Fejlesztőknek: a macos/build.sh egy paranccsal lefordítja a programot, a macos/release.sh becsomagolja, feltölti és ellenőrzi, a macos/doctor.sh diagnosztikát gyűjt. A Windows-kiadás marad az alap: macOS-kiadás csak olyan verzióból készülhet, ami Windowsra már megjelent.",
+    "Egy összeomlás után hátramaradt egypéldányos zár többé nem akadályozza a következő indulást macOS-en/Linuxon."
+  ]
+}

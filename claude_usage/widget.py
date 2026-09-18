@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import sys
 import time
 from typing import List, Optional, Tuple
 
@@ -10,6 +11,7 @@ from PySide6.QtCore import QPoint, QPointF, QRectF, Qt, Signal
 from PySide6.QtGui import (
     QBrush,
     QFont,
+    QFontDatabase,
     QFontMetrics,
     QGuiApplication,
     QLinearGradient,
@@ -40,9 +42,12 @@ PLAN_STYLE = {
 
 
 def _font(size: float, weight: QFont.Weight = QFont.Weight.Normal, spacing: float = 0.0) -> QFont:
-    f = QFont("Segoe UI Variable Display")
-    if not f.exactMatch():
-        f = QFont("Segoe UI")
+    if sys.platform.startswith("win"):
+        f = QFont("Segoe UI Variable Display")
+        if not f.exactMatch():
+            f = QFont("Segoe UI")
+    else:
+        f = QFont(QFontDatabase.systemFont(QFontDatabase.SystemFont.GeneralFont).family())
     f.setPointSizeF(max(5.0, size))
     f.setWeight(weight)
     if spacing:
@@ -85,6 +90,9 @@ class UsageWidget(QWidget):
 
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
         self.setAttribute(Qt.WidgetAttribute.WA_AlwaysShowToolTips, True)
+        if sys.platform == "darwin":
+            # a Tool window normally hides whenever the application is not the active one
+            self.setAttribute(Qt.WidgetAttribute.WA_MacAlwaysShowToolWindow, True)
         self.setMouseTracking(True)
         # We draw the shadow by hand: QGraphicsDropShadowEffect caches the image on
         # a translucent, frameless window, so the old content stayed on screen even

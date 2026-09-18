@@ -1,0 +1,14 @@
+# Shell scripts and everything the Mac reads must keep LF line endings, even when the
+# repository is checked out (or zipped) on Windows.
+*.sh            text eol=lf
+macos/**        text eol=lf
+*.spec          text eol=lf
+.github/**      text eol=lf
+
+# Windows scripts stay CRLF-friendly
+*.bat           text eol=crlf
+*.ps1           text eol=crlf
+
+*.png           binary
+*.zip           binary
+*.icns          binary

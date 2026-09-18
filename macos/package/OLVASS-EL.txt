@@ -1,0 +1,46 @@
+CLAUDE USAGE MONITOR - macOS
+============================
+
+Mindig felul levo kis panel, ami mutatja, mennyit hasznaltal el a Claude elofizetesed
+5 oras es heti keretebol.
+
+TELEPITES
+---------
+1. Huzd a ClaudeUsageMonitor alkalmazast az Alkalmazasok (Applications) mappaba.
+   FONTOS: ne a Letoltesek mappabol futtasd - onnan a program nem tudja frissiteni magat.
+
+2. ELSO INDITAS: jobb gomb (vagy Control + kattintas) az alkalmazason > Megnyitas > Megnyitas.
+   Erre azert van szukseg, mert a program nyilt forraskodu, de nincs megvasarolt Apple
+   fejlesztoi alairasa. A masodik inditastol mar sima dupla kattintas is eleg.
+
+   Ha a macOS azt irja, hogy "serult" vagy "nem nyithato meg", nyisd meg a Terminalt, es
+   futtasd ezt (egyszer):
+       xattr -dr com.apple.quarantine /Applications/ClaudeUsageMonitor.app
+
+3. A panel a kepernyo jobb felso sarkaban jelenik meg, a menusorban pedig egy kis ikon.
+   A Dockban szandekosan nincs ikonja.
+
+ELSO HASZNALAT
+--------------
+- Jobb gomb (vagy ket ujjas koppintas) a panelen = menu: elrendezes, tema, nyelv, beallitasok.
+- Hogy MINDEN eszkozod hasznalatat lassad: menu > Adatforras > claude.ai (minden eszkoz).
+  Megnyilik a bongeszod, belepsz a szokott modon, kapsz egy kodot, azt bemasolod.
+  Jelszot a program SOHA nem ker. A belepesi token a macOS Kulcskarikaban (Keychain) van.
+- Indulas a rendszerrel: menu > "Indulas a rendszerrel".
+
+FRISSITES
+---------
+A program maga figyeli az uj verziot, es szol. Menu > "Programfrissites keresese..." >
+"Telepites most" - letolti, ellenorzi, lecsereli magat es ujraindul.
+Frissites utan a macOS egyszer ujra megkerdezheti, hozzaferhet-e a program a Kulcskarikahoz:
+valaszd a "Mindig engedelyezem" lehetoseget.
+
+ELTAVOLITAS
+-----------
+Lepj ki a programbol, majd huzd a Kukaba az Alkalmazasok mappabol.
+Beallitasok: ~/Library/Application Support/ClaudeUsageMonitor  (torolheto)
+Automatikus indulas: ~/Library/LaunchAgents/hu.dinorr.claudeusagemonitor.plist  (torolheto)
+
+Nem hivatalos, kozossegi program; nem all kapcsolatban az Anthropic-kal.
+Letoltes, ujdonsagok: https://dinorr.hu/claude-usage-monitor/
+Forraskod:           https://github.com/gaborvidovics76/ClaudeUsageMonitor

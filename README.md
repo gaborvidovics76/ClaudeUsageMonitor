@@ -273,3 +273,11 @@ supported by Anthropic. "Claude" is a trademark of Anthropic, PBC.
 ## License
 
 [MIT](LICENSE)
+
+## macOS
+
+The same program runs on macOS (menu bar icon instead of a tray icon, the sign-in token in the
+Keychain, start at login through a LaunchAgent). Download it from the same page, or build it
+yourself on a Mac with one command - see [macos/START-HERE.md](macos/START-HERE.md)
+([magyarul](macos/KEZDD-ITT.md)). The Windows release is the base of the project; macOS builds are
+made from the same source and published separately, so the two never get in each other's way.
