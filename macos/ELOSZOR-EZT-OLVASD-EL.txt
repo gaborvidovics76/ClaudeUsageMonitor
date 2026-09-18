@@ -1,0 +1,26 @@
+CLAUDE USAGE MONITOR - macOS atado csomag
+=========================================
+
+Szia! Ebben a mappaban a program teljes forrasa van, a macOS-es fordito eszkozokkel egyutt.
+
+1. Nyisd meg a Terminalt, es lepj be ebbe a mappaba, peldaul:
+       cd ~/Downloads/ClaudeUsageMonitor
+
+2. Futtasd:
+       ./macos/build.sh
+
+   Ha azt irja "permission denied":   chmod +x macos/*.sh   es utana ujra.
+   Ha a macOS nem engedi futtatni a letoltott szkriptet:   xattr -dr com.apple.quarantine .
+
+3. Az elkeszult program:   dist-macos/ClaudeUsageMonitor.app
+       open dist-macos/ClaudeUsageMonitor.app
+
+A reszletes leiras (frissites, kiadas a szerverre, jatekszabalyok, mit kell kiprobalni):
+       macos/KEZDD-ITT.md          (magyarul)
+       macos/START-HERE.md         (English)
+
+Ha barmi nem megy:   ./macos/doctor.sh   - es a keletkezo macos-doctor-report.txt fajlt
+kuldd el Gabornak.
+
+Kesobb, az uj verzioknal kenyelmesebb gitbol dolgozni:
+       git clone https://github.com/gaborvidovics76/ClaudeUsageMonitor.git
