@@ -394,3 +394,27 @@ def write_ico(path: str, accent: str = "#D97757") -> str:
     with open(path, "wb") as fh:
         fh.write(header + entries + blobs)
     return path
+
+
+UNINSTALL_KEY = r"Software\Microsoft\Windows\CurrentVersion\Uninstall\ClaudeUsageMonitor"
+
+
+def sync_installed_version(version: str) -> None:
+    """After a self-update the entry under Settings > Apps would still show the old
+    version. Only touches the entry the installer created for THIS folder."""
+    if not getattr(sys, "frozen", False):
+        return
+    try:
+        import winreg
+
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, UNINSTALL_KEY, 0,
+                            winreg.KEY_READ | winreg.KEY_SET_VALUE) as key:
+            location, _ = winreg.QueryValueEx(key, "InstallLocation")
+            here = os.path.dirname(os.path.abspath(sys.executable))
+            if os.path.normcase(os.path.abspath(str(location))) != os.path.normcase(here):
+                return
+            current, _ = winreg.QueryValueEx(key, "DisplayVersion")
+            if current != version:
+                winreg.SetValueEx(key, "DisplayVersion", 0, winreg.REG_SZ, version)
+    except OSError:
+        pass

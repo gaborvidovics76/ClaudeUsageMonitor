@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Usage Monitor</title>
+<meta name="description" content="Always-on-top Windows panel that shows how much of your Claude subscription's 5-hour and weekly limits you have used. Free, open source.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%232b3040' stroke-width='9'/%3E%3Cpath d='M32 8a24 24 0 0 1 22.6 32' fill='none' stroke='%23d97757' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f6f4ef; --card: #ffffff; --ink: #1d2230; --dim: #5d6577; --line: #e3dfd5;
+    --accent: #c4562f; --accent-ink: #ffffff; --ok: #1f8f57; --code: #f0ece2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #12141a; --card: #1b1e27; --ink: #e8ebf3; --dim: #98a1b5; --line: #2a2f3c;
+            --accent: #e08a63; --accent-ink: #16181d; --ok: #46c98a; --code: #232733; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 16px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 20px 72px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  header svg { flex: none; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0; letter-spacing: -.3px; }
+  .lead { color: var(--dim); font-size: 18px; margin: 10px 0 28px; max-width: 62ch; }
+  .lang { margin-left: auto; font-size: 14px; }
+  .lang button { background: none; border: 1px solid var(--line); color: var(--dim); border-radius: 6px;
+                 padding: 3px 9px; cursor: pointer; font: inherit; }
+  .lang button[aria-pressed="true"] { color: var(--ink); border-color: var(--ink); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 18px 0; }
+  .dl { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
+         font-weight: 600; padding: 13px 22px; border-radius: 10px; font-size: 17px; }
+  .btn:hover { filter: brightness(1.07); }
+  .meta { color: var(--dim); font-size: 14px; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  h2 { font-size: 19px; margin: 0 0 12px; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  code, .sha { font: 13px/1.5 Consolas, "Cascadia Mono", monospace; background: var(--code);
+               padding: 2px 6px; border-radius: 5px; overflow-wrap: anywhere; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  .feat { border-top: 2px solid var(--line); padding-top: 10px; }
+  .feat b { display: block; }
+  .feat span { color: var(--dim); font-size: 15px; }
+  details { margin-top: 10px; }
+  summary { cursor: pointer; color: var(--dim); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  td, th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--dim); font-weight: 600; }
+  footer { color: var(--dim); font-size: 14px; margin-top: 34px; }
+  a { color: var(--accent); }
+  [data-hu] { display: none; }
+  html[lang="hu"] [data-hu] { display: revert; }
+  html[lang="hu"] [data-en] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="24" fill="none" stroke="var(--line)" stroke-width="9"/>
+      <path d="M32 8a24 24 0 0 1 22.6 32" fill="none" stroke="var(--accent)" stroke-width="9" stroke-linecap="round"/>
+    </svg>
+    <h1>Claude Usage Monitor</h1>
+    <div class="lang">
+      <button type="button" id="b-en" aria-pressed="true">EN</button>
+      <button type="button" id="b-hu" aria-pressed="false">HU</button>
+    </div>
+  </header>
+
+  <p class="lead" data-en>An always-on-top panel for Windows that shows how much of your Claude subscription you have used – the 5-hour window, the weekly limit and the per-model limit – so you never run out by surprise.</p>
+  <p class="lead" data-hu>Mindig felül lévő panel Windowsra, ami mutatja, mennyit használtál el a Claude-előfizetésedből – az 5 órás ablakot, a heti keretet és a modellenkénti keretet –, hogy ne érjen meglepetés.</p>
+
+  <section class="card">
+    <div class="dl">
+      <a class="btn" id="download" href="#">
+        <span data-en>Download for Windows</span><span data-hu>Letöltés Windowsra</span>
+      </a>
+      <div class="meta">
+        <div><span data-en>Version</span><span data-hu>Verzió</span> <b id="version">…</b> · <span id="size"></span> · <span id="date"></span></div>
+        <div>Windows 10 / 11, 64-bit · <span data-en>free, open source, no admin rights</span><span data-hu>ingyenes, nyílt forrású, rendszergazdai jog nélkül</span></div>
+      </div>
+    </div>
+    <details>
+      <summary><span data-en>Verify the download (SHA-256)</span><span data-hu>A letöltés ellenőrzése (SHA-256)</span></summary>
+      <p class="sha" id="sha">…</p>
+      <p class="meta" data-en>In PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code> – the value must match.</p>
+      <p class="meta" data-hu>PowerShellben: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code> – az értéknek egyeznie kell.</p>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2 data-en>Install in three steps</h2><h2 data-hu>Telepítés három lépésben</h2>
+    <ol data-en>
+      <li><b>Extract the whole zip</b> (right-click → <i>Extract All…</i>). Do not run it from inside the zip.</li>
+      <li>Double-click <code>INSTALL.bat</code> in the extracted folder.</li>
+      <li>Answer two questions (Enter accepts the recommended answer). The program starts by itself.</li>
+    </ol>
+    <ol data-hu>
+      <li><b>Csomagold ki a teljes zipet</b> (jobb gomb → <i>Az összes kibontása…</i>). Ne a zipen belülről indítsd.</li>
+      <li>A kibontott mappában kattints duplán a <code>TELEPITES.bat</code> fájlra.</li>
+      <li>Válaszolj két kérdésre (az Enter az ajánlott választ fogadja el). A program magától elindul.</li>
+    </ol>
+    <p class="meta" data-en>If Windows shows “Windows protected your PC”: click <i>More info</i> → <i>Run anyway</i>. The program is open source but not code-signed.</p>
+    <p class="meta" data-hu>Ha a Windows azt írja: „A Windows megvédte a számítógépet”: <i>További információ</i> → <i>Futtatás mindenképpen</i>. A program nyílt forrású, de nincs kódaláírása.</p>
+  </section>
+
+  <section class="card">
+    <h2 data-en>What it does</h2><h2 data-hu>Mit tud</h2>
+    <div class="grid">
+      <div class="feat" data-en><b>All limits at a glance</b><span>5-hour window, weekly quota and the per-model weekly limit, with countdown to reset.</span></div>
+      <div class="feat" data-hu><b>Minden keret egy pillantásra</b><span>5 órás ablak, heti keret és a modellenkénti heti keret, visszaszámlálással a resetig.</span></div>
+      <div class="feat" data-en><b>Pace warning</b><span>Tells you whether you burn the weekly quota faster than the week passes.</span></div>
+      <div class="feat" data-hu><b>Tempójelzés</b><span>Megmutatja, gyorsabban fogy-e a heti keret, mint ahogy a hét telik.</span></div>
+      <div class="feat" data-en><b>All your devices</b><span>Sign in in your own browser (like Claude Code) and see usage from every device.</span></div>
+      <div class="feat" data-hu><b>Minden eszközöd</b><span>Belépés a saját böngésződben (mint a Claude Code-nál), és minden eszköz használata látszik.</span></div>
+      <div class="feat" data-en><b>Yours to shape</b><span>6 themes, 3 layouts, 12 languages, tray icon, alerts, history charts.</span></div>
+      <div class="feat" data-hu><b>Testre szabható</b><span>6 téma, 3 elrendezés, 12 nyelv, tálcaikon, riasztások, előzmény-grafikonok.</span></div>
+      <div class="feat" data-en><b>Updates itself</b><span>Checks this page for a newer version, verifies the download, swaps itself and restarts.</span></div>
+      <div class="feat" data-hu><b>Magától frissül</b><span>Erről az oldalról értesül az új verzióról, ellenőrzi a letöltést, lecseréli magát és újraindul.</span></div>
+      <div class="feat" data-en><b>Private</b><span>No telemetry. Talks only to Anthropic for your own numbers; the token stays encrypted on your PC.</span></div>
+      <div class="feat" data-hu><b>Nem kémkedik</b><span>Nincs telemetria. Csak az Anthropic-kal beszél a saját adataidért; a token titkosítva a gépeden marad.</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span data-en>What's new in</span><span data-hu>Újdonságok:</span> <span id="nv"></span></h2>
+    <ul id="notes"><li>…</li></ul>
+    <details>
+      <summary><span data-en>All versions</span><span data-hu>Minden verzió</span></summary>
+      <table id="versions"><tr><th data-en>Version</th><th data-hu>Verzió</th><th data-en>Released</th><th data-hu>Kiadva</th><th data-en>Size</th><th data-hu>Méret</th><th>SHA-256</th></tr></table>
+      <p class="meta"><a href="CHANGELOG.md">CHANGELOG.md</a></p>
+    </details>
+  </section>
+
+  <footer>
+    <p data-en>Unofficial community tool, not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC. MIT licence ·
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor">source code on GitHub</a></p>
+    <p data-hu>Nem hivatalos, közösségi program, nem áll kapcsolatban az Anthropic-kal. A „Claude” az Anthropic, PBC védjegye. MIT licenc ·
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor">forráskód a GitHubon</a></p>
+  </footer>
+</main>
+<script>
+(function () {
+  var html = document.documentElement;
+  function setLang(l) {
+    html.lang = l;
+    document.getElementById('b-en').setAttribute('aria-pressed', l === 'en');
+    document.getElementById('b-hu').setAttribute('aria-pressed', l === 'hu');
+    renderNotes();
+  }
+  var manifest = null;
+  function mb(n) { return n ? (n / 1048576).toFixed(0) + ' MB' : ''; }
+  function day(s) { return s ? String(s).slice(0, 10) : ''; }
+  function renderNotes() {
+    if (!manifest) return;
+    var notes = manifest.notes || {};
+    var list = notes[html.lang] || notes.en || [];
+    var ul = document.getElementById('notes');
+    ul.textContent = '';
+    list.forEach(function (line) { var li = document.createElement('li'); li.textContent = line; ul.appendChild(li); });
+  }
+  document.getElementById('b-en').onclick = function () { setLang('en'); };
+  document.getElementById('b-hu').onclick = function () { setLang('hu'); };
+
+  fetch('manifest.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (m) {
+    manifest = m;
+    document.getElementById('version').textContent = m.version;
+    document.getElementById('nv').textContent = m.version;
+    document.getElementById('size').textContent = mb(m.bytes);
+    document.getElementById('date').textContent = day(m.last_updated);
+    document.getElementById('sha').textContent = m.sha256;
+    var a = document.getElementById('download');
+    if (/^https:\/\//.test(m.download_url)) a.href = m.download_url;
+    renderNotes();
+  }).catch(function () { document.getElementById('version').textContent = '?'; });
+
+  fetch('versions.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
+    var table = document.getElementById('versions');
+    (v.versions || []).forEach(function (x) {
+      var tr = document.createElement('tr');
+      var link = document.createElement('a');
+      link.textContent = x.version;
+      if (/^https:\/\//.test(x.download_url)) link.href = x.download_url;
+      var cells = [link, day(x.released), mb(x.bytes), x.sha256];
+      cells.forEach(function (c, i) {
+        var td = document.createElement('td');
+        if (i === 3) td.className = 'sha';
+        if (typeof c === 'string') td.textContent = c; else td.appendChild(c);
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+  }).catch(function () {});
+
+  setLang((navigator.language || 'en').toLowerCase().indexOf('hu') === 0 ? 'hu' : 'en');
+})();
+</script>
+</body>
+</html>

@@ -35,6 +35,7 @@ TOKEN_URL = "https://platform.claude.com/v1/oauth/token"
 REDIRECT_URI = "https://platform.claude.com/oauth/code/callback"
 SCOPE = "org:create_api_key user:profile user:inference"
 
+PROFILE_URL = "https://api.anthropic.com/api/oauth/profile"
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 BETA_HEADER = "oauth-2025-04-20"
 
@@ -157,8 +158,29 @@ def _normalize(tokens: dict) -> dict:
     }
 
 
-def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str]:
-    """(json, http_status, error). On 401 the caller should refresh and retry."""
+def fetch_profile(access_token: str) -> Tuple[Optional[dict], int]:
+    """(json, http_status) of the account/plan profile. Needs the user:profile scope."""
+    req = urllib.request.Request(
+        PROFILE_URL,
+        method="GET",
+        headers=_client_headers({
+            "Authorization": f"Bearer {access_token}",
+            "anthropic-beta": BETA_HEADER,
+            "anthropic-version": "2023-06-01",
+        }),
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=12) as r:
+            return json.loads(r.read().decode("utf-8", "replace")), r.status
+    except urllib.error.HTTPError as e:
+        return None, e.code
+    except Exception:  # noqa: BLE001 - the badge is a nicety; never let it break anything
+        return None, 0
+
+
+def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str, Optional[float]]:
+    """(json, http_status, error, retry_after_seconds).
+    On 401 the caller should refresh and retry; on 429 it should back off."""
     req = urllib.request.Request(
         USAGE_URL,
         method="GET",
@@ -170,13 +192,18 @@ def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str]:
     )
     try:
         with urllib.request.urlopen(req, timeout=12) as r:
-            return json.loads(r.read().decode("utf-8", "replace")), r.status, ""
+            return json.loads(r.read().decode("utf-8", "replace")), r.status, "", None
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "replace")
-        return None, e.code, body[:200]
+        retry_after = None
+        try:
+            retry_after = float(e.headers.get("Retry-After", ""))
+        except (TypeError, ValueError, AttributeError):
+            pass
+        return None, e.code, body[:200], retry_after
     except urllib.error.URLError as e:
-        return None, 0, tr("err.network", e.reason)
+        return None, 0, tr("err.network", e.reason), None
     except ValueError:
-        return None, 0, tr("err.bad_usage_resp")
+        return None, 0, tr("err.bad_usage_resp"), None
     except Exception as e:  # noqa: BLE001 - any other network error
-        return None, 0, tr("err.connection", e)
+        return None, 0, tr("err.connection", e), None

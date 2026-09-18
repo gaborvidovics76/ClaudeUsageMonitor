@@ -1,0 +1,63 @@
+CLAUDE USAGE MONITOR - TELEPITES
+================================
+
+Mindig felul levo kis panel Windows 10/11-re, ami mutatja, mennyit hasznaltal el a
+Claude elofizetesed 5 oras es heti keretebol.
+
+TELEPITES - 3 LEPES
+-------------------
+1. Csomagold ki a TELJES zip fajlt egy mappaba
+   (jobb gomb a zip fajlon > "Az osszes kibontasa...").
+   FONTOS: ne a zip-en belulrol inditsd, elobb bontsd ki!
+
+2. A kibontott mappaban kattints duplan erre:   TELEPITES.bat
+
+3. Ket kerdest kapsz (Enter = az ajanlott valasz):
+   - keszuljon-e parancsikon az Asztalra,
+   - induljon-e el a program a Windowszal egyutt.
+   A vegen a program magatol elindul. Rendszergazdai jog NEM kell.
+
+HA A WINDOWS FIGYELMEZTET
+-------------------------
+"A Windows megvedte a szamitogepet" (kek ablak): kattints a "Tovabbi informacio"
+feliratra, majd a "Futtatas mindenkeppen" gombra. A program nyilt forraskodu, de
+nincs megvasarolt kodalairo tanusitvanya, ezert szol a Windows az elso inditaskor.
+
+ELSO HASZNALAT
+--------------
+- A panel a kepernyo jobb felso sarkaban jelenik meg, egerrel barhova athuzhato.
+- Jobb gomb a panelen = menu (elrendezes, tema, meret, nyelv, beallitasok).
+- Alapbol a gepeden futo Claude Desktop naplojabol olvas - ehhez nem kell belepni.
+- Ha MINDEN eszkozod hasznalatat latni szeretned (bongeszo, telefon, masik gep):
+    jobb gomb > Adatforras > claude.ai (minden eszkoz)
+  Megnyilik a bongeszod, belepsz a szokott modon, kapsz egy kodot, azt bemasolod.
+  Jelszot a program SOHA nem ker es nem lat.
+- A talcaikon eloszor az ora melletti ^ nyil moge kerulhet. Huzd ki onnan a talcara,
+  ha mindig latni szeretned.
+
+FRISSITES
+---------
+A program maga figyeli, van-e ujabb verzio, es szol. Jobb gomb > "Programfrissites keresese..."
+> "Telepites most" - letolti, ellenorzi, lecsereli magat es ujraindul. A beallitasaid
+megmaradnak. (Kikapcsolhato: Beallitasok > Rendszer.)
+
+ELTAVOLITAS
+-----------
+Gephaz > Alkalmazasok > Telepitett alkalmazasok > Claude Usage Monitor > Eltavolitas.
+Megkerdezi, hogy a beallitasaidat is torolje-e.
+
+HOVA KERUL
+----------
+Program:      %LOCALAPPDATA%\Programs\ClaudeUsageMonitor
+Beallitasok:  %APPDATA%\ClaudeUsageMonitor
+(Ird be barmelyiket a Fajlkezelo cimsoraba.)
+
+ADATVEDELEM
+-----------
+Nincs telemetria, nincs reklam, nincs harmadik fel. A program csak az Anthropic sajat
+szerverevel beszel (a TE hasznalati adataidert), es a frissitesi szerverrol olvas le egy
+verzioszamot. A belepesi token a Windows-fiokodhoz kotve, titkositva tarolodik a gepeden.
+
+Nem hivatalos, kozossegi program; nem all kapcsolatban az Anthropic-kal.
+Letoltes, leiras, ujdonsagok:  https://dinorr.hu/claude-usage-monitor/
+Forraskod:                    https://github.com/gaborvidovics76/ClaudeUsageMonitor

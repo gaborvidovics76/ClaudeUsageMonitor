@@ -262,6 +262,16 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "pt": "Amarelo post-it", "pl": "Żółty post-it", "nl": "Post-it-geel",
         "ru": "Жёлтый post-it", "cs": "Post-it žlutá", "tr": "Post-it sarısı",
     },
+    "menu.model_gauge": {
+        "en": "{} gauge", "hu": "{} mérő", "de": "{}-Anzeige", "fr": "Jauge {}", "es": "Indicador {}",
+        "it": "Indicatore {}", "pt": "Indicador {}", "pl": "Wskaźnik {}", "nl": "{}-meter",
+        "ru": "Шкала {}", "cs": "Ukazatel {}", "tr": "{} göstergesi",
+    },
+    "menu.order": {
+        "en": "Order", "hu": "Sorrend", "de": "Reihenfolge", "fr": "Ordre", "es": "Orden",
+        "it": "Ordine", "pt": "Ordem", "pl": "Kolejność", "nl": "Volgorde",
+        "ru": "Порядок", "cs": "Pořadí", "tr": "Sıralama",
+    },
     "menu.size": {
         "en": "Size", "hu": "Méret", "de": "Größe", "fr": "Taille", "es": "Tamaño",
         "it": "Dimensione", "pt": "Tamanho", "pl": "Rozmiar", "nl": "Grootte",
@@ -356,10 +366,13 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "nl": "Instellingen…", "ru": "Настройки…", "cs": "Nastavení…", "tr": "Ayarlar…",
     },
     "menu.refresh": {
-        "en": "Refresh now", "hu": "Frissítés most", "de": "Jetzt aktualisieren",
-        "fr": "Actualiser", "es": "Actualizar ahora", "it": "Aggiorna ora",
-        "pt": "Atualizar agora", "pl": "Odśwież teraz", "nl": "Nu vernieuwen",
-        "ru": "Обновить сейчас", "cs": "Obnovit nyní", "tr": "Şimdi yenile",
+        # "data", to keep it apart from the PROGRAM update entry (menu.check_update)
+        "en": "Refresh usage data now", "hu": "Használati adatok frissítése most",
+        "de": "Nutzungsdaten jetzt aktualisieren", "fr": "Actualiser les données d'utilisation",
+        "es": "Actualizar datos de uso ahora", "it": "Aggiorna ora i dati di utilizzo",
+        "pt": "Atualizar dados de utilização agora", "pl": "Odśwież dane użycia teraz",
+        "nl": "Gebruiksgegevens nu vernieuwen", "ru": "Обновить данные об использовании",
+        "cs": "Obnovit data o využití nyní", "tr": "Kullanım verilerini şimdi yenile",
     },
     "menu.quit": {
         "en": "Quit", "hu": "Kilépés", "de": "Beenden", "fr": "Quitter", "es": "Salir",
@@ -781,6 +794,19 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "pt": "Modelo a seguir", "pl": "Śledzony model", "nl": "Te volgen model",
         "ru": "Отслеживаемая модель", "cs": "Sledovaný model", "tr": "İzlenecek model",
     },
+    "set.model_scale": {
+        "en": "Model gauge size", "hu": "Modell-mérő mérete", "de": "Größe der Modell-Anzeige",
+        "fr": "Taille de la jauge du modèle", "es": "Tamaño del indicador del modelo",
+        "it": "Dimensione dell'indicatore del modello", "pt": "Tamanho do indicador do modelo",
+        "pl": "Rozmiar wskaźnika modelu", "nl": "Grootte van de modelmeter",
+        "ru": "Размер шкалы модели", "cs": "Velikost ukazatele modelu", "tr": "Model göstergesi boyutu",
+    },
+    "set.gauge_order": {
+        "en": "Gauge order", "hu": "Mérők sorrendje", "de": "Reihenfolge der Anzeigen",
+        "fr": "Ordre des jauges", "es": "Orden de los indicadores", "it": "Ordine degli indicatori",
+        "pt": "Ordem dos indicadores", "pl": "Kolejność wskaźników", "nl": "Volgorde van de meters",
+        "ru": "Порядок шкал", "cs": "Pořadí ukazatelů", "tr": "Gösterge sıralaması",
+    },
     "set.show_spark": {
         "en": "Trend curve (sparkline)", "hu": "Trendgörbe (sparkline)", "de": "Trendkurve (Sparkline)",
         "fr": "Courbe de tendance (sparkline)", "es": "Curva de tendencia (sparkline)", "it": "Curva di tendenza (sparkline)",
@@ -978,18 +1004,18 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "Сбросить настройки", "cs": "Obnovit výchozí", "tr": "Varsayılanları geri yükle",
     },
     "set.about": {
-        "en": "{}\nWorks from local data, sends nothing anywhere.",
-        "hu": "{}\nHelyi adatokból dolgozik, semmit nem küld sehova.",
-        "de": "{}\nArbeitet mit lokalen Daten, sendet nichts irgendwohin.",
-        "fr": "{}\nFonctionne à partir de données locales, n'envoie rien nulle part.",
-        "es": "{}\nFunciona con datos locales, no envía nada a ningún sitio.",
-        "it": "{}\nLavora con dati locali, non invia nulla da nessuna parte.",
-        "pt": "{}\nTrabalha com dados locais, não envia nada para lado nenhum.",
-        "pl": "{}\nDziała na danych lokalnych, nic nigdzie nie wysyła.",
-        "nl": "{}\nWerkt met lokale gegevens, verstuurt niets ergens heen.",
-        "ru": "{}\nРаботает с локальными данными, ничего никуда не отправляет.",
-        "cs": "{}\nPracuje z místních dat, nic nikam neposílá.",
-        "tr": "{}\nYerel verilerle çalışır, hiçbir yere bir şey göndermez.",
+        "en": "{}\nNo telemetry. It only asks Anthropic for your own usage and reads the version number from the update server.",
+        "hu": "{}\nNincs telemetria. Csak az Anthropic-tól kéri le a saját használatodat, és a frissítési szerverről olvas ki egy verziószámot.",
+        "de": "{}\nKeine Telemetrie. Fragt nur bei Anthropic deine eigene Nutzung ab und liest die Versionsnummer vom Update-Server.",
+        "fr": "{}\nAucune télémétrie. Interroge uniquement Anthropic pour votre propre usage et lit le numéro de version sur le serveur de mise à jour.",
+        "es": "{}\nSin telemetría. Solo consulta a Anthropic tu propio uso y lee el número de versión del servidor de actualizaciones.",
+        "it": "{}\nNessuna telemetria. Chiede solo ad Anthropic il tuo utilizzo e legge il numero di versione dal server degli aggiornamenti.",
+        "pt": "{}\nSem telemetria. Só consulta a Anthropic sobre a sua própria utilização e lê o número da versão no servidor de atualizações.",
+        "pl": "{}\nBez telemetrii. Pyta tylko Anthropic o twoje własne użycie i odczytuje numer wersji z serwera aktualizacji.",
+        "nl": "{}\nGeen telemetrie. Vraagt alleen je eigen gebruik op bij Anthropic en leest het versienummer van de updateserver.",
+        "ru": "{}\nБез телеметрии. Запрашивает у Anthropic только ваше собственное использование и читает номер версии с сервера обновлений.",
+        "cs": "{}\nŽádná telemetrie. Ptá se pouze Anthropic na vaše vlastní využití a čte číslo verze z aktualizačního serveru.",
+        "tr": "{}\nTelemetri yok. Yalnızca Anthropic'ten kendi kullanımınızı sorar ve güncelleme sunucusundan sürüm numarasını okur.",
     },
     "set.reset_confirm": {
         "en": "Are you sure you want to restore the default settings?",
@@ -1195,3 +1221,18 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "Код не вставлен.", "cs": "Nevložen žádný kód.", "tr": "Kod yapıştırılmadı.",
     },
 }
+
+# backup status feature
+from .i18n_backup import STRINGS_BACKUP as _STRINGS_BACKUP  # noqa: E402
+
+STRINGS.update(_STRINGS_BACKUP)
+
+# refresh feedback + online updater
+from .i18n_update import STRINGS_UPDATE as _STRINGS_UPDATE  # noqa: E402
+
+STRINGS.update(_STRINGS_UPDATE)
+
+# plan badge + the small list of extra limits
+from .i18n_details import STRINGS_DETAILS as _STRINGS_DETAILS  # noqa: E402
+
+STRINGS.update(_STRINGS_DETAILS)

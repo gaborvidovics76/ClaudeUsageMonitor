@@ -1,0 +1,18 @@
+{
+  "en": [
+    "New: plan badge in the header - a little gradient pill with a sparkle: PRO, MAX 5×, MAX 20×, TEAM or ENTERPRISE. Hover it for your plan card (plan, rate-limit tier, extra usage, member since). Your name only appears on the badge if you switch that on.",
+    "New: a small list under the gauges shows every other limit the server reports - the weekly windows of the other models (Opus, Sonnet…), per-surface windows (Claude Code, connected apps…) and limits the app does not know by name yet. Each line has a status dot, a thin bar, the percentage and the time to reset.",
+    "New: extra usage (pay-as-you-go credit) - whether it is on, the monthly limit and what you have spent.",
+    "Everything is selectable: five switches in Settings → Details and in the right-click menu, plus a tick box for every single line the server currently sends for your account.",
+    "The list only takes room when there is something to show; the slim bar layout stays as it is.",
+    "Privacy: the plan is read from Anthropic's profile endpoint with your existing sign-in. Your name and e-mail are never written to any log."
+  ],
+  "hu": [
+    "Új: csomagjelvény a fejlécben - kis színátmenetes, csillogó pirula: PRO, MAX 5×, MAX 20×, TEAM vagy ENTERPRISE. Ha fölé viszed az egeret, megjelenik a csomagkártyád (csomag, korlátozási szint, extra használat, mióta vagy tag). A neved csak akkor kerül a jelvényre, ha külön bekapcsolod.",
+    "Új: a mérők alatt kis felsorolás mutat minden további keretet, amit a szerver küld - a többi modell heti keretét (Opus, Sonnet…), a felületenkénti kereteket (Claude Code, külső alkalmazások…), és azokat is, amelyeket a program név szerint még nem ismer. Minden sorban állapotpötty, vékony sáv, százalék és a resetig hátralévő idő.",
+    "Új: extra használat (túlhasználati keret) - be van-e kapcsolva, mennyi a havi limit és mennyit költöttél el.",
+    "Minden kiválasztható: öt kapcsoló a Beállítások → Részletek lapon és a jobb gombos menüben, plusz külön pipa minden egyes sorhoz, amit a szerver éppen a fiókodhoz küld.",
+    "A lista csak akkor foglal helyet, ha van mit mutatnia; a vékony sáv elrendezés változatlan marad.",
+    "Adatvédelem: a csomagot az Anthropic profil-végpontjáról olvassa ki, a meglévő belépéseddel. A neved és az e-mail-címed soha nem kerül semmilyen naplóba."
+  ]
+}

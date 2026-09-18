@@ -1,0 +1,14 @@
+{
+  "en": [
+    "Clearer menu: \"Refresh usage data now\" (fetches your numbers) and \"Check for program updates…\" (looks for a new version) can no longer be mixed up - the program update now sits in its own section above Quit.",
+    "The header shows \"fetching data…\" while a request runs, and the update window is titled \"Program update\".",
+    "The installer also cleans up the leftovers of an interrupted self-update.",
+    "Diagnostics: the log notes once per run which fields the server offers (names only, never values)."
+  ],
+  "hu": [
+    "Egyértelmű menü: a „Használati adatok frissítése most” (a számaidat kéri le) és a „Programfrissítés keresése…” (új verziót keres) többé nem keverhető össze - a programfrissítés külön szakaszba került, a Kilépés fölé.",
+    "A fejléc „adatlekérés…” feliratot mutat, amíg a kérés fut, a frissítés ablaka pedig a „Programfrissítés” címet kapta.",
+    "A telepítő a félbemaradt önfrissítés maradványait is eltakarítja.",
+    "Diagnosztika: a napló futásonként egyszer feljegyzi, milyen mezőket kínál a szerver (csak a neveket, értéket soha)."
+  ]
+}

@@ -27,7 +27,15 @@ is passing.
 - **Both limits at a glance** — the 5-hour rolling window and the weekly quota, side by side.
 - **Per-model weekly limit** (claude.ai source) — a third gauge between them for the model you
   care about (default **Fable**; change it in Settings → Content). Shown only when the server
-  reports a model-scoped limit.
+  reports a model-scoped limit. It can be switched off on its own, its **size** is adjustable
+  (0.5×–2×) and the **order** of the three gauges is yours to choose — all from the
+  right-click menu or Settings → Content.
+- **Plan badge** (claude.ai source) — a small gradient pill in the header: PRO, MAX 5×, MAX 20×,
+  TEAM or ENTERPRISE; hover it for the plan card. Your name only shows if you ask for it.
+- **Every other limit, as a small list** under the gauges — the other models' weekly windows,
+  per-surface windows (Claude Code, connected apps…), limits the app does not know by name yet,
+  and **extra usage** (pay-as-you-go: on/off, monthly limit, spent). Each category *and each
+  single line* can be switched off in Settings → Details or from the right-click menu.
 - **Pace warning** — not just "62% used", but *"+12% ahead of pace"*, so you know whether
   you'll run out before the week does.
 - **Projection to end of week** — turns red if your current rate would take you past 100%.
@@ -49,8 +57,26 @@ is passing.
 
 ### Download (recommended)
 
-Grab the latest build from the [**Releases**](../../releases) page, unzip it anywhere, and
-run `ClaudeUsageMonitor.exe`. No Python, no installer, no admin rights.
+1. Download the latest package from **<https://dinorr.hu/claude-usage-monitor/>**
+   (also on the [Releases](../../releases) page).
+2. **Extract the whole zip**, then double-click `INSTALL.bat`.
+3. Answer two questions (desktop shortcut, start with Windows). The app starts by itself.
+
+No Python and no admin rights are needed. The installer copies the program to
+`%LOCALAPPDATA%\Programs\ClaudeUsageMonitor`, adds a Start menu shortcut and registers a proper
+entry (with uninstaller) under *Settings → Apps → Installed apps*. Installing over an older
+version is an upgrade - settings and the claude.ai sign-in are kept. Silent install for admins:
+`installer\Install.ps1 -Silent`.
+
+### Updates
+
+The app looks at the release manifest a few seconds after start and every 6 hours. When a newer
+version exists it tells you (tray notification, a small `↑ version` marker on the panel, and the
+right-click menu). **Install now** downloads the package, verifies its **SHA-256**, unpacks it
+next to the installed folder, swaps the folders after the app has exited, and restarts - if
+anything fails, the old version is put back. HTTPS only, and the download must come from the
+same host as the manifest. Switch the check off in *Settings → System*. From the command line:
+`ClaudeUsageMonitor.exe --check-update` / `--update-now` (result in `update.log`).
 
 > The package is deliberately **not** a single-file exe: onefile builds unpack to `TEMP` on
 > every launch, which caused hangs during sign-in. This way startup is instant. Keep the
@@ -105,18 +131,43 @@ passwords and passkeys already work — there is no embedded browser:
 
 - Covers **all your devices** (browser, another machine, phone).
 - **Exact reset timestamps** from the server, not estimates.
-- Refreshes more often.
+- Polls about every 2 minutes. The usage endpoint rate-limits faster polling (HTTP 429), so the
+  app adapts its pace, retries by itself, and **shows what it is doing**: a spinning ring and
+  “refreshing…” while a request runs, a countdown to the retry when the server pushed back.
+  **Refresh now** keeps trying until it gets an answer.
 - **No developer or admin knowledge needed.**
 - Tokens (access + refresh) are stored **encrypted with Windows DPAPI**, bound to your
   Windows account, and refresh automatically. Sign out from the menu at any time.
 - Requests go to `https://api.anthropic.com/api/oauth/usage`, only for your own account.
+
+## Backup status (optional)
+
+For people who run a two-step backup script set (vault + files → OneDrive, then → Nextcloud via
+rclone), a discreet status bar at the bottom of the panel shows three traffic-light lamps —
+**OneDrive**, **Nextcloud**, **Obsidian**. It is **off until you configure it**: nothing about
+any machine is built into the program. Where your backups live comes from your own
+`%APPDATA%\ClaudeUsageMonitor\backup_profile.json` (see
+[docs/backup_profile.example.json](docs/backup_profile.example.json)) or from *Settings → Backups*.
+
+- **green** — the last successful backup is not older than 24 hours,
+- **yellow** — older than 24 but not older than 48 hours,
+- **red** — older than 48 hours, or no backup at all. A red ring around a lamp means the most
+  recent run failed or did not finish.
+
+A run only counts if its log ends with the script's own success line; failed runs, early exits
+and rclone dry runs do not. **Click a lamp** to see what is backed up: every copied component
+with source, destination and size, the files uploaded to Nextcloud, the folders and latest
+notes inside the Obsidian snapshot, remote storage, errors, the scheduled tasks and the log.
+Everything is configurable in **Settings → Backups** (lamps, labels, hour limits, folders,
+details sections). The check runs on a background thread every 5 minutes, reads only, and never
+opens OneDrive online-only files.
 
 ## Controls
 
 | Action | Effect |
 |---|---|
 | Left-click + drag | move the panel (snaps to screen edges) |
-| Right-click | menu (layout, theme, size, language, trend curve on/off, model gauge on/off, settings, quit) |
+| Right-click | menu (layout, theme, size, language, trend curve on/off, model gauge on/off + size + order, settings, quit) |
 | Double-click | history and statistics window |
 | Ctrl + scroll wheel | resize |
 | Tray icon: single click | hide / show the panel |
@@ -155,7 +206,8 @@ passwords and passkeys already work — there is no embedded browser:
   opacity, always-on-top, lock position, edge snapping, show as taskbar window,
   click-through (decoration-only mode).
 - **Content** — which limits to show (5-hour, per-model weekly, weekly), the model to track,
-  trend curve, rate, countdown, freshness; which value the tray icon displays.
+  the model gauge's size, the order of the gauges, trend curve, rate, countdown, freshness;
+  which value the tray icon displays.
 - **Alerts** — warning and critical thresholds (70% / 90% by default), notifications on
   threshold crossing, quota reset, and stale data.
 - **Data source** — profile (if you have multiple accounts), refresh interval, custom data file.

@@ -1,0 +1,22 @@
+{
+  "en": [
+    "New: installer - unzip, double-click INSTALL.bat, done. No admin rights; appears under Installed apps with a proper uninstaller.",
+    "New: online updates - the app checks for a newer version, downloads it, verifies the SHA-256, replaces itself and restarts. Your settings stay.",
+    "Fixed: \"Refresh now\" sometimes seemed to do nothing. The server rate-limits the usage endpoint (HTTP 429); a manual refresh now retries until it gets an answer.",
+    "Fixed: the data no longer goes stale every other minute - polling adapts to what the server allows and backs off when it pushes back.",
+    "New: visible activity - a spinning ring and \"refreshing...\" while a request runs, a countdown to the automatic retry, and a warning colour when the last request failed.",
+    "New: size and order of the per-model (Fable) gauge are adjustable; the gauge can be switched off on its own.",
+    "New (optional): backup status bar with traffic-light lamps for OneDrive / Nextcloud / Obsidian backups; click a lamp to see what was backed up. Configured per user, hidden unless set up.",
+    "Privacy: nothing about your machine is built into the program - backup locations come only from your own local profile."
+  ],
+  "hu": [
+    "Új: telepítő - kicsomagolod, duplán kattintasz a TELEPITES.bat fájlra, kész. Rendszergazdai jog nem kell; megjelenik a Telepített alkalmazások között, rendes eltávolítóval.",
+    "Új: netes frissítés - a program figyeli az új verziót, letölti, SHA-256-tal ellenőrzi, lecseréli magát és újraindul. A beállításaid megmaradnak.",
+    "Javítva: a „Frissítés most” néha látszólag nem csinált semmit. A szerver korlátozza a lekérdezést (HTTP 429); a kézi frissítés mostantól addig próbálkozik, amíg választ nem kap.",
+    "Javítva: az adat már nem avul el minden második percben - a lekérdezés üteme ahhoz igazodik, amit a szerver enged, és visszavesz, ha a szerver korlátoz.",
+    "Új: látható működés - forgó gyűrű és „frissítés...” felirat, amíg a kérés fut, visszaszámlálás az automatikus újrapróbálásig, és figyelmeztető szín, ha az utolsó kérés nem sikerült.",
+    "Új: a modellenkénti (Fable) mérő mérete és a mérők sorrendje állítható; a mérő önállóan kikapcsolható.",
+    "Új (opcionális): mentési állapotsor színes lámpákkal a OneDrive / Nextcloud / Obsidian mentésekhez; egy lámpára kattintva látszik, mi lett elmentve. Felhasználónként állítható, beállítás nélkül rejtve marad.",
+    "Adatvédelem: a programba semmi nincs beleégetve a gépedről - a mentések helye kizárólag a saját, helyi profilodból jön."
+  ]
+}

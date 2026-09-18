@@ -1,4 +1,4 @@
-# Claude Usage Monitor – exe készítése
+﻿# Claude Usage Monitor – exe készítése
 # Használat:  powershell -ExecutionPolicy Bypass -File build.ps1
 
 $ErrorActionPreference = "Stop"
@@ -8,7 +8,10 @@ Set-Location $PSScriptRoot
 # fogva tartja a dist\_internal DLL-jeit -> a torles/ujrairas nem sikerul, es
 # HIANYOS (serult) csomag keszul ("Failed to start embedded python interpreter").
 Write-Host "[0/3] Futo peldanyok leallitasa..." -ForegroundColor Cyan
-Get-Process ClaudeUsageMonitor,QtWebEngineProcess -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+$distRoot = (Join-Path $PSScriptRoot "dist") + "\"
+Get-Process ClaudeUsageMonitor -ErrorAction SilentlyContinue |
+    Where-Object { $_.Path -and $_.Path.StartsWith($distRoot, [StringComparison]::OrdinalIgnoreCase) } |
+    Stop-Process -Force -ErrorAction SilentlyContinue
 Start-Sleep -Seconds 2
 Remove-Item dist,build -Recurse -Force -ErrorAction SilentlyContinue
 

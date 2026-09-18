@@ -1,0 +1,8 @@
+{
+  "en": [
+    "Fixed: an empty server placeholder (\"Nimbus Quill\", 0%, no reset time) showed up in the small list. Windows the server marks as not active, and code-name windows that are empty and never reset, are no longer shown. If such a window ever starts counting, it appears by itself."
+  ],
+  "hu": [
+    "Javítva: egy üres szerveroldali helyőrző („Nimbus Quill”, 0%, reset-időpont nélkül) megjelent a kis felsorolásban. Azok az ablakok, amelyeket a szerver nem aktívnak jelöl, illetve az üres, soha nem nullázódó kódnevű ablakok mostantól nem látszanak. Ha egy ilyen ablak egyszer számolni kezd, magától megjelenik."
+  ]
+}

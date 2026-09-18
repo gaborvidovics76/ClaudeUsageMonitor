@@ -1,0 +1,52 @@
+# Claude Usage Monitor - release server
+#
+# This folder only serves static files: HTML, JSON, MD and ZIP.
+# PHP must NEVER run here, because files get uploaded into it.
+
+# 1) No script execution in this folder or below.
+<FilesMatch "\.(php|phtml|php[0-9]|phar|cgi|pl|py|sh)$">
+    Require all denied
+</FilesMatch>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.(php|phtml|php[0-9]|phar|cgi|pl|py|sh)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phar
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phar
+
+# 2) The download page is the index; no directory listing anywhere.
+DirectoryIndex index.html
+Options -Indexes
+
+# 3) Correct types.
+<IfModule mod_mime.c>
+    AddType application/zip .zip
+    AddType application/json .json
+    AddType text/markdown .md
+    AddDefaultCharset utf-8
+</IfModule>
+
+# 4) The update client and the download page read the JSON - allow it, cache briefly.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(json|md)$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Cache-Control "public, max-age=300"
+    </FilesMatch>
+    <FilesMatch "\.zip$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "no-referrer"
+    Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+</IfModule>

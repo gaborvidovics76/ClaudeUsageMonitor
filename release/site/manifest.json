@@ -1,0 +1,20 @@
+{
+    "name":  "Claude Usage Monitor",
+    "slug":  "claude-usage-monitor",
+    "version":  "2.5.1",
+    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.5.1.zip",
+    "sha256":  "ac60f56f6f4d8591ea4e0cadef818eaff7834db8bde1f5ee16367caa16c78cce",
+    "bytes":  48476498,
+    "requires":  "Windows 10/11 64-bit",
+    "author":  "Vidovics Gabor",
+    "homepage":  "https://dinorr.hu/claude-usage-monitor/",
+    "last_updated":  "2026-09-18T14:04:28Z",
+    "notes":  {
+                  "en":  [
+                             "Fixed: an empty server placeholder (\"Nimbus Quill\", 0%, no reset time) showed up in the small list. Windows the server marks as not active, and code-name windows that are empty and never reset, are no longer shown. If such a window ever starts counting, it appears by itself."
+                         ],
+                  "hu":  [
+                             "Javítva: egy üres szerveroldali helyőrző („Nimbus Quill”, 0%, reset-időpont nélkül) megjelent a kis felsorolásban. Azok az ablakok, amelyeket a szerver nem aktívnak jelöl, illetve az üres, soha nem nullázódó kódnevű ablakok mostantól nem látszanak. Ha egy ilyen ablak egyszer számolni kezd, magától megjelenik."
+                         ]
+              }
+}

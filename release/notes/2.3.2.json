@@ -1,0 +1,14 @@
+{
+  "en": [
+    "Fixed: the self-update downloaded and verified the new version but never swapped it in (the helper process did not start). Found and fixed by updating a real installation end to end.",
+    "If you have 2.3.0 or 2.3.1: install this version once with INSTALL.bat - from here on updates install themselves.",
+    "The app now confirms that the update helper really started, and reports it if not.",
+    "New: --manifest-url=<https url> for the command-line update switches."
+  ],
+  "hu": [
+    "Javítva: az önfrissítés letöltötte és ellenőrizte az új verziót, de a cserét már nem végezte el (a segédfolyamat nem indult el). Valódi telepítésen, végigvitt frissítéssel találtam meg és javítottam.",
+    "Ha 2.3.0 vagy 2.3.1 van nálad: ezt a verziót még egyszer a TELEPITES.bat fájllal tedd fel - innentől a frissítések maguktól települnek.",
+    "A program mostantól ellenőrzi, hogy a frissítő segédfolyamat tényleg elindult-e, és jelzi, ha nem.",
+    "Új: --manifest-url=<https cím> kapcsoló a parancssori frissítéshez."
+  ]
+}

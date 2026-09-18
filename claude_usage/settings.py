@@ -23,6 +23,10 @@ def config_path() -> str:
     return os.path.join(config_dir(), "settings.json")
 
 
+# all possible left-to-right / top-to-bottom orders of the three gauges
+GAUGE_IDS = ("fh", "mo", "sd")
+GAUGE_ORDERS = ["fh,mo,sd", "fh,sd,mo", "mo,fh,sd", "mo,sd,fh", "sd,fh,mo", "sd,mo,fh"]
+
 DEFAULTS: Dict[str, Any] = {
     # --- language
     "language": "",                  # empty = system language (if supported), else English
@@ -53,11 +57,39 @@ DEFAULTS: Dict[str, Any] = {
     "show_weekly": True,
     "show_model": True,              # model-scoped weekly limit (claude.ai source only)
     "model_filter": "Fable",         # which model's weekly limit to show (name substring)
+    "model_scale": 1.0,              # size of the model gauge relative to the others (0.5 - 2.0)
+    "gauge_order": "fh,mo,sd",       # fh = 5-hour, mo = model weekly, sd = weekly
     "show_spark": True,
+    # --- details: plan badge + the small list under the gauges (claude.ai source only)
+    "show_plan_badge": True,
+    "show_plan_name": False,         # the name stays off the always-on-top panel unless asked for
+    "show_model_list": True,         # weekly windows of the other models
+    "show_surfaces": True,           # per-surface windows and kinds we do not know yet
+    "show_extra_usage": True,        # pay-as-you-go credit
+    "show_local_models": True,       # this week's split between the models, from Claude Code's local logs
+    "local_models_path": "",         # "" = find Claude Code's log folder automatically
+    "detail_hidden": [],             # ids of single rows the user unticked
     "show_burn": True,
     "show_reset": True,
     "show_age": True,
     "tray_metric": "five_hour",      # five_hour | weekly | max
+
+    # --- backups: status of the OneDrive / Nextcloud / Obsidian backup scripts
+    "backup_enabled": True,          # the bar only appears where the backup system exists
+    "backup_show_onedrive": True,
+    "backup_show_nextcloud": True,
+    "backup_show_obsidian": True,
+    "backup_label": "age",           # age | name | none
+    "backup_green_hours": 24,        # green: not older than this
+    "backup_yellow_hours": 48,       # yellow: not older than this, red: older
+    "backup_root": "",               # "" = the root from backup_profile.json (no root = feature hidden)
+    "backup_config": "",             # "" = script_config from backup_profile.json
+    "backup_task_filter": "",        # "" = task_filter from backup_profile.json
+    "backup_d_components": True,     # details window sections
+    "backup_d_contents": True,
+    "backup_d_problems": True,
+    "backup_d_tasks": True,
+    "backup_d_log": False,
 
     # --- alerts
     "warn_threshold": 70,
@@ -69,6 +101,9 @@ DEFAULTS: Dict[str, Any] = {
     # --- system
     "autostart": False,
     "start_menu": True,              # shortcut in the Start menu
+    "update_check": True,            # look for a newer version on the release server
+    "update_url": "",                # "" = the default release manifest
+    "update_skip_version": "",       # "Skip this version" in the update window
     "first_run_done": False,
 }
 

@@ -25,3 +25,8 @@ Thumbs.db
 .DS_Store
 .idea/
 .vscode/
+
+# Machine-specific, never commit
+release.local.psd1
+backup_profile.json
+_*.json

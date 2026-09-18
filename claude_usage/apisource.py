@@ -16,7 +16,31 @@ from typing import Callable, List, Optional, Tuple
 
 from . import oauth
 from .i18n import tr
-from .datasource import FIVE_HOURS_MS, WEEK_MS, Metrics, Sample
+from .datasource import (FIVE_HOURS_MS, WEEK_MS, DetailRow, ExtraUsage, Metrics, ProfileInfo,
+                         Sample)
+
+
+# Polling cadence. The usage endpoint rate-limits: at one request per minute every
+# second call came back as 429. So we poll at BASE_INTERVAL, stretch the interval
+# when the server pushes back, and shrink it again while it answers.
+BASE_INTERVAL = 120.0
+MAX_INTERVAL = 600.0
+MANUAL_RETRIES = 5              # "Refresh now" keeps trying until it gets an answer
+AUTO_RETRIES = 1
+RETRY_DELAYS = (8.0, 15.0, 25.0, 40.0, 60.0)
+
+
+PROFILE_EVERY_S = 6 * 3600      # the plan rarely changes - ask seldom
+PROFILE_RETRY_S = 30 * 60
+PLAN_NAMES = {"claude_pro": "pro", "claude_max": "max", "claude_team": "team",
+              "claude_enterprise": "enterprise"}
+# legacy top-level windows of the usage response -> (row id, category, label)
+LEGACY_ROWS = (
+    ("seven_day_opus", "model:Opus", "model", "Opus"),
+    ("seven_day_sonnet", "model:Sonnet", "model", "Sonnet"),
+    ("seven_day_oauth_apps", "surface:oauth_apps", "surface", "@oauth_apps"),
+    ("cinder_cove", "kind:cinder_cove", "other", "Cinder Cove"),
+)
 
 
 def _dbg(msg: str) -> None:
@@ -66,10 +90,16 @@ class ApiReader:
         self._inflight = False
         self._force_pending = False   # "Refresh now" arrived while a fetch was running
         self._last_fetch = 0.0        # time of the last network attempt (s)
-        self._min_interval = 60.0     # do not call the server more often than this
+        self._interval = BASE_INTERVAL   # adaptive: grows on 429, shrinks on success
+        self._retry_at: Optional[float] = None   # a failed fetch is retried at this time
+        self._retries_left = 0
+        self._retry_no = 0
+        self._last_status = 0
         self._series: List[Sample] = []
         self.model_filter = "Fable"   # which model-scoped weekly limit to surface
         self._limits_logged = False
+        self._profile: Optional[ProfileInfo] = None
+        self._profile_next = 0.0      # when to ask the profile endpoint again
 
     # ------------------------------------------------------------------ token
 
@@ -78,6 +108,8 @@ class ApiReader:
             self._tokens = tokens or {}
             self._raw = None
             self._error = ""
+            self._profile = None      # another account may have signed in
+            self._profile_next = 0.0
 
     def has_tokens(self) -> bool:
         with self._lock:
@@ -88,6 +120,25 @@ class ApiReader:
         """The most recent fetch error ("" when the last fetch succeeded)."""
         with self._lock:
             return self._error
+
+    @property
+    def busy(self) -> bool:
+        """A network request is running (or queued) right now."""
+        with self._lock:
+            return self._inflight or self._force_pending
+
+    @property
+    def retry_in(self) -> Optional[float]:
+        """Seconds until the automatic retry of a failed fetch (None = none planned)."""
+        with self._lock:
+            if self._retry_at is None:
+                return None
+            return max(0.0, self._retry_at - time.time())
+
+    @property
+    def rate_limited(self) -> bool:
+        with self._lock:
+            return self._last_status == 429
 
     def _valid_access_token(self) -> Tuple[str, str]:
         """Returns a valid access token (refreshing if needed). (token, error)."""
@@ -121,8 +172,14 @@ class ApiReader:
                     # sometimes appeared to do nothing).
                     self._force_pending = True
                 return
-            if not force and (now - self._last_fetch) < self._min_interval:
+            retry_due = self._retry_at is not None and now >= self._retry_at
+            if not force and not retry_due and (now - self._last_fetch) < self._interval:
                 return          # too soon - do not burden the server
+            if not retry_due or force:
+                # a fresh attempt (not the retry of a failed one): new retry budget
+                self._retries_left = MANUAL_RETRIES if force else AUTO_RETRIES
+                self._retry_no = 0
+            self._retry_at = None
             self._inflight = True
             self._last_fetch = now
         threading.Thread(target=self._worker, daemon=True).start()
@@ -142,7 +199,7 @@ class ApiReader:
                 _dbg(f"nincs access token: {err}")
                 return
 
-            raw, status, ferr = oauth.fetch_usage(access)
+            raw, status, ferr, retry_after = oauth.fetch_usage(access)
             with self._lock:
                 refresh_token = self._tokens.get("refresh_token")
             if status == 401 and refresh_token:
@@ -153,21 +210,45 @@ class ApiReader:
                         self._tokens = new
                     if self._on_tokens_changed:
                         self._on_tokens_changed(new)
-                    raw, status, ferr = oauth.fetch_usage(new["access_token"])
+                    raw, status, ferr, retry_after = oauth.fetch_usage(new["access_token"])
                 else:
                     _dbg(f"token refresh failed: {rerr}")
 
             now = int(time.time() * 1000)
             with self._lock:
+                self._last_status = status
                 if raw is not None and status == 200:
                     self._raw = raw
                     self._fetched_at = now
                     self._error = ""
+                    self._retries_left = 0
+                    self._interval = max(BASE_INTERVAL, self._interval * 0.75)
                     self._append_series(raw, now)
                     _dbg("OK 200")
                     if not self._limits_logged:
                         # once per run: which limits the server reports (no secrets)
                         self._limits_logged = True
+                        # structure only (field NAMES, never values): shows which other
+                        # figures the server offers for this account
+                        try:
+                            shape = []
+                            for key, val in raw.items():
+                                if isinstance(val, dict):
+                                    shape.append(f"{key}{{{','.join(sorted(map(str, val)))}}}")
+                                elif isinstance(val, list):
+                                    inner = sorted({str(k) for it in val if isinstance(it, dict) for k in it})
+                                    shape.append(f"{key}[{len(val)}]{{{','.join(inner)}}}")
+                                else:
+                                    shape.append(f"{key}:{type(val).__name__}")
+                            _dbg("response shape: " + " | ".join(shape)[:900])
+                            for key, val in raw.items():
+                                if isinstance(val, dict) and key != "extra_usage" and \
+                                        isinstance(val.get("utilization"), (int, float)):
+                                    _dbg("window %s: utilization=%s used=%s limit=%s resets_at=%s" % (
+                                        key, val.get("utilization"), val.get("used_dollars"),
+                                        val.get("limit_dollars"), val.get("resets_at")))
+                        except Exception:  # noqa: BLE001 - diagnostics must never break the fetch
+                            pass
                         for lim in (raw.get("limits") or []):
                             if isinstance(lim, dict):
                                 sc = lim.get("scope") or {}
@@ -179,8 +260,26 @@ class ApiReader:
                     self._error = tr("err.session_expired_nl")
                     _dbg(f"{status} auth hiba")
                 else:
-                    self._error = ferr or tr("err.query_http", status)
-                    _dbg(f"hiba: status={status} ferr={ferr}")
+                    # 429 / network hiccup / 5xx: keep the old data, back off, retry by itself
+                    if status == 429:
+                        self._interval = min(MAX_INTERVAL, self._interval * 1.5)
+                        self._error = tr("err.rate_limited")
+                    else:
+                        self._error = ferr or tr("err.query_http", status)
+                    if self._retries_left > 0:
+                        self._retries_left -= 1
+                        delay = RETRY_DELAYS[min(self._retry_no, len(RETRY_DELAYS) - 1)]
+                        self._retry_no += 1
+                        if retry_after:
+                            delay = max(delay, min(float(retry_after), 300.0))
+                        self._retry_at = time.time() + delay
+                        _dbg(f"status={status} -> retry in {delay:.0f}s "
+                             f"(left {self._retries_left}, interval {self._interval:.0f}s)")
+                    else:
+                        _dbg(f"status={status} -> giving up until the next poll "
+                             f"(interval {self._interval:.0f}s) {str(ferr)[:80]!r}")
+            if status == 200:
+                self._maybe_fetch_profile()
         except Exception as e:  # noqa: BLE001 - the thread must never die silently
             import traceback
             with self._lock:
@@ -194,7 +293,142 @@ class ApiReader:
             if again:
                 self.refresh_async(force=True)
 
+    def _maybe_fetch_profile(self) -> None:
+        """Plan badge data. A separate, rare request - failure only means no badge."""
+        now = time.time()
+        with self._lock:
+            if now < self._profile_next:
+                return
+            self._profile_next = now + PROFILE_RETRY_S
+            access = self._tokens.get("access_token", "")
+        if not access:
+            return
+        raw, status = oauth.fetch_profile(access)
+        if not isinstance(raw, dict):
+            _dbg(f"profile: status={status}")
+            return
+        org = raw.get("organization") or {}
+        acc = raw.get("account") or {}
+        org_type = str(org.get("organization_type") or "")
+        info = ProfileInfo(
+            plan=PLAN_NAMES.get(org_type, ""),
+            tier=str(org.get("rate_limit_tier") or ""),
+            name=str(acc.get("display_name") or acc.get("full_name") or ""),
+            org_type=org_type,
+            billing_type=str(org.get("billing_type") or ""),
+            has_extra_usage=org.get("has_extra_usage_enabled")
+            if isinstance(org.get("has_extra_usage_enabled"), bool) else None,
+            created_at=str(acc.get("created_at") or ""),
+        )
+        with self._lock:
+            self._profile = info
+            self._profile_next = now + PROFILE_EVERY_S
+        # the plan is not a secret, the person is: never log name or e-mail
+        _dbg(f"profile: plan={info.plan or '?'} tier={info.tier or '?'} org_type={org_type or '?'}")
+
     # ------------------------------------------------------------------ analysis
+
+    @staticmethod
+    def _pick_rows(raw: dict) -> List[DetailRow]:
+        """Every limit besides the 5-hour window and the overall weekly one:
+        model-scoped and surface-scoped windows, plus kinds we do not know yet."""
+        rows: List[DetailRow] = []
+        seen = set()
+
+        def add(row: DetailRow) -> None:
+            key = row.id.lower()
+            if key not in seen:
+                seen.add(key)
+                rows.append(row)
+
+        limits = raw.get("limits") if isinstance(raw, dict) else None
+        for lim in limits if isinstance(limits, list) else []:
+            if not isinstance(lim, dict):
+                continue
+            kind, group = str(lim.get("kind", "")), str(lim.get("group", ""))
+            if kind == "five_hour" or group == "session":
+                continue
+            if lim.get("is_active") is False:
+                continue                        # present in the answer, but not in force for this account
+            scope = lim.get("scope") if isinstance(lim.get("scope"), dict) else {}
+            model = (scope.get("model") or {}).get("display_name") if isinstance(scope.get("model"), dict) else None
+            surface = scope.get("surface")
+            if isinstance(surface, dict):
+                surface = surface.get("display_name") or surface.get("name") or surface.get("id")
+            pct = lim.get("percent")
+            pct = float(pct) if isinstance(pct, (int, float)) else 0.0
+            reset = _parse_iso_ms(lim.get("resets_at"))
+            if model:
+                add(DetailRow(f"model:{model}", "model", str(model), pct, reset))
+            elif surface:
+                add(DetailRow(f"surface:{surface}", "surface", str(surface), pct, reset))
+            elif kind in ("seven_day", "weekly_all") or group == "weekly_all":
+                continue                        # the overall weekly window has its own gauge
+            else:
+                label = kind.replace("_", " ").strip().title() or group
+                add(DetailRow(f"kind:{kind or group}", "other", label, pct, reset))
+
+        has_surface = any(r.category == "surface" for r in rows)
+        for key, rid, category, label in LEGACY_ROWS:
+            win = raw.get(key) if isinstance(raw, dict) else None
+            if not isinstance(win, dict) or not isinstance(win.get("utilization"), (int, float)):
+                continue
+            if category == "surface" and has_surface:
+                continue                        # limits[] already describes the surfaces
+            add(DetailRow(rid, category, label, float(win["utilization"]),
+                          _parse_iso_ms(win.get("resets_at"))))
+
+        # any other filled top-level window (server code names such as "nimbus_quill")
+        known = {"five_hour", "seven_day", "extra_usage", "limits"} | {k for k, *_ in LEGACY_ROWS}
+        taken = [(r.value, r.reset_at) for r in rows]
+        for base in ("five_hour", "seven_day"):
+            win = raw.get(base) if isinstance(raw, dict) else None
+            if isinstance(win, dict) and isinstance(win.get("utilization"), (int, float)):
+                taken.append((float(win["utilization"]), _parse_iso_ms(win.get("resets_at"))))
+        for lim in limits if isinstance(limits, list) else []:
+            if isinstance(lim, dict) and isinstance(lim.get("percent"), (int, float)):
+                taken.append((float(lim["percent"]), _parse_iso_ms(lim.get("resets_at"))))
+
+        def repeats(value: float, reset: Optional[int]) -> bool:
+            for v, rs in taken:
+                same_reset = (rs is None and reset is None) or \
+                             (rs is not None and reset is not None and abs(rs - reset) < 120_000)
+                if abs(v - value) < 0.75 and same_reset:
+                    return True
+            return False
+
+        for key, win in (raw.items() if isinstance(raw, dict) else []):
+            if key in known or not isinstance(win, dict):
+                continue
+            util = win.get("utilization")
+            if not isinstance(util, (int, float)):
+                continue
+            reset = _parse_iso_ms(win.get("resets_at"))
+            if float(util) <= 0.0 and reset is None:
+                continue                        # placeholder of a window that is not in use
+            if repeats(float(util), reset):
+                continue                        # the same window under a second name
+            add(DetailRow(f"kind:{key}", "other", key.replace("_", " ").title(), float(util), reset))
+        return rows
+
+    @staticmethod
+    def _pick_extra(raw: dict) -> Optional[ExtraUsage]:
+        ex = raw.get("extra_usage") if isinstance(raw, dict) else None
+        if not isinstance(ex, dict):
+            return None
+
+        def money(value) -> Optional[float]:
+            # the API counts in minor units (cents)
+            return round(float(value) / 100.0, 2) if isinstance(value, (int, float)) else None
+
+        limit, used = money(ex.get("monthly_limit")), money(ex.get("used_credits"))
+        util = ex.get("utilization")
+        if not isinstance(util, (int, float)):
+            util = (used / limit * 100.0) if (limit and used is not None) else None
+        return ExtraUsage(enabled=bool(ex.get("is_enabled")), monthly_limit=limit, used=used,
+                          utilization=float(util) if util is not None else None,
+                          currency=str(ex.get("currency") or "USD").upper(),
+                          disabled_reason=str(ex.get("disabled_reason") or ""))
 
     @staticmethod
     def _pick(raw: dict) -> Tuple[Tuple[float, Optional[int]], Tuple[float, Optional[int]]]:
@@ -307,8 +541,10 @@ class ApiReader:
             fetched = self._fetched_at
             err = self._error
             series = list(self._series)
+            profile = self._profile
 
         m = Metrics()
+        m.profile = profile
         if raw is None:
             m.error = err or tr("err.loading")
             return m
@@ -341,6 +577,9 @@ class ApiReader:
             ideal = max(0.0, min(1.0, elapsed)) * 100.0
             w.pace = w.value - ideal
         w.spark = self._spark("sd", WEEK_MS, 64)
+
+        m.rows = self._pick_rows(raw)
+        m.extra = self._pick_extra(raw)
 
         # model-scoped weekly limit (e.g. Fable) - only when the server reports it
         mo_val, mo_reset, mo_name = self._pick_model(raw, self.model_filter)

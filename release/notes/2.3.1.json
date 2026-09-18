@@ -1,0 +1,12 @@
+{
+  "en": [
+    "New: hover the status text in the panel header to see when the data was last updated and, if a request failed, why - plus the countdown to the automatic retry.",
+    "Improved: updating from the command line (--update-now) now also works while the panel is running.",
+    "First release delivered through the built-in online updater."
+  ],
+  "hu": [
+    "Új: ha a panel fejlécében az állapotszöveg fölé viszed az egeret, látod, mikor frissült utoljára az adat, és ha egy kérés nem sikerült, azt is, hogy miért - az automatikus újrapróbálásig hátralévő idővel együtt.",
+    "Javítva: a parancssori frissítés (--update-now) mostantól akkor is működik, ha a panel közben fut.",
+    "Az első kiadás, amely már a beépített netes frissítőn keresztül érkezik."
+  ]
+}

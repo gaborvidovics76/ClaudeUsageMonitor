@@ -1,0 +1,55 @@
+{
+    "slug":  "claude-usage-monitor",
+    "latest":  "2.5.1",
+    "versions":  [
+                     {
+                         "version":  "2.5.1",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.5.1.zip",
+                         "sha256":  "ac60f56f6f4d8591ea4e0cadef818eaff7834db8bde1f5ee16367caa16c78cce",
+                         "released":  "2026-09-18T14:04:28Z",
+                         "bytes":  48476498
+                     },
+                     {
+                         "version":  "2.5.0",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.5.0.zip",
+                         "sha256":  "1b6fe56868149244093fdf9734008c833286b3ebbdfd36b81f3d39d9495a2343",
+                         "released":  "2026-09-18T13:58:34Z",
+                         "bytes":  48476251
+                     },
+                     {
+                         "version":  "2.4.0",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.4.0.zip",
+                         "sha256":  "f0c9e46289a2aaf142691f484faa22c6276b36616344b9e96ee9ff2bbb9d80fe",
+                         "released":  "2026-09-18T13:22:22Z",
+                         "bytes":  48456537
+                     },
+                     {
+                         "version":  "2.3.3",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.3.3.zip",
+                         "sha256":  "740640fc5d716c9530220f35b2d52c92ba8f11999cb0ea848739fabd5ca3e104",
+                         "released":  "2026-09-18T13:10:03Z",
+                         "bytes":  48434517
+                     },
+                     {
+                         "version":  "2.3.2",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.3.2.zip",
+                         "sha256":  "669e2d22d62d76c4ddc173f331126fd3476777714ce28d6265d7295d64fa4041",
+                         "released":  "2026-09-18T12:53:32Z",
+                         "bytes":  48435311
+                     },
+                     {
+                         "version":  "2.3.1",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.3.1.zip",
+                         "sha256":  "92b31b286962374096bb40e4f98e8b9adddf041dfe7096661ff1f3422b3f1c4d",
+                         "released":  "2026-09-18T12:49:01Z",
+                         "bytes":  48435339
+                     },
+                     {
+                         "version":  "2.3.0",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.3.0.zip",
+                         "sha256":  "b0f9fb839d6fbadfba67e9ee02819b03bd00c650cb04d75b5f2affceecb73018",
+                         "released":  "2026-09-18T12:37:27Z",
+                         "bytes":  48432620
+                     }
+                 ]
+}

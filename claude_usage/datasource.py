@@ -57,6 +57,60 @@ class Gauge:
 
 
 @dataclass
+class DetailRow:
+    """A secondary limit shown in the small list under the gauges
+    (another model's weekly window, a per-surface window, ...)."""
+    id: str                             # "model:Opus" | "surface:<name>" | "kind:<kind>"
+    category: str                       # model | surface | other
+    label: str
+    value: float = 0.0                  # percent used
+    reset_at: Optional[int] = None      # epoch ms
+
+    @property
+    def reset_in_ms(self) -> Optional[int]:
+        if self.reset_at is None:
+            return None
+        return max(0, self.reset_at - int(time.time() * 1000))
+
+
+@dataclass
+class ExtraUsage:
+    """Pay-as-you-go usage on top of the plan ("extra usage")."""
+    enabled: bool = False
+    monthly_limit: Optional[float] = None   # in major currency units; None = unlimited / unknown
+    used: Optional[float] = None
+    utilization: Optional[float] = None     # percent of the monthly limit
+    currency: str = "USD"
+    disabled_reason: str = ""
+
+
+@dataclass
+class ProfileInfo:
+    """What the profile endpoint says about the plan. Never logged, never sent anywhere."""
+    plan: str = ""                      # pro | max | team | enterprise | "" (unknown)
+    tier: str = ""                      # raw rate_limit_tier, e.g. default_claude_max_5x
+    name: str = ""
+    org_type: str = ""
+    billing_type: str = ""
+    has_extra_usage: Optional[bool] = None
+    created_at: str = ""
+
+    @property
+    def multiplier(self) -> str:
+        import re
+
+        m = re.search(r"(\d+)x", self.tier or "")
+        return f"{m.group(1)}\u00d7" if m else ""
+
+    @property
+    def badge(self) -> str:
+        if not self.plan:
+            return ""
+        text = self.plan.upper()
+        return f"{text} {self.multiplier}".strip() if self.plan == "max" else text
+
+
+@dataclass
 class Metrics:
     ok: bool = False
     error: str = ""
@@ -69,6 +123,9 @@ class Metrics:
     # Model-scoped weekly limit (e.g. "Fable"). Only the claude.ai source has it;
     # model_name is empty when the data is not available.
     model: Gauge = field(default_factory=Gauge)
+    rows: List[DetailRow] = field(default_factory=list)     # every other limit the server reports
+    extra: Optional[ExtraUsage] = None
+    profile: Optional[ProfileInfo] = None
     model_name: str = ""
 
     @property
@@ -85,6 +142,15 @@ class Metrics:
     def stale(self) -> bool:
         a = self.age_s
         return a is None or a > 15 * 60
+
+
+def detail_label(row: "DetailRow") -> str:
+    """Display name of a row of the small list."""
+    from .i18n import tr
+
+    if row.label == "@oauth_apps":
+        return tr("detail.surface.oauth_apps")
+    return row.label
 
 
 def fmt_delta(ms: Optional[int]) -> str:

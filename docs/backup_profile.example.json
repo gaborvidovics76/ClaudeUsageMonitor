@@ -1,0 +1,23 @@
+{
+  "_comment": "Copy to %APPDATA%\\ClaudeUsageMonitor\\backup_profile.json and adapt. Every path may use environment variables. Nothing in this file ever leaves your PC. Without a 'root' the backup status bar stays hidden.",
+
+  "root": "%OneDrive%\\Backups",
+  "log_dir": "logs",
+  "snapshot_dir": "vault-snapshots",
+  "snapshot_glob": "Vault_*.zip",
+
+  "onedrive_log_prefix": "onedrive",
+  "nextcloud_log_prefix": "nextcloud",
+
+  "script_config": "D:\\Tools\\Backup\\config.psd1",
+  "task_filter": "Backup*",
+
+  "vault": "",
+  "remote": "",
+
+  "jobs": {
+    "Downloads": { "dest": "files\\Downloads", "source": "%USERPROFILE%\\Downloads" },
+    "Documents": { "dest": "files\\Documents", "source": "%USERPROFILE%\\Documents" },
+    "@cowork":   { "dest": "files\\chat-logs", "source": "" }
+  }
+}
