@@ -264,5 +264,6 @@
  "hist.r6": "6 h",
  "hist.r24": "24 h",
  "hist.r7": "7 dias",
- "img.history": "Janela de histórico do Claude Usage Monitor: sessão de 5 horas e limite semanal ao longo do tempo, com pico semanal, consumo diário e projeção para o fim da semana"
+ "img.history": "Janela de histórico do Claude Usage Monitor: sessão de 5 horas e limite semanal ao longo do tempo, com pico semanal, consumo diário e projeção para o fim da semana",
+ "fb.recaptcha": "Protegido contra spam pelo reCAPTCHA – aplicam-se a <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Política de Privacidade</a> e os <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Termos de Serviço</a> do Google."
 }

@@ -264,5 +264,6 @@
  "hist.r6": "6 Std.",
  "hist.r24": "24 Std.",
  "hist.r7": "7 Tage",
- "img.history": "Verlaufsfenster von Claude Usage Monitor: 5-Stunden-Sitzung und Wochenlimit im Zeitverlauf, mit Wochenspitze, Tagesverbrauch und Hochrechnung bis zum Wochenende"
+ "img.history": "Verlaufsfenster von Claude Usage Monitor: 5-Stunden-Sitzung und Wochenlimit im Zeitverlauf, mit Wochenspitze, Tagesverbrauch und Hochrechnung bis zum Wochenende",
+ "fb.recaptcha": "Vor Spam geschützt durch reCAPTCHA – es gelten Googles <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Datenschutzerklärung</a> und <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Nutzungsbedingungen</a>."
 }

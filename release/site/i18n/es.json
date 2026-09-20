@@ -264,5 +264,6 @@
  "hist.r6": "6 h",
  "hist.r24": "24 h",
  "hist.r7": "7 días",
- "img.history": "Ventana de historial de Claude Usage Monitor: sesión de 5 horas y límite semanal a lo largo del tiempo, con pico semanal, consumo diario y proyección al final de la semana"
+ "img.history": "Ventana de historial de Claude Usage Monitor: sesión de 5 horas y límite semanal a lo largo del tiempo, con pico semanal, consumo diario y proyección al final de la semana",
+ "fb.recaptcha": "Protegido contra el spam por reCAPTCHA – se aplican la <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Política de privacidad</a> y las <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Condiciones del servicio</a> de Google."
 }

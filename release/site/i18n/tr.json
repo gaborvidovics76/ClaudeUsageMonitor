@@ -264,5 +264,6 @@
  "hist.r6": "6 saat",
  "hist.r24": "24 saat",
  "hist.r7": "7 gün",
- "img.history": "Claude Usage Monitor geçmiş penceresi: 5 saatlik oturum ve haftalık limit zaman içinde; haftalık zirve, günlük tüketim ve hafta bitimi tahmini"
+ "img.history": "Claude Usage Monitor geçmiş penceresi: 5 saatlik oturum ve haftalık limit zaman içinde; haftalık zirve, günlük tüketim ve hafta bitimi tahmini",
+ "fb.recaptcha": "reCAPTCHA ile spam'e karşı korunur – Google'ın <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Gizlilik Politikası</a> ve <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Hizmet Şartları</a> geçerlidir."
 }

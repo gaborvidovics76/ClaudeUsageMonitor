@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=6">
+<link rel="stylesheet" href="../assets/site.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
@@ -404,6 +404,7 @@
       </div>
       <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
       <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">J'accepte que mon adresse e-mail soit utilisée pour m'envoyer des notifications de nouvelles versions, comme décrit dans la <a href="#privacy" data-legal="privacy">Politique de confidentialité</a>. Je peux retirer ce consentement à tout moment.</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Protégé contre le spam par reCAPTCHA – les <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">règles de confidentialité</a> et les <a href="https://policies.google.com/terms" target="_blank" rel="noopener">conditions d'utilisation</a> de Google s'appliquent.</p>
       <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -481,6 +482,7 @@
       <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
       <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Vous pouvez publier mon message sur cette page à titre de recommandation (avec mon nom uniquement).</span></label>
       <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Envoyer le message</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Protégé contre le spam par reCAPTCHA – les <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">règles de confidentialité</a> et les <a href="https://policies.google.com/terms" target="_blank" rel="noopener">conditions d'utilisation</a> de Google s'appliquent.</p>
       <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
     </form>
   </div>
@@ -589,6 +591,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=6" defer></script>
+<script src="../assets/site.js?v=8" defer></script>
 </body>
 </html>

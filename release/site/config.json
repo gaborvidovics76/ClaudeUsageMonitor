@@ -1,6 +1,10 @@
 {
-  "_readme": "Site settings. google: paste your IDs to switch measurement on (a cookie-consent bar appears automatically; nothing loads before the visitor agrees). Leave empty = no Google, no cookies. legal: shown in the Privacy Policy / Imprint.",
-  "google": { "ga4": "G-SW5EN6QH0H", "gtm": "", "ads": "" },
+  "_readme": "Site settings. google: paste your IDs to switch measurement on (a cookie-consent bar appears automatically; nothing loads before the visitor agrees). Leave empty = no Google, no cookies. legal: shown in the Privacy Policy / Imprint. recaptcha.site_key: the PUBLIC reCAPTCHA v3 site key (the secret key goes into api/config.php).",
+  "google": {
+    "ga4": "G-SW5EN6QH0H",
+    "gtm": "",
+    "ads": ""
+  },
   "legal": {
     "controller_name": "Vidovics Gábor",
     "controller_address": "Magyarország / Hungary",
@@ -10,5 +14,8 @@
     "hosting_address": "serverkraft.hu · szerver / server: Németország / Germany (EU)",
     "hosting_contact": "info@serverkraft.hu",
     "effective": "2026-09-19"
+  },
+  "recaptcha": {
+    "site_key": ""
   }
 }

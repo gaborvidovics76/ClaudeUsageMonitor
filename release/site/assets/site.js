@@ -73,7 +73,7 @@
     var list = $('#lang-list'), btn = $('.lang__btn');
     $$('a[data-lang]', list).forEach(function (a) {
       a.addEventListener('click', function () {
-        store.set('um-lang', a.getAttribute('data-lang'));
+        store.set('um-lang', a.getAttribute('data-lang')); track('language_switch', { item: a.getAttribute('data-lang') });
         if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
       });
     });
@@ -195,8 +195,26 @@
   }
 
   /* ------------------------------------------------------------ forms */
+  /* reCAPTCHA v3 - optional (config.json -> recaptcha.site_key). Google's script is fetched only when somebody
+     actually starts using a form, never on page load. */
+  var rcLoading = null;
+  function rcKey() { return (state.cfg.recaptcha || {}).site_key || ''; }
+  function rcLoad() {
+    if (!rcKey()) return Promise.resolve(false);
+    return rcLoading || (rcLoading = new Promise(function (res) {
+      var s = document.createElement('script'); s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(rcKey());
+      s.onload = function () { window.grecaptcha.ready(function () { res(true); }); }; s.onerror = function () { res(false); };
+      document.head.appendChild(s);
+    }));
+  }
+  function rcToken(action) {
+    return rcLoad().then(function (ok) { return ok ? window.grecaptcha.execute(rcKey(), { action: action }) : ''; }).catch(function () { return ''; });
+  }
+  document.addEventListener('focusin', function (e) { if (e.target.closest && e.target.closest('#fb-form, #sub-form')) rcLoad(); });
+
   function postJSON(file, data) {
-    return freshToken().then(function (tok) {
+    return Promise.all([freshToken(), rcToken(file.replace('.php', ''))]).then(function (r) {
+      var tok = r[0]; data.recaptcha = r[1];
       data.token = tok; data.lang = state.lang;
       return fetch(API + file, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
     }).then(function (r) { return r.json().catch(function () { return { ok: false }; }); });
@@ -210,9 +228,10 @@
       if (!form.checkValidity()) { status.textContent = tr('js.fill'); status.classList.add('err'); form.reportValidity(); return; }
       if (Date.now() - opened < 3500) { opened = Date.now() - 3500; }
       form.classList.add('is-busy'); status.textContent = tr('js.sending');
-      postJSON(file, collect()).then(function (res) {
+      var data = collect();
+      postJSON(file, data).then(function (res) {
         form.classList.remove('is-busy');
-        if (res.ok) { status.textContent = tr(okKey); status.classList.add('ok'); form.reset(); track('form_' + file.replace('.php', '')); }
+        if (res.ok) { status.textContent = tr(okKey); status.classList.add('ok'); form.reset(); track(file === 'subscribe.php' ? 'sign_up' : 'generate_lead', { method: file === 'subscribe.php' ? 'newsletter' : 'feedback_form', item: (data && data.topic) || (data && data.os) || '' }); }
         else { status.textContent = tr(res.error === 'rate' ? 'js.rate' : (res.error === 'email' ? 'js.bad_email' : 'js.fail')); status.classList.add('err'); if (res.error === 'token') { state.token = ''; } }
       }).catch(function () { form.classList.remove('is-busy'); status.textContent = tr('js.fail'); status.classList.add('err'); });
     });
@@ -261,6 +280,7 @@
       });
       $('#legal-body').innerHTML = body;
       $$('#legal-body [data-opt]').forEach(function (n) { n.hidden = !L[n.getAttribute('data-opt')]; });
+      $$('#legal-body [data-if-recaptcha]').forEach(function (n) { n.hidden = !rcKey(); });
       $$('#legal-body [data-if-google]').forEach(function (n) { n.hidden = !googleOn(); });
       $$('#legal-body [data-if-no-google]').forEach(function (n) { n.hidden = googleOn(); });
       $('#legal-title').textContent = sec.getAttribute('data-title');
@@ -269,7 +289,7 @@
     });
   }
   function bindLegalLinks() {
-    $$('[data-legal]').forEach(function (a) { a.onclick = function (e) { e.preventDefault(); openLegal(a.getAttribute('data-legal')); }; });
+    $$('[data-legal]').forEach(function (a) { a.onclick = function (e) { e.preventDefault(); openLegal(a.getAttribute('data-legal')); track('legal_open', { item: a.getAttribute('data-legal') }); }; });
   }
   $$('dialog').forEach(function (d) { d.addEventListener('click', function (e) { if (e.target === d) d.close(); }); });
 
@@ -318,7 +338,7 @@
 
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('[data-dl]');
-    if (a && /dl\.php|\.zip/.test(a.href)) track('file_download', { os: a.getAttribute('data-dl'), version: (state[a.getAttribute('data-dl')] || {}).version });
+    if (a && /dl\.php|\.zip/.test(a.href)) { var sec = a.closest('section,header,div.mbar'); track('file_download', { os: a.getAttribute('data-dl'), version: (state[a.getAttribute('data-dl') === 'mac' ? 'mac' : 'win'] || {}).version, item: (sec && (sec.id || sec.className.split(' ')[0])) || 'page', file_name: a.getAttribute('data-dl') === 'mac' ? 'macOS package' : 'Windows package' }); }
   });
 
   /* ------------------------------------------------------------ studio: themes + layouts */
@@ -344,16 +364,16 @@
     img.classList.add('swap');
     var pre = new Image(); pre.onload = function () { img.src = src; img.classList.remove('swap'); }; pre.src = src;
   }
-  radio($('#hist-range'), 'data-range', function (v) { state.range = v; setHistory(); });
-  radio($('#swatches'), 'data-theme', function (v) { state.theme = v; setStudio(); setHistory(); });
-  radio($('#layouts'), 'data-layout', function (v) { state.layout = v; setStudio(); });
+  radio($('#hist-range'), 'data-range', function (v) { state.range = v; setHistory(); track('history_range', { item: v }); });
+  radio($('#swatches'), 'data-theme', function (v) { state.theme = v; setStudio(); setHistory(); track('select_theme', { item: v }); });
+  radio($('#layouts'), 'data-layout', function (v) { state.layout = v; setStudio(); track('select_layout', { item: v }); });
 
   /* ------------------------------------------------------------ tabs */
   (function () {
     var tabs = $$('#tabs [role=tab]');
     function sel(t) { tabs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; $('#' + x.getAttribute('aria-controls')).hidden = !on; }); }
     tabs.forEach(function (t, i) {
-      t.onclick = function () { sel(t); };
+      t.onclick = function () { sel(t); track('details_tab', { item: t.id }); };
       t.onkeydown = function (e) { var d = e.key === 'ArrowRight' ? 1 : (e.key === 'ArrowLeft' ? -1 : 0); if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); sel(n); } };
     });
   })();
@@ -376,11 +396,23 @@
   /* ------------------------------------------------------------ phones: a desktop app cannot be installed here -> send the link on */
   function share() {
     var url = 'https://dinorr.hu/claude-usage-monitor/' + (state.lang === 'en' ? '' : state.lang + '/'), data = { title: 'Claude Usage Monitor', text: tr('mobile.share_text'), url: url };
+    track('share', { method: navigator.share ? 'native' : 'copy_link', item: state.lang });
     if (navigator.share) { navigator.share(data).catch(function () {}); return; }
     (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { toast(tr('js.copied')); }).catch(function () { prompt('', url); });
   }
   function toast(t) { var n = document.createElement('div'); n.className = 'toast'; n.textContent = t; document.body.appendChild(n); setTimeout(function () { n.remove(); }, 2600); }
   if (html.classList.contains('is-mobile')) { $('#share-hero').hidden = false; $('#mbar').hidden = false; $('#share-hero').onclick = share; $('#share-bar').onclick = share; }
+
+  /* which FAQ / glossary / install-steps block gets opened, and which section is actually reached */
+  document.addEventListener('toggle', function (e) {
+    var d = e.target; if (!d.open || d.tagName !== 'DETAILS') return;
+    var q = d.querySelector('summary'), key = (q && q.getAttribute('data-i18n')) || d.id || 'details';
+    track(d.closest('.faq') ? 'faq_open' : 'details_open', { item: key });
+  }, true);
+  if ('IntersectionObserver' in window) {
+    var seen = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { track('section_view', { item: x.target.id }); seen.unobserve(x.target); } }); }, { threshold: 0.35 });
+    $$('main section[id]').forEach(function (n) { seen.observe(n); });
+  }
 
   $('#year').textContent = new Date().getFullYear();
 
@@ -391,5 +423,5 @@
     loadJSON('macos/manifest.json').then(function (m) { if (safeUrl(m.download_url)) state.mac = m; else state.macMissing = true; }).catch(function () { state.macMissing = true; }),
     fetch(ROOT + 'CHANGELOG.md', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (t) { state.log = parseChangelog(t); }).catch(function () {}),
     loadStats()
-  ]).then(loadDict).then(function () { initConsent(); mailLinkStates(); });
+  ]).then(loadDict).then(function () { initConsent(); mailLinkStates(); $$('[data-if-recaptcha]').forEach(function (n) { n.hidden = !rcKey(); }); });
 })();

@@ -264,5 +264,6 @@
  "hist.r6": "6 h",
  "hist.r24": "24 h",
  "hist.r7": "7 dní",
- "img.history": "Okno historie Claude Usage Monitor: 5hodinové okno a týdenní limit v čase, s týdenním maximem, denní spotřebou a odhadem na konec týdne"
+ "img.history": "Okno historie Claude Usage Monitor: 5hodinové okno a týdenní limit v čase, s týdenním maximem, denní spotřebou a odhadem na konec týdne",
+ "fb.recaptcha": "Před spamem chrání reCAPTCHA – platí <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Zásady ochrany soukromí</a> a <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Smluvní podmínky</a> společnosti Google."
 }

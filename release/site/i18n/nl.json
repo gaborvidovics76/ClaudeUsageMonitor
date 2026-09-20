@@ -264,5 +264,6 @@
  "hist.r6": "6 u",
  "hist.r24": "24 u",
  "hist.r7": "7 dagen",
- "img.history": "Geschiedenisvenster van Claude Usage Monitor: 5-uurssessie en weeklimiet in de tijd, met weekpiek, dagverbruik en prognose voor het einde van de week"
+ "img.history": "Geschiedenisvenster van Claude Usage Monitor: 5-uurssessie en weeklimiet in de tijd, met weekpiek, dagverbruik en prognose voor het einde van de week",
+ "fb.recaptcha": "Beschermd tegen spam door reCAPTCHA – het <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Privacybeleid</a> en de <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Servicevoorwaarden</a> van Google zijn van toepassing."
 }

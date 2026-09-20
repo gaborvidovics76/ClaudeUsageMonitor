@@ -142,6 +142,7 @@
  "sub.os_both": "Windows + macOS",
  "sub.btn": "Notify me",
  "sub.consent": "I agree that my e-mail address is used to send me release notifications, as described in the <a href=\"#privacy\" data-legal=\"privacy\">Privacy Policy</a>. I can withdraw this at any time.",
+ "fb.recaptcha": "Protected against spam by reCAPTCHA – Google's <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a> and <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Terms of Service</a> apply.",
  "who.eyebrow": "Recommended for",
  "who.h2": "If any of these is you, you'll like it.",
  "who.1t": "Claude Code developers",

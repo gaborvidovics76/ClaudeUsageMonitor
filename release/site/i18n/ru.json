@@ -264,5 +264,6 @@
  "hist.r6": "6 ч",
  "hist.r24": "24 ч",
  "hist.r7": "7 дней",
- "img.history": "Окно истории Claude Usage Monitor: 5-часовой сеанс и недельный лимит во времени, с недельным пиком, расходом за день и прогнозом на конец недели"
+ "img.history": "Окно истории Claude Usage Monitor: 5-часовой сеанс и недельный лимит во времени, с недельным пиком, расходом за день и прогнозом на конец недели",
+ "fb.recaptcha": "Защита от спама: reCAPTCHA – действуют <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Политика конфиденциальности</a> и <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">Условия использования</a> Google."
 }

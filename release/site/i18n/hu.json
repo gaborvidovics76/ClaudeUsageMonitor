@@ -264,5 +264,6 @@
  "hist.r6": "6 óra",
  "hist.r24": "24 óra",
  "hist.r7": "7 nap",
- "img.history": "A Claude Usage Monitor előzmények ablaka: az 5 órás ablak és a heti keret időbeli alakulása, heti csúccsal, napi fogyási ütemmel és hét végi előrejelzéssel"
+ "img.history": "A Claude Usage Monitor előzmények ablaka: az 5 órás ablak és a heti keret időbeli alakulása, heti csúccsal, napi fogyási ütemmel és hét végi előrejelzéssel",
+ "fb.recaptcha": "A kéretlen üzenetek ellen reCAPTCHA véd – érvényesek a Google <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">adatvédelmi irányelvei</a> és <a href=\"https://policies.google.com/terms\" target=\"_blank\" rel=\"noopener\">szolgáltatási feltételei</a>."
 }
