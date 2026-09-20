@@ -1,0 +1,74 @@
+<!-- Legal texts (English translation; the Hungarian version is authoritative). {{…}} values come from the "legal" block of config.json. -->
+<section data-doc="privacy" data-title="Privacy Policy">
+<p><b>Effective from:</b> {{effective}}. In short: this page and the app handle as little data as possible. No registration, no profiling, no selling of data.</p>
+
+<h3>1. Who is the data controller?</h3>
+<p><b>{{controller_name}}</b><br>Address: {{controller_address}}<span data-opt="controller_tax"><br>Tax / registration number: {{controller_tax}}</span><br>
+Contact: through the “Talk to the author” form on this page<span data-opt="contact_email">, or by e-mail: {{contact_email}}</span>. Appointing a data protection officer is not mandatory, so there is none.</p>
+
+<h3>2. What data, why, on what legal basis and for how long?</h3>
+<table>
+<tr><th>When</th><th>What data</th><th>Purpose</th><th>Legal basis</th><th>How long</th></tr>
+<tr><td><b>Release news (newsletter)</b></td><td>e-mail address, chosen language and platform, time of subscription and confirmation, version of the consent text you accepted</td><td>notifying you about new versions of the app – nothing else</td><td>consent – GDPR Art. 6(1)(a)</td><td>until you unsubscribe; then the data is <b>erased immediately and completely</b>. Unconfirmed subscriptions are erased after 7 days.</td></tr>
+<tr><td><b>Message to the author</b></td><td>name, message, and your e-mail address if you give one</td><td>answering you, fixing bugs, improving the app</td><td>legitimate interest – GDPR Art. 6(1)(f); for publishing a recommendation, your separate consent – Art. 6(1)(a)</td><td>for up to 2 years, or until you ask for erasure</td></tr>
+<tr><td><b>Download counter</b></td><td>platform, version, language, date and a technical fingerprint that changes daily and cannot be reversed. <b>No IP address is stored.</b></td><td>an honest download count (one visitor counts once a day)</td><td>legitimate interest – GDPR Art. 6(1)(f)</td><td>the fingerprint is erased within 48 hours; only an anonymous count remains</td></tr>
+<tr><td><b>Server log</b></td><td>IP address, time, requested address, browser type</td><td>operational security, investigating abuse</td><td>legitimate interest – GDPR Art. 6(1)(f)</td><td>as set by the hosting provider, typically up to 30 days</td></tr>
+</table>
+<p>Subscription is <b>double opt-in</b>: you are only added once you confirm through the e-mail you receive. Every message ends with an unsubscribe link.</p>
+
+<h3>3. Cookies and similar techniques</h3>
+<p data-if-no-google>This page uses <b>no cookies</b>, contains no tracking code and loads nothing from third parties (even the font is served from here). Only your chosen language is kept in your browser's local storage – it never leaves your device.</p>
+<div data-if-google>
+<p>The page works fully without cookies. Your chosen language and your cookie decision are kept in your browser's local storage.</p>
+<p><b>Google measurement – only with your consent.</b> If you allow it in the cookie notice, Google Analytics (and, if you separately allow it, Google Ads conversion measurement) sets cookies and sends visit data (shortened IP address, device and browser data, sections viewed, download clicks) to Google. Until you decide, or if you reject, <b>no Google code is loaded at all</b> (Consent Mode v2, default: denied). Legal basis: consent – GDPR Art. 6(1)(a). You can change your decision at any time under “Cookie settings” in the footer. Processor: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Ireland); transfers to the United States rely on the EU–US Data Privacy Framework. Measurement data is retained for up to 14 months.</p>
+</div>
+
+<h3>4. Who has access to the data?</h3>
+<p>Only the controller and, as a processor, the hosting provider: <b>{{hosting_name}}</b> ({{hosting_address}}). The data is stored on a server inside the European Union; the database cannot be reached directly from the web. No data is sold or passed on to third parties<span data-if-google> – except for the consent-based Google measurement described in section 3</span>. There is no automated decision-making or profiling.</p>
+
+<h3>5. The app itself</h3>
+<p>Claude Usage Monitor <b>collects and sends no data</b> to me or to anyone else: it contains no telemetry, analytics or advertising. It talks only to Anthropic's servers for your own usage figures (if you choose that mode) and keeps the sign-in token encrypted on your own computer. A few times a day it fetches the release manifest from this site to see whether a newer version exists – that shows up in the server log described in section 2, and nowhere else.</p>
+
+<h3>6. Your rights</h3>
+<ul>
+<li><b>Access</b> – ask whether data about you is processed, and get a copy.</li>
+<li><b>Rectification, erasure, restriction</b> – ask for your data to be corrected, erased or its processing restricted.</li>
+<li><b>Withdrawing consent</b> – unsubscribe from the newsletter at any time with one click; this does not affect the lawfulness of earlier processing.</li>
+<li><b>Objection</b> – object to processing based on legitimate interest.</li>
+<li><b>Data portability</b> – receive the data processed on the basis of your consent in a machine-readable format.</li>
+</ul>
+<p>Send your request through the form; I answer within one month at the latest, free of charge.</p>
+
+<h3>7. Where can you complain?</h3>
+<p>Please write to me first – I will try to sort it out right away. You may also lodge a complaint with the Hungarian supervisory authority, the <b>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</b> (1055 Budapest, Falk Miksa utca 9–11., Hungary; ugyfelszolgalat@naih.hu; www.naih.hu), with the supervisory authority of your own EU member state, or go to court.</p>
+
+<h3>8. Changes</h3>
+<p>If this policy changes materially, the new version is published here with its effective date. The version of the consent text you accepted when subscribing is recorded.</p>
+</section>
+
+<section data-doc="imprint" data-title="Imprint">
+<h3>Service provider (operator of this page)</h3>
+<p><b>{{controller_name}}</b><br>Address: {{controller_address}}<span data-opt="controller_tax"><br>Tax / registration number: {{controller_tax}}</span><br>
+Contact: through the “Talk to the author” form on this page<span data-opt="contact_email"> · e-mail: {{contact_email}}</span></p>
+<h3>Hosting provider</h3>
+<p><b>{{hosting_name}}</b><br>{{hosting_address}}<span data-opt="hosting_contact"><br>{{hosting_contact}}</span></p>
+<h3>About the app</h3>
+<p>Claude Usage Monitor was designed and developed by <b>Gábor Vidovics</b>. The app is <b>free</b> and open source (MIT licence); the source code is available on GitHub. It is an unofficial community tool and is not affiliated with Anthropic, PBC. “Claude” is a trademark of Anthropic, PBC; Windows is a trademark of Microsoft, macOS is a trademark of Apple.</p>
+</section>
+
+<section data-doc="terms" data-title="Terms of use">
+<h3>1. Free – really</h3>
+<p>Downloading and using Claude Usage Monitor is <b>free of charge</b>, for private and commercial use alike. There is no trial period, no paid edition and no hidden cost. The app is provided under the MIT licence: you may use, copy, modify and distribute it under the terms of that licence (keeping the copyright notice).</p>
+<h3>2. No warranty</h3>
+<p>The app is provided “as is”, without warranty of any kind, express or implied. The values shown are for information only: they come from Anthropic's systems and from logs on your computer, and may differ from your actual limits. To the fullest extent permitted by law, the author is not liable for damage arising from the use of the app. This does not limit liability for damage caused intentionally or for breaches harming life, physical integrity or health.</p>
+<h3>3. Downloads</h3>
+<p>Official packages come only from this page and from the project's GitHub page. Each package is accompanied by its SHA-256 checksum – it is worth checking. The author takes no responsibility for copies obtained elsewhere.</p>
+<h3>4. Independent tool</h3>
+<p>The app is an unofficial community tool, independent of Anthropic, PBC. Your Claude subscription is governed by Anthropic's own terms. If Anthropic changes its systems, some features of the app may stop working temporarily or permanently.</p>
+<h3>5. Release news</h3>
+<p>Subscribing is voluntary and free; it only sends short notices about new versions. You can cancel at any time with one click. Details are in the Privacy Policy.</p>
+<h3>6. Content of this page</h3>
+<p>The texts, images and design of this page are the copyrighted work of Gábor Vidovics. Screenshots may be used freely in articles and reviews about the app, with the source credited.</p>
+<h3>7. Governing law</h3>
+<p>These terms are governed by Hungarian law. If you are a consumer, the mandatory consumer-protection rules of your country of residence apply regardless.</p>
+</section>

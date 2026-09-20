@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="tr" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – Windows ve macOS için ücretsiz widget</title>
+<meta name="description" content="Windows ve macOS için ücretsiz, açık kaynaklı Claude kullanım limiti widget&#x27;ı: 5 saatlik oturum, haftalık limit, sıfırlanma geri sayımı ve uyarılar.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dinorr.hu/claude-usage-monitor/tr/">
+<link rel="alternate" hreflang="en" href="https://dinorr.hu/claude-usage-monitor/">
+<link rel="alternate" hreflang="hu" href="https://dinorr.hu/claude-usage-monitor/hu/">
+<link rel="alternate" hreflang="de" href="https://dinorr.hu/claude-usage-monitor/de/">
+<link rel="alternate" hreflang="fr" href="https://dinorr.hu/claude-usage-monitor/fr/">
+<link rel="alternate" hreflang="es" href="https://dinorr.hu/claude-usage-monitor/es/">
+<link rel="alternate" hreflang="it" href="https://dinorr.hu/claude-usage-monitor/it/">
+<link rel="alternate" hreflang="pt" href="https://dinorr.hu/claude-usage-monitor/pt/">
+<link rel="alternate" hreflang="pl" href="https://dinorr.hu/claude-usage-monitor/pl/">
+<link rel="alternate" hreflang="nl" href="https://dinorr.hu/claude-usage-monitor/nl/">
+<link rel="alternate" hreflang="ru" href="https://dinorr.hu/claude-usage-monitor/ru/">
+<link rel="alternate" hreflang="cs" href="https://dinorr.hu/claude-usage-monitor/cs/">
+<link rel="alternate" hreflang="tr" href="https://dinorr.hu/claude-usage-monitor/tr/">
+<link rel="alternate" hreflang="x-default" href="https://dinorr.hu/claude-usage-monitor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – Windows ve macOS için ücretsiz Claude widget&#x27;ı">
+<meta property="og:description" content="Claude 5 saatlik oturumunu, haftalık limitini ve temponu tek bakışta gör – telefonunun ve tarayıcının harcadığı dahil. Her zaman üstte, açık kaynak. %100 ücretsiz.">
+<meta property="og:url" content="https://dinorr.hu/claude-usage-monitor/tr/">
+<meta property="og:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – Windows ve macOS için ücretsiz Claude widget&#x27;ı">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – Windows ve macOS için ücretsiz Claude widget&#x27;ı">
+<meta name="twitter:description" content="Claude 5 saatlik oturumunu, haftalık limitini ve temponu tek bakışta gör – telefonunun ve tarayıcının harcadığı dahil. Her zaman üstte, açık kaynak. %100 ücretsiz.">
+<meta name="twitter:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dinorr.hu/claude-usage-monitor/#site","name":"Claude Usage Monitor","url":"https://dinorr.hu/claude-usage-monitor/","inLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"],"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"WebPage","@id":"https://dinorr.hu/claude-usage-monitor/tr/#page","url":"https://dinorr.hu/claude-usage-monitor/tr/","name":"Claude Usage Monitor – Windows ve macOS için ücretsiz widget","description":"Windows ve macOS için ücretsiz, açık kaynaklı Claude kullanım limiti widget'ı: 5 saatlik oturum, haftalık limit, sıfırlanma geri sayımı ve uyarılar.","inLanguage":"tr","isPartOf":{"@id":"https://dinorr.hu/claude-usage-monitor/#site"},"about":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"mainEntity":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"primaryImageOfPage":"https://dinorr.hu/claude-usage-monitor/img/og.png","dateModified":"2026-09-20","author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"SoftwareApplication","@id":"https://dinorr.hu/claude-usage-monitor/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor, bir Claude abonesinin kullanım limitlerini gerçek zamanlı gösteren, Windows 10/11 ve macOS için ücretsiz ve açık kaynaklı bir masaüstü widget'ıdır: 5 saatlik oturum, haftalık limit ve model bazında haftalık limit; her sıfırlanmaya geri sayım, tempo, harcama hızı ve uyarılarla birlikte. claude.ai, Claude Desktop ve Claude Code'u tüm cihazlarda kapsar ve terminal gerektirmez.","url":"https://dinorr.hu/claude-usage-monitor/tr/","inLanguage":"tr","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.6.0","dateModified":"2026-09-18T14:27:09Z","downloadUrl":"https://dinorr.hu/cum-api/dl.php?os=win","installUrl":"https://dinorr.hu/claude-usage-monitor/tr/#download","fileSize":"46 MB","releaseNotes":"https://dinorr.hu/claude-usage-monitor/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"image":"https://dinorr.hu/claude-usage-monitor/img/og.png","screenshot":["https://dinorr.hu/claude-usage-monitor/img/panel-full-midnight.png","https://dinorr.hu/claude-usage-monitor/img/ring-neon.png","https://dinorr.hu/claude-usage-monitor/img/compact-claude.png"],"featureList":["Geldiğini önceden gör","Fazla mı hızlı harcıyorsun?","Tüm cihazların, tek rakam","Model bazında limitler","Sadece önemli uyarılar","Gözetlemez. Nokta."],"availableLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"]},{"@type":"Person","@id":"https://dinorr.hu/claude-usage-monitor/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://dinorr.hu/claude-usage-monitor/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://dinorr.hu/claude-usage-monitor/tr/#faq","inLanguage":"tr","mainEntity":[{"@type":"Question","name":"Gerçekten ücretsiz mi? İşin içinde ne var?","acceptedAnswer":{"@type":"Answer","text":"Gerçekten ücretsiz ve işin içinde hiçbir şey yok. Demo değil, deneme sürümü değil, kırpılmış bir sürüm de değil – bu, tam ve tek sürüm. Reklam yok, ücretli paket yok, veri toplama yok. Kaynak kodu MIT lisansıyla herkese açık."}},{"@type":"Question","name":"Bu resmî bir Anthropic ürünü mü?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Gábor Vidovics tarafından geliştirilen bağımsız bir topluluk aracıdır. Anthropic ile hiçbir bağlantısı yoktur. “Claude”, Anthropic, PBC'nin ticari markasıdır."}},{"@type":"Question","name":"Şifremi vermem gerekiyor mu?","acceptedAnswer":{"@type":"Answer","text":"Asla. Giriş yapmadan Claude Desktop'ın yerel günlüğünü okur. Tüm cihazlarını görmek istersen claude.ai'ye kendi tarayıcından giriş yaparsın – uygulama şifreni hiçbir zaman görmez."}},{"@type":"Question","name":"Çalıştırınca Windows beni uyarıyor. Neden?","acceptedAnswer":{"@type":"Answer","text":"Çünkü uygulamanın kod imzası yok (sertifikalar paralı, uygulama ise ücretsiz). Ek bilgi → Yine de çalıştır'a tıkla. İndirdiğin dosyayı SHA-256 sağlama toplamıyla doğrulayabilir, kaynak kodunu GitHub'da okuyabilirsin."}},{"@type":"Question","name":"Hangi Mac'ler destekleniyor?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 veya daha yenisi. Yukarıdaki indirme kartı, güncel derlemenin hangi işlemci için olduğunu her zaman gösterir. macOS sürümü yeni – geri bildirimin çok değerli."}},{"@type":"Question","name":"Güncellemeler nasıl işliyor?","acceptedAnswer":{"@type":"Answer","text":"Uygulama günde birkaç kez bu siteyi kontrol eder. Yeni sürüm çıkınca sana haber verir; tek tıkla indirir, doğrular, kurar ve yeniden başlar. İstersen bunu kapatabilirsin."}},{"@type":"Question","name":"Nasıl kaldırırım?","acceptedAnswer":{"@type":"Answer","text":"Windows: Ayarlar → Uygulamalar → Yüklü uygulamalar → Claude Usage Monitor → Kaldır. macOS: uygulamayı Çöp Sepeti'ne sürükle. Hepsi bu."}},{"@type":"Question","name":"Ayarlar'ı açmadan Claude kullanımımı nasıl kontrol ederim?","acceptedAnswer":{"@type":"Answer","text":"Claude Usage Monitor'ü kur: 5 saatlik oturumunu, haftalık limitini ve model bazında haftalık limitini sürekli ekranda tutar – her zaman üstte duran küçük bir widget ve sistem tepsisinde ya da menü çubuğunda bir yüzde olarak. Claude'un kendi rakamları “Settings → Usage” (Ayarlar → Kullanım) altında durur; widget aynı limitleri hiç tıklamadan gösterir."}},{"@type":"Question","name":"Claude 5 saatlik oturum ve haftalık limit ne zaman sıfırlanır?","acceptedAnswer":{"@type":"Answer","text":"Oturuma dayalı limit her beş saatte bir sıfırlanır. Haftalık limit, Anthropic'in hesabına atadığı sabit bir saatte her hafta sıfırlanır; bu yüzden kişiden kişiye değişir. Widget her iki sıfırlanmaya da canlı geri sayım gösterir – claude.ai girişiyle Anthropic'in sunucusundaki kesin saatleri kullanır."}},{"@type":"Question","name":"Claude Code kullanımı claude.ai limitime sayılıyor mu?","acceptedAnswer":{"@type":"Answer","text":"Evet. Anthropic'e göre claude.ai, Claude Desktop ve Claude Code kullanımı aynı kullanım limitine sayılır. Bu yüzden widget'ın claude.ai modu, yalnızca çalıştığı bilgisayar için değil, tüm cihazların ve uygulamaların için tek bir rakam gösterir."}},{"@type":"Question","name":"Bu, “Claude Code Usage Monitor” ile aynı şey mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır. “Claude Code Usage Monitor”, başka bir geliştiricinin terminal tabanlı, ayrı bir aracıdır. Gábor Vidovics'in Claude Usage Monitor'ü ise Windows ve macOS için grafik bir masaüstü widget'ıdır; tepsi simgesi, temaları ve uyarıları vardır, komut satırı gerektirmez."}}]},{"@type":"DefinedTermSet","@id":"https://dinorr.hu/claude-usage-monitor/tr/#glossary","name":"Temel terimler, net tanımlarıyla","inLanguage":"tr","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Beş saatlik oturum (5 saatlik pencere)","description":"Claude'un kısa vadeli kullanım limiti. Oturuma dayalı limitin her beş saatte bir sıfırlanır. Anthropic buna “current session” (mevcut oturum) der; birçok kullanıcı ise 5 saatlik pencere veya 5 saatlik limit der.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Haftalık limit","description":"Ücretli Claude planlarındaki ikinci sınır. Tüm modeller için birlikte geçerlidir ve her hafta, hesabına atanmış sabit bir saatte sıfırlanır. Haftalık limitler 28 Ağustos 2025'ten beri yürürlüktedir.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Model bazında haftalık limit","description":"Tek bir model için ayrı bir haftalık sınır. Claude'un kullanım sayfasında, diğer tüm modellerin limitinin yanında listelenir. Widget bunu, seçtiğin model için üçüncü bir gösterge olarak gösterir.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Sıfırlanma (reset)","description":"Bir limitin yeniden %0'a döndüğü an. Widget bu ana geri sayım yapar. claude.ai girişiyle kesin saat Anthropic'in sunucusundan gelir; yerel günlükle bu bir tahmindir.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Tempo","description":"Dengeli harcanan bir haftaya göre ne kadar önde ya da geride olduğun. “Tempoya göre +%12”, haftalık limitinin kullandığın payının, haftanın geçen payından 12 yüzde puanı fazla olduğu anlamına gelir.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Harcama hızı (burn rate)","description":"Bir limitin şu anda ne kadar hızlı dolduğu – oturum için saatte yüzde, hafta için günde yüzde – ve bu hızla ne zaman %100'e ulaşacağı.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"},{"@type":"DefinedTerm","name":"Kullanım kredileri (ek kullanım)","description":"Planının limitlerine ulaştıktan sonra, kullandığın kadar ödediğin isteğe bağlı kullanım; aylık bir harcama sınırı vardır. Widget bunun açık olup olmadığını, sınırı ve ne kadar harcadığını gösterir.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/tr/#glossary"}]}]}</script>
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=5">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">İçeriğe geç</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Özellikler</a>
+      <a href="#themes" data-i18n="nav.themes">Temalar</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Yenilikler</a>
+      <a href="#faq" data-i18n="nav.faq">SSS</a>
+      <a href="#feedback" data-i18n="nav.feedback">Geri bildirim</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">TR</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="es" lang="es" href="../es/" data-lang="es">Español <span>es</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="pt" lang="pt" href="../pt/" data-lang="pt">Português <span>pt</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" aria-current="page" data-lang="tr">Türkçe <span>tr</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Ücretsiz indir</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">%100 ÜCRETSİZ</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Sürüm</span> <span data-win="version">2.6.0</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – Windows ve macOS için ücretsiz Claude kullanım widget'ı</span> <span data-i18n="hero.h1">Claude limitine bir daha <em>habersiz yakalanma.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">Her zaman üstte duran minik bir widget, Claude kullanımını canlı gösterir: 5 saatlik oturum, haftalık limit ve tempon. Telefonunun harcadığı bile. Windows ve macOS için.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Senin sistemin</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Senin sistemin</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Ücretsiz. Sonsuza kadar.</b> Demo değil. Deneme sürümü değil. Kilitli hiçbir şey yok.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">kez bu sayfadan indirildi</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">Bu bir masaüstü uygulaması – bağlantıyı bilgisayarına gönder</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Claude Usage Monitor widget&#x27;ı: 5 saatlik oturum %47, model bazında haftalık limit %61, haftalık limit %23">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Uygulamanın gerçek ekran görüntüleri, rakamlar ise demo.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">%100 ÜCRETSİZ</span><i>✦</i><span data-i18n="mq.2">DEMO DEĞİL</span><i>✦</i><span data-i18n="mq.3">KİLİTLİ ÖZELLİK YOK</span><i>✦</i><span data-i18n="mq.4">REKLAM YOK</span><i>✦</i><span data-i18n="mq.5">KAYIT YOK</span><i>✦</i><span data-i18n="mq.6">TAKİP YOK</span><i>✦</i><span data-i18n="mq.7">AÇIK KAYNAK</span><i>✦</i><span data-i18n="mq.8">12 DİL</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Sonsuza kadar ücretsiz</b><span data-i18n="trust.1d">Tam sürüm. Ücretli bir paket yok, hiç olmadı.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Açık kaynak</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">MIT lisansı – her satırını GitHub'da oku</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Gizli kalır</b><span data-i18n="trust.3d">Telemetri yok, reklam yok, çerez yok.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Kendini günceller</b><span data-i18n="trust.4d">SHA-256 ile doğrulanır, tek tıkla.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Sıradan bir günlük okuyucudan fazlası</p>
+  <h2 data-i18n="more.h2">Limitini telefonun da yiyor. <em>Artık bunu görüyorsun – hem de masaüstünde.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Birçok kullanım takip aracı bilgisayarındaki günlük dosyalarını okur; bu yüzden yalnızca <b>o tek bilgisayarın</b> ne harcadığını bilir. Claude Usage Monitor ise bunun yerine Anthropic'in sunucusuna sorabilir – ve hesabının tamamını kapsayan gerçek rakamı gösterir: telefon uygulamasında, tarayıcıda, başka bir bilgisayarda ve Claude Code'da kullandığın her şey sayılır; hepsini tek yerde, masaüstünde görürsün.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Telefonundaki Claude uygulaması</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">Tarayıcıda claude.ai</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Diğer bilgisayarın</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code ve Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="Tüm cihazların toplam kullanımını gösteren tek bir Claude Usage Monitor widget&#x27;ı">
+      <figcaption data-i18n="more.sum">Tüm hesabın için tek gerçek rakam – hep gözünün önünde.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Yalnızca yerel günlükleri okuyan araçlar</h3>
+      <ul data-i18n="more.a_li"><li class="no">Telefonda kullandığın – görünmez</li><li class="no">Tarayıcıda kullandığın – görünmez</li><li class="no">Diğer bilgisayarların – görünmez</li><li class="yes">Yalnızca bu tek bilgisayardaki Claude Code</li><li class="no">Sıfırlanma saatleri tahminden ibaret</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">claude.ai kaynağıyla Claude Usage Monitor</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Telefon, tarayıcı, tüm bilgisayarlar – hepsi sayılır</li><li class="yes">Claude Code ve Claude Desktop dahil</li><li class="yes">Claude'un “Settings → Usage” (Ayarlar → Kullanım) altında gösterdiği rakamların aynısı</li><li class="yes">Kesin sıfırlanma saatleri, Anthropic'in sunucusundan</li><li class="yes">Giriş yapmadan da çalışır – yerel günlükten</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Nasıl mı? “claude.ai (tüm cihazlar)” veri kaynağını seç ve kendi tarayıcından bir kez giriş yap – Claude Code'un kullandığı girişin aynısı; uygulama şifreni hiçbir zaman görmez. Giriş yapmazsan widget, Claude Desktop'ın yerel günlüğünü okur; bu da yalnızca bu bilgisayarı kapsar.</p>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Claude Usage Monitor nedir?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor, Claude aboneliğinin kullanım limitlerini gerçek zamanlı gösteren, Windows 10/11 ve macOS için ücretsiz ve açık kaynaklı bir masaüstü widget'ıdır</b> – 5 saatlik oturum, haftalık limit ve model bazında haftalık limit; her biri sıfırlanmaya kalan süreyle birlikte. Diğer pencerelerinin üstünde durur. Böylece Claude kullanımını “Settings → Usage” (Ayarlar → Kullanım) sayfasını açmadan ve terminal kullanmadan kontrol edersin.</p>
+  <p class="about__def" data-i18n="about.p2">Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: claude.ai, Claude Desktop ve Claude Code, tüm cihazlarında. Terminal aracı “Claude Code Usage Monitor” ile aynı şey değildir: bu, tepsi simgesi olan grafik bir paneldir ve komut satırı gerektirmez.</p>
+  <p class="fine about__meta"><span data-i18n="about.updated">Son güncelleme</span>: <time data-win="date">2026-09-18</time> · <span data-i18n="dls.version">Sürüm</span> <span data-win="version">2.6.0</span> · <span data-i18n="about.by">geliştiren:</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Temel terimler, net tanımlarıyla</summary>
+    <dl>
+      <dt data-i18n="gl.1t">Beş saatlik oturum (5 saatlik pencere)</dt>
+      <dd data-i18n="gl.1d">Claude'un kısa vadeli kullanım limiti. Oturuma dayalı limitin her beş saatte bir sıfırlanır. Anthropic buna “current session” (mevcut oturum) der; birçok kullanıcı ise 5 saatlik pencere veya 5 saatlik limit der.</dd>
+      <dt data-i18n="gl.2t">Haftalık limit</dt>
+      <dd data-i18n="gl.2d">Ücretli Claude planlarındaki ikinci sınır. Tüm modeller için birlikte geçerlidir ve her hafta, hesabına atanmış sabit bir saatte sıfırlanır. Haftalık limitler 28 Ağustos 2025'ten beri yürürlüktedir.</dd>
+      <dt data-i18n="gl.3t">Model bazında haftalık limit</dt>
+      <dd data-i18n="gl.3d">Tek bir model için ayrı bir haftalık sınır. Claude'un kullanım sayfasında, diğer tüm modellerin limitinin yanında listelenir. Widget bunu, seçtiğin model için üçüncü bir gösterge olarak gösterir.</dd>
+      <dt data-i18n="gl.4t">Sıfırlanma (reset)</dt>
+      <dd data-i18n="gl.4d">Bir limitin yeniden %0'a döndüğü an. Widget bu ana geri sayım yapar. claude.ai girişiyle kesin saat Anthropic'in sunucusundan gelir; yerel günlükle bu bir tahmindir.</dd>
+      <dt data-i18n="gl.5t">Tempo</dt>
+      <dd data-i18n="gl.5d">Dengeli harcanan bir haftaya göre ne kadar önde ya da geride olduğun. “Tempoya göre +%12”, haftalık limitinin kullandığın payının, haftanın geçen payından 12 yüzde puanı fazla olduğu anlamına gelir.</dd>
+      <dt data-i18n="gl.6t">Harcama hızı (burn rate)</dt>
+      <dd data-i18n="gl.6d">Bir limitin şu anda ne kadar hızlı dolduğu – oturum için saatte yüzde, hafta için günde yüzde – ve bu hızla ne zaman %100'e ulaşacağı.</dd>
+      <dt data-i18n="gl.7t">Kullanım kredileri (ek kullanım)</dt>
+      <dd data-i18n="gl.7d">Planının limitlerine ulaştıktan sonra, kullandığın kadar ödediğin isteğe bağlı kullanım; aylık bir harcama sınırı vardır. Widget bunun açık olup olmadığını, sınırı ve ne kadar harcadığını gösterir.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Neler sunuyor</p>
+  <h2 data-i18n="feat.h2">Tüm Claude kullanım limitlerin. Tek bakışta.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Geldiğini önceden gör</h3>
+        <p data-i18n="feat.1d">Yeşil, sarı, kırmızı. Panel, limitin bitmeden çok önce renk değiştirir – sıfırlanmaya geri sayım ve %100'e ne zaman ulaşacağının tahminiyle birlikte.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Claude kullanımı %78 – widget sarıya döner"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Claude kullanımı %94 – widget kırmızıya döner"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Fazla mı hızlı harcıyorsun?</h3>
+      <p data-i18n="feat.2d">Tempo göstergesi, haftalık limitinin haftanın kendisinden hızlı eriyip erimediğini söyler – ve haftanın sonunda nerede olacağını öngörür.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Tüm cihazların, tek rakam</h3>
+      <p data-i18n="feat.3d">Kendi tarayıcından giriş yap – tıpkı Claude Code gibi – ve telefonundaki, tarayıcındaki ve diğer tüm bilgisayarlarındaki kullanımı da gör.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Model bazında limitler</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, ek kullanım – sunucunun bildirdiği her limit, üstüne bu haftanın modellere göre dağılımı.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Sadece önemli uyarılar</h3>
+      <p data-i18n="feat.5d">%70 ve %90'da (eşikleri sen seçersin) ve limitin sıfırlandığında sessiz bir bildirim. Başka hiçbir şey yok. Asla.</p>
+    </article>
+    <article class="cell cell--wide reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Gözetlemez. Nokta.</h3>
+      <p data-i18n="feat.6d">Telemetri yok, analitik yok, bizde hesap açmak yok. Yalnızca Anthropic ile, yalnızca senin rakamların için konuşur. Giriş token'ın bilgisayarında şifreli olarak kalır – Windows DPAPI veya macOS Anahtar Zinciri ile.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Evet, gerçekten ücretsiz.</h2>
+      <p data-i18n="band1.p">Deneme süresi yok. “Pro”ya yükselt baskısı yok. Gizli bir şart yok. İndir, senin olsun.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Sadece merak ediyorsan</p>
+  <h2 data-i18n="tabs.h2">Ayrıntılar – istediğin zaman burada.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Neleri gösterir</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Veriler nereden gelir</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Gizlilik ve güvenlik</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Kontroller</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Ayarlar</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Karşılaştırma</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5 saatlik oturum</b> – güncel %, sıfırlanmaya geri sayım, harcama hızı (%/saat) ve ne zaman dolacağı.</li><li><b>Haftalık limit</b> – güncel %, haftalık sıfırlanmaya kalan süre, günlük hız ve dengeli bir haftaya kıyasla tempon.</li><li><b>Model bazında haftalık limit</b> – takip ettiğin model için üçüncü bir gösterge (varsayılan: Fable).</li><li><b>Plan rozeti</b> – PRO, MAX 5×, MAX 20×, TEAM veya ENTERPRISE.</li><li><b>Geçmiş penceresi</b> – 6 saat / 24 saat / 7 günlük grafikler, haftalık zirve, günlük ortalama ve hafta bitimi tahmini.</li><li><b>Sistem tepsisi / menü çubuğu simgesi</b> – seçtiğin yüzde bir halka olarak, ayrıntılar imleci üzerine getirince.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Yerel günlük <span class="chip">varsayılan · giriş gerekmez</span></h4><p>Claude Desktop'ın bilgisayarına zaten yazdığı kullanım günlüğünü okur. Hiçbir yere hiçbir şey gönderilmez. Yalnızca bu bilgisayarı ölçer, yaklaşık 5 dakikada bir yenilenir.</p></div><div><h4>2 · claude.ai <span class="chip">tüm cihazlar</span></h4><p>Claude Code'un kullandığı tarayıcı girişinin aynısı – gömülü tarayıcı yok, uygulamaya şifre yazmak yok. Sıfırlanma saatleri doğrudan sunucudan, yaklaşık 2 dakikada bir yenilenir.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Telemetri yok.</b> Uygulamada analitik yok ve hiçbir yere veri göndermez – yalnızca yeni sürüm var mı diye bu siteyi kontrol eder.</li><li><b>Token'ın sende kalır.</b> Windows DPAPI ile şifrelenir ya da macOS Anahtar Zinciri'nde saklanır. Asla düz bir dosyada durmaz.</li><li><b>Sohbetlerin asla okunmaz.</b> Yerel günlüklerden yalnızca model adı, token sayıları ve zaman damgaları kullanılır.</li><li><b>Doğrulanmış güncellemeler.</b> Yalnızca HTTPS; her indirme kurulmadan önce SHA-256 değeriyle karşılaştırılır, hata olursa eski sürüm geri gelir.</li><li><b>Açık kaynak.</b> Güvenme – doğrula: kaynak kodun tamamı MIT lisansıyla GitHub'da.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Sürükle</th><td>paneli taşı (ekran kenarlarına yapışır)</td></tr><tr><th>Sağ tık</th><td>menü: yerleşim, tema, boyut, dil, ayarlar</td></tr><tr><th>Çift tık</th><td>geçmiş ve istatistik penceresi</td></tr><tr><th>Ctrl + kaydırma</th><td>yeniden boyutlandır</td></tr><tr><th>Tepsi simgesine tık</th><td>paneli gizle / göster</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Görünüm</b> – 6 tema, özel vurgu rengi, 3 yerleşim, boyut, saydamlık, her zaman üstte, konumu kilitle, tıklamaları arkaya geçir.</li><li><b>İçerik</b> – hangi göstergeler, sıraları ve boyutları, eğilim eğrisi, harcama hızı, geri sayım.</li><li><b>Uyarılar</b> – uyarı ve tehlike eşikleri (varsayılan %70 / %90), sıfırlanma ve eskimiş veri bildirimleri.</li><li><b>Sistem</b> – bilgisayarla birlikte başlat, otomatik güncellemeler, 12 dil.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claude'un kendi “Settings → Usage” sayfası</th><th>Claude Code günlüklerini okuyan terminal araçları</th></tr><tr><th>Çalışırken hep göz önünde</th><td>Evet – her zaman üstte duran widget ve tepsi simgesi</td><td>Hayır – açman gerekir</td><td>Yalnızca açık bir terminalde</td></tr><tr><th>Windows ve macOS</th><td>Evet, ikisi için tek uygulama</td><td>Evet (web sayfası)</td><td>Değişir, komut satırı</td></tr><tr><th>Terminal gerektirir</th><td>Hayır</td><td>Hayır</td><td>Evet</td></tr><tr><th>claude.ai, Claude Desktop ve Claude Code'u tüm cihazlarda sayar</th><td>Evet, claude.ai girişiyle</td><td>Evet</td><td>Hayır – yalnızca bu bilgisayardaki Claude Code</td></tr><tr><th>Tempo, harcama hızı ve hafta bitimi tahmini</th><td>Evet</td><td>Hayır</td><td>Bazılarında</td></tr><tr><th>Kendi eşiklerinde uyarılar</th><td>Evet (varsayılan %70 / %90)</td><td>Hayır</td><td>Nadiren</td></tr><tr><th>Fiyat</th><td>Ücretsiz, açık kaynak (MIT)</td><td>Planına dahil</td><td>Çoğunlukla ücretsiz</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Kendine göre ayarla</p>
+    <h2 data-i18n="th.h2">6 tema. 3 yerleşim. Hemen burada dene.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Seçilen tema ve yerleşimde Claude Usage Monitor">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Tema</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Gece yarısı camı</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude sıcak koyu</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Grafit</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neon</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Açık kâğıt</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Post-it sarısı</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Serin bir parıltıyla koyu mavi cam. Varsayılan tema – sakin, okunaklı, her koyu masaüstüne yakışır.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Yerleşim</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Kart</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Halkalar</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">İnce çubuk</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">Üstüne kendi vurgu rengin, %70'ten %200'e boyut ve saydamlık.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Fiyat</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Ücretsiz. Tamamı. Sonsuza kadar.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Tam sürüm – zaten başka sürümü yok</li><li>Demo yok, deneme yok, süre sınırı yok</li><li>“Pro” paketi yok, kilitli özellik yok</li><li>Reklam yok, kayıt yok, veri toplama yok</li><li>Ücretsiz güncellemeler, otomatik olarak</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">İndir</p>
+    <h2 data-i18n="dls.h2">Her zaman en güncel sürüm. Her zaman ücretsiz.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">ÜCRETSİZ</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Windows için indir</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Sürüm</span> <b data-win="version">2.6.0</b> · <span data-win="size">46 MB</span> · <span data-win="date">2026-09-18</span></p>
+        <details><summary data-i18n="dls.how">Nasıl kurulur (3 adım)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Zip dosyasının tamamını çıkar</b> (sağ tık → Tümünü Ayıkla…).</li><li><code>INSTALL.bat</code> dosyasına çift tıkla.</li><li>İki soruyu yanıtla – Enter önerilen yanıtı kabul eder. Hepsi bu.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Yönetici hakları gerekmez. Windows “Windows kişisel bilgisayarınızı korudu” uyarısını gösterirse: Ek bilgi → Yine de çalıştır. Uygulama açık kaynaklıdır ama kod imzası yoktur.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">İndirmeyi doğrula (SHA-256)</summary><code class="sha" data-win="sha">aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">ÜCRETSİZ</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">macOS için indir</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Sürüm</span> <b data-mac="version">2.6.0</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-18</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">macOS sürümü yolda – yakında tekrar uğra.</p>
+        <details><summary data-i18n="dls.how">Nasıl kurulur (3 adım)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Zip dosyasını aç ve <b>ClaudeUsageMonitor</b> uygulamasını <b>Uygulamalar</b> klasörüne sürükle.</li><li>İlk açılış: <b>sağ tık → Aç</b> (uygulama Apple tarafından onaylanmamıştır).</li><li>Menü çubuğundaki simgeyi bul. Hepsi bu.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">İndirmeyi doğrula (SHA-256)</summary><code class="sha" data-mac="sha">371c224acf6f4f22fdb3cd7da43544f7789a6a061f7f7a14b136a58f7cf4ffe6</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">kez bu sayfadan indirildi</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Bu düğmeler her zaman en yeni sürüme götürür – kurduktan sonra da uygulama kendini güncel tutar.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Aktif olarak geliştiriliyor</p>
+  <h2><span data-i18n="new.h2">Yenilikler: sürüm</span> <span class="grad" data-win="version">2.6.0</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Sürüm notları İngilizce ve Macarca yazılır.</p>
+  <ul class="notes" id="notes"><li>New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.</li><li>The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.</li><li>For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.</li><li>A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Önceki sürümler</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Yeni sürüm çıkınca e-posta al</h3>
+      <p data-i18n="sub.p">Yalnızca sürüm haberleri – her sürüm için birkaç kısa satır. Pazarlama yok, asla. Tek tıkla abonelikten çıkarsın.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Bana haber ver</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">E-posta adresimin, <a href="#privacy" data-legal="privacy">Gizlilik Politikası</a>'nda açıklandığı şekilde bana sürüm bildirimleri göndermek için kullanılmasını kabul ediyorum. Bu onayı istediğim zaman geri çekebilirim.</span></label>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Kimler için</p>
+    <h2 data-i18n="who.h2">Bunlardan biri sensen, seveceksin.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Claude Code geliştiricileri</b><span data-i18n="who.1d">Uzun ajan görevleri 5 saatlik oturumu hızla tüketir. İşin ortasında durdurulmadan önce gör.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pro ve Max aboneleri</b><span data-i18n="who.2d">Parasını ödediğin şeyden en iyi şekilde yararlan – perşembe günü duvara toslamadan.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Birçok cihaz kullananlar</b><span data-i18n="who.3d">Telefon, tarayıcı, dizüstü, masaüstü: hepsi için tek ve dürüst bir rakam.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Derli toplu masaüstü sevenler</b><span data-i18n="who.4d">Ayak altında dolaşmayan küçük, şık bir panel – istersen ince bir çubuğa dönüşür.</span></div>
+    </div>
+
+    <div id="testimonials" class="quotes" hidden></div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">“Bunu kendim için yaptım, çünkü işin tam ortasında sürekli limite takılıyordum. Sonra bütün gün bakmaktan keyif alacağım hâle gelene kadar üzerinde uğraştım. Ücretsiz, çünkü böyle bir araç ücretsiz olmalı – kullan, tadını çıkar ve ne düşündüğünü bana yaz.”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">Claude Usage Monitor'ün yaratıcısı ve geliştiricisi · Macaristan</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Kaynak kodu GitHub'da</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Bana yaz</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Claude kullanım limitleri hakkında sorular – kısa cevaplar.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Gerçekten ücretsiz mi? İşin içinde ne var?</summary><p data-i18n="faq.a1">Gerçekten ücretsiz ve işin içinde hiçbir şey yok. Demo değil, deneme sürümü değil, kırpılmış bir sürüm de değil – bu, tam ve tek sürüm. Reklam yok, ücretli paket yok, veri toplama yok. Kaynak kodu MIT lisansıyla herkese açık.</p></details>
+    <details><summary data-i18n="faq.q8">Ayarlar'ı açmadan Claude kullanımımı nasıl kontrol ederim?</summary><p data-i18n="faq.a8">Claude Usage Monitor'ü kur: 5 saatlik oturumunu, haftalık limitini ve model bazında haftalık limitini sürekli ekranda tutar – her zaman üstte duran küçük bir widget ve sistem tepsisinde ya da menü çubuğunda bir yüzde olarak. Claude'un kendi rakamları “Settings → Usage” (Ayarlar → Kullanım) altında durur; widget aynı limitleri hiç tıklamadan gösterir.</p></details>
+    <details><summary data-i18n="faq.q9">Claude 5 saatlik oturum ve haftalık limit ne zaman sıfırlanır?</summary><p data-i18n="faq.a9">Oturuma dayalı limit her beş saatte bir sıfırlanır. Haftalık limit, Anthropic'in hesabına atadığı sabit bir saatte her hafta sıfırlanır; bu yüzden kişiden kişiye değişir. Widget her iki sıfırlanmaya da canlı geri sayım gösterir – claude.ai girişiyle Anthropic'in sunucusundaki kesin saatleri kullanır.</p></details>
+    <details><summary data-i18n="faq.q10">Claude Code kullanımı claude.ai limitime sayılıyor mu?</summary><p data-i18n="faq.a10">Evet. Anthropic'e göre claude.ai, Claude Desktop ve Claude Code kullanımı aynı kullanım limitine sayılır. Bu yüzden widget'ın claude.ai modu, yalnızca çalıştığı bilgisayar için değil, tüm cihazların ve uygulamaların için tek bir rakam gösterir.</p></details>
+    <details><summary data-i18n="faq.q11">Bu, “Claude Code Usage Monitor” ile aynı şey mi?</summary><p data-i18n="faq.a11">Hayır. “Claude Code Usage Monitor”, başka bir geliştiricinin terminal tabanlı, ayrı bir aracıdır. Gábor Vidovics'in Claude Usage Monitor'ü ise Windows ve macOS için grafik bir masaüstü widget'ıdır; tepsi simgesi, temaları ve uyarıları vardır, komut satırı gerektirmez.</p></details>
+    <details><summary data-i18n="faq.q2">Bu resmî bir Anthropic ürünü mü?</summary><p data-i18n="faq.a2">Hayır. Gábor Vidovics tarafından geliştirilen bağımsız bir topluluk aracıdır. Anthropic ile hiçbir bağlantısı yoktur. “Claude”, Anthropic, PBC'nin ticari markasıdır.</p></details>
+    <details><summary data-i18n="faq.q3">Şifremi vermem gerekiyor mu?</summary><p data-i18n="faq.a3">Asla. Giriş yapmadan Claude Desktop'ın yerel günlüğünü okur. Tüm cihazlarını görmek istersen claude.ai'ye kendi tarayıcından giriş yaparsın – uygulama şifreni hiçbir zaman görmez.</p></details>
+    <details><summary data-i18n="faq.q4">Çalıştırınca Windows beni uyarıyor. Neden?</summary><p data-i18n="faq.a4">Çünkü uygulamanın kod imzası yok (sertifikalar paralı, uygulama ise ücretsiz). Ek bilgi → Yine de çalıştır'a tıkla. İndirdiğin dosyayı SHA-256 sağlama toplamıyla doğrulayabilir, kaynak kodunu GitHub'da okuyabilirsin.</p></details>
+    <details><summary data-i18n="faq.q5">Hangi Mac'ler destekleniyor?</summary><p data-i18n="faq.a5">macOS 12 veya daha yenisi. Yukarıdaki indirme kartı, güncel derlemenin hangi işlemci için olduğunu her zaman gösterir. macOS sürümü yeni – geri bildirimin çok değerli.</p></details>
+    <details><summary data-i18n="faq.q6">Güncellemeler nasıl işliyor?</summary><p data-i18n="faq.a6">Uygulama günde birkaç kez bu siteyi kontrol eder. Yeni sürüm çıkınca sana haber verir; tek tıkla indirir, doğrular, kurar ve yeniden başlar. İstersen bunu kapatabilirsin.</p></details>
+    <details><summary data-i18n="faq.q7">Nasıl kaldırırım?</summary><p data-i18n="faq.a7">Windows: Ayarlar → Uygulamalar → Yüklü uygulamalar → Claude Usage Monitor → Kaldır. macOS: uygulamayı Çöp Sepeti'ne sürükle. Hepsi bu.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Geliştiriciyle konuş</p>
+      <h2 data-i18n="fb.h2">Fikir mi? Hata mı? Sadece beğendin mi? Bana yaz.</h2>
+      <p data-i18n="fb.p">Mesajın doğrudan bana, Gábor Vidovics'e ulaşır. Hepsini okuyorum. E-posta adresini yalnızca yanıt istiyorsan bırak.</p>
+      <p class="fine" data-i18n="fb.privacy">Mesajın yalnızca sana yanıt vermek ve uygulamayı geliştirmek için kullanılır – ayrıntılar <a href="#privacy" data-legal="privacy">Gizlilik Politikası</a>'nda.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Ad</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-posta</span> <i data-i18n="fb.optional">(isteğe bağlı)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">Konu ne?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Geri bildirim</option>
+          <option value="idea" data-i18n="fb.t_idea">Fikir / özellik isteği</option>
+          <option value="bug" data-i18n="fb.t_bug">Hata bildirimi</option>
+          <option value="recommend" data-i18n="fb.t_rec">Tavsiye ediyorum! (kullanıcı yorumu)</option>
+          <option value="other" data-i18n="fb.t_other">Başka bir şey</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Mesaj</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Mesajım bu sayfada tavsiye olarak yayımlanabilir (yalnızca adımla).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Mesajı gönder</span></button>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">İki dakika sonra tam olarak nerede durduğunu bileceksin.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ücretsiz indir:</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Ücretsiz. Sonsuza kadar.</b> Demo değil. Deneme sürümü değil. Kilitli hiçbir şey yok.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.6.0</span></p>
+      <p><span data-i18n="foot.made">Tasarım ve geliştirme:</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Resmî olmayan bir topluluk aracıdır, Anthropic ile bağlantısı yoktur. “Claude”, Anthropic, PBC'nin ticari markasıdır.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">MIT lisansı</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">Değişiklik günlüğü</a>
+      <a href="#feedback" data-i18n="foot.contact">İletişim</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Gizlilik Politikası</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Künye</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Kullanım Koşulları</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Çerez ayarları</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Bu sayfa çerez ve izleyici kullanmaz, üçüncü taraflardan hiçbir şey yüklemez.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Kapat">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">Hukuki metinler Macarca ve İngilizce olarak sunulur. Macarca sürüm esas alınır.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Evet, aboneliğimi iptal et</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Kapat</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Çerezler – karar senin</h2>
+  <p data-i18n="ck.p">Sayfa çerezler olmadan da eksiksiz çalışır. İzin verirsen Google ölçümü, geliştiricinin sayfayı kaç kişinin ziyaret ettiğini görmesine yardımcı olur. Sen onay verene kadar hiçbir şey yüklenmez.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Zorunlu – dilini ve bu tercihini hatırlamak (çerez yok, yalnızca yerel depolama)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">İstatistik – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Pazarlama – Google Ads dönüşüm ölçümü</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Reddet</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Ayarlar</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Seçimimi kaydet</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Tümünü kabul et</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Gizlilik Politikası</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">%100 ÜCRETSİZ</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Bağlantıyı bilgisayarıma gönder</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script src="../assets/site.js?v=4" defer></script>
+</body>
+</html>

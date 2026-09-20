@@ -1,0 +1,86 @@
+# Claude Usage Monitor
+
+> Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.
+
+- Current version: 2.6.0 (released 2026-09-18)
+- Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
+- Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
+- Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.
+- Interface languages: English, Magyar, Deutsch, Français, Español, Italiano, Português, Polski, Nederlands, Русский, Čeština, Türkçe.
+
+## Pages
+
+- [English](https://dinorr.hu/claude-usage-monitor/): the page in English
+- [Magyar](https://dinorr.hu/claude-usage-monitor/hu/): the page in Magyar
+- [Deutsch](https://dinorr.hu/claude-usage-monitor/de/): the page in Deutsch
+- [Français](https://dinorr.hu/claude-usage-monitor/fr/): the page in Français
+- [Español](https://dinorr.hu/claude-usage-monitor/es/): the page in Español
+- [Italiano](https://dinorr.hu/claude-usage-monitor/it/): the page in Italiano
+- [Português](https://dinorr.hu/claude-usage-monitor/pt/): the page in Português
+- [Polski](https://dinorr.hu/claude-usage-monitor/pl/): the page in Polski
+- [Nederlands](https://dinorr.hu/claude-usage-monitor/nl/): the page in Nederlands
+- [Русский](https://dinorr.hu/claude-usage-monitor/ru/): the page in Русский
+- [Čeština](https://dinorr.hu/claude-usage-monitor/cs/): the page in Čeština
+- [Türkçe](https://dinorr.hu/claude-usage-monitor/tr/): the page in Türkçe
+
+## Download
+
+- [Latest Windows package](https://dinorr.hu/cum-api/dl.php?os=win): always redirects to the newest release
+- [Latest macOS package](https://dinorr.hu/cum-api/dl.php?os=mac): always redirects to the newest release
+- [Release manifest (JSON)](https://dinorr.hu/claude-usage-monitor/manifest.json): version, size, SHA-256, release notes
+- [Changelog](https://dinorr.hu/claude-usage-monitor/CHANGELOG.md)
+- [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)
+
+## What it does
+
+- **See it coming**: Green, yellow, red. The panel changes colour long before you run out – with a countdown to the reset and an estimate of when you'd hit 100%.
+- **Are you burning too fast?**: The pace indicator tells you if your weekly quota is melting faster than the week passes – and projects where you'll end up.
+- **All your devices, one number**: Sign in through your own browser – like Claude Code does – and see usage from your phone, browser and every other computer too.
+- **Per-model limits**: Fable, Opus, Sonnet, Claude Code, extra usage – every limit the server reports, plus this week's split between models.
+- **Alerts that matter**: A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.
+- **It doesn't spy. Period.**: No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.
+
+## Key terms
+
+- **Five-hour session (5-hour window)**: Claude's short-term usage limit. Your session-based limit resets every five hours. Anthropic calls it the “current session”; many users call it the 5-hour window or 5-hour limit.
+- **Weekly limit**: A second cap on paid Claude plans that applies across all models and resets at a fixed time each week, assigned to your account. Weekly limits have been in effect since 28 August 2025.
+- **Per-model weekly limit**: A separate weekly cap for one specific model, listed on Claude's usage page next to the limit for all other models. The widget shows it as a third gauge for the model you choose.
+- **Reset**: The moment a limit goes back to 0%. The widget counts down to it. With claude.ai sign-in the exact time comes from Anthropic's server; with the local log it is an estimate.
+- **Pace**: How far you are ahead of or behind an evenly used week. “+12% vs pace” means you have used 12 percentage points more of your weekly limit than the share of the week that has passed.
+- **Burn rate**: How fast a limit is filling up right now – percent per hour for the session, percent per day for the week – and when it would reach 100% at that speed.
+- **Usage credits (extra usage)**: Optional pay-as-you-go usage after you reach your plan's limits, with a monthly spending cap. The widget shows whether it is switched on, the cap and what you have spent.
+
+## FAQ
+
+### Is it really free? What's the catch?
+Really free, and there is no catch. It's not a demo, not a trial and not a cut-down edition – this is the full and only version. No ads, no paid tier, no data collection. The source code is public under the MIT licence.
+
+### Is this an official Anthropic product?
+No. It's an independent community tool made by Vidovics Gábor. It is not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC.
+
+### Do I have to give it my password?
+Never. Without signing in it reads Claude Desktop's local log. If you want all devices, you sign in on claude.ai in your own browser – the app never sees your password.
+
+### Windows warns me when I run it. Why?
+Because the app isn't code-signed (certificates cost money; the app is free). Click More info → Run anyway. You can verify the download with its SHA-256 checksum, and read the source on GitHub.
+
+### Which Macs are supported?
+macOS 12 or newer. The download card above always shows which processor the current build is for. The macOS version is new – feedback is very welcome.
+
+### How do updates work?
+The app checks this site a few times a day. When there's a new version it tells you; one click downloads, verifies and installs it, then restarts. You can switch this off.
+
+### How do I remove it?
+Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: drag the app to the Bin. That's all.
+
+### How do I check my Claude usage without opening Settings?
+Install Claude Usage Monitor: it keeps your five-hour session, weekly limit and per-model limit on screen all the time, as a small always-on-top widget and as a percentage in the tray or menu bar. Claude's own numbers live under Settings → Usage; the widget shows the same limits without any clicking.
+
+### When do the Claude 5-hour session and the weekly limit reset?
+The session-based limit resets every five hours. The weekly limit resets at a fixed time each week that Anthropic assigns to your account, so it differs from person to person. The widget shows a live countdown to both resets – with claude.ai sign-in it uses the exact times from Anthropic's server.
+
+### Does Claude Code usage count toward my claude.ai limit?
+Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code counts toward the same usage limit. That is why the widget's claude.ai mode shows one number for all your devices and apps, not only for the computer it runs on.
+
+### Is this the same as “Claude Code Usage Monitor”?
+No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line.

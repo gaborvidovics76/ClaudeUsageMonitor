@@ -159,6 +159,14 @@ $localCfg = Join-Path $PSScriptRoot "release.local.psd1"
 if ($Upload) {
     if (-not (Test-Path $localCfg)) { throw "release.local.psd1 is missing - see the header of this script." }
     $cfg = Import-PowerShellDataFile $localCfg
+    # The website has one pre-rendered page per language with the version, date and release notes baked in
+    # (search and AI crawlers do not run scripts). Rebuild them from the manifest written above, upload them,
+    # and copy them into release\site so the rclone step below ships exactly the same pages. Optional.
+    if ($cfg.SiteDeploy -and (Test-Path $cfg.SiteDeploy)) {
+        $code = Invoke-Native ('powershell.exe -NoProfile -ExecutionPolicy Bypass -File "{0}" -Sync' -f $cfg.SiteDeploy)
+        if ($code -ne 0) { Write-Host "  WARNING: website rebuild failed ($code) - the pages keep the previous version text" -ForegroundColor Yellow }
+        else { Info "website pages rebuilt for $Version" }
+    }
     if ($cfg.MirrorDir) {
         New-Item -ItemType Directory -Force -Path $cfg.MirrorDir | Out-Null
         & robocopy $Site $cfg.MirrorDir /E /NFL /NDL /NJH /NJS /NP | Out-Null
@@ -181,6 +189,19 @@ if ($Upload) {
     $page = Invoke-WebRequest -Uri $BaseUrl -UseBasicParsing -TimeoutSec 30
     Info "LIVE OK: manifest $($live.version), zip $($zipInfo.Length) bytes, index.php -> $phpStatus, page -> $($page.StatusCode)"
     if ($phpStatus -eq 200) { Write-Host "  WARNING: index.php answered 200 - PHP is not blocked!" -ForegroundColor Red }
+
+    # Release newsletter: the website backend notices the new manifest by itself on the next page visit.
+    # Nudging it here sends the e-mails right away (small batches; never fatal for the release).
+    try {
+        $mailed = 0
+        for ($i = 0; $i -lt 40; $i++) {
+            $tick = Invoke-RestMethod -Uri "https://dinorr.hu/cum-api/stats.php?drain=1&$([guid]::NewGuid().ToString('N'))" -TimeoutSec 60
+            $mailed += [int]$tick.sent_now
+            if (-not $tick.ok -or [int]$tick.queue_left -eq 0) { break }
+            Start-Sleep -Seconds 2
+        }
+        Info "release newsletter: $mailed e-mail(s) sent, $([int]$tick.queue_left) left in the queue"
+    } catch { Write-Host "  (newsletter nudge skipped: $($_.Exception.Message))" -ForegroundColor Yellow }
 }
 
 Write-Host ""

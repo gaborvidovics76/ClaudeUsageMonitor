@@ -1,224 +1,580 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-root="" data-theme="midnight">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Claude Usage Monitor</title>
-<meta name="description" content="Always-on-top Windows panel that shows how much of your Claude subscription's 5-hour and weekly limits you have used. Free, open source.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%232b3040' stroke-width='9'/%3E%3Cpath d='M32 8a24 24 0 0 1 22.6 32' fill='none' stroke='%23d97757' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
-<style>
-  :root {
-    --bg: #f6f4ef; --card: #ffffff; --ink: #1d2230; --dim: #5d6577; --line: #e3dfd5;
-    --accent: #c4562f; --accent-ink: #ffffff; --ok: #1f8f57; --code: #f0ece2;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #12141a; --card: #1b1e27; --ink: #e8ebf3; --dim: #98a1b5; --line: #2a2f3c;
-            --accent: #e08a63; --accent-ink: #16181d; --ok: #46c98a; --code: #232733; }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 16px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
-  main { max-width: 860px; margin: 0 auto; padding: 48px 20px 72px; }
-  header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
-  header svg { flex: none; }
-  h1 { font-size: 30px; line-height: 1.2; margin: 0; letter-spacing: -.3px; }
-  .lead { color: var(--dim); font-size: 18px; margin: 10px 0 28px; max-width: 62ch; }
-  .lang { margin-left: auto; font-size: 14px; }
-  .lang button { background: none; border: 1px solid var(--line); color: var(--dim); border-radius: 6px;
-                 padding: 3px 9px; cursor: pointer; font: inherit; }
-  .lang button[aria-pressed="true"] { color: var(--ink); border-color: var(--ink); }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 18px 0; }
-  .dl { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
-  .btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none;
-         font-weight: 600; padding: 13px 22px; border-radius: 10px; font-size: 17px; }
-  .btn:hover { filter: brightness(1.07); }
-  .meta { color: var(--dim); font-size: 14px; }
-  .meta b { color: var(--ink); font-weight: 600; }
-  h2 { font-size: 19px; margin: 0 0 12px; }
-  ol, ul { margin: 0; padding-left: 22px; }
-  li { margin: 6px 0; }
-  code, .sha { font: 13px/1.5 Consolas, "Cascadia Mono", monospace; background: var(--code);
-               padding: 2px 6px; border-radius: 5px; overflow-wrap: anywhere; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-  .feat { border-top: 2px solid var(--line); padding-top: 10px; }
-  .feat b { display: block; }
-  .feat span { color: var(--dim); font-size: 15px; }
-  details { margin-top: 10px; }
-  summary { cursor: pointer; color: var(--dim); }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
-  td, th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
-  th { color: var(--dim); font-weight: 600; }
-  footer { color: var(--dim); font-size: 14px; margin-top: 34px; }
-  a { color: var(--accent); }
-  [hidden] { display: none !important; }
-  [data-hu] { display: none; }
-  html[lang="hu"] [data-hu] { display: revert; }
-  html[lang="hu"] [data-en] { display: none; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – Free Widget for Windows &amp; macOS</title>
+<meta name="description" content="Free, open-source Claude Usage Monitor for Windows &amp; macOS: see your 5-hour session, weekly and per-model limits live, with reset countdown and alerts.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dinorr.hu/claude-usage-monitor/">
+<link rel="alternate" hreflang="en" href="https://dinorr.hu/claude-usage-monitor/">
+<link rel="alternate" hreflang="hu" href="https://dinorr.hu/claude-usage-monitor/hu/">
+<link rel="alternate" hreflang="de" href="https://dinorr.hu/claude-usage-monitor/de/">
+<link rel="alternate" hreflang="fr" href="https://dinorr.hu/claude-usage-monitor/fr/">
+<link rel="alternate" hreflang="es" href="https://dinorr.hu/claude-usage-monitor/es/">
+<link rel="alternate" hreflang="it" href="https://dinorr.hu/claude-usage-monitor/it/">
+<link rel="alternate" hreflang="pt" href="https://dinorr.hu/claude-usage-monitor/pt/">
+<link rel="alternate" hreflang="pl" href="https://dinorr.hu/claude-usage-monitor/pl/">
+<link rel="alternate" hreflang="nl" href="https://dinorr.hu/claude-usage-monitor/nl/">
+<link rel="alternate" hreflang="ru" href="https://dinorr.hu/claude-usage-monitor/ru/">
+<link rel="alternate" hreflang="cs" href="https://dinorr.hu/claude-usage-monitor/cs/">
+<link rel="alternate" hreflang="tr" href="https://dinorr.hu/claude-usage-monitor/tr/">
+<link rel="alternate" hreflang="x-default" href="https://dinorr.hu/claude-usage-monitor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – free Claude usage widget for Windows &amp; macOS">
+<meta property="og:description" content="See your Claude 5-hour session, weekly limit and pace at a glance – including what your phone and browser use up. Always on top, open source. 100% free.">
+<meta property="og:url" content="https://dinorr.hu/claude-usage-monitor/">
+<meta property="og:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – free Claude usage widget for Windows &amp; macOS">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – free Claude usage widget for Windows &amp; macOS">
+<meta name="twitter:description" content="See your Claude 5-hour session, weekly limit and pace at a glance – including what your phone and browser use up. Always on top, open source. 100% free.">
+<meta name="twitter:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dinorr.hu/claude-usage-monitor/#site","name":"Claude Usage Monitor","url":"https://dinorr.hu/claude-usage-monitor/","inLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"],"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"WebPage","@id":"https://dinorr.hu/claude-usage-monitor/#page","url":"https://dinorr.hu/claude-usage-monitor/","name":"Claude Usage Monitor – Free Widget for Windows & macOS","description":"Free, open-source Claude Usage Monitor for Windows & macOS: see your 5-hour session, weekly and per-model limits live, with reset countdown and alerts.","inLanguage":"en","isPartOf":{"@id":"https://dinorr.hu/claude-usage-monitor/#site"},"about":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"mainEntity":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"primaryImageOfPage":"https://dinorr.hu/claude-usage-monitor/img/og.png","dateModified":"2026-09-20","author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"SoftwareApplication","@id":"https://dinorr.hu/claude-usage-monitor/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.","url":"https://dinorr.hu/claude-usage-monitor/","inLanguage":"en","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.6.0","dateModified":"2026-09-18T14:27:09Z","downloadUrl":"https://dinorr.hu/cum-api/dl.php?os=win","installUrl":"https://dinorr.hu/claude-usage-monitor/#download","fileSize":"46 MB","releaseNotes":"https://dinorr.hu/claude-usage-monitor/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"image":"https://dinorr.hu/claude-usage-monitor/img/og.png","screenshot":["https://dinorr.hu/claude-usage-monitor/img/panel-full-midnight.png","https://dinorr.hu/claude-usage-monitor/img/ring-neon.png","https://dinorr.hu/claude-usage-monitor/img/compact-claude.png"],"featureList":["See it coming","Are you burning too fast?","All your devices, one number","Per-model limits","Alerts that matter","It doesn't spy. Period."],"availableLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"]},{"@type":"Person","@id":"https://dinorr.hu/claude-usage-monitor/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://dinorr.hu/claude-usage-monitor/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://dinorr.hu/claude-usage-monitor/#faq","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is it really free? What's the catch?","acceptedAnswer":{"@type":"Answer","text":"Really free, and there is no catch. It's not a demo, not a trial and not a cut-down edition – this is the full and only version. No ads, no paid tier, no data collection. The source code is public under the MIT licence."}},{"@type":"Question","name":"Is this an official Anthropic product?","acceptedAnswer":{"@type":"Answer","text":"No. It's an independent community tool made by Vidovics Gábor. It is not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC."}},{"@type":"Question","name":"Do I have to give it my password?","acceptedAnswer":{"@type":"Answer","text":"Never. Without signing in it reads Claude Desktop's local log. If you want all devices, you sign in on claude.ai in your own browser – the app never sees your password."}},{"@type":"Question","name":"Windows warns me when I run it. Why?","acceptedAnswer":{"@type":"Answer","text":"Because the app isn't code-signed (certificates cost money; the app is free). Click More info → Run anyway. You can verify the download with its SHA-256 checksum, and read the source on GitHub."}},{"@type":"Question","name":"Which Macs are supported?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 or newer. The download card above always shows which processor the current build is for. The macOS version is new – feedback is very welcome."}},{"@type":"Question","name":"How do updates work?","acceptedAnswer":{"@type":"Answer","text":"The app checks this site a few times a day. When there's a new version it tells you; one click downloads, verifies and installs it, then restarts. You can switch this off."}},{"@type":"Question","name":"How do I remove it?","acceptedAnswer":{"@type":"Answer","text":"Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: drag the app to the Bin. That's all."}},{"@type":"Question","name":"How do I check my Claude usage without opening Settings?","acceptedAnswer":{"@type":"Answer","text":"Install Claude Usage Monitor: it keeps your five-hour session, weekly limit and per-model limit on screen all the time, as a small always-on-top widget and as a percentage in the tray or menu bar. Claude's own numbers live under Settings → Usage; the widget shows the same limits without any clicking."}},{"@type":"Question","name":"When do the Claude 5-hour session and the weekly limit reset?","acceptedAnswer":{"@type":"Answer","text":"The session-based limit resets every five hours. The weekly limit resets at a fixed time each week that Anthropic assigns to your account, so it differs from person to person. The widget shows a live countdown to both resets – with claude.ai sign-in it uses the exact times from Anthropic's server."}},{"@type":"Question","name":"Does Claude Code usage count toward my claude.ai limit?","acceptedAnswer":{"@type":"Answer","text":"Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code counts toward the same usage limit. That is why the widget's claude.ai mode shows one number for all your devices and apps, not only for the computer it runs on."}},{"@type":"Question","name":"Is this the same as “Claude Code Usage Monitor”?","acceptedAnswer":{"@type":"Answer","text":"No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line."}}]},{"@type":"DefinedTermSet","@id":"https://dinorr.hu/claude-usage-monitor/#glossary","name":"Key terms, precisely defined","inLanguage":"en","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Five-hour session (5-hour window)","description":"Claude's short-term usage limit. Your session-based limit resets every five hours. Anthropic calls it the “current session”; many users call it the 5-hour window or 5-hour limit.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Weekly limit","description":"A second cap on paid Claude plans that applies across all models and resets at a fixed time each week, assigned to your account. Weekly limits have been in effect since 28 August 2025.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Per-model weekly limit","description":"A separate weekly cap for one specific model, listed on Claude's usage page next to the limit for all other models. The widget shows it as a third gauge for the model you choose.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Reset","description":"The moment a limit goes back to 0%. The widget counts down to it. With claude.ai sign-in the exact time comes from Anthropic's server; with the local log it is an estimate.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Pace","description":"How far you are ahead of or behind an evenly used week. “+12% vs pace” means you have used 12 percentage points more of your weekly limit than the share of the week that has passed.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Burn rate","description":"How fast a limit is filling up right now – percent per hour for the session, percent per day for the week – and when it would reach 100% at that speed.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"},{"@type":"DefinedTerm","name":"Usage credits (extra usage)","description":"Optional pay-as-you-go usage after you reach your plan's limits, with a monthly spending cap. The widget shows whether it is switched on, the cap and what you have spent.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/#glossary"}]}]}</script>
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preload" href="fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/site.css?v=5">
 </head>
 <body>
-<main>
-  <header>
-    <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="24" fill="none" stroke="var(--line)" stroke-width="9"/>
-      <path d="M32 8a24 24 0 0 1 22.6 32" fill="none" stroke="var(--accent)" stroke-width="9" stroke-linecap="round"/>
-    </svg>
-    <h1>Claude Usage Monitor</h1>
-    <div class="lang">
-      <button type="button" id="b-en" aria-pressed="true">EN</button>
-      <button type="button" id="b-hu" aria-pressed="false">HU</button>
-    </div>
-  </header>
+<a class="skip" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-  <p class="lead" data-en>An always-on-top panel for Windows and macOS that shows how much of your Claude subscription you have used – the 5-hour window, the weekly limit and the per-model limit – so you never run out by surprise.</p>
-  <p class="lead" data-hu>Mindig felül lévő panel Windowsra és macOS-re, ami mutatja, mennyit használtál el a Claude-előfizetésedből – az 5 órás ablakot, a heti keretet és a modellenkénti keretet –, hogy ne érjen meglepetés.</p>
-
-  <section class="card">
-    <div class="dl">
-      <a class="btn" id="download" href="#">
-        <span data-en>Download for Windows</span><span data-hu>Letöltés Windowsra</span>
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#themes" data-i18n="nav.themes">Themes</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">What's new</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#feedback" data-i18n="nav.feedback">Feedback</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
       </a>
-      <div class="meta">
-        <div><span data-en>Version</span><span data-hu>Verzió</span> <b id="version">…</b> · <span id="size"></span> · <span id="date"></span></div>
-        <div>Windows 10 / 11, 64-bit · <span data-en>free, open source, no admin rights</span><span data-hu>ingyenes, nyílt forrású, rendszergazdai jog nélkül</span></div>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">EN</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="./" aria-current="page" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="./hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="de" lang="de" href="./de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="./fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="es" lang="es" href="./es/" data-lang="es">Español <span>es</span></a></li><li><a role="option" hreflang="it" lang="it" href="./it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="pt" lang="pt" href="./pt/" data-lang="pt">Português <span>pt</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="./pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="./nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="./ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="./cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="./tr/" data-lang="tr">Türkçe <span>tr</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Download free</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% FREE</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Version</span> <span data-win="version">2.6.0</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – free usage widget for Windows &amp; macOS</span> <span data-i18n="hero.h1">Never hit your Claude limit <em>by surprise.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">A tiny always-on-top widget that shows your Claude usage live – the 5-hour session, the weekly limit and your pace. Even what your phone uses up. For Windows and macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Your system</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Your system</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Free. Forever.</b> Not a demo. Not a trial. Nothing locked.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">downloads from this page so far</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">It's a desktop app – send the link to your computer</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Claude Usage Monitor widget showing the 5-hour session at 47%, a per-model weekly limit at 61% and the weekly limit at 23%">
+      <img class="stage__side stage__side--l" src="img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Real screenshots of the app, with demo numbers.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% FREE</span><i>✦</i><span data-i18n="mq.2">NOT A DEMO</span><i>✦</i><span data-i18n="mq.3">NOTHING LOCKED</span><i>✦</i><span data-i18n="mq.4">NO ADS</span><i>✦</i><span data-i18n="mq.5">NO REGISTRATION</span><i>✦</i><span data-i18n="mq.6">NO TRACKING</span><i>✦</i><span data-i18n="mq.7">OPEN SOURCE</span><i>✦</i><span data-i18n="mq.8">12 LANGUAGES</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Free forever</b><span data-i18n="trust.1d">Full version. No paid tier exists.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Open source</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">MIT licence – read every line on GitHub</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Private</b><span data-i18n="trust.3d">No telemetry, no ads, no cookies.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Updates itself</b><span data-i18n="trust.4d">Verified by SHA-256, one click.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">What makes it more than a log reader</p>
+  <h2 data-i18n="more.h2">Your phone eats your limit too. <em>Now you see it – on your desktop.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Many usage trackers read log files on your computer, so they only know what <b>that one computer</b> used. Claude Usage Monitor can ask Anthropic's server instead – and shows the real, account-wide number: everything you use in the phone app, in the browser, on another computer and in Claude Code counts, and you see it all in one place, on your desktop.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Claude app on your phone</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai in the browser</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Your other computer</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code &amp; Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="One Claude Usage Monitor widget showing the combined usage of every device">
+      <figcaption data-i18n="more.sum">One real number for your whole account – always in view.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Tools that only read local logs</h3>
+      <ul data-i18n="more.a_li"><li class="no">What you use on your phone – invisible</li><li class="no">What you use in the browser – invisible</li><li class="no">Your other computers – invisible</li><li class="yes">Claude Code on this one computer</li><li class="no">Reset times are guessed</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor with the claude.ai source</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Phone, browser, every computer – all counted</li><li class="yes">Claude Code and Claude Desktop included</li><li class="yes">The same numbers Claude itself shows under Settings → Usage</li><li class="yes">Exact reset times from Anthropic's server</li><li class="yes">Still works without sign-in, from the local log</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">How: choose the “claude.ai (all devices)” data source and sign in once in your own browser – the same sign-in Claude Code uses; the app never sees your password. Without sign-in the widget reads Claude Desktop's local log, which covers this computer only.</p>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">What is Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows your Claude subscription's usage limits in real time</b> – the five-hour session, the weekly limit and the per-model weekly limit, each with the time left until it resets. It stays on top of your other windows, so you can check your Claude usage without opening Settings → Usage and without a terminal.</p>
+  <p class="about__def" data-i18n="about.p2">One app for both Windows and Mac. It covers everything that counts toward your plan – claude.ai, Claude Desktop and Claude Code, on all your devices. It is not the terminal tool “Claude Code Usage Monitor”: this one is a graphical panel with a tray icon, and needs no command line.</p>
+  <p class="fine about__meta"><span data-i18n="about.updated">Last updated</span>: <time data-win="date">2026-09-18</time> · <span data-i18n="dls.version">Version</span> <span data-win="version">2.6.0</span> · <span data-i18n="about.by">by</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Key terms, precisely defined</summary>
+    <dl>
+      <dt data-i18n="gl.1t">Five-hour session (5-hour window)</dt>
+      <dd data-i18n="gl.1d">Claude's short-term usage limit. Your session-based limit resets every five hours. Anthropic calls it the “current session”; many users call it the 5-hour window or 5-hour limit.</dd>
+      <dt data-i18n="gl.2t">Weekly limit</dt>
+      <dd data-i18n="gl.2d">A second cap on paid Claude plans that applies across all models and resets at a fixed time each week, assigned to your account. Weekly limits have been in effect since 28 August 2025.</dd>
+      <dt data-i18n="gl.3t">Per-model weekly limit</dt>
+      <dd data-i18n="gl.3d">A separate weekly cap for one specific model, listed on Claude's usage page next to the limit for all other models. The widget shows it as a third gauge for the model you choose.</dd>
+      <dt data-i18n="gl.4t">Reset</dt>
+      <dd data-i18n="gl.4d">The moment a limit goes back to 0%. The widget counts down to it. With claude.ai sign-in the exact time comes from Anthropic's server; with the local log it is an estimate.</dd>
+      <dt data-i18n="gl.5t">Pace</dt>
+      <dd data-i18n="gl.5d">How far you are ahead of or behind an evenly used week. “+12% vs pace” means you have used 12 percentage points more of your weekly limit than the share of the week that has passed.</dd>
+      <dt data-i18n="gl.6t">Burn rate</dt>
+      <dd data-i18n="gl.6d">How fast a limit is filling up right now – percent per hour for the session, percent per day for the week – and when it would reach 100% at that speed.</dd>
+      <dt data-i18n="gl.7t">Usage credits (extra usage)</dt>
+      <dd data-i18n="gl.7d">Optional pay-as-you-go usage after you reach your plan's limits, with a monthly spending cap. The widget shows whether it is switched on, the cap and what you have spent.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">What you get</p>
+  <h2 data-i18n="feat.h2">All your Claude usage limits. One glance.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">See it coming</h3>
+        <p data-i18n="feat.1d">Green, yellow, red. The panel changes colour long before you run out – with a countdown to the reset and an estimate of when you'd hit 100%.</p>
+      </div>
+      <div class="cell__shots"><img src="img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Claude usage at 78% – the widget turns yellow"><img src="img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Claude usage at 94% – the widget turns red"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Are you burning too fast?</h3>
+      <p data-i18n="feat.2d">The pace indicator tells you if your weekly quota is melting faster than the week passes – and projects where you'll end up.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">All your devices, one number</h3>
+      <p data-i18n="feat.3d">Sign in through your own browser – like Claude Code does – and see usage from your phone, browser and every other computer too.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Per-model limits</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, extra usage – every limit the server reports, plus this week's split between models.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Alerts that matter</h3>
+      <p data-i18n="feat.5d">A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.</p>
+    </article>
+    <article class="cell cell--wide reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">It doesn't spy. Period.</h3>
+      <p data-i18n="feat.6d">No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Yes, it's really free.</h2>
+      <p data-i18n="band1.p">No trial clock. No “Pro” upsell. No catch. Download it and it's yours.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Only if you're curious</p>
+  <h2 data-i18n="tabs.h2">The details – when you want them.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">What it shows</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Where data comes from</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Privacy &amp; security</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Controls</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Settings</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">How it compares</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5-hour window</b> – current %, countdown to reset, burn rate (%/hour) and when it would fill up.</li><li><b>Weekly limit</b> – current %, time to the weekly reset, daily rate and your pace vs. an even week.</li><li><b>Per-model weekly limit</b> – a third gauge for the model you watch (Fable by default).</li><li><b>Plan badge</b> – PRO, MAX 5×, MAX 20×, TEAM or ENTERPRISE.</li><li><b>History window</b> – 6 h / 24 h / 7 days charts, weekly peak, daily average and an end-of-week projection.</li><li><b>Tray / menu-bar icon</b> – your chosen percentage as a ring, details on hover.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Local log <span class="chip">default · no sign-in</span></h4><p>Reads the usage log Claude Desktop already writes on your computer. Nothing is sent anywhere. Measures this computer only, refreshes about every 5 minutes.</p></div><div><h4>2 · claude.ai <span class="chip">all devices</span></h4><p>The same browser sign-in Claude Code uses – no embedded browser, no password typed into the app. Exact reset times from the server, refreshed about every 2 minutes.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>No telemetry.</b> The app has no analytics and never phones home – it only checks this site for a newer version.</li><li><b>Your token stays yours.</b> Encrypted with Windows DPAPI, or stored in the macOS Keychain. Never in a plain file.</li><li><b>Conversations are never read.</b> From local logs only the model name, token counts and timestamps are used.</li><li><b>Verified updates.</b> HTTPS only, every download is checked against its SHA-256 before it is installed; on failure the old version comes back.</li><li><b>Open source.</b> Don't trust – verify: the whole source is on GitHub under the MIT licence.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Drag</th><td>move the panel (snaps to screen edges)</td></tr><tr><th>Right-click</th><td>menu: layout, theme, size, language, settings</td></tr><tr><th>Double-click</th><td>history &amp; statistics window</td></tr><tr><th>Ctrl + scroll</th><td>resize</td></tr><tr><th>Tray icon click</th><td>hide / show the panel</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Look</b> – 6 themes, custom accent colour, 3 layouts, size, opacity, always on top, lock position, click-through.</li><li><b>Content</b> – which gauges, their order and size, trend curve, burn rate, countdown.</li><li><b>Alerts</b> – warning and danger thresholds (70% / 90% by default), reset and stale-data notices.</li><li><b>System</b> – start with the computer, automatic updates, 12 languages.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claude's own Settings → Usage page</th><th>Terminal tools that read Claude Code logs</th></tr><tr><th>Always visible while you work</th><td>Yes – always-on-top widget and tray icon</td><td>No – you have to open it</td><td>Only in an open terminal</td></tr><tr><th>Windows and macOS</th><td>Yes, one app for both</td><td>Yes (web page)</td><td>Varies, command line</td></tr><tr><th>Needs a terminal</th><td>No</td><td>No</td><td>Yes</td></tr><tr><th>Counts claude.ai, Claude Desktop and Claude Code on all devices</th><td>Yes, with claude.ai sign-in</td><td>Yes</td><td>No – this computer's Claude Code only</td></tr><tr><th>Pace, burn rate and end-of-week projection</th><td>Yes</td><td>No</td><td>Some</td></tr><tr><th>Alerts at your own thresholds</th><td>Yes (70% / 90% by default)</td><td>No</td><td>Rarely</td></tr><tr><th>Price</th><td>Free, open source (MIT)</td><td>Included in your plan</td><td>Mostly free</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Make it yours</p>
+    <h2 data-i18n="th.h2">6 themes. 3 layouts. Try them right here.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor in the selected theme and layout">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Theme</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Midnight glass</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude warm dark</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Graphite</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neon</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Light paper</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Post-it yellow</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Deep blue glass with a cool glow. The default – calm, readable, at home on any dark desktop.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Layout</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Card</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Rings</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Slim bar</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">Plus your own accent colour, size from 70% to 200%, and opacity.</p>
       </div>
     </div>
-    <div class="dl" id="mac-row" hidden style="margin-top:18px; padding-top:18px; border-top:1px solid var(--line)">
-      <a class="btn" id="download-mac" href="#" style="background:var(--ink); color:var(--bg)">
-        <span data-en>Download for macOS</span><span data-hu>Letöltés macOS-re</span>
-      </a>
-      <div class="meta">
-        <div><span data-en>Version</span><span data-hu>Verzió</span> <b id="mac-version"></b> · <span id="mac-size"></span> · <span id="mac-arch"></span> · <span id="mac-date"></span></div>
-        <div>macOS 12+ · <span data-en>drag to Applications; first start: right-click → Open</span><span data-hu>húzd az Alkalmazások mappába; első indítás: jobb gomb → Megnyitás</span></div>
-        <div class="sha" id="mac-sha" style="margin-top:6px; display:inline-block"></div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Pricing</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Free. The whole thing. Forever.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Full version – there is no other</li><li>No demo, no trial, no time limit</li><li>No “Pro” tier, no locked features</li><li>No ads, no registration, no data collection</li><li>Free updates, automatically</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Download</p>
+    <h2 data-i18n="dls.h2">Always the latest version. Always free.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">FREE</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Download for Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Version</span> <b data-win="version">2.6.0</b> · <span data-win="size">46 MB</span> · <span data-win="date">2026-09-18</span></p>
+        <details><summary data-i18n="dls.how">How to install (3 steps)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Extract the whole zip</b> (right-click → Extract All…).</li><li>Double-click <code>INSTALL.bat</code>.</li><li>Answer two questions – Enter accepts the recommended answer. Done.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">No admin rights needed. If Windows shows “Windows protected your PC”: More info → Run anyway. The app is open source but not code-signed.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Verify the download (SHA-256)</summary><code class="sha" data-win="sha">aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">FREE</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Download for macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Version</span> <b data-mac="version">2.6.0</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-18</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">The macOS build is on its way – check back soon.</p>
+        <details><summary data-i18n="dls.how">How to install (3 steps)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Open the zip and drag <b>ClaudeUsageMonitor</b> to <b>Applications</b>.</li><li>First start: <b>right-click → Open</b> (the app is not notarised by Apple).</li><li>Look for the icon in the menu bar. Done.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Verify the download (SHA-256)</summary><code class="sha" data-mac="sha">371c224acf6f4f22fdb3cd7da43544f7789a6a061f7f7a14b136a58f7cf4ffe6</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">downloads from this page so far</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">These buttons always point to the newest release – and once installed, the app keeps itself up to date.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Actively developed</p>
+  <h2><span data-i18n="new.h2">What's new in</span> <span class="grad" data-win="version">2.6.0</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Release notes are written in English and Hungarian.</p>
+  <ul class="notes" id="notes"><li>New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.</li><li>The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.</li><li>For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.</li><li>A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Earlier versions</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Get an e-mail when a new version is out</h3>
+      <p data-i18n="sub.p">Only release news – a few short lines per version. No marketing, ever. One click to unsubscribe.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Notify me</span></button>
       </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">I agree that my e-mail address is used to send me release notifications, as described in the <a href="#privacy" data-legal="privacy">Privacy Policy</a>. I can withdraw this at any time.</span></label>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Recommended for</p>
+    <h2 data-i18n="who.h2">If any of these is you, you'll like it.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Claude Code developers</b><span data-i18n="who.1d">Long agent sessions eat the 5-hour window fast. See it before it stops you mid-task.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pro &amp; Max subscribers</b><span data-i18n="who.2d">Get the most out of what you pay for – without hitting the wall on Thursday.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">People on many devices</b><span data-i18n="who.3d">Phone, browser, laptop, desktop: one honest number for all of them.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Anyone who likes a tidy desktop</b><span data-i18n="who.4d">A small, good-looking panel that stays out of the way – or shrinks to a slim bar.</span></div>
     </div>
-    <details>
-      <summary><span data-en>Verify the download (SHA-256)</span><span data-hu>A letöltés ellenőrzése (SHA-256)</span></summary>
-      <p class="sha" id="sha">…</p>
-      <p class="meta" data-en>In PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code> – the value must match.</p>
-      <p class="meta" data-hu>PowerShellben: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code> – az értéknek egyeznie kell.</p>
-    </details>
-  </section>
 
-  <section class="card">
-    <h2 data-en>Install in three steps</h2><h2 data-hu>Telepítés három lépésben</h2>
-    <ol data-en>
-      <li><b>Extract the whole zip</b> (right-click → <i>Extract All…</i>). Do not run it from inside the zip.</li>
-      <li>Double-click <code>INSTALL.bat</code> in the extracted folder.</li>
-      <li>Answer two questions (Enter accepts the recommended answer). The program starts by itself.</li>
-    </ol>
-    <ol data-hu>
-      <li><b>Csomagold ki a teljes zipet</b> (jobb gomb → <i>Az összes kibontása…</i>). Ne a zipen belülről indítsd.</li>
-      <li>A kibontott mappában kattints duplán a <code>TELEPITES.bat</code> fájlra.</li>
-      <li>Válaszolj két kérdésre (az Enter az ajánlott választ fogadja el). A program magától elindul.</li>
-    </ol>
-    <p class="meta" data-en>If Windows shows “Windows protected your PC”: click <i>More info</i> → <i>Run anyway</i>. The program is open source but not code-signed.</p>
-    <p class="meta" data-hu>Ha a Windows azt írja: „A Windows megvédte a számítógépet”: <i>További információ</i> → <i>Futtatás mindenképpen</i>. A program nyílt forrású, de nincs kódaláírása.</p>
-  </section>
+    <div id="testimonials" class="quotes" hidden></div>
 
-  <section class="card">
-    <h2 data-en>What it does</h2><h2 data-hu>Mit tud</h2>
-    <div class="grid">
-      <div class="feat" data-en><b>All limits at a glance</b><span>5-hour window, weekly quota and the per-model weekly limit, with countdown to reset.</span></div>
-      <div class="feat" data-hu><b>Minden keret egy pillantásra</b><span>5 órás ablak, heti keret és a modellenkénti heti keret, visszaszámlálással a resetig.</span></div>
-      <div class="feat" data-en><b>Pace warning</b><span>Tells you whether you burn the weekly quota faster than the week passes.</span></div>
-      <div class="feat" data-hu><b>Tempójelzés</b><span>Megmutatja, gyorsabban fogy-e a heti keret, mint ahogy a hét telik.</span></div>
-      <div class="feat" data-en><b>All your devices</b><span>Sign in in your own browser (like Claude Code) and see usage from every device.</span></div>
-      <div class="feat" data-hu><b>Minden eszközöd</b><span>Belépés a saját böngésződben (mint a Claude Code-nál), és minden eszköz használata látszik.</span></div>
-      <div class="feat" data-en><b>Yours to shape</b><span>6 themes, 3 layouts, 12 languages, tray icon, alerts, history charts.</span></div>
-      <div class="feat" data-hu><b>Testre szabható</b><span>6 téma, 3 elrendezés, 12 nyelv, tálcaikon, riasztások, előzmény-grafikonok.</span></div>
-      <div class="feat" data-en><b>Updates itself</b><span>Checks this page for a newer version, verifies the download, swaps itself and restarts.</span></div>
-      <div class="feat" data-hu><b>Magától frissül</b><span>Erről az oldalról értesül az új verzióról, ellenőrzi a letöltést, lecseréli magát és újraindul.</span></div>
-      <div class="feat" data-en><b>Private</b><span>No telemetry. Talks only to Anthropic for your own numbers; the token stays encrypted on your PC.</span></div>
-      <div class="feat" data-hu><b>Nem kémkedik</b><span>Nincs telemetria. Csak az Anthropic-kal beszél a saját adataidért; a token titkosítva a gépeden marad.</span></div>
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">“I built this for myself, because I kept running into the limit in the middle of my work. Then I polished it until I was happy to look at it all day. It's free because a tool like this should be – use it, enjoy it, and tell me what you think.”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">creator &amp; developer of Claude Usage Monitor · Hungary</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Source code on GitHub</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Write to me</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Questions about Claude usage limits – short answers.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Is it really free? What's the catch?</summary><p data-i18n="faq.a1">Really free, and there is no catch. It's not a demo, not a trial and not a cut-down edition – this is the full and only version. No ads, no paid tier, no data collection. The source code is public under the MIT licence.</p></details>
+    <details><summary data-i18n="faq.q8">How do I check my Claude usage without opening Settings?</summary><p data-i18n="faq.a8">Install Claude Usage Monitor: it keeps your five-hour session, weekly limit and per-model limit on screen all the time, as a small always-on-top widget and as a percentage in the tray or menu bar. Claude's own numbers live under Settings → Usage; the widget shows the same limits without any clicking.</p></details>
+    <details><summary data-i18n="faq.q9">When do the Claude 5-hour session and the weekly limit reset?</summary><p data-i18n="faq.a9">The session-based limit resets every five hours. The weekly limit resets at a fixed time each week that Anthropic assigns to your account, so it differs from person to person. The widget shows a live countdown to both resets – with claude.ai sign-in it uses the exact times from Anthropic's server.</p></details>
+    <details><summary data-i18n="faq.q10">Does Claude Code usage count toward my claude.ai limit?</summary><p data-i18n="faq.a10">Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code counts toward the same usage limit. That is why the widget's claude.ai mode shows one number for all your devices and apps, not only for the computer it runs on.</p></details>
+    <details><summary data-i18n="faq.q11">Is this the same as “Claude Code Usage Monitor”?</summary><p data-i18n="faq.a11">No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line.</p></details>
+    <details><summary data-i18n="faq.q2">Is this an official Anthropic product?</summary><p data-i18n="faq.a2">No. It's an independent community tool made by Vidovics Gábor. It is not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Do I have to give it my password?</summary><p data-i18n="faq.a3">Never. Without signing in it reads Claude Desktop's local log. If you want all devices, you sign in on claude.ai in your own browser – the app never sees your password.</p></details>
+    <details><summary data-i18n="faq.q4">Windows warns me when I run it. Why?</summary><p data-i18n="faq.a4">Because the app isn't code-signed (certificates cost money; the app is free). Click More info → Run anyway. You can verify the download with its SHA-256 checksum, and read the source on GitHub.</p></details>
+    <details><summary data-i18n="faq.q5">Which Macs are supported?</summary><p data-i18n="faq.a5">macOS 12 or newer. The download card above always shows which processor the current build is for. The macOS version is new – feedback is very welcome.</p></details>
+    <details><summary data-i18n="faq.q6">How do updates work?</summary><p data-i18n="faq.a6">The app checks this site a few times a day. When there's a new version it tells you; one click downloads, verifies and installs it, then restarts. You can switch this off.</p></details>
+    <details><summary data-i18n="faq.q7">How do I remove it?</summary><p data-i18n="faq.a7">Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: drag the app to the Bin. That's all.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Talk to the author</p>
+      <h2 data-i18n="fb.h2">Idea? Bug? Just like it? Tell me.</h2>
+      <p data-i18n="fb.p">Your message goes straight to me, Vidovics Gábor. I read every one. Leave an e-mail address only if you'd like a reply.</p>
+      <p class="fine" data-i18n="fb.privacy">Your message is used only to answer you and to improve the app – details in the <a href="#privacy" data-legal="privacy">Privacy Policy</a>.</p>
     </div>
-  </section>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Name</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-mail</span> <i data-i18n="fb.optional">(optional)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">What is it about?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Feedback</option>
+          <option value="idea" data-i18n="fb.t_idea">Idea / feature request</option>
+          <option value="bug" data-i18n="fb.t_bug">Bug report</option>
+          <option value="recommend" data-i18n="fb.t_rec">I recommend it! (testimonial)</option>
+          <option value="other" data-i18n="fb.t_other">Something else</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Message</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">You may publish my message on this page as a recommendation (with my name only).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Send message</span></button>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 
-  <section class="card">
-    <h2><span data-en>What's new in</span><span data-hu>Újdonságok:</span> <span id="nv"></span></h2>
-    <ul id="notes"><li>…</li></ul>
-    <details>
-      <summary><span data-en>All versions</span><span data-hu>Minden verzió</span></summary>
-      <table id="versions"><tr><th data-en>Version</th><th data-hu>Verzió</th><th data-en>Released</th><th data-hu>Kiadva</th><th data-en>Size</th><th data-hu>Méret</th><th>SHA-256</th></tr></table>
-      <p class="meta"><a href="CHANGELOG.md">CHANGELOG.md</a></p>
-    </details>
-  </section>
-
-  <footer>
-    <p data-en>Unofficial community tool, not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC. MIT licence ·
-      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor">source code on GitHub</a></p>
-    <p data-hu>Nem hivatalos, közösségi program, nem áll kapcsolatban az Anthropic-kal. A „Claude” az Anthropic, PBC védjegye. MIT licenc ·
-      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor">forráskód a GitHubon</a></p>
-  </footer>
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">Two minutes from now, you'll know exactly where you stand.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Download free for</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Free. Forever.</b> Not a demo. Not a trial. Nothing locked.</p>
+  </div>
+</section>
 </main>
-<script>
-(function () {
-  var html = document.documentElement;
-  function setLang(l) {
-    html.lang = l;
-    document.getElementById('b-en').setAttribute('aria-pressed', l === 'en');
-    document.getElementById('b-hu').setAttribute('aria-pressed', l === 'hu');
-    renderNotes();
-  }
-  var manifest = null;
-  function mb(n) { return n ? (n / 1048576).toFixed(0) + ' MB' : ''; }
-  function day(s) { return s ? String(s).slice(0, 10) : ''; }
-  function renderNotes() {
-    if (!manifest) return;
-    var notes = manifest.notes || {};
-    var list = notes[html.lang] || notes.en || [];
-    var ul = document.getElementById('notes');
-    ul.textContent = '';
-    list.forEach(function (line) { var li = document.createElement('li'); li.textContent = line; ul.appendChild(li); });
-  }
-  document.getElementById('b-en').onclick = function () { setLang('en'); };
-  document.getElementById('b-hu').onclick = function () { setLang('hu'); };
 
-  fetch('manifest.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (m) {
-    manifest = m;
-    document.getElementById('version').textContent = m.version;
-    document.getElementById('nv').textContent = m.version;
-    document.getElementById('size').textContent = mb(m.bytes);
-    document.getElementById('date').textContent = day(m.last_updated);
-    document.getElementById('sha').textContent = m.sha256;
-    var a = document.getElementById('download');
-    if (/^https:\/\//.test(m.download_url)) a.href = m.download_url;
-    renderNotes();
-  }).catch(function () { document.getElementById('version').textContent = '?'; });
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.6.0</span></p>
+      <p><span data-i18n="foot.made">Designed and built by</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Unofficial community tool, not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">MIT licence</a>
+      <a href="CHANGELOG.md" data-i18n="foot.changelog">Changelog</a>
+      <a href="#feedback" data-i18n="foot.contact">Contact</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Privacy Policy</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Imprint</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Terms of use</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Cookie settings</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">This page uses no cookies, no trackers and loads nothing from third parties.</p>
+</footer>
 
-  // the macOS build is published separately (its own manifest) - shown only when there is one
-  fetch('macos/manifest.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (m) {
-    if (!/^https:\/\//.test(m.download_url)) return;
-    document.getElementById('download-mac').href = m.download_url;
-    document.getElementById('mac-version').textContent = m.version;
-    document.getElementById('mac-size').textContent = mb(m.bytes);
-    document.getElementById('mac-date').textContent = day(m.last_updated);
-    document.getElementById('mac-arch').textContent = m.arch === 'arm64' ? 'Apple Silicon' : (m.arch === 'x86_64' ? 'Intel' : (m.arch || ''));
-    document.getElementById('mac-sha').textContent = m.sha256;
-    document.getElementById('mac-row').hidden = false;
-  }).catch(function () {});
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Close">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">The legal texts are available in Hungarian and English. The Hungarian version is authoritative.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
 
-  fetch('versions.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
-    var table = document.getElementById('versions');
-    (v.versions || []).forEach(function (x) {
-      var tr = document.createElement('tr');
-      var link = document.createElement('a');
-      link.textContent = x.version;
-      if (/^https:\/\//.test(x.download_url)) link.href = x.download_url;
-      var cells = [link, day(x.released), mb(x.bytes), x.sha256];
-      cells.forEach(function (c, i) {
-        var td = document.createElement('td');
-        if (i === 3) td.className = 'sha';
-        if (typeof c === 'string') td.textContent = c; else td.appendChild(c);
-        tr.appendChild(td);
-      });
-      table.appendChild(tr);
-    });
-  }).catch(function () {});
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Yes, unsubscribe me</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Close</span></button></form>
+    </div>
+  </div>
+</dialog>
 
-  setLang((navigator.language || 'en').toLowerCase().indexOf('hu') === 0 ? 'hu' : 'en');
-})();
-</script>
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookies – your choice</h2>
+  <p data-i18n="ck.p">The page works fully without cookies. With your permission, Google measurement helps the author see how many people visit. Nothing is loaded until you agree.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Necessary – remembering your language and this choice (no cookies, local storage only)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Statistics – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Marketing – Google Ads conversion measurement</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Reject</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Settings</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Save my choice</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Accept all</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Privacy Policy</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% FREE</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Send link to my computer</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script src="assets/site.js?v=4" defer></script>
 </body>
 </html>

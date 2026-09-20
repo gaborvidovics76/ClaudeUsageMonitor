@@ -1,0 +1,4 @@
+# text fragments shown inside the page's dialog - not pages of their own
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex"
+</IfModule>

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="cs" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – widget zdarma pro Windows a macOS</title>
+<meta name="description" content="Claude Usage Monitor zdarma (open source) pro Windows a macOS: limity využití Claude živě – 5hodinové okno, týdenní limit, reset a upozornění.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dinorr.hu/claude-usage-monitor/cs/">
+<link rel="alternate" hreflang="en" href="https://dinorr.hu/claude-usage-monitor/">
+<link rel="alternate" hreflang="hu" href="https://dinorr.hu/claude-usage-monitor/hu/">
+<link rel="alternate" hreflang="de" href="https://dinorr.hu/claude-usage-monitor/de/">
+<link rel="alternate" hreflang="fr" href="https://dinorr.hu/claude-usage-monitor/fr/">
+<link rel="alternate" hreflang="es" href="https://dinorr.hu/claude-usage-monitor/es/">
+<link rel="alternate" hreflang="it" href="https://dinorr.hu/claude-usage-monitor/it/">
+<link rel="alternate" hreflang="pt" href="https://dinorr.hu/claude-usage-monitor/pt/">
+<link rel="alternate" hreflang="pl" href="https://dinorr.hu/claude-usage-monitor/pl/">
+<link rel="alternate" hreflang="nl" href="https://dinorr.hu/claude-usage-monitor/nl/">
+<link rel="alternate" hreflang="ru" href="https://dinorr.hu/claude-usage-monitor/ru/">
+<link rel="alternate" hreflang="cs" href="https://dinorr.hu/claude-usage-monitor/cs/">
+<link rel="alternate" hreflang="tr" href="https://dinorr.hu/claude-usage-monitor/tr/">
+<link rel="alternate" hreflang="x-default" href="https://dinorr.hu/claude-usage-monitor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – widget využití zdarma pro Windows a macOS">
+<meta property="og:description" content="5hodinové okno, týdenní limit a tempo Claude jediným pohledem – včetně toho, co využiješ v telefonu a v prohlížeči. Vždy navrchu, open source. 100% zdarma.">
+<meta property="og:url" content="https://dinorr.hu/claude-usage-monitor/cs/">
+<meta property="og:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – widget využití zdarma pro Windows a macOS">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – widget využití zdarma pro Windows a macOS">
+<meta name="twitter:description" content="5hodinové okno, týdenní limit a tempo Claude jediným pohledem – včetně toho, co využiješ v telefonu a v prohlížeči. Vždy navrchu, open source. 100% zdarma.">
+<meta name="twitter:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dinorr.hu/claude-usage-monitor/#site","name":"Claude Usage Monitor","url":"https://dinorr.hu/claude-usage-monitor/","inLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"],"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"WebPage","@id":"https://dinorr.hu/claude-usage-monitor/cs/#page","url":"https://dinorr.hu/claude-usage-monitor/cs/","name":"Claude Usage Monitor – widget zdarma pro Windows a macOS","description":"Claude Usage Monitor zdarma (open source) pro Windows a macOS: limity využití Claude živě – 5hodinové okno, týdenní limit, reset a upozornění.","inLanguage":"cs","isPartOf":{"@id":"https://dinorr.hu/claude-usage-monitor/#site"},"about":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"mainEntity":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"primaryImageOfPage":"https://dinorr.hu/claude-usage-monitor/img/og.png","dateModified":"2026-09-20","author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"SoftwareApplication","@id":"https://dinorr.hu/claude-usage-monitor/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor je bezplatný open-source widget na plochu pro Windows 10/11 a macOS, který v reálném čase ukazuje limity využití předplatitele Claude: 5hodinové okno, týdenní limit a týdenní limit modelu, s odpočtem do každého resetu, tempem, rychlostí čerpání a upozorněními. Pokrývá claude.ai, Claude Desktop a Claude Code na všech zařízeních a nepotřebuje terminál.","url":"https://dinorr.hu/claude-usage-monitor/cs/","inLanguage":"cs","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.6.0","dateModified":"2026-09-18T14:27:09Z","downloadUrl":"https://dinorr.hu/cum-api/dl.php?os=win","installUrl":"https://dinorr.hu/claude-usage-monitor/cs/#download","fileSize":"46 MB","releaseNotes":"https://dinorr.hu/claude-usage-monitor/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"image":"https://dinorr.hu/claude-usage-monitor/img/og.png","screenshot":["https://dinorr.hu/claude-usage-monitor/img/panel-full-midnight.png","https://dinorr.hu/claude-usage-monitor/img/ring-neon.png","https://dinorr.hu/claude-usage-monitor/img/compact-claude.png"],"featureList":["Vidíš to přicházet","Nečerpáš moc rychle?","Všechna zařízení, jedno číslo","Limity podle modelů","Jen upozornění, na kterých záleží","Nešpehuje. Tečka."],"availableLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"]},{"@type":"Person","@id":"https://dinorr.hu/claude-usage-monitor/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://dinorr.hu/claude-usage-monitor/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://dinorr.hu/claude-usage-monitor/cs/#faq","inLanguage":"cs","mainEntity":[{"@type":"Question","name":"Je to opravdu zdarma? Kde je háček?","acceptedAnswer":{"@type":"Answer","text":"Opravdu zdarma a žádný háček v tom není. Není to demo, zkušební verze ani ořezaná edice – je to plná a jediná verze. Žádné reklamy, žádný placený tarif, žádný sběr dat. Zdrojový kód je veřejný pod licencí MIT."}},{"@type":"Question","name":"Je to oficiální produkt Anthropic?","acceptedAnswer":{"@type":"Answer","text":"Ne. Je to nezávislý komunitní nástroj, který vytvořil Gábor Vidovics. S Anthropic není nijak spojen. „Claude“ je ochranná známka společnosti Anthropic, PBC."}},{"@type":"Question","name":"Musím aplikaci dát svoje heslo?","acceptedAnswer":{"@type":"Answer","text":"Nikdy. Bez přihlášení čte místní protokol Claude Desktop. Pokud chceš vidět všechna zařízení, přihlásíš se na claude.ai ve vlastním prohlížeči – aplikace tvoje heslo nikdy neuvidí."}},{"@type":"Question","name":"Windows mě při spuštění varuje. Proč?","acceptedAnswer":{"@type":"Answer","text":"Protože aplikace není digitálně podepsaná (certifikáty stojí peníze a aplikace je zdarma). Klikni na Další informace → Přesto spustit. Stažený soubor si můžeš ověřit kontrolním součtem SHA-256 a zdrojový kód si přečíst na GitHubu."}},{"@type":"Question","name":"Které Macy jsou podporované?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 nebo novější. Karta pro stažení výše vždy ukazuje, pro jaký procesor je aktuální sestavení určené. Verze pro macOS je nová – zpětná vazba je moc vítaná."}},{"@type":"Question","name":"Jak fungují aktualizace?","acceptedAnswer":{"@type":"Answer","text":"Aplikace se několikrát denně podívá na tento web. Když vyjde nová verze, dá ti vědět; jedním kliknutím ji stáhne, ověří a nainstaluje a pak se restartuje. Dá se to vypnout."}},{"@type":"Question","name":"Jak ji odstraním?","acceptedAnswer":{"@type":"Answer","text":"Windows: Nastavení → Aplikace → Nainstalované aplikace → Claude Usage Monitor → Odinstalovat. macOS: přetáhni aplikaci do Koše. To je všechno."}},{"@type":"Question","name":"Jak zjistím využití Claude, aniž bych otevíral nastavení?","acceptedAnswer":{"@type":"Answer","text":"Nainstaluj si Claude Usage Monitor: 5hodinové okno, týdenní limit a týdenní limit modelu ti drží pořád na obrazovce – jako malý widget vždy navrchu a jako procento v oznamovací oblasti nebo v řádku nabídek. Vlastní čísla Claude najdeš v „Settings → Usage“ (Nastavení → Využití); widget ukazuje stejné limity bez jediného kliknutí."}},{"@type":"Question","name":"Kdy se resetuje 5hodinové okno Claude a kdy týdenní limit?","acceptedAnswer":{"@type":"Answer","text":"Limit vázaný na relaci se resetuje každých pět hodin. Týdenní limit se resetuje každý týden v pevný čas, který tvému účtu přiřadí Anthropic, takže ho má každý jinak. Widget živě odpočítává čas do obou resetů – při přihlášení přes claude.ai používá přesné časy ze serveru Anthropic."}},{"@type":"Question","name":"Počítá se využití Claude Code do limitu na claude.ai?","acceptedAnswer":{"@type":"Answer","text":"Ano. Podle Anthropic se využití na claude.ai, v Claude Desktop a v Claude Code počítá do stejného limitu využití. Proto widget v režimu claude.ai ukazuje jedno číslo pro všechna tvoje zařízení a aplikace, ne jen pro počítač, na kterém běží."}},{"@type":"Question","name":"Je to totéž co „Claude Code Usage Monitor“?","acceptedAnswer":{"@type":"Answer","text":"Ne. „Claude Code Usage Monitor“ je samostatný terminálový nástroj jiného autora. Claude Usage Monitor od Gábora Vidovicse je grafický widget na plochu pro Windows a macOS s ikonou v oznamovací oblasti, motivy a upozorněními a příkazový řádek nepotřebuje."}}]},{"@type":"DefinedTermSet","@id":"https://dinorr.hu/claude-usage-monitor/cs/#glossary","name":"Klíčové pojmy, přesně definované","inLanguage":"cs","hasDefinedTerm":[{"@type":"DefinedTerm","name":"5hodinové okno (pětihodinová relace)","description":"Krátkodobý limit využití Claude. Limit vázaný na relaci se resetuje každých pět hodin. Anthropic mu říká „current session“ (aktuální relace); mnoho uživatelů mu říká 5hodinové okno nebo 5hodinový limit.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Týdenní limit","description":"Druhý strop u placených tarifů Claude. Platí napříč všemi modely a resetuje se každý týden v pevný čas, který je přiřazený tvému účtu. Týdenní limity platí od 28. srpna 2025.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Týdenní limit modelu","description":"Samostatný týdenní strop pro jeden konkrétní model. Na stránce využití v Claude je uvedený vedle limitu pro všechny ostatní modely. Widget ho ukazuje jako třetí ukazatel pro model, který si zvolíš.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Reset","description":"Okamžik, kdy se limit vrátí na 0 %. Widget k němu odpočítává čas. Při přihlášení přes claude.ai přichází přesný čas ze serveru Anthropic; u místního protokolu jde o odhad.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Tempo","description":"O kolik jsi napřed nebo pozadu oproti rovnoměrně využitému týdnu. „+12 % oproti tempu“ znamená, že jsi z týdenního limitu využil o 12 procentních bodů víc, než kolik činí podíl týdne, který už uplynul.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Rychlost čerpání (burn rate)","description":"Jak rychle se limit plní právě teď – v procentech za hodinu u 5hodinového okna, v procentech za den u týdne – a kdy by při této rychlosti dosáhl 100 %.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"},{"@type":"DefinedTerm","name":"Kredity za využití (extra využití)","description":"Volitelné využití placené podle skutečné spotřeby poté, co vyčerpáš limity svého tarifu, s měsíčním stropem útraty. Widget ukazuje, jestli je zapnuté, jaký je strop a kolik jsi už utratil.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/cs/#glossary"}]}]}</script>
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=5">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Přejít k obsahu</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Funkce</a>
+      <a href="#themes" data-i18n="nav.themes">Motivy</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Co je nového</a>
+      <a href="#faq" data-i18n="nav.faq">Časté dotazy</a>
+      <a href="#feedback" data-i18n="nav.feedback">Zpětná vazba</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">CS</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="es" lang="es" href="../es/" data-lang="es">Español <span>es</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="pt" lang="pt" href="../pt/" data-lang="pt">Português <span>pt</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" aria-current="page" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Stáhnout zdarma</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% ZDARMA</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Verze</span> <span data-win="version">2.6.0</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – widget využití zdarma pro Windows a macOS</span> <span data-i18n="hero.h1">Limit Claude tě už nikdy <em>nezaskočí.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">Malý widget vždy navrchu, který ti živě ukazuje využití Claude – 5hodinové okno, týdenní limit a tempo. I to, co ti z limitu ukousne telefon. Pro Windows a macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Tvůj systém</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Tvůj systém</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Zdarma. Napořád.</b> Žádné demo. Žádná zkušební verze. Nic zamčeného.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">stažení z této stránky</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">Je to aplikace pro počítač – pošli si odkaz do počítače</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Widget Claude Usage Monitor: 5hodinové okno na 47 %, týdenní limit modelu na 61 % a týdenní limit na 23 %">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Skutečné snímky obrazovky z aplikace, s ukázkovými čísly.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% ZDARMA</span><i>✦</i><span data-i18n="mq.2">ŽÁDNÉ DEMO</span><i>✦</i><span data-i18n="mq.3">NIC ZAMČENÉHO</span><i>✦</i><span data-i18n="mq.4">BEZ REKLAM</span><i>✦</i><span data-i18n="mq.5">BEZ REGISTRACE</span><i>✦</i><span data-i18n="mq.6">BEZ SLEDOVÁNÍ</span><i>✦</i><span data-i18n="mq.7">OPEN SOURCE</span><i>✦</i><span data-i18n="mq.8">12 JAZYKŮ</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Zdarma napořád</b><span data-i18n="trust.1d">Plná verze. Placená vůbec neexistuje.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Open source</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">Licence MIT – každý řádek si přečteš na GitHubu</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Soukromí</b><span data-i18n="trust.3d">Žádná telemetrie, žádné reklamy, žádné cookies.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Aktualizuje se sama</b><span data-i18n="trust.4d">Ověřeno přes SHA-256, jedním kliknutím.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Víc než čtečka místních protokolů</p>
+  <h2 data-i18n="more.h2">Limit ti ujídá i telefon. <em>Teď to vidíš – přímo na ploše.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Spousta nástrojů na sledování využití čte soubory protokolů ve tvém počítači, takže ví jen to, kolik využil <b>tenhle jeden počítač</b>. Claude Usage Monitor se místo toho umí zeptat serveru Anthropic – a ukáže skutečné číslo za celý účet: počítá se všechno, co využiješ v aplikaci v telefonu, v prohlížeči, na jiném počítači i v Claude Code, a ty to vidíš na jednom místě – na své ploše.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Aplikace Claude v telefonu</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai v prohlížeči</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Tvůj druhý počítač</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code a Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="Jeden widget Claude Usage Monitor ukazující souhrnné využití ze všech zařízení">
+      <figcaption data-i18n="more.sum">Jedno skutečné číslo za celý účet – pořád na očích.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Nástroje, které čtou jen místní protokoly</h3>
+      <ul data-i18n="more.a_li"><li class="no">Co využiješ v telefonu – neviditelné</li><li class="no">Co využiješ v prohlížeči – neviditelné</li><li class="no">Tvoje další počítače – neviditelné</li><li class="yes">Claude Code na tomhle jednom počítači</li><li class="no">Časy resetu jen odhadují</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor se zdrojem claude.ai</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Telefon, prohlížeč, každý počítač – všechno započítané</li><li class="yes">Včetně Claude Code a Claude Desktop</li><li class="yes">Stejná čísla, jaká ukazuje sám Claude v „Settings → Usage“ (Nastavení → Využití)</li><li class="yes">Přesné časy resetu ze serveru Anthropic</li><li class="yes">Funguje i bez přihlášení – z místního protokolu</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Jak na to: zvol zdroj dat „claude.ai (všechna zařízení)“ a jednou se přihlas ve vlastním prohlížeči – stejné přihlášení používá i Claude Code; aplikace tvoje heslo nikdy neuvidí. Bez přihlášení čte widget místní protokol Claude Desktop, který pokrývá jen tento počítač.</p>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Co je Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor je bezplatný open-source widget na plochu pro Windows 10/11 a macOS, který v reálném čase ukazuje limity využití tvého předplatného Claude</b> – 5hodinové okno, týdenní limit a týdenní limit modelu, u každého i čas zbývající do resetu. Drží se nad ostatními okny, takže využití Claude zkontroluješ, aniž bys otevíral „Settings → Usage“ (Nastavení → Využití), a bez terminálu.</p>
+  <p class="about__def" data-i18n="about.p2">Jedna aplikace pro Windows i Mac. Pokrývá všechno, co se počítá do tvého tarifu – claude.ai, Claude Desktop a Claude Code, na všech tvých zařízeních. Není to terminálový nástroj „Claude Code Usage Monitor“: tohle je grafický panel s ikonou v oznamovací oblasti a příkazový řádek nepotřebuje.</p>
+  <p class="fine about__meta"><span data-i18n="about.updated">Naposledy aktualizováno</span>: <time data-win="date">2026-09-18</time> · <span data-i18n="dls.version">Verze</span> <span data-win="version">2.6.0</span> · <span data-i18n="about.by">autor:</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Klíčové pojmy, přesně definované</summary>
+    <dl>
+      <dt data-i18n="gl.1t">5hodinové okno (pětihodinová relace)</dt>
+      <dd data-i18n="gl.1d">Krátkodobý limit využití Claude. Limit vázaný na relaci se resetuje každých pět hodin. Anthropic mu říká „current session“ (aktuální relace); mnoho uživatelů mu říká 5hodinové okno nebo 5hodinový limit.</dd>
+      <dt data-i18n="gl.2t">Týdenní limit</dt>
+      <dd data-i18n="gl.2d">Druhý strop u placených tarifů Claude. Platí napříč všemi modely a resetuje se každý týden v pevný čas, který je přiřazený tvému účtu. Týdenní limity platí od 28. srpna 2025.</dd>
+      <dt data-i18n="gl.3t">Týdenní limit modelu</dt>
+      <dd data-i18n="gl.3d">Samostatný týdenní strop pro jeden konkrétní model. Na stránce využití v Claude je uvedený vedle limitu pro všechny ostatní modely. Widget ho ukazuje jako třetí ukazatel pro model, který si zvolíš.</dd>
+      <dt data-i18n="gl.4t">Reset</dt>
+      <dd data-i18n="gl.4d">Okamžik, kdy se limit vrátí na 0 %. Widget k němu odpočítává čas. Při přihlášení přes claude.ai přichází přesný čas ze serveru Anthropic; u místního protokolu jde o odhad.</dd>
+      <dt data-i18n="gl.5t">Tempo</dt>
+      <dd data-i18n="gl.5d">O kolik jsi napřed nebo pozadu oproti rovnoměrně využitému týdnu. „+12 % oproti tempu“ znamená, že jsi z týdenního limitu využil o 12 procentních bodů víc, než kolik činí podíl týdne, který už uplynul.</dd>
+      <dt data-i18n="gl.6t">Rychlost čerpání (burn rate)</dt>
+      <dd data-i18n="gl.6d">Jak rychle se limit plní právě teď – v procentech za hodinu u 5hodinového okna, v procentech za den u týdne – a kdy by při této rychlosti dosáhl 100 %.</dd>
+      <dt data-i18n="gl.7t">Kredity za využití (extra využití)</dt>
+      <dd data-i18n="gl.7d">Volitelné využití placené podle skutečné spotřeby poté, co vyčerpáš limity svého tarifu, s měsíčním stropem útraty. Widget ukazuje, jestli je zapnuté, jaký je strop a kolik jsi už utratil.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Co získáš</p>
+  <h2 data-i18n="feat.h2">Všechny tvoje limity využití Claude. Jediným pohledem.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Vidíš to přicházet</h3>
+        <p data-i18n="feat.1d">Zelená, žlutá, červená. Panel mění barvu dlouho předtím, než ti limit dojde – s odpočtem do resetu a odhadem, kdy bys narazil na 100 %.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Využití Claude na 78 % – widget zežloutne"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Využití Claude na 94 % – widget zčervená"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Nečerpáš moc rychle?</h3>
+      <p data-i18n="feat.2d">Ukazatel tempa ti řekne, jestli tvůj týdenní limit taje rychleji, než utíká týden – a spočítá, kde nakonec skončíš.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Všechna zařízení, jedno číslo</h3>
+      <p data-i18n="feat.3d">Přihlas se ve vlastním prohlížeči – stejně jako to dělá Claude Code – a uvidíš i využití z telefonu, prohlížeče a všech ostatních počítačů.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Limity podle modelů</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, extra využití – každý limit, který server hlásí, plus rozdělení tohoto týdne mezi modely.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Jen upozornění, na kterých záleží</h3>
+      <p data-i18n="feat.5d">Tiché oznámení při 70 % a 90 % (hranice si zvolíš) a ve chvíli, kdy se limit resetuje. Nic dalšího. Nikdy.</p>
+    </article>
+    <article class="cell cell--wide reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Nešpehuje. Tečka.</h3>
+      <p data-i18n="feat.6d">Žádná telemetrie, žádná analytika, žádný účet u nás. Aplikace komunikuje jen s Anthropic a jen kvůli tvým vlastním číslům. Přihlašovací token zůstává zašifrovaný ve tvém počítači – Windows DPAPI nebo Klíčenka v macOS.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Ano, opravdu zdarma.</h2>
+      <p data-i18n="band1.p">Žádná tikající zkušební doba. Žádné vnucování „Pro“ verze. Žádný háček. Stáhneš a je tvoje.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Jen pro zvědavé</p>
+  <h2 data-i18n="tabs.h2">Podrobnosti – až je budeš chtít.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Co ukazuje</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Odkud bere data</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Soukromí a bezpečnost</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Ovládání</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Nastavení</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Srovnání</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5hodinové okno</b> – aktuální %, odpočet do resetu, rychlost čerpání (%/hod) a kdy by se zaplnilo.</li><li><b>Týdenní limit</b> – aktuální %, čas do týdenního resetu, denní rychlost čerpání a tvoje tempo oproti rovnoměrnému týdnu.</li><li><b>Týdenní limit modelu</b> – třetí ukazatel pro model, který sleduješ (výchozí je Fable).</li><li><b>Odznak tarifu</b> – PRO, MAX 5×, MAX 20×, TEAM nebo ENTERPRISE.</li><li><b>Okno historie</b> – grafy za 6 h / 24 h / 7 dní, týdenní maximum, denní průměr a odhad na konec týdne.</li><li><b>Ikona v oznamovací oblasti / řádku nabídek</b> – zvolené procento jako kroužek, podrobnosti po najetí myší.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Místní protokol <span class="chip">výchozí · bez přihlášení</span></h4><p>Čte protokol o využití, který si Claude Desktop ve tvém počítači stejně zapisuje. Nikam se nic neodesílá. Měří jen tento počítač, obnovuje se zhruba každých 5 minut.</p></div><div><h4>2 · claude.ai <span class="chip">všechna zařízení</span></h4><p>Stejné přihlášení přes prohlížeč, jaké používá Claude Code – žádný vestavěný prohlížeč, žádné heslo zadávané do aplikace. Přesné časy resetu přímo ze serveru, obnovení zhruba každé 2 minuty.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Žádná telemetrie.</b> Aplikace nemá žádnou analytiku a nikam „nevolá domů“ – jen na tomto webu kontroluje, jestli nevyšla novější verze.</li><li><b>Tvůj token zůstává tvůj.</b> Šifrovaný přes Windows DPAPI, nebo uložený v Klíčence macOS. Nikdy v obyčejném souboru.</li><li><b>Konverzace se nikdy nečtou.</b> Z místních protokolů se používá jen název modelu, počty tokenů a časové údaje.</li><li><b>Ověřené aktualizace.</b> Pouze HTTPS a každý stažený soubor se před instalací ověří proti SHA-256; když něco selže, vrátí se původní verze.</li><li><b>Open source.</b> Nevěř – ověř si to: celý zdrojový kód je na GitHubu pod licencí MIT.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Tažení</th><td>přesune panel (přichytává se k okrajům obrazovky)</td></tr><tr><th>Pravé tlačítko</th><td>nabídka: rozložení, motiv, velikost, jazyk, nastavení</td></tr><tr><th>Dvojklik</th><td>okno historie a statistik</td></tr><tr><th>Ctrl + kolečko</th><td>změna velikosti</td></tr><tr><th>Kliknutí na ikonu v oznamovací oblasti</th><td>skryje / zobrazí panel</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Vzhled</b> – 6 motivů, vlastní barva zvýraznění, 3 rozložení, velikost, průhlednost, vždy navrchu, zamknutí pozice, průchozí pro kliknutí.</li><li><b>Obsah</b> – které ukazatele, jejich pořadí a velikost, křivka trendu, rychlost čerpání, odpočet.</li><li><b>Upozornění</b> – varovná a kritická hranice (výchozí 70 % / 90 %), oznámení o resetu a o zastaralých datech.</li><li><b>Systém</b> – spouštění se startem počítače, automatické aktualizace, 12 jazyků.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Stránka „Settings → Usage“ (Nastavení → Využití) přímo v Claude</th><th>Terminálové nástroje, které čtou protokoly Claude Code</th></tr><tr><th>Pořád na očích, když pracuješ</th><td>Ano – widget vždy navrchu a ikona v oznamovací oblasti</td><td>Ne – musíš ji otevřít</td><td>Jen v otevřeném terminálu</td></tr><tr><th>Windows a macOS</th><td>Ano, jedna aplikace pro oba systémy</td><td>Ano (webová stránka)</td><td>Různě, příkazový řádek</td></tr><tr><th>Potřebuje terminál</th><td>Ne</td><td>Ne</td><td>Ano</td></tr><tr><th>Počítá claude.ai, Claude Desktop a Claude Code na všech zařízeních</th><td>Ano, s přihlášením přes claude.ai</td><td>Ano</td><td>Ne – jen Claude Code na tomto počítači</td></tr><tr><th>Tempo, rychlost čerpání a odhad na konec týdne</th><td>Ano</td><td>Ne</td><td>Některé</td></tr><tr><th>Upozornění na vlastních hranicích</th><td>Ano (výchozí 70 % / 90 %)</td><td>Ne</td><td>Zřídka</td></tr><tr><th>Cena</th><td>Zdarma, open source (MIT)</td><td>V ceně tvého tarifu</td><td>Většinou zdarma</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Přizpůsob si ho</p>
+    <h2 data-i18n="th.h2">6 motivů. 3 rozložení. Vyzkoušej je hned tady.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor ve zvoleném motivu a rozložení">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Motiv</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Půlnoční sklo</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Teplá tmavá Claude</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Grafit</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neon</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Světlý papír</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Žlutý lísteček</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Tmavě modré sklo s chladnou září. Výchozí motiv – klidný, čitelný, doma na každé tmavé ploše.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Rozložení</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Karta</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Kroužky</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Úzká lišta</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">K tomu vlastní barva zvýraznění, velikost od 70 % do 200 % a průhlednost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Cena</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Zdarma. Celé. Napořád.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Plná verze – jiná neexistuje</li><li>Žádné demo, žádná zkušební verze, žádné časové omezení</li><li>Žádný tarif „Pro“, žádné zamčené funkce</li><li>Bez reklam, bez registrace, bez sběru dat</li><li>Aktualizace zdarma a automaticky</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Stažení</p>
+    <h2 data-i18n="dls.h2">Vždy nejnovější verze. Vždy zdarma.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">ZDARMA</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Stáhnout pro Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Verze</span> <b data-win="version">2.6.0</b> · <span data-win="size">46 MB</span> · <span data-win="date">2026-09-18</span></p>
+        <details><summary data-i18n="dls.how">Jak nainstalovat (3 kroky)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Rozbal celý zip</b> (pravé tlačítko → Extrahovat vše…).</li><li>Dvakrát klikni na <code>INSTALL.bat</code>.</li><li>Odpověz na dvě otázky – Enter potvrdí doporučenou odpověď. Hotovo.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Práva správce nejsou potřeba. Pokud Windows zobrazí „Systém Windows ochránil váš počítač“: Další informace → Přesto spustit. Aplikace je open source, ale není digitálně podepsaná.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Ověř stažený soubor (SHA-256)</summary><code class="sha" data-win="sha">aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">ZDARMA</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Stáhnout pro macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Verze</span> <b data-mac="version">2.6.0</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-18</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">Verze pro macOS je na cestě – brzy se sem zase podívej.</p>
+        <details><summary data-i18n="dls.how">Jak nainstalovat (3 kroky)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Otevři zip a přetáhni <b>ClaudeUsageMonitor</b> do složky <b>Aplikace</b>.</li><li>První spuštění: <b>pravé tlačítko → Otevřít</b> (aplikace není notarizovaná společností Apple).</li><li>Najdi ikonu v řádku nabídek. Hotovo.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Ověř stažený soubor (SHA-256)</summary><code class="sha" data-mac="sha">371c224acf6f4f22fdb3cd7da43544f7789a6a061f7f7a14b136a58f7cf4ffe6</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">stažení z této stránky</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Tato tlačítka vždy vedou na nejnovější vydání – a po instalaci se už aplikace udržuje aktuální sama.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Aktivně vyvíjeno</p>
+  <h2><span data-i18n="new.h2">Co je nového ve verzi</span> <span class="grad" data-win="version">2.6.0</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Poznámky k vydání se píšou anglicky a maďarsky.</p>
+  <ul class="notes" id="notes"><li>New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.</li><li>The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.</li><li>For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.</li><li>A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Starší verze</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Nech si poslat e-mail, až vyjde nová verze</h3>
+      <p data-i18n="sub.p">Jen novinky o vydáních – pár krátkých řádků na verzi. Žádný marketing, nikdy. Odhlásíš se jedním kliknutím.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Dej mi vědět</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">Souhlasím s tím, aby byla moje e-mailová adresa použita k zasílání oznámení o nových verzích, jak je popsáno v <a href="#privacy" data-legal="privacy">Zásadách ochrany osobních údajů</a>. Souhlas mohu kdykoli odvolat.</span></label>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Pro koho to je</p>
+    <h2 data-i18n="who.h2">Poznáváš se? Pak se ti bude líbit.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Vývojáři s Claude Code</b><span data-i18n="who.1d">Dlouhé agentní seance spolykají 5hodinové okno rychle. Uvidíš to dřív, než tě limit zastaví uprostřed úkolu.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Předplatitelé Pro a Max</b><span data-i18n="who.2d">Vytěž maximum z toho, za co platíš – a nenaraz ve čtvrtek do zdi.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Lidé s mnoha zařízeními</b><span data-i18n="who.3d">Telefon, prohlížeč, notebook, stolní počítač: jedno poctivé číslo pro všechno.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Každý, kdo má rád uklizenou plochu</b><span data-i18n="who.4d">Malý, pěkný panel, který nepřekáží – nebo se smrskne do úzké lišty.</span></div>
+    </div>
+
+    <div id="testimonials" class="quotes" hidden></div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">„Udělal jsem to pro sebe, protože jsem uprostřed práce pořád narážel na limit. Pak jsem to piloval tak dlouho, až mě bavilo se na to dívat celý den. Je to zdarma, protože takový nástroj zdarma být má – používej ho, užívej si ho a napiš mi, co si o něm myslíš.“</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">autor a vývojář Claude Usage Monitor · Maďarsko</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Zdrojový kód na GitHubu</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Napiš mi</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Otázky k limitům využití Claude – krátké odpovědi.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Je to opravdu zdarma? Kde je háček?</summary><p data-i18n="faq.a1">Opravdu zdarma a žádný háček v tom není. Není to demo, zkušební verze ani ořezaná edice – je to plná a jediná verze. Žádné reklamy, žádný placený tarif, žádný sběr dat. Zdrojový kód je veřejný pod licencí MIT.</p></details>
+    <details><summary data-i18n="faq.q8">Jak zjistím využití Claude, aniž bych otevíral nastavení?</summary><p data-i18n="faq.a8">Nainstaluj si Claude Usage Monitor: 5hodinové okno, týdenní limit a týdenní limit modelu ti drží pořád na obrazovce – jako malý widget vždy navrchu a jako procento v oznamovací oblasti nebo v řádku nabídek. Vlastní čísla Claude najdeš v „Settings → Usage“ (Nastavení → Využití); widget ukazuje stejné limity bez jediného kliknutí.</p></details>
+    <details><summary data-i18n="faq.q9">Kdy se resetuje 5hodinové okno Claude a kdy týdenní limit?</summary><p data-i18n="faq.a9">Limit vázaný na relaci se resetuje každých pět hodin. Týdenní limit se resetuje každý týden v pevný čas, který tvému účtu přiřadí Anthropic, takže ho má každý jinak. Widget živě odpočítává čas do obou resetů – při přihlášení přes claude.ai používá přesné časy ze serveru Anthropic.</p></details>
+    <details><summary data-i18n="faq.q10">Počítá se využití Claude Code do limitu na claude.ai?</summary><p data-i18n="faq.a10">Ano. Podle Anthropic se využití na claude.ai, v Claude Desktop a v Claude Code počítá do stejného limitu využití. Proto widget v režimu claude.ai ukazuje jedno číslo pro všechna tvoje zařízení a aplikace, ne jen pro počítač, na kterém běží.</p></details>
+    <details><summary data-i18n="faq.q11">Je to totéž co „Claude Code Usage Monitor“?</summary><p data-i18n="faq.a11">Ne. „Claude Code Usage Monitor“ je samostatný terminálový nástroj jiného autora. Claude Usage Monitor od Gábora Vidovicse je grafický widget na plochu pro Windows a macOS s ikonou v oznamovací oblasti, motivy a upozorněními a příkazový řádek nepotřebuje.</p></details>
+    <details><summary data-i18n="faq.q2">Je to oficiální produkt Anthropic?</summary><p data-i18n="faq.a2">Ne. Je to nezávislý komunitní nástroj, který vytvořil Gábor Vidovics. S Anthropic není nijak spojen. „Claude“ je ochranná známka společnosti Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Musím aplikaci dát svoje heslo?</summary><p data-i18n="faq.a3">Nikdy. Bez přihlášení čte místní protokol Claude Desktop. Pokud chceš vidět všechna zařízení, přihlásíš se na claude.ai ve vlastním prohlížeči – aplikace tvoje heslo nikdy neuvidí.</p></details>
+    <details><summary data-i18n="faq.q4">Windows mě při spuštění varuje. Proč?</summary><p data-i18n="faq.a4">Protože aplikace není digitálně podepsaná (certifikáty stojí peníze a aplikace je zdarma). Klikni na Další informace → Přesto spustit. Stažený soubor si můžeš ověřit kontrolním součtem SHA-256 a zdrojový kód si přečíst na GitHubu.</p></details>
+    <details><summary data-i18n="faq.q5">Které Macy jsou podporované?</summary><p data-i18n="faq.a5">macOS 12 nebo novější. Karta pro stažení výše vždy ukazuje, pro jaký procesor je aktuální sestavení určené. Verze pro macOS je nová – zpětná vazba je moc vítaná.</p></details>
+    <details><summary data-i18n="faq.q6">Jak fungují aktualizace?</summary><p data-i18n="faq.a6">Aplikace se několikrát denně podívá na tento web. Když vyjde nová verze, dá ti vědět; jedním kliknutím ji stáhne, ověří a nainstaluje a pak se restartuje. Dá se to vypnout.</p></details>
+    <details><summary data-i18n="faq.q7">Jak ji odstraním?</summary><p data-i18n="faq.a7">Windows: Nastavení → Aplikace → Nainstalované aplikace → Claude Usage Monitor → Odinstalovat. macOS: přetáhni aplikaci do Koše. To je všechno.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Napiš autorovi</p>
+      <h2 data-i18n="fb.h2">Nápad? Chyba? Nebo se ti prostě líbí? Napiš mi.</h2>
+      <p data-i18n="fb.p">Tvoje zpráva jde přímo ke mně, Gáboru Vidovicsovi. Čtu každou. E-mailovou adresu uveď jen tehdy, když chceš odpověď.</p>
+      <p class="fine" data-i18n="fb.privacy">Tvoje zpráva se použije pouze k tomu, abych ti odpověděl a vylepšil aplikaci – podrobnosti najdeš v <a href="#privacy" data-legal="privacy">Zásadách ochrany osobních údajů</a>.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Jméno</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-mail</span> <i data-i18n="fb.optional">(nepovinné)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">Čeho se zpráva týká?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Zpětná vazba</option>
+          <option value="idea" data-i18n="fb.t_idea">Nápad / návrh funkce</option>
+          <option value="bug" data-i18n="fb.t_bug">Hlášení chyby</option>
+          <option value="recommend" data-i18n="fb.t_rec">Doporučuji! (reference)</option>
+          <option value="other" data-i18n="fb.t_other">Něco jiného</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Zpráva</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Souhlasím se zveřejněním mé zprávy na této stránce jako doporučení (pouze s mým jménem).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Odeslat zprávu</span></button>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">Za dvě minuty budeš přesně vědět, jak na tom jsi.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Stáhnout zdarma pro</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Zdarma. Napořád.</b> Žádné demo. Žádná zkušební verze. Nic zamčeného.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.6.0</span></p>
+      <p><span data-i18n="foot.made">Navrhl a vytvořil</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Neoficiální komunitní nástroj, který není nijak spojen s Anthropic. „Claude“ je ochranná známka společnosti Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">Licence MIT</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">Seznam změn</a>
+      <a href="#feedback" data-i18n="foot.contact">Kontakt</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Zásady ochrany osobních údajů</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Provozovatel</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Podmínky použití</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Nastavení cookies</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Tato stránka nepoužívá žádné cookies ani sledovací nástroje a nenačítá nic od třetích stran.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Zavřít">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">Právní texty jsou k dispozici v maďarštině a angličtině. Rozhodující je maďarské znění.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Ano, odhlásit</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Zavřít</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookies – volba je na tobě</h2>
+  <p data-i18n="ck.p">Stránka plně funguje i bez cookies. S tvým souhlasem pomáhá měření Google autorovi zjistit, kolik lidí web navštěvuje. Dokud nedáš souhlas, nic se nenačítá.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Nezbytné – zapamatování jazyka a této volby (žádné cookies, pouze místní úložiště prohlížeče)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Statistické – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Marketingové – měření konverzí Google Ads</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Odmítnout</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Nastavení</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Uložit moji volbu</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Přijmout vše</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Zásady ochrany osobních údajů</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% ZDARMA</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Poslat odkaz do mého počítače</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script src="../assets/site.js?v=4" defer></script>
+</body>
+</html>

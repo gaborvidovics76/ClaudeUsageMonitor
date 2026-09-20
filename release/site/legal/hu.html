@@ -1,0 +1,74 @@
+<!-- Jogi szövegek (magyar – ez az irányadó változat). A {{…}} helyére a config.json "legal" blokkjának értékei kerülnek. -->
+<section data-doc="privacy" data-title="Adatkezelési tájékoztató">
+<p><b>Hatályos:</b> {{effective}}-tól/-től. Röviden: ez az oldal és a program a lehető legkevesebb adatot kezeli. Nincs regisztráció, nincs profilalkotás, nincs adateladás.</p>
+
+<h3>1. Ki az adatkezelő?</h3>
+<p><b>{{controller_name}}</b><br>Cím: {{controller_address}}<span data-opt="controller_tax"><br>Adószám / nyilvántartási szám: {{controller_tax}}</span><br>
+Kapcsolat: az oldal „Üzenet a készítőnek” űrlapján<span data-opt="contact_email">, vagy e-mailben: {{contact_email}}</span>. Adatvédelmi tisztviselő kijelölése nem kötelező, ezért nincs.</p>
+
+<h3>2. Milyen adatot, miért, milyen jogalapon és meddig kezelek?</h3>
+<table>
+<tr><th>Mikor</th><th>Milyen adat</th><th>Cél</th><th>Jogalap</th><th>Meddig</th></tr>
+<tr><td><b>Kiadás-értesítő (hírlevél)</b></td><td>e-mail-cím, választott nyelv és platform, a feliratkozás és a megerősítés időpontja, az elfogadott hozzájáruló szöveg verziója</td><td>értesítés új programverzióról – kizárólag erről</td><td>hozzájárulás – GDPR 6. cikk (1) a), Grt. 6. § (1)</td><td>a leiratkozásig; leiratkozáskor az adat <b>azonnal és véglegesen törlődik</b>. A meg nem erősített feliratkozás 7 nap után törlődik.</td></tr>
+<tr><td><b>Üzenet a készítőnek</b></td><td>név, üzenet, és ha megadod: e-mail-cím</td><td>válaszadás, hibajavítás, a program fejlesztése</td><td>jogos érdek – GDPR 6. cikk (1) f); ajánlásként való közzétételnél a külön hozzájárulásod – 6. cikk (1) a)</td><td>legfeljebb 2 évig, vagy amíg törlését nem kéred</td></tr>
+<tr><td><b>Letöltésszámláló</b></td><td>platform, verzió, nyelv, dátum, és egy naponta változó, vissza nem fejthető technikai lenyomat. <b>IP-címet nem tárolok.</b></td><td>valós letöltésszám (egy látogató naponta egyszer számítson)</td><td>jogos érdek – GDPR 6. cikk (1) f)</td><td>a lenyomat 48 órán belül törlődik; utána csak névtelen darabszám marad</td></tr>
+<tr><td><b>Szervernapló</b></td><td>IP-cím, időpont, a lekért cím, böngészőtípus</td><td>üzembiztonság, visszaélések kivizsgálása</td><td>jogos érdek – GDPR 6. cikk (1) f)</td><td>a tárhelyszolgáltató beállítása szerint, jellemzően legfeljebb 30 napig</td></tr>
+</table>
+<p>A feliratkozás <b>kétlépcsős</b> (double opt-in): csak akkor kerülsz a listára, ha a kapott e-mailben megerősíted. Minden levél alján ott a leiratkozó hivatkozás.</p>
+
+<h3>3. Sütik és hasonló technikák</h3>
+<p data-if-no-google>Az oldal <b>nem használ sütiket</b>, nincs benne követőkód, és semmit nem tölt be külső szolgáltatótól (a betűtípus is innen jön). A böngésződ helyi tárolójában (localStorage) csak a választott nyelv marad meg – ez nem hagyja el a gépedet.</p>
+<div data-if-google>
+<p>Az oldal sütik nélkül is teljes értékűen működik. A böngésződ helyi tárolójában (localStorage) a választott nyelv és a sütikre vonatkozó döntésed marad meg.</p>
+<p><b>Google mérés – csak a hozzájárulásoddal.</b> Ha a sütisávon engedélyezed, a Google Analytics (és ha külön engedélyezed, a Google Ads konverziómérés) sütiket helyez el, és látogatási adatokat (rövidített IP-cím, eszköz- és böngészőadatok, megtekintett részek, letöltés-kattintás) továbbít a Google felé. Amíg nem döntesz, vagy ha elutasítod, <b>semmilyen Google-kód nem töltődik be</b> (Consent Mode v2, alapértelmezés: elutasítva). Jogalap: hozzájárulás – GDPR 6. cikk (1) a), Eht. 155. § (4). A döntésedet bármikor megváltoztathatod a lábléc „Sütibeállítások” pontjában. Adatfeldolgozó: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország); az Egyesült Államokba irányuló továbbítás alapja az EU–USA Adatvédelmi Keretrendszer. A mérési adatok megőrzési ideje legfeljebb 14 hónap.</p>
+</div>
+
+<h3>4. Ki fér hozzá az adatokhoz?</h3>
+<p>Csak az adatkezelő, valamint adatfeldolgozóként a tárhelyszolgáltató: <b>{{hosting_name}}</b> ({{hosting_address}}). Az adatok az Európai Unión belüli szerveren vannak; az adatbázis a webről közvetlenül nem érhető el. Adatot harmadik félnek nem adok el és nem adok át<span data-if-google> – a 3. pontban írt, hozzájáruláshoz kötött Google-mérés kivételével</span>. Automatizált döntéshozatal, profilalkotás nincs.</p>
+
+<h3>5. Maga a program</h3>
+<p>A Claude Usage Monitor <b>nem gyűjt és nem küld adatot</b> sem nekem, sem másnak: nincs benne telemetria, statisztika vagy hirdetés. Kizárólag az Anthropic szervereivel kommunikál a saját használati adataidért (ha ezt a módot választod), a belépési tokent pedig titkosítva a saját gépeden tárolja. Naponta néhányszor lekéri erről az oldalról a kiadási leírófájlt (manifest), hogy tudja, van-e újabb verzió – ez a 2. pont szerinti szervernaplóban jelenik meg, máshol nem.</p>
+
+<h3>6. Milyen jogaid vannak?</h3>
+<ul>
+<li><b>Hozzáférés</b> – megkérdezheted, kezelek-e rólad adatot, és kérhetsz róla másolatot.</li>
+<li><b>Helyesbítés, törlés, korlátozás</b> – kérheted az adataid javítását, törlését vagy kezelésük korlátozását.</li>
+<li><b>Hozzájárulás visszavonása</b> – a hírlevélről bármikor, egy kattintással leiratkozhatsz; ez a korábbi adatkezelés jogszerűségét nem érinti.</li>
+<li><b>Tiltakozás</b> – a jogos érdeken alapuló adatkezelés ellen tiltakozhatsz.</li>
+<li><b>Adathordozhatóság</b> – a hozzájárulás alapján kezelt adataidat géppel olvasható formában kikérheted.</li>
+</ul>
+<p>Kérésedet az űrlapon jelezd; legkésőbb egy hónapon belül válaszolok, díjmentesen.</p>
+
+<h3>7. Hová fordulhatsz panasszal?</h3>
+<p>Először kérlek, nekem írj – igyekszem azonnal megoldani. Emellett panaszt tehetsz a <b>Nemzeti Adatvédelmi és Információszabadság Hatóságnál</b> (1055 Budapest, Falk Miksa utca 9–11.; levelezési cím: 1363 Budapest, Pf. 9.; ugyfelszolgalat@naih.hu; www.naih.hu), illetve a lakóhelyed szerinti törvényszékhez fordulhatsz.</p>
+
+<h3>8. Változások</h3>
+<p>Ha a tájékoztató érdemben változik, az új változatot itt teszem közzé, a hatálybalépés dátumával. A feliratkozáskor elfogadott szövegváltozatot a rendszer rögzíti.</p>
+</section>
+
+<section data-doc="imprint" data-title="Impresszum">
+<h3>A szolgáltató (az oldal üzemeltetője)</h3>
+<p><b>{{controller_name}}</b><br>Cím: {{controller_address}}<span data-opt="controller_tax"><br>Adószám / nyilvántartási szám: {{controller_tax}}</span><br>
+Kapcsolat: az oldal „Üzenet a készítőnek” űrlapján<span data-opt="contact_email"> · e-mail: {{contact_email}}</span></p>
+<h3>Tárhelyszolgáltató</h3>
+<p><b>{{hosting_name}}</b><br>{{hosting_address}}<span data-opt="hosting_contact"><br>{{hosting_contact}}</span></p>
+<h3>A programról</h3>
+<p>A Claude Usage Monitort <b>Vidovics Gábor</b> tervezte és fejlesztette. A program <b>ingyenes</b>, nyílt forráskódú (MIT-licenc); a forráskód a GitHubon érhető el. Nem hivatalos, közösségi eszköz: nem áll kapcsolatban az Anthropic, PBC vállalattal. A „Claude” az Anthropic, PBC védjegye; a Windows a Microsoft, a macOS az Apple védjegye.</p>
+</section>
+
+<section data-doc="terms" data-title="Felhasználási feltételek">
+<h3>1. Ingyenes – tényleg</h3>
+<p>A Claude Usage Monitor letöltése és használata <b>díjmentes</b>, magán- és üzleti célra egyaránt. Nincs próbaidő, nincs fizetős változat, nincs rejtett költség. A program az MIT-licenc alatt érhető el: szabadon használható, másolható, módosítható és terjeszthető a licencben írt feltételekkel (a szerzői jogi megjegyzés megőrzésével).</p>
+<h3>2. Nincs jótállás</h3>
+<p>A programot „ahogy van” állapotban kapod, mindenféle kifejezett vagy hallgatólagos jótállás nélkül. A kijelzett értékek tájékoztató jellegűek: az Anthropic rendszereiből, illetve a gépeden lévő naplókból származnak, és eltérhetnek a tényleges kerettől. A program használatából eredő károkért a készítő – a jogszabály által megengedett legnagyobb mértékben – nem felel. A szándékosan okozott, továbbá az életet, testi épséget, egészséget megkárosító szerződésszegésért való felelősséget ez nem korlátozza.</p>
+<h3>3. Letöltések</h3>
+<p>A hivatalos telepítőcsomagok kizárólag erről az oldalról és a projekt GitHub-oldaláról származnak. Minden csomag mellett ott az SHA-256 ellenőrzőösszeg – érdemes ellenőrizni. Máshonnan letöltött példányért a készítő nem vállal felelősséget.</p>
+<h3>4. Független eszköz</h3>
+<p>A program nem hivatalos, az Anthropic, PBC-től független közösségi eszköz. A használatához szükséges Claude-előfizetésre az Anthropic saját feltételei vonatkoznak. Ha az Anthropic megváltoztatja a rendszereit, a program egyes funkciói átmenetileg vagy végleg megszűnhetnek működni.</p>
+<h3>5. Kiadás-értesítő</h3>
+<p>A feliratkozás önkéntes és ingyenes; kizárólag új verziókról küld rövid értesítést. Bármikor, egy kattintással lemondható. Részletek az Adatkezelési tájékoztatóban.</p>
+<h3>6. Az oldal tartalma</h3>
+<p>Az oldal szövegei, képei és arculata Vidovics Gábor szerzői művei. A programról szóló cikkhez, ismertetőhöz a képernyőképek a forrás megjelölésével szabadon felhasználhatók.</p>
+<h3>7. Irányadó jog</h3>
+<p>Ezekre a feltételekre a magyar jog irányadó. Fogyasztóként a lakóhelyed szerinti kötelező fogyasztóvédelmi szabályok ettől függetlenül megilletnek.</p>
+</section>

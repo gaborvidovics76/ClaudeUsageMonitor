@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="ru" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – бесплатный виджет для Windows и macOS</title>
+<meta name="description" content="Claude Usage Monitor – бесплатный виджет лимитов Claude для Windows и macOS: 5-часовой сеанс, недельный лимит, лимит по модели, отсчёт до сброса.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dinorr.hu/claude-usage-monitor/ru/">
+<link rel="alternate" hreflang="en" href="https://dinorr.hu/claude-usage-monitor/">
+<link rel="alternate" hreflang="hu" href="https://dinorr.hu/claude-usage-monitor/hu/">
+<link rel="alternate" hreflang="de" href="https://dinorr.hu/claude-usage-monitor/de/">
+<link rel="alternate" hreflang="fr" href="https://dinorr.hu/claude-usage-monitor/fr/">
+<link rel="alternate" hreflang="es" href="https://dinorr.hu/claude-usage-monitor/es/">
+<link rel="alternate" hreflang="it" href="https://dinorr.hu/claude-usage-monitor/it/">
+<link rel="alternate" hreflang="pt" href="https://dinorr.hu/claude-usage-monitor/pt/">
+<link rel="alternate" hreflang="pl" href="https://dinorr.hu/claude-usage-monitor/pl/">
+<link rel="alternate" hreflang="nl" href="https://dinorr.hu/claude-usage-monitor/nl/">
+<link rel="alternate" hreflang="ru" href="https://dinorr.hu/claude-usage-monitor/ru/">
+<link rel="alternate" hreflang="cs" href="https://dinorr.hu/claude-usage-monitor/cs/">
+<link rel="alternate" hreflang="tr" href="https://dinorr.hu/claude-usage-monitor/tr/">
+<link rel="alternate" hreflang="x-default" href="https://dinorr.hu/claude-usage-monitor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – бесплатный виджет лимитов Claude, Windows/macOS">
+<meta property="og:description" content="5-часовой сеанс, недельный лимит и темп расхода Claude – с одного взгляда. Даже то, что тратят ваш телефон и браузер. Поверх всех окон, открытый код. 100% бесплатно.">
+<meta property="og:url" content="https://dinorr.hu/claude-usage-monitor/ru/">
+<meta property="og:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – бесплатный виджет лимитов Claude, Windows/macOS">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – бесплатный виджет лимитов Claude, Windows/macOS">
+<meta name="twitter:description" content="5-часовой сеанс, недельный лимит и темп расхода Claude – с одного взгляда. Даже то, что тратят ваш телефон и браузер. Поверх всех окон, открытый код. 100% бесплатно.">
+<meta name="twitter:image" content="https://dinorr.hu/claude-usage-monitor/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dinorr.hu/claude-usage-monitor/#site","name":"Claude Usage Monitor","url":"https://dinorr.hu/claude-usage-monitor/","inLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"],"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"WebPage","@id":"https://dinorr.hu/claude-usage-monitor/ru/#page","url":"https://dinorr.hu/claude-usage-monitor/ru/","name":"Claude Usage Monitor – бесплатный виджет для Windows и macOS","description":"Claude Usage Monitor – бесплатный виджет лимитов Claude для Windows и macOS: 5-часовой сеанс, недельный лимит, лимит по модели, отсчёт до сброса.","inLanguage":"ru","isPartOf":{"@id":"https://dinorr.hu/claude-usage-monitor/#site"},"about":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"mainEntity":{"@id":"https://dinorr.hu/claude-usage-monitor/#app"},"primaryImageOfPage":"https://dinorr.hu/claude-usage-monitor/img/og.png","dateModified":"2026-09-20","author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"}},{"@type":"SoftwareApplication","@id":"https://dinorr.hu/claude-usage-monitor/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor – это бесплатный виджет с открытым исходным кодом для рабочего стола Windows 10/11 и macOS, который в реальном времени показывает лимиты использования подписчика Claude: 5-часовой сеанс, недельный лимит и недельный лимит по модели, с обратным отсчётом до каждого сброса, темпом, скоростью расхода и уведомлениями. Он учитывает claude.ai, Claude Desktop и Claude Code на всех устройствах и не требует терминала.","url":"https://dinorr.hu/claude-usage-monitor/ru/","inLanguage":"ru","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.6.0","dateModified":"2026-09-18T14:27:09Z","downloadUrl":"https://dinorr.hu/cum-api/dl.php?os=win","installUrl":"https://dinorr.hu/claude-usage-monitor/ru/#download","fileSize":"46 MB","releaseNotes":"https://dinorr.hu/claude-usage-monitor/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"publisher":{"@id":"https://dinorr.hu/claude-usage-monitor/#author"},"image":"https://dinorr.hu/claude-usage-monitor/img/og.png","screenshot":["https://dinorr.hu/claude-usage-monitor/img/panel-full-midnight.png","https://dinorr.hu/claude-usage-monitor/img/ring-neon.png","https://dinorr.hu/claude-usage-monitor/img/compact-claude.png"],"featureList":["Увидите заранее","Не слишком ли быстро расходуете?","Все устройства – одна цифра","Лимиты по моделям","Только важные уведомления","Не шпионит. Точка."],"availableLanguage":["en","hu","de","fr","es","it","pt","pl","nl","ru","cs","tr"]},{"@type":"Person","@id":"https://dinorr.hu/claude-usage-monitor/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://dinorr.hu/claude-usage-monitor/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://dinorr.hu/claude-usage-monitor/ru/#faq","inLanguage":"ru","mainEntity":[{"@type":"Question","name":"Это правда бесплатно? В чём подвох?","acceptedAnswer":{"@type":"Answer","text":"Правда бесплатно, и подвоха нет. Это не демо, не пробная и не урезанная версия – это полная и единственная версия. Без рекламы, без платного тарифа, без сбора данных. Исходный код открыт под лицензией MIT."}},{"@type":"Question","name":"Это официальный продукт Anthropic?","acceptedAnswer":{"@type":"Answer","text":"Нет. Это независимый инструмент от сообщества, его создал Gábor Vidovics. Он никак не связан с Anthropic. «Claude» – товарный знак Anthropic, PBC."}},{"@type":"Question","name":"Нужно ли сообщать приложению свой пароль?","acceptedAnswer":{"@type":"Answer","text":"Никогда. Без входа оно читает локальный журнал Claude Desktop. Если нужны все устройства, вы входите на claude.ai в собственном браузере – приложение ни разу не видит ваш пароль."}},{"@type":"Question","name":"Windows предупреждает меня при запуске. Почему?","acceptedAnswer":{"@type":"Answer","text":"Потому что у приложения нет цифровой подписи (сертификаты стоят денег, а приложение бесплатное). Нажмите «Подробнее» → «Выполнить в любом случае». Загрузку можно проверить по контрольной сумме SHA-256, а исходный код – прочитать на GitHub."}},{"@type":"Question","name":"Какие Mac поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 или новее. В карточке загрузки выше всегда указано, для какого процессора собрана текущая версия. Версия для macOS совсем новая – буду очень рад вашим отзывам."}},{"@type":"Question","name":"Как работают обновления?","acceptedAnswer":{"@type":"Answer","text":"Приложение несколько раз в день проверяет этот сайт. Когда выходит новая версия, оно сообщает об этом; один клик – и оно скачает её, проверит, установит и перезапустится. Это можно отключить."}},{"@type":"Question","name":"Как его удалить?","acceptedAnswer":{"@type":"Answer","text":"Windows: «Параметры» → «Приложения» → «Установленные приложения» → Claude Usage Monitor → «Удалить». macOS: перетащите приложение в Корзину. Это всё."}},{"@type":"Question","name":"Как посмотреть лимиты Claude, не открывая настройки?","acceptedAnswer":{"@type":"Answer","text":"Установите Claude Usage Monitor: он постоянно держит на экране 5-часовой сеанс, недельный лимит и недельный лимит по модели – в виде небольшого виджета поверх всех окон и процента в трее или строке меню. Собственные цифры Claude находятся в разделе Settings → Usage («Параметры → Использование»); виджет показывает те же лимиты без единого клика."}},{"@type":"Question","name":"Когда сбрасывается лимит Claude – 5-часовой сеанс и недельный лимит?","acceptedAnswer":{"@type":"Answer","text":"Лимит сеанса сбрасывается каждые пять часов. Недельный лимит сбрасывается каждую неделю в фиксированное время, которое Anthropic закрепляет за вашим аккаунтом, поэтому у разных людей оно разное. Виджет показывает обратный отсчёт до обоих сбросов – при входе через claude.ai он берёт точное время с сервера Anthropic."}},{"@type":"Question","name":"Учитывается ли Claude Code в лимите claude.ai?","acceptedAnswer":{"@type":"Answer","text":"Да. По данным Anthropic, использование claude.ai, Claude Desktop и Claude Code учитывается в одном и том же лимите использования. Поэтому в режиме claude.ai виджет показывает одну цифру для всех ваших устройств и приложений, а не только для компьютера, на котором он запущен."}},{"@type":"Question","name":"Это то же самое, что «Claude Code Usage Monitor»?","acceptedAnswer":{"@type":"Answer","text":"Нет. «Claude Code Usage Monitor» – это отдельная терминальная утилита другого автора. Claude Usage Monitor от Gábor Vidovics – графический виджет для рабочего стола Windows и macOS со значком в трее, темами и уведомлениями, и командная строка ему не нужна."}}]},{"@type":"DefinedTermSet","@id":"https://dinorr.hu/claude-usage-monitor/ru/#glossary","name":"Ключевые термины – точные определения","inLanguage":"ru","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Пятичасовой сеанс (5-часовое окно)","description":"Краткосрочный лимит использования Claude. Лимит сеанса сбрасывается каждые пять часов. Anthropic называет его «текущий сеанс» (current session); многие пользователи говорят «5-часовое окно» или «5-часовой лимит».","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Недельный лимит (еженедельный лимит)","description":"Второе ограничение на платных планах Claude. Оно действует сразу для всех моделей и сбрасывается каждую неделю в фиксированное время, закреплённое за вашим аккаунтом. Недельные лимиты действуют с 28 августа 2025 года.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Недельный лимит по модели","description":"Отдельный недельный лимит для одной конкретной модели. На странице использования Claude он указан рядом с лимитом для всех остальных моделей. Виджет показывает его третьим индикатором – для модели, которую вы выберете.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Сброс","description":"Момент, когда лимит возвращается к 0%. Виджет ведёт до него обратный отсчёт. При входе через claude.ai точное время приходит с сервера Anthropic; при работе с локальным журналом это оценка.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Темп","description":"Насколько вы опережаете равномерно расходуемую неделю или отстаёте от неё. «+12% к темпу» означает, что израсходованная доля недельного лимита на 12 процентных пунктов больше, чем доля недели, которая уже прошла.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Скорость расхода (burn rate)","description":"Как быстро лимит заполняется прямо сейчас – в процентах в час для сеанса и в процентах в день для недели – и когда при такой скорости он дойдёт до 100%.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"},{"@type":"DefinedTerm","name":"Кредиты использования (дополнительное использование)","description":"Необязательная оплата по факту использования после того, как вы достигли лимитов плана, с месячным пределом расходов. Виджет показывает, включена ли она, размер предела и сколько вы уже потратили.","inDefinedTermSet":"https://dinorr.hu/claude-usage-monitor/ru/#glossary"}]}]}</script>
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=5">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Возможности</a>
+      <a href="#themes" data-i18n="nav.themes">Темы</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Что нового</a>
+      <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#feedback" data-i18n="nav.feedback">Обратная связь</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">RU</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="es" lang="es" href="../es/" data-lang="es">Español <span>es</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="pt" lang="pt" href="../pt/" data-lang="pt">Português <span>pt</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" aria-current="page" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Скачать бесплатно</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% БЕСПЛАТНО</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Версия</span> <span data-win="version">2.6.0</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – бесплатный виджет лимитов Claude для Windows и macOS</span> <span data-i18n="hero.h1">Лимит Claude больше не застанет <em>врасплох.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">Компактный виджет поверх всех окон показывает расход Claude в реальном времени: 5-часовой сеанс, недельный лимит и ваш темп. Даже то, что съедает ваш телефон. Для Windows и macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Ваша система</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Ваша система</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Бесплатно. Навсегда.</b> Не демо. Не пробная версия. Ничего не заблокировано.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">скачиваний с этой страницы на сегодня</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">Это приложение для компьютера – отправьте ссылку себе на компьютер</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Виджет Claude Usage Monitor: 5-часовой сеанс – 47%, недельный лимит по модели – 61%, недельный лимит – 23%">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Настоящие скриншоты приложения, цифры – демонстрационные.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% БЕСПЛАТНО</span><i>✦</i><span data-i18n="mq.2">НЕ ДЕМО</span><i>✦</i><span data-i18n="mq.3">ВСЁ ОТКРЫТО</span><i>✦</i><span data-i18n="mq.4">БЕЗ РЕКЛАМЫ</span><i>✦</i><span data-i18n="mq.5">БЕЗ РЕГИСТРАЦИИ</span><i>✦</i><span data-i18n="mq.6">БЕЗ СЛЕЖКИ</span><i>✦</i><span data-i18n="mq.7">ОТКРЫТЫЙ КОД</span><i>✦</i><span data-i18n="mq.8">12 ЯЗЫКОВ</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Бесплатно навсегда</b><span data-i18n="trust.1d">Полная версия. Платного тарифа просто нет.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Открытый код</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">Лицензия MIT – каждая строка доступна на GitHub</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Приватно</b><span data-i18n="trust.3d">Без телеметрии, без рекламы, без cookie.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Обновляется само</b><span data-i18n="trust.4d">Проверка по SHA-256, один клик.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Не просто чтение локальных журналов</p>
+  <h2 data-i18n="more.h2">Телефон тоже съедает ваш лимит. <em>Теперь это видно – прямо на рабочем столе.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Многие трекеры расхода читают файлы журналов на компьютере – и поэтому знают лишь то, что израсходовал <b>именно этот компьютер</b>. Claude Usage Monitor умеет вместо этого спросить сервер Anthropic – и показывает реальную цифру по всему аккаунту: в счёт идёт всё, что вы тратите в приложении на телефоне, в браузере, на другом компьютере и в Claude Code, – и всё это видно в одном месте, на вашем рабочем столе.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Приложение Claude на телефоне</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai в браузере</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Ваш второй компьютер</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code и Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="Один виджет Claude Usage Monitor показывает суммарный расход со всех устройств">
+      <figcaption data-i18n="more.sum">Одна реальная цифра на весь аккаунт – всегда перед глазами.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Инструменты, которые читают только локальные журналы</h3>
+      <ul data-i18n="more.a_li"><li class="no">Расход с телефона – не виден</li><li class="no">Расход в браузере – не виден</li><li class="no">Другие ваши компьютеры – не видны</li><li class="yes">Claude Code на одном этом компьютере</li><li class="no">Время сброса – лишь догадка</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor с источником claude.ai</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Телефон, браузер, все компьютеры – учтено всё</li><li class="yes">Включая Claude Code и Claude Desktop</li><li class="yes">Те же цифры, что сам Claude показывает в разделе Settings → Usage («Параметры → Использование»)</li><li class="yes">Точное время сброса – с сервера Anthropic</li><li class="yes">Работает и без входа – по локальному журналу</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Как это включить: выберите источник данных «claude.ai (все устройства)» и один раз войдите в собственном браузере – это тот же вход, которым пользуется Claude Code; приложение не видит ваш пароль. Без входа виджет читает локальный журнал Claude Desktop, а он учитывает только этот компьютер.</p>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Что такое Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor – это бесплатный виджет с открытым исходным кодом для рабочего стола Windows 10/11 и macOS, который в реальном времени показывает лимиты использования вашей подписки Claude</b> – 5-часовой сеанс, недельный лимит и недельный лимит по модели, и для каждого – время до сброса. Он остаётся поверх остальных окон. Поэтому расход Claude можно проверить, не открывая страницу Settings → Usage («Параметры → Использование») и без терминала.</p>
+  <p class="about__def" data-i18n="about.p2">Одно приложение и для Windows, и для Mac. Оно учитывает всё, что идёт в счёт вашего плана: claude.ai, Claude Desktop и Claude Code на всех ваших устройствах. Это не терминальная утилита «Claude Code Usage Monitor»: здесь графическая панель со значком в трее, и командная строка ей не нужна.</p>
+  <p class="fine about__meta"><span data-i18n="about.updated">Последнее обновление</span>: <time data-win="date">2026-09-18</time> · <span data-i18n="dls.version">Версия</span> <span data-win="version">2.6.0</span> · <span data-i18n="about.by">автор:</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Ключевые термины – точные определения</summary>
+    <dl>
+      <dt data-i18n="gl.1t">Пятичасовой сеанс (5-часовое окно)</dt>
+      <dd data-i18n="gl.1d">Краткосрочный лимит использования Claude. Лимит сеанса сбрасывается каждые пять часов. Anthropic называет его «текущий сеанс» (current session); многие пользователи говорят «5-часовое окно» или «5-часовой лимит».</dd>
+      <dt data-i18n="gl.2t">Недельный лимит (еженедельный лимит)</dt>
+      <dd data-i18n="gl.2d">Второе ограничение на платных планах Claude. Оно действует сразу для всех моделей и сбрасывается каждую неделю в фиксированное время, закреплённое за вашим аккаунтом. Недельные лимиты действуют с 28 августа 2025 года.</dd>
+      <dt data-i18n="gl.3t">Недельный лимит по модели</dt>
+      <dd data-i18n="gl.3d">Отдельный недельный лимит для одной конкретной модели. На странице использования Claude он указан рядом с лимитом для всех остальных моделей. Виджет показывает его третьим индикатором – для модели, которую вы выберете.</dd>
+      <dt data-i18n="gl.4t">Сброс</dt>
+      <dd data-i18n="gl.4d">Момент, когда лимит возвращается к 0%. Виджет ведёт до него обратный отсчёт. При входе через claude.ai точное время приходит с сервера Anthropic; при работе с локальным журналом это оценка.</dd>
+      <dt data-i18n="gl.5t">Темп</dt>
+      <dd data-i18n="gl.5d">Насколько вы опережаете равномерно расходуемую неделю или отстаёте от неё. «+12% к темпу» означает, что израсходованная доля недельного лимита на 12 процентных пунктов больше, чем доля недели, которая уже прошла.</dd>
+      <dt data-i18n="gl.6t">Скорость расхода (burn rate)</dt>
+      <dd data-i18n="gl.6d">Как быстро лимит заполняется прямо сейчас – в процентах в час для сеанса и в процентах в день для недели – и когда при такой скорости он дойдёт до 100%.</dd>
+      <dt data-i18n="gl.7t">Кредиты использования (дополнительное использование)</dt>
+      <dd data-i18n="gl.7d">Необязательная оплата по факту использования после того, как вы достигли лимитов плана, с месячным пределом расходов. Виджет показывает, включена ли она, размер предела и сколько вы уже потратили.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Что вы получаете</p>
+  <h2 data-i18n="feat.h2">Все ваши лимиты Claude. С одного взгляда.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Увидите заранее</h3>
+        <p data-i18n="feat.1d">Зелёный, жёлтый, красный. Панель меняет цвет задолго до того, как лимит закончится, – с обратным отсчётом до сброса и прогнозом, когда вы дойдёте до 100%.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Расход Claude – 78%: виджет становится жёлтым"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Расход Claude – 94%: виджет становится красным"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Не слишком ли быстро расходуете?</h3>
+      <p data-i18n="feat.2d">Индикатор темпа покажет, тает ли недельный лимит быстрее, чем идёт неделя, – и спрогнозирует, с чем вы придёте к её концу.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Все устройства – одна цифра</h3>
+      <p data-i18n="feat.3d">Войдите через собственный браузер – как это делает Claude Code – и увидите расход с телефона, из браузера и со всех остальных компьютеров.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Лимиты по моделям</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, дополнительное использование – все лимиты, которые сообщает сервер, плюс распределение по моделям за эту неделю.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Только важные уведомления</h3>
+      <p data-i18n="feat.5d">Ненавязчивое уведомление на 70% и 90% (пороги выбираете вы) и в момент сброса лимита. И больше ничего. Никогда.</p>
+    </article>
+    <article class="cell cell--wide reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Не шпионит. Точка.</h3>
+      <p data-i18n="feat.6d">Никакой телеметрии, никакой аналитики, никаких учётных записей у нас. Приложение обращается только к Anthropic и только за вашими цифрами. Токен входа хранится в зашифрованном виде на вашем компьютере – Windows DPAPI или «Связка ключей» в macOS.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Да, это действительно бесплатно.</h2>
+      <p data-i18n="band1.p">Никакого пробного периода. Никакой платной «Pro»-версии. Никакого подвоха. Скачали – и оно ваше.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Только если любопытно</p>
+  <h2 data-i18n="tabs.h2">Подробности – когда они понадобятся.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Что показывает</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Откуда данные</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Приватность и безопасность</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Управление</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Настройки</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Сравнение</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5-часовой сеанс</b> – текущий %, обратный отсчёт до сброса, скорость расхода (%/час) и время, когда лимит заполнится.</li><li><b>Недельный лимит</b> – текущий %, время до недельного сброса, дневной расход и ваш темп в сравнении с равномерной неделей.</li><li><b>Недельный лимит по модели</b> – третий индикатор для модели, за которой вы следите (по умолчанию Fable).</li><li><b>Значок тарифа</b> – PRO, MAX 5×, MAX 20×, TEAM или ENTERPRISE.</li><li><b>Окно истории</b> – графики за 6 ч / 24 ч / 7 дней, недельный пик, среднее за день и прогноз на конец недели.</li><li><b>Значок в трее / строке меню</b> – выбранный вами процент в виде кольца, подробности при наведении.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Локальный журнал <span class="chip">по умолчанию · без входа</span></h4><p>Читает журнал использования, который Claude Desktop и так ведёт на вашем компьютере. Никуда ничего не отправляется. Учитывает только этот компьютер, обновляется примерно раз в 5 минут.</p></div><div><h4>2 · claude.ai <span class="chip">все устройства</span></h4><p>Тот же вход через браузер, что и в Claude Code, – без встроенного браузера и без ввода пароля в приложении. Точное время сброса с сервера, обновление примерно раз в 2 минуты.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Никакой телеметрии.</b> В приложении нет аналитики, и оно никуда не «стучит» – только проверяет на этом сайте, не вышла ли новая версия.</li><li><b>Ваш токен остаётся вашим.</b> Зашифрован с помощью Windows DPAPI или хранится в «Связке ключей» macOS. Никогда – в открытом файле.</li><li><b>Переписка не читается никогда.</b> Из локальных журналов берутся только название модели, число токенов и метки времени.</li><li><b>Проверенные обновления.</b> Только HTTPS; каждая загрузка перед установкой сверяется с её SHA-256, а при сбое возвращается прежняя версия.</li><li><b>Открытый код.</b> Не верьте на слово – проверьте: весь исходный код лежит на GitHub под лицензией MIT.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Перетаскивание</th><td>перемещение панели (прилипает к краям экрана)</td></tr><tr><th>Правый клик</th><td>меню: раскладка, тема, размер, язык, настройки</td></tr><tr><th>Двойной клик</th><td>окно истории и статистики</td></tr><tr><th>Ctrl + колесо мыши</th><td>изменение размера</td></tr><tr><th>Клик по значку в трее</th><td>скрыть / показать панель</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Внешний вид</b> – 6 тем, свой акцентный цвет, 3 раскладки, размер, прозрачность, поверх всех окон, фиксация положения, пропуск кликов сквозь панель.</li><li><b>Содержимое</b> – какие индикаторы показывать, их порядок и размер, кривая тренда, скорость расхода, обратный отсчёт.</li><li><b>Уведомления</b> – пороги предупреждения и опасности (по умолчанию 70% / 90%), сообщения о сбросе и об устаревших данных.</li><li><b>Система</b> – запуск вместе с компьютером, автоматические обновления, 12 языков.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Страница Settings → Usage в самом Claude</th><th>Терминальные утилиты, которые читают журналы Claude Code</th></tr><tr><th>Всегда на виду во время работы</th><td>Да – виджет поверх всех окон и значок в трее</td><td>Нет – её нужно открывать</td><td>Только в открытом терминале</td></tr><tr><th>Windows и macOS</th><td>Да, одно приложение для обеих систем</td><td>Да (веб-страница)</td><td>По-разному, командная строка</td></tr><tr><th>Нужен терминал</th><td>Нет</td><td>Нет</td><td>Да</td></tr><tr><th>Учитывает claude.ai, Claude Desktop и Claude Code на всех устройствах</th><td>Да, при входе через claude.ai</td><td>Да</td><td>Нет – только Claude Code на этом компьютере</td></tr><tr><th>Темп, скорость расхода и прогноз на конец недели</th><td>Да</td><td>Нет</td><td>У некоторых</td></tr><tr><th>Уведомления на ваших порогах</th><td>Да (по умолчанию 70% / 90%)</td><td>Нет</td><td>Редко</td></tr><tr><th>Цена</th><td>Бесплатно, открытый код (MIT)</td><td>Входит в ваш план</td><td>В основном бесплатно</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Настройте под себя</p>
+    <h2 data-i18n="th.h2">6 тем. 3 раскладки. Попробуйте прямо здесь.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor в выбранной теме и раскладке">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Тема</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Полуночное стекло</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Тёплая тёмная Claude</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Графит</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Неон</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Светлая бумага</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Жёлтый стикер</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Тёмно-синее стекло с холодным свечением. Тема по умолчанию – спокойная, читаемая, уместная на любом тёмном рабочем столе.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Раскладка</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Карточка</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Кольца</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Тонкая полоса</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">А ещё – свой акцентный цвет, размер от 70% до 200% и прозрачность.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Цена</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Бесплатно. Целиком. Навсегда.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Полная версия – другой просто нет</li><li>Не демо, не пробная версия, без ограничения по времени</li><li>Никакого «Pro»-тарифа, никаких заблокированных функций</li><li>Без рекламы, без регистрации, без сбора данных</li><li>Бесплатные обновления – автоматически</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Загрузка</p>
+    <h2 data-i18n="dls.h2">Всегда последняя версия. Всегда бесплатно.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">БЕСПЛАТНО</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Скачать для Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Версия</span> <b data-win="version">2.6.0</b> · <span data-win="size">46 MB</span> · <span data-win="date">2026-09-18</span></p>
+        <details><summary data-i18n="dls.how">Как установить (3 шага)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Распакуйте весь zip-архив</b> (правый клик → «Извлечь все…»).</li><li>Дважды щёлкните <code>INSTALL.bat</code>.</li><li>Ответьте на два вопроса – Enter принимает рекомендуемый вариант. Готово.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Права администратора не нужны. Если Windows покажет окно «Система Windows защитила ваш компьютер»: «Подробнее» → «Выполнить в любом случае». У приложения открытый исходный код, но нет цифровой подписи.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Проверить загрузку (SHA-256)</summary><code class="sha" data-win="sha">aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">БЕСПЛАТНО</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://dinorr.hu/claude-usage-monitor/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Скачать для macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Версия</span> <b data-mac="version">2.6.0</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-18</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">Сборка для macOS уже в пути – загляните чуть позже.</p>
+        <details><summary data-i18n="dls.how">Как установить (3 шага)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Откройте zip-архив и перетащите <b>ClaudeUsageMonitor</b> в папку <b>«Программы»</b>.</li><li>Первый запуск: <b>правый клик → «Открыть»</b> (приложение не нотаризовано Apple).</li><li>Найдите значок в строке меню. Готово.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Проверить загрузку (SHA-256)</summary><code class="sha" data-mac="sha">371c224acf6f4f22fdb3cd7da43544f7789a6a061f7f7a14b136a58f7cf4ffe6</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">скачиваний с этой страницы на сегодня</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Эти кнопки всегда ведут на самый свежий выпуск – а после установки приложение обновляет себя само.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Активно развивается</p>
+  <h2><span data-i18n="new.h2">Что нового в версии</span> <span class="grad" data-win="version">2.6.0</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Примечания к выпускам пишутся на английском и венгерском языках.</p>
+  <ul class="notes" id="notes"><li>New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.</li><li>The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.</li><li>For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.</li><li>A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Предыдущие версии</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Получайте письмо, когда выходит новая версия</h3>
+      <p data-i18n="sub.p">Только новости о выпусках – несколько коротких строк на версию. Никакого маркетинга. Никогда. Отписка – в один клик.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Сообщайте мне</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">Я согласен(на) на использование моего адреса электронной почты для отправки мне уведомлений о новых версиях, как описано в документе <a href="#privacy" data-legal="privacy">Политика конфиденциальности</a>. Я могу отозвать это согласие в любой момент.</span></label>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Кому подойдёт</p>
+    <h2 data-i18n="who.h2">Узнали себя? Вам понравится.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Разработчикам с Claude Code</b><span data-i18n="who.1d">Долгие агентные задачи быстро съедают 5-часовой сеанс. Увидьте это раньше, чем вас остановят посреди задачи.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Подписчикам Pro и Max</b><span data-i18n="who.2d">Выжимайте максимум из того, за что платите, – и не упирайтесь в стену уже в четверг.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Тем, у кого много устройств</b><span data-i18n="who.3d">Телефон, браузер, ноутбук, настольный ПК: одна честная цифра на всех.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Всем, кто любит порядок на рабочем столе</b><span data-i18n="who.4d">Небольшая симпатичная панель, которая не мешает, – или сжимается в тонкую полосу.</span></div>
+    </div>
+
+    <div id="testimonials" class="quotes" hidden></div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">«Я сделал это для себя: мне надоело упираться в лимит прямо посреди работы. А потом шлифовал, пока не стало приятно смотреть на неё целый день. Она бесплатная, потому что такой инструмент и должен быть бесплатным, – пользуйтесь, получайте удовольствие и пишите мне, что думаете».</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">автор и разработчик Claude Usage Monitor · Венгрия</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Исходный код на GitHub</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Написать мне</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Вопросы о лимитах Claude – короткие ответы.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Это правда бесплатно? В чём подвох?</summary><p data-i18n="faq.a1">Правда бесплатно, и подвоха нет. Это не демо, не пробная и не урезанная версия – это полная и единственная версия. Без рекламы, без платного тарифа, без сбора данных. Исходный код открыт под лицензией MIT.</p></details>
+    <details><summary data-i18n="faq.q8">Как посмотреть лимиты Claude, не открывая настройки?</summary><p data-i18n="faq.a8">Установите Claude Usage Monitor: он постоянно держит на экране 5-часовой сеанс, недельный лимит и недельный лимит по модели – в виде небольшого виджета поверх всех окон и процента в трее или строке меню. Собственные цифры Claude находятся в разделе Settings → Usage («Параметры → Использование»); виджет показывает те же лимиты без единого клика.</p></details>
+    <details><summary data-i18n="faq.q9">Когда сбрасывается лимит Claude – 5-часовой сеанс и недельный лимит?</summary><p data-i18n="faq.a9">Лимит сеанса сбрасывается каждые пять часов. Недельный лимит сбрасывается каждую неделю в фиксированное время, которое Anthropic закрепляет за вашим аккаунтом, поэтому у разных людей оно разное. Виджет показывает обратный отсчёт до обоих сбросов – при входе через claude.ai он берёт точное время с сервера Anthropic.</p></details>
+    <details><summary data-i18n="faq.q10">Учитывается ли Claude Code в лимите claude.ai?</summary><p data-i18n="faq.a10">Да. По данным Anthropic, использование claude.ai, Claude Desktop и Claude Code учитывается в одном и том же лимите использования. Поэтому в режиме claude.ai виджет показывает одну цифру для всех ваших устройств и приложений, а не только для компьютера, на котором он запущен.</p></details>
+    <details><summary data-i18n="faq.q11">Это то же самое, что «Claude Code Usage Monitor»?</summary><p data-i18n="faq.a11">Нет. «Claude Code Usage Monitor» – это отдельная терминальная утилита другого автора. Claude Usage Monitor от Gábor Vidovics – графический виджет для рабочего стола Windows и macOS со значком в трее, темами и уведомлениями, и командная строка ему не нужна.</p></details>
+    <details><summary data-i18n="faq.q2">Это официальный продукт Anthropic?</summary><p data-i18n="faq.a2">Нет. Это независимый инструмент от сообщества, его создал Gábor Vidovics. Он никак не связан с Anthropic. «Claude» – товарный знак Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Нужно ли сообщать приложению свой пароль?</summary><p data-i18n="faq.a3">Никогда. Без входа оно читает локальный журнал Claude Desktop. Если нужны все устройства, вы входите на claude.ai в собственном браузере – приложение ни разу не видит ваш пароль.</p></details>
+    <details><summary data-i18n="faq.q4">Windows предупреждает меня при запуске. Почему?</summary><p data-i18n="faq.a4">Потому что у приложения нет цифровой подписи (сертификаты стоят денег, а приложение бесплатное). Нажмите «Подробнее» → «Выполнить в любом случае». Загрузку можно проверить по контрольной сумме SHA-256, а исходный код – прочитать на GitHub.</p></details>
+    <details><summary data-i18n="faq.q5">Какие Mac поддерживаются?</summary><p data-i18n="faq.a5">macOS 12 или новее. В карточке загрузки выше всегда указано, для какого процессора собрана текущая версия. Версия для macOS совсем новая – буду очень рад вашим отзывам.</p></details>
+    <details><summary data-i18n="faq.q6">Как работают обновления?</summary><p data-i18n="faq.a6">Приложение несколько раз в день проверяет этот сайт. Когда выходит новая версия, оно сообщает об этом; один клик – и оно скачает её, проверит, установит и перезапустится. Это можно отключить.</p></details>
+    <details><summary data-i18n="faq.q7">Как его удалить?</summary><p data-i18n="faq.a7">Windows: «Параметры» → «Приложения» → «Установленные приложения» → Claude Usage Monitor → «Удалить». macOS: перетащите приложение в Корзину. Это всё.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Напишите автору</p>
+      <h2 data-i18n="fb.h2">Идея? Ошибка? Просто понравилось? Расскажите.</h2>
+      <p data-i18n="fb.p">Ваше сообщение попадёт прямо ко мне, Gábor Vidovics. Я читаю каждое. Адрес электронной почты оставляйте, только если хотите получить ответ.</p>
+      <p class="fine" data-i18n="fb.privacy">Ваше сообщение используется только для того, чтобы ответить вам и улучшить приложение, – подробности в документе <a href="#privacy" data-legal="privacy">Политика конфиденциальности</a>.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Имя</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">Эл. почта</span> <i data-i18n="fb.optional">(необязательно)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">О чём сообщение?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Отзыв</option>
+          <option value="idea" data-i18n="fb.t_idea">Идея / пожелание</option>
+          <option value="bug" data-i18n="fb.t_bug">Сообщение об ошибке</option>
+          <option value="recommend" data-i18n="fb.t_rec">Рекомендую! (отзыв для публикации)</option>
+          <option value="other" data-i18n="fb.t_other">Другое</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Сообщение</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Моё сообщение можно опубликовать на этой странице как рекомендацию (только с моим именем).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Отправить сообщение</span></button>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">Через две минуты вы будете точно знать, сколько у вас осталось.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Скачать бесплатно для</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Бесплатно. Навсегда.</b> Не демо. Не пробная версия. Ничего не заблокировано.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.6.0</span></p>
+      <p><span data-i18n="foot.made">Дизайн и разработка:</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Неофициальный инструмент от сообщества, не связан с Anthropic. «Claude» – товарный знак Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">Лицензия MIT</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">История изменений</a>
+      <a href="#feedback" data-i18n="foot.contact">Контакты</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Политика конфиденциальности</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Выходные данные</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Условия использования</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Настройки cookie</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Эта страница не использует cookie и трекеры и ничего не загружает со сторонних ресурсов.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Закрыть">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">Юридические тексты доступны на венгерском и английском языках. Преимущественную силу имеет венгерская версия.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Да, отпишите меня</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Закрыть</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookie – выбор за вами</h2>
+  <p data-i18n="ck.p">Страница полностью работает без cookie. С вашего разрешения статистика Google помогает автору видеть, сколько людей сюда заходит. Пока вы не дадите согласие, ничего не загружается.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Необходимые – запоминание языка и этого выбора (без cookie, только локальное хранилище)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Статистика – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Маркетинг – измерение конверсий Google Ads</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Отклонить</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Настройки</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Сохранить мой выбор</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Принять все</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Политика конфиденциальности</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% БЕСПЛАТНО</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Отправить ссылку на мой компьютер</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script src="../assets/site.js?v=4" defer></script>
+</body>
+</html>
