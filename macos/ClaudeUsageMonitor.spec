@@ -3,7 +3,7 @@
 import os
 
 ROOT = os.path.abspath(os.path.join(SPECPATH, ".."))
-VERSION = os.environ.get("CUM_VERSION", "0.0.0")
+VERSION = os.environ.get("UM_VERSION", "0.0.0")
 
 EXCLUDES = [
     "PySide6.QtWebEngineCore", "PySide6.QtWebEngineWidgets", "PySide6.QtWebEngineQuick",

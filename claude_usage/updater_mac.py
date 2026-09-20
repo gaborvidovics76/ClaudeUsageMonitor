@@ -41,7 +41,7 @@ def can_self_update() -> Tuple[bool, str]:
     if "/AppTranslocation/" in bundle:
         return False, "readonly"
     parent = os.path.dirname(bundle)
-    probe = os.path.join(parent, f".cum_write_test_{os.getpid()}")
+    probe = os.path.join(parent, f".um_write_test_{os.getpid()}")
     try:
         with open(probe, "w") as fh:
             fh.write("x")
@@ -60,7 +60,7 @@ def stage(zip_path: str, target: str) -> str:
                 raise MacUpdateError("unsafe path in package")
     if os.path.exists(target):
         shutil.rmtree(target, ignore_errors=True)
-    work = tempfile.mkdtemp(prefix=".cum_unpack_", dir=os.path.dirname(target))   # same volume -> cheap move
+    work = tempfile.mkdtemp(prefix=".um_unpack_", dir=os.path.dirname(target))   # same volume -> cheap move
     try:
         res = subprocess.run(["/usr/bin/ditto", "-x", "-k", zip_path, work],
                              capture_output=True, text=True, timeout=600)
@@ -117,7 +117,7 @@ def launch_swap(new_dir: str, log_path: str) -> int:
     bundle = install_dir()
     if not bundle:
         raise MacUpdateError("not a packaged build")
-    fd, script = tempfile.mkstemp(prefix="cum_update_", suffix=".sh")
+    fd, script = tempfile.mkstemp(prefix="um_update_", suffix=".sh")
     with os.fdopen(fd, "w", encoding="utf-8") as fh:
         fh.write(_SWAP_SH)
     os.chmod(script, 0o700)

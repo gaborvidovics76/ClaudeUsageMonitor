@@ -48,7 +48,7 @@ ok "build-macos/app.icns"
 say "[5/6] PyInstaller (this takes a few minutes the first time) ..."
 pkill -f "dist-macos/ClaudeUsageMonitor.app/Contents/MacOS/" 2>/dev/null || true
 rm -rf dist-macos/ClaudeUsageMonitor.app dist-macos/ClaudeUsageMonitor
-CUM_VERSION="$VERSION" python -m PyInstaller --noconfirm --clean \
+UM_VERSION="$VERSION" python -m PyInstaller --noconfirm --clean \
     --distpath dist-macos --workpath build-macos/work macos/ClaudeUsageMonitor.spec >build-macos/pyinstaller.log 2>&1 \
     || { tail -30 build-macos/pyinstaller.log; die "PyInstaller failed - full log: build-macos/pyinstaller.log"; }
 APP="dist-macos/ClaudeUsageMonitor.app"

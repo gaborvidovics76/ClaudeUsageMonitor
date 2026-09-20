@@ -184,7 +184,7 @@ def set_task_autostart(enabled: bool) -> bool:
         command=command,
         workdir=os.path.dirname(command),
     )
-    path = os.path.join(tempfile.gettempdir(), "cum_task.xml")
+    path = os.path.join(tempfile.gettempdir(), "um_task.xml")
     with open(path, "w", encoding="utf-16") as fh:
         fh.write(xml)
     try:

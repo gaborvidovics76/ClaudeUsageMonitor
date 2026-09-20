@@ -1,7 +1,7 @@
 /* Claude Usage Monitor – site logic. No dependencies, no third parties (unless the owner configures Google IDs AND the visitor agrees). */
 (function () {
   'use strict';
-  var API = '/cum-api/';
+  var API = '/usage-api/';
   var LANGS = { en: 'English', hu: 'Magyar', de: 'Deutsch', fr: 'Français', es: 'Español', it: 'Italiano', pt: 'Português', pl: 'Polski', nl: 'Nederlands', ru: 'Русский', cs: 'Čeština', tr: 'Türkçe' };
   var html = document.documentElement;
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -36,7 +36,7 @@
   (function routeLanguage() {
     var page = html.lang || 'en';
     state.lang = page;
-    var q = (params.get('lang') || '').slice(0, 2).toLowerCase(), chosen = store.get('cum-lang');
+    var q = (params.get('lang') || '').slice(0, 2).toLowerCase(), chosen = store.get('um-lang');
     var explicit = LANGS[q] ? q : (!ROOT && chosen && LANGS[chosen] ? chosen : null);
     if (explicit && explicit !== page) {
       params.delete('lang');
@@ -44,14 +44,14 @@
       location.replace(langUrl(explicit) + (rest ? '?' + rest : '') + location.hash);
       return;
     }
-    if (chosen || store.get('cum-hint-off')) return;
+    if (chosen || store.get('um-hint-off')) return;
     var nav = navigator.languages || [navigator.language || 'en'], guess = null;
     for (var i = 0; i < nav.length && !guess; i++) { var c = String(nav[i]).slice(0, 2).toLowerCase(); if (LANGS[c]) guess = c; }
     if (!guess || guess === page) return;
     var bar = $('#langhint'), go = $('#langhint-go');
     go.textContent = HINT[guess] + ' →'; go.href = langUrl(guess); go.lang = guess; go.hreflang = guess;
-    go.onclick = function () { store.set('cum-lang', guess); if (location.hash) go.href = langUrl(guess) + location.hash; };
-    $('#langhint-x').onclick = function () { bar.hidden = true; store.set('cum-hint-off', '1'); };
+    go.onclick = function () { store.set('um-lang', guess); if (location.hash) go.href = langUrl(guess) + location.hash; };
+    $('#langhint-x').onclick = function () { bar.hidden = true; store.set('um-hint-off', '1'); };
     bar.hidden = false;
   })();
 
@@ -73,7 +73,7 @@
     var list = $('#lang-list'), btn = $('.lang__btn');
     $$('a[data-lang]', list).forEach(function (a) {
       a.addEventListener('click', function () {
-        store.set('cum-lang', a.getAttribute('data-lang'));
+        store.set('um-lang', a.getAttribute('data-lang'));
         if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
       });
     });
@@ -306,8 +306,8 @@
     var box = $('#consent'), link = $('#cookie-settings'), g = state.cfg.google;
     $('#nocookie').innerHTML = tr('foot.cookie_on'); $('#nocookie').setAttribute('data-i18n', 'foot.cookie_on');
     link.hidden = false; $('#ck-ads-row').hidden = !g.ads && !g.gtm;
-    function save(c) { store.set('cum-consent', JSON.stringify({ a: c.analytics ? 1 : 0, m: c.ads ? 1 : 0, t: Date.now() })); box.hidden = true; loadGoogle(c); }
-    var saved = null; try { saved = JSON.parse(store.get('cum-consent') || 'null'); } catch (e) {}
+    function save(c) { store.set('um-consent', JSON.stringify({ a: c.analytics ? 1 : 0, m: c.ads ? 1 : 0, t: Date.now() })); box.hidden = true; loadGoogle(c); }
+    var saved = null; try { saved = JSON.parse(store.get('um-consent') || 'null'); } catch (e) {}
     if (saved && Date.now() - saved.t < 180 * 86400000) { loadGoogle({ analytics: !!saved.a, ads: !!saved.m }); } else { box.hidden = false; }
     $('#ck-accept').onclick = function () { save({ analytics: true, ads: !!(g.ads || g.gtm) }); };
     $('#ck-reject').onclick = function () { save({ analytics: false, ads: false }); };

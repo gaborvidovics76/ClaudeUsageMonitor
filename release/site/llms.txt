@@ -25,8 +25,8 @@
 
 ## Download
 
-- [Latest Windows package](https://dinorr.hu/cum-api/dl.php?os=win): always redirects to the newest release
-- [Latest macOS package](https://dinorr.hu/cum-api/dl.php?os=mac): always redirects to the newest release
+- [Latest Windows package](https://dinorr.hu/usage-api/dl.php?os=win): always redirects to the newest release
+- [Latest macOS package](https://dinorr.hu/usage-api/dl.php?os=mac): always redirects to the newest release
 - [Release manifest (JSON)](https://dinorr.hu/claude-usage-monitor/manifest.json): version, size, SHA-256, release notes
 - [Changelog](https://dinorr.hu/claude-usage-monitor/CHANGELOG.md)
 - [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)

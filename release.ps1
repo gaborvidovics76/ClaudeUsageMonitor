@@ -195,7 +195,7 @@ if ($Upload) {
     try {
         $mailed = 0
         for ($i = 0; $i -lt 40; $i++) {
-            $tick = Invoke-RestMethod -Uri "https://dinorr.hu/cum-api/stats.php?drain=1&$([guid]::NewGuid().ToString('N'))" -TimeoutSec 60
+            $tick = Invoke-RestMethod -Uri "https://dinorr.hu/usage-api/stats.php?drain=1&$([guid]::NewGuid().ToString('N'))" -TimeoutSec 60
             $mailed += [int]$tick.sent_now
             if (-not $tick.ok -or [int]$tick.queue_left -eq 0) { break }
             Start-Sleep -Seconds 2

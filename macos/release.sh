@@ -66,11 +66,11 @@ CFG="macos/release.local.env"
 [ -f "$CFG" ] || die "$CFG is missing. Copy macos/release.local.env.example to that name and fill in the FTP account Gabor gave you."
 # shellcheck disable=SC1090
 source "$CFG"
-: "${CUM_FTP_HOST:?set CUM_FTP_HOST in $CFG}" "${CUM_FTP_USER:?set CUM_FTP_USER in $CFG}" "${CUM_FTP_PASS:?set CUM_FTP_PASS in $CFG}"
-REMOTE="${CUM_FTP_DIR:-}"; REMOTE="${REMOTE#/}"; [ -n "$REMOTE" ] && REMOTE="${REMOTE%/}/"
+: "${UM_FTP_HOST:?set UM_FTP_HOST in $CFG}" "${UM_FTP_USER:?set UM_FTP_USER in $CFG}" "${UM_FTP_PASS:?set UM_FTP_PASS in $CFG}"
+REMOTE="${UM_FTP_DIR:-}"; REMOTE="${REMOTE#/}"; [ -n "$REMOTE" ] && REMOTE="${REMOTE%/}/"
 put() {   # local file, remote path relative to the account's folder
     curl --silent --show-error --fail --ssl-reqd --ftp-create-dirs --connect-timeout 30 \
-         --user "$CUM_FTP_USER:$CUM_FTP_PASS" -T "$1" "ftp://$CUM_FTP_HOST/$REMOTE$2" \
+         --user "$UM_FTP_USER:$UM_FTP_PASS" -T "$1" "ftp://$UM_FTP_HOST/$REMOTE$2" \
       || die "upload of $2 failed (check the account in $CFG; the server must offer FTP over TLS)"
     ok "uploaded $2"
 }

@@ -225,7 +225,7 @@ def can_self_update() -> Tuple[bool, str]:
         return False, "source"
     parent = os.path.dirname(folder)
     for where in (folder, parent):
-        probe = os.path.join(where, f".cum_write_test_{os.getpid()}")
+        probe = os.path.join(where, f".um_write_test_{os.getpid()}")
         try:
             with open(probe, "w") as fh:
                 fh.write("x")
@@ -315,7 +315,7 @@ def launch_swap(new_dir: str, log_path: str) -> None:
     folder = install_dir()
     if not folder:
         raise UpdateError("not a packaged build")
-    fd, script = tempfile.mkstemp(prefix="cum_update_", suffix=".ps1")
+    fd, script = tempfile.mkstemp(prefix="um_update_", suffix=".ps1")
     with os.fdopen(fd, "w", encoding="utf-8-sig") as fh:
         fh.write(_SWAP_PS1)
     args = ["powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",

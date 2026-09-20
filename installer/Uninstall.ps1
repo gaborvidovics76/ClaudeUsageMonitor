@@ -26,7 +26,7 @@ $InstallDir = [IO.Path]::GetFullPath($InstallDir)
 
 # A folder cannot delete itself while a script runs from it: continue from a temp copy.
 if (-not $Relaunched) {
-    $copy = Join-Path $env:TEMP ("cum_uninstall_{0}.ps1" -f ([guid]::NewGuid().ToString("N").Substring(0, 8)))
+    $copy = Join-Path $env:TEMP ("um_uninstall_{0}.ps1" -f ([guid]::NewGuid().ToString("N").Substring(0, 8)))
     Copy-Item $MyInvocation.MyCommand.Path $copy -Force
     $argList = @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "`"$copy`"", "-Relaunched", "-InstallDir", "`"$InstallDir`"")
     if ($Silent) { $argList += "-Silent" }
