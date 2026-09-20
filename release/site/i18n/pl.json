@@ -258,5 +258,11 @@
  "img.warn": "Zużycie Claude na 78% – widżet robi się żółty",
  "img.danger": "Zużycie Claude na 94% – widżet robi się czerwony",
  "img.studio": "Claude Usage Monitor w wybranym motywie i układzie",
- "img.more": "Jeden widżet Claude Usage Monitor pokazujący łączne zużycie ze wszystkich urządzeń"
+ "img.more": "Jeden widżet Claude Usage Monitor pokazujący łączne zużycie ze wszystkich urządzeń",
+ "feat.7t": "Cały tydzień na jednym wykresie",
+ "feat.7d": "Kliknij dwukrotnie widżet: oba limity na jednej osi czasu – 6 godzin, 24 godziny lub 7 dni – ze szczytem tygodnia, średnią dzienną i prognozą na koniec tygodnia, która zmienia kolor, zanim przekroczysz limit.",
+ "hist.r6": "6 godz.",
+ "hist.r24": "24 godz.",
+ "hist.r7": "7 dni",
+ "img.history": "Okno historii Claude Usage Monitor: okno 5-godzinne i limit tygodniowy w czasie, ze szczytem tygodnia, dziennym zużyciem i prognozą na koniec tygodnia"
 }

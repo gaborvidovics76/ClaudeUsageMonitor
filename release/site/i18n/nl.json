@@ -258,5 +258,11 @@
  "img.warn": "Claude-gebruik op 78% – de widget wordt geel",
  "img.danger": "Claude-gebruik op 94% – de widget wordt rood",
  "img.studio": "Claude Usage Monitor in het gekozen thema en de gekozen indeling",
- "img.more": "Eén Claude Usage Monitor-widget met het gezamenlijke verbruik van al je apparaten"
+ "img.more": "Eén Claude Usage Monitor-widget met het gezamenlijke verbruik van al je apparaten",
+ "feat.7t": "Je hele week in één grafiek",
+ "feat.7d": "Dubbelklik op de widget: beide limieten op één tijdlijn – 6 uur, 24 uur of 7 dagen – met weekpiek, daggemiddelde en een prognose voor het einde van de week die van kleur verandert voordat je over de limiet gaat.",
+ "hist.r6": "6 u",
+ "hist.r24": "24 u",
+ "hist.r7": "7 dagen",
+ "img.history": "Geschiedenisvenster van Claude Usage Monitor: 5-uurssessie en weeklimiet in de tijd, met weekpiek, dagverbruik en prognose voor het einde van de week"
 }

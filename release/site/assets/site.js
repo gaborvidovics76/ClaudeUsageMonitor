@@ -336,7 +336,16 @@
       b.onclick = function () { $$('button', group).forEach(function (x) { x.setAttribute('aria-checked', x === b); }); cb(b.getAttribute(attr)); };
     });
   }
-  radio($('#swatches'), 'data-theme', function (v) { state.theme = v; setStudio(); });
+  /* history window shots: range buttons like in the app; follows the warm theme when that one is picked */
+  state.range = '7d';
+  function setHistory() {
+    var img = $('#hist-img'), src = ROOT + 'img/history-' + state.range + '-' + (state.theme === 'claude' ? 'claude' : 'midnight') + '.webp';
+    if (img.getAttribute('src') === src) return;
+    img.classList.add('swap');
+    var pre = new Image(); pre.onload = function () { img.src = src; img.classList.remove('swap'); }; pre.src = src;
+  }
+  radio($('#hist-range'), 'data-range', function (v) { state.range = v; setHistory(); });
+  radio($('#swatches'), 'data-theme', function (v) { state.theme = v; setStudio(); setHistory(); });
   radio($('#layouts'), 'data-layout', function (v) { state.layout = v; setStudio(); });
 
   /* ------------------------------------------------------------ tabs */

@@ -258,5 +258,11 @@
  "img.warn": "Claude kullanımı %78 – widget sarıya döner",
  "img.danger": "Claude kullanımı %94 – widget kırmızıya döner",
  "img.studio": "Seçilen tema ve yerleşimde Claude Usage Monitor",
- "img.more": "Tüm cihazların toplam kullanımını gösteren tek bir Claude Usage Monitor widget'ı"
+ "img.more": "Tüm cihazların toplam kullanımını gösteren tek bir Claude Usage Monitor widget'ı",
+ "feat.7t": "Bütün haftan tek grafikte",
+ "feat.7d": "Widget'a çift tıkla: iki limit tek zaman çizelgesinde – 6 saat, 24 saat veya 7 gün – haftalık zirve, günlük ortalama ve sen limiti aşmadan önce renk değiştiren hafta bitimi tahminiyle.",
+ "hist.r6": "6 saat",
+ "hist.r24": "24 saat",
+ "hist.r7": "7 gün",
+ "img.history": "Claude Usage Monitor geçmiş penceresi: 5 saatlik oturum ve haftalık limit zaman içinde; haftalık zirve, günlük tüketim ve hafta bitimi tahmini"
 }

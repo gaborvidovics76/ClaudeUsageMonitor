@@ -216,6 +216,12 @@ code{font:500 .86em var(--mono);background:rgba(255,255,255,.07);padding:2px 7px
 .cell__shots img:first-child{left:-4%;top:0;transform:rotate(-4deg)}
 .cell__shots img:last-child{right:-8%;bottom:-6px;transform:rotate(3deg)}
 
+.cell--hist{display:flex;flex-direction:column;gap:22px}
+.cell__histhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.cell__histhead>div:first-child{flex:1 1 320px}
+.cell__histimg{width:100%;border-radius:14px;border:1px solid var(--line);transition:opacity .2s;filter:drop-shadow(0 24px 40px rgba(0,0,0,.45))}
+.cell__histimg.swap{opacity:0}
+
 /* band */
 .band{margin-top:120px;background:linear-gradient(120deg,color-mix(in oklab,var(--acc) 22%,var(--bg)),color-mix(in oklab,var(--acc2) 22%,var(--bg)));border-block:1px solid var(--line2);transition:background 1s}
 .band__in{display:flex;align-items:center;justify-content:space-between;gap:34px;padding:54px 0;flex-wrap:wrap}

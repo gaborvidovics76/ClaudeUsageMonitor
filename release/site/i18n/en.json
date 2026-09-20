@@ -80,6 +80,11 @@
  "feat.4d": "Fable, Opus, Sonnet, Claude Code, extra usage – every limit the server reports, plus this week's split between models.",
  "feat.5t": "Alerts that matter",
  "feat.5d": "A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.",
+ "feat.7t": "The whole week on one chart",
+ "feat.7d": "Double-click the widget: both limits on one timeline – 6 hours, 24 hours or 7 days – with your weekly peak, daily average and an end-of-week projection that changes colour before you overshoot.",
+ "hist.r6": "6 hours",
+ "hist.r24": "24 hours",
+ "hist.r7": "7 days",
  "feat.6t": "It doesn't spy. Period.",
  "feat.6d": "No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.",
  "band1.h": "Yes, it's really free.",
@@ -258,5 +263,6 @@
  "img.warn": "Claude usage at 78% – the widget turns yellow",
  "img.danger": "Claude usage at 94% – the widget turns red",
  "img.studio": "Claude Usage Monitor in the selected theme and layout",
- "img.more": "One Claude Usage Monitor widget showing the combined usage of every device"
+ "img.more": "One Claude Usage Monitor widget showing the combined usage of every device",
+ "img.history": "Claude Usage Monitor history window: 5-hour session and weekly limit over time, with weekly peak, daily burn and end-of-week projection"
 }

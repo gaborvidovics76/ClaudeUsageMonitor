@@ -258,5 +258,11 @@
  "img.warn": "Využití Claude na 78 % – widget zežloutne",
  "img.danger": "Využití Claude na 94 % – widget zčervená",
  "img.studio": "Claude Usage Monitor ve zvoleném motivu a rozložení",
- "img.more": "Jeden widget Claude Usage Monitor ukazující souhrnné využití ze všech zařízení"
+ "img.more": "Jeden widget Claude Usage Monitor ukazující souhrnné využití ze všech zařízení",
+ "feat.7t": "Celý týden v jednom grafu",
+ "feat.7d": "Dvojklik na widget: oba limity na jedné časové ose – 6 hodin, 24 hodin nebo 7 dní – s týdenním maximem, denním průměrem a odhadem na konec týdne, který změní barvu dřív, než limit překročíš.",
+ "hist.r6": "6 h",
+ "hist.r24": "24 h",
+ "hist.r7": "7 dní",
+ "img.history": "Okno historie Claude Usage Monitor: 5hodinové okno a týdenní limit v čase, s týdenním maximem, denní spotřebou a odhadem na konec týdne"
 }

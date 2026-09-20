@@ -258,5 +258,11 @@
  "img.warn": "Claude-Nutzung bei 78% – das Widget wird gelb",
  "img.danger": "Claude-Nutzung bei 94% – das Widget wird rot",
  "img.studio": "Claude Usage Monitor im gewählten Theme und Layout",
- "img.more": "Ein einziges Claude Usage Monitor Widget zeigt die gesamte Nutzung aller Geräte"
+ "img.more": "Ein einziges Claude Usage Monitor Widget zeigt die gesamte Nutzung aller Geräte",
+ "feat.7t": "Die ganze Woche in einem Diagramm",
+ "feat.7d": "Doppelklick aufs Widget: beide Limits auf einer Zeitachse – 6 Stunden, 24 Stunden oder 7 Tage – mit Wochenspitze, Tagesdurchschnitt und einer Hochrechnung bis zum Wochenende, die die Farbe wechselt, bevor du übers Limit gehst.",
+ "hist.r6": "6 Std.",
+ "hist.r24": "24 Std.",
+ "hist.r7": "7 Tage",
+ "img.history": "Verlaufsfenster von Claude Usage Monitor: 5-Stunden-Sitzung und Wochenlimit im Zeitverlauf, mit Wochenspitze, Tagesverbrauch und Hochrechnung bis zum Wochenende"
 }

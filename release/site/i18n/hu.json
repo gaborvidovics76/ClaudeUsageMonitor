@@ -258,5 +258,11 @@
  "img.warn": "78%-os Claude-használat – a widget sárgára vált",
  "img.danger": "94%-os Claude-használat – a widget pirosra vált",
  "img.studio": "A Claude Usage Monitor a kiválasztott témával és elrendezéssel",
- "img.more": "Egyetlen Claude Usage Monitor widget, amely az összes eszköz együttes használatát mutatja"
+ "img.more": "Egyetlen Claude Usage Monitor widget, amely az összes eszköz együttes használatát mutatja",
+ "feat.7t": "Az egész heted egy grafikonon",
+ "feat.7d": "Dupla kattintás a widgetre: mindkét keret egy idővonalon – 6 óra, 24 óra vagy 7 nap –, heti csúccsal, napi átlaggal és hét végi előrejelzéssel, ami még időben színt vált, mielőtt túlfutnál.",
+ "hist.r6": "6 óra",
+ "hist.r24": "24 óra",
+ "hist.r7": "7 nap",
+ "img.history": "A Claude Usage Monitor előzmények ablaka: az 5 órás ablak és a heti keret időbeli alakulása, heti csúccsal, napi fogyási ütemmel és hét végi előrejelzéssel"
 }
