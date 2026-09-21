@@ -504,6 +504,14 @@ class SettingsDialog(QDialog):
                            ("backup_d_tasks", "backup.sec_tasks"),
                            ("backup_d_log", "backup.sec_log")):
             form.addRow("", self._check(key, tr(label)))
+
+        sec = QLabel(tr("set.backup_disclaimer_h"))
+        sec.setObjectName("section")
+        form.addRow(sec)
+        disc = QLabel(tr("set.backup_disclaimer"))
+        disc.setObjectName("hint")
+        disc.setWordWrap(True)
+        form.addRow(disc)
         return page
 
     def _with_browse(self, edit: QLineEdit, folder: bool) -> QWidget:

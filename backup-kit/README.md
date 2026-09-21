@@ -7,6 +7,13 @@ one wrong delete, and it is gone. This kit makes a daily backup in **two indepen
 
 Free, open source (MIT), for Windows 10/11. No account with us, no data to us.
 
+> **Disclaimer – please read.** We accept **no liability** for backups, lost data or any damage. Claude Usage Monitor
+> only reads and shows the backup logs; it does not make, check or guarantee a backup. This kit is a free
+> **starting point offered as help**, not a finished product: you can – and may – change the scripts for your own
+> computer, so the quality and completeness of a backup cannot be guaranteed. **Making sure your backups are
+> complete and can be restored is your own responsibility** – check the lamps, read the log and test a restore
+> from time to time. Provided "as is" under the MIT licence, without any warranty.
+
 ## What you get
 
 | | Step 1 – OneDrive | Step 2 – second cloud |

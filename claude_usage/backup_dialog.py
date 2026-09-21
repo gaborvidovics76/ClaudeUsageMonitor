@@ -408,6 +408,10 @@ class BackupDialog(QDialog):
         root.setSpacing(8)
         root.addWidget(self.tabs, 1)
         root.addWidget(self.legend)
+        disc = QLabel(tr("backup.disclaimer_short"))
+        disc.setObjectName("hint")
+        disc.setWordWrap(True)
+        root.addWidget(disc)
         root.addLayout(bottom)
 
     def select(self, key: Optional[str]) -> None:

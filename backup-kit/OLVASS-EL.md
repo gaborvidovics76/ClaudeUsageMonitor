@@ -7,6 +7,13 @@ a **Claude Usage Monitor pedig a panelen mutatja, hogy frissek-e a mentéseid.**
 
 Ingyenes, nyílt forráskódú (MIT), Windows 10/11-re. Nincs regisztráció, semmilyen adat nem jön hozzánk.
 
+> **Felelősségkizárás – kérlek, olvasd el.** A mentésekért, az adatvesztésért és bármilyen kárért **nem vállalunk
+> felelősséget.** A Claude Usage Monitor csak beolvassa és megjeleníti a mentési naplókat; mentést nem készít, nem
+> ellenőriz és nem garantál. Ez a csomag **segítségként adott, ingyenes kiindulási alap**, nem kész termék: a szkripteket
+> a saját gépedhez igazíthatod és módosíthatod, ezért a mentések minősége és teljessége nem garantálható. **Azt, hogy
+> a mentéseid teljesek és visszaállíthatók legyenek, neked magadnak kell biztosítanod** – figyeld a lámpákat, olvasd a
+> naplót, és időnként próbálj ki egy visszaállítást. „Ahogy van” állapotban, jótállás nélkül, MIT-licenc alatt.
+
 ## Mit ment
 
 | | 1. lépés – OneDrive | 2. lépés – második felhő |

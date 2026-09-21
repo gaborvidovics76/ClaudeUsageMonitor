@@ -30,6 +30,11 @@ if (-not $isAdmin -and -not $SkipTasks) {
 
 Section '1/7  Settings'
 $cfg = Get-BackupConfig
+Write-Host ""
+Write-Host "  DISCLAIMER: this kit is a free starting point, provided AS IS, without warranty (MIT)." -ForegroundColor Yellow
+Write-Host "  NO LIABILITY is accepted for backups, lost data or any damage. You may change the scripts," -ForegroundColor Yellow
+Write-Host "  so making sure your backups are complete and can be restored is YOUR OWN responsibility." -ForegroundColor Yellow
+Write-Host ""
 Write-Host "  OneDrive       : $($cfg.OneDriveRoot)"
 Write-Host "  Backup folder  : $($cfg.BackupRoot)"
 Write-Host "  Obsidian vault : $(if ($cfg.VaultPath) { $cfg.VaultPath } else { '(not used)' })"

@@ -4,6 +4,11 @@
     #  Paths may use environment variables: %USERPROFILE%, %APPDATA% ...
     #  NO password or token belongs here. The cloud password lives only in
     #  rclone's own config file (%APPDATA%\rclone\rclone.conf), obscured.
+    #
+    #  DISCLAIMER: a free starting point, AS IS, without warranty (MIT).
+    #  NO LIABILITY for backups, lost data or any damage. You may change
+    #  anything here - making sure your backups are complete and can be
+    #  restored is your own responsibility. Test a restore now and then.
     # =====================================================================
 
     # ---- STEP 1: the backup folder (inside your OneDrive) ----------------

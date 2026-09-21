@@ -45,6 +45,8 @@ EXE_NAME = "ClaudeUsageMonitor.exe"
 APP_DIR_IN_ZIP = ("app/ClaudeUsageMonitor/", "ClaudeUsageMonitor/")   # accepted package layouts
 MAX_PACKAGE_BYTES = 600 * 1024 * 1024
 CHECK_EVERY_S = 6 * 3600
+# after a failed check (no network yet, sleep/wake, server hiccup) try again soon, backing off
+RETRY_AFTER_ERROR_S = (60, 300, 900, 1800, 3600)
 
 
 class UpdateError(Exception):
@@ -398,6 +400,7 @@ class Updater:
         self.progress = (0, 0)
         self.staged_dir = ""
         self.last_check = 0.0
+        self.failures = 0                   # consecutive failed checks - drives the retry delay
         self.counter = 0
         self._cancel = False
 
@@ -412,8 +415,13 @@ class Updater:
     def busy(self) -> bool:
         return self._thread is not None and self._thread.is_alive()
 
+    def retry_delay(self) -> float:
+        if self.state == "error" and self.failures:
+            return RETRY_AFTER_ERROR_S[min(self.failures, len(RETRY_AFTER_ERROR_S)) - 1]
+        return CHECK_EVERY_S
+
     def due(self) -> bool:
-        return time.time() - self.last_check > CHECK_EVERY_S
+        return time.time() - self.last_check > self.retry_delay()
 
     # -- check
     def check(self) -> bool:
@@ -429,18 +437,18 @@ class Updater:
         try:
             info = fetch_manifest(self.manifest_url)
             if is_newer(info.version, __version__) and not arch_ok(info):
-                self._set(state="uptodate", info=info)
+                self._set(state="uptodate", info=info, failures=0)
                 log(f"check: {info.version} is for {info.arch}, not for this machine")
             elif is_newer(info.version, __version__):
-                self._set(state="available", info=info)
+                self._set(state="available", info=info, failures=0)
                 log(f"check: {info.version} available (installed {__version__})")
             else:
-                self._set(state="uptodate", info=info)
+                self._set(state="uptodate", info=info, failures=0)
         except UpdateError as e:
-            self._set(state="error", error=str(e))
-            log(f"check failed: {e}")
+            self._set(state="error", error=str(e), failures=self.failures + 1)
+            log(f"check failed ({self.failures}x, next try in {int(self.retry_delay())} s): {e}")
         except Exception as e:  # noqa: BLE001 - the worker must never die silently
-            self._set(state="error", error=f"{type(e).__name__}: {e}")
+            self._set(state="error", error=f"{type(e).__name__}: {e}", failures=self.failures + 1)
 
     # -- download + stage
     def start_install(self) -> bool:
