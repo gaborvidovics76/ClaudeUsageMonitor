@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">İçeriğe geç</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Üç yeşil yedek lambalı Claude Usage Monitor paneli: OneDrive, Nextcloud ve Obsidian, her biri bir dakika önce yedeklenmiş">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Üç yeşil yedek lambalı Claude Usage Monitor paneli: OneDrive, Nextcloud ve Obsidian, her biri bir dakika önce yedeklenmiş"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Üç lamba. Tek bakış. Bilirsin.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor yedek ayrıntı penceresi: Güncel durumu, yedeklenmiş Obsidian kasası anlık görüntüsü, Claude Code, Claude Desktop, bir ek klasör ve dosya sayıları ile boyutlarıyla agent günlükleri, hata yok, ve zamanlanmış görev">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor yedek ayrıntı penceresi: Güncel durumu, yedeklenmiş Obsidian kasası anlık görüntüsü, Claude Code, Claude Desktop, bir ek klasör ve dosya sayıları ile boyutlarıyla agent günlükleri, hata yok, ve zamanlanmış görev"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Bir lambaya tıkla – göreceğin şey bu</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">ÜCRETSİZ</span> <span data-i18n="bk.kit_h">İşin dürüst tarafı: monitör izler, kit yedekler.</span></h3>
       <p data-i18n="bk.kit_p">Claude Usage Monitor dosyalarını kopyalamaz – kopyalamanın işe yarayıp yaramadığını gösterir. Kopyalamayı <b>Claude Backup Kit</b> yapar: satır satır okuyabileceğin birkaç kısa PowerShell betiği. Claude çalışmanı her gün OneDrive'a ve ikinci, bağımsız bir buluta yedekler ve lambaların okuduğu günlüğü yazar. Hesap yok, abonelik yok, bize hiçbir şey gönderilmez.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT lisansı</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT lisansı</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Backup Kit'i indir – ücretsiz</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Tüm betikleri GitHub'da oku</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">İndirerek <a href="#terms" data-legal="terms">kullanım koşullarını</a> kabul etmiş olursun: uygulama ve Backup Kit ücretsizdir, “olduğu gibi”, garantisiz ve riski sana ait olmak üzere sunulur.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Sorumluluk reddi – lütfen oku</h3>
     <p data-i18n="bk.disc"><b>Yedekler, kaybolan veriler veya herhangi bir zarar için hiçbir sorumluluk kabul etmiyoruz.</b> Claude Usage Monitor yalnızca yedeğinin günlüklerini okur ve gösterir – hiçbir yedek almaz, yedekleri denetlemez ve garanti etmez. Claude Backup Kit, yardım olarak sunulan ücretsiz bir başlangıç noktasıdır, bitmiş bir ürün değildir: herkes betikleri kendi bilgisayarına göre değiştirebilir ve bunu yapmakta özgürdür; bu yüzden bir yedeğin kalitesi ve eksiksizliği garanti edilemez. <b>Yedeklerin eksiksiz ve geri yüklenebilir olmasını sağlamak herkesin kendi sorumluluğundadır.</b> Lambaları kontrol et, günlüğü oku ve zaman zaman bir geri yüklemeyi dene. Kit, MIT lisansı altında, hiçbir garanti verilmeksizin “olduğu gibi” sunulur.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Kullanım Koşulları</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">kez bu sayfadan indirildi</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">İndirerek <a href="#terms" data-legal="terms">kullanım koşullarını</a> kabul etmiş olursun: uygulama ve Backup Kit ücretsizdir, “olduğu gibi”, garantisiz ve riski sana ait olmak üzere sunulur.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Bu düğmeler her zaman en yeni sürüme götürür – kurduktan sonra da uygulama kendini güncel tutar.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>

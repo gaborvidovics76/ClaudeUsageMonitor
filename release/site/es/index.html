@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panel de Claude Usage Monitor con tres indicadores de copia en verde: OneDrive, Nextcloud y Obsidian, cada uno copiado hace un minuto">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panel de Claude Usage Monitor con tres indicadores de copia en verde: OneDrive, Nextcloud y Obsidian, cada uno copiado hace un minuto"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Tres indicadores. Un vistazo. Lo sabes.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Ventana de detalles de copias de Claude Usage Monitor: estado Al día, la instantánea guardada de la bóveda de Obsidian, Claude Code, Claude Desktop, una carpeta adicional y los registros de los agentes con número de archivos y tamaños, sin errores, y la tarea programada">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Ventana de detalles de copias de Claude Usage Monitor: estado Al día, la instantánea guardada de la bóveda de Obsidian, Claude Code, Claude Desktop, una carpeta adicional y los registros de los agentes con número de archivos y tamaños, sin errores, y la tarea programada"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Haz clic en un indicador – esto es lo que ves</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">GRATIS</span> <span data-i18n="bk.kit_h">La parte honesta: el monitor vigila, el kit hace la copia.</span></h3>
       <p data-i18n="bk.kit_p">Claude Usage Monitor no copia tus archivos – te muestra si la copia funcionó. La copia la hace el <b>Claude Backup Kit</b>: un puñado de scripts cortos de PowerShell que puedes leer línea a línea. Guarda tu trabajo con Claude cada día en OneDrive y en una segunda nube independiente, y escribe el registro que leen los indicadores. Sin cuenta, sin suscripción, sin enviarnos nada.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · Licencia MIT</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · Licencia MIT</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Descargar el Backup Kit – gratis</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Lee cada script en GitHub</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Al descargar aceptas las <a href="#terms" data-legal="terms">condiciones de uso</a>: la app y el Backup Kit son gratuitos y se ofrecen «tal cual», sin garantía y bajo tu propia responsabilidad.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Exención de responsabilidad – léela, por favor</h3>
     <p data-i18n="bk.disc"><b>No asumimos ninguna responsabilidad por las copias de seguridad, los datos perdidos ni ningún daño.</b> Claude Usage Monitor solo lee y muestra los registros de tu copia de seguridad – no hace, no comprueba ni garantiza ninguna copia. El Claude Backup Kit es un punto de partida gratuito que se ofrece como ayuda, no un producto terminado: cualquiera puede – y tiene derecho a – modificar los scripts para adaptarlos a su propio equipo, por lo que no se pueden garantizar la calidad ni la integridad de una copia. <b>Asegurarse de que las copias estén completas y se puedan restaurar es responsabilidad de cada uno.</b> Revisa los indicadores, lee el registro y prueba de vez en cuando una restauración. El kit se ofrece «tal cual», sin ninguna garantía, bajo la licencia MIT.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Condiciones de uso</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">descargas desde esta página hasta ahora</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Al descargar aceptas las <a href="#terms" data-legal="terms">condiciones de uso</a>: la app y el Backup Kit son gratuitos y se ofrecen «tal cual», sin garantía y bajo tu propia responsabilidad.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Estos botones apuntan siempre a la versión más reciente – y, una vez instalada, la app se mantiene al día sola.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>

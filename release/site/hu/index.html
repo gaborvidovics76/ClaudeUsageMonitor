@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Ugrás a tartalomra</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="A Claude Usage Monitor panelje három zöld mentési lámpával: OneDrive, Nextcloud és Obsidian, mindegyik mentése egy perce készült">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="A Claude Usage Monitor panelje három zöld mentési lámpával: OneDrive, Nextcloud és Obsidian, mindegyik mentése egy perce készült"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Három lámpa. Egy pillantás. És tudod.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="A Claude Usage Monitor mentési részletező ablaka: Friss állapot, az elmentett Obsidian-vault pillanatképe, a Claude Code, a Claude Desktop, egy további mappa és az agent-naplók fájlszámmal és mérettel, hibák nélkül, valamint az ütemezett feladat">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="A Claude Usage Monitor mentési részletező ablaka: Friss állapot, az elmentett Obsidian-vault pillanatképe, a Claude Code, a Claude Desktop, egy további mappa és az agent-naplók fájlszámmal és mérettel, hibák nélkül, valamint az ütemezett feladat"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Kattints egy lámpára – ezt látod</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">INGYENES</span> <span data-i18n="bk.kit_h">Az őszinte rész: a monitor figyel, a csomag ment.</span></h3>
       <p data-i18n="bk.kit_p">A Claude Usage Monitor nem másolja a fájljaidat – azt mutatja meg, hogy sikerült-e a másolás. A másolást a <b>Claude Backup Kit</b> végzi: néhány rövid PowerShell-szkript, amelyet soronként végigolvashatsz. Minden nap elmenti a Claude-os munkádat a OneDrive-ra és egy második, független felhőbe, és megírja a naplót, amelyet a lámpák olvasnak. Nincs fiók, nincs előfizetés, semmi nem jön hozzánk.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT-licenc</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT-licenc</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">A Backup Kit letöltése – ingyen</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Minden szkript elolvasható a GitHubon</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">A letöltéssel elfogadod a <a href="#terms" data-legal="terms">Felhasználási feltételeket</a>: a program és a Backup Kit ingyenes, „ahogy van” állapotban, jótállás nélkül, saját felelősségedre használható.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Felelősségkizárás – kérlek, olvasd el</h3>
     <p data-i18n="bk.disc"><b>A mentésekért, az adatvesztésért és bármilyen kárért nem vállalunk felelősséget.</b> A Claude Usage Monitor csak beolvassa és megjeleníti a mentésed naplóit – mentést nem készít, nem ellenőriz és nem garantál. A Claude Backup Kit segítségként adott, ingyenes kiindulási alap, nem kész termék: a szkripteket mindenki a saját gépéhez igazíthatja és módosíthatja – ez így is van rendjén –, ezért a mentések minősége és teljessége nem garantálható. <b>Azt, hogy a mentések teljesek és visszaállíthatók legyenek, mindenkinek magának kell biztosítania.</b> Figyeld a lámpákat, olvasd a naplót, és időnként próbálj ki egy visszaállítást. A csomag „ahogy van” állapotban, jótállás nélkül, MIT-licenc alatt érhető el.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Felhasználási feltételek</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">letöltés eddig erről az oldalról</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">A letöltéssel elfogadod a <a href="#terms" data-legal="terms">Felhasználási feltételeket</a>: a program és a Backup Kit ingyenes, „ahogy van” állapotban, jótállás nélkül, saját felelősségedre használható.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Ezek a gombok mindig a legújabb kiadásra mutatnak – telepítés után pedig az alkalmazás magától naprakészen tartja magát.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>

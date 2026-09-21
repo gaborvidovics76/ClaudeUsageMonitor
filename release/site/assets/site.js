@@ -423,5 +423,9 @@
     loadJSON('macos/manifest.json').then(function (m) { if (safeUrl(m.download_url)) state.mac = m; else state.macMissing = true; }).catch(function () { state.macMissing = true; }),
     fetch(ROOT + 'CHANGELOG.md', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (t) { state.log = parseChangelog(t); }).catch(function () {}),
     loadStats()
-  ]).then(loadDict).then(function () { initConsent(); mailLinkStates(); $$('[data-if-recaptcha]').forEach(function (n) { n.hidden = !rcKey(); }); });
+  ]).then(loadDict).then(function () {
+    initConsent(); mailLinkStates(); $$('[data-if-recaptcha]').forEach(function (n) { n.hidden = !rcKey(); });
+    // a shared link such as .../#terms opens that legal text (the README of the Backup Kit points there)
+    var h = location.hash.slice(1); if (h === 'terms' || h === 'privacy' || h === 'imprint') openLegal(h);
+  });
 })();

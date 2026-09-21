@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Přejít k obsahu</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panel Claude Usage Monitor se třemi zelenými kontrolkami záloh: OneDrive, Nextcloud a Obsidian, každá zálohovaná před minutou">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panel Claude Usage Monitor se třemi zelenými kontrolkami záloh: OneDrive, Nextcloud a Obsidian, každá zálohovaná před minutou"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Tři kontrolky. Jeden pohled. A víš to.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Okno podrobností záloh Claude Usage Monitor: stav Aktuální, zálohovaný snímek trezoru Obsidianu, Claude Code, Claude Desktop, další složka a protokoly agentů s počty souborů a velikostmi, žádné chyby a naplánovaná úloha">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Okno podrobností záloh Claude Usage Monitor: stav Aktuální, zálohovaný snímek trezoru Obsidianu, Claude Code, Claude Desktop, další složka a protokoly agentů s počty souborů a velikostmi, žádné chyby a naplánovaná úloha"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Klikni na kontrolku – tohle uvidíš</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">ZDARMA</span> <span data-i18n="bk.kit_h">Upřímně: monitor hlídá, kit zálohuje.</span></h3>
       <p data-i18n="bk.kit_p">Claude Usage Monitor tvoje soubory nekopíruje – ukazuje ti, jestli se kopírování povedlo. Kopíruje <b>Claude Backup Kit</b>: pár krátkých skriptů v PowerShellu, které si můžeš přečíst řádek po řádku. Každý den zálohuje tvou práci s Claude do OneDrivu a do druhého, nezávislého cloudu a zapisuje protokol, který kontrolky čtou. Žádný účet, žádné předplatné, nic se nám neposílá.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licence MIT</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licence MIT</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Stáhnout Backup Kit – zdarma</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Přečti si každý skript na GitHubu</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Stažením přijímáš <a href="#terms" data-legal="terms">podmínky použití</a>: aplikace i Backup Kit jsou zdarma a poskytují se „tak, jak jsou“, bez záruky, na vlastní riziko.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Vyloučení odpovědnosti – přečti si to</h3>
     <p data-i18n="bk.disc"><b>Nepřebíráme žádnou odpovědnost za zálohy, ztracená data ani jakékoli škody.</b> Claude Usage Monitor jen čte a zobrazuje protokoly tvé zálohy – žádnou zálohu nevytváří, nekontroluje ani nezaručuje. Claude Backup Kit je bezplatný výchozí bod nabízený jako pomoc, ne hotový produkt: každý může – a smí – skripty upravit pro svůj počítač, a proto nelze zaručit kvalitu ani úplnost zálohy. <b>Zajistit, aby byly zálohy úplné a daly se obnovit, je vlastní odpovědností každého.</b> Sleduj kontrolky, čti protokol a čas od času vyzkoušej obnovu. Kit se poskytuje „tak, jak je“, bez jakékoli záruky, pod licencí MIT.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Podmínky použití</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">stažení z této stránky</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Stažením přijímáš <a href="#terms" data-legal="terms">podmínky použití</a>: aplikace i Backup Kit jsou zdarma a poskytují se „tak, jak jsou“, bez záruky, na vlastní riziko.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Tato tlačítka vždy vedou na nejnovější vydání – a po instalaci se už aplikace udržuje aktuální sama.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>

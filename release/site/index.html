@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="img/icon-180.png">
 <link rel="preload" href="fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="assets/site.css?v=9">
+<link rel="stylesheet" href="assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Skip to content</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor panel with three green backup lamps: OneDrive, Nextcloud and Obsidian, each backed up one minute ago">
+      <a class="zoomimg" href="img/backup-panel.png" target="_blank" rel="noopener"><img src="img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor panel with three green backup lamps: OneDrive, Nextcloud and Obsidian, each backed up one minute ago"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Three lamps. One look. You know.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor backup details window: status Fresh, the backed-up Obsidian vault snapshot, Claude Code, Claude Desktop, an extra folder and the agent logs with file counts and sizes, no errors, and the scheduled task">
+      <a class="zoomimg" href="img/backup-details.png" target="_blank" rel="noopener"><img src="img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor backup details window: status Fresh, the backed-up Obsidian vault snapshot, Claude Code, Claude Desktop, an extra folder and the agent logs with file counts and sizes, no errors, and the scheduled task"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Click a lamp – this is what you see</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">FREE</span> <span data-i18n="bk.kit_h">The honest part: the monitor watches, the kit backs up.</span></h3>
       <p data-i18n="bk.kit_p">Claude Usage Monitor doesn't copy your files – it shows you whether the copying worked. The copying is done by the <b>Claude Backup Kit</b>: a handful of short PowerShell scripts you can read line by line. It backs up your Claude work every day to OneDrive and to a second, independent cloud, and writes the log the lamps read. No account, no subscription, nothing sent to us.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT licence</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT licence</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Download the Backup Kit – free</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Read every script on GitHub</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">By downloading you accept the <a href="#terms" data-legal="terms">Terms of use</a>: the app and the Backup Kit are free and provided “as is”, without warranty, at your own risk.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Disclaimer – please read</h3>
     <p data-i18n="bk.disc"><b>We accept no liability for backups, lost data or any damage.</b> Claude Usage Monitor only reads and shows the logs of your backup – it does not make, check or guarantee any backup. The Claude Backup Kit is a free starting point offered as help, not a finished product: everyone can – and may – change the scripts to suit their own computer, so the quality and completeness of a backup cannot be guaranteed. <b>Making sure your backups are complete and can be restored is everyone's own responsibility.</b> Check the lamps, read the log and test a restore from time to time. The kit is provided “as is”, without any warranty, under the MIT licence.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Terms of use</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">downloads from this page so far</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">By downloading you accept the <a href="#terms" data-legal="terms">Terms of use</a>: the app and the Backup Kit are free and provided “as is”, without warranty, at your own risk.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">These buttons always point to the newest release – and once installed, the app keeps itself up to date.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="assets/site.js?v=8" defer></script>
+<script src="assets/site.js?v=9" defer></script>
 </body>
 </html>

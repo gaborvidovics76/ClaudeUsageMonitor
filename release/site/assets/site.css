@@ -172,6 +172,7 @@ code{font:500 .86em var(--mono);background:rgba(255,255,255,.07);padding:2px 7px
 .lamp--r{background:var(--rd);box-shadow:0 0 0 4px color-mix(in oklab,var(--rd) 22%,transparent)}
 .lamp--ring{background:var(--g);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--rd)}
 .bk__shows{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-top:56px}
+.zoomimg{display:block;cursor:zoom-in}.zoomimg:hover img{filter:drop-shadow(0 24px 40px rgba(0,0,0,.45)) brightness(1.06)}
 .bk__shot{margin:0}.bk__shot img{width:100%;border-radius:14px;border:1px solid var(--line);filter:drop-shadow(0 24px 40px rgba(0,0,0,.45))}
 .bk__shows h3{font-size:1.3rem;margin-bottom:18px}.bk__shows .fine{margin-top:18px}
 .bk__kit{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,1fr);gap:34px;align-items:center;margin-top:56px;padding:34px;border-radius:26px;border:1px solid color-mix(in oklab,var(--acc) 55%,transparent);background:linear-gradient(160deg,color-mix(in oklab,var(--acc) 12%,var(--card2)),var(--card));box-shadow:0 30px 80px -50px var(--acc)}
@@ -181,6 +182,8 @@ code{font:500 .86em var(--mono);background:rgba(255,255,255,.07);padding:2px 7px
 .bk__kitbtns{display:grid;gap:12px}.bk__kitbtns .btn{white-space:normal;text-align:center}
 .bk__disc{margin-top:28px;padding:24px 28px;border-radius:var(--r);border:1px solid color-mix(in oklab,var(--y) 55%,transparent);border-left-width:5px;background:color-mix(in oklab,var(--y) 7%,var(--card))}
 .bk__disc h3{font-size:1.1rem;margin-bottom:8px;color:var(--y)}.bk__disc p{color:var(--dim);max-width:95ch}.bk__disc b{color:var(--ink)}
+.bk__discmore{margin-top:10px;font-weight:600}.bk__discmore a{color:var(--y)}
+.dlterms{margin-top:14px;text-align:center}.bk__kitbtns .dlterms{text-align:left;margin-top:2px}
 .bkhelp{margin-top:56px;max-width:980px}
 .bkhelp>h3{font-size:1.3rem;margin-bottom:6px}.bkhelp>.fine{margin-bottom:14px}
 .bkhelp details:last-child{border-bottom:1px solid var(--line)}

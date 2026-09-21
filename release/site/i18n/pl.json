@@ -306,5 +306,6 @@
  "img.history": "Okno historii Claude Usage Monitor: sesja 5-godzinna i limit tygodniowy w czasie, ze szczytem tygodnia, dziennym zużyciem i prognozą na koniec tygodnia",
  "bk.feat": "Lampki kopii – sprawdź, czy twoja praca z Claude ma kopię zapasową",
  "img.bk_panel": "Panel Claude Usage Monitor z trzema zielonymi lampkami kopii zapasowych: OneDrive, Nextcloud i Obsidian, każda kopia wykonana minutę temu",
- "img.bk_details": "Okno szczegółów kopii zapasowych Claude Usage Monitor: stan Aktualny, skopiowany snapshot vaulta Obsidian, Claude Code, Claude Desktop, dodatkowy folder i dzienniki agentów z liczbą plików i rozmiarami, brak błędów oraz zaplanowane zadanie"
+ "img.bk_details": "Okno szczegółów kopii zapasowych Claude Usage Monitor: stan Aktualny, skopiowany snapshot vaulta Obsidian, Claude Code, Claude Desktop, dodatkowy folder i dzienniki agentów z liczbą plików i rozmiarami, brak błędów oraz zaplanowane zadanie",
+ "dls.terms": "Pobierając, akceptujesz <a href=\"#terms\" data-legal=\"terms\">warunki korzystania</a>: aplikacja i Backup Kit są bezpłatne i udostępniane „w stanie, w jakim są”, bez gwarancji, na własne ryzyko."
 }

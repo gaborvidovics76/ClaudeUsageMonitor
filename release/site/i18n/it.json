@@ -306,5 +306,6 @@
  "img.history": "Finestra della cronologia di Claude Usage Monitor: sessione di 5 ore e limite settimanale nel tempo, con picco settimanale, consumo giornaliero e proiezione di fine settimana",
  "bk.feat": "Spie di backup – vedi se il tuo lavoro con Claude è al sicuro",
  "img.bk_panel": "Pannello di Claude Usage Monitor con tre spie di backup verdi: OneDrive, Nextcloud e Obsidian, ciascuno salvato un minuto fa",
- "img.bk_details": "Finestra dei dettagli dei backup di Claude Usage Monitor: stato Aggiornato, lo snapshot salvato del vault di Obsidian, Claude Code, Claude Desktop, una cartella aggiuntiva e i log degli agenti con numero di file e dimensioni, nessun errore, e l'attività pianificata"
+ "img.bk_details": "Finestra dei dettagli dei backup di Claude Usage Monitor: stato Aggiornato, lo snapshot salvato del vault di Obsidian, Claude Code, Claude Desktop, una cartella aggiuntiva e i log degli agenti con numero di file e dimensioni, nessun errore, e l'attività pianificata",
+ "dls.terms": "Scaricando accetti le <a href=\"#terms\" data-legal=\"terms\">condizioni d'uso</a>: l'app e il Backup Kit sono gratuiti e forniti «così come sono», senza garanzia, a tuo rischio."
 }

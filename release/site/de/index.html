@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Zum Inhalt springen</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor Panel mit drei grünen Sicherungslampen: OneDrive, Nextcloud und Obsidian, jeweils vor einer Minute gesichert">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor Panel mit drei grünen Sicherungslampen: OneDrive, Nextcloud und Obsidian, jeweils vor einer Minute gesichert"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Drei Lampen. Ein Blick. Du weißt Bescheid.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Sicherungs-Detailfenster von Claude Usage Monitor: Status Aktuell, der gesicherte Snapshot des Obsidian-Vaults, Claude Code, Claude Desktop, ein zusätzlicher Ordner und die Agentenprotokolle mit Dateianzahl und Größe, keine Fehler, und die geplante Aufgabe">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Sicherungs-Detailfenster von Claude Usage Monitor: Status Aktuell, der gesicherte Snapshot des Obsidian-Vaults, Claude Code, Claude Desktop, ein zusätzlicher Ordner und die Agentenprotokolle mit Dateianzahl und Größe, keine Fehler, und die geplante Aufgabe"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Klick auf eine Lampe – das siehst du</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">KOSTENLOS</span> <span data-i18n="bk.kit_h">Der ehrliche Teil: Der Monitor passt auf, das Kit sichert.</span></h3>
       <p data-i18n="bk.kit_p">Claude Usage Monitor kopiert deine Dateien nicht – es zeigt dir, ob das Kopieren geklappt hat. Das Kopieren übernimmt das <b>Claude Backup Kit</b>: eine Handvoll kurzer PowerShell-Skripte, die du Zeile für Zeile lesen kannst. Es sichert deine Claude-Arbeit jeden Tag in OneDrive und in eine zweite, unabhängige Cloud und schreibt das Protokoll, das die Lampen lesen. Kein Konto, kein Abo, nichts wird an uns gesendet.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT-Lizenz</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT-Lizenz</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Backup Kit herunterladen – kostenlos</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Jedes Skript auf GitHub lesen</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Mit dem Herunterladen akzeptierst du die <a href="#terms" data-legal="terms">Nutzungsbedingungen</a>: Die App und das Backup Kit sind kostenlos und werden „wie besehen“, ohne Gewährleistung und auf eigenes Risiko bereitgestellt.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Haftungsausschluss – bitte lesen</h3>
     <p data-i18n="bk.disc"><b>Wir übernehmen keine Haftung für Sicherungen, verlorene Daten oder sonstige Schäden.</b> Claude Usage Monitor liest und zeigt nur die Protokolle deiner Sicherung – es erstellt, prüft oder garantiert keine Sicherung. Das Claude Backup Kit ist ein kostenloser Ausgangspunkt, der als Hilfe angeboten wird, kein fertiges Produkt: Jeder kann – und darf – die Skripte an den eigenen Computer anpassen, deshalb können Qualität und Vollständigkeit einer Sicherung nicht garantiert werden. <b>Dafür zu sorgen, dass die eigenen Sicherungen vollständig sind und sich wiederherstellen lassen, liegt in der Verantwortung jedes Einzelnen.</b> Prüfe die Lampen, lies das Protokoll und teste von Zeit zu Zeit eine Wiederherstellung. Das Kit wird „wie es ist“, ohne jegliche Gewährleistung, unter der MIT-Lizenz bereitgestellt.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Nutzungsbedingungen</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">Downloads von dieser Seite bisher</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Mit dem Herunterladen akzeptierst du die <a href="#terms" data-legal="terms">Nutzungsbedingungen</a>: Die App und das Backup Kit sind kostenlos und werden „wie besehen“, ohne Gewährleistung und auf eigenes Risiko bereitgestellt.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Diese Buttons führen immer zur neuesten Version – und einmal installiert, hält sich die App selbst aktuell.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>

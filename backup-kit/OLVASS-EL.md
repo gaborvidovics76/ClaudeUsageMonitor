@@ -12,7 +12,8 @@ Ingyenes, nyílt forráskódú (MIT), Windows 10/11-re. Nincs regisztráció, se
 > ellenőriz és nem garantál. Ez a csomag **segítségként adott, ingyenes kiindulási alap**, nem kész termék: a szkripteket
 > a saját gépedhez igazíthatod és módosíthatod, ezért a mentések minősége és teljessége nem garantálható. **Azt, hogy
 > a mentéseid teljesek és visszaállíthatók legyenek, neked magadnak kell biztosítanod** – figyeld a lámpákat, olvasd a
-> naplót, és időnként próbálj ki egy visszaállítást. „Ahogy van” állapotban, jótállás nélkül, MIT-licenc alatt.
+> naplót, és időnként próbálj ki egy visszaállítást. „Ahogy van” állapotban, jótállás nélkül, MIT-licenc alatt. A csomag
+> használatával elfogadod a Felhasználási feltételeket: https://dinorr.hu/claude-usage-monitor/hu/#terms
 
 ## Mit ment
 

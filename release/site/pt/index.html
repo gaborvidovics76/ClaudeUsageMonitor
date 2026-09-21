@@ -52,7 +52,7 @@
 <link rel="apple-touch-icon" href="../img/icon-180.png">
 <link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="../assets/site.css?v=9">
+<link rel="stylesheet" href="../assets/site.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Ir para o conteúdo</a>
@@ -180,7 +180,7 @@
 
   <div class="bk__top">
     <figure class="bk__panel reveal">
-      <img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Painel do Claude Usage Monitor com três indicadores de backup verdes: OneDrive, Nextcloud e Obsidian, cada um com backup feito há um minuto">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Painel do Claude Usage Monitor com três indicadores de backup verdes: OneDrive, Nextcloud e Obsidian, cada um com backup feito há um minuto"></a>
     </figure>
     <div class="bk__legend reveal">
       <h3 data-i18n="bk.lamps_h">Três indicadores. Um olhar. Você sabe.</h3>
@@ -202,7 +202,7 @@
 
   <div class="bk__shows">
     <figure class="bk__shot reveal">
-      <img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Janela de detalhes de backup do Claude Usage Monitor: estado Atualizado, o snapshot do vault do Obsidian no backup, Claude Code, Claude Desktop, uma pasta extra e os logs dos agentes com número de arquivos e tamanhos, nenhum erro, e a tarefa agendada">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Janela de detalhes de backup do Claude Usage Monitor: estado Atualizado, o snapshot do vault do Obsidian no backup, Claude Code, Claude Desktop, uma pasta extra e os logs dos agentes com número de arquivos e tamanhos, nenhum erro, e a tarefa agendada"></a>
     </figure>
     <div>
       <h3 data-i18n="bk.shows_h">Clique num indicador – é isto que você vê</h3>
@@ -215,17 +215,19 @@
     <div class="bk__kittxt">
       <h3><span class="freebadge" data-i18n="dls.free">GRÁTIS</span> <span data-i18n="bk.kit_h">A parte honesta: o monitor vigia, o kit faz o backup.</span></h3>
       <p data-i18n="bk.kit_p">O Claude Usage Monitor não copia os seus arquivos – ele mostra se a cópia deu certo. Quem copia é o <b>Claude Backup Kit</b>: alguns scripts curtos de PowerShell que você pode ler linha por linha. Ele faz o backup do seu trabalho com o Claude todos os dias no OneDrive e numa segunda nuvem independente, e grava o log que os indicadores leem. Sem conta, sem assinatura, nada é enviado para nós.</p>
-      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licença MIT</span> · ZIP <span data-kit="size">23 KB</span></p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licença MIT</span> · ZIP <span data-kit="size">24 KB</span></p>
     </div>
     <div class="bk__kitbtns">
       <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Baixar o Backup Kit – grátis</span></a>
       <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Leia cada script no GitHub</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Ao baixar, você aceita os <a href="#terms" data-legal="terms">termos de uso</a>: o app e o Backup Kit são gratuitos e fornecidos “como estão”, sem garantia, por sua conta e risco.</p>
     </div>
   </div>
 
   <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
     <h3 data-i18n="bk.disc_h">Isenção de responsabilidade – leia com atenção</h3>
     <p data-i18n="bk.disc"><b>Não assumimos nenhuma responsabilidade por backups, dados perdidos ou qualquer dano.</b> O Claude Usage Monitor apenas lê e mostra os logs do seu backup – ele não faz, não verifica nem garante nenhum backup. O Claude Backup Kit é um ponto de partida gratuito, oferecido como ajuda, e não um produto pronto: qualquer pessoa pode – e tem o direito de – alterar os scripts para adaptá-los ao próprio computador, por isso a qualidade e a completude de um backup não podem ser garantidas. <b>Garantir que os seus backups estejam completos e possam ser restaurados é responsabilidade de cada um.</b> Confira os indicadores, leia o log e teste uma restauração de vez em quando. O kit é fornecido “como está”, sem nenhuma garantia, sob a licença MIT.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Termos de uso</a></p>
   </aside>
 
   <div class="bkhelp" id="backup-help">
@@ -465,6 +467,7 @@
       </article>
     </div>
     <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">downloads feitos nesta página até agora</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Ao baixar, você aceita os <a href="#terms" data-legal="terms">termos de uso</a>: o app e o Backup Kit são gratuitos e fornecidos “como estão”, sem garantia, por sua conta e risco.</p>
     <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Estes botões apontam sempre para a versão mais nova – e, depois de instalado, o app se mantém atualizado sozinho.</span></p>
   </div>
 </section>
@@ -686,6 +689,6 @@
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
 </svg>
 
-<script src="../assets/site.js?v=8" defer></script>
+<script src="../assets/site.js?v=9" defer></script>
 </body>
 </html>
