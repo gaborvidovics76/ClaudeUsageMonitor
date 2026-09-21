@@ -2,7 +2,7 @@
 
 > Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.
 
-- Current version: 2.6.3 (released 2026-09-21)
+- Current version: 2.6.4 (released 2026-09-21)
 - Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
 - Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
 - Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.

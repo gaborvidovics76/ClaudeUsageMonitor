@@ -2,6 +2,17 @@
 
 <!-- newer-versions-here -->
 
+## [2.6.4] - 2026-09-22
+
+- History with the claude.ai data source is now kept: the last 7 days survive restarts and updates (until now it started empty after every restart). On the first start the gaps are filled in from Claude Desktop's own usage log, when there is one.
+- New Help window (menu: Help…): a detailed guide to every feature, and an Author tab with the official website – claudeusagemonitor.com.
+
+*Magyarul:*
+
+- A claude.ai adatforrás előzményei mostantól megmaradnak: az utolsó 7 nap túléli az újraindítást és a frissítést (eddig minden újraindítás után üresről indult). Első indításkor a hiányzó szakaszokat a Claude Desktop saját használati naplójából tölti ki, ha van ilyen.
+- Új Súgó ablak (menü: Súgó (HELP)…): részletes leírás minden funkcióról, és egy Készítő fül a hivatalos weboldallal – claudeusagemonitor.com.
+
+
 ## [2.6.3] - 2026-09-21
 
 - New home: the website, the downloads and the automatic updates now live at https://claudeusagemonitor.com/. Nothing to do on your side – this update switches the app over, your settings and history stay as they are.
