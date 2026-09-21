@@ -2,6 +2,19 @@
 
 <!-- newer-versions-here -->
 
+## [2.6.1] - 2026-09-21
+
+- The app now uses Anthropic's own terms for Claude's limits, in all 12 languages: "5-hour session" instead of "5-hour window" and "usage credits" instead of "extra usage" - the same words you see in Claude under Settings → Usage.
+- Where Anthropic's help center is available in your language (German, French, Spanish, Italian, Portuguese, Russian), the app uses exactly its wording; elsewhere a faithful translation of Anthropic's English terms.
+- Small internal clean-up: the app's temporary files have new names.
+
+*Magyarul:*
+
+- A program mostantól mind a 12 nyelven az Anthropic saját kifejezéseit használja: „5 órás munkamenet” az „5 órás ablak” helyett, „heti limit” a „heti keret” helyett, „használati kredit” az „extra használat” helyett – ugyanazokat a fogalmakat, amelyeket a Claude „Settings → Usage” oldalán látsz.
+- Ahol az Anthropic súgója elérhető az adott nyelven (német, francia, spanyol, olasz, portugál, orosz), a program pontosan az ottani szavakat használja; a többi nyelven az Anthropic angol kifejezéseinek hű fordítását.
+- Kisebb belső rendrakás: új nevet kaptak a program ideiglenes fájljai.
+
+
 ## [2.6.0] - 2026-09-18
 
 - New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.

@@ -1,0 +1,52 @@
+{
+  "en": [
+    "The app now uses Anthropic's own terms for Claude's limits, in all 12 languages: \"5-hour session\" instead of \"5-hour window\" and \"usage credits\" instead of \"extra usage\" - the same words you see in Claude under Settings → Usage.",
+    "Where Anthropic's help center is available in your language (German, French, Spanish, Italian, Portuguese, Russian), the app uses exactly its wording; elsewhere a faithful translation of Anthropic's English terms.",
+    "Small internal clean-up: the app's temporary files have new names."
+  ],
+  "hu": [
+    "A program mostantól mind a 12 nyelven az Anthropic saját kifejezéseit használja: „5 órás munkamenet” az „5 órás ablak” helyett, „heti limit” a „heti keret” helyett, „használati kredit” az „extra használat” helyett – ugyanazokat a fogalmakat, amelyeket a Claude „Settings → Usage” oldalán látsz.",
+    "Ahol az Anthropic súgója elérhető az adott nyelven (német, francia, spanyol, olasz, portugál, orosz), a program pontosan az ottani szavakat használja; a többi nyelven az Anthropic angol kifejezéseinek hű fordítását.",
+    "Kisebb belső rendrakás: új nevet kaptak a program ideiglenes fájljai."
+  ],
+  "de": [
+    "Die App verwendet jetzt in allen 12 Sprachen Anthropics eigene Begriffe für Claudes Limits: „5-Stunden-Sitzung“ statt „5-Stunden-Fenster“, „wöchentliches Limit“ und „Nutzungsguthaben“ – dieselben Wörter wie in Claude unter „Einstellungen → Nutzung“.",
+    "Kleine interne Aufräumarbeiten: die temporären Dateien der App haben neue Namen."
+  ],
+  "fr": [
+    "L'application utilise désormais, dans les 12 langues, les termes d'Anthropic pour les limites de Claude : « session de 5 heures » au lieu de « fenêtre de 5 heures », « limite hebdomadaire » et « crédits d'utilisation » – les mêmes mots que dans Claude, sous Paramètres → Utilisation.",
+    "Petit nettoyage interne : les fichiers temporaires de l'application ont de nouveaux noms."
+  ],
+  "es": [
+    "La aplicación usa ahora, en los 12 idiomas, los términos de Anthropic para los límites de Claude: «sesión de 5 horas» en lugar de «ventana de 5 horas», «límite semanal» y «créditos de uso», las mismas palabras que ves en Claude en Configuración → Uso.",
+    "Pequeña limpieza interna: los archivos temporales de la aplicación tienen nombres nuevos."
+  ],
+  "it": [
+    "L'app usa ora, in tutte le 12 lingue, i termini di Anthropic per i limiti di Claude: «sessione di 5 ore» invece di «finestra di 5 ore», «limite settimanale» e «crediti di utilizzo» – le stesse parole che vedi in Claude in Impostazioni → Utilizzo.",
+    "Piccola pulizia interna: i file temporanei dell'app hanno nuovi nomi."
+  ],
+  "pt": [
+    "O app agora usa, nos 12 idiomas, os termos da própria Anthropic para os limites do Claude: \"sessão de 5 horas\" em vez de \"janela de 5 horas\", \"limite semanal\" e \"créditos de uso\" – as mesmas palavras que você vê no Claude em Configurações → Uso.",
+    "Pequena limpeza interna: os arquivos temporários do app têm nomes novos."
+  ],
+  "pl": [
+    "Aplikacja używa teraz we wszystkich 12 językach terminów samego Anthropic dla limitów Claude: „sesja 5-godzinna” zamiast „okno 5-godzinne”, „limit tygodniowy” i „kredyty użycia”.",
+    "Drobne porządki wewnętrzne: pliki tymczasowe aplikacji mają nowe nazwy."
+  ],
+  "nl": [
+    "De app gebruikt nu in alle 12 talen de termen van Anthropic zelf voor de limieten van Claude: „5-uurssessie” in plaats van „5-uursvenster”, „weeklimiet” en „gebruikstegoed”.",
+    "Kleine interne opschoning: de tijdelijke bestanden van de app hebben nieuwe namen."
+  ],
+  "ru": [
+    "Приложение теперь на всех 12 языках использует термины самой Anthropic для лимитов Claude: «5-часовой сеанс» вместо «5-часового окна», «еженедельный лимит» и «кредиты использования» – те же слова, что и в Claude в разделе «Параметры → Использование».",
+    "Небольшая внутренняя чистка: временные файлы приложения получили новые имена."
+  ],
+  "cs": [
+    "Aplikace nyní ve všech 12 jazycích používá pro limity Claude vlastní termíny Anthropicu: „5hodinová relace“ místo „5hodinové okno“, „týdenní limit“ a „kredity za využití“.",
+    "Drobný interní úklid: dočasné soubory aplikace mají nové názvy."
+  ],
+  "tr": [
+    "Uygulama artık 12 dilin tamamında Claude limitleri için Anthropic'in kendi terimlerini kullanıyor: \"5 saatlik pencere\" yerine \"5 saatlik oturum\", \"haftalık limit\" ve \"kullanım kredileri\".",
+    "Küçük bir iç düzenleme: uygulamanın geçici dosyalarının adları değişti."
+  ]
+}

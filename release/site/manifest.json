@@ -1,26 +1,64 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.6.0",
-    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.0.zip",
-    "sha256":  "aa98070841ad499e6356b6c10797b7ecc7e4ed9b751c86ebeca3622722b68570",
-    "bytes":  48683231,
+    "version":  "2.6.1",
+    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.1.zip",
+    "sha256":  "32b58b8aae0d58aa960266f3d2a415c64e8d6fa7ad75ee16d8bbb8b92b4a4436",
+    "bytes":  48682226,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://dinorr.hu/claude-usage-monitor/",
-    "last_updated":  "2026-09-18T14:27:09Z",
+    "last_updated":  "2026-09-21T07:52:13Z",
     "notes":  {
                   "en":  [
-                             "New: the program now also runs on macOS. Everything system-specific has a macOS counterpart - sign-in token in the Keychain, start at login through a LaunchAgent, settings under ~/Library/Application Support, self-update of the .app bundle - while the Windows version behaves exactly as before.",
-                             "The macOS build has its own release manifest, so the Windows and the macOS releases are published independently and never overwrite each other. An Apple Silicon build is never offered to an Intel Mac.",
-                             "For developers: macos/build.sh builds the app with one command, macos/release.sh packages, uploads and verifies it, macos/doctor.sh collects diagnostics. The Windows release stays the base: a macOS release is only made for a version that is already out for Windows.",
-                             "A stale single-instance lock left behind by a crash no longer blocks the next start on macOS/Linux."
+                             "The app now uses Anthropic\u0027s own terms for Claude\u0027s limits, in all 12 languages: \"5-hour session\" instead of \"5-hour window\" and \"usage credits\" instead of \"extra usage\" - the same words you see in Claude under Settings → Usage.",
+                             "Where Anthropic\u0027s help center is available in your language (German, French, Spanish, Italian, Portuguese, Russian), the app uses exactly its wording; elsewhere a faithful translation of Anthropic\u0027s English terms.",
+                             "Small internal clean-up: the app\u0027s temporary files have new names."
                          ],
                   "hu":  [
-                             "Új: a program mostantól macOS-en is fut. Minden rendszerfüggő résznek van macOS-es megfelelője - a belépési token a Kulcskarikában, indulás bejelentkezéskor LaunchAgenttel, beállítások a ~/Library/Application Support alatt, az .app csomag önfrissítése -, miközben a Windows-verzió pontosan úgy működik, mint eddig.",
-                             "A macOS-kiadásnak saját manifestje van, így a Windows- és a macOS-kiadás egymástól függetlenül jelenik meg, és sosem írják felül egymást. Apple Silicon-os csomagot a program Inteles Macnek nem ajánl fel.",
-                             "Fejlesztőknek: a macos/build.sh egy paranccsal lefordítja a programot, a macos/release.sh becsomagolja, feltölti és ellenőrzi, a macos/doctor.sh diagnosztikát gyűjt. A Windows-kiadás marad az alap: macOS-kiadás csak olyan verzióból készülhet, ami Windowsra már megjelent.",
-                             "Egy összeomlás után hátramaradt egypéldányos zár többé nem akadályozza a következő indulást macOS-en/Linuxon."
+                             "A program mostantól mind a 12 nyelven az Anthropic saját kifejezéseit használja: „5 órás munkamenet” az „5 órás ablak” helyett, „heti limit” a „heti keret” helyett, „használati kredit” az „extra használat” helyett – ugyanazokat a fogalmakat, amelyeket a Claude „Settings → Usage” oldalán látsz.",
+                             "Ahol az Anthropic súgója elérhető az adott nyelven (német, francia, spanyol, olasz, portugál, orosz), a program pontosan az ottani szavakat használja; a többi nyelven az Anthropic angol kifejezéseinek hű fordítását.",
+                             "Kisebb belső rendrakás: új nevet kaptak a program ideiglenes fájljai."
+                         ],
+                  "de":  [
+                             "Die App verwendet jetzt in allen 12 Sprachen Anthropics eigene Begriffe für Claudes Limits: „5-Stunden-Sitzung“ statt „5-Stunden-Fenster“, „wöchentliches Limit“ und „Nutzungsguthaben“ – dieselben Wörter wie in Claude unter „Einstellungen → Nutzung“.",
+                             "Kleine interne Aufräumarbeiten: die temporären Dateien der App haben neue Namen."
+                         ],
+                  "fr":  [
+                             "L\u0027application utilise désormais, dans les 12 langues, les termes d\u0027Anthropic pour les limites de Claude : « session de 5 heures » au lieu de « fenêtre de 5 heures », « limite hebdomadaire » et « crédits d\u0027utilisation » – les mêmes mots que dans Claude, sous Paramètres → Utilisation.",
+                             "Petit nettoyage interne : les fichiers temporaires de l\u0027application ont de nouveaux noms."
+                         ],
+                  "es":  [
+                             "La aplicación usa ahora, en los 12 idiomas, los términos de Anthropic para los límites de Claude: «sesión de 5 horas» en lugar de «ventana de 5 horas», «límite semanal» y «créditos de uso», las mismas palabras que ves en Claude en Configuración → Uso.",
+                             "Pequeña limpieza interna: los archivos temporales de la aplicación tienen nombres nuevos."
+                         ],
+                  "it":  [
+                             "L\u0027app usa ora, in tutte le 12 lingue, i termini di Anthropic per i limiti di Claude: «sessione di 5 ore» invece di «finestra di 5 ore», «limite settimanale» e «crediti di utilizzo» – le stesse parole che vedi in Claude in Impostazioni → Utilizzo.",
+                             "Piccola pulizia interna: i file temporanei dell\u0027app hanno nuovi nomi."
+                         ],
+                  "pt":  [
+                             "O app agora usa, nos 12 idiomas, os termos da própria Anthropic para os limites do Claude: \"sessão de 5 horas\" em vez de \"janela de 5 horas\", \"limite semanal\" e \"créditos de uso\" – as mesmas palavras que você vê no Claude em Configurações → Uso.",
+                             "Pequena limpeza interna: os arquivos temporários do app têm nomes novos."
+                         ],
+                  "pl":  [
+                             "Aplikacja używa teraz we wszystkich 12 językach terminów samego Anthropic dla limitów Claude: „sesja 5-godzinna” zamiast „okno 5-godzinne”, „limit tygodniowy” i „kredyty użycia”.",
+                             "Drobne porządki wewnętrzne: pliki tymczasowe aplikacji mają nowe nazwy."
+                         ],
+                  "nl":  [
+                             "De app gebruikt nu in alle 12 talen de termen van Anthropic zelf voor de limieten van Claude: „5-uurssessie” in plaats van „5-uursvenster”, „weeklimiet” en „gebruikstegoed”.",
+                             "Kleine interne opschoning: de tijdelijke bestanden van de app hebben nieuwe namen."
+                         ],
+                  "ru":  [
+                             "Приложение теперь на всех 12 языках использует термины самой Anthropic для лимитов Claude: «5-часовой сеанс» вместо «5-часового окна», «еженедельный лимит» и «кредиты использования» – те же слова, что и в Claude в разделе «Параметры → Использование».",
+                             "Небольшая внутренняя чистка: временные файлы приложения получили новые имена."
+                         ],
+                  "cs":  [
+                             "Aplikace nyní ve všech 12 jazycích používá pro limity Claude vlastní termíny Anthropicu: „5hodinová relace“ místo „5hodinové okno“, „týdenní limit“ a „kredity za využití“.",
+                             "Drobný interní úklid: dočasné soubory aplikace mají nové názvy."
+                         ],
+                  "tr":  [
+                             "Uygulama artık 12 dilin tamamında Claude limitleri için Anthropic\u0027in kendi terimlerini kullanıyor: \"5 saatlik pencere\" yerine \"5 saatlik oturum\", \"haftalık limit\" ve \"kullanım kredileri\".",
+                             "Küçük bir iç düzenleme: uygulamanın geçici dosyalarının adları değişti."
                          ]
               }
 }

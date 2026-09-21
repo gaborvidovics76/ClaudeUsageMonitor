@@ -163,8 +163,11 @@ if ($Upload) {
     # (search and AI crawlers do not run scripts). Rebuild them from the manifest written above, upload them,
     # and copy them into release\site so the rclone step below ships exactly the same pages. Optional.
     if ($cfg.SiteDeploy -and (Test-Path $cfg.SiteDeploy)) {
-        $code = Invoke-Native ('powershell.exe -NoProfile -ExecutionPolicy Bypass -File "{0}" -Sync' -f $cfg.SiteDeploy)
-        if ($code -ne 0) { Write-Host "  WARNING: website rebuild failed ($code) - the pages keep the previous version text" -ForegroundColor Yellow }
+        # Called directly, NOT through cmd.exe (Invoke-Native): cmd mangles the quoted path when it contains spaces.
+        $prev = $ErrorActionPreference; $ErrorActionPreference = "Continue"
+        try { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $cfg.SiteDeploy -Sync 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkGray } }
+        finally { $ErrorActionPreference = $prev }
+        if ($LASTEXITCODE -ne 0) { Write-Host "  WARNING: website rebuild failed ($LASTEXITCODE) - the pages keep the previous version text" -ForegroundColor Yellow }
         else { Info "website pages rebuilt for $Version" }
     }
     if ($cfg.MirrorDir) {
