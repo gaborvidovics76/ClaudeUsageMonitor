@@ -34,9 +34,9 @@
 ## What it does
 
 - **See it coming**: Green, yellow, red. The panel changes colour long before you run out – with a countdown to the reset and an estimate of when you'd hit 100%.
-- **Are you burning too fast?**: The pace indicator tells you if your weekly quota is melting faster than the week passes – and projects where you'll end up.
+- **Are you burning too fast?**: The pace indicator tells you if your weekly limit is melting faster than the week passes – and projects where you'll end up.
 - **All your devices, one number**: Sign in through your own browser – like Claude Code does – and see usage from your phone, browser and every other computer too.
-- **Per-model limits**: Fable, Opus, Sonnet, Claude Code, extra usage – every limit the server reports, plus this week's split between models.
+- **Per-model limits**: Fable, Opus, Sonnet, Claude Code, usage credits – every limit the server reports, plus this week's split between models.
 - **Alerts that matter**: A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.
 - **It doesn't spy. Period.**: No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.
 
