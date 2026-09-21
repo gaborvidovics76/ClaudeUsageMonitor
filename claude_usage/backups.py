@@ -51,7 +51,8 @@ _CLOUD_ONLY = 0x1000 | 0x40000 | 0x400000   # OFFLINE | RECALL_ON_OPEN | RECALL_
 
 _PS_LINE = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d) \[(\w+)\s*\] ?(.*)$")
 _RC_LINE = re.compile(r"^\d{4}/\d\d/\d\d \d\d:\d\d:\d\d (INFO|NOTICE|ERROR|DEBUG|WARNING)\s*:\s?(.*)$")
-_NAME_TS = re.compile(r"(\d{4}-\d\d-\d\d)_(\d\d)(\d\d)")
+# <date>_HHmm, <date>_HHmmss, optionally with a "_n" suffix (two runs in the same second)
+_NAME_TS = re.compile(r"(\d{4}-\d\d-\d\d)_(\d\d)(\d\d)(\d\d)?(?:_(\d+))?")
 
 
 # --------------------------------------------------------------------------- data
@@ -320,22 +321,28 @@ def _name_time(path: str) -> Optional[float]:
     if not m:
         return None
     try:
-        return datetime.strptime(f"{m.group(1)} {m.group(2)}:{m.group(3)}", "%Y-%m-%d %H:%M").timestamp()
+        return datetime.strptime(f"{m.group(1)} {m.group(2)}:{m.group(3)}:{m.group(4) or '00'}",
+                                 "%Y-%m-%d %H:%M:%S").timestamp()
     except ValueError:
         return None
+
+
+def _name_seq(path: str) -> int:
+    m = _NAME_TS.search(os.path.basename(path))
+    return int(m.group(5)) if m and m.group(5) else 1
 
 
 def _sorted_logs(log_dir: str, prefix: str) -> List[str]:
     files = glob.glob(os.path.join(glob.escape(log_dir), f"{prefix}_*.log"))
 
-    def key(p: str) -> float:
-        t = _name_time(p)
-        if t is not None:
-            return t
+    def key(p: str) -> Tuple[float, int, float]:
+        # name time first; within the same second the "_n" suffix, then the file time decide
         try:
-            return os.path.getmtime(p)
+            mtime = os.path.getmtime(p)
         except OSError:
-            return 0.0
+            mtime = 0.0
+        t = _name_time(p)
+        return (mtime if t is None else t, _name_seq(p), mtime)
 
     return sorted(files, key=key, reverse=True)
 
