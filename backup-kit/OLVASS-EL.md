@@ -75,7 +75,7 @@ A 2. lépéshez: Nextcloud-fiók (vagy más, rclone által ismert felhő).
 | A részletező ablak mutassa | mi van elmentve · tartalom · hibák és figyelmeztetések · ütemezett feladatok · napló |
 
 A telepítő által írt profil: `%APPDATA%\ClaudeUsageMonitor\backup_profile.json` – csak útvonalak, se jelszó, se token.
-A beállítások lapján megadott érték felülírja a profilt.
+A beállítások lapján megadott érték elsőbbséget élvez a profilfájllal szemben (a fájl nem változik).
 
 ## Van már saját mentőszkripted?
 

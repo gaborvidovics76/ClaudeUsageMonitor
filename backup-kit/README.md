@@ -75,7 +75,7 @@ installed. For step 2: a Nextcloud account (or another cloud rclone supports).
 | Details window shows | what is backed up · contents · errors and warnings · scheduled tasks · log |
 
 The profile the installer writes is `%APPDATA%\ClaudeUsageMonitor\backup_profile.json` – paths only,
-no password, no token. Values set on the settings tab win over the profile.
+no password, no token. Values set on the settings tab take priority over the profile (the file itself is not changed).
 
 ## Already have your own backup script?
 
