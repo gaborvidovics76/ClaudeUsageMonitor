@@ -27,7 +27,7 @@ for arg in "$@"; do
 done
 [ "$(uname -s)" = "Darwin" ] || die "this script has to run on a Mac."
 
-BASE_URL="https://dinorr.hu/claude-usage-monitor/"
+BASE_URL="https://claudeusagemonitor.com/"
 [ "$BUILD" = 1 ] && ./macos/build.sh
 # shellcheck disable=SC1091
 source .venv-macos/bin/activate

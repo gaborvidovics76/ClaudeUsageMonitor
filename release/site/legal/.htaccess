@@ -1,3 +1,14 @@
+# BEGIN DCB-Native protect
+# A DCB-Native mentései és lágy törlései nem tölthetők le (forrás-/adatszivárgás ellen).
+<FilesMatch "\.(bak|deleted|orig|tmp|log)(-[0-9]+)?$">
+	Require all denied
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</FilesMatch>
+# END DCB-Native protect
+
 # text fragments shown inside the page's dialog - not pages of their own
 <IfModule mod_headers.c>
     Header set X-Robots-Tag "noindex"

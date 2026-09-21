@@ -93,7 +93,7 @@
   /* ------------------------------------------------------------ releases: always the newest, straight from the manifests */
   function mb(n) { return n ? Math.round(n / 1048576) + ' MB' : ''; }
   function day(s) { if (!s) return ''; try { return new Date(s).toLocaleDateString(state.lang, { year: 'numeric', month: 'short', day: 'numeric' }); } catch (e) { return String(s).slice(0, 10); } }
-  function safeUrl(u) { return /^https:\/\/dinorr\.hu\//.test(u || '') ? u : null; }
+  function safeUrl(u) { return /^https:\/\/claudeusagemonitor\.com\//.test(u || '') ? u : null; }
 
   function fillDownloads() {
     [['win', state.win], ['mac', state.mac]].forEach(function (pair) {
@@ -395,7 +395,7 @@
 
   /* ------------------------------------------------------------ phones: a desktop app cannot be installed here -> send the link on */
   function share() {
-    var url = 'https://dinorr.hu/claude-usage-monitor/' + (state.lang === 'en' ? '' : state.lang + '/'), data = { title: 'Claude Usage Monitor', text: tr('mobile.share_text'), url: url };
+    var url = 'https://claudeusagemonitor.com/' + (state.lang === 'en' ? '' : state.lang + '/'), data = { title: 'Claude Usage Monitor', text: tr('mobile.share_text'), url: url };
     track('share', { method: navigator.share ? 'native' : 'copy_link', item: state.lang });
     if (navigator.share) { navigator.share(data).catch(function () {}); return; }
     (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { toast(tr('js.copied')); }).catch(function () { prompt('', url); });

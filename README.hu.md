@@ -46,7 +46,7 @@ Ugyanaz a folyamat, amit a **Claude Code** használ – a **rendszerböngésződ
 
 ## Telepítés / indítás
 
-1. Töltsd le a legfrissebb csomagot innen: **<https://dinorr.hu/claude-usage-monitor/>**
+1. Töltsd le a legfrissebb csomagot innen: **<https://claudeusagemonitor.com/>**
 2. **Csomagold ki a teljes zipet**, majd kattints duplán a `TELEPITES.bat` fájlra.
 3. Válaszolj két kérdésre (asztali parancsikon, indulás a Windowszal). A program magától elindul.
 

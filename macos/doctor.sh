@@ -22,6 +22,6 @@ OUT="macos-doctor-report.txt"
     echo "--- api.log (no secrets are ever written there)"; tail -25 "$CFG/api.log" 2>/dev/null
     echo "--- launch agent";  ls -l "$HOME/Library/LaunchAgents/hu.dinorr.claudeusagemonitor.plist" 2>&1
     echo "--- crash reports"; ls -t "$HOME/Library/Logs/DiagnosticReports/" 2>/dev/null | grep -i claudeusage | head -3
-    echo "--- live manifests"; curl -s --max-time 15 https://dinorr.hu/claude-usage-monitor/manifest.json | head -5; curl -s --max-time 15 https://dinorr.hu/claude-usage-monitor/macos/manifest.json | head -6
+    echo "--- live manifests"; curl -s --max-time 15 https://claudeusagemonitor.com/manifest.json | head -5; curl -s --max-time 15 https://claudeusagemonitor.com/macos/manifest.json | head -6
 } > "$OUT" 2>&1
 echo "Written: $OUT  - send this file to Gabor."

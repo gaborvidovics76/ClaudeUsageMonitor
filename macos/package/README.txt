@@ -41,5 +41,5 @@ Settings:     ~/Library/Application Support/ClaudeUsageMonitor   (may be deleted
 Start at login: ~/Library/LaunchAgents/hu.dinorr.claudeusagemonitor.plist   (may be deleted)
 
 Unofficial community tool; not affiliated with Anthropic.
-Download, what's new: https://dinorr.hu/claude-usage-monitor/
+Download, what's new: https://claudeusagemonitor.com/
 Source code:          https://github.com/gaborvidovics76/ClaudeUsageMonitor

@@ -59,5 +59,5 @@ server (for YOUR usage numbers) and reads a version number from the update serve
 The sign-in token is stored encrypted on your PC, bound to your Windows account.
 
 Unofficial community tool; not affiliated with Anthropic.
-Download, docs, what's new:  https://dinorr.hu/claude-usage-monitor/
+Download, docs, what's new:  https://claudeusagemonitor.com/
 Source code:                 https://github.com/gaborvidovics76/ClaudeUsageMonitor

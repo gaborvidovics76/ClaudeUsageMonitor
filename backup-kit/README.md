@@ -13,7 +13,7 @@ Free, open source (MIT), for Windows 10/11. No account with us, no data to us.
 > computer, so the quality and completeness of a backup cannot be guaranteed. **Making sure your backups are
 > complete and can be restored is your own responsibility** – check the lamps, read the log and test a restore
 > from time to time. Provided "as is" under the MIT licence, without any warranty. By using the kit you accept the
-> Terms of use: https://dinorr.hu/claude-usage-monitor/#terms
+> Terms of use: https://claudeusagemonitor.com/#terms
 
 ## What you get
 
@@ -47,7 +47,7 @@ test run does not.
 
 ## Install – 10 minutes
 
-**You need:** Windows 10/11, OneDrive signed in, [Claude Usage Monitor](https://dinorr.hu/claude-usage-monitor/)
+**You need:** Windows 10/11, OneDrive signed in, [Claude Usage Monitor](https://claudeusagemonitor.com/)
 installed. For step 2: a Nextcloud account (or another cloud rclone supports).
 
 1. **Nextcloud app password** (only for step 2). In your browser: Nextcloud → your avatar → *Personal settings*

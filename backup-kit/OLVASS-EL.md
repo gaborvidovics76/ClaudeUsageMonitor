@@ -13,7 +13,7 @@ Ingyenes, nyílt forráskódú (MIT), Windows 10/11-re. Nincs regisztráció, se
 > a saját gépedhez igazíthatod és módosíthatod, ezért a mentések minősége és teljessége nem garantálható. **Azt, hogy
 > a mentéseid teljesek és visszaállíthatók legyenek, neked magadnak kell biztosítanod** – figyeld a lámpákat, olvasd a
 > naplót, és időnként próbálj ki egy visszaállítást. „Ahogy van” állapotban, jótállás nélkül, MIT-licenc alatt. A csomag
-> használatával elfogadod a Felhasználási feltételeket: https://dinorr.hu/claude-usage-monitor/hu/#terms
+> használatával elfogadod a Felhasználási feltételeket: https://claudeusagemonitor.com/hu/#terms
 
 ## Mit ment
 
@@ -47,7 +47,7 @@ vagy próbafutás nem.
 
 ## Telepítés – 10 perc
 
-**Kell hozzá:** Windows 10/11, bejelentkezett OneDrive, telepített [Claude Usage Monitor](https://dinorr.hu/claude-usage-monitor/hu/).
+**Kell hozzá:** Windows 10/11, bejelentkezett OneDrive, telepített [Claude Usage Monitor](https://claudeusagemonitor.com/hu/).
 A 2. lépéshez: Nextcloud-fiók (vagy más, rclone által ismert felhő).
 
 1. **Nextcloud alkalmazásjelszó** (csak a 2. lépéshez). Böngészőben: Nextcloud → profilkép → *Személyes beállítások*

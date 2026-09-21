@@ -14,9 +14,13 @@
   in this file. They come from release.local.psd1 next to it, which is git-ignored:
 
       @{
-          MirrorDir    = 'D:\path\to\local\webroot\claude-usage-monitor'   # optional
+          MirrorDir    = 'D:\path\to\local\webroot'                          # optional
           RcloneExe    = 'rclone.exe'
-          RcloneTarget = 'myremote:httpdocs/claude-usage-monitor'
+          RcloneTarget = 'myremote:httpdocs'                                   # claudeusagemonitor.com web root
+          # optional, transition after the move from dinorr.hu: apps installed before the move ask the OLD
+          # manifest and accept a package only from the manifest's own host -> keep that channel fed.
+          LegacyBaseUrl      = 'https://dinorr.hu/claude-usage-monitor/'
+          LegacyRcloneTarget = 'oldremote:httpdocs/claude-usage-monitor'
       }
 
 .EXAMPLE
@@ -26,7 +30,7 @@
 param(
     [Parameter(Mandatory = $true)][string]$Version,
     [string]$NotesFile = "",
-    [string]$BaseUrl = "https://dinorr.hu/claude-usage-monitor/",
+    [string]$BaseUrl = "https://claudeusagemonitor.com/",
     [switch]$SkipBuild,
     [switch]$Upload
 )
@@ -193,12 +197,35 @@ if ($Upload) {
     Info "LIVE OK: manifest $($live.version), zip $($zipInfo.Length) bytes, index.php -> $phpStatus, page -> $($page.StatusCode)"
     if ($phpStatus -eq 200) { Write-Host "  WARNING: index.php answered 200 - PHP is not blocked!" -ForegroundColor Red }
 
+    # Legacy channel (transition after the domain move): the old manifest gets the same version, with a
+    # download URL on ITS OWN host (the updater refuses a package from another host than the manifest).
+    # Installed apps update through it once; the new version reads the new manifest from then on.
+    if ($cfg.LegacyBaseUrl -and $cfg.LegacyRcloneTarget) {
+        $leg = Join-Path $PSScriptRoot "build\legacy"
+        if (Test-Path $leg) { Remove-Item $leg -Recurse -Force }
+        New-Item -ItemType Directory -Force -Path (Join-Path $leg "versions") | Out-Null
+        Copy-Item $ZipPath (Join-Path $leg "versions")
+        $legUrl = $cfg.LegacyBaseUrl + "versions/$ZipName"
+        $lm = [ordered]@{}; foreach ($k in $manifest.Keys) { $lm[$k] = $manifest[$k] }
+        $lm.download_url = $legUrl
+        Write-Utf8 (Join-Path $leg "manifest.json") ($lm | ConvertTo-Json -Depth 6)
+        $code = Invoke-Native ('"{0}" copy "{1}" "{2}" --transfers 2 --stats-one-line' -f $cfg.RcloneExe, $leg, $cfg.LegacyRcloneTarget)
+        if ($code -ne 0) { Write-Host "  WARNING: legacy channel upload failed ($code) - apps installed before the move stay on the old version" -ForegroundColor Yellow }
+        else {
+            $ll = Invoke-RestMethod -Uri ($cfg.LegacyBaseUrl + "manifest.json?" + $bust) -TimeoutSec 30
+            $lh = Invoke-WebRequest -Uri $legUrl -Method Head -UseBasicParsing -TimeoutSec 60
+            if ($ll.version -ne $Version -or $ll.sha256 -ne $sha -or [int64]$lh.Headers["Content-Length"] -ne $zipInfo.Length) {
+                Write-Host "  WARNING: legacy channel mismatch: $($ll.version) / $($ll.sha256)" -ForegroundColor Yellow
+            } else { Info "legacy channel OK: $($cfg.LegacyBaseUrl)manifest.json -> $Version" }
+        }
+    }
+
     # Release newsletter: the website backend notices the new manifest by itself on the next page visit.
     # Nudging it here sends the e-mails right away (small batches; never fatal for the release).
     try {
         $mailed = 0
         for ($i = 0; $i -lt 40; $i++) {
-            $tick = Invoke-RestMethod -Uri "https://dinorr.hu/usage-api/stats.php?drain=1&$([guid]::NewGuid().ToString('N'))" -TimeoutSec 60
+            $tick = Invoke-RestMethod -Uri "$(([uri]$BaseUrl).GetLeftPart([UriPartial]::Authority))/usage-api/stats.php?drain=1&$([guid]::NewGuid().ToString('N'))" -TimeoutSec 60
             $mailed += [int]$tick.sent_now
             if (-not $tick.ok -or [int]$tick.queue_left -eq 0) { break }
             Start-Sleep -Seconds 2

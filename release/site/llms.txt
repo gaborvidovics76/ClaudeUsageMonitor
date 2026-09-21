@@ -10,25 +10,25 @@
 
 ## Pages
 
-- [English](https://dinorr.hu/claude-usage-monitor/): the page in English
-- [Magyar](https://dinorr.hu/claude-usage-monitor/hu/): the page in Magyar
-- [Deutsch](https://dinorr.hu/claude-usage-monitor/de/): the page in Deutsch
-- [Français](https://dinorr.hu/claude-usage-monitor/fr/): the page in Français
-- [Español](https://dinorr.hu/claude-usage-monitor/es/): the page in Español
-- [Italiano](https://dinorr.hu/claude-usage-monitor/it/): the page in Italiano
-- [Português](https://dinorr.hu/claude-usage-monitor/pt/): the page in Português
-- [Polski](https://dinorr.hu/claude-usage-monitor/pl/): the page in Polski
-- [Nederlands](https://dinorr.hu/claude-usage-monitor/nl/): the page in Nederlands
-- [Русский](https://dinorr.hu/claude-usage-monitor/ru/): the page in Русский
-- [Čeština](https://dinorr.hu/claude-usage-monitor/cs/): the page in Čeština
-- [Türkçe](https://dinorr.hu/claude-usage-monitor/tr/): the page in Türkçe
+- [English](https://claudeusagemonitor.com/): the page in English
+- [Magyar](https://claudeusagemonitor.com/hu/): the page in Magyar
+- [Deutsch](https://claudeusagemonitor.com/de/): the page in Deutsch
+- [Français](https://claudeusagemonitor.com/fr/): the page in Français
+- [Español](https://claudeusagemonitor.com/es/): the page in Español
+- [Italiano](https://claudeusagemonitor.com/it/): the page in Italiano
+- [Português](https://claudeusagemonitor.com/pt/): the page in Português
+- [Polski](https://claudeusagemonitor.com/pl/): the page in Polski
+- [Nederlands](https://claudeusagemonitor.com/nl/): the page in Nederlands
+- [Русский](https://claudeusagemonitor.com/ru/): the page in Русский
+- [Čeština](https://claudeusagemonitor.com/cs/): the page in Čeština
+- [Türkçe](https://claudeusagemonitor.com/tr/): the page in Türkçe
 
 ## Download
 
-- [Latest Windows package](https://dinorr.hu/usage-api/dl.php?os=win): always redirects to the newest release
-- [Latest macOS package](https://dinorr.hu/usage-api/dl.php?os=mac): always redirects to the newest release
-- [Release manifest (JSON)](https://dinorr.hu/claude-usage-monitor/manifest.json): version, size, SHA-256, release notes
-- [Changelog](https://dinorr.hu/claude-usage-monitor/CHANGELOG.md)
+- [Latest Windows package](https://claudeusagemonitor.com/usage-api/dl.php?os=win): always redirects to the newest release
+- [Latest macOS package](https://claudeusagemonitor.com/usage-api/dl.php?os=mac): always redirects to the newest release
+- [Release manifest (JSON)](https://claudeusagemonitor.com/manifest.json): version, size, SHA-256, release notes
+- [Changelog](https://claudeusagemonitor.com/CHANGELOG.md)
 - [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)
 
 ## What it does
@@ -40,7 +40,7 @@
 - **Alerts that matter**: A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.
 - **It doesn't spy. Period.**: No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.
 - **Backup lamps – see whether your Claude work is backed up**: Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
-- [Claude Backup Kit (free, Windows)](https://dinorr.hu/claude-usage-monitor/kit/ClaudeBackupKit.zip): the scripts that make the backup the lamps show; source and README in [gaborvidovics76/ClaudeUsageMonitor/backup-kit](https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit)
+- [Claude Backup Kit (free, Windows)](https://claudeusagemonitor.com/kit/ClaudeBackupKit.zip): the scripts that make the backup the lamps show; source and README in [gaborvidovics76/ClaudeUsageMonitor/backup-kit](https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit)
 
 ## Key terms
 

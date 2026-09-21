@@ -39,8 +39,8 @@ from . import __version__
 
 IS_MAC = sys.platform == "darwin"
 # every platform has its own manifest, so the Windows and the macOS releases never touch each other
-DEFAULT_MANIFEST_URL = ("https://dinorr.hu/claude-usage-monitor/macos/manifest.json" if IS_MAC
-                        else "https://dinorr.hu/claude-usage-monitor/manifest.json")
+DEFAULT_MANIFEST_URL = ("https://claudeusagemonitor.com/macos/manifest.json" if IS_MAC
+                        else "https://claudeusagemonitor.com/manifest.json")
 EXE_NAME = "ClaudeUsageMonitor.exe"
 APP_DIR_IN_ZIP = ("app/ClaudeUsageMonitor/", "ClaudeUsageMonitor/")   # accepted package layouts
 MAX_PACKAGE_BYTES = 600 * 1024 * 1024

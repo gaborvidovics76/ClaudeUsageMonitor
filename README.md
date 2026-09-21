@@ -57,7 +57,7 @@ is passing.
 
 ### Download (recommended)
 
-1. Download the latest package from **<https://dinorr.hu/claude-usage-monitor/>**
+1. Download the latest package from **<https://claudeusagemonitor.com/>**
    (also on the [Releases](../../releases) page).
 2. **Extract the whole zip**, then double-click `INSTALL.bat`.
 3. Answer two questions (desktop shortcut, start with Windows). The app starts by itself.

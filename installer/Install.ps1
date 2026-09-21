@@ -33,7 +33,7 @@ $AppName   = "Claude Usage Monitor"
 $AppId     = "ClaudeUsageMonitor"
 $ExeName   = "ClaudeUsageMonitor.exe"
 $Publisher = "Vidovics Gabor"
-$HomePage  = "https://dinorr.hu/claude-usage-monitor/"
+$HomePage  = "https://claudeusagemonitor.com/"
 
 $hu = (Get-UICulture).TwoLetterISOLanguageName -eq "hu"
 function T([string]$en, [string]$huText) { if ($hu) { $huText } else { $en } }

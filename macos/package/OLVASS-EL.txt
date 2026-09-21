@@ -42,5 +42,5 @@ Beallitasok: ~/Library/Application Support/ClaudeUsageMonitor  (torolheto)
 Automatikus indulas: ~/Library/LaunchAgents/hu.dinorr.claudeusagemonitor.plist  (torolheto)
 
 Nem hivatalos, kozossegi program; nem all kapcsolatban az Anthropic-kal.
-Letoltes, ujdonsagok: https://dinorr.hu/claude-usage-monitor/
+Letoltes, ujdonsagok: https://claudeusagemonitor.com/
 Forraskod:           https://github.com/gaborvidovics76/ClaudeUsageMonitor

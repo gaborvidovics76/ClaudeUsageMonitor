@@ -2,12 +2,12 @@
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
     "version":  "2.6.2",
-    "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.2.zip",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.6.2.zip",
     "sha256":  "b1f75517763fc8590ec23dc09dd188c640b9c41ba1e12319226a7b2607c2ac69",
     "bytes":  48688044,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
-    "homepage":  "https://dinorr.hu/claude-usage-monitor/",
+    "homepage":  "https://claudeusagemonitor.com/",
     "last_updated":  "2026-09-21T11:48:56Z",
     "notes":  {
                   "en":  [
