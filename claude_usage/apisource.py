@@ -63,6 +63,85 @@ def _dbg(msg: str) -> None:
         pass
 
 
+HISTORY_FILE = "api-history.json"   # the claude.ai series survives restarts and self-updates
+HISTORY_MAX = 4000
+HISTORY_SAVE_EVERY_S = 60.0
+
+
+def _history_path() -> str:
+    import os
+
+    from .settings import config_dir
+
+    return os.path.join(config_dir(), HISTORY_FILE)
+
+
+def _load_history() -> List[Sample]:
+    """The saved claude.ai samples of the last week ([] when there are none or the file is damaged)."""
+    import json
+
+    try:
+        with open(_history_path(), "r", encoding="utf-8") as fh:
+            raw = json.load(fh)
+        cutoff = int(time.time() * 1000) - WEEK_MS
+        rows = [Sample(t=int(r[0]), org="", fh=float(r[1]), sd=float(r[2]), mo=float(r[3]))
+                for r in raw.get("samples", []) if int(r[0]) >= cutoff]
+    except (OSError, ValueError, TypeError, IndexError, AttributeError):
+        return []
+    rows.sort(key=lambda s: s.t)
+    return rows[-HISTORY_MAX:]
+
+
+def _backfill_from_desktop(series: List[Sample]) -> List[Sample]:
+    """Fill the gaps of the last week from Claude Desktop's own log (plan-usage-history.json, a sample every
+    ~15 min with the same server figures). Only where no claude.ai sample of ours lies within 5 minutes, and only
+    when that log holds a single account - with several we cannot tell which one is signed in here."""
+    import json
+
+    from .datasource import default_data_path
+
+    try:
+        with open(default_data_path(), "r", encoding="utf-8") as fh:
+            raw = json.load(fh).get("samples", [])
+        if len({str(r.get("org", "")) for r in raw}) != 1:
+            return series
+        cutoff = int(time.time() * 1000) - WEEK_MS
+        extra = [Sample(t=int(r["t"]), org="", fh=float((r.get("u") or {}).get("fh", 0) or 0),
+                        sd=float((r.get("u") or {}).get("sd", 0) or 0)) for r in raw if int(r["t"]) >= cutoff]
+    except (OSError, ValueError, TypeError, KeyError, AttributeError):
+        return series
+    have = sorted(s.t for s in series)
+    near = 5 * 60 * 1000
+
+    def covered(t: int) -> bool:
+        import bisect
+
+        i = bisect.bisect_left(have, t)
+        return any(0 <= j < len(have) and abs(have[j] - t) <= near for j in (i - 1, i))
+
+    added = [s for s in extra if not covered(s.t)]
+    if not added:
+        return series
+    _dbg(f"history: {len(added)} sample(s) filled in from the Claude Desktop log")
+    merged = sorted(series + added, key=lambda s: s.t)
+    return merged[-HISTORY_MAX:]
+
+
+def _save_history(series: List[Sample]) -> None:
+    """Atomic write (temp file + replace), so a crash never leaves half a file behind."""
+    import json
+    import os
+
+    path = _history_path()
+    tmp = path + ".tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as fh:
+            json.dump({"v": 1, "samples": [[s.t, s.fh, s.sd, s.mo] for s in series]}, fh, separators=(",", ":"))
+        os.replace(tmp, path)
+    except OSError as e:
+        _dbg(f"history save failed: {e}")
+
+
 def _parse_iso_ms(value) -> Optional[int]:
     if isinstance(value, (int, float)):
         return int(value * 1000)
@@ -95,7 +174,8 @@ class ApiReader:
         self._retries_left = 0
         self._retry_no = 0
         self._last_status = 0
-        self._series: List[Sample] = []
+        self._series: List[Sample] = _backfill_from_desktop(_load_history())
+        self._saved_at = 0.0          # last history write (s)
         self.model_filter = "Fable"   # which model-scoped weekly limit to surface
         self._limits_logged = False
         self._profile: Optional[ProfileInfo] = None
@@ -502,7 +582,10 @@ class ApiReader:
             return
         self._series.append(Sample(t=now, org="", fh=fh, sd=sd, mo=mo))
         cutoff = now - WEEK_MS
-        self._series = [s for s in self._series if s.t >= cutoff][-4000:]
+        self._series = [s for s in self._series if s.t >= cutoff][-HISTORY_MAX:]
+        if time.time() - self._saved_at >= HISTORY_SAVE_EVERY_S:
+            self._saved_at = time.time()
+            _save_history(self._series)
 
     def _spark(self, attr: str, span_ms: int, points: int) -> List[float]:
         now = int(time.time() * 1000)

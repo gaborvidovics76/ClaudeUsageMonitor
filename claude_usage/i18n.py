@@ -1249,6 +1249,11 @@ from .i18n_details import STRINGS_DETAILS as _STRINGS_DETAILS  # noqa: E402
 
 STRINGS.update(_STRINGS_DETAILS)
 
+# Help window (guide + author card)
+from .i18n_help import STRINGS_HELP as _STRINGS_HELP  # noqa: E402
+
+STRINGS.update(_STRINGS_HELP)
+
 # macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
 import sys as _sys  # noqa: E402
 

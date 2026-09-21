@@ -88,6 +88,7 @@ class MonitorApp:
         self.backup = BackupChecker()
         self._backup_version = -1
         self.backup_dialog = None
+        self.help_dialog = None
 
         self.tray = QSystemTrayIcon(winutil.app_icon())
         self.tray.setToolTip(APP_TITLE)
@@ -551,6 +552,7 @@ class MonitorApp:
         menu.addAction(tr("menu.history"), self.show_history)
         menu.addAction(tr("menu.backups"), lambda: self.show_backups(None))
         menu.addAction(tr("menu.settings"), self.show_settings)
+        menu.addAction(tr("menu.help"), self.show_help)
         ref = menu.addAction(tr("menu.refresh"), self.force_refresh)
         if self._is_busy():
             ref.setText(tr("panel.refreshing") + "…")
@@ -589,6 +591,9 @@ class MonitorApp:
         if self.update_dialog is not None:
             self.update_dialog.close()
             self.update_dialog = None
+        if self.help_dialog is not None:
+            self.help_dialog.close()
+            self.help_dialog = None
         self.widget.set_backup(self.backup.status, self.widget.backup_expected)
 
     def _set_source(self, source: str) -> None:
@@ -688,6 +693,15 @@ class MonitorApp:
         self.settings.reset()
         self.settings.save()
         self.apply_settings()
+
+    def show_help(self) -> None:
+        from .help_dialog import HelpDialog
+
+        if self.help_dialog is None:
+            self.help_dialog = HelpDialog()
+        self.help_dialog.show()
+        self.help_dialog.raise_()
+        self.help_dialog.activateWindow()
 
     def show_history(self) -> None:
         # always with the current source (not stale after a local/API switch)

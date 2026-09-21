@@ -1,0 +1,50 @@
+{
+  "en": [
+    "History with the claude.ai data source is now kept: the last 7 days survive restarts and updates (until now it started empty after every restart). On the first start the gaps are filled in from Claude Desktop's own usage log, when there is one.",
+    "New Help window (menu: Help…): a detailed guide to every feature, and an Author tab with the official website – claudeusagemonitor.com."
+  ],
+  "hu": [
+    "A claude.ai adatforrás előzményei mostantól megmaradnak: az utolsó 7 nap túléli az újraindítást és a frissítést (eddig minden újraindítás után üresről indult). Első indításkor a hiányzó szakaszokat a Claude Desktop saját használati naplójából tölti ki, ha van ilyen.",
+    "Új Súgó ablak (menü: Súgó (HELP)…): részletes leírás minden funkcióról, és egy Készítő fül a hivatalos weboldallal – claudeusagemonitor.com."
+  ],
+  "de": [
+    "Der Verlauf mit der Datenquelle claude.ai bleibt jetzt erhalten: die letzten 7 Tage überstehen Neustarts und Updates (bisher begann er nach jedem Neustart leer). Beim ersten Start werden Lücken aus dem eigenen Nutzungsprotokoll von Claude Desktop gefüllt, sofern vorhanden.",
+    "Neues Hilfe-Fenster (Menü: Hilfe…): eine ausführliche Anleitung zu allen Funktionen und ein Entwickler-Tab mit der offiziellen Website – claudeusagemonitor.com."
+  ],
+  "fr": [
+    "L’historique avec la source claude.ai est désormais conservé : les 7 derniers jours survivent aux redémarrages et aux mises à jour (jusqu’ici il repartait de zéro à chaque redémarrage). Au premier démarrage, les trous sont comblés à partir du journal d’utilisation de Claude Desktop, s’il existe.",
+    "Nouvelle fenêtre d’aide (menu : Aide…) : un guide détaillé de toutes les fonctions et un onglet Auteur avec le site officiel – claudeusagemonitor.com."
+  ],
+  "es": [
+    "El historial con el origen de datos claude.ai ahora se conserva: los últimos 7 días sobreviven a reinicios y actualizaciones (hasta ahora empezaba vacío tras cada reinicio). En el primer inicio, los huecos se rellenan con el registro de uso de Claude Desktop, si existe.",
+    "Nueva ventana de ayuda (menú: Ayuda…): una guía detallada de todas las funciones y una pestaña Autor con el sitio oficial: claudeusagemonitor.com."
+  ],
+  "it": [
+    "La cronologia con l’origine dati claude.ai ora viene conservata: gli ultimi 7 giorni sopravvivono a riavvii e aggiornamenti (finora ripartiva vuota a ogni riavvio). Al primo avvio i vuoti vengono riempiti dal registro di utilizzo di Claude Desktop, se presente.",
+    "Nuova finestra Guida (menu: Guida…): una guida dettagliata a tutte le funzioni e una scheda Autore con il sito ufficiale – claudeusagemonitor.com."
+  ],
+  "pt": [
+    "O histórico com a origem de dados claude.ai agora é mantido: os últimos 7 dias sobrevivem a reinícios e atualizações (até agora ele começava vazio após cada reinício). Na primeira inicialização, as lacunas são preenchidas com o registro de uso do Claude Desktop, se houver.",
+    "Nova janela de Ajuda (menu: Ajuda…): um guia detalhado de todos os recursos e uma aba Autor com o site oficial – claudeusagemonitor.com."
+  ],
+  "pl": [
+    "Historia przy źródle danych claude.ai jest teraz zachowywana: ostatnie 7 dni przetrwa restarty i aktualizacje (dotąd po każdym restarcie zaczynała się od zera). Przy pierwszym uruchomieniu luki są uzupełniane z dziennika użycia Claude Desktop, jeśli istnieje.",
+    "Nowe okno Pomocy (menu: Pomoc…): szczegółowy opis wszystkich funkcji i karta Autor z oficjalną stroną – claudeusagemonitor.com."
+  ],
+  "nl": [
+    "De geschiedenis met de gegevensbron claude.ai blijft nu bewaard: de laatste 7 dagen overleven herstarts en updates (tot nu toe begon die na elke herstart leeg). Bij de eerste start worden de gaten aangevuld uit het gebruikslogboek van Claude Desktop, als dat er is.",
+    "Nieuw Help-venster (menu: Help…): een uitgebreide uitleg van alle functies en een tabblad Maker met de officiële website – claudeusagemonitor.com."
+  ],
+  "ru": [
+    "История при источнике данных claude.ai теперь сохраняется: последние 7 дней переживают перезапуск и обновление (раньше после каждого перезапуска она начиналась с нуля). При первом запуске пробелы заполняются из журнала использования Claude Desktop, если он есть.",
+    "Новое окно справки (меню: Справка…): подробное описание всех функций и вкладка «Автор» с официальным сайтом — claudeusagemonitor.com."
+  ],
+  "cs": [
+    "Historie u zdroje dat claude.ai se nyní uchovává: posledních 7 dní přežije restart i aktualizaci (dosud po každém restartu začínala prázdná). Při prvním spuštění se mezery doplní z protokolu využití Claude Desktop, pokud existuje.",
+    "Nové okno Nápovědy (menu: Nápověda…): podrobný popis všech funkcí a karta Autor s oficiálním webem – claudeusagemonitor.com."
+  ],
+  "tr": [
+    "claude.ai veri kaynağında geçmiş artık korunuyor: son 7 gün yeniden başlatma ve güncellemelerden sonra da kalır (şimdiye kadar her yeniden başlatmada boş başlıyordu). İlk açılışta boşluklar, varsa Claude Desktop’ın kendi kullanım günlüğünden doldurulur.",
+    "Yeni Yardım penceresi (menü: Yardım…): tüm özelliklerin ayrıntılı açıklaması ve resmi web sitesini içeren bir Geliştirici sekmesi – claudeusagemonitor.com."
+  ]
+}
