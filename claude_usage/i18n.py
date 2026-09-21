@@ -99,13 +99,13 @@ def tr(key: str, *args) -> str:
 STRINGS: Dict[str, Dict[str, str]] = {
     # ---- panel ----
     "panel.five_hour": {
-        "en": "5-HOUR WINDOW", "hu": "5 ÓRÁS ABLAK", "de": "5-STUNDEN-FENSTER",
+        "en": "5-HOUR WINDOW", "hu": "5 ÓRÁS MUNKAMENET", "de": "5-STUNDEN-FENSTER",
         "fr": "FENÊTRE 5 HEURES", "es": "VENTANA DE 5 HORAS", "it": "FINESTRA 5 ORE",
         "pt": "JANELA DE 5 HORAS", "pl": "OKNO 5-GODZINNE", "nl": "5-UURS VENSTER",
         "ru": "ОКНО 5 ЧАСОВ", "cs": "5HODINOVÉ OKNO", "tr": "5 SAATLİK PENCERE",
     },
     "panel.weekly": {
-        "en": "WEEKLY LIMIT", "hu": "HETI KERET", "de": "WOCHENLIMIT",
+        "en": "WEEKLY LIMIT", "hu": "HETI LIMIT", "de": "WOCHENLIMIT",
         "fr": "QUOTA HEBDO", "es": "LÍMITE SEMANAL", "it": "LIMITE SETTIMANALE",
         "pt": "LIMITE SEMANAL", "pl": "LIMIT TYGODNIOWY", "nl": "WEEKLIMIET",
         "ru": "НЕДЕЛЬНЫЙ ЛИМИТ", "cs": "TÝDENNÍ LIMIT", "tr": "HAFTALIK KOTA",
@@ -426,7 +426,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "{}: использовано {}%.", "cs": "{}: využito {}%.", "tr": "{}: %{} kullanıldı.",
     },
     "notify.reset_done": {
-        "en": "{}: reset — a new window has started.", "hu": "{}: lenullázódott — új keret indult.",
+        "en": "{}: reset — a new window has started.", "hu": "{}: visszaállt — kezdődik az új időszak.",
         "de": "{}: zurückgesetzt — neues Fenster gestartet.", "fr": "{} : réinitialisé — nouvelle fenêtre.",
         "es": "{}: reiniciado — nueva ventana.", "it": "{}: azzerato — nuova finestra.",
         "pt": "{}: reiniciado — nova janela.", "pl": "{}: wyzerowano — nowe okno.",
@@ -781,19 +781,19 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "tr": "İpucu: paneli sol tuşla sürükle, Ctrl+tekerlek boyutlandırır,\nsağ tık = menü, çift tık = geçmiş.",
     },
     "set.show_five_hour": {
-        "en": "Show 5-hour window", "hu": "5 órás ablak mutatása", "de": "5-Stunden-Fenster anzeigen",
+        "en": "Show 5-hour window", "hu": "5 órás munkamenet mutatása", "de": "5-Stunden-Fenster anzeigen",
         "fr": "Afficher la fenêtre 5 heures", "es": "Mostrar ventana de 5 horas", "it": "Mostra finestra 5 ore",
         "pt": "Mostrar janela de 5 horas", "pl": "Pokaż okno 5-godzinne", "nl": "5-uurs venster tonen",
         "ru": "Показывать окно 5 часов", "cs": "Zobrazit 5hodinové okno", "tr": "5 saatlik pencereyi göster",
     },
     "set.show_weekly": {
-        "en": "Show weekly limit", "hu": "Heti keret mutatása", "de": "Wochenlimit anzeigen",
+        "en": "Show weekly limit", "hu": "Heti limit mutatása", "de": "Wochenlimit anzeigen",
         "fr": "Afficher le quota hebdo", "es": "Mostrar límite semanal", "it": "Mostra limite settimanale",
         "pt": "Mostrar limite semanal", "pl": "Pokaż limit tygodniowy", "nl": "Weeklimiet tonen",
         "ru": "Показывать недельный лимит", "cs": "Zobrazit týdenní limit", "tr": "Haftalık kotayı göster",
     },
     "set.show_model": {
-        "en": "Show model weekly limit (claude.ai source)", "hu": "Modell heti keret mutatása (claude.ai forrás)",
+        "en": "Show model weekly limit (claude.ai source)", "hu": "Modell heti limitjének mutatása (claude.ai forrás)",
         "de": "Modell-Wochenlimit anzeigen (claude.ai-Quelle)", "fr": "Afficher le quota hebdo du modèle (source claude.ai)",
         "es": "Mostrar límite semanal del modelo (origen claude.ai)", "it": "Mostra limite settimanale del modello (origine claude.ai)",
         "pt": "Mostrar limite semanal do modelo (fonte claude.ai)", "pl": "Pokaż tygodniowy limit modelu (źródło claude.ai)",
@@ -850,12 +850,12 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "Значение значка", "cs": "Hodnota ikony", "tr": "Simge değeri",
     },
     "set.tray_five": {
-        "en": "5-hour window", "hu": "5 órás ablak", "de": "5-Stunden-Fenster", "fr": "Fenêtre 5 heures",
+        "en": "5-hour window", "hu": "5 órás munkamenet", "de": "5-Stunden-Fenster", "fr": "Fenêtre 5 heures",
         "es": "Ventana de 5 horas", "it": "Finestra 5 ore", "pt": "Janela de 5 horas", "pl": "Okno 5-godzinne",
         "nl": "5-uurs venster", "ru": "Окно 5 часов", "cs": "5hodinové okno", "tr": "5 saatlik pencere",
     },
     "set.tray_weekly": {
-        "en": "Weekly limit", "hu": "Heti keret", "de": "Wochenlimit", "fr": "Quota hebdo",
+        "en": "Weekly limit", "hu": "Heti limit", "de": "Wochenlimit", "fr": "Quota hebdo",
         "es": "Límite semanal", "it": "Limite settimanale", "pt": "Limite semanal", "pl": "Limit tygodniowy",
         "nl": "Weeklimiet", "ru": "Недельный лимит", "cs": "Týdenní limit", "tr": "Haftalık kota",
     },
@@ -884,7 +884,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "cs": "Upozornit při překročení prahu", "tr": "Eşik aşımında bildir",
     },
     "set.notify_reset": {
-        "en": "Notify when a limit resets", "hu": "Értesítés, ha egy keret lenullázódott",
+        "en": "Notify when a limit resets", "hu": "Értesítés, ha egy limit visszaáll (reset)",
         "de": "Benachrichtigen, wenn ein Limit zurückgesetzt wird", "fr": "Notifier quand un quota est réinitialisé",
         "es": "Notificar cuando un límite se reinicia", "it": "Notifica quando un limite si azzera",
         "pt": "Notificar quando um limite reinicia", "pl": "Powiadamiaj, gdy limit się zeruje",
@@ -1070,12 +1070,12 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "pt": "Tudo", "pl": "Wszystko", "nl": "Alles", "ru": "Всё", "cs": "Vše", "tr": "Tümü",
     },
     "hist.legend_5h": {
-        "en": "5-hour window", "hu": "5 órás ablak", "de": "5-Stunden-Fenster", "fr": "fenêtre 5 h",
+        "en": "5-hour window", "hu": "5 órás munkamenet", "de": "5-Stunden-Fenster", "fr": "fenêtre 5 h",
         "es": "ventana de 5 h", "it": "finestra 5 ore", "pt": "janela de 5 h", "pl": "okno 5-godz.",
         "nl": "5-uurs venster", "ru": "окно 5 часов", "cs": "5hodinové okno", "tr": "5 saatlik pencere",
     },
     "hist.legend_week": {
-        "en": "weekly limit", "hu": "heti keret", "de": "Wochenlimit", "fr": "quota hebdo",
+        "en": "weekly limit", "hu": "heti limit", "de": "Wochenlimit", "fr": "quota hebdo",
         "es": "límite semanal", "it": "limite settimanale", "pt": "limite semanal", "pl": "limit tygodniowy",
         "nl": "weeklimiet", "ru": "недельный лимит", "cs": "týdenní limit", "tr": "haftalık kota",
     },
@@ -1096,7 +1096,7 @@ STRINGS: Dict[str, Dict[str, str]] = {
         "ru": "Средн. расход/день", "cs": "Prům. denní spotřeba", "tr": "Ort. günlük tüketim",
     },
     "hist.stat_sessions": {
-        "en": "5-hour windows", "hu": "5 órás ablakok", "de": "5-Stunden-Fenster", "fr": "Fenêtres de 5 h",
+        "en": "5-hour windows", "hu": "5 órás munkamenetek", "de": "5-Stunden-Fenster", "fr": "Fenêtres de 5 h",
         "es": "Ventanas de 5 h", "it": "Finestre da 5 ore", "pt": "Janelas de 5 h", "pl": "Okna 5-godz.",
         "nl": "5-uurs vensters", "ru": "Окна по 5 часов", "cs": "5hodinová okna", "tr": "5 saatlik pencereler",
     },

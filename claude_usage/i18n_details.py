@@ -2,7 +2,7 @@
 
 STRINGS_DETAILS = {
     "menu.details": {
-        "en": "Plan badge and extra limits", "hu": "Csomagjelvény és további keretek",
+        "en": "Plan badge and extra limits", "hu": "Csomagjelvény és további limitek",
         "de": "Tarif-Badge und weitere Limits", "fr": "Badge d'abonnement et autres quotas",
         "es": "Insignia del plan y otros límites", "it": "Badge del piano e altri limiti",
         "pt": "Emblema do plano e outros limites", "pl": "Plakietka planu i dodatkowe limity",
@@ -30,7 +30,7 @@ STRINGS_DETAILS = {
         "cs": "Zobrazit mé jméno na odznaku", "tr": "Rozette adımı göster",
     },
     "set.show_model_list": {
-        "en": "Weekly limits of the other models", "hu": "A többi modell heti kerete",
+        "en": "Weekly limits of the other models", "hu": "A többi modell heti limitje",
         "de": "Wochenlimits der anderen Modelle", "fr": "Quotas hebdo des autres modèles",
         "es": "Límites semanales de los otros modelos", "it": "Limiti settimanali degli altri modelli",
         "pt": "Limites semanais dos outros modelos", "pl": "Tygodniowe limity pozostałych modeli",
@@ -38,7 +38,7 @@ STRINGS_DETAILS = {
         "cs": "Týdenní limity ostatních modelů", "tr": "Diğer modellerin haftalık kotaları",
     },
     "set.show_surfaces": {
-        "en": "Per-surface limits (Claude Code, connected apps…)", "hu": "Felületenkénti keretek (Claude Code, külső alkalmazások…)",
+        "en": "Per-surface limits (Claude Code, connected apps…)", "hu": "Felületenkénti limitek (Claude Code, külső alkalmazások…)",
         "de": "Limits je Oberfläche (Claude Code, verbundene Apps…)", "fr": "Quotas par surface (Claude Code, applis connectées…)",
         "es": "Límites por superficie (Claude Code, apps conectadas…)", "it": "Limiti per superficie (Claude Code, app collegate…)",
         "pt": "Limites por superfície (Claude Code, apps ligadas…)", "pl": "Limity wg powierzchni (Claude Code, połączone aplikacje…)",
@@ -46,7 +46,7 @@ STRINGS_DETAILS = {
         "cs": "Limity podle rozhraní (Claude Code, propojené aplikace…)", "tr": "Yüzeye göre kotalar (Claude Code, bağlı uygulamalar…)",
     },
     "set.show_extra_usage": {
-        "en": "Extra usage (pay-as-you-go credit)", "hu": "Extra használat (túlhasználati keret)",
+        "en": "Extra usage (pay-as-you-go credit)", "hu": "Használati kredit (usage credits)",
         "de": "Zusatznutzung (Guthaben nach Verbrauch)", "fr": "Usage supplémentaire (crédit à la consommation)",
         "es": "Uso adicional (crédito de pago por uso)", "it": "Utilizzo extra (credito a consumo)",
         "pt": "Utilização extra (crédito pré-pago)", "pl": "Dodatkowe użycie (kredyt wg zużycia)",
@@ -69,7 +69,7 @@ STRINGS_DETAILS = {
     },
     "set.rows_none": {
         "en": "The server sends no further limits for your account at the moment. They appear here by themselves as soon as it does.",
-        "hu": "A szerver jelenleg nem küld további keretet a fiókodhoz. Amint küld, magától megjelenik itt.",
+        "hu": "A szerver jelenleg nem küld további limitet a fiókodhoz. Amint küld, magától megjelenik itt.",
         "de": "Der Server sendet derzeit keine weiteren Limits für dein Konto. Sobald er es tut, erscheinen sie hier von selbst.",
         "fr": "Le serveur n'envoie actuellement aucun autre quota pour votre compte. Ils apparaîtront ici d'eux-mêmes.",
         "es": "El servidor no envía por ahora más límites para tu cuenta. Aparecerán aquí por sí solos en cuanto lo haga.",
@@ -96,7 +96,7 @@ STRINGS_DETAILS = {
         "tr": "Bunlar claude.ai veri kaynağından gelir (giriş gerekir); yerel günlükte bulunmaz.",
     },
     "detail.extra": {
-        "en": "Extra usage", "hu": "Extra használat", "de": "Zusatznutzung", "fr": "Usage supplémentaire",
+        "en": "Extra usage", "hu": "Használati kredit", "de": "Zusatznutzung", "fr": "Usage supplémentaire",
         "es": "Uso adicional", "it": "Utilizzo extra", "pt": "Utilização extra", "pl": "Dodatkowe użycie",
         "nl": "Extra gebruik", "ru": "Доп. использование", "cs": "Extra využití", "tr": "Ek kullanım",
     },
@@ -129,7 +129,7 @@ STRINGS_DETAILS = {
         "nl": "Limietniveau: {}", "ru": "Уровень лимитов: {}", "cs": "Úroveň limitů: {}", "tr": "Kota düzeyi: {}",
     },
     "profile.extra": {
-        "en": "Extra usage: {}", "hu": "Extra használat: {}", "de": "Zusatznutzung: {}", "fr": "Usage supplémentaire : {}",
+        "en": "Extra usage: {}", "hu": "Használati kredit: {}", "de": "Zusatznutzung: {}", "fr": "Usage supplémentaire : {}",
         "es": "Uso adicional: {}", "it": "Utilizzo extra: {}", "pt": "Utilização extra: {}", "pl": "Dodatkowe użycie: {}",
         "nl": "Extra gebruik: {}", "ru": "Доп. использование: {}", "cs": "Extra využití: {}", "tr": "Ek kullanım: {}",
     },
@@ -162,7 +162,7 @@ STRINGS_DETAILS = {
     },
     "set.local_models_hint": {
         "en": "The server keeps a separate counter only for some models (e.g. Fable). For the others this shows how this week's Claude Code work on this PC is split - a share of your own usage and the output tokens, not a share of a limit. Only the model name and token counts are read, never the conversation.",
-        "hu": "A szerver csak egyes modellekhez tart külön számlálót (pl. Fable). A többinél ez azt mutatja, hogyan oszlik meg az e heti Claude Code-munkád ezen a gépen - a saját használatod aránya és a kimeneti tokenek, nem egy keret százaléka. Csak a modell nevét és a tokenszámokat olvassa, a beszélgetést soha.",
+        "hu": "A szerver csak egyes modellekhez tart külön számlálót (pl. Fable). A többinél ez azt mutatja, hogyan oszlik meg az e heti Claude Code-munkád ezen a gépen - a saját használatod aránya és a kimeneti tokenek, nem egy limit százaléka. Csak a modell nevét és a tokenszámokat olvassa, a beszélgetést soha.",
         "de": "Der Server führt nur für einige Modelle einen eigenen Zähler (z. B. Fable). Für die anderen zeigt dies, wie sich die Claude-Code-Arbeit dieser Woche auf diesem PC verteilt - ein Anteil deiner eigenen Nutzung und die Ausgabe-Token, kein Anteil eines Limits. Gelesen werden nur Modellname und Tokenzahlen, nie die Unterhaltung.",
         "fr": "Le serveur ne tient un compteur séparé que pour certains modèles (p. ex. Fable). Pour les autres, ceci montre comment se répartit le travail Claude Code de la semaine sur ce PC - une part de votre propre usage et les jetons de sortie, pas une part d'un quota. Seuls le nom du modèle et les nombres de jetons sont lus, jamais la conversation.",
         "es": "El servidor solo lleva un contador aparte para algunos modelos (p. ej. Fable). Para los demás, esto muestra cómo se reparte el trabajo de Claude Code de esta semana en este PC: una parte de tu propio uso y los tokens de salida, no una parte de un límite. Solo se leen el nombre del modelo y los recuentos de tokens, nunca la conversación.",
