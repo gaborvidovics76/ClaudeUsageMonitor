@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.6.3] - 2026-09-21
+
+- New home: the website, the downloads and the automatic updates now live at https://claudeusagemonitor.com/. Nothing to do on your side – this update switches the app over, your settings and history stay as they are.
+
+*Magyarul:*
+
+- Új cím: a weboldal, a letöltések és az automatikus frissítések mostantól a https://claudeusagemonitor.com/ címen érhetők el. Neked nincs teendőd – ez a frissítés átállítja a programot, a beállításaid és az előzmények megmaradnak.
+
+
 ## [2.6.2] - 2026-09-21
 
 - Update check retries on its own: if it fails (no network yet after start-up, sleep/wake, a server hiccup), the app tries again after 1, 5, 15, 30 and then every 60 minutes, instead of waiting 6 hours.

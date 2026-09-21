@@ -1,74 +1,50 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.6.2",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.6.2.zip",
-    "sha256":  "b1f75517763fc8590ec23dc09dd188c640b9c41ba1e12319226a7b2607c2ac69",
-    "bytes":  48688044,
+    "version":  "2.6.3",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.6.3.zip",
+    "sha256":  "58d4735ff15c8966f0806e6a36e6143ff1ee488ded1eecd82bb8316378f77dae",
+    "bytes":  48686248,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-09-21T11:48:56Z",
+    "last_updated":  "2026-09-21T21:51:32Z",
     "notes":  {
                   "en":  [
-                             "Update check retries on its own: if it fails (no network yet after start-up, sleep/wake, a server hiccup), the app tries again after 1, 5, 15, 30 and then every 60 minutes, instead of waiting 6 hours.",
-                             "Backup lamps: logs are now ordered to the second (and by the \"_2\" suffix of a second run in the same second), so two runs in the same minute can no longer make a lamp show the older run. Old log names keep working.",
-                             "Backups: a clear disclaimer on the Backups settings tab and in the details window – the monitor only shows what the backup logs say; making sure backups are complete and can be restored is up to each user."
+                             "New home: the website, the downloads and the automatic updates now live at https://claudeusagemonitor.com/. Nothing to do on your side – this update switches the app over, your settings and history stay as they are."
                          ],
                   "hu":  [
-                             "A frissítéskeresés magától újrapróbálkozik: ha nem sikerül (indulás után még nincs hálózat, alvásból ébredés, szerverhiba), a program 1, 5, 15, 30 perc múlva, majd óránként újra próbálja – nem vár 6 órát.",
-                             "Mentési lámpák: a naplók sorrendje mostantól másodpercre pontos (és az azonos másodpercben indult második futás „_2” utótagját is figyeli), így két, ugyanabban a percben indult futás miatt a lámpa már nem mutathatja a régebbit. A régi naplónevek továbbra is működnek.",
-                             "Mentések: egyértelmű felelősségkizárás a Mentések beállítási lapon és a részletező ablakban – a monitor csak azt mutatja, amit a mentési naplók írnak; azt, hogy a mentések teljesek és visszaállíthatók legyenek, mindenkinek magának kell biztosítania."
+                             "Új cím: a weboldal, a letöltések és az automatikus frissítések mostantól a https://claudeusagemonitor.com/ címen érhetők el. Neked nincs teendőd – ez a frissítés átállítja a programot, a beállításaid és az előzmények megmaradnak."
                          ],
                   "de":  [
-                             "Die Update-Prüfung versucht es von selbst erneut: Schlägt sie fehl (nach dem Start noch kein Netz, Ruhezustand, Serverfehler), prüft die App nach 1, 5, 15, 30 Minuten und dann stündlich erneut – statt 6 Stunden zu warten.",
-                             "Sicherungslampen: Protokolle werden jetzt sekundengenau sortiert (auch nach dem „_2“-Suffix eines zweiten Laufs in derselben Sekunde), sodass zwei Läufe in derselben Minute keine Lampe mehr den älteren Lauf anzeigen lassen. Alte Protokollnamen funktionieren weiterhin.",
-                             "Sicherungen: ein klarer Haftungsausschluss im Einstellungs-Tab „Sicherungen“ und im Detailfenster – der Monitor zeigt nur, was die Sicherungsprotokolle sagen; dass Sicherungen vollständig und wiederherstellbar sind, muss jeder selbst sicherstellen."
+                             "Neue Adresse: Website, Downloads und automatische Updates sind jetzt unter https://claudeusagemonitor.com/ zu finden. Du musst nichts tun – dieses Update stellt die App um, Einstellungen und Verlauf bleiben erhalten."
                          ],
                   "fr":  [
-                             "La recherche de mises à jour réessaie d\u0027elle-même : en cas d\u0027échec (pas encore de réseau au démarrage, sortie de veille, incident serveur), l\u0027application réessaie après 1, 5, 15, 30 minutes puis toutes les heures, au lieu d\u0027attendre 6 heures.",
-                             "Voyants de sauvegarde : les journaux sont désormais triés à la seconde près (et selon le suffixe « _2 » d\u0027un second passage dans la même seconde) ; deux passages dans la même minute ne peuvent plus faire afficher l\u0027ancien. Les anciens noms de journaux fonctionnent toujours.",
-                             "Sauvegardes : une clause de non-responsabilité claire dans l\u0027onglet Sauvegardes et dans la fenêtre de détails – le moniteur affiche seulement ce que disent les journaux ; il appartient à chacun de s\u0027assurer que ses sauvegardes sont complètes et restaurables."
+                             "Nouvelle adresse : le site, les téléchargements et les mises à jour automatiques se trouvent désormais sur https://claudeusagemonitor.com/. Rien à faire de votre côté – cette mise à jour bascule l\u0027application, vos réglages et votre historique sont conservés."
                          ],
                   "es":  [
-                             "La búsqueda de actualizaciones se reintenta sola: si falla (sin red tras el arranque, al salir de suspensión, un fallo del servidor), la app vuelve a intentarlo a los 1, 5, 15 y 30 minutos y luego cada hora, en lugar de esperar 6 horas.",
-                             "Indicadores de copia: los registros se ordenan ahora al segundo (y por el sufijo «_2» de una segunda ejecución en el mismo segundo), así que dos ejecuciones en el mismo minuto ya no hacen que un indicador muestre la más antigua. Los nombres antiguos siguen funcionando.",
-                             "Copias de seguridad: una exención de responsabilidad clara en la pestaña Copias de seguridad y en la ventana de detalles: el monitor solo muestra lo que dicen los registros; cada usuario debe asegurarse de que sus copias estén completas y se puedan restaurar."
+                             "Nueva dirección: el sitio web, las descargas y las actualizaciones automáticas están ahora en https://claudeusagemonitor.com/. No tienes que hacer nada: esta actualización cambia la aplicación y tus ajustes e historial se conservan."
                          ],
                   "it":  [
-                             "Il controllo degli aggiornamenti riprova da solo: se non riesce (rete non ancora pronta all\u0027avvio, uscita dalla sospensione, problema del server), l\u0027app riprova dopo 1, 5, 15, 30 minuti e poi ogni ora, invece di aspettare 6 ore.",
-                             "Spie dei backup: i log sono ora ordinati al secondo (e secondo il suffisso «_2» di una seconda esecuzione nello stesso secondo), quindi due esecuzioni nello stesso minuto non fanno più mostrare quella più vecchia. I vecchi nomi dei log continuano a funzionare.",
-                             "Backup: un\u0027esclusione di responsabilità chiara nella scheda Backup delle impostazioni e nella finestra dei dettagli – il monitor mostra solo ciò che riportano i log; spetta a ciascuno assicurarsi che i backup siano completi e ripristinabili."
+                             "Nuovo indirizzo: il sito, i download e gli aggiornamenti automatici ora si trovano su https://claudeusagemonitor.com/. Non devi fare nulla: questo aggiornamento sposta l\u0027app, impostazioni e cronologia restano invariate."
                          ],
                   "pt":  [
-                             "A verificação de atualizações tenta de novo sozinha: se falhar (ainda sem rede após o arranque, ao sair da suspensão, falha do servidor), a app volta a tentar após 1, 5, 15 e 30 minutos e depois de hora a hora, em vez de esperar 6 horas.",
-                             "Indicadores de cópia: os registos passam a ser ordenados ao segundo (e pelo sufixo «_2» de uma segunda execução no mesmo segundo), pelo que duas execuções no mesmo minuto já não fazem um indicador mostrar a mais antiga. Os nomes antigos continuam a funcionar.",
-                             "Cópias de segurança: uma isenção de responsabilidade clara no separador de cópias de segurança e na janela de detalhes – o monitor mostra apenas o que dizem os registos; cabe a cada pessoa garantir que as cópias estão completas e podem ser restauradas."
+                             "Novo endereço: o site, os downloads e as atualizações automáticas agora ficam em https://claudeusagemonitor.com/. Você não precisa fazer nada – esta atualização muda o app, e suas configurações e histórico são mantidos."
                          ],
                   "pl":  [
-                             "Sprawdzanie aktualizacji ponawia się samo: jeśli się nie uda (brak sieci tuż po starcie, wybudzenie z uśpienia, błąd serwera), aplikacja próbuje ponownie po 1, 5, 15, 30 minutach, a potem co godzinę – zamiast czekać 6 godzin.",
-                             "Kontrolki kopii: dzienniki są teraz sortowane z dokładnością do sekundy (oraz według przyrostka „_2” drugiego uruchomienia w tej samej sekundzie), więc dwa uruchomienia w tej samej minucie nie sprawią już, że kontrolka pokaże starsze. Stare nazwy dzienników nadal działają.",
-                             "Kopie zapasowe: jasne wyłączenie odpowiedzialności na karcie ustawień kopii i w oknie szczegółów – monitor pokazuje tylko to, co zapisano w dziennikach; o to, by kopie były kompletne i dały się przywrócić, każdy musi zadbać sam."
+                             "Nowy adres: strona, pobieranie i automatyczne aktualizacje są teraz pod https://claudeusagemonitor.com/. Nie musisz nic robić – ta aktualizacja przełącza aplikację, ustawienia i historia pozostają bez zmian."
                          ],
                   "nl":  [
-                             "De updatecontrole probeert het zelf opnieuw: mislukt ze (nog geen netwerk na het opstarten, ontwaken uit slaapstand, een serverstoring), dan probeert de app het na 1, 5, 15, 30 minuten en daarna elk uur opnieuw – in plaats van 6 uur te wachten.",
-                             "Back-uplampjes: logboeken worden nu op de seconde gesorteerd (en op het achtervoegsel „_2” van een tweede run in dezelfde seconde), zodat twee runs in dezelfde minuut een lampje niet meer de oudere run laten tonen. Oude lognamen blijven werken.",
-                             "Back-ups: een duidelijke disclaimer op het tabblad Back-ups en in het detailvenster – de monitor toont alleen wat de back-uplogboeken zeggen; iedereen moet zelf zorgen dat back-ups volledig en terug te zetten zijn."
+                             "Nieuw adres: de website, de downloads en de automatische updates staan nu op https://claudeusagemonitor.com/. Je hoeft niets te doen – deze update zet de app over, je instellingen en geschiedenis blijven behouden."
                          ],
                   "ru":  [
-                             "Проверка обновлений повторяется сама: если она не удалась (сеть ещё не готова после запуска, выход из сна, сбой сервера), приложение пробует снова через 1, 5, 15, 30 минут, а затем каждый час – вместо того чтобы ждать 6 часов.",
-                             "Индикаторы копий: журналы теперь упорядочиваются с точностью до секунды (и по суффиксу «_2» второго запуска в ту же секунду), поэтому два запуска в одну минуту больше не заставят индикатор показать более старый. Старые имена журналов по-прежнему работают.",
-                             "Резервные копии: чёткий отказ от ответственности на вкладке настроек копий и в окне подробностей – монитор показывает только то, что записано в журналах; за полноту и восстанавливаемость копий каждый отвечает сам."
+                             "Новый адрес: сайт, загрузки и автоматические обновления теперь находятся на https://claudeusagemonitor.com/. Ничего делать не нужно — это обновление переключает приложение, настройки и история сохраняются."
                          ],
                   "cs":  [
-                             "Kontrola aktualizací to zkusí znovu sama: pokud selže (po startu ještě není síť, probuzení z režimu spánku, chyba serveru), aplikace to zkusí po 1, 5, 15, 30 minutách a pak každou hodinu – místo čekání 6 hodin.",
-                             "Kontrolky záloh: protokoly se nyní řadí na sekundu přesně (a podle přípony „_2“ druhého běhu ve stejné sekundě), takže dva běhy ve stejné minutě už nezpůsobí, že kontrolka ukáže ten starší. Staré názvy protokolů dál fungují.",
-                             "Zálohy: jasné vyloučení odpovědnosti na kartě nastavení záloh a v okně podrobností – monitor ukazuje jen to, co uvádějí protokoly; za úplnost a obnovitelnost záloh odpovídá každý sám."
+                             "Nová adresa: web, stahování i automatické aktualizace jsou nyní na https://claudeusagemonitor.com/. Nemusíte nic dělat – tato aktualizace aplikaci přepne, nastavení i historie zůstanou zachovány."
                          ],
                   "tr":  [
-                             "Güncelleme denetimi kendiliğinden yeniden dener: başarısız olursa (açılıştan sonra henüz ağ yok, uykudan uyanma, sunucu sorunu) uygulama 6 saat beklemek yerine 1, 5, 15, 30 dakika sonra ve ardından saatte bir yeniden dener.",
-                             "Yedek lambaları: günlükler artık saniyesine kadar sıralanır (aynı saniyedeki ikinci çalıştırmanın \"_2\" ekine göre de), böylece aynı dakikadaki iki çalıştırma bir lambanın eskisini göstermesine artık yol açmaz. Eski günlük adları çalışmaya devam eder.",
-                             "Yedekler: Yedekler ayar sekmesinde ve ayrıntı penceresinde açık bir sorumluluk reddi – monitör yalnızca yedekleme günlüklerinin söylediğini gösterir; yedeklerin eksiksiz ve geri yüklenebilir olmasını herkes kendisi sağlamalıdır."
+                             "Yeni adres: web sitesi, indirmeler ve otomatik güncellemeler artık https://claudeusagemonitor.com/ adresinde. Sizin bir şey yapmanıza gerek yok – bu güncelleme uygulamayı geçirir, ayarlarınız ve geçmişiniz korunur."
                          ]
               }
 }
