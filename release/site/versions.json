@@ -1,7 +1,14 @@
 {
     "slug":  "claude-usage-monitor",
-    "latest":  "2.6.1",
+    "latest":  "2.6.2",
     "versions":  [
+                     {
+                         "version":  "2.6.2",
+                         "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.2.zip",
+                         "sha256":  "b1f75517763fc8590ec23dc09dd188c640b9c41ba1e12319226a7b2607c2ac69",
+                         "released":  "2026-09-21T11:48:56Z",
+                         "bytes":  48688044
+                     },
                      {
                          "version":  "2.6.1",
                          "download_url":  "https://dinorr.hu/claude-usage-monitor/versions/ClaudeUsageMonitor-Setup-2.6.1.zip",

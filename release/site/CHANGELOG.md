@@ -2,6 +2,19 @@
 
 <!-- newer-versions-here -->
 
+## [2.6.2] - 2026-09-21
+
+- Update check retries on its own: if it fails (no network yet after start-up, sleep/wake, a server hiccup), the app tries again after 1, 5, 15, 30 and then every 60 minutes, instead of waiting 6 hours.
+- Backup lamps: logs are now ordered to the second (and by the "_2" suffix of a second run in the same second), so two runs in the same minute can no longer make a lamp show the older run. Old log names keep working.
+- Backups: a clear disclaimer on the Backups settings tab and in the details window – the monitor only shows what the backup logs say; making sure backups are complete and can be restored is up to each user.
+
+*Magyarul:*
+
+- A frissítéskeresés magától újrapróbálkozik: ha nem sikerül (indulás után még nincs hálózat, alvásból ébredés, szerverhiba), a program 1, 5, 15, 30 perc múlva, majd óránként újra próbálja – nem vár 6 órát.
+- Mentési lámpák: a naplók sorrendje mostantól másodpercre pontos (és az azonos másodpercben indult második futás „_2” utótagját is figyeli), így két, ugyanabban a percben indult futás miatt a lámpa már nem mutathatja a régebbit. A régi naplónevek továbbra is működnek.
+- Mentések: egyértelmű felelősségkizárás a Mentések beállítási lapon és a részletező ablakban – a monitor csak azt mutatja, amit a mentési naplók írnak; azt, hogy a mentések teljesek és visszaállíthatók legyenek, mindenkinek magának kell biztosítania.
+
+
 ## [2.6.1] - 2026-09-21
 
 - The app now uses Anthropic's own terms for Claude's limits, in all 12 languages: "5-hour session" instead of "5-hour window" and "usage credits" instead of "extra usage" - the same words you see in Claude under Settings → Usage.

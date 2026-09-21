@@ -2,7 +2,7 @@
 
 > Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.
 
-- Current version: 2.6.1 (released 2026-09-21)
+- Current version: 2.6.2 (released 2026-09-21)
 - Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
 - Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
 - Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.
@@ -39,6 +39,8 @@
 - **Per-model limits**: Fable, Opus, Sonnet, Claude Code, usage credits – every limit the server reports, plus this week's split between models.
 - **Alerts that matter**: A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.
 - **It doesn't spy. Period.**: No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.
+- **Backup lamps – see whether your Claude work is backed up**: Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
+- [Claude Backup Kit (free, Windows)](https://dinorr.hu/claude-usage-monitor/kit/ClaudeBackupKit.zip): the scripts that make the backup the lamps show; source and README in [gaborvidovics76/ClaudeUsageMonitor/backup-kit](https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit)
 
 ## Key terms
 
@@ -84,3 +86,6 @@ Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code 
 
 ### Is this the same as “Claude Code Usage Monitor”?
 No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line.
+
+### Can Claude Usage Monitor show whether my Claude files are backed up?
+Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
