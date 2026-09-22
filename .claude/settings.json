@@ -1,0 +1,84 @@
+{
+  "$comment": [
+    "Shared project settings - committed on purpose so a new clone works without a wall of prompts.",
+    "Only what this project's own workflow needs: its own site, its own repository, the Python",
+    "package index, and the commands of the macOS build/release scripts.",
+    "Nothing here weakens anything else: rules are per project, and 'deny' always wins.",
+    "Personal additions belong in .claude/settings.local.json (git-ignored)."
+  ],
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:claudeusagemonitor.com)",
+      "WebFetch(domain:www.claudeusagemonitor.com)",
+      "WebFetch(domain:dinorr.hu)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+
+      "Bash(./macos/build.sh:*)",
+      "Bash(./macos/release.sh:*)",
+      "Bash(./macos/doctor.sh:*)",
+      "Bash(chmod:*)",
+
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git stash:*)",
+      "Bash(git format-patch:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git describe:*)",
+      "Bash(git remote:*)",
+
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(pip3:*)",
+
+      "Bash(uname:*)",
+      "Bash(sw_vers:*)",
+      "Bash(xcode-select:*)",
+      "Bash(codesign:*)",
+      "Bash(ditto:*)",
+      "Bash(iconutil:*)",
+      "Bash(xattr:*)",
+      "Bash(open:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(tail:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(du:*)",
+      "Bash(pkill:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /:*)",
+      "Bash(sudo:*)",
+      "Read(./macos/release.local.env)",
+      "Read(./**/*.local.env)",
+      "Read(./**/release.local.psd1)"
+    ]
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "claudeusagemonitor.com",
+        "www.claudeusagemonitor.com",
+        "dinorr.hu",
+        "github.com",
+        "*.githubusercontent.com",
+        "pypi.org",
+        "files.pythonhosted.org"
+      ]
+    }
+  }
+}

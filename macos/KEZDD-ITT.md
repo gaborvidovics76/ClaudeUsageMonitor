@@ -5,6 +5,12 @@ a program forrása közös, a macOS-es részek ebben a `macos/` mappában vannak
 
 > **English version:** [START-HERE.md](START-HERE.md)
 
+> [!important] 2026-09-23 – új domain
+> Az app honlapja és kiadási csatornája **`https://claudeusagemonitor.com/`**. A régi cím már csak
+> átmenetileg él, a költözés előtt telepített példányok miatt. Mit jelent ez a te munkádban, és miért
+> akadt meg tőle a Claude Code: **[UJ-DOMAIN-KOLLEGA.md](UJ-DOMAIN-KOLLEGA.md)**.
+> Bemásolható prompt a Claude Code-hoz: [KOLLEGA-PROMPT.md](KOLLEGA-PROMPT.md).
+
 ---
 
 ## 1. Fordítás – egy parancs
@@ -76,21 +82,26 @@ cd ClaudeUsageMonitor
 ./macos/release.sh
 ```
 
-Lefordítja, becsomagolja (`ClaudeUsageMonitor-macOS-<verzió>-<arm64|x86_64>.zip`), feltölti, és a végén
-HTTPS-en ellenőrzi, hogy az élő oldalon tényleg az van-e kint, amit feltöltött. A macOS-re telepített
-példányok innentől maguktól felajánlják az új verziót.
+Lehúzza a legfrissebb forrást (`git pull`), lefordítja, becsomagolja
+(`ClaudeUsageMonitor-macOS-<verzió>-<arm64|x86_64>.zip`), feltölti **az új domainre és – ha be van
+állítva – a régire is**, végül HTTPS-en ellenőrzi mindkettőt: egyezik-e a verzió, a SHA-256 és a
+csomag mérete. A macOS-re telepített példányok innentől maguktól felajánlják az új verziót.
 
 Csak kipróbálnád, feltöltés nélkül: `./macos/release.sh --no-upload`
 
 ### Egyszeri beállítás: a feltöltő fiók
 
-Gábortól kapsz egy FTP-fiókot, ami **csak** a szerver `claude-usage-monitor/macos` mappájába lát be.
+Gábortól kapsz **FTP-fiókot az új domainhez** (`claudeusagemonitor.com`), ami **csak** annak a
+`macos/` mappájába lát be. Ha a régi címre is publikálni kell (átmenetileg), ahhoz külön fiókot kapsz.
 
 ```bash
 cp macos/release.local.env.example macos/release.local.env
 chmod 600 macos/release.local.env
 open -e macos/release.local.env        # töltsd ki a felhasználónevet és a jelszót
 ```
+
+A fájlban két blokk van: **PRIMARY** (kötelező, `claudeusagemonitor.com`) és **LEGACY** (elhagyható,
+a régi cím). Ha a régi fiókot nem kapod meg, hagyd üresen – a szkript kihagyja.
 
 Ez a fájl git-ignorált: soha nem kerül fel a repóba. Ne küldd el senkinek, ne commitold.
 

@@ -5,6 +5,12 @@ the source is shared, everything macOS-specific lives in this `macos/` folder.
 
 > **Magyarul (részletesebb):** [KEZDD-ITT.md](KEZDD-ITT.md)
 
+> **2026-09-23 - new domain.** The app's home and update channel is now
+> **<https://claudeusagemonitor.com/>**; the old address lives on only for copies installed before
+> the move. What that means for your work - and why Claude Code balked at it - is written up in
+> [UJ-DOMAIN-KOLLEGA.md](UJ-DOMAIN-KOLLEGA.md) (Hungarian); a ready-to-paste prompt for Claude Code
+> is in [KOLLEGA-PROMPT.md](KOLLEGA-PROMPT.md) (has an English version too).
+
 ## Build – one command
 
 ```bash
@@ -36,9 +42,14 @@ First time: `git clone https://github.com/gaborvidovics76/ClaudeUsageMonitor.git
 ./macos/release.sh --no-upload  # package only
 ```
 
-One-time setup: `cp macos/release.local.env.example macos/release.local.env`, fill in the FTP account
-Gábor gave you, `chmod 600` it. The file is git-ignored; never commit or share it. The account only
-reaches the server's `claude-usage-monitor/macos` folder.
+`release.sh` pulls the latest source, builds, packages, uploads to the **primary** site
+(claudeusagemonitor.com) and - if configured - to the **legacy** address as well, then verifies both
+over HTTPS.
+
+One-time setup: `cp macos/release.local.env.example macos/release.local.env`, fill in the upload
+account(s) Gábor gave you, `chmod 600` it. The file is git-ignored; never commit or share it. Each
+account only reaches the `macos/` folder of its site. Leave the LEGACY block empty to publish only to
+the primary site - that is the end state.
 
 ## Rules that let two people work in parallel
 
