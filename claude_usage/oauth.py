@@ -130,6 +130,13 @@ def exchange_code(pasted: str, verifier: str, state: str) -> Tuple[Optional[dict
     return _normalize(tokens), ""
 
 
+def is_dead_grant(err: str) -> bool:
+    """True when the server said the refresh token itself is finished (expired, revoked,
+    or already used). Retrying such a grant can never succeed - only a new sign-in helps."""
+    low = (err or "").lower()
+    return "invalid_grant" in low or "refresh token expired" in low or "token revoked" in low
+
+
 def refresh(refresh_token: str) -> Tuple[Optional[dict], str]:
     payload = {
         "grant_type": "refresh_token",

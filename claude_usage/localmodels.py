@@ -221,8 +221,15 @@ class LocalModelUsage:
                             if st.st_size == offset:
                                 continue
                             files += 1
-                            offsets[path], used = self._read(path, offset, cutoff, new, budget, started)
+                            offsets[path], used, truncated = self._read(path, offset, cutoff, new,
+                                                                       budget, started)
                             budget -= used
+                            if truncated:
+                                # stopped in the MIDDLE of a file: the pass is not complete, even
+                                # if this was the last file - otherwise the rest would wait for the
+                                # next scheduled scan instead of continuing right away
+                                note = "partial"
+                                break
                         except OSError:
                             continue
                     if note == "partial":
@@ -250,13 +257,18 @@ class LocalModelUsage:
             self._last_scan = 0.0               # more to read - go on at the next tick
 
     def _read(self, path: str, offset: int, cutoff: float, out: list, budget: int,
-              started: float) -> Tuple[int, int]:
-        """Reads new complete lines of one file. Returns (new offset, bytes read)."""
+              started: float) -> Tuple[int, int, bool]:
+        """Reads new complete lines of one file.
+        Returns (new offset, bytes read, stopped before the end of the file)."""
         used = 0
+        truncated = False
         try:
             with open(path, "rb") as fh:
                 fh.seek(offset)
-                while used < budget and time.time() - started <= PASS_TIME_BUDGET_S:
+                while True:
+                    if used >= budget or time.time() - started > PASS_TIME_BUDGET_S:
+                        truncated = fh.peek(1) != b"" if hasattr(fh, "peek") else True
+                        break
                     line = fh.readline(MAX_LINE_BYTES)
                     if not line:
                         break
@@ -284,7 +296,7 @@ class LocalModelUsage:
                         out.append(entry)
         except OSError:
             pass
-        return offset, used
+        return offset, used, truncated
 
     def _entry(self, line: bytes, cutoff: float) -> Optional[Entry]:
         obj = json.loads(line)

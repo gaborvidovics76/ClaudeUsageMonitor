@@ -99,6 +99,7 @@ class MonitorApp:
         self.history: Optional[HistoryWindow] = None
 
         self._last: Dict[str, float] = {}
+        self._login_notified = False    # the "sign in again" notice is shown once per session
         self._stale_notified = False
 
         # per-model split from Claude Code's local logs (works with either data source)
@@ -182,6 +183,11 @@ class MonitorApp:
         if self.reader is self.api_reader:
             note = self.api_reader.last_error
             retry_in = self.api_reader.retry_in
+            if self.api_reader.needs_login and not self._login_notified:
+                self._login_notified = True
+                self.notify(APP_TITLE, tr("notify.signin_needed"))
+            elif not self.api_reader.needs_login:
+                self._login_notified = False
         self.widget.set_activity(busy, note, retry_in)
         if busy and not self.pulse.isActive():
             self.pulse.start()
@@ -547,7 +553,8 @@ class MonitorApp:
             src_menu.addAction(tr("menu.logout"), self.logout)
 
         menu.addSeparator()
-        if not self.api_reader.has_tokens():
+        if not self.api_reader.has_tokens() or self.api_reader.needs_login:
+            # also when a token is stored but finished - otherwise there was no way back in
             menu.addAction(tr("menu.login"), self.login)
         menu.addAction(tr("menu.history"), self.show_history)
         menu.addAction(tr("menu.backups"), lambda: self.show_backups(None))

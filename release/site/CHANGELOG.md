@@ -2,6 +2,25 @@
 
 <!-- newer-versions-here -->
 
+## [2.6.5] - 2026-09-28
+
+- Fixed: the sign-in could be lost after the computer had been asleep, and the panel then showed a raw server message ("HTTP 400: invalid_grant"). The access token is now renewed 15 minutes BEFORE it expires, while the app is awake and online, so the session survives sleep and short network outages.
+- Fixed: once a sign-in really has expired, the app stops asking the server (it used to retry every two minutes forever) and says plainly what to do; the technical detail stays in the log.
+- Fixed: "Sign in to claude.ai" now also appears in the menu when a stored sign-in has expired - previously there was no way back in without signing out first.
+- New: a notification when the sign-in expires, so you do not have to notice it on the panel.
+- After signing in again the usage appears at once instead of waiting for the next poll.
+- The diagnostic log now records the date as well, and the per-model split no longer reports itself finished when it stopped in the middle of a log file.
+
+*Magyarul:*
+
+- Javítva: a bejelentkezés elveszhetett, ha a gép aludt, és a panel ilyenkor a szerver nyers üzenetét mutatta („HTTP 400: invalid_grant”). A hozzáférési tokent mostantól a lejárat ELŐTT 15 perccel újítja meg a program, még ébren és hálózaton, így a bejelentkezés túléli az alvást és a rövid hálózatkimaradást.
+- Javítva: ha a bejelentkezés tényleg lejárt, a program abbahagyja a szerver hívogatását (eddig kétpercenként újrapróbálta, a végtelenségig), és érthetően megmondja, mi a teendő; a technikai részlet a naplóban marad.
+- Javítva: a „Bejelentkezés a claude.ai-ra” menüpont mostantól akkor is megjelenik, ha a tárolt bejelentkezés lejárt – eddig kijelentkezés nélkül nem lehetett visszajutni.
+- Új: értesítés, amikor a bejelentkezés lejár, így nem a panelen kell észrevenni.
+- Újbóli bejelentkezés után a használat azonnal megjelenik, nem kell a következő lekérdezésre várni.
+- A diagnosztikai napló mostantól a dátumot is rögzíti, a modellenkénti megoszlás pedig nem jelenti magát késznek, ha egy naplófájl közepén állt meg.
+
+
 ## [2.6.4] - 2026-09-22
 
 - History with the claude.ai data source is now kept: the last 7 days survive restarts and updates (until now it started empty after every restart). On the first start the gaps are filled in from Claude Desktop's own usage log, when there is one.

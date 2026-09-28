@@ -28,6 +28,11 @@ MAX_INTERVAL = 600.0
 MANUAL_RETRIES = 5              # "Refresh now" keeps trying until it gets an answer
 AUTO_RETRIES = 1
 RETRY_DELAYS = (8.0, 15.0, 25.0, 40.0, 60.0)
+# Renew the access token this long BEFORE it expires. Waiting for the expiry was the bug: if the
+# machine slept through that moment, the refresh token could be gone by the time it woke up, and
+# the whole sign-in was lost. Refreshing early also keeps the refresh token rotating while the
+# app is awake and online.
+REFRESH_MARGIN_S = 15 * 60
 
 
 PROFILE_EVERY_S = 6 * 3600      # the plan rarely changes - ask seldom
@@ -58,7 +63,7 @@ def _dbg(msg: str) -> None:
             with open(path, "w", encoding="utf-8") as fh:
                 fh.writelines(tail)
         with open(path, "a", encoding="utf-8") as fh:
-            fh.write(f"{_dt.now():%H:%M:%S}  {msg}\n")
+            fh.write(f"{_dt.now():%Y-%m-%d %H:%M:%S}  {msg}\n")
     except OSError:
         pass
 
@@ -180,6 +185,7 @@ class ApiReader:
         self._limits_logged = False
         self._profile: Optional[ProfileInfo] = None
         self._profile_next = 0.0      # when to ask the profile endpoint again
+        self._needs_login = False     # the refresh token is finished: only a new sign-in helps
 
     # ------------------------------------------------------------------ token
 
@@ -188,12 +194,24 @@ class ApiReader:
             self._tokens = tokens or {}
             self._raw = None
             self._error = ""
+            self._needs_login = False     # a fresh sign-in clears the dead-session state
+            # ask the server straight away instead of waiting out the previous poll interval
+            self._last_fetch = 0.0
+            self._retry_at = None
+            self._retries_left = 0
+            self._interval = BASE_INTERVAL
             self._profile = None      # another account may have signed in
             self._profile_next = 0.0
 
     def has_tokens(self) -> bool:
         with self._lock:
             return bool(self._tokens.get("access_token"))
+
+    @property
+    def needs_login(self) -> bool:
+        """The stored sign-in is finished; the app stops calling the server until a new one."""
+        with self._lock:
+            return self._needs_login
 
     @property
     def last_error(self) -> str:
@@ -226,7 +244,9 @@ class ApiReader:
             tokens = dict(self._tokens)
         access = tokens.get("access_token", "")
         exp = tokens.get("expires_at")
-        need_refresh = not access or (isinstance(exp, (int, float)) and exp <= time.time())
+        # refresh BEFORE expiry (see REFRESH_MARGIN_S), not after
+        due = isinstance(exp, (int, float)) and exp - REFRESH_MARGIN_S <= time.time()
+        need_refresh = not access or due
         if need_refresh and tokens.get("refresh_token"):
             new, err = oauth.refresh(tokens["refresh_token"])
             if new and new.get("access_token"):
@@ -235,7 +255,19 @@ class ApiReader:
                 if self._on_tokens_changed:
                     self._on_tokens_changed(new)
                 return new["access_token"], ""
-            return "", err or tr("err.session_expired")
+            if oauth.is_dead_grant(err):
+                # the sign-in is finished - stop asking the server and tell the user plainly.
+                # The raw answer stays in api.log; the panel never shows HTTP/JSON.
+                with self._lock:
+                    self._needs_login = True
+                _dbg(f"sign-in finished, no more attempts until a new login: {err}")
+                return "", tr("err.signin_needed")
+            if access and not (isinstance(exp, (int, float)) and exp <= time.time()):
+                # early refresh failed (e.g. no network) but the current token is still valid
+                _dbg(f"early refresh failed, the current token is still valid: {err}")
+                return access, ""
+            _dbg(f"token refresh failed: {err}")
+            return "", tr("err.session_expired")
         if not access:
             return "", tr("err.not_signed_in")
         return access, ""
@@ -245,6 +277,8 @@ class ApiReader:
     def refresh_async(self, force: bool = False) -> None:
         now = time.time()
         with self._lock:
+            if self._needs_login:
+                return              # a new sign-in is needed; more requests are pointless
             if self._inflight:
                 if force:
                     # Do not drop a manual refresh: run it again as soon as the
@@ -291,6 +325,12 @@ class ApiReader:
                     if self._on_tokens_changed:
                         self._on_tokens_changed(new)
                     raw, status, ferr, retry_after = oauth.fetch_usage(new["access_token"])
+                elif oauth.is_dead_grant(rerr):
+                    with self._lock:
+                        self._needs_login = True
+                        self._error = tr("err.signin_needed")
+                    _dbg(f"sign-in finished after 401: {rerr}")
+                    return
                 else:
                     _dbg(f"token refresh failed: {rerr}")
 

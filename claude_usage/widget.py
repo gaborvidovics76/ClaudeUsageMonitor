@@ -738,10 +738,19 @@ class UsageWidget(QWidget):
 
     def _paint_error(self, p: QPainter, r: QRectF) -> None:
         pal = self.palette_
+        text = self.metrics.error or tr("panel.no_data")
         p.setPen(QPen(qc(pal.danger)))
+        if self.s["layout"] == "compact":
+            # one thin line: keep the first sentence and make it fit instead of clipping it
+            font = _font(7.4 * self.k, QFont.Weight.DemiBold)
+            p.setFont(font)
+            first = text.splitlines()[0].strip() if text else ""
+            p.drawText(QRectF(r), Qt.AlignmentFlag.AlignCenter,
+                       QFontMetrics(font).elidedText(first, Qt.TextElideMode.ElideRight,
+                                                     int(max(0.0, r.width()))))
+            return
         p.setFont(_font(9.5 * self.k, QFont.Weight.DemiBold))
-        p.drawText(QRectF(r), Qt.AlignmentFlag.AlignCenter | Qt.TextFlag.TextWordWrap,
-                   self.metrics.error or tr("panel.no_data"))
+        p.drawText(QRectF(r), Qt.AlignmentFlag.AlignCenter | Qt.TextFlag.TextWordWrap, text)
 
     def _paint_header(self, p: QPainter, r: QRectF) -> float:
         k, pal, m = self.k, self.palette_, self.metrics
