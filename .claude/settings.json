@@ -17,6 +17,7 @@
       "Bash(./macos/build.sh:*)",
       "Bash(./macos/release.sh:*)",
       "Bash(./macos/doctor.sh:*)",
+      "Bash(./macos/import-settings.sh:*)",
       "Bash(chmod:*)",
 
       "Bash(git status:*)",
@@ -65,6 +66,8 @@
       "Bash(sudo:*)",
       "Read(./macos/release.local.env)",
       "Read(./**/*.local.env)",
+      "Read(./macos/release.local.env.bak-*)",
+      "Read(~/Downloads/*.local.env)",
       "Read(./**/release.local.psd1)"
     ]
   },

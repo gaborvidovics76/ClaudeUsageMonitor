@@ -94,11 +94,15 @@ Csak kipróbálnád, feltöltés nélkül: `./macos/release.sh --no-upload`
 Gábortól kapsz **FTP-fiókot az új domainhez** (`claudeusagemonitor.com`), ami **csak** annak a
 `macos/` mappájába lát be. Ha a régi címre is publikálni kell (átmenetileg), ahhoz külön fiókot kapsz.
 
+A fiókadatokat egy **`um-macos.local.env`** fájlban kapod — egy paranccsal importálod (a régi
+dinorr.hu-s fiókodat megtartja átmeneti csatornának, és mindkét fiókot kipróbálja):
+
 ```bash
-cp macos/release.local.env.example macos/release.local.env
-chmod 600 macos/release.local.env
-open -e macos/release.local.env        # töltsd ki a felhasználónevet és a jelszót
+./macos/import-settings.sh ~/Downloads/um-macos.local.env
 ```
+
+Részletek: [UJ-DOMAIN-KOLLEGA.md](UJ-DOMAIN-KOLLEGA.md) 3. pont. Kézi út: másold a
+`macos/release.local.env.example`-t `macos/release.local.env` néven, töltsd ki, `chmod 600`.
 
 A fájlban két blokk van: **PRIMARY** (kötelező, `claudeusagemonitor.com`) és **LEGACY** (elhagyható,
 a régi cím). Ha a régi fiókot nem kapod meg, hagyd üresen – a szkript kihagyja.

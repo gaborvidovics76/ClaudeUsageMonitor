@@ -26,6 +26,14 @@ Mit jelent ez, es miert akadt meg tole a Claude Code:
 Bemasolhato prompt a Claude Code-hoz:
        macos/KOLLEGA-PROMPT.md
 
+FELTOLTESI BEALLITASOK (2026-10-06) - EGY parancs:
+Gabortol kapsz egy um-macos.local.env fajlt (az uj claudeusagemonitor.com-os FTP-fiokkal).
+Mentsd le, majd a projektmappaban:
+       ./macos/import-settings.sh ~/Downloads/um-macos.local.env
+Beallitja az uj domaint elsodlegesnek, a regi dinorr.hu-s fiokodat megtartja atmeneti
+csatornanak, es mindket fiokot kiprobalja. Utana kiadas:   ./macos/release.sh
+(Ellenorzes barmikor:   ./macos/import-settings.sh --check )
+
 Ha barmi nem megy:   ./macos/doctor.sh   - es a keletkezo macos-doctor-report.txt fajlt
 kuldd el Gabornak.
 

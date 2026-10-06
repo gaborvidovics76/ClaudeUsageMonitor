@@ -62,7 +62,27 @@ nem kerül vissza a repóba).
 
 ---
 
-## 3. Amit egyszer be kell állítanod
+## 3. Amit egyszer be kell állítanod — EGY parancs
+
+Gábortól kapsz egy **`um-macos.local.env`** fájlt (privát csatornán). Mentsd le (pl. a Letöltések
+mappába), és a projektmappában futtasd:
+
+```bash
+./macos/import-settings.sh ~/Downloads/um-macos.local.env
+```
+
+Ez mindent elintéz:
+
+- elmenti a mostani beállításodat (`macos/release.local.env.bak-<idő>`),
+- beállítja az **új, claudeusagemonitor.com-os** fiókot elsődlegesnek,
+- a **régi dinorr.hu-s fiókodat megtartja** átmeneti (legacy) csatornának — ha eddig az volt az
+  elsődleges, magától átteszi,
+- `chmod 600`, majd **mindkét fiókba belép FTPS-en** és megnézi, látja-e a `macos/` mappát.
+
+Ha a végén `All set` áll, kész vagy — utána töröld a kapott fájlt. Bármikor újratesztelhető:
+`./macos/import-settings.sh --check`. A jelszót a szkript sehol nem írja ki.
+
+<details><summary>Kézi beállítás (ha valamiért nem megy a szkript)</summary>
 
 ```bash
 cp macos/release.local.env.example macos/release.local.env
@@ -70,7 +90,9 @@ chmod 600 macos/release.local.env
 open -e macos/release.local.env
 ```
 
-Két blokk van benne:
+</details>
+
+A beállításfájlban két blokk van:
 
 - **PRIMARY (kötelező)** – `claudeusagemonitor.com`. Ide kell a Gábortól kapott új FTP-fiók
   (felhasználó + jelszó). Ez a fiók kizárólag a `macos/` mappát látja.
@@ -136,7 +158,7 @@ Gyakori esetek:
 |---|---|
 | `permission denied` a szkriptre | `chmod +x macos/*.sh` |
 | a macOS nem engedi futtatni a letöltött fájlokat | `xattr -dr com.apple.quarantine .` a projektmappában |
-| `UM_FTP_HOST: unbound variable` | nincs kitöltve a `macos/release.local.env` (3. pont) |
-| `upload … failed` | rossz fiókadat, vagy a szerver nem enged FTPS-t – szólj Gábornak |
+| `UM_FTP_HOST: unbound variable` | nincs beállítva a `macos/release.local.env` – futtasd a 3. pont importját |
+| `upload … failed` | `./macos/import-settings.sh --check` megmutatja, melyik fiók rossz; a kimenetét (jelszó nincs benne) küldd Gábornak |
 | `version … is not published for Windows yet` | Gábor még nem adta ki Windowsra; várd meg, vagy kérd tőle a `--force`-ot |
 | a Claude Code rákérdez egy parancsra | válaszd: *Yes, and don't ask again* |

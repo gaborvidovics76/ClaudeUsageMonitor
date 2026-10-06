@@ -46,8 +46,11 @@ First time: `git clone https://github.com/gaborvidovics76/ClaudeUsageMonitor.git
 (claudeusagemonitor.com) and - if configured - to the **legacy** address as well, then verifies both
 over HTTPS.
 
-One-time setup: `cp macos/release.local.env.example macos/release.local.env`, fill in the upload
-account(s) Gábor gave you, `chmod 600` it. The file is git-ignored; never commit or share it. Each
+One-time setup: Gábor sends you a `um-macos.local.env` file - import it with one command:
+`./macos/import-settings.sh ~/Downloads/um-macos.local.env` (it keeps your old dinorr.hu account as the
+legacy channel, writes `macos/release.local.env` with `chmod 600` and tests every account over FTPS;
+re-test any time with `--check`). Manual way: `cp macos/release.local.env.example macos/release.local.env`,
+fill in the upload account(s), `chmod 600` it. The file is git-ignored; never commit or share it. Each
 account only reaches the `macos/` folder of its site. Leave the LEGACY block empty to publish only to
 the primary site - that is the end state.
 

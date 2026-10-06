@@ -36,6 +36,8 @@ _*.json
 /build-macos/
 /dist-macos/
 macos/release.local.env
+macos/release.local.env.bak-*
+*.local.env
 macos-doctor-report.txt
 *.patch
 /handoff/

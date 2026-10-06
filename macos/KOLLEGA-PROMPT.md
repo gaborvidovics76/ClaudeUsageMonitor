@@ -35,6 +35,11 @@ Amit kérek tőled, ebben a sorrendben:
 
 1. Ellenőrizd, hogy minden eszköz megvan-e a fordításhoz (Python 3.10+, Xcode command line tools).
    Ha valami hiányzik, mondd meg, mit telepítsek.
+1/b. Ha Gábortól kaptam egy um-macos.local.env fájlt (kérdezd meg, hova mentettem), importáld:
+   ./macos/import-settings.sh <a fájl útja>   — a fájlt te NE nyisd meg, a szkript beolvassa,
+   átállítja az elsődleges feltöltést a claudeusagemonitor.com-ra, a régi dinorr.hu-s fiókot
+   megtartja átmeneti csatornának, és mindkettőt kipróbálja. Ha nem kaptam ilyet:
+   ./macos/import-settings.sh --check   (ellenőrzi a meglévő beállítást).
 2. Futtasd: ./macos/release.sh
    Ez lehúzza a legfrissebb forrást a gitről, lefordítja az appot, becsomagolja, feltölti az
    elsődleges oldalra (claudeusagemonitor.com) és - ha a beállításfájlban szerepel - a régi
@@ -83,6 +88,10 @@ What I would like you to do, in this order:
 
 1. Check that the build tools are in place (Python 3.10+, Xcode command line tools). Tell me what
    to install if something is missing.
+1b. If Gábor sent me a um-macos.local.env file (ask me where I saved it), import it:
+   ./macos/import-settings.sh <path to the file>   - do NOT open the file yourself; the script reads
+   it, makes claudeusagemonitor.com the primary upload target, keeps my old dinorr.hu account as the
+   legacy channel and tests both. If there is no such file: ./macos/import-settings.sh --check
 2. Run: ./macos/release.sh
    It pulls the latest source, builds the app, packages it, uploads to the primary site
    (claudeusagemonitor.com) and - if configured - to the legacy address as well, then verifies
