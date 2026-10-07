@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Slovenščina)
+
+> Brezplačen odprtokodni Claude Usage Monitor za Windows in macOS: v živo spremljajte 5-urno sejo, tedensko omejitev in omejitev modela ter ponastavitev.
+
+Claude Usage Monitor je brezplačen odprtokodni namizni pripomoček za Windows 10/11 in macOS, ki v realnem času prikazuje omejitve porabe vaše naročnine na Claude – 5-urno sejo, tedensko omejitev in tedensko omejitev modela, vsako s časom, ki ostaja do ponastavitve. Ostane nad drugimi okni, zato lahko porabo v Claudu preverite brez odpiranja strani Settings → Usage (Nastavitve → Poraba) in brez terminala.
+
+En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.ai, Claude Desktop in Claude Code, v vseh vaših napravah. To ni terminalsko orodje „Claude Code Usage Monitor“: to je grafična plošča z ikono v območju za obvestila in ne potrebuje ukazne vrstice.
+
+- **Cena**: Brezplačno – polna različica, brez plačljive ravni, brez preizkusnega obdobja
+- **Platforme**: Windows 10 / 11 (64-bitni) in macOS 12 ali novejši
+- **Jeziki**: 34 jezikov vmesnika
+- **Kaj prikazuje**: 5-urna seja, tedenska omejitev, tedenska omejitev modela, odštevanje do ponastavitve, tempo in hitrost porabe
+- **Vir podatkov**: Lokalni dnevnik aplikacije Claude Desktop ali vaša prijava v claude.ai za vse naprave
+- **Zasebnost**: Brez telemetrije, brez oglasov, brez računa pri nas
+- **Licenca**: MIT, odprta koda na GitHubu
+- **Avtor**: Gábor Vidovics, Madžarska – neodvisen, ni povezan z družbo Anthropic
+
+- Različica: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/sl/
+
+## Vse omejitve porabe v Claudu. Na en pogled.
+
+- **Vidite, kaj prihaja**: Zelena, rumena, rdeča. Plošča spremeni barvo veliko prej, preden vam zmanjka – z odštevanjem do ponastavitve in oceno, kdaj boste dosegli 100 %.
+- **Porabljate prehitro?**: Kazalnik tempa vam pove, ali se tedenska omejitev topi hitreje, kot mineva teden – in napove, kje boste pristali.
+- **Vse naprave, ena številka**: Prijavite se v svojem brskalniku – tako kot Claude Code – in videli boste tudi porabo s telefona, brskalnika in vseh drugih računalnikov.
+- **Omejitve po modelih**: Fable, Opus, Sonnet, Claude Code, dobroimetje za porabo – vsaka omejitev, ki jo sporoči strežnik, in povrhu še porazdelitev med modeli v tem tednu.
+- **Opozorila, ki štejejo**: Diskretno obvestilo pri 70 % in 90 % (izberete sami) ter ob ponastavitvi omejitve. Nič drugega, nikoli.
+- **Ne vohuni. Pika.**: Brez telemetrije, brez analitike, brez računa pri nas. Komunicira samo z družbo Anthropic in samo zaradi vaših številk. Vaš žeton za prijavo ostane šifriran v vašem računalniku – Windows DPAPI ali obesek za ključe v macOS (Keychain).
+- **Ves teden na enem grafu**: Dvokliknite pripomoček: obe omejitvi na eni časovnici – 6 ur, 24 ur ali 7 dni – s tedenskim vrhom, dnevnim povprečjem in napovedjo za konec tedna, ki spremeni barvo, preden omejitev prekoračite.
+
+## FAQ
+
+### Je res brezplačen? Kje je caka?
+Res je brezplačen in cake ni. Ni predstavitvena, ni preizkusna in ni okrnjena različica – to je polna in edina različica. Brez oglasov, brez plačljive ravni, brez zbiranja podatkov. Izvorna koda je javna pod licenco MIT.
+
+### Je to uradni izdelek družbe Anthropic?
+Ne. To je neodvisno orodje skupnosti, ki ga je izdelal Gábor Vidovics. Ni povezano z družbo Anthropic. „Claude“ je blagovna znamka družbe Anthropic, PBC.
+
+### Ali mu moram zaupati svoje geslo?
+Nikoli. Brez prijave bere lokalni dnevnik aplikacije Claude Desktop. Če želite vse naprave, se prijavite v claude.ai v svojem brskalniku – program vašega gesla nikoli ne vidi.
+
+### Windows me ob zagonu opozori. Zakaj?
+Ker program ni digitalno podpisan (potrdila stanejo, program pa je brezplačen). Kliknite Več informacij → Vseeno zaženi. Prenos lahko preverite z njegovo kontrolno vsoto SHA-256, izvorno kodo pa preberete na GitHubu.
+
+### Kateri računalniki Mac so podprti?
+macOS 12 ali novejši. Kartica za prenos zgoraj vedno pokaže, za kateri procesor je trenutna različica. Različica za macOS je nova – povratne informacije so zelo dobrodošle.
+
+### Kako delujejo posodobitve?
+Program nekajkrat na dan preveri to spletno mesto. Ko je na voljo nova različica, vam to sporoči; z enim klikom jo prenese, preveri in namesti, nato pa se znova zažene. To lahko izklopite.
+
+### Kako ga odstranim?
+Windows: Nastavitve → Aplikacije → Nameščene aplikacije → Claude Usage Monitor → Odstrani. macOS: povlecite program v Koš. To je vse.
+
+### Kako preverim porabo v Claudu brez odpiranja nastavitev?
+Namestite Claude Usage Monitor: 5-urno sejo, tedensko omejitev in omejitev modela ves čas drži na zaslonu – kot majhen pripomoček, vedno nad drugimi okni, in kot odstotek v območju za obvestila ali menijski vrstici. Claudove lastne številke so v razdelku Settings → Usage; pripomoček prikazuje iste omejitve brez klikanja.
+
+### Kdaj se ponastavita 5-urna seja in tedenska omejitev v Claudu?
+Omejitev, vezana na sejo, se ponastavi vsakih pet ur. Tedenska omejitev se ponastavi enkrat na teden ob stalnem času, ki ga Anthropic dodeli vašemu računu, zato je pri vsakem uporabniku drugačen. Pripomoček v živo odšteva čas do obeh ponastavitev – s prijavo v claude.ai uporablja natančne čase s strežnika družbe Anthropic.
+
+### Ali se poraba v Claude Code šteje v mojo omejitev na claude.ai?
+Da. Po navedbah družbe Anthropic se poraba v claude.ai, Claude Desktop in Claude Code šteje v isto omejitev porabe. Zato način claude.ai v pripomočku prikazuje eno številko za vse vaše naprave in aplikacije, ne le za računalnik, v katerem teče.
+
+### Je to isto kot „Claude Code Usage Monitor“?
+Ne. „Claude Code Usage Monitor“ je ločeno terminalsko orodje drugega avtorja. Claude Usage Monitor, ki ga je razvil Gábor Vidovics, je grafični namizni pripomoček za Windows in macOS z ikono v območju za obvestila, temami in opozorili, ki ne potrebuje ukazne vrstice.
+
+### Ali lahko Claude Usage Monitor pokaže, ali so moje datoteke za Claude varnostno kopirane?
+Da – in tudi to brezplačno. Ko je vrstica stanja varnostnih kopij vklopljena, tri lučke na plošči pokažejo, ali so sveže varnostna kopija v OneDrive, kopija v drugem oblaku, kot je Nextcloud, in kopija vašega trezorja Obsidian: zelena do 24 ur, rumena do 48, rdeča, ko je kopija starejša ali je ni, rdeč obroč pa, ko zadnji zagon ni uspel. Monitor samo bere dnevnike varnostnega kopiranja; samo kopijo izdela brezplačni Claude Backup Kit, ki vsak dan kopira vaše veščine za Claude Code, CLAUDE.md, pomnilnik projektov, nastavitve aplikacije Claude Desktop in dnevnike agentov – žetona za prijavo pa nikoli. Komplet je brezplačno izhodišče, ki ga lahko vsakdo spremeni, zato za varnostne kopije ne prevzemamo nobene odgovornosti: vsak uporabnik je sam odgovoren za to, da so popolne in jih je mogoče obnoviti.
+
+### Kako lahko ocenim Claude Usage Monitor ali pošljem povratne informacije?
+Z desno tipko miške kliknite ploščo in izberite „Sporočilo razvijalcu…“ ali kliknite ikono za sporočila v glavi plošče. Podelite lahko od ene do pet zvezdic, napišete sporočilo in – samo če to označite – dovolite, da sta vaša ocena in ime prikazana na tem spletnem mestu. Vsako sporočilo prebere avtor, Gábor Vidovics, in brez vaše privolitve se nič ne objavi. Brez programa uporabite obrazec na dnu te strani.
+
+### V katerih jezikih je na voljo Claude Usage Monitor?
+V 34 jezikih: v vseh uradnih jezikih Evropske unije ter v japonščini, korejščini, poenostavljeni in tradicionalni kitajščini, indonezijščini in vietnamščini – s posebnimi različicami za evropsko in brazilsko portugalščino ter za španščino iz Španije in Latinske Amerike. Program sam izbere jezik vašega sistema, to spletno mesto pa je prav tako na voljo v vseh teh jezikih.
+
+### Ali deluje s paketi Claude Pro, Max, Team in Enterprise?
+Da. Prikazuje omejitve, ki jih ima vaš paket Claude – Pro, Max 5×, Max 20×, Team ali Enterprise – iste, kot jih Claude navaja v razdelku Settings → Usage, značka paketa v glavi plošče pa pokaže, kateri paket imate.

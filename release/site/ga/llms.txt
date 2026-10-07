@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Gaeilge)
+
+> Claude Usage Monitor: giuirléid saor in aisce, foinse oscailte, do Windows agus macOS. Feic seisiún 5 huaire agus teorainn seachtaine Claude beo, le foláirimh.
+
+Is giuirléid deisce saor in aisce, foinse oscailte, é Claude Usage Monitor do Windows 10/11 agus macOS a thaispeánann teorainneacha úsáide do shíntiúis Claude i bhfíor-am – an seisiún cúig huaire, an teorainn seachtaine agus teorainn seachtaine na samhla, gach ceann acu leis an am atá fágtha go dtí go n-athshocraítear é. Fanann sé os cionn do chuid fuinneog eile, ionas gur féidir leat d'úsáid Claude a sheiceáil gan Settings → Usage a oscailt agus gan teirminéal.
+
+Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear i do phlean – claude.ai, Claude Desktop agus Claude Code, ar do ghléasanna go léir. Ní hé an uirlis teirminéil “Claude Code Usage Monitor” é: painéal grafach é seo le deilbhín sa tráidire, agus níl líne na n-orduithe de dhíth air.
+
+- **Praghas**: Saor in aisce – an leagan iomlán, gan leagan íoctha, gan triail
+- **Ardáin**: Windows 10 / 11 (64-giotán) agus macOS 12 nó níos nuaí
+- **Teangacha**: 34 teanga comhéadain
+- **Cad a thaispeánann sé**: Seisiún 5 huaire, teorainn seachtaine, teorainn seachtaine na samhla, comhaireamh síos go dtí an t-athshocrú, luas agus ráta caithimh
+- **Foinse sonraí**: Logchomhad áitiúil Claude Desktop, nó do shíniú isteach ar claude.ai do gach gléas
+- **Príobháideachas**: Gan teileiméadracht, gan fógraí, gan chuntas linne
+- **Ceadúnas**: MIT, foinse oscailte ar GitHub
+- **Údar**: Gábor Vidovics, an Ungáir – neamhspleách, gan aon bhaint le hAnthropic
+
+- Leagan: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/ga/
+
+## Do theorainneacha úsáide Claude go léir. Sracfhéachaint amháin.
+
+- **Feic chugat é**: Glas, buí, dearg. Athraíonn dath an phainéil i bhfad sula mbíonn an teorainn ídithe – le comhaireamh síos go dtí an t-athshocrú agus meastachán ar cathain a bhainfeá 100% amach.
+- **An bhfuil tú á hídiú róthapa?**: Insíonn an táscaire luais duit an bhfuil do theorainn seachtaine ag leá níos tapúla ná mar atá an tseachtain ag imeacht – agus tuarann sé cá mbeidh tú ag an deireadh.
+- **Do ghléasanna go léir, uimhir amháin**: Sínigh isteach trí do bhrabhsálaí féin – mar a dhéanann Claude Code – agus feic an úsáid ó do ghuthán, ó do bhrabhsálaí agus ó gach ríomhaire eile freisin.
+- **Teorainneacha de réir samhla**: Fable, Opus, Sonnet, Claude Code, creidmheasanna úsáide – gach teorainn a thuairiscíonn an freastalaí, móide roinnt na seachtaine seo idir na samhlacha.
+- **Foláirimh a bhfuil tábhacht leo**: Fógra ciúin ag 70% agus 90% (tusa a roghnaíonn), agus nuair a athshocraítear do theorainn. Faic eile, riamh.
+- **Ní spiaireann sé. Sin sin.**: Gan teileiméadracht, gan anailísíocht, gan chuntas linne. Ní labhraíonn sé ach le hAnthropic, agus sin ar mhaithe le d'uimhreacha féin amháin. Fanann do chomhartha síniú isteach criptithe ar do ríomhaire – Windows DPAPI nó Keychain macOS.
+- **An tseachtain ar fad ar chairt amháin**: Déchliceáil ar an ngiuirléid: an dá theorainn ar amlíne amháin – 6 huaire, 24 huaire nó 7 lá – le buaic na seachtaine, an meán laethúil agus réamhaisnéis go deireadh na seachtaine a athraíonn dath sula dtéann tú thar fóir.
+
+## FAQ
+
+### An bhfuil sé saor in aisce i ndáiríre? Cá bhfuil an cleas?
+Tá sé saor in aisce i ndáiríre, agus níl aon chleas ann. Ní taispeántas é, ní triail é agus ní leagan gearrtha é – seo an leagan iomlán agus an t-aon leagan. Gan fógraí, gan leagan íoctha, gan bhailiú sonraí. Tá an cód foinseach poiblí faoi cheadúnas MIT.
+
+### An táirge oifigiúil de chuid Anthropic é seo?
+Ní hea. Uirlis neamhspleách phobail í a rinne Gábor Vidovics. Níl aon bhaint aici le hAnthropic. Is trádmharc de chuid Anthropic, PBC é “Claude”.
+
+### An gcaithfidh mé mo phasfhocal a thabhairt dó?
+Ní chaithfidh, riamh. Gan síniú isteach léann sé logchomhad áitiúil Claude Desktop. Más mian leat gach gléas a fheiceáil, síníonn tú isteach ar claude.ai i do bhrabhsálaí féin – ní fheiceann an aip do phasfhocal choíche.
+
+### Tugann Windows rabhadh dom nuair a ritheann mé é. Cén fáth?
+Toisc nach bhfuil an aip sínithe le cód (cosnaíonn teastais airgead; tá an aip saor in aisce). Cliceáil ar More info → Run anyway. Is féidir leat an íoslódáil a fhíorú lena suim sheiceála SHA-256, agus an cód foinseach a léamh ar GitHub.
+
+### Cé na Macanna a dtacaítear leo?
+macOS 12 nó níos nuaí. Taispeánann an cárta íoslódála thuas i gcónaí cén próiseálaí a bhfuil an leagan reatha ceaptha dó. Is nua an leagan macOS – is mór againn d'aiseolas.
+
+### Conas a oibríonn na nuashonruithe?
+Seiceálann an aip an suíomh seo cúpla uair sa lá. Nuair atá leagan nua ann, insíonn sí duit é; le cliceáil amháin íoslódáiltear é, fíoraítear é agus suiteáiltear é, agus ansin atosaíonn an aip. Is féidir leat é seo a chasadh as.
+
+### Conas is féidir liom é a bhaint?
+Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: tarraing an aip go dtí an Bin. Sin an méid.
+
+### Conas is féidir liom m'úsáid Claude a sheiceáil gan na Socruithe a oscailt?
+Suiteáil Claude Usage Monitor: coinníonn sé do sheisiún cúig huaire, do theorainn seachtaine agus teorainn na samhla ar an scáileán an t-am ar fad, mar ghiuirléid bheag atá ar barr i gcónaí agus mar chéatadán sa tráidire nó sa bharra roghchláir. Tá uimhreacha Claude féin faoi Settings → Usage; taispeánann an ghiuirléid na teorainneacha céanna gan cliceáil ar bith.
+
+### Cathain a athshocraítear seisiún 5 huaire agus teorainn seachtaine Claude?
+Athshocraítear an teorainn atá bunaithe ar sheisiúin gach cúig huaire. Athshocraítear an teorainn seachtaine ag am seasta gach seachtain a shannann Anthropic do do chuntas, mar sin bíonn sé difriúil ó dhuine go duine. Taispeánann an ghiuirléid comhaireamh síos beo go dtí an dá athshocrú – le síniú isteach ar claude.ai úsáideann sí na hamanna cruinne ó fhreastalaí Anthropic.
+
+### An n-áirítear úsáid Claude Code i mo theorainn claude.ai?
+Áirítear. De réir Anthropic, áirítear úsáid ar claude.ai, in Claude Desktop agus in Claude Code sa teorainn úsáide chéanna. Sin é an fáth a dtaispeánann mód claude.ai na giuirléide uimhir amháin do do ghléasanna agus d'aipeanna go léir, ní hamháin don ríomhaire ar a bhfuil sí ag rith.
+
+### An ionann é seo agus “Claude Code Usage Monitor”?
+Ní hionann. Uirlis ar leith, bunaithe ar an teirminéal, ó údar eile is ea “Claude Code Usage Monitor”. Giuirléid deisce ghrafach do Windows agus macOS is ea Claude Usage Monitor le Gábor Vidovics, le deilbhín sa tráidire, téamaí agus foláirimh, agus níl líne na n-orduithe de dhíth air.
+
+### An féidir le Claude Usage Monitor a thaispeáint an bhfuil cúltaca de mo chomhaid Claude ann?
+Is féidir – agus tá sé sin saor in aisce freisin. Nuair atá barra stádais na gcúltacaí casta air, taispeánann trí lampa ar an bpainéal an bhfuil an cúltaca chuig OneDrive, chuig dara scamall amhail Nextcloud agus de do thaisceadán Obsidian úr: glas suas le 24 uair an chloig, buí suas le 48, dearg nuair atá sé níos sine nó in easnamh, agus fáinne dearg nuair a theip ar an rith is déanaí. Ní léann an monatóir ach na logchomhaid cúltaca; is é an Claude Backup Kit saor in aisce a dhéanann an cúltaca féin, agus cóipeálann sé do scileanna Claude Code, CLAUDE.md, cuimhne na dtionscadal, socruithe Claude Desktop agus logchomhaid na ngníomhairí gach lá – ach an comhartha síniú isteach riamh. Pointe tosaigh saor in aisce is ea an trealamh ar féidir le duine ar bith é a athrú, mar sin ní ghlacaimid aon dliteanas as cúltacaí: is faoi gach úsáideoir féin atá sé a chinntiú go bhfuil siad iomlán agus gur féidir iad a athchóiriú.
+
+### Conas is féidir liom rátáil a thabhairt do Claude Usage Monitor nó aiseolas a sheoladh?
+Deaschliceáil ar an bpainéal agus roghnaigh “Teachtaireacht chuig an bhforbróir…”, nó cliceáil ar dheilbhín na teachtaireachta i gceanntásc an phainéil. Is féidir leat idir réalta amháin agus cúig réalta a thabhairt, teachtaireacht a scríobh, agus – ach amháin má chuireann tú tic sa bhosca – cead a thabhairt do rátáil agus d'ainm a thaispeáint ar an suíomh gréasáin seo. Léann an t-údar, Gábor Vidovics, gach teachtaireacht, agus ní fhoilsítear faic gan do thoiliú. Gan an aip, úsáid an fhoirm ag bun an leathanaigh seo.
+
+### Cé na teangacha ina bhfuil Claude Usage Monitor ar fáil?
+I 34 teanga: gach teanga oifigiúil de chuid an Aontais Eorpaigh móide an tSeapáinis, an Chóiréis, an tSínis Shimplithe agus an tSínis Thraidisiúnta, an Indinéisis agus an Vítneaimis – le leaganacha ar leith don Phortaingéilis Eorpach agus Bhrasaíleach agus don Spáinnis sa Spáinn agus i Meiriceá Laidineach. Roghnaíonn an aip teanga do chórais léi féin, agus tá an suíomh gréasáin seo ar fáil i ngach ceann de na teangacha sin freisin.
+
+### An oibríonn sé le Claude Pro, Max, Team agus Enterprise?
+Oibríonn. Taispeánann sé na teorainneacha atá ag do phlean Claude féin – Pro, Max 5×, Max 20×, Team nó Enterprise – na cinn chéanna a liostaíonn Claude faoi Settings → Usage, agus insíonn suaitheantas an phlean i gceanntásc an phainéil duit cén plean atá agat.

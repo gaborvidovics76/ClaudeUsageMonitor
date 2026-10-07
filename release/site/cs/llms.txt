@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Čeština)
+
+> Claude Usage Monitor zdarma (open source) pro Windows a macOS: limity využití Claude živě – 5hodinová relace, týdenní limit, reset a upozornění.
+
+Claude Usage Monitor je bezplatný open-source widget na plochu pro Windows 10/11 a macOS, který v reálném čase ukazuje limity využití tvého předplatného Claude – 5hodinovou relaci, týdenní limit a týdenní limit modelu, u každého i čas zbývající do resetu. Drží se nad ostatními okny, takže využití Claude zkontroluješ, aniž bys otevíral „Settings → Usage“ (Nastavení → Využití), a bez terminálu.
+
+Jedna aplikace pro Windows i Mac. Pokrývá všechno, co se počítá do tvého tarifu – claude.ai, Claude Desktop a Claude Code, na všech tvých zařízeních. Není to terminálový nástroj „Claude Code Usage Monitor“: tohle je grafický panel s ikonou v oznamovací oblasti a příkazový řádek nepotřebuje.
+
+- **Cena**: Zdarma – plná verze, žádný placený tarif, žádná zkušební doba
+- **Platformy**: Windows 10 / 11 (64bitové) a macOS 12 nebo novější
+- **Jazyky**: Rozhraní ve 34 jazycích
+- **Co ukazuje**: 5hodinovou relaci, týdenní limit, týdenní limit modelu, odpočet do resetu, tempo a rychlost čerpání
+- **Zdroj dat**: Místní protokol Claude Desktop, nebo tvoje přihlášení na claude.ai pro všechna zařízení
+- **Soukromí**: Žádná telemetrie, žádné reklamy, žádný účet u nás
+- **Licence**: MIT, open source na GitHubu
+- **Autor**: Gábor Vidovics, Maďarsko – nezávislý vývojář, bez vazby na Anthropic
+
+- Verze: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/cs/
+
+## Všechny tvoje limity využití Claude. Jediným pohledem.
+
+- **Vidíš to přicházet**: Zelená, žlutá, červená. Panel mění barvu dlouho předtím, než ti limit dojde – s odpočtem do resetu a odhadem, kdy bys narazil na 100 %.
+- **Nečerpáš moc rychle?**: Ukazatel tempa ti řekne, jestli tvůj týdenní limit taje rychleji, než utíká týden – a spočítá, kde nakonec skončíš.
+- **Všechna zařízení, jedno číslo**: Přihlas se ve vlastním prohlížeči – stejně jako to dělá Claude Code – a uvidíš i využití z telefonu, prohlížeče a všech ostatních počítačů.
+- **Limity podle modelů**: Fable, Opus, Sonnet, Claude Code, kredity za využití – každý limit, který server hlásí, plus rozdělení tohoto týdne mezi modely.
+- **Jen upozornění, na kterých záleží**: Tiché oznámení při 70 % a 90 % (hranice si zvolíš) a ve chvíli, kdy se limit resetuje. Nic dalšího. Nikdy.
+- **Nešpehuje. Tečka.**: Žádná telemetrie, žádná analytika, žádný účet u nás. Aplikace komunikuje jen s Anthropic a jen kvůli tvým vlastním číslům. Přihlašovací token zůstává zašifrovaný ve tvém počítači – Windows DPAPI nebo Klíčenka v macOS.
+- **Celý týden v jednom grafu**: Dvojklik na widget: oba limity na jedné časové ose – 6 hodin, 24 hodin nebo 7 dní – s týdenním maximem, denním průměrem a odhadem na konec týdne, který změní barvu dřív, než limit překročíš.
+
+## FAQ
+
+### Je to opravdu zdarma? Kde je háček?
+Opravdu zdarma a žádný háček v tom není. Není to demo, zkušební verze ani ořezaná edice – je to plná a jediná verze. Žádné reklamy, žádný placený tarif, žádný sběr dat. Zdrojový kód je veřejný pod licencí MIT.
+
+### Je to oficiální produkt Anthropic?
+Ne. Je to nezávislý komunitní nástroj, který vytvořil Gábor Vidovics. S Anthropic není nijak spojen. „Claude“ je ochranná známka společnosti Anthropic, PBC.
+
+### Musím aplikaci dát svoje heslo?
+Nikdy. Bez přihlášení čte místní protokol Claude Desktop. Pokud chceš vidět všechna zařízení, přihlásíš se na claude.ai ve vlastním prohlížeči – aplikace tvoje heslo nikdy neuvidí.
+
+### Windows mě při spuštění varuje. Proč?
+Protože aplikace není digitálně podepsaná (certifikáty stojí peníze a aplikace je zdarma). Klikni na Další informace → Přesto spustit. Stažený soubor si můžeš ověřit kontrolním součtem SHA-256 a zdrojový kód si přečíst na GitHubu.
+
+### Které Macy jsou podporované?
+macOS 12 nebo novější. Karta pro stažení výše vždy ukazuje, pro jaký procesor je aktuální sestavení určené. Verze pro macOS je nová – zpětná vazba je moc vítaná.
+
+### Jak fungují aktualizace?
+Aplikace se několikrát denně podívá na tento web. Když vyjde nová verze, dá ti vědět; jedním kliknutím ji stáhne, ověří a nainstaluje a pak se restartuje. Dá se to vypnout.
+
+### Jak ji odstraním?
+Windows: Nastavení → Aplikace → Nainstalované aplikace → Claude Usage Monitor → Odinstalovat. macOS: přetáhni aplikaci do Koše. To je všechno.
+
+### Jak zjistím využití Claude, aniž bych otevíral nastavení?
+Nainstaluj si Claude Usage Monitor: 5hodinovou relaci, týdenní limit a týdenní limit modelu ti drží pořád na obrazovce – jako malý widget vždy navrchu a jako procento v oznamovací oblasti nebo v řádku nabídek. Vlastní čísla Claude najdeš v „Settings → Usage“ (Nastavení → Využití); widget ukazuje stejné limity bez jediného kliknutí.
+
+### Kdy se resetuje 5hodinová relace Claude a kdy týdenní limit?
+Limit využití vázaný na relaci se resetuje každých pět hodin. Týdenní limit se resetuje každý týden v pevný čas, který tvému účtu přiřadí Anthropic, takže ho má každý jinak. Widget živě odpočítává čas do obou resetů – při přihlášení přes claude.ai používá přesné časy ze serveru Anthropic.
+
+### Počítá se využití Claude Code do limitu na claude.ai?
+Ano. Podle Anthropic se využití na claude.ai, v Claude Desktop a v Claude Code počítá do stejného limitu využití. Proto widget v režimu claude.ai ukazuje jedno číslo pro všechna tvoje zařízení a aplikace, ne jen pro počítač, na kterém běží.
+
+### Je to totéž co „Claude Code Usage Monitor“?
+Ne. „Claude Code Usage Monitor“ je samostatný terminálový nástroj jiného autora. Claude Usage Monitor od Gábora Vidovicse je grafický widget na plochu pro Windows a macOS s ikonou v oznamovací oblasti, motivy a upozorněními a příkazový řádek nepotřebuje.
+
+### Umí Claude Usage Monitor ukázat, jestli jsou moje soubory Claude zálohované?
+Ano – a taky zdarma. Když zapneš stavový řádek záloh, tři kontrolky na panelu ukazují, jestli je aktuální záloha do OneDrivu, do druhého cloudu, jako je Nextcloud, a záloha tvého trezoru Obsidianu: zelená do 24 hodin, žlutá do 48, červená, když je starší nebo chybí, a červený kroužek, když poslední běh selhal. Monitor jen čte protokoly záloh; samotnou zálohu dělá bezplatný Claude Backup Kit, který každý den kopíruje tvoje skills z Claude Code, CLAUDE.md, paměť projektů, nastavení Claude Desktop a protokoly agentů – nikdy přihlašovací token. Kit je bezplatný výchozí bod, který může kdokoli upravit, proto nepřebíráme žádnou odpovědnost za zálohy: zajistit, aby byly úplné a daly se obnovit, je věcí každého uživatele.
+
+### Jak můžu ohodnotit Claude Usage Monitor nebo poslat zpětnou vazbu?
+Klikni pravým tlačítkem na panel a vyber „Zpráva pro vývojáře…“, nebo klikni na ikonu zprávy v záhlaví panelu. Můžeš dát jednu až pět hvězdiček, napsat zprávu a – jen pokud to zaškrtneš – povolit, aby se tvoje hodnocení a jméno zobrazily na tomto webu. Každou zprávu čte autor, Gábor Vidovics, a bez tvého souhlasu se nic nezveřejní. Pokud aplikaci nemáš, použij formulář dole na této stránce.
+
+### V jakých jazycích je Claude Usage Monitor k dispozici?
+Ve 34 jazycích: ve všech úředních jazycích Evropské unie a navíc v japonštině, korejštině, zjednodušené a tradiční čínštině, indonéštině a vietnamštině – se samostatnými verzemi pro evropskou a brazilskou portugalštinu a pro španělštinu ze Španělska a z Latinské Ameriky. Aplikace si sama zvolí jazyk tvého systému a i tento web je k dispozici v každém z těchto jazyků.
+
+### Funguje s Claude Pro, Max, Team a Enterprise?
+Ano. Ukazuje limity tvého vlastního tarifu Claude – Pro, Max 5×, Max 20×, Team nebo Enterprise –, tedy stejné, jaké Claude uvádí v „Settings → Usage“ (Nastavení → Využití). Odznak tarifu v záhlaví panelu ti navíc řekne, jaký tarif máš.

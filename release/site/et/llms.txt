@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Eesti)
+
+> Tasuta avatud lähtekoodiga vidin Windowsile ja macOS-ile: näe Claude'i 5-tunni seanssi, nädalalimiiti ja mudelipõhist limiiti reaalajas, koos lähtestusajaga.
+
+Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11 ja macOS-i jaoks, mis näitab sinu Claude'i tellimuse kasutuslimiite reaalajas – 5-tunni seanssi, nädalalimiiti ja mudelipõhist nädalalimiiti, igaühe juures aega lähtestuseni. See püsib teiste akende peal, nii et saad oma Claude'i kasutust kontrollida ilma jaotist „Settings → Usage“ (Sätted → Kasutus) avamata ja ilma terminalita.
+
+Üks rakendus nii Windowsile kui ka Macile. See arvestab kõike, mis läheb sinu paketi kasutuse hulka – claude.ai, Claude Desktop ja Claude Code, kõigis sinu seadmetes. See ei ole terminalitööriist „Claude Code Usage Monitor“: see siin on graafiline paneel teavitusala ikooniga ja käsurida see ei vaja.
+
+- **Hind**: Tasuta – täisversioon, tasulist versiooni ega prooviperioodi pole
+- **Platvormid**: Windows 10 / 11 (64-bitine) ja macOS 12 või uuem
+- **Keeled**: 34 kasutajaliidese keelt
+- **Mida see näitab**: 5-tunni seanss, nädalalimiit, mudelipõhine nädalalimiit, pöördloendus lähtestuseni, tempo ja kulumiskiirus
+- **Andmeallikas**: Claude Desktopi kohalik logi või sinu claude.ai sisselogimine kõigi seadmete jaoks
+- **Privaatsus**: Telemeetriat ega reklaame pole, meie juures kontot pole vaja
+- **Litsents**: MIT, avatud lähtekood GitHubis
+- **Autor**: Gábor Vidovics, Ungari – sõltumatu, Anthropicuga mitte seotud
+
+- Versioon: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/et/
+
+## Kõik Claude'i kasutuslimiidid. Ühe pilguga.
+
+- **Näed seda tulemas**: Roheline, kollane, punane. Paneel muudab värvi ammu enne, kui limiit otsa saab – koos pöördloendusega lähtestuseni ja hinnanguga, millal jõuaksid 100%-ni.
+- **Kulutad liiga kiiresti?**: Tempo näidik ütleb, kas su nädalalimiit sulab kiiremini, kui nädal möödub – ja prognoosib, kuhu välja jõuad.
+- **Kõik su seadmed, üks arv**: Logi sisse oma brauseri kaudu – nagu teeb Claude Code – ja näed ka oma telefoni, brauseri ja kõigi teiste arvutite kasutust.
+- **Mudelipõhised limiidid**: Fable, Opus, Sonnet, Claude Code, kasutuskrediit – iga limiit, millest server teatab, ning selle nädala jaotus mudelite vahel.
+- **Ainult olulised hoiatused**: Vaikne teavitus 70% ja 90% juures (piirid valid ise) ning siis, kui limiit lähtestub. Mitte midagi muud, mitte kunagi.
+- **See ei nuhi. Punkt.**: Telemeetriat, analüütikat ega meie juures kontot pole. See suhtleb ainult Anthropicuga ja ainult sinu enda arvude pärast. Sinu sisselogimistoken jääb krüptituna sinu arvutisse – Windows DPAPI või macOS-i võtmehoidja.
+- **Kogu nädal ühel graafikul**: Tee vidinal topeltklõps: mõlemad limiidid ühel ajateljel – 6 tundi, 24 tundi või 7 päeva – koos nädala tipu, päevase keskmise ja nädala lõpu prognoosiga, mis muudab värvi enne, kui limiit ületatakse.
+
+## FAQ
+
+### Kas see on päriselt tasuta? Kus on konks?
+Päriselt tasuta ja konksu pole. See pole demo, prooviversioon ega kärbitud väljaanne – see on täielik ja ainus versioon. Reklaame, tasulist versiooni ega andmete kogumist pole. Lähtekood on avalik MIT-litsentsi all.
+
+### Kas see on Anthropicu ametlik toode?
+Ei. See on Gábor Vidovicsi loodud sõltumatu kogukonna tööriist. See ei ole Anthropicuga seotud. „Claude“ on ettevõtte Anthropic, PBC kaubamärk.
+
+### Kas pean sellele oma parooli andma?
+Mitte kunagi. Sisselogimiseta loeb see Claude Desktopi kohalikku logi. Kui soovid kõiki seadmeid, logid claude.ai-sse sisse oma brauseris – rakendus ei näe kunagi sinu parooli.
+
+### Windows hoiatab mind käivitamisel. Miks?
+Sest rakendusel pole koodiallkirja (sertifikaadid maksavad raha, rakendus on tasuta). Klõpsa Lisateave → Käivita ikkagi. Allalaaditud faili saad kontrollida selle SHA-256 kontrollsumma järgi ja lähtekoodi lugeda GitHubis.
+
+### Milliseid Mac-arvuteid toetatakse?
+macOS 12 või uuem. Ülal olev allalaadimiskaart näitab alati, millise protsessori jaoks praegune versioon on tehtud. macOS-i versioon on uus – tagasiside on väga oodatud.
+
+### Kuidas värskendused töötavad?
+Rakendus kontrollib seda saiti paar korda päevas. Kui on uus versioon, annab see sulle teada; ühe klõpsuga laaditakse see alla, kontrollitakse, installitakse ja rakendus taaskäivitub. Saad selle välja lülitada.
+
+### Kuidas seda eemaldada?
+Windows: Sätted → Rakendused → Installitud rakendused → Claude Usage Monitor → Desinstalli. macOS: lohista rakendus prügikasti. Ongi kõik.
+
+### Kuidas näha oma Claude'i kasutust ilma sätteid avamata?
+Installi Claude Usage Monitor: see hoiab sinu 5-tunni seansi, nädalalimiidi ja mudelipõhise limiidi kogu aeg ekraanil – väikese, alati pealmise vidinana ning protsendina teavitusalal või menüüribal. Claude'i enda arvud asuvad jaotises „Settings → Usage“ (Sätted → Kasutus); vidin näitab samu limiite ilma ühegi klõpsuta.
+
+### Millal Claude'i 5-tunni seanss ja nädalalimiit lähtestuvad?
+Seansipõhine limiit lähtestub iga viie tunni järel. Nädalalimiit lähtestub kord nädalas kindlal ajal, mille Anthropic sinu kontole määrab, nii et see on inimeseti erinev. Vidin näitab mõlema lähtestuseni reaalajas pöördloendust – claude.ai sisselogimisega kasutab see Anthropicu serveri täpseid aegu.
+
+### Kas Claude Code'i kasutus läheb minu claude.ai limiidi sisse?
+Jah. Anthropicu sõnul arvestatakse claude.ai, Claude Desktopi ja Claude Code'i kasutust sama kasutuslimiidi hulka. Seepärast näitab vidina claude.ai režiim üht arvu kõigi sinu seadmete ja rakenduste kohta, mitte ainult selle arvuti kohta, milles see töötab.
+
+### Kas see on sama mis „Claude Code Usage Monitor“?
+Ei. „Claude Code Usage Monitor“ on eraldi terminalipõhine tööriist, mille on teinud teine autor. Gábor Vidovicsi Claude Usage Monitor on graafiline töölauavidin Windowsile ja macOS-ile, millel on teavitusala ikoon, kujundused ja hoiatused, ning see ei vaja käsurida.
+
+### Kas Claude Usage Monitor oskab näidata, kas mu Claude'i failid on varundatud?
+Jah – ja ka see on tasuta. Kui varunduse olekuriba on sisse lülitatud, näitavad kolm lampi paneelil, kas varukoopia OneDrive'i, teise pilve (näiteks Nextcloudi) ja sinu Obsidiani hoidlast on värske: roheline kuni 24 tundi, kollane kuni 48, punane, kui see on vanem või puudub, ja punane rõngas, kui viimane käivitus ebaõnnestus. Monitor ainult loeb varunduslogisid; varukoopia enda teeb tasuta Claude Backup Kit, mis kopeerib iga päev sinu Claude Code'i oskused, CLAUDE.md faili, projektimälu, Claude Desktopi sätted ja agentide logid – sisselogimistokenit mitte kunagi. Komplekt on tasuta lähtepunkt, mida igaüks saab muuta, seega me ei vastuta varukoopiate eest: nende täielikkuse ja taastatavuse tagamine on iga kasutaja enda asi.
+
+### Kuidas saan Claude Usage Monitorile hinnangu anda või tagasisidet saata?
+Paremklõpsa paneelil ja vali „Sõnum arendajale…“ või klõpsa paneeli päises sõnumiikoonil. Saad anda ühest viie tärnini, kirjutada sõnumi ja – ainult siis, kui selle märgid – lubada oma hinnangut ja nime sellel veebisaidil näidata. Iga sõnumi loeb läbi autor Gábor Vidovics ja ilma sinu nõusolekuta ei avaldata midagi. Kui rakendust pole, kasuta selle lehe allosas olevat vormi.
+
+### Millistes keeltes on Claude Usage Monitor saadaval?
+34 keeles: kõigis Euroopa Liidu ametlikes keeltes ning lisaks jaapani, korea, lihtsustatud ja traditsioonilises hiina, indoneesia ja vietnami keeles – eraldi versioonidega Euroopa ja Brasiilia portugali ning Hispaania ja Ladina-Ameerika hispaania keele jaoks. Rakendus valib sinu süsteemi keele ise ja see veebisait on olemas ka kõigis neis keeltes.
+
+### Kas see töötab Claude'i Pro-, Max-, Team- ja Enterprise-paketiga?
+Jah. See näitab sinu enda Claude'i paketi limiite – Pro, Max 5×, Max 20×, Team või Enterprise – samu, mida Claude loetleb jaotises „Settings → Usage“ (Sätted → Kasutus), ja paneeli päises olev paketimärk ütleb, milline pakett sul on.

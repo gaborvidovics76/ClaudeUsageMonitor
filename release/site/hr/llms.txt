@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Hrvatski)
+
+> Besplatan Claude Usage Monitor otvorenog kôda za Windows i macOS: uživo pratite sesiju od 5 sati, tjedno ograničenje i ograničenje po modelu te reset.
+
+Claude Usage Monitor besplatan je widget otvorenog kôda za Windows 10/11 i macOS koji u stvarnom vremenu prikazuje ograničenja potrošnje vaše pretplate na Claude – sesiju od pet sati, tjedno ograničenje i tjedno ograničenje po modelu, svako s vremenom preostalim do reseta. Ostaje iznad ostalih prozora, pa potrošnju Claudea možete provjeriti bez otvaranja stranice Settings → Usage (Postavke → Potrošnja) i bez terminala.
+
+Jedna aplikacija i za Windows i za Mac. Obuhvaća sve što se računa u vaš paket – claude.ai, Claude Desktop i Claude Code, na svim vašim uređajima. Ovo nije terminalski alat „Claude Code Usage Monitor“: ovo je grafički panel s ikonom u području obavijesti i ne treba mu naredbeni redak.
+
+- **Cijena**: Besplatno – puna verzija, bez plaćene razine, bez probnog razdoblja
+- **Platforme**: Windows 10 / 11 (64-bitni) i macOS 12 ili noviji
+- **Jezici**: 34 jezika sučelja
+- **Što prikazuje**: Sesiju od 5 sati, tjedno ograničenje, tjedno ograničenje po modelu, odbrojavanje do reseta, tempo i brzinu potrošnje
+- **Izvor podataka**: Lokalni zapisnik programa Claude Desktop ili vaša prijava na claude.ai za sve uređaje
+- **Privatnost**: Bez telemetrije, bez oglasa, bez računa kod nas
+- **Licenca**: MIT, otvoreni kôd na GitHubu
+- **Autor**: Gábor Vidovics, Mađarska – neovisan, nije povezan s tvrtkom Anthropic
+
+- Verzija: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/hr/
+
+## Sva ograničenja potrošnje Claudea. Jednim pogledom.
+
+- **Vidjet ćete na vrijeme**: Zeleno, žuto, crveno. Panel mijenja boju mnogo prije nego što vam ponestane – uz odbrojavanje do reseta i procjenu kada ćete doseći 100 %.
+- **Trošite li prebrzo?**: Pokazatelj tempa govori vam topi li se tjedno ograničenje brže nego što tjedan prolazi – i procjenjuje gdje ćete završiti.
+- **Svi uređaji, jedna brojka**: Prijavite se u vlastitom pregledniku – kao što to radi Claude Code – i vidjet ćete potrošnju i s mobitela, preglednika i svakog drugog računala.
+- **Ograničenja po modelu**: Fable, Opus, Sonnet, Claude Code, krediti za potrošnju – svako ograničenje koje poslužitelj javlja, plus ovotjedna raspodjela po modelima.
+- **Upozorenja koja su važna**: Nenametljiva obavijest na 70 % i 90 % (sami birate) i kad se ograničenje resetira. Ništa drugo, nikada.
+- **Ne špijunira. Točka.**: Bez telemetrije, bez analitike, bez računa kod nas. Komunicira samo s tvrtkom Anthropic i samo radi vaših brojki. Vaš token za prijavu ostaje šifriran na vašem računalu – Windows DPAPI ili privjesak ključeva u macOS-u (Keychain).
+- **Cijeli tjedan na jednom grafikonu**: Dvokliknite widget: oba ograničenja na jednoj vremenskoj crti – 6 sati, 24 sata ili 7 dana – s tjednim maksimumom, dnevnim prosjekom i projekcijom do kraja tjedna koja mijenja boju prije nego što prekoračite ograničenje.
+
+## FAQ
+
+### Je li stvarno besplatno? Gdje je kvaka?
+Stvarno je besplatno i nema kvake. Nije demo, nije probna verzija i nije okrnjeno izdanje – ovo je puna i jedina verzija. Bez oglasa, bez plaćene razine, bez prikupljanja podataka. Izvorni kôd javno je dostupan pod licencom MIT.
+
+### Je li ovo službeni proizvod tvrtke Anthropic?
+Nije. Riječ je o neovisnom alatu zajednice koji je izradio Gábor Vidovics. Nije povezan s tvrtkom Anthropic. „Claude“ je zaštitni znak tvrtke Anthropic, PBC.
+
+### Moram li mu dati svoju lozinku?
+Nikada. Bez prijave čita lokalni zapisnik programa Claude Desktop. Ako želite sve uređaje, prijavljujete se na claude.ai u vlastitom pregledniku – aplikacija nikad ne vidi vašu lozinku.
+
+### Windows me upozorava kad ga pokrenem. Zašto?
+Zato što aplikacija nije digitalno potpisana (certifikati koštaju, a aplikacija je besplatna). Kliknite Više informacija → Svejedno pokreni. Preuzetu datoteku možete provjeriti njezinim SHA-256 kontrolnim zbrojem, a izvorni kôd pročitati na GitHubu.
+
+### Koji su Macovi podržani?
+macOS 12 ili noviji. Kartica za preuzimanje iznad uvijek pokazuje za koji je procesor trenutačna verzija. Verzija za macOS je nova – povratne informacije su vrlo dobrodošle.
+
+### Kako funkcioniraju ažuriranja?
+Aplikacija nekoliko puta dnevno provjerava ovu stranicu. Kad postoji nova verzija, javit će vam; jednim je klikom preuzima, provjerava i instalira, a zatim se ponovno pokreće. To možete isključiti.
+
+### Kako ga ukloniti?
+Windows: Postavke → Aplikacije → Instalirane aplikacije → Claude Usage Monitor → Deinstaliraj. macOS: povucite aplikaciju u Smeće. To je sve.
+
+### Kako provjeriti potrošnju Claudea bez otvaranja postavki?
+Instalirajte Claude Usage Monitor: sesiju od pet sati, tjedno ograničenje i ograničenje po modelu stalno drži na zaslonu – kao mali widget uvijek iznad ostalih prozora i kao postotak u području obavijesti ili traci izbornika. Claudeove vlastite brojke nalaze se pod Settings → Usage; widget prikazuje ista ograničenja bez ikakvog klikanja.
+
+### Kada se resetiraju sesija od 5 sati i tjedno ograničenje u Claudeu?
+Ograničenje temeljeno na sesiji resetira se svakih pet sati. Tjedno ograničenje resetira se jednom tjedno u fiksno vrijeme koje Anthropic dodjeljuje vašem računu, pa se razlikuje od osobe do osobe. Widget uživo odbrojava do oba reseta – uz prijavu na claude.ai koristi točna vremena s poslužitelja tvrtke Anthropic.
+
+### Računa li se potrošnja Claude Codea u moje ograničenje na claude.ai?
+Da. Prema tvrtki Anthropic, potrošnja na claude.ai, u Claude Desktopu i u Claude Codeu računa se u isto ograničenje potrošnje. Zato način rada claude.ai u widgetu prikazuje jednu brojku za sve vaše uređaje i aplikacije, a ne samo za računalo na kojem radi.
+
+### Je li ovo isto što i „Claude Code Usage Monitor“?
+Nije. „Claude Code Usage Monitor“ zaseban je terminalski alat drugog autora. Claude Usage Monitor, čiji je autor Gábor Vidovics, grafički je widget za Windows i macOS s ikonom u području obavijesti, temama i upozorenjima, a naredbeni redak mu ne treba.
+
+### Može li Claude Usage Monitor pokazati jesu li moje datoteke za Claude sigurnosno kopirane?
+Da – i to također besplatno. Kad je uključena traka stanja sigurnosnih kopija, tri lampice na panelu pokazuju jesu li svježe sigurnosna kopija na OneDriveu, kopija u drugom oblaku poput Nextclouda i kopija vašeg Obsidian trezora: zelena do 24 sata, žuta do 48, crvena kad je kopija starija ili je nema, a crveni prsten kad posljednje pokretanje nije uspjelo. Monitor samo čita zapisnike sigurnosnih kopija; samu kopiju izrađuje besplatni Claude Backup Kit, koji svaki dan kopira vaše vještine za Claude Code, CLAUDE.md, memoriju projekata, postavke programa Claude Desktop i zapisnike agenata – nikad token za prijavu. Paket je besplatna polazna točka koju svatko može mijenjati, pa ne preuzimamo nikakvu odgovornost za sigurnosne kopije: svaki je korisnik sam odgovoran za to da su potpune i da se mogu vratiti.
+
+### Kako mogu ocijeniti Claude Usage Monitor ili poslati povratnu informaciju?
+Desnom tipkom kliknite panel i odaberite „Poruka programeru…“ ili kliknite ikonu poruke u zaglavlju panela. Možete dati od jedne do pet zvjezdica, napisati poruku i – samo ako to označite – dopustiti da se vaša ocjena i ime prikažu na ovoj web-stranici. Svaku poruku čita autor, Gábor Vidovics, i ništa se ne objavljuje bez vašeg pristanka. Bez aplikacije upotrijebite obrazac na dnu ove stranice.
+
+### Na kojim je jezicima dostupan Claude Usage Monitor?
+Na 34 jezika: na svim službenim jezicima Europske unije te na japanskom, korejskom, pojednostavnjenom i tradicionalnom kineskom, indonezijskom i vijetnamskom – s posebnim verzijama za europski i brazilski portugalski te za španjolski iz Španjolske i Latinske Amerike. Aplikacija sama odabire jezik vašeg sustava, a ova web-stranica također postoji na svakom od tih jezika.
+
+### Radi li s paketima Claude Pro, Max, Team i Enterprise?
+Da. Prikazuje ograničenja vašeg paketa Claude – Pro, Max 5×, Max 20×, Team ili Enterprise – ista ona koja Claude navodi pod Settings → Usage, a oznaka paketa u zaglavlju panela pokazuje koji paket koristite.

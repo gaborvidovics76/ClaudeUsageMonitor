@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Suomi)
+
+> Clauden käyttörajat aina näkyvissä: 5 tunnin istunto, viikkoraja ja mallikohtainen raja. Ilmainen avoimen lähdekoodin widget Windowsille ja macOS:lle.
+
+Claude Usage Monitor on ilmainen, avoimen lähdekoodin työpöytäwidget Windows 10/11:lle ja macOS:lle, joka näyttää Claude-tilauksesi käyttörajat reaaliajassa – 5 tunnin istunnon, viikkorajan ja mallikohtaisen viikkorajan sekä kunkin nollaukseen jäljellä olevan ajan. Se pysyy muiden ikkunoiden päällä, joten näet Clauden käyttösi avaamatta kohtaa ”Settings → Usage” (Asetukset → Käyttö) ja ilman päätettä.
+
+Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan tilauksesi käyttöön – claude.ai, Claude Desktop ja Claude Code, kaikilla laitteillasi. Se ei ole päätteessä toimiva työkalu ”Claude Code Usage Monitor”: tämä on graafinen paneeli ilmoitusalueen kuvakkeineen, eikä se tarvitse komentoriviä.
+
+- **Hinta**: Ilmainen – täysi versio, ei maksullista versiota, ei kokeilujaksoa
+- **Alustat**: Windows 10 / 11 (64-bittinen) ja macOS 12 tai uudempi
+- **Kielet**: 34 käyttöliittymäkieltä
+- **Mitä se näyttää**: 5 tunnin istunto, viikkoraja, mallikohtainen viikkoraja, aika nollaukseen, tahti ja kulutusnopeus
+- **Tietolähde**: Claude Desktopin paikallinen loki tai claude.ai-kirjautuminen kaikille laitteille
+- **Tietosuoja**: Ei telemetriaa, ei mainoksia, ei tiliä meillä
+- **Lisenssi**: MIT, avoin lähdekoodi GitHubissa
+- **Tekijä**: Gábor Vidovics, Unkari – itsenäinen kehittäjä, ei yhteydessä Anthropiciin
+
+- Versio: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/fi/
+
+## Kaikki Clauden käyttörajasi. Yhdellä silmäyksellä.
+
+- **Näet sen tulevan**: Vihreä, keltainen, punainen. Paneeli vaihtaa väriä hyvissä ajoin ennen kuin raja tulee vastaan – ja näyttää ajan nollaukseen sekä arvion siitä, milloin 100 % täyttyisi.
+- **Kulutatko liian nopeasti?**: Tahtimittari kertoo, sulaako viikkorajasi nopeammin kuin viikko kuluu – ja ennustaa, mihin päädyt.
+- **Kaikki laitteesi, yksi luku**: Kirjaudu omassa selaimessasi – kuten Claude Code tekee – ja näet myös puhelimesi, selaimesi ja kaikkien muiden tietokoneidesi käytön.
+- **Mallikohtaiset rajat**: Fable, Opus, Sonnet, Claude Code, käyttökrediitit – jokainen palvelimen ilmoittama raja sekä tämän viikon jakauma mallien kesken.
+- **Vain olennaiset hälytykset**: Hienovarainen ilmoitus 70 %:n ja 90 %:n kohdalla (rajat valitset itse) sekä silloin, kun raja nollautuu. Ei koskaan mitään muuta.
+- **Se ei vakoile. Piste.**: Ei telemetriaa, ei analytiikkaa, ei tiliä meillä. Se keskustelee vain Anthropicin kanssa ja vain sinun omista luvuistasi. Kirjautumistunnuksesi pysyy salattuna tietokoneellasi – Windows DPAPI tai macOS:n Avainnippu.
+- **Koko viikko yhdessä kaaviossa**: Kaksoisnapsauta paneelia: molemmat rajat samalla aikajanalla – 6 tuntia, 24 tuntia tai 7 päivää – viikon huipun, päivittäisen keskiarvon ja viikon loppuun ulottuvan ennusteen kera. Ennuste vaihtaa väriä ennen kuin raja ylittyy.
+
+## FAQ
+
+### Onko se oikeasti ilmainen? Missä on koira haudattuna?
+Oikeasti ilmainen, eikä missään ole koiraa haudattuna. Se ei ole demo, kokeiluversio eikä riisuttu painos – tämä on täysi ja ainoa versio. Ei mainoksia, ei maksullista versiota, ei tietojen keräämistä. Lähdekoodi on julkinen MIT-lisenssillä.
+
+### Onko tämä Anthropicin virallinen tuote?
+Ei. Se on Gábor Vidovicsin tekemä itsenäinen yhteisötyökalu, eikä se ole sidoksissa Anthropiciin. ”Claude” on Anthropic, PBC:n tavaramerkki.
+
+### Pitääkö minun antaa sille salasanani?
+Ei koskaan. Ilman kirjautumista se lukee Claude Desktopin paikallista lokia. Jos haluat mukaan kaikki laitteet, kirjaudut claude.ai:hin omassa selaimessasi – sovellus ei koskaan näe salasanaasi.
+
+### Windows varoittaa, kun käynnistän sen. Miksi?
+Koska sovelluksella ei ole koodiallekirjoitusta (varmenteet maksavat, sovellus on ilmainen). Valitse Lisätietoja → Suorita silti. Voit tarkistaa latauksen sen SHA-256-tarkistussummasta ja lukea lähdekoodin GitHubissa.
+
+### Mitä Maceja tuetaan?
+macOS 12 tai uudempi. Yllä oleva latauskortti näyttää aina, mille prosessorille nykyinen versio on tehty. macOS-versio on uusi – palaute on erittäin tervetullutta.
+
+### Miten päivitykset toimivat?
+Sovellus tarkistaa tämän sivuston muutaman kerran päivässä. Kun uusi versio on saatavilla, se kertoo siitä; yhdellä napsautuksella se ladataan, tarkistetaan ja asennetaan, minkä jälkeen sovellus käynnistyy uudelleen. Voit poistaa tämän käytöstä.
+
+### Miten poistan sen?
+Windows: Asetukset → Sovellukset → Asennetut sovellukset → Claude Usage Monitor → Poista asennus. macOS: vedä sovellus Roskakoriin. Siinä kaikki.
+
+### Miten näen Clauden käytön avaamatta asetuksia?
+Asenna Claude Usage Monitor: se pitää 5 tunnin istunnon, viikkorajan ja mallikohtaisen rajan koko ajan näkyvissä pienenä, aina päällimmäisenä pysyvänä paneelina sekä prosenttilukuna ilmoitusalueella tai valikkorivillä. Clauden omat luvut löytyvät kohdasta ”Settings → Usage” (Asetukset → Käyttö); paneeli näyttää samat rajat ilman yhtäkään napsautusta.
+
+### Milloin Clauden 5 tunnin istunto ja viikkoraja nollautuvat?
+Istuntokohtainen raja nollautuu viiden tunnin välein. Viikkoraja nollautuu kerran viikossa kiinteänä ajankohtana, jonka Anthropic määrittää tilillesi, joten se vaihtelee käyttäjittäin. Paneeli näyttää reaaliaikaisen laskurin molempiin nollauksiin – claude.ai-kirjautumisella se käyttää Anthropicin palvelimen tarkkoja aikoja.
+
+### Lasketaanko Claude Coden käyttö claude.ai-käyttörajaani?
+Kyllä. Anthropicin mukaan claude.ai:n, Claude Desktopin ja Claude Coden käyttö lasketaan samaan käyttörajaan. Siksi paneelin claude.ai-tila näyttää yhden luvun kaikille laitteillesi ja sovelluksillesi, ei vain sille tietokoneelle, jolla se on käynnissä.
+
+### Onko tämä sama kuin ”Claude Code Usage Monitor”?
+Ei. ”Claude Code Usage Monitor” on erillinen, päätteessä toimiva työkalu, jonka on tehnyt toinen kehittäjä. Gábor Vidovicsin Claude Usage Monitor on graafinen työpöytäwidget Windowsille ja macOS:lle – ilmoitusalueen kuvake, teemat ja hälytykset mukana – eikä se tarvitse komentoriviä.
+
+### Voiko Claude Usage Monitor näyttää, onko Claude-tiedostoistani varmuuskopiot?
+Kyllä – ja sekin on ilmaista. Kun varmuuskopioiden tilarivi on käytössä, paneelin kolme merkkivaloa näyttävät, onko varmuuskopio OneDriveen, toiseen pilveen kuten Nextcloudiin ja Obsidian-holvistasi tuore: vihreä enintään 24 tuntia, keltainen enintään 48, punainen kun se on vanhempi tai puuttuu, ja punainen rengas, kun viimeisin ajo epäonnistui. Ohjelma vain lukee varmuuskopioinnin lokeja; itse varmuuskopion tekee ilmainen Claude Backup Kit, joka kopioi joka päivä Claude Coden skillit, CLAUDE.md-tiedoston, projektimuistin, Claude Desktopin asetukset ja agenttien lokit – mutta ei koskaan kirjautumistunnusta. Paketti on ilmainen lähtökohta, jota kuka tahansa voi muuttaa, joten emme vastaa varmuuskopioista: jokainen käyttäjä vastaa itse siitä, että ne ovat täydellisiä ja palautettavissa.
+
+### Miten voin arvioida Claude Usage Monitorin tai lähettää palautetta?
+Napsauta paneelia hiiren kakkospainikkeella ja valitse ”Viesti kehittäjälle…”, tai napsauta viestikuvaketta paneelin otsikossa. Voit antaa yhdestä viiteen tähteä, kirjoittaa viestin ja – vain jos valitset sen – sallia arviosi ja nimesi näyttämisen tällä sivustolla. Tekijä Gábor Vidovics lukee jokaisen viestin, eikä mitään julkaista ilman suostumustasi. Jos sinulla ei ole sovellusta, käytä tämän sivun alareunan lomaketta.
+
+### Millä kielillä Claude Usage Monitor on saatavilla?
+34 kielellä: kaikilla Euroopan unionin virallisilla kielillä sekä japaniksi, koreaksi, yksinkertaistetuksi ja perinteiseksi kiinaksi, indonesiaksi ja vietnamiksi – erikseen Euroopan ja Brasilian portugaliksi sekä Espanjan ja Latinalaisen Amerikan espanjaksi. Sovellus valitsee järjestelmäsi kielen itse, ja tämä sivusto on olemassa jokaisella näistä kielistä.
+
+### Toimiiko se Claude Pro-, Max-, Team- ja Enterprise-tilauksilla?
+Kyllä. Se näyttää oman Claude-tilauksesi rajat – Pro, Max 5×, Max 20×, Team tai Enterprise – samat, jotka Claude luettelee kohdassa ”Settings → Usage” (Asetukset → Käyttö), ja paneelin otsikon tilausmerkki kertoo, mikä tilaus sinulla on.

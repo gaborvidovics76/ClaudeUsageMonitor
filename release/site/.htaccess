@@ -25,6 +25,14 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 RewriteCond %{REQUEST_URI} !^/(usage-api|dcb-native)/
 RewriteRule \.(php[0-9]?|phtml|phar|cgi|pl|py|sh)$ - [F,L]
 
+# 1b) The app links to the site in its own language code (Help window: /pt-BR/, /es-ES/, /zh-CN/ ...).
+#     The pages live in lower-case folders; /es/ is Spain's Spanish and /pt/ is Brazilian Portuguese.
+RewriteRule ^(?:es-ES|es-es|ES)(?:/(.*))?$ /es/$1 [R=301,L]
+RewriteRule ^(?:pt-BR|pt-br|PT)(?:/(.*))?$ /pt/$1 [R=301,L]
+RewriteRule ^pt-PT(?:/(.*))?$ /pt-pt/$1 [R=301,L]
+RewriteRule ^(?:zh-CN|zh-Hans|zh-hans|zh)(?:/(.*))?$ /zh-cn/$1 [R=301,L]
+RewriteRule ^(?:zh-TW|zh-Hant|zh-hant|zh-HK|zh-hk)(?:/(.*))?$ /zh-tw/$1 [R=301,L]
+
 # 2) The download page is the index; the two PHP folders keep their index.php. No directory listing.
 DirectoryIndex index.html index.php
 Options -Indexes
@@ -37,6 +45,9 @@ Options -Indexes
     AddType font/woff2 .woff2
     AddType image/webp .webp
     AddType application/xml .xml
+    <Files "releases.xml">
+        ForceType application/atom+xml
+    </Files>
     AddDefaultCharset utf-8
 </IfModule>
 

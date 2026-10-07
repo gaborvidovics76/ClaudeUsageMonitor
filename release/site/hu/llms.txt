@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Magyar)
+
+> Ingyenes Claude Usage Monitor Windowsra és macOS-re: élőben látod a Claude használati limitjeit – 5 órás munkamenet, heti limit, idő a resetig.
+
+A Claude Usage Monitor ingyenes, nyílt forráskódú asztali widget Windows 10/11-re és macOS-re, amely valós időben mutatja a Claude-előfizetésed használati limitjeit – az 5 órás munkamenetet, a heti limitet és a modellenkénti heti limitet, mindegyiknél a resetig hátralévő idővel. A többi ablakod fölött marad. Így úgy nézheted meg a Claude-használatodat, hogy nem kell megnyitnod a „Settings → Usage” (Beállítások → Használat) oldalt, és terminál sem kell hozzá.
+
+Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csomagodba: a claude.ai-t, a Claude Desktopot és a Claude Code-ot, az összes eszközödön. Nem azonos a „Claude Code Usage Monitor” nevű terminálos eszközzel: ez grafikus panel tálcaikonnal, és nem kell hozzá parancssor.
+
+- **Ár**: Ingyenes – a teljes verzió, nincs fizetős csomag, nincs próbaidő
+- **Platformok**: Windows 10 / 11 (64 bites) és macOS 12 vagy újabb
+- **Nyelvek**: 34 nyelvű kezelőfelület
+- **Mit mutat?**: 5 órás munkamenet, heti limit, modellenkénti heti limit, visszaszámlálás a resetig, tempó és fogyási ütem
+- **Adatforrás**: A Claude Desktop helyi naplója, vagy – az összes eszközödhöz – a claude.ai-bejelentkezésed
+- **Adatvédelem**: Nincs telemetria, nincs reklám, nálunk nincs fiókod
+- **Licenc**: MIT, nyílt forráskód a GitHubon
+- **Szerző**: Vidovics Gábor, Magyarország – független fejlesztő, nem áll kapcsolatban az Anthropickal
+
+- Verzió:: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/hu/
+
+## A Claude összes használati limitje. Egyetlen pillantással.
+
+- **Időben látod, mi jön**: Zöld, sárga, piros. A panel jóval azelőtt színt vált, hogy kifogynál – közben visszaszámol a resetig, és megbecsüli, mikor érnéd el a 100%-ot.
+- **Túl gyorsan fogyasztasz?**: A tempójelző megmutatja, ha a heti limited gyorsabban olvad, mint ahogy a hét telik – és előre jelzi, hová futsz ki a hét végére.
+- **Minden eszközöd, egyetlen szám**: Jelentkezz be a saját böngésződben – ugyanúgy, ahogy a Claude Code-nál –, és a telefonod, a böngésződ és az összes többi géped fogyasztását is látod.
+- **Modellenkénti limitek**: Fable, Opus, Sonnet, Claude Code, használati kredit – minden limit, amit a szerver közöl, és az is, hogyan oszlik meg a heti fogyasztásod a modellek között.
+- **Csak a fontos értesítések**: Halk értesítés 70%-nál és 90%-nál (te állítod be), és akkor, amikor a limited visszaáll. Semmi más, soha.
+- **Nem kémkedik. Pont.**: Nincs telemetria, nincs analitika, nálunk nincs fiókod. Csak az Anthropickal kommunikál, és csak a saját számaidért. A bejelentkezési tokened titkosítva marad a gépeden – Windowson a DPAPI, macOS-en a Kulcskarika őrzi.
+- **Az egész heted egy grafikonon**: Dupla kattintás a widgetre: mindkét limit egy idővonalon – 6 óra, 24 óra vagy 7 nap –, heti csúccsal, napi átlaggal és hét végi előrejelzéssel, ami még időben színt vált, mielőtt túlfutnál.
+
+## FAQ
+
+### Tényleg ingyenes? Hol a csapda?
+Tényleg ingyenes, és nincs csapda. Nem demó, nem próbaverzió, és nem csökkentett tudású kiadás – ez a teljes és egyetlen verzió. Nincs reklám, nincs fizetős csomag, nincs adatgyűjtés. A forráskód nyilvános, MIT-licenc alatt.
+
+### Ez hivatalos Anthropic-termék?
+Nem. Független közösségi eszköz, Vidovics Gábor munkája. Nem áll kapcsolatban az Anthropickal. A „Claude” az Anthropic, PBC védjegye.
+
+### Meg kell adnom a jelszavamat?
+Soha. Bejelentkezés nélkül a Claude Desktop helyi naplóját olvassa. Ha minden eszközödet látni szeretnéd, a saját böngésződben jelentkezel be a claude.ai-ra – az alkalmazás a jelszavadat soha nem látja.
+
+### Indításkor figyelmeztet a Windows. Miért?
+Mert az alkalmazásnak nincs kódaláírása (a tanúsítvány pénzbe kerül, az alkalmazás viszont ingyenes). Kattints ide: További információ → Futtatás mindenképpen. A letöltést ellenőrizheted az SHA-256 ellenőrzőösszeggel, a forráskódot pedig elolvashatod a GitHubon.
+
+### Milyen Maceken fut?
+macOS 12 vagy újabb kell hozzá. A fenti letöltőkártya mindig mutatja, milyen processzorra készült az aktuális kiadás. A macOS-verzió új – minden visszajelzésnek nagyon örülök.
+
+### Hogyan működik a frissítés?
+Az alkalmazás naponta néhányszor ránéz erre az oldalra. Ha van új verzió, szól; egy kattintásra letölti, ellenőrzi és telepíti, majd újraindul. Ezt ki is kapcsolhatod.
+
+### Hogyan távolítom el?
+Windows: Gépház → Alkalmazások → Telepített alkalmazások → Claude Usage Monitor → Eltávolítás. macOS: húzd az alkalmazást a Kukába. Ennyi.
+
+### Hogyan nézhetem meg a Claude-használatomat a beállítások megnyitása nélkül?
+Telepítsd a Claude Usage Monitort. Folyamatosan a képernyőn tartja az 5 órás munkamenetet, a heti limitet és a modellenkénti heti limitet: apró, mindig felül maradó widgetként, és százalékként a tálcán vagy a menüsorban. A Claude saját számait a „Settings → Usage” (Beállítások → Használat) alatt találod; a widget ugyanezeket a limiteket mutatja, kattintgatás nélkül.
+
+### Mikor áll vissza a Claude 5 órás limitje és a heti limit?
+A munkamenet-alapú limit, vagyis az 5 órás munkamenet limitje ötóránként visszaáll. A heti limit hetente egy rögzített időpontban áll vissza, amelyet az Anthropic a fiókodhoz rendel, ezért ez mindenkinél más. A widget mindkét resetig élőben visszaszámol – claude.ai-bejelentkezéssel az Anthropic szerveréről kapott pontos időpontok alapján.
+
+### Beleszámít a Claude Code használata a claude.ai-limitembe?
+Igen. Az Anthropic szerint a claude.ai, a Claude Desktop és a Claude Code használata ugyanabba a használati limitbe számít bele. Ezért a widget claude.ai módban egyetlen számot mutat az összes eszközödre és alkalmazásodra, nem csak arra a gépre, amelyiken fut.
+
+### Ez ugyanaz, mint a „Claude Code Usage Monitor”?
+Nem. A „Claude Code Usage Monitor” egy másik szerző külön, terminálban futó eszköze. A Claude Usage Monitor Vidovics Gábor munkája: grafikus asztali widget Windowsra és macOS-re, tálcaikonnal, témákkal és értesítésekkel, és nem kell hozzá parancssor.
+
+### Meg tudja mutatni a Claude Usage Monitor, hogy mentve vannak-e a Claude-os fájljaim?
+Igen – és ez is ingyenes. Ha bekapcsolod a mentési állapotsort, a panel három lámpája mutatja, hogy friss-e a mentés a OneDrive-on, egy második felhőben (például Nextcloudon) és az Obsidian-vaultodról: zöld 24 óráig, sárga 48 óráig, piros, ha régebbi vagy hiányzik, és piros gyűrű jelzi, ha a legutóbbi futás hibás volt. A monitor csak a mentési naplókat olvassa; magát a mentést az ingyenes Claude Backup Kit készíti, amely minden nap lemásolja a Claude Code skilljeidet, a CLAUDE.md-t, a projektmemóriát, a Claude Desktop beállításait és az agent-naplókat – a bejelentkezési tokent soha. A kit mindenki által módosítható kiindulási alap, ezért a mentésekért nem vállalunk felelősséget: azt, hogy teljesek és visszaállíthatók legyenek, mindenkinek magának kell biztosítania.
+
+### Hogyan értékelhetem a Claude Usage Monitort, vagy hogyan küldhetek visszajelzést?
+Kattints jobb gombbal a panelre, és válaszd az „Üzenet a fejlesztőnek…” menüpontot, vagy kattints az üzenet-ikonra a panel fejlécében. Adhatsz egy–öt csillagot, írhatsz üzenetet, és – csak ha bepipálod – hozzájárulhatsz, hogy az értékelésed és a neved megjelenjen ezen a weboldalon. Minden üzenetet maga a szerző, Vidovics Gábor olvas el, és a hozzájárulásod nélkül semmi sem kerül nyilvánosságra. Ha nem használod az alkalmazást, írj az oldal alján lévő űrlapon.
+
+### Milyen nyelveken érhető el a Claude Usage Monitor?
+34 nyelven: az Európai Unió összes hivatalos nyelvén, továbbá japánul, koreaiul, egyszerűsített és hagyományos kínaiul, indonézül és vietnámiul – az európai és a brazil portugálnak, valamint a spanyolországi és a latin-amerikai spanyolnak külön változata van. Az alkalmazás magától a rendszered nyelvén indul, és ez a weboldal is elérhető mindegyik nyelven.
+
+### Működik a Claude Pro, Max, Team és Enterprise csomaggal?
+Igen. A saját Claude-csomagod limitjeit mutatja – legyen az Pro, Max 5×, Max 20×, Team vagy Enterprise –, pontosan azokat, amelyeket a Claude a „Settings → Usage” (Beállítások → Használat) alatt felsorol. A panel fejlécében lévő csomagjelvényről pedig azt is leolvashatod, melyik csomagod van.

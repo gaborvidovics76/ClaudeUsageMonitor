@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Tiếng Việt)
+
+> Tiện ích miễn phí, mã nguồn mở cho Windows và macOS: xem trực tiếp giới hạn sử dụng Claude – phiên 5 giờ, giới hạn tuần, theo mô hình, đếm ngược và cảnh báo.
+
+Claude Usage Monitor là tiện ích (widget) máy tính miễn phí, mã nguồn mở cho Windows 10/11 và macOS, hiển thị theo thời gian thực giới hạn sử dụng của gói Claude bạn đăng ký – phiên năm giờ, giới hạn tuần và giới hạn tuần theo mô hình, kèm thời gian còn lại đến lúc đặt lại. Tiện ích luôn nằm trên các cửa sổ khác, nên bạn có thể xem mức sử dụng Claude mà không cần mở Cài đặt → Mức sử dụng và không cần terminal.
+
+Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được tính vào gói của bạn – claude.ai, Claude Desktop và Claude Code, trên tất cả thiết bị. Đây không phải công cụ dòng lệnh “Claude Code Usage Monitor”: đây là bảng có giao diện đồ họa, có biểu tượng ở khay hệ thống và không cần dòng lệnh.
+
+- **Giá**: Miễn phí – bản đầy đủ, không có gói trả phí, không dùng thử
+- **Nền tảng**: Windows 10 / 11 (64-bit) và macOS 12 trở lên
+- **Ngôn ngữ**: 34 ngôn ngữ giao diện
+- **Hiển thị**: Phiên 5 giờ, giới hạn tuần, giới hạn tuần theo mô hình, đếm ngược đến lúc đặt lại, nhịp và tốc độ tiêu hao
+- **Nguồn dữ liệu**: Nhật ký cục bộ của Claude Desktop, hoặc đăng nhập claude.ai để xem mọi thiết bị
+- **Quyền riêng tư**: Không thu thập dữ liệu từ xa, không quảng cáo, không cần tài khoản với chúng tôi
+- **Giấy phép**: MIT, mã nguồn mở trên GitHub
+- **Tác giả**: Gábor Vidovics, Hungary – độc lập, không liên kết với Anthropic
+
+- Phiên bản: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/vi/
+
+## Mọi giới hạn sử dụng Claude của bạn. Chỉ một cái liếc.
+
+- **Thấy trước khi đến**: Xanh, vàng, đỏ. Bảng đổi màu từ rất lâu trước khi bạn cạn hạn mức – kèm đếm ngược đến lúc đặt lại và ước tính khi nào bạn chạm 100%.
+- **Bạn có đang dùng quá nhanh?**: Chỉ báo nhịp cho biết giới hạn tuần của bạn có đang vơi nhanh hơn tốc độ trôi của tuần hay không – và dự báo bạn sẽ kết thúc tuần ở mức nào.
+- **Mọi thiết bị, một con số**: Đăng nhập qua chính trình duyệt của bạn – như Claude Code vẫn làm – và xem cả mức sử dụng từ điện thoại, trình duyệt và mọi máy tính khác.
+- **Giới hạn theo mô hình**: Fable, Opus, Sonnet, Claude Code, tín dụng sử dụng – mọi giới hạn máy chủ báo về, cộng thêm phân chia giữa các mô hình trong tuần này.
+- **Cảnh báo đúng lúc**: Một thông báo nhẹ nhàng ở mức 70% và 90% (bạn tự chọn), và khi giới hạn được đặt lại. Ngoài ra không có gì khác, không bao giờ.
+- **Không theo dõi bạn. Chấm hết.**: Không thu thập dữ liệu từ xa, không phân tích, không cần tài khoản với chúng tôi. Ứng dụng chỉ liên lạc với Anthropic, và chỉ để lấy số liệu của chính bạn. Token đăng nhập của bạn luôn được mã hóa trên máy tính của bạn – bằng Windows DPAPI hoặc Keychain của macOS.
+- **Cả tuần trên một biểu đồ**: Nhấp đúp vào tiện ích: cả hai giới hạn trên cùng một dòng thời gian – 6 giờ, 24 giờ hoặc 7 ngày – kèm đỉnh tuần, trung bình mỗi ngày và dự báo cuối tuần đổi màu trước khi bạn vượt ngưỡng.
+
+## FAQ
+
+### Có thật sự miễn phí không? Có điều kiện gì không?
+Miễn phí thật, và không có điều kiện ràng buộc nào. Đây không phải bản demo, không phải bản dùng thử, cũng không phải phiên bản rút gọn – đây là bản đầy đủ và duy nhất. Không quảng cáo, không gói trả phí, không thu thập dữ liệu. Mã nguồn được công khai theo giấy phép MIT.
+
+### Đây có phải sản phẩm chính thức của Anthropic không?
+Không. Đây là công cụ cộng đồng độc lập do Gábor Vidovics phát triển, không liên kết với Anthropic. “Claude” là nhãn hiệu của Anthropic, PBC.
+
+### Tôi có phải đưa mật khẩu cho ứng dụng không?
+Không bao giờ. Khi chưa đăng nhập, ứng dụng đọc nhật ký cục bộ của Claude Desktop. Nếu muốn xem mọi thiết bị, bạn đăng nhập claude.ai ngay trong trình duyệt của mình – ứng dụng không bao giờ thấy mật khẩu của bạn.
+
+### Windows cảnh báo khi tôi chạy ứng dụng. Vì sao?
+Vì ứng dụng chưa được ký số (chứng chỉ thì tốn tiền, còn ứng dụng thì miễn phí). Nhấp Thông tin thêm → Vẫn chạy. Bạn có thể xác minh tệp tải về bằng mã băm SHA-256 và đọc mã nguồn trên GitHub.
+
+### Hỗ trợ những máy Mac nào?
+macOS 12 trở lên. Thẻ tải xuống ở trên luôn cho biết bản dựng hiện tại dành cho bộ xử lý nào. Bản macOS còn mới – rất mong nhận được góp ý của bạn.
+
+### Cập nhật hoạt động thế nào?
+Ứng dụng kiểm tra trang này vài lần mỗi ngày. Khi có phiên bản mới, ứng dụng sẽ báo bạn; một cú nhấp là tải xuống, xác minh và cài đặt, rồi khởi động lại. Bạn có thể tắt tính năng này.
+
+### Gỡ cài đặt thế nào?
+Windows: Cài đặt → Ứng dụng → Ứng dụng đã cài đặt → Claude Usage Monitor → Gỡ cài đặt. macOS: kéo ứng dụng vào Thùng rác. Vậy là xong.
+
+### Làm sao xem mức sử dụng Claude mà không cần mở Cài đặt?
+Hãy cài Claude Usage Monitor: nó luôn hiển thị phiên năm giờ, giới hạn tuần và giới hạn theo mô hình trên màn hình, dưới dạng một tiện ích nhỏ luôn ở trên cùng và dạng phần trăm trên khay hệ thống hoặc thanh menu. Số liệu của chính Claude nằm trong Cài đặt → Mức sử dụng; tiện ích hiển thị đúng những giới hạn đó mà không cần nhấp chuột.
+
+### Khi nào phiên 5 giờ và giới hạn tuần của Claude được đặt lại?
+Giới hạn theo phiên được đặt lại sau mỗi năm giờ. Giới hạn tuần được đặt lại vào một thời điểm cố định mỗi tuần do Anthropic gán cho tài khoản của bạn, nên mỗi người một khác. Tiện ích hiển thị đếm ngược trực tiếp đến cả hai lần đặt lại – khi đăng nhập claude.ai, tiện ích dùng thời điểm chính xác từ máy chủ Anthropic.
+
+### Mức sử dụng Claude Code có tính vào giới hạn claude.ai của tôi không?
+Có. Theo Anthropic, mức sử dụng trên claude.ai, Claude Desktop và Claude Code đều được tính vào cùng một giới hạn sử dụng. Vì vậy, chế độ claude.ai của tiện ích hiển thị một con số cho mọi thiết bị và ứng dụng của bạn, không chỉ cho máy tính đang chạy tiện ích.
+
+### Đây có phải là “Claude Code Usage Monitor” không?
+Không. “Claude Code Usage Monitor” là một công cụ dòng lệnh riêng biệt của tác giả khác. Claude Usage Monitor của Gábor Vidovics là tiện ích máy tính có giao diện đồ họa cho Windows và macOS, có biểu tượng khay hệ thống, chủ đề và cảnh báo, và không cần dòng lệnh.
+
+### Claude Usage Monitor có cho biết tệp Claude của tôi đã được sao lưu chưa?
+Có – và cũng miễn phí. Khi bật thanh trạng thái sao lưu, ba đèn báo trên bảng cho biết bản sao lưu lên OneDrive, lên đám mây thứ hai như Nextcloud và bản sao lưu kho Obsidian của bạn có còn mới hay không: xanh lục đến 24 giờ, vàng đến 48 giờ, đỏ khi cũ hơn hoặc không có, và vòng đỏ khi lần chạy gần nhất thất bại. Trình giám sát chỉ đọc nhật ký sao lưu; việc sao lưu do Claude Backup Kit miễn phí thực hiện, mỗi ngày sao chép skill Claude Code, CLAUDE.md, bộ nhớ dự án, cài đặt Claude Desktop và nhật ký agent của bạn – không bao giờ sao chép token đăng nhập. Bộ công cụ là điểm khởi đầu miễn phí mà ai cũng có thể sửa, vì vậy chúng tôi không chịu trách nhiệm về các bản sao lưu: bảo đảm chúng đầy đủ và có thể khôi phục là trách nhiệm của mỗi người dùng.
+
+### Làm sao để đánh giá Claude Usage Monitor hoặc gửi góp ý?
+Nhấp chuột phải vào bảng và chọn “Gửi tin nhắn cho nhà phát triển…”, hoặc nhấp vào biểu tượng tin nhắn trên đầu bảng. Bạn có thể chấm từ một đến năm sao, viết tin nhắn và – chỉ khi bạn đánh dấu chọn – cho phép hiển thị đánh giá và tên của bạn trên trang web này. Mọi tin nhắn đều do chính tác giả Gábor Vidovics đọc, và không có gì được công khai nếu không có sự đồng ý của bạn. Nếu không dùng ứng dụng, hãy dùng biểu mẫu ở cuối trang này.
+
+### Claude Usage Monitor có những ngôn ngữ nào?
+34 ngôn ngữ: tất cả ngôn ngữ chính thức của Liên minh châu Âu, cùng tiếng Nhật, tiếng Hàn, tiếng Trung giản thể và phồn thể, tiếng Indonesia và tiếng Việt – với các phiên bản riêng cho tiếng Bồ Đào Nha châu Âu và Brazil, cũng như tiếng Tây Ban Nha của Tây Ban Nha và của Mỹ Latinh. Ứng dụng tự chọn ngôn ngữ hệ thống của bạn, và trang web này cũng có đủ các ngôn ngữ đó.
+
+### Có dùng được với Claude Pro, Max, Team và Enterprise không?
+Có. Tiện ích hiển thị các giới hạn của gói Claude bạn đang dùng – Pro, Max 5×, Max 20×, Team hoặc Enterprise – giống hệt những gì Claude liệt kê trong Cài đặt → Mức sử dụng, và huy hiệu gói trên đầu bảng cho biết bạn đang ở gói nào.

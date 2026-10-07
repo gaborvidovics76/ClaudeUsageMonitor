@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="sv" data-lang="sv" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – gratis widget för Windows och macOS</title>
+<meta name="description" content="Gratis widget med öppen källkod för Windows och macOS: se dina användningsgränser i Claude live – 5-timmarssession, veckogräns och modellgräns, med nedräkning.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="en" href="https://claudeusagemonitor.com/">
+<link rel="alternate" hreflang="bg" href="https://claudeusagemonitor.com/bg/">
+<link rel="alternate" hreflang="cs" href="https://claudeusagemonitor.com/cs/">
+<link rel="alternate" hreflang="da" href="https://claudeusagemonitor.com/da/">
+<link rel="alternate" hreflang="de" href="https://claudeusagemonitor.com/de/">
+<link rel="alternate" hreflang="et" href="https://claudeusagemonitor.com/et/">
+<link rel="alternate" hreflang="el" href="https://claudeusagemonitor.com/el/">
+<link rel="alternate" hreflang="es" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-ES" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-419" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-MX" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-AR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CL" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-VE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-EC" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-GT" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CU" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-BO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-DO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-HN" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-SV" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-NI" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PA" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-UY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-US" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="fr" href="https://claudeusagemonitor.com/fr/">
+<link rel="alternate" hreflang="ga" href="https://claudeusagemonitor.com/ga/">
+<link rel="alternate" hreflang="hr" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="id" href="https://claudeusagemonitor.com/id/">
+<link rel="alternate" hreflang="it" href="https://claudeusagemonitor.com/it/">
+<link rel="alternate" hreflang="lv" href="https://claudeusagemonitor.com/lv/">
+<link rel="alternate" hreflang="lt" href="https://claudeusagemonitor.com/lt/">
+<link rel="alternate" hreflang="hu" href="https://claudeusagemonitor.com/hu/">
+<link rel="alternate" hreflang="mt" href="https://claudeusagemonitor.com/mt/">
+<link rel="alternate" hreflang="nl" href="https://claudeusagemonitor.com/nl/">
+<link rel="alternate" hreflang="pl" href="https://claudeusagemonitor.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-AO" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-MZ" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="ro" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://claudeusagemonitor.com/ru/">
+<link rel="alternate" hreflang="sk" href="https://claudeusagemonitor.com/sk/">
+<link rel="alternate" hreflang="sl" href="https://claudeusagemonitor.com/sl/">
+<link rel="alternate" hreflang="fi" href="https://claudeusagemonitor.com/fi/">
+<link rel="alternate" hreflang="sv" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="tr" href="https://claudeusagemonitor.com/tr/">
+<link rel="alternate" hreflang="vi" href="https://claudeusagemonitor.com/vi/">
+<link rel="alternate" hreflang="ja" href="https://claudeusagemonitor.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="zh" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-SG" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-TW" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-HK" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-MO" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://claudeusagemonitor.com/">
+<meta http-equiv="content-language" content="sv">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – gratis Claude-widget för Windows och macOS">
+<meta property="og:description" content="Se din 5-timmarssession, veckogräns och takt i Claude med en blick – även det som mobilen och webbläsaren förbrukar. Alltid överst, öppen källkod. 100 % gratis.">
+<meta property="og:url" content="https://claudeusagemonitor.com/sv/">
+<meta property="og:image" content="https://claudeusagemonitor.com/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – gratis Claude-widget för Windows och macOS">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="bg_BG">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ga_IE">
+<meta property="og:locale:alternate" content="hr_HR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="lv_LV">
+<meta property="og:locale:alternate" content="lt_LT">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="mt_MT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – gratis Claude-widget för Windows och macOS">
+<meta name="twitter:description" content="Se din 5-timmarssession, veckogräns och takt i Claude med en blick – även det som mobilen och webbläsaren förbrukar. Alltid överst, öppen källkod. 100 % gratis.">
+<meta name="twitter:image" content="https://claudeusagemonitor.com/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://claudeusagemonitor.com/#site","name":"Claude Usage Monitor","url":"https://claudeusagemonitor.com/","inLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"publisher":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"WebPage","@id":"https://claudeusagemonitor.com/sv/#page","url":"https://claudeusagemonitor.com/sv/","name":"Claude Usage Monitor – gratis widget för Windows och macOS","description":"Gratis widget med öppen källkod för Windows och macOS: se dina användningsgränser i Claude live – 5-timmarssession, veckogräns och modellgräns, med nedräkning.","inLanguage":"sv","isPartOf":{"@id":"https://claudeusagemonitor.com/#site"},"about":{"@id":"https://claudeusagemonitor.com/#app"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["#about .about__def","#about .facts"]},"mainEntity":{"@id":"https://claudeusagemonitor.com/#app"},"primaryImageOfPage":"https://claudeusagemonitor.com/img/og.png","dateModified":"2026-10-07","author":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"SoftwareApplication","@id":"https://claudeusagemonitor.com/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor är en gratis skrivbordswidget med öppen källkod för Windows 10/11 och macOS som visar en Claude-prenumerants användningsgränser i realtid: 5-timmarssessionen, veckogränsen och veckogränsen per modell, med nedräkning till varje nollställning, takt, förbrukningstakt och varningar. Den täcker claude.ai, Claude Desktop och Claude Code på alla enheter och kräver ingen terminal.","url":"https://claudeusagemonitor.com/sv/","inLanguage":"sv","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.7.1","dateModified":"2026-10-07T05:31:15Z","downloadUrl":"https://claudeusagemonitor.com/usage-api/dl.php?os=win","installUrl":"https://claudeusagemonitor.com/sv/#download","fileSize":"47 MB","releaseNotes":"https://claudeusagemonitor.com/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://claudeusagemonitor.com/#author"},"publisher":{"@id":"https://claudeusagemonitor.com/#author"},"image":"https://claudeusagemonitor.com/img/og.png","screenshot":["https://claudeusagemonitor.com/img/panel-full-midnight.png","https://claudeusagemonitor.com/img/history-7d-midnight.png","https://claudeusagemonitor.com/img/ring-neon.png","https://claudeusagemonitor.com/img/compact-claude.png"],"featureList":["Se det komma","Går det för fort?","Alla dina enheter, en siffra","Gränser per modell","Varningar som spelar roll","Den spionerar inte. Punkt.","Lampor för säkerhetskopior – se om ditt Claude-arbete är säkerhetskopierat"],"availableLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"sameAs":["https://github.com/gaborvidovics76/ClaudeUsageMonitor"]},{"@type":"Person","@id":"https://claudeusagemonitor.com/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://claudeusagemonitor.com/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://claudeusagemonitor.com/sv/#faq","inLanguage":"sv","mainEntity":[{"@type":"Question","name":"Är den verkligen gratis? Var är haken?","acceptedAnswer":{"@type":"Answer","text":"Verkligen gratis, och det finns ingen hake. Det är ingen demo, ingen testversion och ingen nedbantad utgåva – det här är den fullständiga och enda versionen. Ingen reklam, ingen betalversion, ingen datainsamling. Källkoden är offentlig under MIT-licensen."}},{"@type":"Question","name":"Är det här en officiell Anthropic-produkt?","acceptedAnswer":{"@type":"Answer","text":"Nej. Det är ett oberoende communityverktyg gjort av Gábor Vidovics. Det är inte knutet till Anthropic. ”Claude” är ett varumärke som tillhör Anthropic, PBC."}},{"@type":"Question","name":"Måste jag ge den mitt lösenord?","acceptedAnswer":{"@type":"Answer","text":"Aldrig. Utan inloggning läser den Claude Desktops lokala logg. Vill du ha med alla enheter loggar du in på claude.ai i din egen webbläsare – appen ser aldrig ditt lösenord."}},{"@type":"Question","name":"Windows varnar när jag startar den. Varför?","acceptedAnswer":{"@type":"Answer","text":"Eftersom appen inte är kodsignerad (certifikat kostar pengar, och appen är gratis). Klicka på Mer info → Kör ändå. Du kan verifiera nedladdningen med dess SHA-256-kontrollsumma och läsa källkoden på GitHub."}},{"@type":"Question","name":"Vilka Mac-datorer stöds?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 eller senare. Nedladdningskortet ovan visar alltid vilken processor den aktuella versionen är byggd för. macOS-versionen är ny – feedback är mycket välkommen."}},{"@type":"Question","name":"Hur fungerar uppdateringar?","acceptedAnswer":{"@type":"Answer","text":"Appen kollar den här webbplatsen några gånger om dagen. När det finns en ny version får du veta det; ett klick laddar ned, verifierar och installerar den och startar sedan om appen. Du kan stänga av det."}},{"@type":"Question","name":"Hur tar jag bort den?","acceptedAnswer":{"@type":"Answer","text":"Windows: Inställningar → Appar → Installerade appar → Claude Usage Monitor → Avinstallera. macOS: dra appen till papperskorgen. Det är allt."}},{"@type":"Question","name":"Hur kollar jag min Claude-användning utan att öppna inställningarna?","acceptedAnswer":{"@type":"Answer","text":"Installera Claude Usage Monitor: den visar din 5-timmarssession, veckogräns och modellgräns på skärmen hela tiden – som en liten widget som alltid ligger överst och som en procentsats i meddelandefältet eller menyraden. Claudes egna siffror finns under Settings → Usage; widgeten visar samma gränser helt utan klick."}},{"@type":"Question","name":"När nollställs Claudes 5-timmarssession och veckogräns?","acceptedAnswer":{"@type":"Answer","text":"Den sessionsbaserade gränsen nollställs var femte timme. Veckogränsen nollställs vid en fast tidpunkt varje vecka som Anthropic tilldelar ditt konto, så den skiljer sig från person till person. Widgeten visar en live-nedräkning till båda nollställningarna – med claude.ai-inloggning använder den de exakta tiderna från Anthropics server."}},{"@type":"Question","name":"Räknas användningen i Claude Code mot min claude.ai-gräns?","acceptedAnswer":{"@type":"Answer","text":"Ja. Enligt Anthropic räknas användningen på claude.ai, i Claude Desktop och i Claude Code mot samma användningsgräns. Därför visar widgetens claude.ai-läge en siffra för alla dina enheter och appar, inte bara för datorn den körs på."}},{"@type":"Question","name":"Är det samma sak som ”Claude Code Usage Monitor”?","acceptedAnswer":{"@type":"Answer","text":"Nej. ”Claude Code Usage Monitor” är ett separat, terminalbaserat verktyg av en annan utvecklare. Claude Usage Monitor av Gábor Vidovics är en grafisk skrivbordswidget för Windows och macOS med ikon i meddelandefältet, teman och varningar, och den kräver ingen kommandorad."}},{"@type":"Question","name":"Kan Claude Usage Monitor visa om mina Claude-filer är säkerhetskopierade?","acceptedAnswer":{"@type":"Answer","text":"Ja – och det är också gratis. När statusfältet för säkerhetskopior är aktiverat visar tre lampor på panelen om säkerhetskopieringen till OneDrive, till ett andra moln som Nextcloud och av ditt Obsidian-valv är aktuell: grönt upp till 24 timmar, gult upp till 48, rött när den är äldre eller saknas, och en röd ring när den senaste körningen misslyckades. Programmet läser bara loggarna från säkerhetskopieringen; själva säkerhetskopieringen görs av det kostnadsfria Claude Backup Kit, som varje dag kopierar dina skills i Claude Code, CLAUDE.md, projektminne, inställningar för Claude Desktop och agentloggar – aldrig inloggningstoken. Kitet är en kostnadsfri utgångspunkt som vem som helst kan ändra, så vi ansvarar inte för säkerhetskopior: det är varje användares eget ansvar att se till att de är fullständiga och går att återställa."}},{"@type":"Question","name":"Hur kan jag betygsätta Claude Usage Monitor eller skicka feedback?","acceptedAnswer":{"@type":"Answer","text":"Högerklicka på panelen och välj ”Meddelande till utvecklaren…”, eller klicka på meddelandeikonen i panelens rubrikrad. Du kan ge en till fem stjärnor, skriva ett meddelande och – bara om du kryssar i rutan – tillåta att ditt betyg och ditt namn visas på den här webbplatsen. Varje meddelande läses av utvecklaren, Gábor Vidovics, och ingenting publiceras utan ditt samtycke. Utan appen kan du använda formuläret längst ned på den här sidan."}},{"@type":"Question","name":"Vilka språk finns Claude Usage Monitor på?","acceptedAnswer":{"@type":"Answer","text":"På 34 språk: alla EU:s officiella språk plus japanska, koreanska, förenklad och traditionell kinesiska, indonesiska och vietnamesiska – med separata versioner för europeisk och brasiliansk portugisiska och för spanska från Spanien och Latinamerika. Appen väljer själv ditt systemspråk, och den här webbplatsen finns också på alla dessa språk."}},{"@type":"Question","name":"Fungerar den med Claude Pro, Max, Team och Enterprise?","acceptedAnswer":{"@type":"Answer","text":"Ja. Den visar de gränser som ditt eget Claude-abonnemang har – Pro, Max 5×, Max 20×, Team eller Enterprise – samma som Claude visar under Settings → Usage, och abonnemangsmärket i panelens rubrikrad visar vilket abonnemang du har."}}]},{"@type":"HowTo","@id":"https://claudeusagemonitor.com/sv/#install","name":"Så installerar du (3 steg) – Windows","inLanguage":"sv","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"text":"Packa upp hela zip-filen (högerklicka → Extrahera alla…)."},{"@type":"HowToStep","position":2,"text":"Dubbelklicka på INSTALL.bat ."},{"@type":"HowToStep","position":3,"text":"Svara på två frågor – Enter väljer det rekommenderade svaret. Klart."}]},{"@type":"DefinedTermSet","@id":"https://claudeusagemonitor.com/sv/#glossary","name":"Viktiga begrepp, exakt definierade","inLanguage":"sv","hasDefinedTerm":[{"@type":"DefinedTerm","name":"5-timmarssession (5-timmarsfönster)","description":"Claudes kortsiktiga användningsgräns. Din sessionsbaserade gräns nollställs var femte timme. Anthropic kallar den ”current session” (aktuell session); många användare kallar den 5-timmarsfönstret eller 5-timmarsgränsen.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Veckogräns","description":"En andra gräns i betalda Claude-abonnemang som gäller för alla modeller och nollställs vid en fast tidpunkt varje vecka, kopplad till ditt konto. Veckogränserna har gällt sedan den 28 augusti 2025.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Veckogräns per modell","description":"En separat veckogräns för en viss modell, som visas på Claudes användningssida bredvid gränsen för alla andra modeller. Widgeten visar den som en tredje mätare för den modell du väljer.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Nollställning (reset)","description":"Ögonblicket då en gräns går tillbaka till 0 %. Widgeten räknar ned till det. Med claude.ai-inloggning kommer den exakta tiden från Anthropics server; med den lokala loggen är det en uppskattning.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Takt","description":"Hur långt före eller efter du ligger jämfört med en jämnt fördelad vecka. ”+12 % vs takt” betyder att du har förbrukat 12 procentenheter mer av din veckogräns än den andel av veckan som har gått.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Förbrukningstakt","description":"Hur snabbt en gräns fylls just nu – procent per timme för sessionen, procent per dag för veckan – och när den skulle nå 100 % i den takten.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"},{"@type":"DefinedTerm","name":"Användningskrediter (extra usage)","description":"Valfri extra användning som du betalar efter förbrukning när du har nått gränserna i ditt abonnemang, med ett månatligt utgiftstak. Widgeten visar om funktionen är aktiverad, var taket ligger och hur mycket du har förbrukat.","inDefinedTermSet":"https://claudeusagemonitor.com/sv/#glossary"}]}]}</script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://claudeusagemonitor.com/sv/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Claude Usage Monitor releases" href="https://claudeusagemonitor.com/releases.xml">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Hoppa till innehållet</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Funktioner</a>
+      <a href="#backups" data-i18n="nav.backups">Säkerhetskopior</a>
+      <a href="#themes" data-i18n="nav.themes">Teman</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Nyheter</a>
+      <a href="#faq" data-i18n="nav.faq">Vanliga frågor</a>
+      <a href="#feedback" data-i18n="nav.feedback">Feedback</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">SV</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="bg" lang="bg" href="../bg/" data-lang="bg">Български <span>bg</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="da" lang="da" href="../da/" data-lang="da">Dansk <span>da</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="et" lang="et" href="../et/" data-lang="et">Eesti <span>et</span></a></li><li><a role="option" hreflang="el" lang="el" href="../el/" data-lang="el">Ελληνικά <span>el</span></a></li><li><a role="option" hreflang="es-ES" lang="es-ES" href="../es/" data-lang="es">Español (España) <span>es</span></a></li><li><a role="option" hreflang="es-419" lang="es-419" href="../es-419/" data-lang="es-419">Español (Latinoamérica) <span>es-419</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="ga" lang="ga" href="../ga/" data-lang="ga">Gaeilge <span>ga</span></a></li><li><a role="option" hreflang="hr" lang="hr" href="../hr/" data-lang="hr">Hrvatski <span>hr</span></a></li><li><a role="option" hreflang="id" lang="id" href="../id/" data-lang="id">Bahasa Indonesia <span>id</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="lv" lang="lv" href="../lv/" data-lang="lv">Latviešu <span>lv</span></a></li><li><a role="option" hreflang="lt" lang="lt" href="../lt/" data-lang="lt">Lietuvių <span>lt</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="mt" lang="mt" href="../mt/" data-lang="mt">Malti <span>mt</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="pt-BR" lang="pt-BR" href="../pt/" data-lang="pt">Português (Brasil) <span>pt</span></a></li><li><a role="option" hreflang="pt-PT" lang="pt-PT" href="../pt-pt/" data-lang="pt-pt">Português (Portugal) <span>pt-pt</span></a></li><li><a role="option" hreflang="ro" lang="ro" href="../ro/" data-lang="ro">Română <span>ro</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="sk" lang="sk" href="../sk/" data-lang="sk">Slovenčina <span>sk</span></a></li><li><a role="option" hreflang="sl" lang="sl" href="../sl/" data-lang="sl">Slovenščina <span>sl</span></a></li><li><a role="option" hreflang="fi" lang="fi" href="../fi/" data-lang="fi">Suomi <span>fi</span></a></li><li><a role="option" hreflang="sv" lang="sv" href="../sv/" aria-current="page" data-lang="sv">Svenska <span>sv</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li><li><a role="option" hreflang="vi" lang="vi" href="../vi/" data-lang="vi">Tiếng Việt <span>vi</span></a></li><li><a role="option" hreflang="ja" lang="ja" href="../ja/" data-lang="ja">日本語 <span>ja</span></a></li><li><a role="option" hreflang="ko" lang="ko" href="../ko/" data-lang="ko">한국어 <span>ko</span></a></li><li><a role="option" hreflang="zh-Hans" lang="zh-Hans" href="../zh-cn/" data-lang="zh-cn">简体中文 <span>zh-cn</span></a></li><li><a role="option" hreflang="zh-Hant" lang="zh-Hant" href="../zh-tw/" data-lang="zh-tw">繁體中文 <span>zh-tw</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Ladda ned gratis</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100 % GRATIS</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Version</span> <span data-win="version">2.7.1</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – gratis användningswidget för Windows &amp; macOS</span> <span data-i18n="hero.h1">Slå aldrig mer i Claude-taket <em>utan förvarning.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">En liten widget som alltid ligger överst och visar din Claude-användning live – 5-timmarssessionen, veckogränsen och din takt. Även det som mobilen gör av med. För Windows och macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Ditt system</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Ditt system</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Gratis. För alltid.</b> Ingen demo. Ingen provperiod. Inget är låst.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">nedladdningar från den här sidan hittills</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">Det är ett datorprogram – skicka länken till din dator</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Claude Usage Monitor-widget som visar 5-timmarssessionen på 47 %, en veckogräns per modell på 61 % och veckogränsen på 23 %">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Riktiga skärmbilder från appen, med demosiffror.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100 % GRATIS</span><i>✦</i><span data-i18n="mq.2">INGEN DEMO</span><i>✦</i><span data-i18n="mq.3">INGET LÅST</span><i>✦</i><span data-i18n="mq.4">INGEN REKLAM</span><i>✦</i><span data-i18n="mq.5">INGEN REGISTRERING</span><i>✦</i><span data-i18n="mq.6">INGEN SPÅRNING</span><i>✦</i><span data-i18n="mq.7">ÖPPEN KÄLLKOD</span><i>✦</i><span data-i18n="mq.8">34 SPRÅK</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Alltid gratis</b><span data-i18n="trust.1d">Fullständig version. Det finns ingen betalversion.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Öppen källkod</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">MIT-licens – läs varenda rad på GitHub</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Privat</b><span data-i18n="trust.3d">Ingen telemetri, ingen reklam, inga cookies.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Uppdaterar sig själv</b><span data-i18n="trust.4d">Verifieras med SHA-256, ett klick.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Därför är den mer än en loggläsare</p>
+  <h2 data-i18n="more.h2">Mobilen äter också av din gräns. <em>Nu ser du det – på skrivbordet.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Många användningsmätare läser loggfiler på din dator och vet därför bara vad <b>just den datorn</b> har använt. Claude Usage Monitor kan i stället fråga Anthropics server – och visar den verkliga siffran för hela kontot: allt du använder i mobilappen, i webbläsaren, på en annan dator och i Claude Code räknas, och du ser alltihop på ett ställe, på skrivbordet.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Claude-appen i mobilen</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai i webbläsaren</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Din andra dator</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code &amp; Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="En Claude Usage Monitor-widget som visar den samlade användningen från alla enheter">
+      <figcaption data-i18n="more.sum">En verklig siffra för hela kontot – alltid inom synhåll.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Verktyg som bara läser lokala loggar</h3>
+      <ul data-i18n="more.a_li"><li class="no">Det du använder i mobilen – osynligt</li><li class="no">Det du använder i webbläsaren – osynligt</li><li class="no">Dina andra datorer – osynliga</li><li class="yes">Claude Code på just den här datorn</li><li class="no">Tiderna för nollställning är gissningar</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor med claude.ai som källa</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Mobil, webbläsare, alla datorer – allt räknas</li><li class="yes">Claude Code och Claude Desktop ingår</li><li class="yes">Samma siffror som Claude själv visar under Settings → Usage</li><li class="yes">Exakta tider för nollställning från Anthropics server</li><li class="yes">Fungerar även utan inloggning, med den lokala loggen</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Så gör du: välj datakällan ”claude.ai (alla enheter)” och logga in en gång i din egen webbläsare – samma inloggning som Claude Code använder; appen ser aldrig ditt lösenord. Utan inloggning läser widgeten Claude Desktops lokala logg, som bara täcker den här datorn.</p>
+</section>
+
+<!-- ============================ +1 EXTRA: BACKUPS ============================ -->
+<section class="sec wrap more bk" id="backups">
+  <p class="eyebrow"><span class="plus1">+1</span> <span data-i18n="bk.eyebrow">Extra – och också gratis</span></p>
+  <h2 data-i18n="bk.h2">Den visar till och med dina säkerhetskopior. <em>Vad är kunskap värd om den kan försvinna?</em></h2>
+  <p class="more__lead" data-i18n="bk.p">Alla användningsmätare stannar vid siffrorna. Claude Usage Monitor går ett steg längre: den visar också om <b>dina Claude-relaterade säkerhetskopior</b> är färska – dina skills, <code>CLAUDE.md</code>-regler, projektminne, MCP-inställningar, agenternas konversationsloggar och Obsidian-anteckningar. De ligger oftast på en enda disk. En trasig disk, en stulen bärbar dator, en felaktig radering – och månader av arbete är borta. Tre små lampor på panelen talar om för dig, varje minut dygnet runt, att det inte kan hända dig.</p>
+
+  <div class="bk__top">
+    <figure class="bk__panel reveal">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor-panel med tre gröna lampor för säkerhetskopior: OneDrive, Nextcloud och Obsidian, alla säkerhetskopierade för en minut sedan"></a>
+    </figure>
+    <div class="bk__legend reveal">
+      <h3 data-i18n="bk.lamps_h">Tre lampor. En blick. Klart besked.</h3>
+      <ul class="lamps" data-i18n="bk.lamps"><li><i class="lamp lamp--g"></i><span><b>Grön</b> – den senaste lyckade säkerhetskopian är högst 24 timmar gammal.</span></li><li><i class="lamp lamp--y"></i><span><b>Gul</b> – den är 24 till 48 timmar gammal. Dags att ta en titt.</span></li><li><i class="lamp lamp--r"></i><span><b>Röd</b> – äldre än 48 timmar, eller så finns det ingen säkerhetskopia alls.</span></li><li><i class="lamp lamp--ring"></i><span><b>Röd ring</b> – den senaste körningen misslyckades eller slutfördes inte, även om en äldre säkerhetskopia fortfarande håller lampan grön.</span></li></ul>
+      <p class="fine" data-i18n="bk.lamps_note">Lamporna är <b>OneDrive</b> (första kopian), <b>Nextcloud</b> (andra, oberoende molnet – alla moln som rclone stöder fungerar) och <b>Obsidian</b> (daterad ögonblicksbild av ditt valv). Bara en körning som verkligen slutfördes räknas: en misslyckad eller avbruten körning eller en testkörning gör aldrig en lampa grön. Antalet timmar går att ändra. Klicka på en lampa för att se detaljerna.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="bk.a_t">Andra användningsmätare</h3>
+      <ul data-i18n="bk.a_li"><li class="no">Visar siffrorna – och ingenting om dina data</li><li class="no">Kan inte säga om dina skills och anteckningar är i säkerhet</li><li class="no">En trasig säkerhetskopiering upptäcks när du behöver den – för sent</li><li class="no">Ingen hjälp med att ställa in säkerhetskopiering</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="bk.b_t">Claude Usage Monitor + gratis Backup Kit</h3>
+      <ul data-i18n="bk.b_li"><li class="yes">Lampor för OneDrive, ett andra moln och ditt Obsidian-valv</li><li class="yes">En misslyckad eller ofullständig körning flaggas i samma ögonblick som den sker</li><li class="yes">Vad som säkerhetskopieras, vart, hur många filer, hur stort</li><li class="yes">De schemalagda aktiviteterna och loggen – ett klick bort</li><li class="yes">Ett gratis kit som ställer in säkerhetskopieringen på 10 minuter</li></ul>
+    </article>
+  </div>
+
+  <div class="bk__shows">
+    <figure class="bk__shot reveal">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Detaljfönstret för säkerhetskopior i Claude Usage Monitor: status Aktuell, den säkerhetskopierade ögonblicksbilden av Obsidian-valvet, Claude Code, Claude Desktop, en extra mapp och agentloggarna med antal filer och storlekar, inga fel och den schemalagda aktiviteten"></a>
+    </figure>
+    <div>
+      <h3 data-i18n="bk.shows_h">Klicka på en lampa – det här ser du</h3>
+      <ul class="ticks" data-i18n="bk.shows"><li><b>Status</b> – Aktuell, Börjar bli gammal, Inaktuell eller Ingen säkerhetskopia hittades, med tidpunkten för den senaste lyckade säkerhetskopian och för den senaste körningen.</li><li><b>Vad som säkerhetskopieras</b> – varje del med källmapp, mål, antal filer och storlek: ögonblicksbilden av Obsidian-valvet, Claude Code, Claude Desktop, dina extra mappar och agentloggarna.</li><li><b>Innehåll</b> – den senaste ögonblicksbilden av valvet, hur många ögonblicksbilder som sparas, de anteckningar du redigerade senast och hur många anteckningar som har ändrats sedan den senaste ögonblicksbilden.</li><li><b>Uppladdat</b> – på fliken Nextcloud: nya och ersatta filer i den här körningen, grupperade per mapp, och hur mycket utrymme som finns kvar i ditt moln.</li><li><b>Fel och varningar</b> – direkt från loggen, i klartext.</li><li><b>Schemalagda aktiviteter</b> – status, senaste resultat och nästa körning för de Windows-aktiviteter som gör säkerhetskopieringen.</li><li><b>Logg</b> – de sista raderna, och loggfilen ett klick bort.</li></ul>
+      <p class="fine" data-i18n="bk.shows_note">Programmet läser bara – det ändrar, flyttar eller laddar aldrig upp en fil. Det kontrollerar igen var 5:e minut, eller direkt med ”Kontrollera nu”. En ögonblicksbild som bara finns online i OneDrive laddas inte ned bara för att listas.</p>
+    </div>
+  </div>
+
+  <div class="bk__kit reveal">
+    <div class="bk__kittxt">
+      <h3><span class="freebadge" data-i18n="dls.free">GRATIS</span> <span data-i18n="bk.kit_h">Den ärliga delen: programmet övervakar, kitet säkerhetskopierar.</span></h3>
+      <p data-i18n="bk.kit_p">Claude Usage Monitor kopierar inte dina filer – det visar om kopieringen fungerade. Själva kopieringen sköts av <b>Claude Backup Kit</b>: en handfull korta PowerShell-skript som du kan läsa rad för rad. Kitet säkerhetskopierar ditt Claude-arbete varje dag till OneDrive och till ett andra, oberoende moln och skriver loggen som lamporna läser. Inget konto, inget abonnemang, ingenting skickas till oss.</p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT-licens</span> · ZIP <span data-kit="size">24 KB</span></p>
+    </div>
+    <div class="bk__kitbtns">
+      <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Ladda ned Backup Kit – gratis</span></a>
+      <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Läs varje skript på GitHub</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Genom att ladda ned godkänner du <a href="#terms" data-legal="terms">användarvillkoren</a>: appen och Backup Kit är gratis och tillhandahålls ”i befintligt skick”, utan garanti och på egen risk.</p>
+    </div>
+  </div>
+
+  <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
+    <h3 data-i18n="bk.disc_h">Ansvarsfriskrivning – läs detta</h3>
+    <p data-i18n="bk.disc"><b>Vi ansvarar inte för säkerhetskopior, förlorade data eller skador av något slag.</b> Claude Usage Monitor läser och visar bara loggarna från din säkerhetskopiering – programmet skapar, kontrollerar eller garanterar inga säkerhetskopior. Claude Backup Kit är en kostnadsfri utgångspunkt som erbjuds som hjälp, inte en färdig produkt: vem som helst kan – och får – anpassa skripten till sin egen dator, och därför kan kvaliteten och fullständigheten hos en säkerhetskopia inte garanteras. <b>Var och en ansvarar själv för att säkerhetskopiorna är fullständiga och går att återställa.</b> Kontrollera lamporna, läs loggen och testa en återställning då och då. Kitet tillhandahålls ”i befintligt skick”, utan några garantier, under MIT-licensen.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Användarvillkor</a></p>
+  </aside>
+
+  <div class="bkhelp" id="backup-help">
+    <h3 data-i18n="bk.help_h">Hjälp: ställ in en säkerhetskopiering som programmet kan visa</h3>
+    <p class="fine" data-i18n="bk.help_p">Öppna bara det du behöver. Varje steg finns här – vad du ska använda, vad du ska ställa in, var du ska klicka. Kitet är en utgångspunkt som du kan ändra – läs <a href="#backup-disclaimer">ansvarsfriskrivningen</a> ovan.</p>
+
+    <details open>
+      <summary data-i18n="bk.q_steps">Klart på 10 minuter – steg för steg</summary>
+      <ol class="steps" data-i18n="bk.steps"><li><b>Det här behöver du.</b> Windows 10 eller 11, OneDrive med inloggning och Claude Usage Monitor installerat. För den andra kopian: ett Nextcloud-konto – eller något annat moln som rclone stöder (Google Drive, Dropbox, S3, pCloud, SFTP…). Inget andra moln? Då är steg 2 valfritt.</li><li><b>Skapa ett applösenord</b> (bara för det andra molnet). I Nextcloud: din avatar → <em>Personliga inställningar</em> → <em>Säkerhet</em> → <em>Enheter &amp; sessioner</em> → appnamn <code>rclone-backup</code> → <em>Skapa nytt applösenord</em>. Kopiera det – det visas bara en gång. Det är <b>inte</b> lösenordet till ditt konto, och du kan återkalla det när som helst.</li><li><b>Ladda ned och packa upp</b> Backup Kit i en permanent mapp, till exempel <code>C:\Tools\ClaudeBackup</code>.</li><li><b>Redigera <code>config.psd1</code></b> i Anteckningar: <code>VaultPath</code> = ditt Obsidian-valv (tomt = inget Obsidian), <code>ExtraFolders</code> = allt annat som ska säkerhetskopieras, <code>NextcloudRemote</code> och <code>NextcloudBasePath</code> = det andra molnet (tomt = hoppa över), <code>DailyTime</code> = när det ska köras. Allt annat kan vara som det är.</li><li><b>Kör installationsprogrammet som administratör:</b> Win+X → <em>Terminal (administratör)</em>, sedan <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>, <code>cd C:\Tools\ClaudeBackup</code>, <code>Unblock-File *.ps1</code>, <code>.\Install-BackupKit.ps1</code>. Det installerar rclone vid behov, frågar efter molnets adress, användarnamn och applösenord (skrivs dolt), skapar de två schemalagda aktiviteterna, talar om för programmet var det ska titta och gör en första körning.</li><li><b>Första riktiga uppladdningen:</b><code>.\Backup-Step2-Cloud.ps1</code> – installationsprogrammet gjorde bara en testkörning av steg 2.</li><li><b>Kontrollera:</b><code>.\Test-BackupKit.ps1</code> – varje rad ska visa <code>[OK]</code>. I Claude Usage Monitor: högerklicka på panelen → <em>Statusfält för säkerhetskopior</em>. De tre lamporna blir gröna inom 5 minuter, eller direkt via <em>Säkerhetskopior…</em> → <em>Kontrollera nu</em>.</li></ol>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_what">Vad som säkerhetskopieras – och vad som aldrig gör det</summary>
+      <ul class="ticks" data-i18n="bk.what"><li><b>Claude Code</b> (<code>%USERPROFILE%\.claude</code>) – skills, inställningar, <code>CLAUDE.md</code>, projektminne, plugin-program.</li><li><b>Claude Desktop</b> (<code>%APPDATA%\Claude</code>) – inställningar och MCP-servrar.</li><li><b>Agenternas konversationsloggar</b> – en ZIP-fil per session.</li><li><b>Obsidian-valvet</b> – en daterad ögonblicksbild som ZIP vid varje körning, som sparas i 30 dagar.</li><li><b>Dina extra mappar</b> – det du anger i <code>config.psd1</code>.</li><li><b>Aldrig:</b> inloggningstoken för Claude Code (<code>.credentials.json</code>), Claude Desktops cookies och cacheminnen och de stora VM-avbildningarna som kan laddas ned igen.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_settings">Inställningar → Säkerhetskopior i appen, fält för fält</summary>
+      <div class="cmpwrap"><table class="keys" data-i18n="bk.settings"><tr><th>Visa statusfältet för säkerhetskopior på panelen</th><td>Slår på eller av de tre lamporna. Finns också i högerklicksmenyn: <em>Statusfält för säkerhetskopior</em>.</td></tr><tr><th>Lampor</th><td>Vilka lampor som visas: OneDrive, Nextcloud, Obsidian. Inget Obsidian-valv? Avmarkera det.</td></tr><tr><th>Etikett bredvid lampan</th><td>Namn och ålder · Bara namn · Bara lampor.</td></tr><tr><th>Grön upp till / Gul upp till</th><td>Åldersgränserna i timmar – 24 och 48 som standard. Säkerhetskopierar du en gång i veckan? Ange 170 och 340.</td></tr><tr><th>Mapp för säkerhetskopior</th><td>Mappen som steg 1 skriver till, t.ex. <code>OneDrive\ClaudeBackup</code>. Låt den stå på <em>automatiskt</em> – installationsprogrammet har redan talat om det för programmet.</td></tr><tr><th>Skriptets konfigurationsfil</th><td>Kitets <code>config.psd1</code>. Programmet läser sökvägen till valvet och molnmålet därifrån – aldrig ett lösenord.</td></tr><tr><th>Filter för schemalagda aktiviteter</th><td><code>ClaudeBackup*</code> – vilka Windows-aktiviteter detaljfönstret listar.</td></tr><tr><th>Detaljfönstret visar</th><td>Markera det du vill se: vad som säkerhetskopieras, innehåll, fel och varningar, schemalagda aktiviteter, logg.</td></tr></table></div>
+      <p class="fine" data-i18n="bk.settings_note">Installationsprogrammet skriver <code>%APPDATA%\ClaudeUsageMonitor\backup_profile.json</code> – bara sökvägar till mappar, inget lösenord, ingen token. Det du ställer in på fliken Säkerhetskopior går före den här filen.</p>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_sec">Säkerhet – så skyddar kitet dina data</summary>
+      <ul class="ticks" data-i18n="bk.sec"><li><b>Inget lösenord i någon av kitets filer.</b> Applösenordet skrivs dolt och lagras bara maskerat i rclones egen konfiguration. Återkalla det i Nextcloud när du vill.</li><li><b>Inloggningstoken kopieras aldrig.</b> Det gör inte heller Claude Desktops cookies.</li><li><b>Ingen spegling.</b> En fil som du raderar på datorn finns kvar i båda säkerhetskopiorna – en spegling skulle troget kopiera även ett misstag.</li><li><b>Daterade ögonblicksbilder av valvet</b>, så att en senare dålig kopia aldrig kan skriva över ett äldre, bra tillstånd.</li><li><b>Två oberoende leverantörer.</b> Om den ena krånglar eller stänger ute dig har den andra fortfarande allt.</li><li><b>Bra att veta:</b> Claude Desktops konfiguration och <code>.claude\settings.json</code> kan innehålla API-nycklar för MCP-servrar. De säkerhetskopieras – du behöver dem för att kunna återställa – till din egen OneDrive och ditt eget moln. Skydda båda kontona med tvåstegsverifiering.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_restore">Återställning – när du behöver den</summary>
+      <table class="keys" data-i18n="bk.restore"><tr><th>En äldre version av en anteckning</th><td>onedrive.com → högerklicka på filen → <em>Versionshistorik</em>.</td></tr><tr><th>En raderad fil</th><td>OneDrives <em>Papperskorg</em> (30 dagar) eller Nextclouds <em>Borttagna filer</em>.</td></tr><tr><th>Hela valvet från en viss dag</th><td>Packa upp <code>vault-snapshots\Vault_…zip</code> i en tom mapp och öppna den i Obsidian: <em>Open folder as vault</em>.</td></tr><tr><th>Skills och inställningar för Claude Code</th><td>Kopiera <code>files\claude-code</code> tillbaka till <code>%USERPROFILE%\.claude</code> och logga sedan in i Claude Code igen.</td></tr><tr><th>Inställningar för Claude Desktop</th><td>Stäng Claude Desktop och kopiera <code>files\claude-desktop</code> tillbaka till <code>%APPDATA%\Claude</code>.</td></tr></table>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_own">Har du redan en egen säkerhetskopiering? Det här behöver programmet</summary>
+      <ul class="ticks" data-i18n="bk.own"><li><b>En logg per körning</b> i undermappen <code>logs</code> i din mapp för säkerhetskopior, med namnen <code>onedrive_YYYY-MM-DD_HHMMSS.log</code> och <code>nextcloud_…log</code>, där varje rad börjar med datum och klockslag.</li><li><b>Ett tydligt slut:</b> en lyckad körning avslutas med en rad som innehåller <code>KESZ</code>, en misslyckad med <code>HIBAVAL ZARULT</code>. Kitets <code>Common.ps1</code> dokumenterar varje ord som programmet förstår.</li><li><b>Var programmet ska titta:</b> ange <em>Mapp för säkerhetskopior</em> på fliken Säkerhetskopior. Andra mapp- eller filnamn kan anges i <code>backup_profile.json</code> – kitets README visar hur.</li><li><b>Mac:</b> lamporna läser samma loggar även i macOS; själva kitet och listan över schemalagda aktiviteter är för Windows.</li></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Vad är Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor är en gratis skrivbordswidget med öppen källkod för Windows 10/11 och macOS som visar användningsgränserna i ditt Claude-abonnemang i realtid</b> – 5-timmarssessionen, veckogränsen och veckogränsen per modell, var och en med tiden som är kvar till nollställningen. Den ligger ovanpå dina andra fönster, så att du kan kolla din Claude-användning utan att öppna Settings → Usage och utan terminal.</p>
+  <p class="about__def" data-i18n="about.p2">En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnemang – claude.ai, Claude Desktop och Claude Code, på alla dina enheter. Det är inte terminalverktyget ”Claude Code Usage Monitor”: det här är en grafisk panel med en ikon i meddelandefältet, och den kräver ingen kommandorad.</p>
+  <dl class="facts" data-i18n="facts.dl"><dt>Pris</dt><dd>Gratis – den fullständiga versionen, ingen betalversion, ingen provperiod</dd><dt>Plattformar</dt><dd>Windows 10 / 11 (64-bitars) och macOS 12 eller senare</dd><dt>Språk</dt><dd>34 gränssnittsspråk</dd><dt>Det här visas</dt><dd>5-timmarssession, veckogräns, veckogräns per modell, nedräkning till nollställning, takt och förbrukningstakt</dd><dt>Datakälla</dt><dd>Claude Desktops lokala logg eller din claude.ai-inloggning för alla enheter</dd><dt>Integritet</dt><dd>Ingen telemetri, ingen reklam, inget konto hos oss</dd><dt>Licens</dt><dd>MIT, öppen källkod på GitHub</dd><dt>Utvecklare</dt><dd>Gábor Vidovics, Ungern – oberoende, inte knuten till Anthropic</dd></dl>
+  <p class="fine about__meta"><span data-i18n="about.updated">Senast uppdaterad</span>: <time data-win="date">2026-10-07</time> · <span data-i18n="dls.version">Version</span> <span data-win="version">2.7.1</span> · <span data-i18n="about.by">av</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Viktiga begrepp, exakt definierade</summary>
+    <dl>
+      <dt data-i18n="gl.1t">5-timmarssession (5-timmarsfönster)</dt>
+      <dd data-i18n="gl.1d">Claudes kortsiktiga användningsgräns. Din sessionsbaserade gräns nollställs var femte timme. Anthropic kallar den ”current session” (aktuell session); många användare kallar den 5-timmarsfönstret eller 5-timmarsgränsen.</dd>
+      <dt data-i18n="gl.2t">Veckogräns</dt>
+      <dd data-i18n="gl.2d">En andra gräns i betalda Claude-abonnemang som gäller för alla modeller och nollställs vid en fast tidpunkt varje vecka, kopplad till ditt konto. Veckogränserna har gällt sedan den 28 augusti 2025.</dd>
+      <dt data-i18n="gl.3t">Veckogräns per modell</dt>
+      <dd data-i18n="gl.3d">En separat veckogräns för en viss modell, som visas på Claudes användningssida bredvid gränsen för alla andra modeller. Widgeten visar den som en tredje mätare för den modell du väljer.</dd>
+      <dt data-i18n="gl.4t">Nollställning (reset)</dt>
+      <dd data-i18n="gl.4d">Ögonblicket då en gräns går tillbaka till 0 %. Widgeten räknar ned till det. Med claude.ai-inloggning kommer den exakta tiden från Anthropics server; med den lokala loggen är det en uppskattning.</dd>
+      <dt data-i18n="gl.5t">Takt</dt>
+      <dd data-i18n="gl.5d">Hur långt före eller efter du ligger jämfört med en jämnt fördelad vecka. ”+12 % vs takt” betyder att du har förbrukat 12 procentenheter mer av din veckogräns än den andel av veckan som har gått.</dd>
+      <dt data-i18n="gl.6t">Förbrukningstakt</dt>
+      <dd data-i18n="gl.6d">Hur snabbt en gräns fylls just nu – procent per timme för sessionen, procent per dag för veckan – och när den skulle nå 100 % i den takten.</dd>
+      <dt data-i18n="gl.7t">Användningskrediter (extra usage)</dt>
+      <dd data-i18n="gl.7d">Valfri extra användning som du betalar efter förbrukning när du har nått gränserna i ditt abonnemang, med ett månatligt utgiftstak. Widgeten visar om funktionen är aktiverad, var taket ligger och hur mycket du har förbrukat.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Det här får du</p>
+  <h2 data-i18n="feat.h2">Alla dina användningsgränser i Claude. En blick.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Se det komma</h3>
+        <p data-i18n="feat.1d">Grönt, gult, rött. Panelen byter färg långt innan det tar slut – med nedräkning till nollställningen och en uppskattning av när du når 100 %.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Claude-användning på 78 % – widgeten blir gul"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Claude-användning på 94 % – widgeten blir röd"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Går det för fort?</h3>
+      <p data-i18n="feat.2d">Taktindikatorn visar om din veckogräns smälter snabbare än veckan går – och räknar ut var du kommer att hamna.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Alla dina enheter, en siffra</h3>
+      <p data-i18n="feat.3d">Logga in via din egen webbläsare – precis som Claude Code gör – och se användningen även från mobilen, webbläsaren och alla dina andra datorer.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Gränser per modell</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, användningskrediter – alla gränser som servern rapporterar, plus veckans fördelning mellan modellerna.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Varningar som spelar roll</h3>
+      <p data-i18n="feat.5d">En diskret avisering vid 70 % och 90 % (du väljer själv) och när gränsen nollställs. Inget annat, någonsin.</p>
+    </article>
+    <article class="cell cell--wide cell--hist reveal">
+      <div class="cell__histhead">
+        <div>
+          <h3 data-i18n="feat.7t">Hela veckan i ett diagram</h3>
+          <p data-i18n="feat.7d">Dubbelklicka på widgeten: båda gränserna på en tidslinje – 6 timmar, 24 timmar eller 7 dagar – med veckans topp, dagligt genomsnitt och en prognos för veckans slut som byter färg innan du går över.</p>
+        </div>
+        <div class="seg" id="hist-range" role="radiogroup" aria-label="Range">
+          <button type="button" role="radio" aria-checked="false" data-range="6h" data-i18n="hist.r6">6 timmar</button>
+          <button type="button" role="radio" aria-checked="false" data-range="24h" data-i18n="hist.r24">24 timmar</button>
+          <button type="button" role="radio" aria-checked="true" data-range="7d" data-i18n="hist.r7">7 dagar</button>
+        </div>
+      </div>
+      <img id="hist-img" class="cell__histimg" src="../img/history-7d-midnight.webp" width="1280" height="840" data-i18n-attr="alt:img.history" loading="lazy" decoding="async" alt="Historikfönstret i Claude Usage Monitor: 5-timmarssession och veckogräns över tid, med veckans topp, daglig förbrukning och prognos för veckans slut">
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Den spionerar inte. Punkt.</h3>
+      <p data-i18n="feat.6d">Ingen telemetri, ingen analys, inget konto hos oss. Den pratar bara med Anthropic, och bara om dina egna siffror. Din inloggningstoken förblir krypterad på datorn – med Windows DPAPI eller i macOS-nyckelringen.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Ja, den är verkligen gratis.</h2>
+      <p data-i18n="band1.p">Ingen provperiod som tickar. Ingen merförsäljning av ”Pro”. Ingen hake. Ladda ned den, så är den din.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Bara om du är nyfiken</p>
+  <h2 data-i18n="tabs.h2">Detaljerna – när du vill ha dem.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Det här visas</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Varifrån data kommer</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Integritet &amp; säkerhet</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Styrning</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Inställningar</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Jämförelse</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5-timmarssession</b> – aktuell %, nedräkning till nollställning, förbrukningstakt (%/timme) och när den blir full.</li><li><b>Veckogräns</b> – aktuell %, tid kvar till veckans nollställning, daglig förbrukning och din takt jämfört med en jämn vecka.</li><li><b>Veckogräns per modell</b> – en tredje mätare för den modell du följer (Fable som standard).</li><li><b>Abonnemangsmärke</b> – PRO, MAX 5×, MAX 20×, TEAM eller ENTERPRISE.</li><li><b>Historikfönster</b> – diagram för 6 h / 24 h / 7 dagar, veckans topp, dagligt genomsnitt och en prognos för veckans slut.</li><li><b>Ikon i meddelandefältet / menyraden</b> – den procentsats du väljer, som en ring; detaljer när du håller muspekaren över.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Lokal logg <span class="chip">standard · ingen inloggning</span></h4><p>Läser användningsloggen som Claude Desktop redan skriver på din dator. Ingenting skickas någonstans. Mäter bara den här datorn och uppdateras ungefär var 5:e minut.</p></div><div><h4>2 · claude.ai <span class="chip">alla enheter</span></h4><p>Samma inloggning via webbläsaren som Claude Code använder – ingen inbyggd webbläsare, inget lösenord som skrivs in i appen. Exakta tider för nollställning från servern, uppdateras ungefär varannan minut.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Ingen telemetri.</b> Appen har ingen analys och ringer aldrig hem – den kollar bara den här webbplatsen efter en nyare version.</li><li><b>Din token förblir din.</b> Krypterad med Windows DPAPI eller lagrad i macOS-nyckelringen. Aldrig i en vanlig fil.</li><li><b>Konversationer läses aldrig.</b> Från de lokala loggarna används bara modellnamnet, antalet tokens och tidsstämplar.</li><li><b>Verifierade uppdateringar.</b> Bara HTTPS, och varje nedladdning kontrolleras mot sin SHA-256 innan den installeras; om något går fel kommer den gamla versionen tillbaka.</li><li><b>Öppen källkod.</b> Lita inte blint – kontrollera själv: hela källkoden finns på GitHub under MIT-licensen.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Dra</th><td>flytta panelen (fäster vid skärmkanterna)</td></tr><tr><th>Högerklick</th><td>meny: layout, tema, storlek, språk, inställningar</td></tr><tr><th>Dubbelklick</th><td>fönstret med historik &amp; statistik</td></tr><tr><th>Ctrl + skrollhjul</th><td>ändra storlek</td></tr><tr><th>Klick på ikonen i meddelandefältet</th><td>dölj / visa panelen</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Utseende</b> – 6 teman, valfri accentfärg, 3 layouter, storlek, opacitet, alltid överst, lås position, släpp igenom klick.</li><li><b>Innehåll</b> – vilka mätare, deras ordning och storlek, trendkurva, förbrukningstakt, nedräkning.</li><li><b>Varningar</b> – tröskelvärden för varning och kritisk nivå (70 % / 90 % som standard), aviseringar om nollställning och inaktuella data.</li><li><b>System</b> – starta med datorn, automatiska uppdateringar, 34 språk.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claudes egen sida Settings → Usage</th><th>Terminalverktyg som läser Claude Codes loggar</th></tr><tr><th>Alltid synlig medan du arbetar</th><td>Ja – widget som alltid ligger överst och ikon i meddelandefältet</td><td>Nej – du måste öppna den</td><td>Bara i en öppen terminal</td></tr><tr><th>Windows och macOS</th><td>Ja, en app för båda</td><td>Ja (webbsida)</td><td>Varierar, kommandorad</td></tr><tr><th>Kräver terminal</th><td>Nej</td><td>Nej</td><td>Ja</td></tr><tr><th>Räknar claude.ai, Claude Desktop och Claude Code på alla enheter</th><td>Ja, med claude.ai-inloggning</td><td>Ja</td><td>Nej – bara Claude Code på den här datorn</td></tr><tr><th>Takt, förbrukningstakt och prognos för veckans slut</th><td>Ja</td><td>Nej</td><td>Vissa</td></tr><tr><th>Varningar vid dina egna tröskelvärden</th><td>Ja (70 % / 90 % som standard)</td><td>Nej</td><td>Sällan</td></tr><tr><th>Pris</th><td>Gratis, öppen källkod (MIT)</td><td>Ingår i ditt abonnemang</td><td>Oftast gratis</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Gör den till din</p>
+    <h2 data-i18n="th.h2">6 teman. 3 layouter. Testa dem direkt här.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor i valt tema och layout">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Tema</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Midnattsglas</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude varmt mörkt</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Grafit</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neon</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Ljust papper</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Post-it-gul</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Djupblått glas med ett svalt sken. Standardtemat – lugnt, lättläst och hemma på alla mörka skrivbord.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Layout</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Kort</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Ringar</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Smal list</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">Plus din egen accentfärg, storlek från 70 % till 200 % och opacitet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Pris</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Gratis. Allt. För alltid.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Fullständig version – det finns ingen annan</li><li>Ingen demo, ingen provperiod, ingen tidsgräns</li><li>Ingen ”Pro”-nivå, inga låsta funktioner</li><li>Ingen reklam, ingen registrering, ingen datainsamling</li><li>Gratis uppdateringar, helt automatiskt</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Nedladdning</p>
+    <h2 data-i18n="dls.h2">Alltid den senaste versionen. Alltid gratis.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">GRATIS</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Ladda ned för Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Version</span> <b data-win="version">2.7.1</b> · <span data-win="size">47 MB</span> · <span data-win="date">2026-10-07</span></p>
+        <details><summary data-i18n="dls.how">Så installerar du (3 steg)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Packa upp hela zip-filen</b> (högerklicka → Extrahera alla…).</li><li>Dubbelklicka på <code>INSTALL.bat</code>.</li><li>Svara på två frågor – Enter väljer det rekommenderade svaret. Klart.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Inga administratörsrättigheter behövs. Om Windows visar ”Windows skyddade datorn”: Mer info → Kör ändå. Appen har öppen källkod men är inte kodsignerad.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Verifiera nedladdningen (SHA-256)</summary><code class="sha" data-win="sha">1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">GRATIS</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Ladda ned för macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Version</span> <b data-mac="version">2.6.1</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-21</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">macOS-versionen är på väg – titta in igen snart.</p>
+        <details><summary data-i18n="dls.how">Så installerar du (3 steg)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Öppna zip-filen och dra <b>ClaudeUsageMonitor</b> till <b>Program</b>.</li><li>Första starten: <b>högerklicka → Öppna</b> (appen är inte notariserad av Apple).</li><li>Leta efter ikonen i menyraden. Klart.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Verifiera nedladdningen (SHA-256)</summary><code class="sha" data-mac="sha">86d75d796269812dbc7b1050ef1f207c1a367a45fd5965f1090daefc3c8f76c9</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">nedladdningar från den här sidan hittills</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Genom att ladda ned godkänner du <a href="#terms" data-legal="terms">användarvillkoren</a>: appen och Backup Kit är gratis och tillhandahålls ”i befintligt skick”, utan garanti och på egen risk.</p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Knapparna pekar alltid på den senaste versionen – och när appen väl är installerad håller den sig själv uppdaterad.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Utvecklas aktivt</p>
+  <h2><span data-i18n="new.h2">Nytt i</span> <span class="grad" data-win="version">2.7.1</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Versionsinformationen är skriven på engelska och ungerska.</p>
+  <ul class="notes" id="notes"><li>Fönstret ”Meddelande till utvecklaren” syns bättre: betyget visas nu med större, tydliga stjärnor, och den obligatoriska kryssrutan för samtycke ligger i en markerad ram – om du försöker skicka utan att kryssa i den blir ramen röd. Du kan också kryssa i den genom att klicka på texten bredvid.</li><li>Alla kryssrutor i programmet (Inställningar, meddelandefönstret) syns nu tydligt mot den mörka bakgrunden: en ljus ram och, när de är ikryssade, en orange ruta med en vit bock.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Tidigare versioner</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Få ett mejl när en ny version släpps</h3>
+      <p data-i18n="sub.p">Bara nyheter om nya versioner – några korta rader per version. Aldrig marknadsföring. Avsluta prenumerationen med ett klick.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Meddela mig</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">Jag samtycker till att min e-postadress används för att skicka aviseringar om nya versioner till mig, enligt beskrivningen i <a href="#privacy" data-legal="privacy">integritetspolicyn</a>. Jag kan när som helst återkalla mitt samtycke.</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Skyddas mot spam av reCAPTCHA – Googles <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">integritetspolicy</a> och <a href="https://policies.google.com/terms" target="_blank" rel="noopener">användarvillkor</a> gäller.</p>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Rekommenderas för</p>
+    <h2 data-i18n="who.h2">Känner du igen dig här kommer du att gilla den.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Claude Code-utvecklare</b><span data-i18n="who.1d">Långa agentkörningar bränner snabbt igenom 5-timmarssessionen. Se det innan den stoppar dig mitt i en uppgift.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pro- &amp; Max-prenumeranter</b><span data-i18n="who.2d">Få ut det mesta av det du betalar för – utan att slå i taket redan på torsdagen.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Du som har många enheter</b><span data-i18n="who.3d">Mobil, webbläsare, bärbar, stationär: en ärlig siffra för alla.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Alla som gillar ett städat skrivbord</b><span data-i18n="who.4d">En liten, snygg panel som håller sig ur vägen – eller krymper till en smal list.</span></div>
+    </div>
+
+    <div class="reviews" id="reviews" hidden>
+      <h3 class="reviews__h" data-i18n="rev.h">Det här säger användarna</h3>
+      <p class="reviews__sum" id="rating-sum" hidden><span class="quote__stars" aria-hidden="true">★★★★★</span> <b data-r="avg">0</b> / 5 · <span data-i18n="rev.count">betyg skickade från appen</span>: <b data-r="count">0</b></p>
+      <div id="testimonials" class="quotes"></div>
+      <p class="fine reviews__how" data-i18n="rev.how">Här visas bara meddelanden som avsändaren har godkänt för publicering och som utvecklaren har läst. Använder du appen? Högerklicka på panelen → <b>Meddelande till utvecklaren…</b> – betygsätt den och berätta vad du tycker.</p>
+    </div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">”Jag byggde den för mig själv, eftersom jag hela tiden slog i gränsen mitt i arbetet. Sedan finslipade jag den tills jag gärna tittade på den hela dagen. Den är gratis för att ett sådant verktyg borde vara det – använd den, njut av den och berätta vad du tycker.”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">skapare &amp; utvecklare av Claude Usage Monitor · Ungern</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Källkod på GitHub</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Skriv till mig</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Frågor om Claudes användningsgränser – korta svar.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Är den verkligen gratis? Var är haken?</summary><p data-i18n="faq.a1">Verkligen gratis, och det finns ingen hake. Det är ingen demo, ingen testversion och ingen nedbantad utgåva – det här är den fullständiga och enda versionen. Ingen reklam, ingen betalversion, ingen datainsamling. Källkoden är offentlig under MIT-licensen.</p></details>
+    <details><summary data-i18n="faq.q8">Hur kollar jag min Claude-användning utan att öppna inställningarna?</summary><p data-i18n="faq.a8">Installera Claude Usage Monitor: den visar din 5-timmarssession, veckogräns och modellgräns på skärmen hela tiden – som en liten widget som alltid ligger överst och som en procentsats i meddelandefältet eller menyraden. Claudes egna siffror finns under Settings → Usage; widgeten visar samma gränser helt utan klick.</p></details>
+    <details><summary data-i18n="faq.q9">När nollställs Claudes 5-timmarssession och veckogräns?</summary><p data-i18n="faq.a9">Den sessionsbaserade gränsen nollställs var femte timme. Veckogränsen nollställs vid en fast tidpunkt varje vecka som Anthropic tilldelar ditt konto, så den skiljer sig från person till person. Widgeten visar en live-nedräkning till båda nollställningarna – med claude.ai-inloggning använder den de exakta tiderna från Anthropics server.</p></details>
+    <details><summary data-i18n="faq.q10">Räknas användningen i Claude Code mot min claude.ai-gräns?</summary><p data-i18n="faq.a10">Ja. Enligt Anthropic räknas användningen på claude.ai, i Claude Desktop och i Claude Code mot samma användningsgräns. Därför visar widgetens claude.ai-läge en siffra för alla dina enheter och appar, inte bara för datorn den körs på.</p></details>
+    <details><summary data-i18n="faq.q11">Är det samma sak som ”Claude Code Usage Monitor”?</summary><p data-i18n="faq.a11">Nej. ”Claude Code Usage Monitor” är ett separat, terminalbaserat verktyg av en annan utvecklare. Claude Usage Monitor av Gábor Vidovics är en grafisk skrivbordswidget för Windows och macOS med ikon i meddelandefältet, teman och varningar, och den kräver ingen kommandorad.</p></details>
+    <details><summary data-i18n="faq.q13">Hur kan jag betygsätta Claude Usage Monitor eller skicka feedback?</summary><p data-i18n="faq.a13">Högerklicka på panelen och välj ”Meddelande till utvecklaren…”, eller klicka på meddelandeikonen i panelens rubrikrad. Du kan ge en till fem stjärnor, skriva ett meddelande och – bara om du kryssar i rutan – tillåta att ditt betyg och ditt namn visas på den här webbplatsen. Varje meddelande läses av utvecklaren, Gábor Vidovics, och ingenting publiceras utan ditt samtycke. Utan appen kan du använda formuläret längst ned på den här sidan.</p></details>
+    <details><summary data-i18n="faq.q14">Vilka språk finns Claude Usage Monitor på?</summary><p data-i18n="faq.a14">På 34 språk: alla EU:s officiella språk plus japanska, koreanska, förenklad och traditionell kinesiska, indonesiska och vietnamesiska – med separata versioner för europeisk och brasiliansk portugisiska och för spanska från Spanien och Latinamerika. Appen väljer själv ditt systemspråk, och den här webbplatsen finns också på alla dessa språk.</p></details>
+    <details><summary data-i18n="faq.q15">Fungerar den med Claude Pro, Max, Team och Enterprise?</summary><p data-i18n="faq.a15">Ja. Den visar de gränser som ditt eget Claude-abonnemang har – Pro, Max 5×, Max 20×, Team eller Enterprise – samma som Claude visar under Settings → Usage, och abonnemangsmärket i panelens rubrikrad visar vilket abonnemang du har.</p></details>
+    <details><summary data-i18n="faq.q12">Kan Claude Usage Monitor visa om mina Claude-filer är säkerhetskopierade?</summary><p data-i18n="faq.a12">Ja – och det är också gratis. När statusfältet för säkerhetskopior är aktiverat visar tre lampor på panelen om säkerhetskopieringen till OneDrive, till ett andra moln som Nextcloud och av ditt Obsidian-valv är aktuell: grönt upp till 24 timmar, gult upp till 48, rött när den är äldre eller saknas, och en röd ring när den senaste körningen misslyckades. Programmet läser bara loggarna från säkerhetskopieringen; själva säkerhetskopieringen görs av det kostnadsfria Claude Backup Kit, som varje dag kopierar dina skills i Claude Code, CLAUDE.md, projektminne, inställningar för Claude Desktop och agentloggar – aldrig inloggningstoken. Kitet är en kostnadsfri utgångspunkt som vem som helst kan ändra, så vi ansvarar inte för säkerhetskopior: det är varje användares eget ansvar att se till att de är fullständiga och går att återställa.</p></details>
+    <details><summary data-i18n="faq.q2">Är det här en officiell Anthropic-produkt?</summary><p data-i18n="faq.a2">Nej. Det är ett oberoende communityverktyg gjort av Gábor Vidovics. Det är inte knutet till Anthropic. ”Claude” är ett varumärke som tillhör Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Måste jag ge den mitt lösenord?</summary><p data-i18n="faq.a3">Aldrig. Utan inloggning läser den Claude Desktops lokala logg. Vill du ha med alla enheter loggar du in på claude.ai i din egen webbläsare – appen ser aldrig ditt lösenord.</p></details>
+    <details><summary data-i18n="faq.q4">Windows varnar när jag startar den. Varför?</summary><p data-i18n="faq.a4">Eftersom appen inte är kodsignerad (certifikat kostar pengar, och appen är gratis). Klicka på Mer info → Kör ändå. Du kan verifiera nedladdningen med dess SHA-256-kontrollsumma och läsa källkoden på GitHub.</p></details>
+    <details><summary data-i18n="faq.q5">Vilka Mac-datorer stöds?</summary><p data-i18n="faq.a5">macOS 12 eller senare. Nedladdningskortet ovan visar alltid vilken processor den aktuella versionen är byggd för. macOS-versionen är ny – feedback är mycket välkommen.</p></details>
+    <details><summary data-i18n="faq.q6">Hur fungerar uppdateringar?</summary><p data-i18n="faq.a6">Appen kollar den här webbplatsen några gånger om dagen. När det finns en ny version får du veta det; ett klick laddar ned, verifierar och installerar den och startar sedan om appen. Du kan stänga av det.</p></details>
+    <details><summary data-i18n="faq.q7">Hur tar jag bort den?</summary><p data-i18n="faq.a7">Windows: Inställningar → Appar → Installerade appar → Claude Usage Monitor → Avinstallera. macOS: dra appen till papperskorgen. Det är allt.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Skriv till utvecklaren</p>
+      <h2 data-i18n="fb.h2">En idé? En bugg? Gillar du den bara? Berätta!</h2>
+      <p data-i18n="fb.p">Ditt meddelande går direkt till mig, Gábor Vidovics. Jag läser vartenda ett. Lämna bara en e-postadress om du vill ha svar.</p>
+      <p class="fine" data-i18n="fb.privacy">Ditt meddelande används bara för att svara dig och för att förbättra appen – mer information finns i <a href="#privacy" data-legal="privacy">integritetspolicyn</a>.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Namn</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-post</span> <i data-i18n="fb.optional">(valfritt)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">Vad gäller det?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Feedback</option>
+          <option value="idea" data-i18n="fb.t_idea">Idé / önskemål om funktion</option>
+          <option value="bug" data-i18n="fb.t_bug">Felrapport</option>
+          <option value="recommend" data-i18n="fb.t_rec">Jag rekommenderar den! (omdöme)</option>
+          <option value="other" data-i18n="fb.t_other">Något annat</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Meddelande</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Mitt meddelande får publiceras på den här sidan som en rekommendation (bara med mitt namn).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Skicka meddelande</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Skyddas mot spam av reCAPTCHA – Googles <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">integritetspolicy</a> och <a href="https://policies.google.com/terms" target="_blank" rel="noopener">användarvillkor</a> gäller.</p>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">Om två minuter vet du exakt var du står.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Ladda ned gratis för</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Gratis. För alltid.</b> Ingen demo. Ingen provperiod. Inget är låst.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.7.1</span></p>
+      <p><span data-i18n="foot.made">Designad och utvecklad av</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Inofficiellt communityverktyg, inte knutet till Anthropic. ”Claude” är ett varumärke som tillhör Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">MIT-licens</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">Ändringslogg</a>
+      <a href="#feedback" data-i18n="foot.contact">Kontakt</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Integritetspolicy</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Juridisk information</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Användarvillkor</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Cookieinställningar</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Den här sidan använder inga cookies och ingen spårning och laddar ingenting från tredje part.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Stäng">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">De juridiska texterna finns på ungerska och engelska. Den ungerska versionen är den gällande.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Ja, avsluta min prenumeration</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Stäng</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookies – du bestämmer</h2>
+  <p data-i18n="ck.p">Sidan fungerar fullt ut utan cookies. Med ditt tillstånd hjälper Googles mätning utvecklaren att se hur många som besöker sidan. Ingenting laddas förrän du godkänner det.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Nödvändiga – kommer ihåg ditt språk och det här valet (inga cookies, bara lokal lagring)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Statistik – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Marknadsföring – konverteringsmätning med Google Ads</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Avvisa</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Inställningar</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Spara mitt val</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Godkänn alla</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Integritetspolicy</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100 % GRATIS</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Skicka länken till min dator</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script id="um-hints" type="application/json">{"en":"This page is also available in English","bg":"Тази страница е достъпна и на български","cs":"Tato stránka je k dispozici i v češtině","da":"Denne side findes også på dansk","de":"Diese Seite gibt es auch auf Deutsch","et":"See leht on saadaval ka eesti keeles","el":"Αυτή η σελίδα είναι διαθέσιμη και στα ελληνικά","es":"Esta página también está disponible en español","es-419":"Esta página también está disponible en español de Latinoamérica","fr":"Cette page existe aussi en français","ga":"Tá an leathanach seo ar fáil i nGaeilge freisin","hr":"Ova je stranica dostupna i na hrvatskom","id":"Halaman ini juga tersedia dalam bahasa Indonesia","it":"Questa pagina è disponibile anche in italiano","lv":"Šī lapa ir pieejama arī latviešu valodā","lt":"Šį puslapį galima skaityti ir lietuviškai","hu":"Ez az oldal magyarul is elérhető","mt":"Din il-paġna hija disponibbli wkoll bil-Malti","nl":"Deze pagina is ook beschikbaar in het Nederlands","pl":"Ta strona jest dostępna także po polsku","pt":"Esta página também está disponível em português","pt-pt":"Esta página também está disponível em português europeu","ro":"Această pagină este disponibilă și în limba română","ru":"Эта страница есть и на русском языке","sk":"Táto stránka je dostupná aj po slovensky","sl":"Ta stran je na voljo tudi v slovenščini","fi":"Tämä sivu on saatavilla myös suomeksi","sv":"Den här sidan finns även på svenska","tr":"Bu sayfa Türkçe olarak da mevcut","vi":"Trang này cũng có bằng tiếng Việt","ja":"このページは日本語でもご覧いただけます","ko":"이 페이지는 한국어로도 볼 수 있어요","zh-cn":"本页面也提供简体中文版","zh-tw":"本頁也提供繁體中文版"}</script>
+<script src="../assets/site.js?v=10" defer></script>
+</body>
+</html>

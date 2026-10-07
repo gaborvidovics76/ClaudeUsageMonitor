@@ -2,7 +2,20 @@
 (function () {
   'use strict';
   var API = '/usage-api/';
-  var LANGS = { en: 'English', hu: 'Magyar', de: 'Deutsch', fr: 'Français', es: 'Español', it: 'Italiano', pt: 'Português', pl: 'Polski', nl: 'Nederlands', ru: 'Русский', cs: 'Čeština', tr: 'Türkçe' };
+  // one real page per app language; key = URL folder (see tools/build_site.py LANG_INFO)
+  var LANGS = { en: 1, bg: 1, cs: 1, da: 1, de: 1, et: 1, el: 1, es: 1, 'es-419': 1, fr: 1, ga: 1, hr: 1, id: 1, it: 1, lv: 1, lt: 1,
+    hu: 1, mt: 1, nl: 1, pl: 1, pt: 1, 'pt-pt': 1, ro: 1, ru: 1, sk: 1, sl: 1, fi: 1, sv: 1, tr: 1, vi: 1, ja: 1, ko: 1, 'zh-cn': 1, 'zh-tw': 1 };
+  // a browser / app language tag -> page slug (es-MX -> es-419, pt-BR -> pt, zh-HK -> zh-tw ...)
+  function slugOf(tag) {
+    var t = String(tag || '').toLowerCase().replace('_', '-'), p = t.slice(0, 2);
+    if (LANGS[t]) return t;
+    if (t === 'es-es') return 'es';
+    if (p === 'es') return t === 'es' ? 'es' : 'es-419';
+    if (t === 'pt-br') return 'pt';
+    if (p === 'zh') return /hant|tw|hk|mo/.test(t) ? 'zh-tw' : 'zh-cn';
+    if (p === 'nb' || p === 'nn' || p === 'no') return null;
+    return LANGS[p] ? p : null;
+  }
   var html = document.documentElement;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -30,13 +43,10 @@
 
   /* Google's guidance: never redirect between language versions on your own. An explicit choice (the visitor picked a
      language here before, or followed an old ?lang= link) is honoured; a browser-language guess only gets a polite hint. */
-  var HINT = { en: 'View this page in English', hu: 'Ez az oldal magyarul is elérhető', de: 'Diese Seite gibt es auch auf Deutsch', fr: 'Cette page existe aussi en français',
-    es: 'Esta página también está en español', it: 'Questa pagina è disponibile anche in italiano', pt: 'Esta página também está em português', pl: 'Ta strona jest też po polsku',
-    nl: 'Deze pagina is er ook in het Nederlands', ru: 'Эта страница есть и на русском', cs: 'Tato stránka je i v češtině', tr: 'Bu sayfa Türkçe olarak da mevcut' };
   (function routeLanguage() {
-    var page = html.lang || 'en';
+    var page = html.getAttribute('data-lang') || 'en';
     state.lang = page;
-    var q = (params.get('lang') || '').slice(0, 2).toLowerCase(), chosen = store.get('um-lang');
+    var q = slugOf(params.get('lang')) || '', chosen = store.get('um-lang');
     var explicit = LANGS[q] ? q : (!ROOT && chosen && LANGS[chosen] ? chosen : null);
     if (explicit && explicit !== page) {
       params.delete('lang');
@@ -46,9 +56,11 @@
     }
     if (chosen || store.get('um-hint-off')) return;
     var nav = navigator.languages || [navigator.language || 'en'], guess = null;
-    for (var i = 0; i < nav.length && !guess; i++) { var c = String(nav[i]).slice(0, 2).toLowerCase(); if (LANGS[c]) guess = c; }
+    for (var i = 0; i < nav.length && !guess; i++) guess = slugOf(nav[i]);
     if (!guess || guess === page) return;
     var bar = $('#langhint'), go = $('#langhint-go');
+    var HINT = {}; try { HINT = JSON.parse(($('#um-hints') || {}).textContent || '{}'); } catch (e) { HINT = {}; }
+    if (!HINT[guess]) return;
     go.textContent = HINT[guess] + ' →'; go.href = langUrl(guess); go.lang = guess; go.hreflang = guess;
     go.onclick = function () { store.set('um-lang', guess); if (location.hash) go.href = langUrl(guess) + location.hash; };
     $('#langhint-x').onclick = function () { bar.hidden = true; store.set('um-hint-off', '1'); };
@@ -177,8 +189,14 @@
         $$('[data-counter]').forEach(function (n) { n.hidden = false; });
         $$('[data-count]').forEach(function (n) { animateCount(n, s.downloads[n.dataset.count] || 0); });
       }
-      if (s.testimonials && s.testimonials.length) {
-        var box = $('#testimonials'); box.textContent = ''; box.hidden = false;
+      var rv = $('#reviews'), box = $('#testimonials');
+      if (rv && s.rating && s.rating.count > 0) {
+        var sum = $('#rating-sum'); sum.hidden = false; rv.hidden = false;
+        $('[data-r="avg"]', sum).textContent = (Math.round(s.rating.avg * 10) / 10).toLocaleString(html.lang, { minimumFractionDigits: 1 });
+        $('[data-r="count"]', sum).textContent = s.rating.count.toLocaleString(html.lang);
+      }
+      if (box && !box.querySelector('[data-static]') && s.testimonials && s.testimonials.length) {
+        box.textContent = ''; rv.hidden = false;
         s.testimonials.forEach(function (q) {
           var f = document.createElement('figure'); f.className = 'quote';
           if (q.rating > 0) {
@@ -187,7 +205,7 @@
             st.setAttribute('aria-label', q.rating + '/5'); st.textContent = '★★★★★'.slice(0, q.rating) + '☆☆☆☆☆'.slice(0, 5 - q.rating);
             f.appendChild(st);
           }
-          if (q.text) { var p = document.createElement('p'); p.textContent = '“' + q.text + '”'; f.appendChild(p); }
+          if (q.text) { var p = document.createElement('p'); p.textContent = '“' + q.text + '”'; if (q.lang) p.lang = q.lang; f.appendChild(p); }
           if (q.name) { var c = document.createElement('cite'); c.textContent = q.name; f.appendChild(c); }
           box.appendChild(f);
         });

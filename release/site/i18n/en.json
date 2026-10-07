@@ -89,6 +89,7 @@
  "about.h2": "What is Claude Usage Monitor?",
  "about.p": "<b>Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows your Claude subscription's usage limits in real time</b> – the five-hour session, the weekly limit and the per-model weekly limit, each with the time left until it resets. It stays on top of your other windows, so you can check your Claude usage without opening Settings → Usage and without a terminal.",
  "about.p2": "One app for both Windows and Mac. It covers everything that counts toward your plan – claude.ai, Claude Desktop and Claude Code, on all your devices. It is not the terminal tool “Claude Code Usage Monitor”: this one is a graphical panel with a tray icon, and needs no command line.",
+ "facts.dl": "<dt>Price</dt><dd>Free – the full version, no paid tier, no trial</dd><dt>Platforms</dt><dd>Windows 10 / 11 (64-bit) and macOS 12 or newer</dd><dt>Languages</dt><dd>34 interface languages</dd><dt>What it shows</dt><dd>5-hour session, weekly limit, per-model weekly limit, reset countdown, pace and burn rate</dd><dt>Data source</dt><dd>Claude Desktop's local log, or your claude.ai sign-in for all devices</dd><dt>Privacy</dt><dd>No telemetry, no ads, no account with us</dd><dt>Licence</dt><dd>MIT, open source on GitHub</dd><dt>Author</dt><dd>Vidovics Gábor, Hungary – independent, not affiliated with Anthropic</dd>",
  "about.updated": "Last updated",
  "dls.version": "Version",
  "about.by": "by",
@@ -191,6 +192,9 @@
  "who.3d": "Phone, browser, laptop, desktop: one honest number for all of them.",
  "who.4t": "Anyone who likes a tidy desktop",
  "who.4d": "A small, good-looking panel that stays out of the way – or shrinks to a slim bar.",
+ "rev.h": "What users say",
+ "rev.count": "ratings sent from inside the app",
+ "rev.how": "Only messages that the sender agreed to publish and the author has read appear here. Using the app? Right-click the panel → <b>Message to the developer…</b> – rate it and tell me what you think.",
  "author.quote": "“I built this for myself, because I kept running into the limit in the middle of my work. Then I polished it until I was happy to look at it all day. It's free because a tool like this should be – use it, enjoy it, and tell me what you think.”",
  "author.role": "creator &amp; developer of Claude Usage Monitor · Hungary",
  "author.gh": "Source code on GitHub",
@@ -206,6 +210,12 @@
  "faq.a10": "Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code counts toward the same usage limit. That is why the widget's claude.ai mode shows one number for all your devices and apps, not only for the computer it runs on.",
  "faq.q11": "Is this the same as “Claude Code Usage Monitor”?",
  "faq.a11": "No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line.",
+ "faq.q13": "How can I rate Claude Usage Monitor or send feedback?",
+ "faq.a13": "Right-click the panel and choose “Message to the developer…”, or click the message icon in the panel header. You can give one to five stars, write a message, and – only if you tick it – allow your rating and name to be shown on this website. Every message is read by the author, Vidovics Gábor, and nothing is published without your consent. Without the app, use the form at the bottom of this page.",
+ "faq.q14": "Which languages is Claude Usage Monitor available in?",
+ "faq.a14": "In 34 languages: every official language of the European Union plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese – with separate versions for European and Brazilian Portuguese and for Spain and Latin-American Spanish. The app picks your system language by itself, and this website exists in each of these languages too.",
+ "faq.q15": "Does it work with Claude Pro, Max, Team and Enterprise?",
+ "faq.a15": "Yes. It shows the limits your own Claude plan has – Pro, Max 5×, Max 20×, Team or Enterprise – the same ones Claude lists under Settings → Usage, and the plan badge in the panel header tells you which plan you are on.",
  "faq.q12": "Can Claude Usage Monitor show whether my Claude files are backed up?",
  "faq.a12": "Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.",
  "faq.q2": "Is this an official Anthropic product?",
@@ -307,5 +317,6 @@
  "img.history": "Claude Usage Monitor history window: 5-hour session and weekly limit over time, with weekly peak, daily burn and end-of-week projection",
  "bk.feat": "Backup lamps – see whether your Claude work is backed up",
  "img.bk_panel": "Claude Usage Monitor panel with three green backup lamps: OneDrive, Nextcloud and Obsidian, each backed up one minute ago",
- "img.bk_details": "Claude Usage Monitor backup details window: status Fresh, the backed-up Obsidian vault snapshot, Claude Code, Claude Desktop, an extra folder and the agent logs with file counts and sizes, no errors, and the scheduled task"
+ "img.bk_details": "Claude Usage Monitor backup details window: status Fresh, the backed-up Obsidian vault snapshot, Claude Code, Claude Desktop, an extra folder and the agent logs with file counts and sizes, no errors, and the scheduled task",
+ "lang.hint": "This page is also available in English"
 }

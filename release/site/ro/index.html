@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="ro" data-lang="ro" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Usage Monitor – widget gratuit pentru Windows și macOS</title>
+<meta name="description" content="Limitele de utilizare Claude în timp real: sesiunea de 5 ore, limita săptămânală și per model, cu numărătoare până la resetare și alerte. Gratuit, open source.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="en" href="https://claudeusagemonitor.com/">
+<link rel="alternate" hreflang="bg" href="https://claudeusagemonitor.com/bg/">
+<link rel="alternate" hreflang="cs" href="https://claudeusagemonitor.com/cs/">
+<link rel="alternate" hreflang="da" href="https://claudeusagemonitor.com/da/">
+<link rel="alternate" hreflang="de" href="https://claudeusagemonitor.com/de/">
+<link rel="alternate" hreflang="et" href="https://claudeusagemonitor.com/et/">
+<link rel="alternate" hreflang="el" href="https://claudeusagemonitor.com/el/">
+<link rel="alternate" hreflang="es" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-ES" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-419" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-MX" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-AR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CL" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-VE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-EC" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-GT" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CU" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-BO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-DO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-HN" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-SV" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-NI" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PA" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-UY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-US" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="fr" href="https://claudeusagemonitor.com/fr/">
+<link rel="alternate" hreflang="ga" href="https://claudeusagemonitor.com/ga/">
+<link rel="alternate" hreflang="hr" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="id" href="https://claudeusagemonitor.com/id/">
+<link rel="alternate" hreflang="it" href="https://claudeusagemonitor.com/it/">
+<link rel="alternate" hreflang="lv" href="https://claudeusagemonitor.com/lv/">
+<link rel="alternate" hreflang="lt" href="https://claudeusagemonitor.com/lt/">
+<link rel="alternate" hreflang="hu" href="https://claudeusagemonitor.com/hu/">
+<link rel="alternate" hreflang="mt" href="https://claudeusagemonitor.com/mt/">
+<link rel="alternate" hreflang="nl" href="https://claudeusagemonitor.com/nl/">
+<link rel="alternate" hreflang="pl" href="https://claudeusagemonitor.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-AO" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-MZ" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="ro" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://claudeusagemonitor.com/ru/">
+<link rel="alternate" hreflang="sk" href="https://claudeusagemonitor.com/sk/">
+<link rel="alternate" hreflang="sl" href="https://claudeusagemonitor.com/sl/">
+<link rel="alternate" hreflang="fi" href="https://claudeusagemonitor.com/fi/">
+<link rel="alternate" hreflang="sv" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="tr" href="https://claudeusagemonitor.com/tr/">
+<link rel="alternate" hreflang="vi" href="https://claudeusagemonitor.com/vi/">
+<link rel="alternate" hreflang="ja" href="https://claudeusagemonitor.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="zh" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-SG" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-TW" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-HK" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-MO" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://claudeusagemonitor.com/">
+<meta http-equiv="content-language" content="ro">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – limitele Claude live, gratuit pe Windows și macOS">
+<meta property="og:description" content="Sesiunea de 5 ore, limita săptămânală și ritmul Claude dintr-o privire – inclusiv ce consumă telefonul și browserul. Mereu deasupra, open source. 100% gratuit.">
+<meta property="og:url" content="https://claudeusagemonitor.com/ro/">
+<meta property="og:image" content="https://claudeusagemonitor.com/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – limitele Claude live, gratuit pe Windows și macOS">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="bg_BG">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ga_IE">
+<meta property="og:locale:alternate" content="hr_HR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="lv_LV">
+<meta property="og:locale:alternate" content="lt_LT">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="mt_MT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – limitele Claude live, gratuit pe Windows și macOS">
+<meta name="twitter:description" content="Sesiunea de 5 ore, limita săptămânală și ritmul Claude dintr-o privire – inclusiv ce consumă telefonul și browserul. Mereu deasupra, open source. 100% gratuit.">
+<meta name="twitter:image" content="https://claudeusagemonitor.com/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://claudeusagemonitor.com/#site","name":"Claude Usage Monitor","url":"https://claudeusagemonitor.com/","inLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"publisher":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"WebPage","@id":"https://claudeusagemonitor.com/ro/#page","url":"https://claudeusagemonitor.com/ro/","name":"Claude Usage Monitor – widget gratuit pentru Windows și macOS","description":"Limitele de utilizare Claude în timp real: sesiunea de 5 ore, limita săptămânală și per model, cu numărătoare până la resetare și alerte. Gratuit, open source.","inLanguage":"ro","isPartOf":{"@id":"https://claudeusagemonitor.com/#site"},"about":{"@id":"https://claudeusagemonitor.com/#app"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["#about .about__def","#about .facts"]},"mainEntity":{"@id":"https://claudeusagemonitor.com/#app"},"primaryImageOfPage":"https://claudeusagemonitor.com/img/og.png","dateModified":"2026-10-07","author":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"SoftwareApplication","@id":"https://claudeusagemonitor.com/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor este un widget desktop gratuit și open source pentru Windows 10/11 și macOS, care arată în timp real limitele de utilizare ale unui abonat Claude: sesiunea de cinci ore, limita săptămânală și limita săptămânală per model, cu numărătoare inversă până la fiecare resetare, ritm, rată de consum și alerte. Acoperă claude.ai, Claude Desktop și Claude Code pe toate dispozitivele și nu are nevoie de terminal.","url":"https://claudeusagemonitor.com/ro/","inLanguage":"ro","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.7.1","dateModified":"2026-10-07T05:31:15Z","downloadUrl":"https://claudeusagemonitor.com/usage-api/dl.php?os=win","installUrl":"https://claudeusagemonitor.com/ro/#download","fileSize":"47 MB","releaseNotes":"https://claudeusagemonitor.com/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://claudeusagemonitor.com/#author"},"publisher":{"@id":"https://claudeusagemonitor.com/#author"},"image":"https://claudeusagemonitor.com/img/og.png","screenshot":["https://claudeusagemonitor.com/img/panel-full-midnight.png","https://claudeusagemonitor.com/img/history-7d-midnight.png","https://claudeusagemonitor.com/img/ring-neon.png","https://claudeusagemonitor.com/img/compact-claude.png"],"featureList":["Vezi din timp ce urmează","Consumi prea repede?","Toate dispozitivele, o singură cifră","Limite per model","Alerte care contează","Nu spionează. Punct.","Leduri de backup – vezi dacă munca ta cu Claude are backup"],"availableLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"sameAs":["https://github.com/gaborvidovics76/ClaudeUsageMonitor"]},{"@type":"Person","@id":"https://claudeusagemonitor.com/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://claudeusagemonitor.com/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://claudeusagemonitor.com/ro/#faq","inLanguage":"ro","mainEntity":[{"@type":"Question","name":"Chiar e gratuit? Unde e capcana?","acceptedAnswer":{"@type":"Answer","text":"Chiar e gratuit și nu există nicio capcană. Nu e demo, nu e versiune de probă și nici o ediție limitată – aceasta este versiunea completă și singura. Fără reclame, fără variantă plătită, fără colectare de date. Codul sursă este public, sub licența MIT."}},{"@type":"Question","name":"Este un produs oficial Anthropic?","acceptedAnswer":{"@type":"Answer","text":"Nu. Este un instrument independent al comunității, creat de Gábor Vidovics. Nu este afiliat cu Anthropic. „Claude” este o marcă comercială a Anthropic, PBC."}},{"@type":"Question","name":"Trebuie să-i dau parola mea?","acceptedAnswer":{"@type":"Answer","text":"Niciodată. Fără conectare, citește jurnalul local al Claude Desktop. Dacă vrei toate dispozitivele, te conectezi la claude.ai în propriul browser – aplicația nu îți vede niciodată parola."}},{"@type":"Question","name":"Windows mă avertizează când o pornesc. De ce?","acceptedAnswer":{"@type":"Answer","text":"Pentru că aplicația nu este semnată digital (certificatele costă bani, iar aplicația e gratuită). Dă clic pe Mai multe informații → Rulează oricum. Poți verifica descărcarea cu suma de control SHA-256 și poți citi codul sursă pe GitHub."}},{"@type":"Question","name":"Ce modele de Mac sunt acceptate?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 sau mai nou. Cardul de descărcare de mai sus arată mereu pentru ce procesor este versiunea curentă. Versiunea pentru macOS este nouă – feedbackul este binevenit."}},{"@type":"Question","name":"Actualizările se fac automat?","acceptedAnswer":{"@type":"Answer","text":"Da. Aplicația verifică acest site de câteva ori pe zi. Când apare o versiune nouă, te anunță; un clic o descarcă, o verifică și o instalează, apoi aplicația repornește. Poți dezactiva această funcție."}},{"@type":"Question","name":"Ce trebuie să fac ca s-o dezinstalez?","acceptedAnswer":{"@type":"Answer","text":"Windows: Setări → Aplicații → Aplicații instalate → Claude Usage Monitor → Dezinstalare. macOS: trage aplicația în Coș. Asta e tot."}},{"@type":"Question","name":"Pot verifica utilizarea Claude fără să deschid Setările?","acceptedAnswer":{"@type":"Answer","text":"Da: instalează Claude Usage Monitor. Îți ține permanent pe ecran sesiunea de cinci ore, limita săptămânală și limita per model, ca widget mic, mereu deasupra, și ca procent în zona de notificare sau în bara de meniu. Cifrele oficiale Claude sunt la „Settings → Usage” (Setări → Utilizare); widgetul îți arată aceleași limite fără niciun clic."}},{"@type":"Question","name":"Când se resetează sesiunea de 5 ore și limita săptămânală Claude?","acceptedAnswer":{"@type":"Answer","text":"Limita bazată pe sesiune se resetează la fiecare cinci ore. Limita săptămânală se resetează o dată pe săptămână, la o oră fixă pe care Anthropic o atribuie contului tău, deci diferă de la o persoană la alta. Widgetul arată o numărătoare inversă live până la ambele resetări – cu conectarea la claude.ai folosește orele exacte de la serverul Anthropic."}},{"@type":"Question","name":"Utilizarea Claude Code se socotește în limita mea de pe claude.ai?","acceptedAnswer":{"@type":"Answer","text":"Da. Potrivit Anthropic, utilizarea pe claude.ai, în Claude Desktop și în Claude Code se socotește în aceeași limită de utilizare. De aceea, în modul claude.ai, widgetul arată o singură cifră pentru toate dispozitivele și aplicațiile tale, nu doar pentru computerul pe care rulează."}},{"@type":"Question","name":"Este același lucru cu „Claude Code Usage Monitor”?","acceptedAnswer":{"@type":"Answer","text":"Nu. „Claude Code Usage Monitor” este un instrument separat, pentru terminal, creat de alt autor. Claude Usage Monitor, realizat de Gábor Vidovics, este un widget desktop grafic pentru Windows și macOS, cu pictogramă în zona de notificare, teme și alerte, și nu are nevoie de linia de comandă."}},{"@type":"Question","name":"Poate Claude Usage Monitor să arate dacă fișierele mele Claude au backup?","acceptedAnswer":{"@type":"Answer","text":"Da – și tot gratuit. Cu bara de stare backup activată, trei leduri pe panou arată dacă backupul în OneDrive, cel într-un al doilea cloud, de exemplu Nextcloud, și cel al seifului Obsidian sunt la zi: verde până la 24 de ore, galben până la 48, roșu când e mai vechi sau lipsește și un inel roșu când ultima rulare a eșuat. Monitorul doar citește jurnalele de backup; backupul propriu-zis îl face Claude Backup Kit, gratuit, care copiază zilnic skill-urile tale Claude Code, CLAUDE.md, memoria proiectelor, setările Claude Desktop și jurnalele agenților – niciodată tokenul de conectare. Kitul este un punct de plecare gratuit pe care oricine îl poate modifica, așa că nu ne asumăm nicio răspundere pentru backupuri: fiecare utilizator trebuie să se asigure că acestea sunt complete și pot fi restaurate."}},{"@type":"Question","name":"Unde pot evalua Claude Usage Monitor sau trimite feedback?","acceptedAnswer":{"@type":"Answer","text":"Dă clic dreapta pe panou și alege „Mesaj către dezvoltator…” sau dă clic pe pictograma de mesaj din antetul panoului. Poți acorda între una și cinci stele, poți scrie un mesaj și – doar dacă bifezi – poți permite afișarea evaluării și a numelui tău pe acest site. Fiecare mesaj este citit de autor, Gábor Vidovics, și nimic nu se publică fără acordul tău. Fără aplicație, folosește formularul din partea de jos a acestei pagini."}},{"@type":"Question","name":"În ce limbi este disponibil Claude Usage Monitor?","acceptedAnswer":{"@type":"Answer","text":"În 34 de limbi: toate limbile oficiale ale Uniunii Europene, plus japoneză, coreeană, chineză simplificată și tradițională, indoneziană și vietnameză – cu versiuni separate pentru portugheza europeană și cea braziliană și pentru spaniola din Spania și cea din America Latină. Aplicația alege singură limba sistemului tău, iar acest site există și el în fiecare dintre aceste limbi."}},{"@type":"Question","name":"Funcționează cu Claude Pro, Max, Team și Enterprise?","acceptedAnswer":{"@type":"Answer","text":"Da. Afișează limitele pe care le are propriul tău plan Claude – Pro, Max 5×, Max 20×, Team sau Enterprise –, adică aceleași pe care Claude le listează la „Settings → Usage” (Setări → Utilizare), iar insigna planului din antetul panoului îți spune ce plan ai."}}]},{"@type":"HowTo","@id":"https://claudeusagemonitor.com/ro/#install","name":"Instalare în 3 pași – Windows","inLanguage":"ro","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"text":"Dezarhivează tot fișierul zip (clic dreapta → Extrage tot…)."},{"@type":"HowToStep","position":2,"text":"Dublu clic pe INSTALL.bat ."},{"@type":"HowToStep","position":3,"text":"Răspunde la două întrebări – Enter acceptă răspunsul recomandat. Gata."}]},{"@type":"DefinedTermSet","@id":"https://claudeusagemonitor.com/ro/#glossary","name":"Termeni-cheie, definiți precis","inLanguage":"ro","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Sesiunea de 5 ore (fereastra de 5 ore)","description":"Limita de utilizare pe termen scurt a lui Claude. Limita bazată pe sesiune se resetează la fiecare cinci ore. Anthropic o numește „current session” (sesiunea curentă); mulți utilizatori îi spun fereastra de 5 ore sau limita de 5 ore.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Limita săptămânală","description":"O a doua limită a planurilor Claude plătite, care se aplică tuturor modelelor și se resetează săptămânal, la o oră fixă atribuită contului tău. Limitele săptămânale sunt în vigoare din 28 august 2025.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Limita săptămânală per model","description":"O limită săptămânală separată pentru un anumit model, afișată pe pagina de utilizare Claude lângă limita pentru toate celelalte modele. Widgetul o arată ca al treilea indicator, pentru modelul ales de tine.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Resetare","description":"Momentul în care o limită revine la 0%. Widgetul face numărătoarea inversă până la el. Cu conectarea la claude.ai, ora exactă vine de la serverul Anthropic; cu jurnalul local, este o estimare.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Ritm","description":"Cu cât ești înaintea sau în urma unei săptămâni consumate uniform. „+12% vs ritm” înseamnă că ai consumat din limita săptămânală cu 12 puncte procentuale mai mult decât partea din săptămână care a trecut.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Rată de consum","description":"Cât de repede se umple o limită chiar în acest moment – procente pe oră pentru sesiune, procente pe zi pentru săptămână – și când ar ajunge la 100% în acest ritm.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"},{"@type":"DefinedTerm","name":"Credite de utilizare (extra usage)","description":"Utilizare opțională, cu plată după consum, după ce atingi limitele planului, cu un plafon lunar de cheltuieli. Widgetul arată dacă este activată, plafonul și cât ai cheltuit.","inDefinedTermSet":"https://claudeusagemonitor.com/ro/#glossary"}]}]}</script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://claudeusagemonitor.com/ro/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Claude Usage Monitor releases" href="https://claudeusagemonitor.com/releases.xml">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Salt la conținut</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Funcții</a>
+      <a href="#backups" data-i18n="nav.backups">Backupuri</a>
+      <a href="#themes" data-i18n="nav.themes">Teme</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Noutăți</a>
+      <a href="#faq" data-i18n="nav.faq">Întrebări frecvente</a>
+      <a href="#feedback" data-i18n="nav.feedback">Feedback</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">RO</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="bg" lang="bg" href="../bg/" data-lang="bg">Български <span>bg</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="da" lang="da" href="../da/" data-lang="da">Dansk <span>da</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="et" lang="et" href="../et/" data-lang="et">Eesti <span>et</span></a></li><li><a role="option" hreflang="el" lang="el" href="../el/" data-lang="el">Ελληνικά <span>el</span></a></li><li><a role="option" hreflang="es-ES" lang="es-ES" href="../es/" data-lang="es">Español (España) <span>es</span></a></li><li><a role="option" hreflang="es-419" lang="es-419" href="../es-419/" data-lang="es-419">Español (Latinoamérica) <span>es-419</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="ga" lang="ga" href="../ga/" data-lang="ga">Gaeilge <span>ga</span></a></li><li><a role="option" hreflang="hr" lang="hr" href="../hr/" data-lang="hr">Hrvatski <span>hr</span></a></li><li><a role="option" hreflang="id" lang="id" href="../id/" data-lang="id">Bahasa Indonesia <span>id</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="lv" lang="lv" href="../lv/" data-lang="lv">Latviešu <span>lv</span></a></li><li><a role="option" hreflang="lt" lang="lt" href="../lt/" data-lang="lt">Lietuvių <span>lt</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="mt" lang="mt" href="../mt/" data-lang="mt">Malti <span>mt</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="pt-BR" lang="pt-BR" href="../pt/" data-lang="pt">Português (Brasil) <span>pt</span></a></li><li><a role="option" hreflang="pt-PT" lang="pt-PT" href="../pt-pt/" data-lang="pt-pt">Português (Portugal) <span>pt-pt</span></a></li><li><a role="option" hreflang="ro" lang="ro" href="../ro/" aria-current="page" data-lang="ro">Română <span>ro</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="sk" lang="sk" href="../sk/" data-lang="sk">Slovenčina <span>sk</span></a></li><li><a role="option" hreflang="sl" lang="sl" href="../sl/" data-lang="sl">Slovenščina <span>sl</span></a></li><li><a role="option" hreflang="fi" lang="fi" href="../fi/" data-lang="fi">Suomi <span>fi</span></a></li><li><a role="option" hreflang="sv" lang="sv" href="../sv/" data-lang="sv">Svenska <span>sv</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li><li><a role="option" hreflang="vi" lang="vi" href="../vi/" data-lang="vi">Tiếng Việt <span>vi</span></a></li><li><a role="option" hreflang="ja" lang="ja" href="../ja/" data-lang="ja">日本語 <span>ja</span></a></li><li><a role="option" hreflang="ko" lang="ko" href="../ko/" data-lang="ko">한국어 <span>ko</span></a></li><li><a role="option" hreflang="zh-Hans" lang="zh-Hans" href="../zh-cn/" data-lang="zh-cn">简体中文 <span>zh-cn</span></a></li><li><a role="option" hreflang="zh-Hant" lang="zh-Hant" href="../zh-tw/" data-lang="zh-tw">繁體中文 <span>zh-tw</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Descarcă gratuit</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% GRATUIT</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Versiunea</span> <span data-win="version">2.7.1</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – widget gratuit pentru utilizarea Claude, pe Windows și macOS</span> <span data-i18n="hero.h1">Limita Claude nu te mai ia <em>prin surprindere.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">Un widget mic, mereu deasupra celorlalte ferestre, care îți arată în timp real utilizarea Claude – sesiunea de 5 ore, limita săptămânală și ritmul tău. Chiar și ce consumă telefonul. Pentru Windows și macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Sistemul tău</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Sistemul tău</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Gratuit. Pentru totdeauna.</b> Nu e demo. Nu e versiune de probă. Nimic blocat.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">descărcări de pe această pagină până în prezent</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">E o aplicație pentru computer – trimite-ți linkul pe computer</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Widgetul Claude Usage Monitor: sesiunea de 5 ore la 47%, o limită săptămânală per model la 61% și limita săptămânală la 23%">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Capturi de ecran reale din aplicație, cu cifre demonstrative.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% GRATUIT</span><i>✦</i><span data-i18n="mq.2">NU E DEMO</span><i>✦</i><span data-i18n="mq.3">NIMIC BLOCAT</span><i>✦</i><span data-i18n="mq.4">FĂRĂ RECLAME</span><i>✦</i><span data-i18n="mq.5">FĂRĂ ÎNREGISTRARE</span><i>✦</i><span data-i18n="mq.6">FĂRĂ URMĂRIRE</span><i>✦</i><span data-i18n="mq.7">OPEN SOURCE</span><i>✦</i><span data-i18n="mq.8">34 DE LIMBI</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Gratuit pentru totdeauna</b><span data-i18n="trust.1d">Versiune completă. Nu există variantă plătită.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Open source</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">Licență MIT – citește fiecare rând pe GitHub</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Confidențial</b><span data-i18n="trust.3d">Fără telemetrie, fără reclame, fără cookie-uri.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Se actualizează singur</b><span data-i18n="trust.4d">Verificat cu SHA-256, dintr-un clic.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Mai mult decât un cititor de jurnale</p>
+  <h2 data-i18n="more.h2">Și telefonul îți consumă limita. <em>Acum o vezi – direct pe desktop.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Multe instrumente de monitorizare a utilizării citesc fișierele jurnal de pe computerul tău, deci știu doar ce a consumat <b>acel singur computer</b>. Claude Usage Monitor poate întreba în schimb serverul Anthropic – și îți arată cifra reală, pentru întregul cont: tot ce folosești în aplicația de pe telefon, în browser, pe alt computer și în Claude Code se adună, iar tu vezi totul într-un singur loc, pe desktop.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Aplicația Claude de pe telefon</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai în browser</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Celălalt computer al tău</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code și Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="Un singur widget Claude Usage Monitor care arată utilizarea totală de pe toate dispozitivele">
+      <figcaption data-i18n="more.sum">O singură cifră reală pentru tot contul – mereu la vedere.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Instrumente care citesc doar jurnale locale</h3>
+      <ul data-i18n="more.a_li"><li class="no">Ce consumi pe telefon – invizibil</li><li class="no">Ce consumi în browser – invizibil</li><li class="no">Celelalte computere ale tale – invizibile</li><li class="yes">Claude Code pe acest singur computer</li><li class="no">Orele de resetare sunt ghicite</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor cu sursa claude.ai</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Telefon, browser, fiecare computer – totul se adună</li><li class="yes">Inclusiv Claude Code și Claude Desktop</li><li class="yes">Aceleași cifre pe care Claude le arată la „Settings → Usage” (Setări → Utilizare)</li><li class="yes">Ore exacte de resetare, de la serverul Anthropic</li><li class="yes">Funcționează și fără conectare, din jurnalul local</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Ce ai de făcut: alege ca sursă de date „claude.ai (toate dispozitivele)” și conectează-te o singură dată în browserul tău – aceeași conectare pe care o folosește Claude Code; aplicația nu îți vede niciodată parola. Fără conectare, widgetul citește jurnalul local al Claude Desktop, care acoperă doar acest computer.</p>
+</section>
+
+<!-- ============================ +1 EXTRA: BACKUPS ============================ -->
+<section class="sec wrap more bk" id="backups">
+  <p class="eyebrow"><span class="plus1">+1</span> <span data-i18n="bk.eyebrow">Bonus – tot gratuit</span></p>
+  <h2 data-i18n="bk.h2">Îți arată chiar și backupurile. <em>Ce valoare are cunoașterea, dacă poate fi distrusă?</em></h2>
+  <p class="more__lead" data-i18n="bk.p">Orice monitor de utilizare se oprește la cifre. Claude Usage Monitor face un pas în plus: îți arată și dacă <b>backupurile muncii tale cu Claude</b> sunt la zi – skill-urile, regulile din <code>CLAUDE.md</code>, memoria proiectelor, setările MCP, jurnalele conversațiilor cu agenții și notițele din Obsidian. De obicei stau toate pe un singur disc. Un disc defect, un laptop furat, o ștergere greșită – și luni de muncă dispar. Trei leduri mici pe panou îți confirmă, în fiecare minut al zilei, că ție nu ți se poate întâmpla.</p>
+
+  <div class="bk__top">
+    <figure class="bk__panel reveal">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panoul Claude Usage Monitor cu trei leduri verzi de backup: OneDrive, Nextcloud și Obsidian, fiecare salvat acum un minut"></a>
+    </figure>
+    <div class="bk__legend reveal">
+      <h3 data-i18n="bk.lamps_h">Trei leduri. O privire. Și știi.</h3>
+      <ul class="lamps" data-i18n="bk.lamps"><li><i class="lamp lamp--g"></i><span><b>Verde</b> – ultimul backup reușit are cel mult 24 de ore.</span></li><li><i class="lamp lamp--y"></i><span><b>Galben</b> – are între 24 și 48 de ore. E momentul să verifici.</span></li><li><i class="lamp lamp--r"></i><span><b>Roșu</b> – mai vechi de 48 de ore sau nu există niciun backup.</span></li><li><i class="lamp lamp--ring"></i><span><b>Inel roșu</b> – ultima rulare a eșuat sau nu s-a încheiat, chiar dacă un backup mai vechi încă ține ledul verde.</span></li></ul>
+      <p class="fine" data-i18n="bk.lamps_note">Ledurile sunt <b>OneDrive</b> (prima copie), <b>Nextcloud</b> (un al doilea cloud, independent – merge orice cloud suportat de rclone) și <b>Obsidian</b> (instantaneu datat al seifului tău). Contează doar o rulare încheiată cu adevărat: o rulare eșuată, întreruptă sau de test nu face niciodată ledul verde. Orele sunt reglabile. Dă clic pe orice led pentru detalii.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="bk.a_t">Alte monitoare de utilizare</h3>
+      <ul data-i18n="bk.a_li"><li class="no">Arată cifrele – și nimic despre datele tale</li><li class="no">Nu-ți pot spune dacă skill-urile și notițele tale sunt în siguranță</li><li class="no">Un backup stricat îl descoperi când ai nevoie de el – prea târziu</li><li class="no">Niciun ajutor la configurarea unui backup</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="bk.b_t">Claude Usage Monitor + Backup Kit gratuit</h3>
+      <ul data-i18n="bk.b_li"><li class="yes">Leduri pentru OneDrive, un al doilea cloud și seiful Obsidian</li><li class="yes">O rulare eșuată sau neterminată e semnalată pe loc</li><li class="yes">Ce se salvează, unde, câte fișiere, ce dimensiune</li><li class="yes">Activitățile planificate și jurnalul – la un clic distanță</li><li class="yes">Un kit gratuit care configurează backupul în 10 minute</li></ul>
+    </article>
+  </div>
+
+  <div class="bk__shows">
+    <figure class="bk__shot reveal">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Fereastra de detalii backup din Claude Usage Monitor: starea Recent, instantaneul salvat al seifului Obsidian, Claude Code, Claude Desktop, un folder suplimentar și jurnalele agenților, cu numărul și dimensiunea fișierelor, fără erori, și activitatea planificată"></a>
+    </figure>
+    <div>
+      <h3 data-i18n="bk.shows_h">Dă clic pe un led – iată ce vezi</h3>
+      <ul class="ticks" data-i18n="bk.shows"><li><b>Stare</b> – Recent, Se învechește, Învechit sau Niciun backup găsit, cu ora ultimului backup reușit și a ultimei rulări.</li><li><b>Ce se salvează</b> – fiecare element cu folderul sursă, destinația, numărul de fișiere și dimensiunea: instantaneul seifului Obsidian, Claude Code, Claude Desktop, folderele tale suplimentare și jurnalele agenților.</li><li><b>Conținut</b> – cel mai recent instantaneu al seifului, câte instantanee se păstrează, notițele editate cel mai recent și câte note s-au modificat de la ultimul instantaneu.</li><li><b>Încărcate</b> – în fila Nextcloud: fișierele noi și cele înlocuite în această rulare, grupate pe foldere, și cât spațiu ți-a mai rămas în cloud.</li><li><b>Erori și avertismente</b> – direct din jurnal, pe înțelesul tuturor.</li><li><b>Activități planificate</b> – starea, ultimul rezultat și următoarea rulare a activităților Windows care fac backupul.</li><li><b>Jurnal</b> – ultimele rânduri, iar fișierul jurnal la un clic distanță.</li></ul>
+      <p class="fine" data-i18n="bk.shows_note">Monitorul doar citește – nu modifică, nu mută și nu încarcă niciodată vreun fișier. Reverifică la fiecare 5 minute sau imediat, cu „Verifică acum”. Un instantaneu disponibil doar online în OneDrive nu este descărcat doar ca să fie listat.</p>
+    </div>
+  </div>
+
+  <div class="bk__kit reveal">
+    <div class="bk__kittxt">
+      <h3><span class="freebadge" data-i18n="dls.free">GRATUIT</span> <span data-i18n="bk.kit_h">Partea onestă: monitorul supraveghează, kitul face backupul.</span></h3>
+      <p data-i18n="bk.kit_p">Claude Usage Monitor nu îți copiază fișierele – îți arată dacă copierea a reușit. Copierea o face <b>Claude Backup Kit</b>: câteva scripturi PowerShell scurte, pe care le poți citi rând cu rând. Îți salvează zilnic munca cu Claude în OneDrive și într-un al doilea cloud, independent, și scrie jurnalul pe care îl citesc ledurile. Fără cont, fără abonament, nimic trimis către noi.</p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licență MIT</span> · ZIP <span data-kit="size">24 KB</span></p>
+    </div>
+    <div class="bk__kitbtns">
+      <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Descarcă Backup Kit – gratuit</span></a>
+      <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Citește fiecare script pe GitHub</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Prin descărcare accepți <a href="#terms" data-legal="terms">Condițiile de utilizare</a>: aplicația și Backup Kit sunt gratuite și sunt furnizate „ca atare”, fără nicio garanție, pe propriul tău risc.</p>
+    </div>
+  </div>
+
+  <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
+    <h3 data-i18n="bk.disc_h">Declinarea răspunderii – te rugăm să citești</h3>
+    <p data-i18n="bk.disc"><b>Nu ne asumăm nicio răspundere pentru backupuri, pentru pierderea de date sau pentru orice fel de daune.</b> Claude Usage Monitor doar citește și afișează jurnalele backupului tău – nu creează, nu verifică și nu garantează niciun backup. Claude Backup Kit este un punct de plecare gratuit, oferit ca ajutor, nu un produs finit: oricine poate – și are voie să – modifice scripturile ca să se potrivească propriului computer, așa că nu se pot garanta calitatea și completitudinea unui backup. <b>Fiecare este responsabil să se asigure că backupurile sale sunt complete și pot fi restaurate.</b> Urmărește ledurile, citește jurnalul și testează din când în când o restaurare. Kitul este furnizat „ca atare”, fără nicio garanție, sub licența MIT.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Condiții de utilizare</a></p>
+  </aside>
+
+  <div class="bkhelp" id="backup-help">
+    <h3 data-i18n="bk.help_h">Ajutor: configurează un backup pe care monitorul îl poate afișa</h3>
+    <p class="fine" data-i18n="bk.help_p">Deschide doar ce îți trebuie. Aici găsești fiecare pas – ce să folosești, ce să setezi, unde să dai clic. Kitul e un punct de plecare pe care îl poți modifica – te rugăm să citești <a href="#backup-disclaimer">declinarea răspunderii</a> de mai sus.</p>
+
+    <details open>
+      <summary data-i18n="bk.q_steps">Configurare în 10 minute – pas cu pas</summary>
+      <ol class="steps" data-i18n="bk.steps"><li><b>De ce ai nevoie.</b> Windows 10 sau 11, OneDrive conectat, Claude Usage Monitor instalat. Pentru a doua copie: un cont Nextcloud – sau orice alt cloud suportat de rclone (Google Drive, Dropbox, S3, pCloud, SFTP…). Nu ai un al doilea cloud? Pasul 2 este opțional.</li><li><b>Creează o parolă de aplicație</b> (doar pentru al doilea cloud). În Nextcloud: avatarul tău → <em>Setări personale</em> → <em>Securitate</em> → <em>Dispozitive și sesiuni</em> → numele aplicației <code>rclone-backup</code> → <em>Creează o parolă nouă pentru aplicație</em>. Copiaz-o – este afișată o singură dată. <b>Nu</b> este parola contului tău și o poți revoca oricând.</li><li><b>Descarcă și dezarhivează</b> Backup Kit într-un folder permanent, de exemplu <code>C:\Tools\ClaudeBackup</code>.</li><li><b>Editează <code>config.psd1</code></b> în Notepad: <code>VaultPath</code> = seiful tău Obsidian (gol = fără Obsidian), <code>ExtraFolders</code> = orice altceva de salvat, <code>NextcloudRemote</code> și <code>NextcloudBasePath</code> = al doilea cloud (gol = se omite), <code>DailyTime</code> = ora la care rulează. Restul poate rămâne neschimbat.</li><li><b>Rulează programul de instalare ca administrator:</b> Win+X → <em>Terminal (Administrator)</em>, apoi <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>, <code>cd C:\Tools\ClaudeBackup</code>, <code>Unblock-File *.ps1</code>, <code>.\Install-BackupKit.ps1</code>. Instalează rclone dacă e nevoie, îți cere adresa cloudului, numele de utilizator și parola de aplicație (tastată ascuns), creează cele două activități planificate, îi spune monitorului unde să se uite și face o primă rulare.</li><li><b>Prima încărcare reală:</b><code>.\Backup-Step2-Cloud.ps1</code> – programul de instalare a făcut doar o rulare de test a pasului 2.</li><li><b>Verifică:</b><code>.\Test-BackupKit.ps1</code> – fiecare rând ar trebui să spună <code>[OK]</code>. În Claude Usage Monitor: clic dreapta pe panou → <em>Bară de stare backup</em>. Cele trei leduri se fac verzi în cel mult 5 minute sau imediat, din <em>Backupuri…</em> → <em>Verifică acum</em>.</li></ol>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_what">Ce se salvează – și ce nu se salvează niciodată</summary>
+      <ul class="ticks" data-i18n="bk.what"><li><b>Claude Code</b> (<code>%USERPROFILE%\.claude</code>) – skill-uri, setări, <code>CLAUDE.md</code>, memoria proiectelor, pluginuri.</li><li><b>Claude Desktop</b> (<code>%APPDATA%\Claude</code>) – setări și servere MCP.</li><li><b>Jurnalele conversațiilor cu agenții</b> – câte un ZIP pe sesiune.</li><li><b>Seiful Obsidian</b> – la fiecare rulare, un instantaneu ZIP datat, păstrat 30 de zile.</li><li><b>Folderele tale suplimentare</b> – tot ce enumeri în <code>config.psd1</code>.</li><li><b>Niciodată:</b> tokenul de conectare Claude Code (<code>.credentials.json</code>), cookie-urile și memoria cache ale Claude Desktop și imaginile VM mari, care pot fi descărcate din nou.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_settings">Setări → Backupuri în aplicație, câmp cu câmp</summary>
+      <div class="cmpwrap"><table class="keys" data-i18n="bk.settings"><tr><th>Afișează bara de stare backup pe panou</th><td>Pornește sau oprește cele trei leduri. Opțiunea există și în meniul de clic dreapta: <em>Bară de stare backup</em>.</td></tr><tr><th>Leduri</th><td>Ce leduri se afișează: OneDrive, Nextcloud, Obsidian. Nu ai seif Obsidian? Debifează-l.</td></tr><tr><th>Etichetă lângă led</th><td>Nume și vechime · Doar numele · Doar ledurile.</td></tr><tr><th>Verde până la / Galben până la</th><td>Limitele de vechime în ore – implicit 24 și 48. Faci backup săptămânal? Setează 170 și 340.</td></tr><tr><th>Folder de backup</th><td>Folderul în care scrie pasul 1, de ex. <code>OneDrive\ClaudeBackup</code>. Lasă-l pe <em>automat</em> – programul de instalare i l-a comunicat deja monitorului.</td></tr><tr><th>Configurația scriptului de backup</th><td>Fișierul <code>config.psd1</code> al kitului. Monitorul citește din el calea seifului și destinația din cloud – niciodată vreo parolă.</td></tr><tr><th>Filtru pentru activitățile planificate</th><td><code>ClaudeBackup*</code> – ce activități Windows listează fereastra de detalii.</td></tr><tr><th>Fereastra de detalii afișează</th><td>Bifează ce vrei să vezi: ce se salvează, conținut, erori și avertismente, activități planificate, jurnal.</td></tr></table></div>
+      <p class="fine" data-i18n="bk.settings_note">Programul de instalare scrie <code>%APPDATA%\ClaudeUsageMonitor\backup_profile.json</code> – doar căi de foldere, nicio parolă, niciun token. Ce setezi în fila Backupuri are prioritate față de acest fișier.</p>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_sec">Securitate – felul în care kitul îți protejează datele</summary>
+      <ul class="ticks" data-i18n="bk.sec"><li><b>Nicio parolă în vreun fișier al kitului.</b> Parola de aplicație se tastează ascuns și se păstrează doar în configurația proprie a rclone, mascată. O poți revoca oricând din Nextcloud.</li><li><b>Tokenul de conectare nu este copiat niciodată.</b> Nici cookie-urile Claude Desktop.</li><li><b>Fără oglindire.</b> Un fișier pe care îl ștergi de pe computer rămâne în ambele backupuri – oglindirea ar copia fidel și o greșeală.</li><li><b>Instantanee datate ale seifului</b>, astfel încât o copie proastă ulterioară nu poate suprascrie niciodată o stare bună mai veche.</li><li><b>Doi furnizori independenți.</b> Dacă unul cade sau îți blochează accesul, celălalt are în continuare totul.</li><li><b>Bine de știut:</b> configurația Claude Desktop și <code>.claude\settings.json</code> pot conține chei API ale serverelor MCP. Ele sunt incluse în backup – ai nevoie de ele la restaurare – în propriul tău OneDrive și în propriul tău cloud. Protejează ambele conturi cu autentificare în doi pași.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_restore">Restaurare – atunci când ai nevoie</summary>
+      <table class="keys" data-i18n="bk.restore"><tr><th>O versiune mai veche a unei notițe</th><td>onedrive.com → clic dreapta pe fișier → <em>Istoric versiuni</em>.</td></tr><tr><th>Un fișier șters</th><td><em>Coșul de reciclare</em> din OneDrive (30 de zile) sau <em>Fișiere șterse</em> din Nextcloud.</td></tr><tr><th>Tot seiful dintr-o anumită zi</th><td>Dezarhivează <code>vault-snapshots\Vault_…zip</code> într-un folder gol și deschide-l în Obsidian: <em>Open folder as vault</em>.</td></tr><tr><th>Skill-urile și setările Claude Code</th><td>Copiază <code>files\claude-code</code> înapoi în <code>%USERPROFILE%\.claude</code>, apoi conectează-te din nou la Claude Code.</td></tr><tr><th>Setările Claude Desktop</th><td>Închide Claude Desktop și copiază <code>files\claude-desktop</code> înapoi în <code>%APPDATA%\Claude</code>.</td></tr></table>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_own">Ai deja propriul backup? De ce are nevoie monitorul</summary>
+      <ul class="ticks" data-i18n="bk.own"><li><b>Un jurnal pentru fiecare rulare</b> în subfolderul <code>logs</code> al folderului de backup, cu numele <code>onedrive_YYYY-MM-DD_HHMMSS.log</code> și <code>nextcloud_…log</code>, fiecare rând începând cu data și ora.</li><li><b>Un final clar:</b> o rulare reușită se încheie cu un rând care conține <code>KESZ</code>, una eșuată cu <code>HIBAVAL ZARULT</code>. Fișierul <code>Common.ps1</code> din kit documentează fiecare cuvânt pe care îl înțelege monitorul.</li><li><b>Unde să se uite:</b> setează <em>Folder de backup</em> în fila Backupuri. Alte nume de foldere sau fișiere pot fi setate în <code>backup_profile.json</code> – README-ul kitului arată pașii.</li><li><b>Mac:</b> ledurile citesc aceleași jurnale și pe macOS; kitul propriu-zis și lista de activități planificate sunt pentru Windows.</li></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Ce este Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor este un widget desktop gratuit și open source pentru Windows 10/11 și macOS, care îți arată în timp real limitele de utilizare ale abonamentului Claude</b> – sesiunea de cinci ore, limita săptămânală și limita săptămânală per model, fiecare cu timpul rămas până la resetare. Rămâne deasupra celorlalte ferestre, așa că îți verifici utilizarea Claude fără să deschizi „Settings → Usage” (Setări → Utilizare) și fără terminal.</p>
+  <p class="about__def" data-i18n="about.p2">O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în planul tău – claude.ai, Claude Desktop și Claude Code, pe toate dispozitivele tale. Nu este instrumentul de terminal „Claude Code Usage Monitor”: acesta este un panou grafic cu pictogramă în zona de notificare și nu are nevoie de linia de comandă.</p>
+  <dl class="facts" data-i18n="facts.dl"><dt>Preț</dt><dd>Gratuit – versiunea completă, fără variantă plătită, fără perioadă de probă</dd><dt>Platforme</dt><dd>Windows 10 / 11 (64 de biți) și macOS 12 sau mai nou</dd><dt>Limbi</dt><dd>34 de limbi ale interfeței</dd><dt>Ce afișează</dt><dd>Sesiunea de 5 ore, limita săptămânală, limita săptămânală per model, numărătoarea inversă până la resetare, ritmul și rata de consum</dd><dt>Sursă de date</dt><dd>Jurnalul local al Claude Desktop sau conectarea ta la claude.ai, pentru toate dispozitivele</dd><dt>Confidențialitate</dt><dd>Fără telemetrie, fără reclame, fără cont la noi</dd><dt>Licență</dt><dd>MIT, open source pe GitHub</dd><dt>Autor</dt><dd>Gábor Vidovics, Ungaria – independent, fără legătură cu Anthropic</dd></dl>
+  <p class="fine about__meta"><span data-i18n="about.updated">Ultima actualizare</span>: <time data-win="date">2026-10-07</time> · <span data-i18n="dls.version">Versiunea</span> <span data-win="version">2.7.1</span> · <span data-i18n="about.by">autor:</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Termeni-cheie, definiți precis</summary>
+    <dl>
+      <dt data-i18n="gl.1t">Sesiunea de 5 ore (fereastra de 5 ore)</dt>
+      <dd data-i18n="gl.1d">Limita de utilizare pe termen scurt a lui Claude. Limita bazată pe sesiune se resetează la fiecare cinci ore. Anthropic o numește „current session” (sesiunea curentă); mulți utilizatori îi spun fereastra de 5 ore sau limita de 5 ore.</dd>
+      <dt data-i18n="gl.2t">Limita săptămânală</dt>
+      <dd data-i18n="gl.2d">O a doua limită a planurilor Claude plătite, care se aplică tuturor modelelor și se resetează săptămânal, la o oră fixă atribuită contului tău. Limitele săptămânale sunt în vigoare din 28 august 2025.</dd>
+      <dt data-i18n="gl.3t">Limita săptămânală per model</dt>
+      <dd data-i18n="gl.3d">O limită săptămânală separată pentru un anumit model, afișată pe pagina de utilizare Claude lângă limita pentru toate celelalte modele. Widgetul o arată ca al treilea indicator, pentru modelul ales de tine.</dd>
+      <dt data-i18n="gl.4t">Resetare</dt>
+      <dd data-i18n="gl.4d">Momentul în care o limită revine la 0%. Widgetul face numărătoarea inversă până la el. Cu conectarea la claude.ai, ora exactă vine de la serverul Anthropic; cu jurnalul local, este o estimare.</dd>
+      <dt data-i18n="gl.5t">Ritm</dt>
+      <dd data-i18n="gl.5d">Cu cât ești înaintea sau în urma unei săptămâni consumate uniform. „+12% vs ritm” înseamnă că ai consumat din limita săptămânală cu 12 puncte procentuale mai mult decât partea din săptămână care a trecut.</dd>
+      <dt data-i18n="gl.6t">Rată de consum</dt>
+      <dd data-i18n="gl.6d">Cât de repede se umple o limită chiar în acest moment – procente pe oră pentru sesiune, procente pe zi pentru săptămână – și când ar ajunge la 100% în acest ritm.</dd>
+      <dt data-i18n="gl.7t">Credite de utilizare (extra usage)</dt>
+      <dd data-i18n="gl.7d">Utilizare opțională, cu plată după consum, după ce atingi limitele planului, cu un plafon lunar de cheltuieli. Widgetul arată dacă este activată, plafonul și cât ai cheltuit.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Ce primești</p>
+  <h2 data-i18n="feat.h2">Toate limitele tale de utilizare Claude. Dintr-o privire.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Vezi din timp ce urmează</h3>
+        <p data-i18n="feat.1d">Verde, galben, roșu. Panoul își schimbă culoarea cu mult înainte să rămâi fără limită – cu numărătoare inversă până la resetare și o estimare a momentului în care ai ajunge la 100%.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Utilizare Claude la 78% – widgetul devine galben"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Utilizare Claude la 94% – widgetul devine roșu"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Consumi prea repede?</h3>
+      <p data-i18n="feat.2d">Indicatorul de ritm îți spune dacă limita săptămânală se topește mai repede decât trece săptămâna – și estimează unde vei ajunge.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Toate dispozitivele, o singură cifră</h3>
+      <p data-i18n="feat.3d">Conectează-te din propriul browser – la fel ca în Claude Code – și vezi și utilizarea de pe telefon, din browser și de pe orice alt computer.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Limite per model</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, credite de utilizare – fiecare limită raportată de server, plus împărțirea pe modele din săptămâna aceasta.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Alerte care contează</h3>
+      <p data-i18n="feat.5d">O notificare discretă la 70% și 90% (pragurile le alegi tu) și când limita se resetează. Nimic altceva, niciodată.</p>
+    </article>
+    <article class="cell cell--wide cell--hist reveal">
+      <div class="cell__histhead">
+        <div>
+          <h3 data-i18n="feat.7t">Toată săptămâna într-un singur grafic</h3>
+          <p data-i18n="feat.7d">Dublu clic pe widget: ambele limite pe aceeași axă a timpului – 6 ore, 24 de ore sau 7 zile – cu vârful săptămânal, media zilnică și o estimare pentru sfârșitul săptămânii care își schimbă culoarea înainte să depășești limita.</p>
+        </div>
+        <div class="seg" id="hist-range" role="radiogroup" aria-label="Range">
+          <button type="button" role="radio" aria-checked="false" data-range="6h" data-i18n="hist.r6">6 ore</button>
+          <button type="button" role="radio" aria-checked="false" data-range="24h" data-i18n="hist.r24">24 de ore</button>
+          <button type="button" role="radio" aria-checked="true" data-range="7d" data-i18n="hist.r7">7 zile</button>
+        </div>
+      </div>
+      <img id="hist-img" class="cell__histimg" src="../img/history-7d-midnight.webp" width="1280" height="840" data-i18n-attr="alt:img.history" loading="lazy" decoding="async" alt="Fereastra de istoric Claude Usage Monitor: sesiunea de 5 ore și limita săptămânală în timp, cu vârful săptămânal, consumul zilnic și estimarea pentru sfârșitul săptămânii">
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Nu spionează. Punct.</h3>
+      <p data-i18n="feat.6d">Fără telemetrie, fără analiză, fără cont la noi. Comunică doar cu Anthropic și doar pentru propriile tale cifre. Tokenul tău de conectare rămâne criptat pe computerul tău – prin Windows DPAPI sau în Portcheiul din macOS.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Da, chiar e gratuit.</h2>
+      <p data-i18n="band1.p">Fără perioadă de probă care expiră. Fără presiuni să treci la „Pro”. Fără capcane. Îl descarci și e al tău.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Doar dacă ești curios</p>
+  <h2 data-i18n="tabs.h2">Detaliile – atunci când le vrei.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Ce afișează</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">De unde provin datele</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Confidențialitate și securitate</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Comenzi</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Setări</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Comparație</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>Sesiune de 5 ore</b> – procentul curent, numărătoarea inversă până la resetare, rata de consum (%/oră) și momentul în care s-ar umple.</li><li><b>Limită săptămânală</b> – procentul curent, timpul până la resetarea săptămânală, rata zilnică și ritmul tău față de o săptămână uniformă.</li><li><b>Limită săptămânală per model</b> – un al treilea indicator pentru modelul urmărit (implicit Fable).</li><li><b>Insigna planului</b> – PRO, MAX 5×, MAX 20×, TEAM sau ENTERPRISE.</li><li><b>Fereastra de istoric</b> – grafice pe 6 h / 24 h / 7 zile, vârful săptămânal, media zilnică și o estimare pentru sfârșitul săptămânii.</li><li><b>Pictograma din zona de notificare / bara de meniu</b> – procentul ales, sub formă de inel, cu detalii la trecerea mouse-ului.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Jurnal local <span class="chip">implicit · fără conectare</span></h4><p>Citește jurnalul de utilizare pe care Claude Desktop îl scrie deja pe computerul tău. Nimic nu este trimis nicăieri. Măsoară doar acest computer și se reîmprospătează cam la fiecare 5 minute.</p></div><div><h4>2 · claude.ai <span class="chip">toate dispozitivele</span></h4><p>Aceeași conectare prin browser pe care o folosește Claude Code – fără browser încorporat, fără parolă tastată în aplicație. Ore exacte de resetare de la server, reîmprospătare cam la fiecare 2 minute.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Fără telemetrie.</b> Aplicația nu are analiză și nu „sună acasă” – doar verifică pe acest site dacă există o versiune nouă.</li><li><b>Tokenul tău rămâne al tău.</b> Criptat cu Windows DPAPI sau păstrat în Portcheiul din macOS. Niciodată într-un fișier simplu.</li><li><b>Conversațiile nu sunt citite niciodată.</b> Din jurnalele locale se folosesc doar numele modelului, numărul de tokenuri și marcajele de timp.</li><li><b>Actualizări verificate.</b> Doar prin HTTPS, iar fiecare descărcare este verificată cu SHA-256 înainte de instalare; dacă ceva nu merge, revine versiunea veche.</li><li><b>Open source.</b> Nu te încrede orbește – verifică: tot codul sursă e pe GitHub, sub licența MIT.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Tragere</th><td>mută panoul (se fixează la marginile ecranului)</td></tr><tr><th>Clic dreapta</th><td>meniu: dispunere, temă, dimensiune, limbă, setări</td></tr><tr><th>Dublu clic</th><td>fereastra de istoric și statistici</td></tr><tr><th>Ctrl + rotiță</th><td>redimensionare</td></tr><tr><th>Clic pe pictograma din zona de notificare</th><td>ascunde / afișează panoul</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Aspect</b> – 6 teme, culoare de accent personalizată, 3 dispuneri, dimensiune, opacitate, întotdeauna deasupra, poziție blocată, transparent la clic.</li><li><b>Conținut</b> – ce indicatoare apar, ordinea și dimensiunea lor, curba de tendință, rata de consum, numărătoarea inversă.</li><li><b>Alerte</b> – pragurile de avertizare și critic (implicit 70% / 90%), notificări la resetare și la date învechite.</li><li><b>Sistem</b> – pornire odată cu computerul, actualizări automate, 34 de limbi.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Pagina „Settings → Usage” (Setări → Utilizare) din Claude</th><th>Instrumente de terminal care citesc jurnalele Claude Code</th></tr><tr><th>Mereu la vedere în timp ce lucrezi</th><td>Da – widget mereu deasupra și pictogramă în zona de notificare</td><td>Nu – trebuie s-o deschizi</td><td>Doar într-un terminal deschis</td></tr><tr><th>Windows și macOS</th><td>Da, o singură aplicație pentru ambele</td><td>Da (pagină web)</td><td>Variază, linie de comandă</td></tr><tr><th>Are nevoie de terminal</th><td>Nu</td><td>Nu</td><td>Da</td></tr><tr><th>Adună claude.ai, Claude Desktop și Claude Code de pe toate dispozitivele</th><td>Da, cu conectare la claude.ai</td><td>Da</td><td>Nu – doar Claude Code de pe acest computer</td></tr><tr><th>Ritm, rată de consum și estimare pentru sfârșitul săptămânii</th><td>Da</td><td>Nu</td><td>Unele</td></tr><tr><th>Alerte la pragurile tale</th><td>Da (implicit 70% / 90%)</td><td>Nu</td><td>Rareori</td></tr><tr><th>Preț</th><td>Gratuit, open source (MIT)</td><td>Inclus în planul tău</td><td>În general gratuite</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Fă-l al tău</p>
+    <h2 data-i18n="th.h2">6 teme. 3 dispuneri. Încearcă-le chiar aici.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor în tema și dispunerea alese">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Temă</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Sticlă de noapte</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude (cald, întunecat)</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Grafit</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neon</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Hârtie deschisă</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Galben post-it</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Sticlă de un albastru profund, cu o strălucire rece. Tema implicită – calmă, lizibilă, la locul ei pe orice desktop întunecat.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Dispunere</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Card post-it</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Inele</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Bară subțire</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">Plus culoarea ta de accent, dimensiune de la 70% la 200% și opacitate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Preț</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Gratuit. Integral. Pentru totdeauna.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Versiunea completă – nu există alta</li><li>Fără demo, fără perioadă de probă, fără limită de timp</li><li>Fără nivel „Pro”, fără funcții blocate</li><li>Fără reclame, fără înregistrare, fără colectare de date</li><li>Actualizări gratuite, automat</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Descărcare</p>
+    <h2 data-i18n="dls.h2">Mereu cea mai nouă versiune. Mereu gratuit.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">GRATUIT</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Descarcă pentru Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Versiunea</span> <b data-win="version">2.7.1</b> · <span data-win="size">47 MB</span> · <span data-win="date">2026-10-07</span></p>
+        <details><summary data-i18n="dls.how">Instalare în 3 pași</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Dezarhivează tot fișierul zip</b> (clic dreapta → Extrage tot…).</li><li>Dublu clic pe <code>INSTALL.bat</code>.</li><li>Răspunde la două întrebări – Enter acceptă răspunsul recomandat. Gata.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Nu sunt necesare drepturi de administrator. Dacă Windows afișează „Windows a protejat PC-ul”: Mai multe informații → Rulează oricum. Aplicația este open source, dar nu este semnată digital.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Verifică descărcarea (SHA-256)</summary><code class="sha" data-win="sha">1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">GRATUIT</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Descarcă pentru macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Versiunea</span> <b data-mac="version">2.6.1</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-21</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">Versiunea pentru macOS e pe drum – revino în curând.</p>
+        <details><summary data-i18n="dls.how">Instalare în 3 pași</summary>
+          <ol data-i18n="dls.mac_steps"><li>Deschide fișierul zip și trage <b>ClaudeUsageMonitor</b> în <b>Aplicații</b>.</li><li>Prima pornire: <b>clic dreapta → Deschide</b> (aplicația nu este notarizată de Apple).</li><li>Caută pictograma în bara de meniu. Gata.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Verifică descărcarea (SHA-256)</summary><code class="sha" data-mac="sha">86d75d796269812dbc7b1050ef1f207c1a367a45fd5965f1090daefc3c8f76c9</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">descărcări de pe această pagină până în prezent</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Prin descărcare accepți <a href="#terms" data-legal="terms">Condițiile de utilizare</a>: aplicația și Backup Kit sunt gratuite și sunt furnizate „ca atare”, fără nicio garanție, pe propriul tău risc.</p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Aceste butoane duc mereu la cea mai nouă versiune – iar odată instalată, aplicația se actualizează singură.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Dezvoltat activ</p>
+  <h2><span data-i18n="new.h2">Noutăți în versiunea</span> <span class="grad" data-win="version">2.7.1</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Notele de lansare sunt scrise în engleză și maghiară.</p>
+  <ul class="notes" id="notes"><li>Fereastra „Mesaj către dezvoltator” se vede mai bine: evaluarea afișează acum stele mai mari și bine vizibile, iar caseta obligatorie de consimțământ stă într-un chenar evidențiat – dacă încerci să trimiți fără s-o bifezi, chenarul devine roșu. O poți bifa și dând clic pe textul de lângă ea.</li><li>Toate casetele de bifat din program (Setări, fereastra de mesaj) se văd acum clar pe fundalul întunecat: un chenar deschis la culoare, iar când sunt bifate, un pătrat portocaliu cu o bifă albă.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Versiuni anterioare</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Primește un e-mail când apare o versiune nouă</h3>
+      <p data-i18n="sub.p">Doar vești despre versiunile noi – câteva rânduri scurte pentru fiecare. Niciodată marketing. Te dezabonezi dintr-un clic.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Anunță-mă</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">Sunt de acord ca adresa mea de e-mail să fie folosită pentru a-mi trimite notificări despre versiunile noi, conform <a href="#privacy" data-legal="privacy">Politicii de confidențialitate</a>. Îmi pot retrage acordul oricând.</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Protejat împotriva spamului de reCAPTCHA – se aplică <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politica de confidențialitate</a> și <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Termenii și condițiile</a> Google.</p>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Recomandat pentru</p>
+    <h2 data-i18n="who.h2">Dacă te regăsești aici, o să-ți placă.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Dezvoltatori care folosesc Claude Code</b><span data-i18n="who.1d">Rulările lungi ale agenților consumă repede sesiunea de 5 ore. Vezi asta înainte să te oprească în mijlocul unei sarcini.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Abonați Pro și Max</b><span data-i18n="who.2d">Scoate maximum din ce plătești – fără să te lovești de zid încă de joi.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Cei care folosesc multe dispozitive</b><span data-i18n="who.3d">Telefon, browser, laptop, desktop: o singură cifră cinstită pentru toate.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Oricine iubește un desktop ordonat</b><span data-i18n="who.4d">Un panou mic și arătos care nu te încurcă – sau se micșorează la o bară subțire.</span></div>
+    </div>
+
+    <div class="reviews" id="reviews" hidden>
+      <h3 class="reviews__h" data-i18n="rev.h">Ce spun utilizatorii</h3>
+      <p class="reviews__sum" id="rating-sum" hidden><span class="quote__stars" aria-hidden="true">★★★★★</span> <b data-r="avg">0</b> / 5 · <span data-i18n="rev.count">evaluări trimise direct din aplicație</span>: <b data-r="count">0</b></p>
+      <div id="testimonials" class="quotes"></div>
+      <p class="fine reviews__how" data-i18n="rev.how">Aici apar doar mesajele pe care expeditorii au acceptat să le publicăm și pe care autorul le-a citit. Folosești aplicația? Clic dreapta pe panou → <b>Mesaj către dezvoltator…</b> – dă o notă și spune-mi ce părere ai.</p>
+    </div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">„Am făcut-o pentru mine, pentru că mă tot loveam de limită în mijlocul lucrului. Apoi am șlefuit-o până când mi-a făcut plăcere să mă uit la ea toată ziua. E gratuită pentru că un asemenea instrument așa ar trebui să fie – folosește-l, bucură-te de el și spune-mi ce părere ai.”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">creatorul și dezvoltatorul Claude Usage Monitor · Ungaria</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Codul sursă pe GitHub</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Scrie-mi</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Întrebări despre limitele de utilizare Claude – răspunsuri scurte.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Chiar e gratuit? Unde e capcana?</summary><p data-i18n="faq.a1">Chiar e gratuit și nu există nicio capcană. Nu e demo, nu e versiune de probă și nici o ediție limitată – aceasta este versiunea completă și singura. Fără reclame, fără variantă plătită, fără colectare de date. Codul sursă este public, sub licența MIT.</p></details>
+    <details><summary data-i18n="faq.q8">Pot verifica utilizarea Claude fără să deschid Setările?</summary><p data-i18n="faq.a8">Da: instalează Claude Usage Monitor. Îți ține permanent pe ecran sesiunea de cinci ore, limita săptămânală și limita per model, ca widget mic, mereu deasupra, și ca procent în zona de notificare sau în bara de meniu. Cifrele oficiale Claude sunt la „Settings → Usage” (Setări → Utilizare); widgetul îți arată aceleași limite fără niciun clic.</p></details>
+    <details><summary data-i18n="faq.q9">Când se resetează sesiunea de 5 ore și limita săptămânală Claude?</summary><p data-i18n="faq.a9">Limita bazată pe sesiune se resetează la fiecare cinci ore. Limita săptămânală se resetează o dată pe săptămână, la o oră fixă pe care Anthropic o atribuie contului tău, deci diferă de la o persoană la alta. Widgetul arată o numărătoare inversă live până la ambele resetări – cu conectarea la claude.ai folosește orele exacte de la serverul Anthropic.</p></details>
+    <details><summary data-i18n="faq.q10">Utilizarea Claude Code se socotește în limita mea de pe claude.ai?</summary><p data-i18n="faq.a10">Da. Potrivit Anthropic, utilizarea pe claude.ai, în Claude Desktop și în Claude Code se socotește în aceeași limită de utilizare. De aceea, în modul claude.ai, widgetul arată o singură cifră pentru toate dispozitivele și aplicațiile tale, nu doar pentru computerul pe care rulează.</p></details>
+    <details><summary data-i18n="faq.q11">Este același lucru cu „Claude Code Usage Monitor”?</summary><p data-i18n="faq.a11">Nu. „Claude Code Usage Monitor” este un instrument separat, pentru terminal, creat de alt autor. Claude Usage Monitor, realizat de Gábor Vidovics, este un widget desktop grafic pentru Windows și macOS, cu pictogramă în zona de notificare, teme și alerte, și nu are nevoie de linia de comandă.</p></details>
+    <details><summary data-i18n="faq.q13">Unde pot evalua Claude Usage Monitor sau trimite feedback?</summary><p data-i18n="faq.a13">Dă clic dreapta pe panou și alege „Mesaj către dezvoltator…” sau dă clic pe pictograma de mesaj din antetul panoului. Poți acorda între una și cinci stele, poți scrie un mesaj și – doar dacă bifezi – poți permite afișarea evaluării și a numelui tău pe acest site. Fiecare mesaj este citit de autor, Gábor Vidovics, și nimic nu se publică fără acordul tău. Fără aplicație, folosește formularul din partea de jos a acestei pagini.</p></details>
+    <details><summary data-i18n="faq.q14">În ce limbi este disponibil Claude Usage Monitor?</summary><p data-i18n="faq.a14">În 34 de limbi: toate limbile oficiale ale Uniunii Europene, plus japoneză, coreeană, chineză simplificată și tradițională, indoneziană și vietnameză – cu versiuni separate pentru portugheza europeană și cea braziliană și pentru spaniola din Spania și cea din America Latină. Aplicația alege singură limba sistemului tău, iar acest site există și el în fiecare dintre aceste limbi.</p></details>
+    <details><summary data-i18n="faq.q15">Funcționează cu Claude Pro, Max, Team și Enterprise?</summary><p data-i18n="faq.a15">Da. Afișează limitele pe care le are propriul tău plan Claude – Pro, Max 5×, Max 20×, Team sau Enterprise –, adică aceleași pe care Claude le listează la „Settings → Usage” (Setări → Utilizare), iar insigna planului din antetul panoului îți spune ce plan ai.</p></details>
+    <details><summary data-i18n="faq.q12">Poate Claude Usage Monitor să arate dacă fișierele mele Claude au backup?</summary><p data-i18n="faq.a12">Da – și tot gratuit. Cu bara de stare backup activată, trei leduri pe panou arată dacă backupul în OneDrive, cel într-un al doilea cloud, de exemplu Nextcloud, și cel al seifului Obsidian sunt la zi: verde până la 24 de ore, galben până la 48, roșu când e mai vechi sau lipsește și un inel roșu când ultima rulare a eșuat. Monitorul doar citește jurnalele de backup; backupul propriu-zis îl face Claude Backup Kit, gratuit, care copiază zilnic skill-urile tale Claude Code, CLAUDE.md, memoria proiectelor, setările Claude Desktop și jurnalele agenților – niciodată tokenul de conectare. Kitul este un punct de plecare gratuit pe care oricine îl poate modifica, așa că nu ne asumăm nicio răspundere pentru backupuri: fiecare utilizator trebuie să se asigure că acestea sunt complete și pot fi restaurate.</p></details>
+    <details><summary data-i18n="faq.q2">Este un produs oficial Anthropic?</summary><p data-i18n="faq.a2">Nu. Este un instrument independent al comunității, creat de Gábor Vidovics. Nu este afiliat cu Anthropic. „Claude” este o marcă comercială a Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Trebuie să-i dau parola mea?</summary><p data-i18n="faq.a3">Niciodată. Fără conectare, citește jurnalul local al Claude Desktop. Dacă vrei toate dispozitivele, te conectezi la claude.ai în propriul browser – aplicația nu îți vede niciodată parola.</p></details>
+    <details><summary data-i18n="faq.q4">Windows mă avertizează când o pornesc. De ce?</summary><p data-i18n="faq.a4">Pentru că aplicația nu este semnată digital (certificatele costă bani, iar aplicația e gratuită). Dă clic pe Mai multe informații → Rulează oricum. Poți verifica descărcarea cu suma de control SHA-256 și poți citi codul sursă pe GitHub.</p></details>
+    <details><summary data-i18n="faq.q5">Ce modele de Mac sunt acceptate?</summary><p data-i18n="faq.a5">macOS 12 sau mai nou. Cardul de descărcare de mai sus arată mereu pentru ce procesor este versiunea curentă. Versiunea pentru macOS este nouă – feedbackul este binevenit.</p></details>
+    <details><summary data-i18n="faq.q6">Actualizările se fac automat?</summary><p data-i18n="faq.a6">Da. Aplicația verifică acest site de câteva ori pe zi. Când apare o versiune nouă, te anunță; un clic o descarcă, o verifică și o instalează, apoi aplicația repornește. Poți dezactiva această funcție.</p></details>
+    <details><summary data-i18n="faq.q7">Ce trebuie să fac ca s-o dezinstalez?</summary><p data-i18n="faq.a7">Windows: Setări → Aplicații → Aplicații instalate → Claude Usage Monitor → Dezinstalare. macOS: trage aplicația în Coș. Asta e tot.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Vorbește cu autorul</p>
+      <h2 data-i18n="fb.h2">O idee? O eroare? Sau pur și simplu îți place? Spune-mi.</h2>
+      <p data-i18n="fb.p">Mesajul tău ajunge direct la mine, Gábor Vidovics. Le citesc pe toate. Lasă o adresă de e-mail doar dacă vrei un răspuns.</p>
+      <p class="fine" data-i18n="fb.privacy">Mesajul tău este folosit doar ca să-ți răspund și ca să îmbunătățesc aplicația – detalii în <a href="#privacy" data-legal="privacy">Politica de confidențialitate</a>.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Nume</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-mail</span> <i data-i18n="fb.optional">(opțional)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">Despre ce este vorba?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Feedback</option>
+          <option value="idea" data-i18n="fb.t_idea">Idee / cerere de funcție</option>
+          <option value="bug" data-i18n="fb.t_bug">Raportare de eroare</option>
+          <option value="recommend" data-i18n="fb.t_rec">Îl recomand! (testimonial)</option>
+          <option value="other" data-i18n="fb.t_other">Altceva</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Mesaj</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Sunt de acord ca mesajul meu să fie publicat pe această pagină ca recomandare (doar cu numele meu).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Trimite mesajul</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Protejat împotriva spamului de reCAPTCHA – se aplică <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politica de confidențialitate</a> și <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Termenii și condițiile</a> Google.</p>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">În două minute vei ști exact unde te afli.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Descarcă gratuit pentru</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Gratuit. Pentru totdeauna.</b> Nu e demo. Nu e versiune de probă. Nimic blocat.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.7.1</span></p>
+      <p><span data-i18n="foot.made">Proiectat și realizat de</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Instrument neoficial al comunității, neafiliat cu Anthropic. „Claude” este o marcă comercială a Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">Licență MIT</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">Istoric modificări</a>
+      <a href="#feedback" data-i18n="foot.contact">Contact</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Politica de confidențialitate</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Informații legale</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Condiții de utilizare</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Setări cookie-uri</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Această pagină nu folosește cookie-uri, nici instrumente de urmărire și nu încarcă nimic de la terți.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Închide">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">Textele juridice sunt disponibile în maghiară și engleză. Versiunea în limba maghiară este cea care prevalează.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Da, dezabonează-mă</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Închide</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookie-uri – tu alegi</h2>
+  <p data-i18n="ck.p">Pagina funcționează complet și fără cookie-uri. Cu permisiunea ta, măsurătorile Google îl ajută pe autor să vadă câți oameni vizitează site-ul. Nu se încarcă nimic până nu ești de acord.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Necesare – memorarea limbii și a acestei alegeri (fără cookie-uri, doar stocare locală)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Statistici – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Marketing – măsurarea conversiilor Google Ads</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Refuz</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Setări</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Salvează alegerea</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Accept tot</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Politica de confidențialitate</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% GRATUIT</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Trimite linkul pe computerul meu</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script id="um-hints" type="application/json">{"en":"This page is also available in English","bg":"Тази страница е достъпна и на български","cs":"Tato stránka je k dispozici i v češtině","da":"Denne side findes også på dansk","de":"Diese Seite gibt es auch auf Deutsch","et":"See leht on saadaval ka eesti keeles","el":"Αυτή η σελίδα είναι διαθέσιμη και στα ελληνικά","es":"Esta página también está disponible en español","es-419":"Esta página también está disponible en español de Latinoamérica","fr":"Cette page existe aussi en français","ga":"Tá an leathanach seo ar fáil i nGaeilge freisin","hr":"Ova je stranica dostupna i na hrvatskom","id":"Halaman ini juga tersedia dalam bahasa Indonesia","it":"Questa pagina è disponibile anche in italiano","lv":"Šī lapa ir pieejama arī latviešu valodā","lt":"Šį puslapį galima skaityti ir lietuviškai","hu":"Ez az oldal magyarul is elérhető","mt":"Din il-paġna hija disponibbli wkoll bil-Malti","nl":"Deze pagina is ook beschikbaar in het Nederlands","pl":"Ta strona jest dostępna także po polsku","pt":"Esta página também está disponível em português","pt-pt":"Esta página também está disponível em português europeu","ro":"Această pagină este disponibilă și în limba română","ru":"Эта страница есть и на русском языке","sk":"Táto stránka je dostupná aj po slovensky","sl":"Ta stran je na voljo tudi v slovenščini","fi":"Tämä sivu on saatavilla myös suomeksi","sv":"Den här sidan finns även på svenska","tr":"Bu sayfa Türkçe olarak da mevcut","vi":"Trang này cũng có bằng tiếng Việt","ja":"このページは日本語でもご覧いただけます","ko":"이 페이지는 한국어로도 볼 수 있어요","zh-cn":"本页面也提供简体中文版","zh-tw":"本頁也提供繁體中文版"}</script>
+<script src="../assets/site.js?v=10" defer></script>
+</body>
+</html>

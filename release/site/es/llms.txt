@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Español (España))
+
+> Claude Usage Monitor: widget gratis y de código abierto para Windows y macOS. Ve tu límite de uso de Claude: sesión de 5 horas, límite semanal y reinicio.
+
+Claude Usage Monitor es un widget de escritorio gratuito y de código abierto para Windows 10/11 y macOS que muestra en tiempo real los límites de uso de tu suscripción a Claude – la sesión de cinco horas, el límite semanal y el límite semanal por modelo, cada uno con el tiempo que falta para su reinicio. Se queda por encima de tus otras ventanas, así que puedes ver tu uso de Claude sin abrir Configuración → Uso y sin terminal.
+
+Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan – claude.ai, Claude Desktop y Claude Code, en todos tus dispositivos. No es la herramienta de terminal “Claude Code Usage Monitor”: esta es un panel gráfico con icono en la bandeja del sistema, y no necesita línea de comandos.
+
+- **Precio**: Gratis – la versión completa, sin plan de pago ni periodo de prueba
+- **Plataformas**: Windows 10 / 11 (64 bits) y macOS 12 o posterior
+- **Idiomas**: Interfaz en 34 idiomas
+- **Qué muestra**: Sesión de 5 horas, límite semanal, límite semanal por modelo, cuenta atrás hasta el reinicio, ritmo y velocidad de consumo
+- **Origen de datos**: El registro local de Claude Desktop o tu inicio de sesión en claude.ai para todos tus dispositivos
+- **Privacidad**: Sin telemetría, sin anuncios, sin cuenta con nosotros
+- **Licencia**: MIT, código abierto en GitHub
+- **Autor**: Gábor Vidovics, Hungría – independiente, sin vínculo con Anthropic
+
+- Versión: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/es/
+
+## Todos tus límites de uso de Claude. De un vistazo.
+
+- **Lo ves venir**: Verde, amarillo, rojo. El panel cambia de color mucho antes de que alcances tu límite – con cuenta atrás hasta el reinicio y una estimación de cuándo llegarías al 100%.
+- **¿Estás gastando demasiado rápido?**: El indicador de ritmo te dice si estás consumiendo tu límite semanal más rápido de lo que avanza la semana – y proyecta dónde vas a terminar.
+- **Todos tus dispositivos, una sola cifra**: Inicia sesión desde tu propio navegador – igual que Claude Code – y verás también el uso de tu teléfono, tu navegador y todos tus demás ordenadores.
+- **Límites por modelo**: Fable, Opus, Sonnet, Claude Code, créditos de uso – todos los límites que informa el servidor, más el reparto de esta semana entre modelos.
+- **Avisos que importan**: Una notificación discreta al 70% y al 90% (tú eliges), y cuando tu límite se reinicia. Nada más, nunca.
+- **No espía. Punto.**: Sin telemetría, sin analíticas, sin cuenta con nosotros. Solo habla con Anthropic, y solo para obtener tus propias cifras. Tu token de sesión se queda cifrado en tu ordenador – con Windows DPAPI o en el Llavero de macOS.
+- **Toda tu semana en un solo gráfico**: Doble clic en el widget: los dos límites en una misma línea de tiempo – 6 horas, 24 horas o 7 días – con el pico semanal, la media diaria y una proyección al final de la semana que cambia de color antes de que te pases.
+
+## FAQ
+
+### ¿De verdad es gratis? ¿Dónde está la trampa?
+Gratis de verdad, y no hay trampa. No es una demo, no es una prueba ni una edición recortada – es la versión completa y la única. Sin anuncios, sin plan de pago, sin recopilación de datos. El código fuente es público bajo licencia MIT.
+
+### ¿Es un producto oficial de Anthropic?
+No. Es una herramienta independiente de la comunidad, creada por Gábor Vidovics. No está afiliada a Anthropic. “Claude” es una marca comercial de Anthropic, PBC.
+
+### ¿Tengo que darle mi contraseña?
+Nunca. Sin iniciar sesión, lee el registro local de Claude Desktop. Si quieres ver todos tus dispositivos, inicias sesión en claude.ai desde tu propio navegador – la app jamás ve tu contraseña.
+
+### Windows me muestra una advertencia al ejecutarla. ¿Por qué?
+Porque la app no lleva firma de código (los certificados cuestan dinero; la app es gratis). Haz clic en Más información → Ejecutar de todas formas. Puedes verificar la descarga con su suma de comprobación SHA-256 y leer el código en GitHub.
+
+### ¿Qué Mac son compatibles?
+macOS 12 o posterior. La tarjeta de descarga de arriba indica siempre para qué procesador está compilada la versión actual. La versión para macOS es nueva – tus comentarios son muy bienvenidos.
+
+### ¿Cómo funcionan las actualizaciones?
+La app consulta este sitio unas cuantas veces al día. Cuando hay una versión nueva, te avisa; con un clic la descarga, la verifica, la instala y se reinicia. Puedes desactivarlo.
+
+### ¿Cómo la desinstalo?
+Windows: Configuración → Aplicaciones → Aplicaciones instaladas → Claude Usage Monitor → Desinstalar. macOS: arrastra la app a la Papelera. Eso es todo.
+
+### ¿Cómo puedo ver mi uso de Claude sin abrir Configuración?
+Instala Claude Usage Monitor: mantiene en pantalla todo el tiempo tu sesión de cinco horas, tu límite semanal y tu límite por modelo, como un pequeño widget siempre visible y como un porcentaje en la bandeja del sistema o en la barra de menús. Las cifras del propio Claude están en Configuración → Uso (en inglés, “Settings → Usage”); el widget muestra los mismos límites sin hacer ningún clic.
+
+### ¿Cuándo se reinician la sesión de 5 horas y el límite semanal de Claude?
+El límite de uso basado en sesiones se reinicia cada cinco horas. El límite semanal se reinicia cada semana a una hora fija que Anthropic asigna a tu cuenta, así que cambia de una persona a otra. El widget muestra una cuenta atrás en vivo hasta ambos reinicios – con el inicio de sesión en claude.ai usa las horas exactas del servidor de Anthropic.
+
+### ¿El uso de Claude Code cuenta para mi límite de claude.ai?
+Sí. Según Anthropic, el uso en claude.ai, Claude Desktop y Claude Code cuenta para el mismo límite de uso. Por eso el modo claude.ai del widget muestra una sola cifra para todos tus dispositivos y apps, no solo para el ordenador donde está instalado.
+
+### ¿Es lo mismo que “Claude Code Usage Monitor”?
+No. “Claude Code Usage Monitor” es otra herramienta, de terminal y de otro autor. Claude Usage Monitor, de Gábor Vidovics, es un widget gráfico de escritorio para Windows y macOS con icono en la bandeja del sistema, temas y avisos, y no necesita línea de comandos.
+
+### ¿Puede Claude Usage Monitor mostrar si mis archivos de Claude tienen copia de seguridad?
+Sí – y también es gratis. Con la barra de estado de copias activada, tres indicadores en el panel muestran si la copia en OneDrive, la copia en una segunda nube como Nextcloud y la de tu bóveda de Obsidian están al día: verde hasta 24 horas, amarillo hasta 48, rojo si es más antigua o no existe, y un anillo rojo si la última ejecución falló. El monitor solo lee los registros de las copias; la copia en sí la hace el Claude Backup Kit gratis, que copia cada día tus skills de Claude Code, CLAUDE.md, la memoria de proyecto, la configuración de Claude Desktop y los registros de los agentes – nunca el token de inicio de sesión. El kit es un punto de partida gratuito que cualquiera puede modificar, por eso no asumimos ninguna responsabilidad por las copias: asegurarse de que estén completas y se puedan restaurar corresponde a cada usuario.
+
+### ¿Cómo puedo valorar Claude Usage Monitor o enviar mis comentarios?
+Haz clic derecho en el panel y elige “Mensaje al desarrollador…”, o haz clic en el icono de mensaje de la cabecera del panel. Puedes dar de una a cinco estrellas, escribir un mensaje y – solo si marcas la casilla – permitir que tu valoración y tu nombre aparezcan en esta web. Todos los mensajes los lee el autor, Gábor Vidovics, y no se publica nada sin tu consentimiento. Si no tienes la app, usa el formulario que encontrarás al final de esta página.
+
+### ¿En qué idiomas está disponible Claude Usage Monitor?
+En 34 idiomas: todas las lenguas oficiales de la Unión Europea, además de japonés, coreano, chino simplificado y tradicional, indonesio y vietnamita – con versiones separadas para el portugués europeo y el de Brasil, y para el español de España y el de Latinoamérica. La app elige por sí sola el idioma de tu sistema, y esta web también está disponible en todos esos idiomas.
+
+### ¿Funciona con Claude Pro, Max, Team y Enterprise?
+Sí. Muestra los límites de tu propio plan de Claude – Pro, Max 5×, Max 20×, Team o Enterprise –, los mismos que Claude indica en Configuración → Uso, y el distintivo del plan en la cabecera del panel te dice qué plan tienes.

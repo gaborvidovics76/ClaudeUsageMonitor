@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Türkçe)
+
+> Windows ve macOS için ücretsiz, açık kaynaklı Claude kullanım limiti widget'ı: 5 saatlik oturum, haftalık limit, sıfırlanma geri sayımı ve uyarılar.
+
+Claude Usage Monitor, Claude aboneliğinin kullanım limitlerini gerçek zamanlı gösteren, Windows 10/11 ve macOS için ücretsiz ve açık kaynaklı bir masaüstü widget'ıdır – 5 saatlik oturum, haftalık limit ve model bazında haftalık limit; her biri sıfırlanmaya kalan süreyle birlikte. Diğer pencerelerinin üstünde durur. Böylece Claude kullanımını “Settings → Usage” (Ayarlar → Kullanım) sayfasını açmadan ve terminal kullanmadan kontrol edersin.
+
+Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: claude.ai, Claude Desktop ve Claude Code, tüm cihazlarında. Terminal aracı “Claude Code Usage Monitor” ile aynı şey değildir: bu, tepsi simgesi olan grafik bir paneldir ve komut satırı gerektirmez.
+
+- **Fiyat**: Ücretsiz – tam sürüm; ücretli paket yok, deneme süresi yok
+- **Platformlar**: Windows 10 / 11 (64 bit) ve macOS 12 veya üzeri
+- **Diller**: 34 arayüz dili
+- **Ne gösterir**: 5 saatlik oturum, haftalık limit, model bazında haftalık limit, sıfırlanmaya geri sayım, tempo ve harcama hızı
+- **Veri kaynağı**: Claude Desktop'ın yerel günlüğü ya da tüm cihazlar için claude.ai girişin
+- **Gizlilik**: Telemetri yok, reklam yok, bizde hesap açmak yok
+- **Lisans**: MIT, GitHub'da açık kaynak
+- **Geliştirici**: Gábor Vidovics, Macaristan – bağımsız, Anthropic ile bağlantısı yok
+
+- Sürüm: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/tr/
+
+## Tüm Claude kullanım limitlerin. Tek bakışta.
+
+- **Geldiğini önceden gör**: Yeşil, sarı, kırmızı. Panel, limitin bitmeden çok önce renk değiştirir – sıfırlanmaya geri sayım ve %100'e ne zaman ulaşacağının tahminiyle birlikte.
+- **Fazla mı hızlı harcıyorsun?**: Tempo göstergesi, haftalık limitinin haftanın kendisinden hızlı eriyip erimediğini söyler – ve haftanın sonunda nerede olacağını öngörür.
+- **Tüm cihazların, tek rakam**: Kendi tarayıcından giriş yap – tıpkı Claude Code gibi – ve telefonundaki, tarayıcındaki ve diğer tüm bilgisayarlarındaki kullanımı da gör.
+- **Model bazında limitler**: Fable, Opus, Sonnet, Claude Code, kullanım kredileri – sunucunun bildirdiği her limit, üstüne bu haftanın modellere göre dağılımı.
+- **Sadece önemli uyarılar**: %70 ve %90'da (eşikleri sen seçersin) ve limitin sıfırlandığında sessiz bir bildirim. Başka hiçbir şey yok. Asla.
+- **Gözetlemez. Nokta.**: Telemetri yok, analitik yok, bizde hesap açmak yok. Yalnızca Anthropic ile, yalnızca senin rakamların için konuşur. Giriş token'ın bilgisayarında şifreli olarak kalır – Windows DPAPI veya macOS Anahtar Zinciri ile.
+- **Bütün haftan tek grafikte**: Widget'a çift tıkla: iki limit tek zaman çizelgesinde – 6 saat, 24 saat veya 7 gün – haftalık zirve, günlük ortalama ve sen limiti aşmadan önce renk değiştiren hafta bitimi tahminiyle.
+
+## FAQ
+
+### Gerçekten ücretsiz mi? İşin içinde ne var?
+Gerçekten ücretsiz ve işin içinde hiçbir şey yok. Demo değil, deneme sürümü değil, kırpılmış bir sürüm de değil – bu, tam ve tek sürüm. Reklam yok, ücretli paket yok, veri toplama yok. Kaynak kodu MIT lisansıyla herkese açık.
+
+### Bu resmî bir Anthropic ürünü mü?
+Hayır. Gábor Vidovics tarafından geliştirilen bağımsız bir topluluk aracıdır. Anthropic ile hiçbir bağlantısı yoktur. “Claude”, Anthropic, PBC'nin ticari markasıdır.
+
+### Şifremi vermem gerekiyor mu?
+Asla. Giriş yapmadan Claude Desktop'ın yerel günlüğünü okur. Tüm cihazlarını görmek istersen claude.ai'ye kendi tarayıcından giriş yaparsın – uygulama şifreni hiçbir zaman görmez.
+
+### Çalıştırınca Windows beni uyarıyor. Neden?
+Çünkü uygulamanın kod imzası yok (sertifikalar paralı, uygulama ise ücretsiz). Ek bilgi → Yine de çalıştır'a tıkla. İndirdiğin dosyayı SHA-256 sağlama toplamıyla doğrulayabilir, kaynak kodunu GitHub'da okuyabilirsin.
+
+### Hangi Mac'ler destekleniyor?
+macOS 12 veya daha yenisi. Yukarıdaki indirme kartı, güncel derlemenin hangi işlemci için olduğunu her zaman gösterir. macOS sürümü yeni – geri bildirimin çok değerli.
+
+### Güncellemeler nasıl işliyor?
+Uygulama günde birkaç kez bu siteyi kontrol eder. Yeni sürüm çıkınca sana haber verir; tek tıkla indirir, doğrular, kurar ve yeniden başlar. İstersen bunu kapatabilirsin.
+
+### Nasıl kaldırırım?
+Windows: Ayarlar → Uygulamalar → Yüklü uygulamalar → Claude Usage Monitor → Kaldır. macOS: uygulamayı Çöp Sepeti'ne sürükle. Hepsi bu.
+
+### Ayarlar'ı açmadan Claude kullanımımı nasıl kontrol ederim?
+Claude Usage Monitor'ü kur: 5 saatlik oturumunu, haftalık limitini ve model bazında haftalık limitini sürekli ekranda tutar – her zaman üstte duran küçük bir widget ve sistem tepsisinde ya da menü çubuğunda bir yüzde olarak. Claude'un kendi rakamları “Settings → Usage” (Ayarlar → Kullanım) altında durur; widget aynı limitleri hiç tıklamadan gösterir.
+
+### Claude 5 saatlik oturum ve haftalık limit ne zaman sıfırlanır?
+Oturuma dayalı limit her beş saatte bir sıfırlanır. Haftalık limit, Anthropic'in hesabına atadığı sabit bir saatte her hafta sıfırlanır; bu yüzden kişiden kişiye değişir. Widget her iki sıfırlanmaya da canlı geri sayım gösterir – claude.ai girişiyle Anthropic'in sunucusundaki kesin saatleri kullanır.
+
+### Claude Code kullanımı claude.ai limitime sayılıyor mu?
+Evet. Anthropic'e göre claude.ai, Claude Desktop ve Claude Code kullanımı aynı kullanım limitine sayılır. Bu yüzden widget'ın claude.ai modu, yalnızca çalıştığı bilgisayar için değil, tüm cihazların ve uygulamaların için tek bir rakam gösterir.
+
+### Bu, “Claude Code Usage Monitor” ile aynı şey mi?
+Hayır. “Claude Code Usage Monitor”, başka bir geliştiricinin terminal tabanlı, ayrı bir aracıdır. Gábor Vidovics'in Claude Usage Monitor'ü ise Windows ve macOS için grafik bir masaüstü widget'ıdır; tepsi simgesi, temaları ve uyarıları vardır, komut satırı gerektirmez.
+
+### Claude Usage Monitor, Claude dosyalarımın yedeklenip yedeklenmediğini gösterebilir mi?
+Evet – üstelik bu da ücretsiz. Yedek durum çubuğu açıkken paneldeki üç lamba, OneDrive'a, Nextcloud gibi ikinci bir buluta ve Obsidian kasana alınan yedeğin güncel olup olmadığını gösterir: 24 saate kadar yeşil, 48 saate kadar sarı, daha eskiyse ya da yoksa kırmızı, son çalışma başarısız olduysa kırmızı halka. Monitör yalnızca yedekleme günlüklerini okur; yedeğin kendisini ücretsiz Claude Backup Kit alır: Claude Code skill'lerini, CLAUDE.md'yi, proje belleğini, Claude Desktop ayarlarını ve agent günlüklerini her gün kopyalar – oturum açma token'ını asla. Kit, herkesin değiştirebileceği ücretsiz bir başlangıç noktasıdır; bu yüzden yedekler için hiçbir sorumluluk kabul etmiyoruz: yedeklerin eksiksiz ve geri yüklenebilir olmasını sağlamak her kullanıcının kendi işidir.
+
+### Claude Usage Monitor'ü nasıl puanlayabilir veya geri bildirim gönderebilirim?
+Panele sağ tıklayıp “Geliştiriciye mesaj…” seçeneğini seç ya da panel başlığındaki mesaj simgesine tıkla. Bir ile beş arasında yıldız verebilir, mesaj yazabilir ve – yalnızca kutuyu işaretlersen – puanının ve adının bu web sitesinde gösterilmesine izin verebilirsin. Her mesajı geliştirici Gábor Vidovics bizzat okur; onayın olmadan hiçbir şey yayımlanmaz. Uygulaman yoksa bu sayfanın altındaki formu kullan.
+
+### Claude Usage Monitor hangi dillerde kullanılabilir?
+34 dilde: Avrupa Birliği'nin tüm resmî dilleri ile Japonca, Korece, Basitleştirilmiş ve Geleneksel Çince, Endonezce ve Vietnamca – Avrupa ve Brezilya Portekizcesi ile İspanya ve Latin Amerika İspanyolcası için ayrı sürümlerle. Uygulama, sistem dilini kendiliğinden seçer; bu web sitesi de bu dillerin her birinde mevcut.
+
+### Claude Pro, Max, Team ve Enterprise ile çalışır mı?
+Evet. Kendi Claude planının limitlerini gösterir – Pro, Max 5×, Max 20×, Team veya Enterprise –, yani Claude'un “Settings → Usage” (Ayarlar → Kullanım) altında listelediklerinin aynısını. Panel başlığındaki plan rozeti de hangi planda olduğunu gösterir.

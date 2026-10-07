@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Bahasa Indonesia)
+
+> Widget gratis & sumber terbuka untuk Windows dan macOS: pantau batas penggunaan Claude secara langsung – sesi 5 jam, batas mingguan, per model, dan reset.
+
+Claude Usage Monitor adalah widget desktop gratis dan sumber terbuka untuk Windows 10/11 dan macOS yang menampilkan batas penggunaan langganan Claude Anda secara real-time – sesi lima jam, batas mingguan, dan batas mingguan per model, masing-masing dengan sisa waktu hingga direset. Widget ini selalu berada di atas jendela lain, sehingga Anda bisa mengecek penggunaan Claude tanpa membuka Pengaturan → Penggunaan dan tanpa terminal.
+
+Satu aplikasi untuk Windows dan Mac sekaligus. Mencakup semua yang dihitung ke dalam paket Anda – claude.ai, Claude Desktop, dan Claude Code, di semua perangkat Anda. Ini bukan alat terminal “Claude Code Usage Monitor”: yang ini berupa panel grafis dengan ikon di baki sistem dan tidak memerlukan baris perintah.
+
+- **Harga**: Gratis – versi lengkap, tanpa versi berbayar, tanpa masa uji coba
+- **Platform**: Windows 10 / 11 (64-bit) dan macOS 12 atau lebih baru
+- **Bahasa**: 34 bahasa antarmuka
+- **Yang ditampilkan**: Sesi 5 jam, batas mingguan, batas mingguan per model, hitung mundur hingga reset, tempo, dan laju pemakaian
+- **Sumber data**: Log lokal Claude Desktop, atau masuk dengan akun claude.ai Anda untuk semua perangkat
+- **Privasi**: Tanpa telemetri, tanpa iklan, tanpa akun di pihak kami
+- **Lisensi**: MIT, sumber terbuka di GitHub
+- **Pembuat**: Gábor Vidovics, Hungaria – independen, tidak berafiliasi dengan Anthropic
+
+- Versi: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/id/
+
+## Semua batas penggunaan Claude Anda. Sekali lirik.
+
+- **Tahu sebelum terjadi**: Hijau, kuning, merah. Warna panel berubah jauh sebelum jatah Anda habis – lengkap dengan hitung mundur hingga reset dan perkiraan kapan Anda menyentuh 100%.
+- **Terlalu boros?**: Indikator tempo memberi tahu apakah batas mingguan Anda menipis lebih cepat daripada berjalannya minggu – dan memproyeksikan di angka berapa Anda akan berakhir.
+- **Semua perangkat, satu angka**: Masuk lewat browser Anda sendiri – seperti Claude Code – dan lihat juga pemakaian dari ponsel, browser, dan setiap komputer lain.
+- **Batas per model**: Fable, Opus, Sonnet, Claude Code, kredit penggunaan – setiap batas yang dilaporkan server, plus pembagian antarmodel minggu ini.
+- **Peringatan yang penting saja**: Notifikasi senyap di 70% dan 90% (Anda yang menentukan), serta saat batas Anda direset. Tidak ada yang lain, selamanya.
+- **Tidak memata-matai. Titik.**: Tanpa telemetri, tanpa analitik, tanpa akun di pihak kami. Aplikasi ini hanya berkomunikasi dengan Anthropic, dan hanya untuk angka milik Anda sendiri. Token masuk Anda tetap terenkripsi di komputer Anda – dengan Windows DPAPI atau Keychain macOS.
+- **Seminggu penuh dalam satu grafik**: Klik dua kali widget: kedua batas dalam satu garis waktu – 6 jam, 24 jam, atau 7 hari – dengan puncak mingguan, rata-rata harian, dan proyeksi akhir minggu yang berubah warna sebelum Anda kebablasan.
+
+## FAQ
+
+### Benar-benar gratis? Apa jebakannya?
+Benar-benar gratis, dan tidak ada jebakan. Bukan demo, bukan versi uji coba, dan bukan edisi yang dipangkas – ini adalah versi lengkap dan satu-satunya. Tanpa iklan, tanpa versi berbayar, tanpa pengumpulan data. Kode sumbernya terbuka untuk publik di bawah lisensi MIT.
+
+### Apakah ini produk resmi Anthropic?
+Bukan. Ini alat komunitas independen buatan Gábor Vidovics dan tidak berafiliasi dengan Anthropic. “Claude” adalah merek dagang Anthropic, PBC.
+
+### Apakah saya harus memberikan kata sandi saya?
+Tidak pernah. Tanpa masuk, aplikasi membaca log lokal Claude Desktop. Jika Anda ingin melihat semua perangkat, Anda masuk ke claude.ai di browser Anda sendiri – aplikasi tidak pernah melihat kata sandi Anda.
+
+### Windows memberi peringatan saat saya menjalankannya. Kenapa?
+Karena aplikasi ini tidak ditandatangani secara digital (sertifikatnya berbayar, sedangkan aplikasinya gratis). Klik Info selengkapnya → Tetap jalankan. Anda bisa memverifikasi unduhan dengan checksum SHA-256-nya dan membaca kode sumbernya di GitHub.
+
+### Mac mana saja yang didukung?
+macOS 12 atau lebih baru. Kartu unduhan di atas selalu menunjukkan prosesor yang didukung build saat ini. Versi macOS masih baru – masukan Anda sangat kami harapkan.
+
+### Bagaimana cara kerja pembaruan?
+Aplikasi memeriksa situs ini beberapa kali sehari. Jika ada versi baru, Anda akan diberi tahu; satu klik untuk mengunduh, memverifikasi, dan menginstalnya, lalu aplikasi dimulai ulang. Fitur ini bisa Anda matikan.
+
+### Bagaimana cara menghapusnya?
+Windows: Pengaturan → Aplikasi → Aplikasi terinstal → Claude Usage Monitor → Hapus instalan. macOS: seret aplikasi ke Tong Sampah. Itu saja.
+
+### Bagaimana cara cek penggunaan Claude tanpa membuka Pengaturan?
+Instal Claude Usage Monitor: aplikasi ini menampilkan sesi lima jam, batas mingguan, dan batas per model Anda di layar sepanjang waktu, sebagai widget kecil yang selalu di atas dan sebagai persentase di baki sistem atau bilah menu. Angka Claude sendiri ada di Pengaturan → Penggunaan; widget menampilkan batas yang sama tanpa perlu klik apa pun.
+
+### Kapan sesi 5 jam dan batas mingguan Claude direset?
+Batas berbasis sesi direset setiap lima jam. Batas mingguan direset pada waktu tetap setiap minggu yang ditetapkan Anthropic untuk akun Anda, sehingga berbeda untuk tiap orang. Widget menampilkan hitung mundur langsung ke kedua reset – jika Anda masuk ke claude.ai, widget memakai waktu tepat dari server Anthropic.
+
+### Apakah penggunaan Claude Code dihitung ke batas claude.ai saya?
+Ya. Menurut Anthropic, penggunaan di claude.ai, Claude Desktop, dan Claude Code dihitung ke batas penggunaan yang sama. Karena itulah mode claude.ai pada widget menampilkan satu angka untuk semua perangkat dan aplikasi Anda, bukan hanya untuk komputer tempat widget berjalan.
+
+### Apakah ini sama dengan “Claude Code Usage Monitor”?
+Bukan. “Claude Code Usage Monitor” adalah alat terpisah berbasis terminal buatan pengembang lain. Claude Usage Monitor karya Gábor Vidovics adalah widget desktop grafis untuk Windows dan macOS dengan ikon baki sistem, tema, dan peringatan, serta tidak memerlukan baris perintah.
+
+### Bisakah Claude Usage Monitor menunjukkan apakah file Claude saya sudah dicadangkan?
+Bisa – dan ini juga gratis. Saat bilah status cadangan diaktifkan, tiga lampu di panel menunjukkan apakah cadangan ke OneDrive, ke cloud kedua seperti Nextcloud, dan cadangan vault Obsidian Anda masih segar: hijau hingga 24 jam, kuning hingga 48 jam, merah jika lebih lama atau tidak ada, dan cincin merah jika proses terakhir gagal. Monitor hanya membaca log cadangan; pencadangannya sendiri dilakukan oleh Claude Backup Kit gratis, yang setiap hari menyalin skill Claude Code, CLAUDE.md, memori proyek, pengaturan Claude Desktop, dan log agen Anda – tidak pernah token masuk. Kit ini adalah titik awal gratis yang bisa diubah siapa pun, sehingga kami tidak bertanggung jawab atas cadangan: memastikan cadangan lengkap dan dapat dipulihkan adalah tanggung jawab masing-masing pengguna.
+
+### Bagaimana cara menilai Claude Usage Monitor atau mengirim masukan?
+Klik kanan panel dan pilih “Pesan untuk pengembang…”, atau klik ikon pesan di header panel. Anda bisa memberi satu hingga lima bintang, menulis pesan, dan – hanya jika Anda mencentangnya – mengizinkan penilaian dan nama Anda ditampilkan di situs ini. Setiap pesan dibaca oleh pembuatnya, Gábor Vidovics, dan tidak ada yang dipublikasikan tanpa persetujuan Anda. Tanpa aplikasi, gunakan formulir di bagian bawah halaman ini.
+
+### Claude Usage Monitor tersedia dalam bahasa apa saja?
+Dalam 34 bahasa: semua bahasa resmi Uni Eropa ditambah bahasa Jepang, Korea, Tionghoa Sederhana dan Tradisional, Indonesia, dan Vietnam – dengan versi terpisah untuk bahasa Portugis Eropa dan Brasil, serta bahasa Spanyol versi Spanyol dan Amerika Latin. Aplikasi otomatis memakai bahasa sistem Anda, dan situs web ini juga tersedia dalam setiap bahasa tersebut.
+
+### Apakah bisa dipakai dengan Claude Pro, Max, Team, dan Enterprise?
+Bisa. Widget menampilkan batas yang berlaku untuk paket Claude Anda – Pro, Max 5×, Max 20×, Team, atau Enterprise – sama seperti yang dicantumkan Claude di Pengaturan → Penggunaan, dan lencana paket di header panel menunjukkan paket yang sedang Anda pakai.

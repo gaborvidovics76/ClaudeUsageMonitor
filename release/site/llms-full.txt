@@ -1,0 +1,296 @@
+# Claude Usage Monitor
+
+> Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.
+
+- Current version: 2.7.1 (released 2026-10-07)
+- Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
+- Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
+- Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.
+- Interface languages (34): English, Български, Čeština, Dansk, Deutsch, Eesti, Ελληνικά, Español (España), Español (Latinoamérica), Français, Gaeilge, Hrvatski, Bahasa Indonesia, Italiano, Latviešu, Lietuvių, Magyar, Malti, Nederlands, Polski, Português (Brasil), Português (Portugal), Română, Русский, Slovenčina, Slovenščina, Suomi, Svenska, Türkçe, Tiếng Việt, 日本語, 한국어, 简体中文, 繁體中文.
+- Full text for AI assistants: https://claudeusagemonitor.com/llms-full.txt - every language also has its own llms.txt (e.g. https://claudeusagemonitor.com/hu/llms.txt).
+
+## Pages
+
+- [English](https://claudeusagemonitor.com/): the page in English (en)
+- [Български](https://claudeusagemonitor.com/bg/): the page in Български (bg) - [llms.txt](https://claudeusagemonitor.com/bg/llms.txt)
+- [Čeština](https://claudeusagemonitor.com/cs/): the page in Čeština (cs) - [llms.txt](https://claudeusagemonitor.com/cs/llms.txt)
+- [Dansk](https://claudeusagemonitor.com/da/): the page in Dansk (da) - [llms.txt](https://claudeusagemonitor.com/da/llms.txt)
+- [Deutsch](https://claudeusagemonitor.com/de/): the page in Deutsch (de) - [llms.txt](https://claudeusagemonitor.com/de/llms.txt)
+- [Eesti](https://claudeusagemonitor.com/et/): the page in Eesti (et) - [llms.txt](https://claudeusagemonitor.com/et/llms.txt)
+- [Ελληνικά](https://claudeusagemonitor.com/el/): the page in Ελληνικά (el) - [llms.txt](https://claudeusagemonitor.com/el/llms.txt)
+- [Español (España)](https://claudeusagemonitor.com/es/): the page in Español (España) (es-ES) - [llms.txt](https://claudeusagemonitor.com/es/llms.txt)
+- [Español (Latinoamérica)](https://claudeusagemonitor.com/es-419/): the page in Español (Latinoamérica) (es-419) - [llms.txt](https://claudeusagemonitor.com/es-419/llms.txt)
+- [Français](https://claudeusagemonitor.com/fr/): the page in Français (fr) - [llms.txt](https://claudeusagemonitor.com/fr/llms.txt)
+- [Gaeilge](https://claudeusagemonitor.com/ga/): the page in Gaeilge (ga) - [llms.txt](https://claudeusagemonitor.com/ga/llms.txt)
+- [Hrvatski](https://claudeusagemonitor.com/hr/): the page in Hrvatski (hr) - [llms.txt](https://claudeusagemonitor.com/hr/llms.txt)
+- [Bahasa Indonesia](https://claudeusagemonitor.com/id/): the page in Bahasa Indonesia (id) - [llms.txt](https://claudeusagemonitor.com/id/llms.txt)
+- [Italiano](https://claudeusagemonitor.com/it/): the page in Italiano (it) - [llms.txt](https://claudeusagemonitor.com/it/llms.txt)
+- [Latviešu](https://claudeusagemonitor.com/lv/): the page in Latviešu (lv) - [llms.txt](https://claudeusagemonitor.com/lv/llms.txt)
+- [Lietuvių](https://claudeusagemonitor.com/lt/): the page in Lietuvių (lt) - [llms.txt](https://claudeusagemonitor.com/lt/llms.txt)
+- [Magyar](https://claudeusagemonitor.com/hu/): the page in Magyar (hu) - [llms.txt](https://claudeusagemonitor.com/hu/llms.txt)
+- [Malti](https://claudeusagemonitor.com/mt/): the page in Malti (mt) - [llms.txt](https://claudeusagemonitor.com/mt/llms.txt)
+- [Nederlands](https://claudeusagemonitor.com/nl/): the page in Nederlands (nl) - [llms.txt](https://claudeusagemonitor.com/nl/llms.txt)
+- [Polski](https://claudeusagemonitor.com/pl/): the page in Polski (pl) - [llms.txt](https://claudeusagemonitor.com/pl/llms.txt)
+- [Português (Brasil)](https://claudeusagemonitor.com/pt/): the page in Português (Brasil) (pt-BR) - [llms.txt](https://claudeusagemonitor.com/pt/llms.txt)
+- [Português (Portugal)](https://claudeusagemonitor.com/pt-pt/): the page in Português (Portugal) (pt-PT) - [llms.txt](https://claudeusagemonitor.com/pt-pt/llms.txt)
+- [Română](https://claudeusagemonitor.com/ro/): the page in Română (ro) - [llms.txt](https://claudeusagemonitor.com/ro/llms.txt)
+- [Русский](https://claudeusagemonitor.com/ru/): the page in Русский (ru) - [llms.txt](https://claudeusagemonitor.com/ru/llms.txt)
+- [Slovenčina](https://claudeusagemonitor.com/sk/): the page in Slovenčina (sk) - [llms.txt](https://claudeusagemonitor.com/sk/llms.txt)
+- [Slovenščina](https://claudeusagemonitor.com/sl/): the page in Slovenščina (sl) - [llms.txt](https://claudeusagemonitor.com/sl/llms.txt)
+- [Suomi](https://claudeusagemonitor.com/fi/): the page in Suomi (fi) - [llms.txt](https://claudeusagemonitor.com/fi/llms.txt)
+- [Svenska](https://claudeusagemonitor.com/sv/): the page in Svenska (sv) - [llms.txt](https://claudeusagemonitor.com/sv/llms.txt)
+- [Türkçe](https://claudeusagemonitor.com/tr/): the page in Türkçe (tr) - [llms.txt](https://claudeusagemonitor.com/tr/llms.txt)
+- [Tiếng Việt](https://claudeusagemonitor.com/vi/): the page in Tiếng Việt (vi) - [llms.txt](https://claudeusagemonitor.com/vi/llms.txt)
+- [日本語](https://claudeusagemonitor.com/ja/): the page in 日本語 (ja) - [llms.txt](https://claudeusagemonitor.com/ja/llms.txt)
+- [한국어](https://claudeusagemonitor.com/ko/): the page in 한국어 (ko) - [llms.txt](https://claudeusagemonitor.com/ko/llms.txt)
+- [简体中文](https://claudeusagemonitor.com/zh-cn/): the page in 简体中文 (zh-Hans) - [llms.txt](https://claudeusagemonitor.com/zh-cn/llms.txt)
+- [繁體中文](https://claudeusagemonitor.com/zh-tw/): the page in 繁體中文 (zh-Hant) - [llms.txt](https://claudeusagemonitor.com/zh-tw/llms.txt)
+
+## Download
+
+- [Latest Windows package](https://claudeusagemonitor.com/usage-api/dl.php?os=win): always redirects to the newest release
+- [Latest macOS package](https://claudeusagemonitor.com/usage-api/dl.php?os=mac): always redirects to the newest release
+- [Release manifest (JSON)](https://claudeusagemonitor.com/manifest.json): version, size, SHA-256, release notes
+- [Changelog](https://claudeusagemonitor.com/CHANGELOG.md)
+- [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)
+
+## What it does
+
+- **See it coming**: Green, yellow, red. The panel changes colour long before you run out – with a countdown to the reset and an estimate of when you'd hit 100%.
+- **Are you burning too fast?**: The pace indicator tells you if your weekly limit is melting faster than the week passes – and projects where you'll end up.
+- **All your devices, one number**: Sign in through your own browser – like Claude Code does – and see usage from your phone, browser and every other computer too.
+- **Per-model limits**: Fable, Opus, Sonnet, Claude Code, usage credits – every limit the server reports, plus this week's split between models.
+- **Alerts that matter**: A quiet notification at 70% and 90% (you choose), and when your limit resets. Nothing else, ever.
+- **It doesn't spy. Period.**: No telemetry, no analytics, no account with us. It talks only to Anthropic, only for your own numbers. Your sign-in token stays encrypted on your computer – Windows DPAPI or the macOS Keychain.
+- **Backup lamps – see whether your Claude work is backed up**: Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
+- [Claude Backup Kit (free, Windows)](https://claudeusagemonitor.com/kit/ClaudeBackupKit.zip): the scripts that make the backup the lamps show; source and README in [gaborvidovics76/ClaudeUsageMonitor/backup-kit](https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit)
+
+## Key terms
+
+- **Five-hour session (5-hour window)**: Claude's short-term usage limit. Your session-based limit resets every five hours. Anthropic calls it the “current session”; many users call it the 5-hour window or 5-hour limit.
+- **Weekly limit**: A second cap on paid Claude plans that applies across all models and resets at a fixed time each week, assigned to your account. Weekly limits have been in effect since 28 August 2025.
+- **Per-model weekly limit**: A separate weekly cap for one specific model, listed on Claude's usage page next to the limit for all other models. The widget shows it as a third gauge for the model you choose.
+- **Reset**: The moment a limit goes back to 0%. The widget counts down to it. With claude.ai sign-in the exact time comes from Anthropic's server; with the local log it is an estimate.
+- **Pace**: How far you are ahead of or behind an evenly used week. “+12% vs pace” means you have used 12 percentage points more of your weekly limit than the share of the week that has passed.
+- **Burn rate**: How fast a limit is filling up right now – percent per hour for the session, percent per day for the week – and when it would reach 100% at that speed.
+- **Usage credits (extra usage)**: Optional pay-as-you-go usage after you reach your plan's limits, with a monthly spending cap. The widget shows whether it is switched on, the cap and what you have spent.
+
+## FAQ
+
+### Is it really free? What's the catch?
+Really free, and there is no catch. It's not a demo, not a trial and not a cut-down edition – this is the full and only version. No ads, no paid tier, no data collection. The source code is public under the MIT licence.
+
+### Is this an official Anthropic product?
+No. It's an independent community tool made by Vidovics Gábor. It is not affiliated with Anthropic. “Claude” is a trademark of Anthropic, PBC.
+
+### Do I have to give it my password?
+Never. Without signing in it reads Claude Desktop's local log. If you want all devices, you sign in on claude.ai in your own browser – the app never sees your password.
+
+### Windows warns me when I run it. Why?
+Because the app isn't code-signed (certificates cost money; the app is free). Click More info → Run anyway. You can verify the download with its SHA-256 checksum, and read the source on GitHub.
+
+### Which Macs are supported?
+macOS 12 or newer. The download card above always shows which processor the current build is for. The macOS version is new – feedback is very welcome.
+
+### How do updates work?
+The app checks this site a few times a day. When there's a new version it tells you; one click downloads, verifies and installs it, then restarts. You can switch this off.
+
+### How do I remove it?
+Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: drag the app to the Bin. That's all.
+
+### How do I check my Claude usage without opening Settings?
+Install Claude Usage Monitor: it keeps your five-hour session, weekly limit and per-model limit on screen all the time, as a small always-on-top widget and as a percentage in the tray or menu bar. Claude's own numbers live under Settings → Usage; the widget shows the same limits without any clicking.
+
+### When do the Claude 5-hour session and the weekly limit reset?
+The session-based limit resets every five hours. The weekly limit resets at a fixed time each week that Anthropic assigns to your account, so it differs from person to person. The widget shows a live countdown to both resets – with claude.ai sign-in it uses the exact times from Anthropic's server.
+
+### Does Claude Code usage count toward my claude.ai limit?
+Yes. According to Anthropic, usage on claude.ai, Claude Desktop and Claude Code counts toward the same usage limit. That is why the widget's claude.ai mode shows one number for all your devices and apps, not only for the computer it runs on.
+
+### Is this the same as “Claude Code Usage Monitor”?
+No. “Claude Code Usage Monitor” is a separate, terminal-based tool by another author. Claude Usage Monitor by Vidovics Gábor is a graphical desktop widget for Windows and macOS with a tray icon, themes and alerts, and it needs no command line.
+
+### Can Claude Usage Monitor show whether my Claude files are backed up?
+Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
+
+### How can I rate Claude Usage Monitor or send feedback?
+Right-click the panel and choose “Message to the developer…”, or click the message icon in the panel header. You can give one to five stars, write a message, and – only if you tick it – allow your rating and name to be shown on this website. Every message is read by the author, Vidovics Gábor, and nothing is published without your consent. Without the app, use the form at the bottom of this page.
+
+### Which languages is Claude Usage Monitor available in?
+In 34 languages: every official language of the European Union plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese – with separate versions for European and Brazilian Portuguese and for Spain and Latin-American Spanish. The app picks your system language by itself, and this website exists in each of these languages too.
+
+### Does it work with Claude Pro, Max, Team and Enterprise?
+Yes. It shows the limits your own Claude plan has – Pro, Max 5×, Max 20×, Team or Enterprise – the same ones Claude lists under Settings → Usage, and the plan badge in the panel header tells you which plan you are on.
+
+---
+
+# Full page text (English)
+
+**Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows your Claude subscription's usage limits in real time** – the five-hour session, the weekly limit and the per-model weekly limit, each with the time left until it resets. It stays on top of your other windows, so you can check your Claude usage without opening Settings → Usage and without a terminal.
+
+One app for both Windows and Mac. It covers everything that counts toward your plan – claude.ai, Claude Desktop and Claude Code, on all your devices. It is not the terminal tool “Claude Code Usage Monitor”: this one is a graphical panel with a tray icon, and needs no command line.
+
+
+## Quick facts
+
+- **Price**: Free – the full version, no paid tier, no trial
+- **Platforms**: Windows 10 / 11 (64-bit) and macOS 12 or newer
+- **Languages**: 34 interface languages
+- **What it shows**: 5-hour session, weekly limit, per-model weekly limit, reset countdown, pace and burn rate
+- **Data source**: Claude Desktop's local log, or your claude.ai sign-in for all devices
+- **Privacy**: No telemetry, no ads, no account with us
+- **Licence**: MIT, open source on GitHub
+- **Author**: Vidovics Gábor, Hungary – independent, not affiliated with Anthropic
+
+
+## Account-wide usage
+
+Many usage trackers read log files on your computer, so they only know what **that one computer** used. Claude Usage Monitor can ask Anthropic's server instead – and shows the real, account-wide number: everything you use in the phone app, in the browser, on another computer and in Claude Code counts, and you see it all in one place, on your desktop.
+
+- Phone, browser, every computer – all counted
+- Claude Code and Claude Desktop included
+- The same numbers Claude itself shows under Settings → Usage
+- Exact reset times from Anthropic's server
+- Still works without sign-in, from the local log
+
+How: choose the “claude.ai (all devices)” data source and sign in once in your own browser – the same sign-in Claude Code uses; the app never sees your password. Without sign-in the widget reads Claude Desktop's local log, which covers this computer only.
+
+
+## Backups
+
+Every usage tracker stops at the numbers. Claude Usage Monitor goes one step further: it also shows whether **your Claude-related backups** are fresh – your skills, CLAUDE.md rules, project memory, MCP settings, agent conversation logs and Obsidian notes. They usually live on one single disk. One broken drive, one stolen laptop, one wrong delete – and months of work are gone. Three small lamps on the panel tell you, every minute of the day, that it can't happen to you.
+
+- **Green** – the last successful backup is at most 24 hours old.
+- **Yellow** – it is 24 to 48 hours old. Time to look.
+- **Red** – older than 48 hours, or there is no backup at all.
+- **Red ring** – the latest run failed or did not finish, even if an older backup still keeps the lamp green.
+
+- **Status** – Fresh, Getting old, Outdated or No backup found, with the time of the last successful backup and of the last run.
+- **What is backed up** – every item with its source folder, its destination, the number of files and the size: the Obsidian vault snapshot, Claude Code, Claude Desktop, your extra folders and the agent logs.
+- **Contents** – the newest vault snapshot, how many snapshots are kept, the notes you edited most recently, and how many notes changed since the last snapshot.
+- **Uploaded** – on the Nextcloud tab: new and replaced files in this run, grouped by folder, and how much space is left in your cloud.
+- **Errors and warnings** – straight from the log, in plain words.
+- **Scheduled tasks** – state, last result and next run of the Windows tasks that make the backup.
+- **Log** – the last lines, and the log file one click away.
+
+
+## Backup Kit - step by step
+
+- **What you need.** Windows 10 or 11, OneDrive signed in, Claude Usage Monitor installed. For the second copy: a Nextcloud account – or any other cloud rclone supports (Google Drive, Dropbox, S3, pCloud, SFTP…). No second cloud? Step 2 is optional.
+- **Create an app password** (only for the second cloud). In Nextcloud: your avatar → Personal settings → Security → Devices & sessions → app name rclone-backup → Create new app password. Copy it – it is shown only once. It is **not** your account password, and you can revoke it at any time.
+- **Download and unpack** the Backup Kit into a permanent folder, for example C:\Tools\ClaudeBackup.
+- **Edit config.psd1** in Notepad: VaultPath = your Obsidian vault (empty = no Obsidian), ExtraFolders = anything else to back up, NextcloudRemote and NextcloudBasePath = the second cloud (empty = skip it), DailyTime = when to run. Everything else can stay as it is.
+- **Run the installer as administrator:** Win+X → Terminal (Admin), then Set-ExecutionPolicy -Scope CurrentUser RemoteSigned, cd C:\Tools\ClaudeBackup, Unblock-File *.ps1, .\Install-BackupKit.ps1. It installs rclone if needed, asks for the cloud address, user name and app password (typed hidden), creates the two scheduled tasks, tells the monitor where to look and makes a first run.
+- **First real upload:**.\Backup-Step2-Cloud.ps1 – the installer only made a test run of step 2.
+- **Check it:**.\Test-BackupKit.ps1 – every line should say [OK]. In Claude Usage Monitor: right-click the panel → Backup status bar. The three lamps turn green within 5 minutes, or at once with Backups… → Check now.
+
+
+## Settings - Backups
+
+Show backup status bar on the panel | Switches the three lamps on or off. Also in the right-click menu: Backup status bar. |
+Lamps | Which lamps to show: OneDrive, Nextcloud, Obsidian. No Obsidian vault? Untick it. |
+Label next to the lamp | Name and age · Name only · Lamps only. |
+Green up to / Yellow up to | The age limits in hours – 24 and 48 by default. A weekly backup? Set 170 and 340. |
+Backup folder | The folder step 1 writes into, e.g. OneDrive\ClaudeBackup. Leave it on automatic – the installer has already told the monitor. |
+Backup script config | The kit's config.psd1. The monitor reads the vault path and the cloud target from it – never a password. |
+Scheduled task filter | ClaudeBackup* – which Windows tasks the details window lists. |
+Details window shows | Tick what you want to see: what is backed up, contents, errors and warnings, scheduled tasks, log. |
+
+
+## Backup security
+
+- **No password in any file of the kit.** The app password is typed hidden and stored only in rclone's own configuration, obscured. Revoke it in Nextcloud whenever you like.
+- **The sign-in token is never copied.** Nor are Claude Desktop's cookies.
+- **No mirroring.** A file you delete on your computer stays in both backups – mirroring would faithfully copy a mistake too.
+- **Dated vault snapshots**, so a later bad copy can never overwrite an older good state.
+- **Two independent providers.** If one fails or locks you out, the other still has everything.
+- **Good to know:** Claude Desktop's config and .claude\settings.json may hold API keys of MCP servers. They are backed up – you need them to restore – into your own OneDrive and your own cloud. Protect both accounts with two-step sign-in.
+
+
+## Backup disclaimer
+
+**We accept no liability for backups, lost data or any damage.** Claude Usage Monitor only reads and shows the logs of your backup – it does not make, check or guarantee any backup. The Claude Backup Kit is a free starting point offered as help, not a finished product: everyone can – and may – change the scripts to suit their own computer, so the quality and completeness of a backup cannot be guaranteed. **Making sure your backups are complete and can be restored is everyone's own responsibility.** Check the lamps, read the log and test a restore from time to time. The kit is provided “as is”, without any warranty, under the MIT licence.
+
+
+## What it shows
+
+- **5-hour session** – current %, countdown to reset, burn rate (%/hour) and when it would fill up.
+- **Weekly limit** – current %, time to the weekly reset, daily rate and your pace vs. an even week.
+- **Per-model weekly limit** – a third gauge for the model you watch (Fable by default).
+- **Plan badge** – PRO, MAX 5×, MAX 20×, TEAM or ENTERPRISE.
+- **History window** – 6 h / 24 h / 7 days charts, weekly peak, daily average and an end-of-week projection.
+- **Tray / menu-bar icon** – your chosen percentage as a ring, details on hover.
+
+
+## Where the data comes from
+
+**1 · Local log default · no sign-in** Reads the usage log Claude Desktop already writes on your computer. Nothing is sent anywhere. Measures this computer only, refreshes about every 5 minutes.
+**2 · claude.ai all devices** The same browser sign-in Claude Code uses – no embedded browser, no password typed into the app. Exact reset times from the server, refreshed about every 2 minutes.
+
+
+## Privacy and security
+
+- **No telemetry.** The app has no analytics and never phones home – it only checks this site for a newer version.
+- **Your token stays yours.** Encrypted with Windows DPAPI, or stored in the macOS Keychain. Never in a plain file.
+- **Conversations are never read.** From local logs only the model name, token counts and timestamps are used.
+- **Verified updates.** HTTPS only, every download is checked against its SHA-256 before it is installed; on failure the old version comes back.
+- **Open source.** Don't trust – verify: the whole source is on GitHub under the MIT licence.
+
+
+## Controls
+
+Drag | move the panel (snaps to screen edges) |
+Right-click | menu: layout, theme, size, language, settings |
+Double-click | history & statistics window |
+Ctrl + scroll | resize |
+Tray icon click | hide / show the panel |
+
+
+## Settings
+
+- **Look** – 6 themes, custom accent colour, 3 layouts, size, opacity, always on top, lock position, click-through.
+- **Content** – which gauges, their order and size, trend curve, burn rate, countdown.
+- **Alerts** – warning and danger thresholds (70% / 90% by default), reset and stale-data notices.
+- **System** – start with the computer, automatic updates, 34 languages.
+
+
+## How it compares
+
+| Claude Usage Monitor | Claude's own Settings → Usage page | Terminal tools that read Claude Code logs |
+Always visible while you work | Yes – always-on-top widget and tray icon | No – you have to open it | Only in an open terminal |
+Windows and macOS | Yes, one app for both | Yes (web page) | Varies, command line |
+Needs a terminal | No | No | Yes |
+Counts claude.ai, Claude Desktop and Claude Code on all devices | Yes, with claude.ai sign-in | Yes | No – this computer's Claude Code only |
+Pace, burn rate and end-of-week projection | Yes | No | Some |
+Alerts at your own thresholds | Yes (70% / 90% by default) | No | Rarely |
+Price | Free, open source (MIT) | Included in your plan | Mostly free |
+
+
+## Price
+
+- Full version – there is no other
+- No demo, no trial, no time limit
+- No “Pro” tier, no locked features
+- No ads, no registration, no data collection
+- Free updates, automatically
+
+
+## Install on Windows
+
+- **Extract the whole zip** (right-click → Extract All…).
+- Double-click INSTALL.bat.
+- Answer two questions – Enter accepts the recommended answer. Done.
+
+No admin rights needed. If Windows shows “Windows protected your PC”: More info → Run anyway. The app is open source but not code-signed.
+
+
+## Install on macOS
+
+- Open the zip and drag **ClaudeUsageMonitor** to **Applications**.
+- First start: **right-click → Open** (the app is not notarised by Apple).
+- Look for the icon in the menu bar. Done.
+
+
+## Releases
+
+Changelog: https://claudeusagemonitor.com/CHANGELOG.md - Atom feed: https://claudeusagemonitor.com/releases.xml

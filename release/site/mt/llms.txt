@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Malti)
+
+> Claude Usage Monitor: widget b'xejn, b'sors miftuħ, għal Windows u macOS. Ara s-sessjoni ta' 5 sigħat u l-limitu tal-ġimgħa ta' Claude live, b'allerti.
+
+Claude Usage Monitor huwa widget b'xejn u b'sors miftuħ għad-desktop, għal Windows 10/11 u macOS, li juri l-limiti tal-użu tal-abbonament tiegħek ta' Claude f'ħin reali – is-sessjoni ta' ħames sigħat, il-limitu tal-ġimgħa u l-limitu tal-ġimgħa għal kull mudell, kull wieħed bil-ħin li fadal sar-reset. Jibqa' fuq it-twieqi l-oħra kollha, biex tkun tista' tiċċekkja l-użu tiegħek ta' Claude mingħajr ma tiftaħ Settings → Usage u mingħajr terminal.
+
+App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd għall-pjan tiegħek – claude.ai, Claude Desktop u Claude Code, fuq l-apparati kollha tiegħek. Mhix l-għodda tat-terminal “Claude Code Usage Monitor”: din hija pannell grafiku b'ikona fiż-żona tan-notifiki, u ma teħtieġ l-ebda linja tal-kmand.
+
+- **Prezz**: B'xejn – il-verżjoni sħiħa, l-ebda verżjoni bi ħlas, l-ebda prova
+- **Pjattaformi**: Windows 10 / 11 (64-bit) u macOS 12 jew aktar ġdid
+- **Lingwi**: 34 lingwa tal-interfaċċja
+- **X'juri**: Sessjoni ta' 5 sigħat, limitu tal-ġimgħa, limitu tal-ġimgħa għal kull mudell, għadd lura sar-reset, ritmu u rata ta' konsum
+- **Sors tad-data**: Il-log lokali ta' Claude Desktop, jew il-login tiegħek ta' claude.ai għall-apparati kollha
+- **Privatezza**: L-ebda telemetrija, l-ebda reklami, l-ebda kont magħna
+- **Liċenzja**: MIT, sors miftuħ fuq GitHub
+- **Awtur**: Gábor Vidovics, l-Ungerija – indipendenti, mhux affiljat ma' Anthropic
+
+- Verżjoni: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/mt/
+
+## Il-limiti tal-użu kollha tiegħek ta' Claude. Ħarsa waħda.
+
+- **Araha ġejja**: Aħdar, isfar, aħmar. Il-pannell jibdel il-kulur ħafna qabel ma jispiċċalek il-limitu – b'għadd lura sar-reset u stima ta' meta tasal għal 100%.
+- **Qed tikkonsma wisq malajr?**: L-indikatur tar-ritmu jgħidlek jekk il-limitu tal-ġimgħa qed jinħela aktar malajr milli qed tgħaddi l-ġimgħa – u jipprojetta fejn se tispiċċa.
+- **L-apparati kollha tiegħek, numru wieħed**: Idħol mill-browser tiegħek stess – bħalma jagħmel Claude Code – u ara l-użu mill-mowbajl, mill-browser u minn kull kompjuter ieħor ukoll.
+- **Limiti għal kull mudell**: Fable, Opus, Sonnet, Claude Code, krediti tal-użu – kull limitu li jirrapporta s-server, flimkien mal-qsim ta' din il-ġimgħa bejn il-mudelli.
+- **Allerti li jgħoddu**: Notifika kwieta f'70% u 90% (tagħżel int), u meta l-limitu tiegħek jerġa' jibda. Xejn iżjed, qatt.
+- **Ma jispijax. Punt.**: L-ebda telemetrija, l-ebda analitika, l-ebda kont magħna. Ikellem lil Anthropic biss, u biss għan-numri tiegħek. It-token tal-login tiegħek jibqa' kriptat fuq il-kompjuter tiegħek – Windows DPAPI jew il-Keychain ta' macOS.
+- **Il-ġimgħa kollha f'grafika waħda**: Agħmel klikk doppju fuq il-widget: iż-żewġ limiti fuq linja taż-żmien waħda – 6 sigħat, 24 siegħa jew 7 ijiem – bil-quċċata tal-ġimgħa, il-medja ta' kuljum u projezzjoni sa tmiem il-ġimgħa li tibdel il-kulur qabel ma taqbeż il-limitu.
+
+## FAQ
+
+### Verament b'xejn? Fejn hu l-qbid?
+Verament b'xejn, u m'hemm l-ebda qbid. Mhux demo, mhux prova u mhux edizzjoni mnaqqsa – din hija l-verżjoni sħiħa u l-unika waħda. L-ebda reklami, l-ebda verżjoni bi ħlas, l-ebda ġbir ta' data. Il-kodiċi tas-sors huwa pubbliku taħt il-liċenzja MIT.
+
+### Dan huwa prodott uffiċjali ta' Anthropic?
+Le. Hija għodda indipendenti tal-komunità, magħmula minn Gábor Vidovics. M'għandha l-ebda rabta ma' Anthropic. “Claude” hija marka kummerċjali ta' Anthropic, PBC.
+
+### Irrid nagħtih il-password tiegħi?
+Qatt. Mingħajr login jaqra l-log lokali ta' Claude Desktop. Jekk trid l-apparati kollha, tidħol f'claude.ai fil-browser tiegħek stess – l-app qatt ma tara l-password tiegħek.
+
+### Windows iwissini meta nħaddmu. Għaliex?
+Għax l-app mhix iffirmata b'ċertifikat tal-kodiċi (iċ-ċertifikati jiswew il-flus; l-app hija b'xejn). Ikklikkja More info → Run anyway. Tista' tivverifika t-tniżżil bis-checksum SHA-256 tiegħu, u taqra s-sors fuq GitHub.
+
+### Liema Macs huma appoġġjati?
+macOS 12 jew aktar ġdid. Il-kard tat-tniżżil hawn fuq dejjem turi għal liema proċessur hija l-verżjoni attwali. Il-verżjoni għal macOS hija ġdida – il-feedback huwa milqugħ ħafna.
+
+### Kif jaħdmu l-aġġornamenti?
+L-app tiċċekkja dan is-sit ftit drabi kuljum. Meta toħroġ verżjoni ġdida, tgħidlek; bi klikk wieħed tniżżilha, tivverifikaha u tinstallaha, imbagħad terġa' tibda. Tista' titfi din il-funzjoni.
+
+### Kif inneħħih?
+Windows: Settings → Apps → Installed apps → Claude Usage Monitor → Uninstall. macOS: kaxkar l-app fil-Bin. Dak kollox.
+
+### Kif niċċekkja l-użu tiegħi ta' Claude mingħajr ma niftaħ is-Settings?
+Installa Claude Usage Monitor: iżomm is-sessjoni ta' ħames sigħat, il-limitu tal-ġimgħa u l-limitu għal kull mudell fuq l-iskrin il-ħin kollu, bħala widget żgħir dejjem fuq quddiem u bħala perċentwali fiż-żona tan-notifiki jew fil-menu bar. In-numri ta' Claude stess jinsabu taħt Settings → Usage; il-widget juri l-istess limiti mingħajr ebda klikk.
+
+### Meta jerġgħu jibdew is-sessjoni ta' 5 sigħat u l-limitu tal-ġimgħa ta' Claude?
+Il-limitu bbażat fuq is-sessjoni jerġa' jibda kull ħames sigħat. Il-limitu tal-ġimgħa jerġa' jibda f'ħin fiss kull ġimgħa li Anthropic tassenja lill-kont tiegħek, għalhekk ivarja minn persuna għal oħra. Il-widget juri għadd lura live għaż-żewġ resets – bil-login ta' claude.ai juża l-ħinijiet eżatti mis-server ta' Anthropic.
+
+### L-użu ta' Claude Code jgħodd għal-limitu tiegħi ta' claude.ai?
+Iva. Skont Anthropic, l-użu fuq claude.ai, Claude Desktop u Claude Code jgħodd għall-istess limitu tal-użu. Għalhekk il-modalità claude.ai tal-widget turi numru wieħed għall-apparati u l-apps kollha tiegħek, mhux biss għall-kompjuter li jkun qed jaħdem fuqu.
+
+### Dan huwa l-istess bħal “Claude Code Usage Monitor”?
+Le. “Claude Code Usage Monitor” hija għodda separata, ibbażata fuq it-terminal, minn awtur ieħor. Claude Usage Monitor ta' Gábor Vidovics huwa widget grafiku għad-desktop għal Windows u macOS b'ikona fiż-żona tan-notifiki, temi u allerti, u ma jeħtieġ l-ebda linja tal-kmand.
+
+### Claude Usage Monitor jista' juri jekk il-fajls tiegħi ta' Claude għandhomx backup?
+Iva – u dan ukoll b'xejn. Meta l-istrixxa tal-istat tal-backups tkun mixgħula, tliet dwal fuq il-pannell juru jekk il-backup fuq OneDrive, fuq it-tieni cloud bħal Nextcloud u tal-vault ta' Obsidian tiegħek huwiex riċenti: aħdar sa 24 siegħa, isfar sa 48, aħmar meta jkun eqdem jew nieqes, u ċirku aħmar meta l-aħħar tħaddim ikun falla. Il-monitor jaqra biss il-logs tal-backup; il-backup innifsu jsir mill-Claude Backup Kit b'xejn, li jikkopja kuljum l-iskills ta' Claude Code, CLAUDE.md, il-memorja tal-proġetti, l-issettjar ta' Claude Desktop u l-logs tal-aġenti – qatt it-token tal-login. Il-kit huwa punt tat-tluq b'xejn li kulħadd jista' jibdel, għalhekk ma naċċettaw l-ebda responsabbiltà għall-backups: hija r-responsabbiltà ta' kull utent li jiżgura li jkunu kompluti u jistgħu jiġu rrestawrati.
+
+### Kif nista' nagħti valutazzjoni lil Claude Usage Monitor jew nibgħat feedback?
+Agħmel klikk bil-lemin fuq il-pannell u agħżel “Messaġġ lill-iżviluppatur…”, jew ikklikkja fuq l-ikona tal-messaġġi fl-intestatura tal-pannell. Tista' tagħti minn stilla sa ħames stilel, tikteb messaġġ, u – biss jekk timmarka l-kaxxa – tippermetti li l-valutazzjoni u ismek jintwerew fuq dan is-sit. Kull messaġġ jaqrah l-awtur, Gábor Vidovics, u xejn ma jiġi ppubblikat mingħajr il-kunsens tiegħek. Mingħajr l-app, uża l-formola fil-qiegħ ta' din il-paġna.
+
+### B'liema lingwi huwa disponibbli Claude Usage Monitor?
+F'34 lingwa: il-lingwi uffiċjali kollha tal-Unjoni Ewropea flimkien mal-Ġappuniż, il-Korean, iċ-Ċiniż Simplifikat u Tradizzjonali, l-Indoneżjan u l-Vjetnamiż – b'verżjonijiet separati għall-Portugiż Ewropew u Brażiljan u għall-Ispanjol ta' Spanja u tal-Amerika Latina. L-app tagħżel il-lingwa tas-sistema tiegħek waħedha, u dan is-sit web jeżisti f'kull waħda minn dawn il-lingwi wkoll.
+
+### Jaħdem ma' Claude Pro, Max, Team u Enterprise?
+Iva. Juri l-limiti li għandu l-pjan tiegħek ta' Claude – Pro, Max 5×, Max 20×, Team jew Enterprise – l-istess limiti li jelenka Claude taħt Settings → Usage, u l-badge tal-pjan fl-intestatura tal-pannell jgħidlek liema pjan għandek.

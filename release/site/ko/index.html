@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="ko" data-lang="ko" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude 사용량 확인 무료 위젯 – Claude Usage Monitor</title>
+<meta name="description" content="Windows·macOS용 무료 오픈 소스 위젯. Claude 5시간 세션, 주간 한도, 모델별 한도를 실시간으로 확인하고 초기화 카운트다운과 알림까지 받아요.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="en" href="https://claudeusagemonitor.com/">
+<link rel="alternate" hreflang="bg" href="https://claudeusagemonitor.com/bg/">
+<link rel="alternate" hreflang="cs" href="https://claudeusagemonitor.com/cs/">
+<link rel="alternate" hreflang="da" href="https://claudeusagemonitor.com/da/">
+<link rel="alternate" hreflang="de" href="https://claudeusagemonitor.com/de/">
+<link rel="alternate" hreflang="et" href="https://claudeusagemonitor.com/et/">
+<link rel="alternate" hreflang="el" href="https://claudeusagemonitor.com/el/">
+<link rel="alternate" hreflang="es" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-ES" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-419" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-MX" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-AR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CL" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-VE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-EC" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-GT" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CU" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-BO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-DO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-HN" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-SV" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-NI" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PA" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-UY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-US" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="fr" href="https://claudeusagemonitor.com/fr/">
+<link rel="alternate" hreflang="ga" href="https://claudeusagemonitor.com/ga/">
+<link rel="alternate" hreflang="hr" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="id" href="https://claudeusagemonitor.com/id/">
+<link rel="alternate" hreflang="it" href="https://claudeusagemonitor.com/it/">
+<link rel="alternate" hreflang="lv" href="https://claudeusagemonitor.com/lv/">
+<link rel="alternate" hreflang="lt" href="https://claudeusagemonitor.com/lt/">
+<link rel="alternate" hreflang="hu" href="https://claudeusagemonitor.com/hu/">
+<link rel="alternate" hreflang="mt" href="https://claudeusagemonitor.com/mt/">
+<link rel="alternate" hreflang="nl" href="https://claudeusagemonitor.com/nl/">
+<link rel="alternate" hreflang="pl" href="https://claudeusagemonitor.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-AO" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-MZ" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="ro" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://claudeusagemonitor.com/ru/">
+<link rel="alternate" hreflang="sk" href="https://claudeusagemonitor.com/sk/">
+<link rel="alternate" hreflang="sl" href="https://claudeusagemonitor.com/sl/">
+<link rel="alternate" hreflang="fi" href="https://claudeusagemonitor.com/fi/">
+<link rel="alternate" hreflang="sv" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="tr" href="https://claudeusagemonitor.com/tr/">
+<link rel="alternate" hreflang="vi" href="https://claudeusagemonitor.com/vi/">
+<link rel="alternate" hreflang="ja" href="https://claudeusagemonitor.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="zh" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-SG" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-TW" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-HK" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-MO" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://claudeusagemonitor.com/">
+<meta http-equiv="content-language" content="ko">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – Windows·macOS용 무료 Claude 사용량 위젯">
+<meta property="og:description" content="Claude 5시간 세션, 주간 한도, 페이스를 한눈에. 휴대폰과 브라우저에서 쓴 사용량까지. 항상 위에 표시, 오픈 소스, 100% 무료.">
+<meta property="og:url" content="https://claudeusagemonitor.com/ko/">
+<meta property="og:image" content="https://claudeusagemonitor.com/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – Windows·macOS용 무료 Claude 사용량 위젯">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="bg_BG">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ga_IE">
+<meta property="og:locale:alternate" content="hr_HR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="lv_LV">
+<meta property="og:locale:alternate" content="lt_LT">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="mt_MT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – Windows·macOS용 무료 Claude 사용량 위젯">
+<meta name="twitter:description" content="Claude 5시간 세션, 주간 한도, 페이스를 한눈에. 휴대폰과 브라우저에서 쓴 사용량까지. 항상 위에 표시, 오픈 소스, 100% 무료.">
+<meta name="twitter:image" content="https://claudeusagemonitor.com/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://claudeusagemonitor.com/#site","name":"Claude Usage Monitor","url":"https://claudeusagemonitor.com/","inLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"publisher":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"WebPage","@id":"https://claudeusagemonitor.com/ko/#page","url":"https://claudeusagemonitor.com/ko/","name":"Claude 사용량 확인 무료 위젯 – Claude Usage Monitor","description":"Windows·macOS용 무료 오픈 소스 위젯. Claude 5시간 세션, 주간 한도, 모델별 한도를 실시간으로 확인하고 초기화 카운트다운과 알림까지 받아요.","inLanguage":"ko","isPartOf":{"@id":"https://claudeusagemonitor.com/#site"},"about":{"@id":"https://claudeusagemonitor.com/#app"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["#about .about__def","#about .facts"]},"mainEntity":{"@id":"https://claudeusagemonitor.com/#app"},"primaryImageOfPage":"https://claudeusagemonitor.com/img/og.png","dateModified":"2026-10-07","author":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"SoftwareApplication","@id":"https://claudeusagemonitor.com/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor는 Claude 구독자의 사용 한도를 실시간으로 보여 주는 Windows 10/11 및 macOS용 무료 오픈 소스 데스크톱 위젯입니다. 5시간 세션, 주간 한도, 모델별 주간 한도를 각 초기화까지의 카운트다운, 페이스, 소모율, 알림과 함께 표시합니다. 모든 기기의 claude.ai, Claude Desktop, Claude Code 사용량을 포함하며 터미널이 필요 없습니다.","url":"https://claudeusagemonitor.com/ko/","inLanguage":"ko","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.7.1","dateModified":"2026-10-07T05:31:15Z","downloadUrl":"https://claudeusagemonitor.com/usage-api/dl.php?os=win","installUrl":"https://claudeusagemonitor.com/ko/#download","fileSize":"47 MB","releaseNotes":"https://claudeusagemonitor.com/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://claudeusagemonitor.com/#author"},"publisher":{"@id":"https://claudeusagemonitor.com/#author"},"image":"https://claudeusagemonitor.com/img/og.png","screenshot":["https://claudeusagemonitor.com/img/panel-full-midnight.png","https://claudeusagemonitor.com/img/history-7d-midnight.png","https://claudeusagemonitor.com/img/ring-neon.png","https://claudeusagemonitor.com/img/compact-claude.png"],"featureList":["미리 알아차리세요","너무 빨리 쓰고 있나요?","모든 기기를 숫자 하나로","모델별 한도","꼭 필요한 알림만","엿보지 않아요. 절대로.","백업 표시등 – Claude 작업이 백업됐는지 한눈에"],"availableLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"sameAs":["https://github.com/gaborvidovics76/ClaudeUsageMonitor"]},{"@type":"Person","@id":"https://claudeusagemonitor.com/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://claudeusagemonitor.com/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://claudeusagemonitor.com/ko/#faq","inLanguage":"ko","mainEntity":[{"@type":"Question","name":"정말 무료예요? 숨은 조건은 없나요?","acceptedAnswer":{"@type":"Answer","text":"정말 무료이고, 숨은 조건도 없어요. 데모도, 체험판도, 기능을 뺀 버전도 아니에요 – 이게 완전한 유일한 버전이에요. 광고도, 유료 버전도, 데이터 수집도 없어요. 소스 코드는 MIT 라이선스로 공개되어 있어요."}},{"@type":"Question","name":"Anthropic 공식 제품인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. Vidovics Gábor가 만든 독립 커뮤니티 도구이며, Anthropic과 제휴 관계가 없어요. “Claude”는 Anthropic, PBC의 상표예요."}},{"@type":"Question","name":"비밀번호를 입력해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"절대 아니에요. 로그인하지 않으면 Claude Desktop의 로컬 로그를 읽어요. 모든 기기의 사용량을 보고 싶다면 내 브라우저에서 claude.ai에 로그인하면 돼요 – 앱은 비밀번호를 절대 보지 못해요."}},{"@type":"Question","name":"실행하면 Windows가 경고를 띄워요. 왜 그런가요?","acceptedAnswer":{"@type":"Answer","text":"앱에 코드 서명이 되어 있지 않기 때문이에요(인증서는 유료인데 앱은 무료니까요). 추가 정보 → 실행을 클릭하세요. 다운로드한 파일은 SHA-256 체크섬으로 검증할 수 있고, GitHub에서 소스 코드도 확인할 수 있어요."}},{"@type":"Question","name":"어떤 Mac을 지원하나요?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 이상이에요. 위의 다운로드 카드에 현재 빌드가 어떤 프로세서용인지 항상 표시돼요. macOS 버전은 나온 지 얼마 안 됐으니 의견을 보내 주시면 큰 도움이 돼요."}},{"@type":"Question","name":"업데이트는 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"앱이 하루에 몇 번 이 사이트를 확인해요. 새 버전이 있으면 알려 주고, 클릭 한 번으로 다운로드·검증·설치한 뒤 다시 시작해요. 이 기능은 끌 수 있어요."}},{"@type":"Question","name":"삭제하려면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"Windows: 설정 → 앱 → 설치된 앱 → Claude Usage Monitor → 제거. macOS: 앱을 휴지통으로 끌어다 놓으세요. 그게 다예요."}},{"@type":"Question","name":"설정을 열지 않고 Claude 사용량을 확인하려면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"Claude Usage Monitor를 설치하세요. 5시간 세션, 주간 한도, 모델별 한도를 항상 위에 떠 있는 작은 위젯과 알림 영역 또는 메뉴 막대의 퍼센트로 늘 화면에 보여 줘요. Claude 자체의 수치는 설정 → 사용량에 있지만, 위젯은 같은 한도를 클릭 한 번 없이 보여 줘요."}},{"@type":"Question","name":"Claude 5시간 세션과 주간 한도는 언제 초기화되나요?","acceptedAnswer":{"@type":"Answer","text":"세션 기반 한도는 5시간마다 초기화돼요. 주간 한도는 Anthropic이 계정마다 정한 매주 같은 시각에 초기화되므로 사람마다 달라요. 위젯은 두 초기화까지 남은 시간을 실시간으로 카운트다운하고, claude.ai에 로그인하면 Anthropic 서버의 정확한 시각을 사용해요."}},{"@type":"Question","name":"Claude Code 사용량도 claude.ai 한도에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"네. Anthropic에 따르면 claude.ai, Claude Desktop, Claude Code에서의 사용량은 모두 같은 사용 한도에 포함돼요. 그래서 위젯의 claude.ai 모드는 위젯이 실행 중인 컴퓨터뿐 아니라 모든 기기와 앱을 합친 숫자 하나를 보여 줘요."}},{"@type":"Question","name":"“Claude Code Usage Monitor”와 같은 프로그램인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. “Claude Code Usage Monitor”는 다른 개발자가 만든 별개의 터미널 기반 도구예요. Vidovics Gábor가 만든 Claude Usage Monitor는 알림 영역 아이콘, 테마, 알림을 갖춘 Windows·macOS용 그래픽 데스크톱 위젯이고, 명령줄이 필요 없어요."}},{"@type":"Question","name":"Claude Usage Monitor로 Claude 파일이 백업됐는지 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네 – 이것도 무료예요. 백업 상태 표시줄을 켜면 패널의 표시등 세 개가 OneDrive 백업, Nextcloud 같은 두 번째 클라우드 백업, Obsidian 보관소 백업이 최신인지 보여 줘요. 24시간 이내면 녹색, 48시간 이내면 노란색, 더 오래됐거나 없으면 빨간색이고, 가장 최근 실행이 실패하면 빨간 테두리가 표시돼요. 모니터는 백업 로그를 읽기만 하고, 백업 자체는 무료 Claude Backup Kit이 해요. 키트는 Claude Code 스킬, CLAUDE.md, 프로젝트 메모리, Claude Desktop 설정, 에이전트 로그를 매일 복사하며, 로그인 토큰은 절대 복사하지 않아요. 키트는 누구나 수정할 수 있는 무료 출발점이므로 백업에 대해서는 책임을 지지 않아요. 백업이 완전하고 복원 가능한지 확인하는 것은 각 사용자의 책임이에요."}},{"@type":"Question","name":"Claude Usage Monitor를 평가하거나 의견을 보내려면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"패널을 오른쪽 클릭하고 “개발자에게 메시지 보내기…”를 선택하거나, 패널 머리글의 메시지 아이콘을 클릭하세요. 별 1~5개로 평가하고 메시지를 쓸 수 있으며, 직접 체크한 경우에만 평가와 이름이 이 웹사이트에 표시돼요. 모든 메시지는 제작자 Vidovics Gábor가 직접 읽고, 동의 없이는 아무것도 게시하지 않아요. 앱이 없다면 이 페이지 맨 아래의 양식을 이용하세요."}},{"@type":"Question","name":"Claude Usage Monitor는 어떤 언어를 지원하나요?","acceptedAnswer":{"@type":"Answer","text":"34개 언어를 지원해요. 유럽연합의 모든 공식 언어에 일본어, 한국어, 중국어 간체와 번체, 인도네시아어, 베트남어가 더해지고, 포르투갈어는 유럽과 브라질, 스페인어는 스페인과 중남미 버전이 따로 있어요. 앱은 시스템 언어를 자동으로 선택하며, 이 웹사이트도 이 모든 언어로 제공돼요."}},{"@type":"Question","name":"Claude Pro, Max, Team, Enterprise에서도 작동하나요?","acceptedAnswer":{"@type":"Answer","text":"네. 내 Claude 플랜의 한도를 그대로 보여 줘요 – Pro, Max 5×, Max 20×, Team, Enterprise 모두요. Claude가 설정 → 사용량에 표시하는 것과 같은 한도이고, 패널 머리글의 플랜 배지를 보면 지금 어떤 플랜인지도 알 수 있어요."}}]},{"@type":"HowTo","@id":"https://claudeusagemonitor.com/ko/#install","name":"설치 방법(3단계) – Windows","inLanguage":"ko","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"text":"zip 파일 전체 압축 풀기 (오른쪽 클릭 → 모두 압축 풀기…)."},{"@type":"HowToStep","position":2,"text":"INSTALL.bat 을 더블 클릭하세요."},{"@type":"HowToStep","position":3,"text":"질문 두 개에 답하세요 – Enter를 누르면 권장 답변이 선택돼요. 끝!"}]},{"@type":"DefinedTermSet","@id":"https://claudeusagemonitor.com/ko/#glossary","name":"핵심 용어, 정확하게","inLanguage":"ko","hasDefinedTerm":[{"@type":"DefinedTerm","name":"5시간 세션(5시간 제한)","description":"Claude의 단기 사용 한도예요. 세션 기반 한도는 5시간마다 초기화돼요. Anthropic은 이를 “현재 세션”이라고 부르고, 많은 사용자는 5시간 제한이나 5시간 윈도우라고도 해요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"주간 한도","description":"유료 Claude 플랜에 적용되는 두 번째 한도로, 모든 모델에 걸쳐 적용되며 계정마다 정해진 매주 같은 시각에 초기화돼요. 주간 한도는 2025년 8월 28일부터 시행되고 있어요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"모델별 주간 한도","description":"특정 모델 하나에만 적용되는 별도의 주간 한도로, Claude 사용량 페이지에서 다른 모든 모델의 한도 옆에 표시돼요. 위젯은 선택한 모델의 한도를 세 번째 게이지로 보여 줘요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"초기화(리셋)","description":"한도가 다시 0%로 돌아가는 시점이에요. 위젯은 그때까지 카운트다운해요. claude.ai에 로그인하면 Anthropic 서버에서 정확한 시각을 받아 오고, 로컬 로그를 쓰면 추정치예요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"페이스","description":"한 주를 고르게 썼을 때와 비교해 얼마나 앞서 있거나 뒤처져 있는지를 나타내요. “페이스 대비 +12%”는 한 주 중 지나간 시간의 비율보다 주간 한도를 12%포인트 더 많이 썼다는 뜻이에요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"소모율","description":"지금 한도가 얼마나 빠르게 차오르는지를 나타내요. 세션은 시간당 %, 주간 한도는 하루당 %로 보여 주고, 이 속도라면 언제 100%에 도달하는지도 알려 줘요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"},{"@type":"DefinedTerm","name":"사용량 크레딧(추가 사용량)","description":"플랜 한도에 도달한 뒤에도 쓴 만큼 비용을 내고 계속 쓸 수 있는 선택형 사용량으로, 월간 지출 한도를 정할 수 있어요. 위젯은 켜져 있는지, 지출 한도, 지금까지 쓴 금액을 보여 줘요.","inDefinedTermSet":"https://claudeusagemonitor.com/ko/#glossary"}]}]}</script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://claudeusagemonitor.com/ko/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Claude Usage Monitor releases" href="https://claudeusagemonitor.com/releases.xml">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">본문으로 건너뛰기</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">기능</a>
+      <a href="#backups" data-i18n="nav.backups">백업</a>
+      <a href="#themes" data-i18n="nav.themes">테마</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">새 소식</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#feedback" data-i18n="nav.feedback">의견 보내기</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">KO</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="bg" lang="bg" href="../bg/" data-lang="bg">Български <span>bg</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="da" lang="da" href="../da/" data-lang="da">Dansk <span>da</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="et" lang="et" href="../et/" data-lang="et">Eesti <span>et</span></a></li><li><a role="option" hreflang="el" lang="el" href="../el/" data-lang="el">Ελληνικά <span>el</span></a></li><li><a role="option" hreflang="es-ES" lang="es-ES" href="../es/" data-lang="es">Español (España) <span>es</span></a></li><li><a role="option" hreflang="es-419" lang="es-419" href="../es-419/" data-lang="es-419">Español (Latinoamérica) <span>es-419</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="ga" lang="ga" href="../ga/" data-lang="ga">Gaeilge <span>ga</span></a></li><li><a role="option" hreflang="hr" lang="hr" href="../hr/" data-lang="hr">Hrvatski <span>hr</span></a></li><li><a role="option" hreflang="id" lang="id" href="../id/" data-lang="id">Bahasa Indonesia <span>id</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="lv" lang="lv" href="../lv/" data-lang="lv">Latviešu <span>lv</span></a></li><li><a role="option" hreflang="lt" lang="lt" href="../lt/" data-lang="lt">Lietuvių <span>lt</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="mt" lang="mt" href="../mt/" data-lang="mt">Malti <span>mt</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="pt-BR" lang="pt-BR" href="../pt/" data-lang="pt">Português (Brasil) <span>pt</span></a></li><li><a role="option" hreflang="pt-PT" lang="pt-PT" href="../pt-pt/" data-lang="pt-pt">Português (Portugal) <span>pt-pt</span></a></li><li><a role="option" hreflang="ro" lang="ro" href="../ro/" data-lang="ro">Română <span>ro</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="sk" lang="sk" href="../sk/" data-lang="sk">Slovenčina <span>sk</span></a></li><li><a role="option" hreflang="sl" lang="sl" href="../sl/" data-lang="sl">Slovenščina <span>sl</span></a></li><li><a role="option" hreflang="fi" lang="fi" href="../fi/" data-lang="fi">Suomi <span>fi</span></a></li><li><a role="option" hreflang="sv" lang="sv" href="../sv/" data-lang="sv">Svenska <span>sv</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li><li><a role="option" hreflang="vi" lang="vi" href="../vi/" data-lang="vi">Tiếng Việt <span>vi</span></a></li><li><a role="option" hreflang="ja" lang="ja" href="../ja/" data-lang="ja">日本語 <span>ja</span></a></li><li><a role="option" hreflang="ko" lang="ko" href="../ko/" aria-current="page" data-lang="ko">한국어 <span>ko</span></a></li><li><a role="option" hreflang="zh-Hans" lang="zh-Hans" href="../zh-cn/" data-lang="zh-cn">简体中文 <span>zh-cn</span></a></li><li><a role="option" hreflang="zh-Hant" lang="zh-Hant" href="../zh-tw/" data-lang="zh-tw">繁體中文 <span>zh-tw</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">무료 다운로드</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% 무료</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">버전</span> <span data-win="version">2.7.1</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – Windows &amp; macOS용 무료 사용량 위젯</span> <span data-i18n="hero.h1">Claude 한도에 <em>갑자기 막힐 일, 이제 없어요.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">항상 맨 위에 떠 있는 작은 위젯이 Claude 사용량을 실시간으로 보여 줘요. 5시간 세션, 주간 한도, 그리고 내 페이스까지. 휴대폰에서 쓴 사용량도 빠짐없이요. Windows와 macOS 모두 지원해요.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">내 시스템</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">내 시스템</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>무료. 앞으로도 쭉.</b> 데모도, 체험판도 아니에요. 잠긴 기능도 없어요.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">회 다운로드(이 페이지 기준)</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">데스크톱 앱이에요 – 컴퓨터로 링크를 보내 두세요</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="5시간 세션 47%, 모델별 주간 한도 61%, 주간 한도 23%를 표시한 Claude Usage Monitor 위젯">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">실제 앱 화면이에요. 숫자는 데모 값이에요.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% 무료</span><i>✦</i><span data-i18n="mq.2">데모 아님</span><i>✦</i><span data-i18n="mq.3">잠긴 기능 없음</span><i>✦</i><span data-i18n="mq.4">광고 없음</span><i>✦</i><span data-i18n="mq.5">가입 불필요</span><i>✦</i><span data-i18n="mq.6">추적 없음</span><i>✦</i><span data-i18n="mq.7">오픈 소스</span><i>✦</i><span data-i18n="mq.8">34개 언어</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">영원히 무료</b><span data-i18n="trust.1d">정식 버전 그대로예요. 유료 버전은 아예 없어요.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">오픈 소스</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">MIT 라이선스 – GitHub에서 코드 한 줄 한 줄 확인하세요</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">개인정보 보호</b><span data-i18n="trust.3d">텔레메트리도, 광고도, 쿠키도 없어요.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">알아서 업데이트</b><span data-i18n="trust.4d">SHA-256으로 검증하고, 클릭 한 번이면 끝.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">단순한 로그 리더와 다른 점</p>
+  <h2 data-i18n="more.h2">휴대폰도 한도를 갉아먹어요. <em>이제 데스크톱에서 한눈에 보세요.</em></h2>
+  <p class="more__lead" data-i18n="more.p">사용량 추적 도구는 대부분 컴퓨터에 있는 로그 파일을 읽기 때문에 <b>그 컴퓨터 한 대</b>에서 쓴 양밖에 몰라요. Claude Usage Monitor는 대신 Anthropic 서버에 직접 물어보고, 계정 전체의 실제 수치를 보여 줘요. 휴대폰 앱, 브라우저, 다른 컴퓨터, Claude Code에서 쓴 사용량이 모두 합산되고, 데스크톱 한곳에서 전부 확인할 수 있어요.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">휴대폰의 Claude 앱</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">브라우저의 claude.ai</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">다른 컴퓨터</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code &amp; Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="모든 기기의 사용량을 합산해 보여 주는 Claude Usage Monitor 위젯 하나">
+      <figcaption data-i18n="more.sum">계정 전체를 아우르는 진짜 숫자 하나 – 언제나 눈앞에.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">로컬 로그만 읽는 도구</h3>
+      <ul data-i18n="more.a_li"><li class="no">휴대폰에서 쓴 사용량 – 안 보임</li><li class="no">브라우저에서 쓴 사용량 – 안 보임</li><li class="no">다른 컴퓨터 – 안 보임</li><li class="yes">이 컴퓨터의 Claude Code</li><li class="no">초기화 시각은 추정치</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">claude.ai 소스를 쓰는 Claude Usage Monitor</h3>
+      <ul data-i18n="more.b_li"><li class="yes">휴대폰, 브라우저, 모든 컴퓨터 – 전부 합산</li><li class="yes">Claude Code와 Claude Desktop도 포함</li><li class="yes">Claude의 설정 → 사용량에 나오는 것과 같은 숫자</li><li class="yes">Anthropic 서버가 알려 주는 정확한 초기화 시각</li><li class="yes">로그인하지 않아도 로컬 로그로 계속 작동</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">방법: “claude.ai(모든 기기)” 데이터 소스를 선택하고 내 브라우저에서 한 번만 로그인하면 돼요. Claude Code와 같은 로그인 방식이라 앱은 비밀번호를 절대 보지 못해요. 로그인하지 않으면 위젯은 Claude Desktop의 로컬 로그를 읽고, 이때는 이 컴퓨터의 사용량만 알 수 있어요.</p>
+</section>
+
+<!-- ============================ +1 EXTRA: BACKUPS ============================ -->
+<section class="sec wrap more bk" id="backups">
+  <p class="eyebrow"><span class="plus1">+1</span> <span data-i18n="bk.eyebrow">덤으로 – 이것도 무료</span></p>
+  <h2 data-i18n="bk.h2">백업 상태까지 보여 줘요. <em>한순간에 날아갈 수 있는 지식, 그 가치는 얼마일까요?</em></h2>
+  <p class="more__lead" data-i18n="bk.p">다른 사용량 추적 도구는 숫자에서 멈춰요. Claude Usage Monitor는 한 걸음 더 나아가 <b>Claude 관련 백업</b>이 최신인지도 보여 줘요. 스킬, <code>CLAUDE.md</code> 규칙, 프로젝트 메모리, MCP 설정, 에이전트 대화 로그, Obsidian 노트까지요. 이런 파일은 대개 디스크 하나에만 들어 있어요. 드라이브 고장, 노트북 도난, 실수로 한 삭제 한 번이면 몇 달 치 작업이 사라져요. 패널의 작은 표시등 세 개가 하루 종일, 매 순간 그런 일은 없다고 알려 줘요.</p>
+
+  <div class="bk__top">
+    <figure class="bk__panel reveal">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="OneDrive, Nextcloud, Obsidian 백업 표시등 세 개가 모두 녹색인 Claude Usage Monitor 패널, 각각 1분 전에 백업됨"></a>
+    </figure>
+    <div class="bk__legend reveal">
+      <h3 data-i18n="bk.lamps_h">표시등 세 개. 한 번 보면 바로 알아요.</h3>
+      <ul class="lamps" data-i18n="bk.lamps"><li><i class="lamp lamp--g"></i><span><b>녹색</b> – 마지막 성공 백업이 24시간 이내예요.</span></li><li><i class="lamp lamp--y"></i><span><b>노란색</b> – 24~48시간 전이에요. 한번 살펴볼 때예요.</span></li><li><i class="lamp lamp--r"></i><span><b>빨간색</b> – 48시간보다 오래됐거나 백업이 아예 없어요.</span></li><li><i class="lamp lamp--ring"></i><span><b>빨간 테두리</b> – 가장 최근 실행이 실패했거나 끝나지 않았어요. 이전 백업 덕분에 표시등이 아직 녹색이어도 마찬가지예요.</span></li></ul>
+      <p class="fine" data-i18n="bk.lamps_note">표시등은 <b>OneDrive</b>(첫 번째 사본), <b>Nextcloud</b>(서로 독립된 두 번째 클라우드 – rclone이 지원하는 클라우드라면 무엇이든 가능), <b>Obsidian</b>(보관소의 날짜별 스냅샷)이에요. 실제로 끝까지 완료된 실행만 인정돼요. 실패했거나 중단된 실행, 테스트 실행으로는 표시등이 절대 녹색이 되지 않아요. 기준 시간은 바꿀 수 있어요. 표시등을 클릭하면 자세한 내용이 보여요.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="bk.a_t">다른 사용량 추적 도구</h3>
+      <ul data-i18n="bk.a_li"><li class="no">숫자만 보여 줄 뿐, 데이터 상태는 알려 주지 않음</li><li class="no">스킬과 노트가 안전한지 알 수 없음</li><li class="no">백업이 망가진 걸 정작 필요할 때 알게 됨 – 이미 늦음</li><li class="no">백업 설정은 도와주지 않음</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="bk.b_t">Claude Usage Monitor + 무료 Backup Kit</h3>
+      <ul data-i18n="bk.b_li"><li class="yes">OneDrive, 두 번째 클라우드, Obsidian 보관소별 표시등</li><li class="yes">실패하거나 끝나지 않은 실행을 즉시 표시</li><li class="yes">무엇을, 어디에, 파일 몇 개를, 얼마만큼 백업했는지</li><li class="yes">예약된 작업과 로그 – 클릭 한 번이면 확인</li><li class="yes">10분 만에 백업을 설정해 주는 무료 키트</li></ul>
+    </article>
+  </div>
+
+  <div class="bk__shows">
+    <figure class="bk__shot reveal">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor 백업 세부 정보 창: 상태 최신, 백업된 Obsidian 보관소 스냅샷, Claude Code, Claude Desktop, 추가 폴더, 에이전트 로그의 파일 수와 크기, 오류 없음, 예약된 작업"></a>
+    </figure>
+    <div>
+      <h3 data-i18n="bk.shows_h">표시등을 클릭하면 이런 내용이 보여요</h3>
+      <ul class="ticks" data-i18n="bk.shows"><li><b>상태</b> – 최신, 조금 오래됨, 오래됨, 백업 없음 중 하나와 함께 마지막 성공 백업 시각과 마지막 실행 시각.</li><li><b>백업 항목</b> – 항목마다 원본 폴더, 대상, 파일 수, 크기: Obsidian 보관소 스냅샷, Claude Code, Claude Desktop, 추가 폴더, 에이전트 로그.</li><li><b>내용</b> – 가장 최근 보관소 스냅샷, 보관 중인 스냅샷 수, 최근에 편집한 노트, 마지막 스냅샷 이후 바뀐 노트 수.</li><li><b>업로드</b> – Nextcloud 탭에서: 이번 실행에서 새로 올리거나 교체한 파일(폴더별)과 클라우드의 남은 공간.</li><li><b>오류 및 경고</b> – 로그에서 바로 가져와 알기 쉬운 말로.</li><li><b>예약된 작업</b> – 백업을 실행하는 Windows 작업의 상태, 마지막 결과, 다음 실행 시각.</li><li><b>로그</b> – 마지막 몇 줄, 그리고 클릭 한 번으로 여는 로그 파일.</li></ul>
+      <p class="fine" data-i18n="bk.shows_note">모니터는 읽기만 해요. 파일을 바꾸거나 옮기거나 업로드하는 일은 절대 없어요. 5분마다 다시 확인하고, “지금 확인”을 누르면 바로 확인해요. OneDrive에 온라인 전용으로만 있는 스냅샷은 목록을 보여 주려고 일부러 내려받지 않아요.</p>
+    </div>
+  </div>
+
+  <div class="bk__kit reveal">
+    <div class="bk__kittxt">
+      <h3><span class="freebadge" data-i18n="dls.free">무료</span> <span data-i18n="bk.kit_h">솔직히 말하면: 모니터는 지켜보고, 백업은 키트가 해요.</span></h3>
+      <p data-i18n="bk.kit_p">Claude Usage Monitor는 파일을 복사하지 않아요. 복사가 제대로 됐는지 보여 줄 뿐이에요. 복사는 <b>Claude Backup Kit</b>이 맡아요. 한 줄 한 줄 읽어 볼 수 있는 짧은 PowerShell 스크립트 몇 개로 되어 있어요. 매일 Claude 작업을 OneDrive와 서로 독립된 두 번째 클라우드에 백업하고, 표시등이 읽는 로그를 남겨요. 계정도, 구독도 필요 없고, 저희에게 전송되는 것도 없어요.</p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT 라이선스</span> · ZIP <span data-kit="size">24 KB</span></p>
+    </div>
+    <div class="bk__kitbtns">
+      <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Backup Kit 무료 다운로드</span></a>
+      <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">GitHub에서 모든 스크립트 보기</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">다운로드하면 <a href="#terms" data-legal="terms">이용약관</a>에 동의하는 것으로 간주됩니다. 앱과 Backup Kit은 무료이며 어떠한 보증도 없이 “있는 그대로” 제공되고, 사용에 따른 위험은 사용자 본인이 부담합니다.</p>
+    </div>
+  </div>
+
+  <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
+    <h3 data-i18n="bk.disc_h">면책 조항 – 꼭 읽어 주세요</h3>
+    <p data-i18n="bk.disc"><b>백업, 데이터 손실 또는 그 밖의 어떠한 손해에 대해서도 책임을 지지 않습니다.</b> Claude Usage Monitor는 백업 로그를 읽어 표시할 뿐이며, 어떤 백업도 생성하거나 검사하거나 보장하지 않습니다. Claude Backup Kit은 도움을 드리고자 무료로 제공하는 출발점일 뿐, 완성된 제품이 아닙니다. 누구나 자신의 컴퓨터에 맞게 스크립트를 수정할 수 있고 또 수정해도 되므로, 백업의 품질과 완전성은 보장할 수 없습니다. <b>백업이 완전하고 복원 가능한지 확인하는 것은 각자의 책임입니다.</b> 표시등을 확인하고, 로그를 읽고, 때때로 복원을 직접 테스트해 보시기 바랍니다. 키트는 MIT 라이선스에 따라 어떠한 보증도 없이 “있는 그대로” 제공됩니다.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">이용약관</a></p>
+  </aside>
+
+  <div class="bkhelp" id="backup-help">
+    <h3 data-i18n="bk.help_h">도움말: 모니터가 표시할 수 있는 백업 설정하기</h3>
+    <p class="fine" data-i18n="bk.help_p">필요한 부분만 펼쳐 보세요. 무엇을 쓰고, 무엇을 설정하고, 어디를 클릭할지 모든 단계가 여기 있어요. 키트는 얼마든지 고쳐 쓸 수 있는 출발점이에요. 위의 <a href="#backup-disclaimer">면책 조항</a>을 꼭 읽어 주세요.</p>
+
+    <details open>
+      <summary data-i18n="bk.q_steps">10분이면 설정 끝 – 단계별 안내</summary>
+      <ol class="steps" data-i18n="bk.steps"><li><b>준비물.</b> Windows 10 또는 11, 로그인된 OneDrive, 설치된 Claude Usage Monitor. 두 번째 사본용으로는 Nextcloud 계정 – 또는 rclone이 지원하는 다른 클라우드(Google Drive, Dropbox, S3, pCloud, SFTP…)가 필요해요. 두 번째 클라우드가 없다면 2단계는 건너뛰어도 돼요.</li><li><b>앱 비밀번호 만들기</b>(두 번째 클라우드에만 해당). Nextcloud에서: 내 아바타 → <em>개인 설정</em> → <em>보안</em> → <em>기기 및 세션</em> → 앱 이름 <code>rclone-backup</code> → <em>새 앱 암호 만들기</em>. 한 번만 표시되니 바로 복사하세요. 계정 비밀번호가 <b>아니며</b>, 언제든지 취소할 수 있어요.</li><li><b>다운로드 후 압축 풀기</b> – Backup Kit을 계속 둘 폴더에 풀어 주세요. 예: <code>C:\Tools\ClaudeBackup</code>.</li><li><b><code>config.psd1</code> 편집</b> – 메모장에서: <code>VaultPath</code> = Obsidian 보관소(비워 두면 Obsidian 없음), <code>ExtraFolders</code> = 그 밖에 백업할 폴더, <code>NextcloudRemote</code>와 <code>NextcloudBasePath</code> = 두 번째 클라우드(비워 두면 건너뜀), <code>DailyTime</code> = 실행 시각. 나머지는 그대로 두면 돼요.</li><li><b>관리자 권한으로 설치 프로그램 실행:</b> Win+X → <em>터미널(관리자)</em>을 연 다음 <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>, <code>cd C:\Tools\ClaudeBackup</code>, <code>Unblock-File *.ps1</code>, <code>.\Install-BackupKit.ps1</code>. 필요하면 rclone을 설치하고, 클라우드 주소와 사용자 이름, 앱 비밀번호(입력 내용은 숨겨짐)를 묻고, 예약된 작업 두 개를 만들고, 모니터에 확인할 위치를 알려 준 뒤 첫 실행까지 마쳐요.</li><li><b>첫 실제 업로드:</b><code>.\Backup-Step2-Cloud.ps1</code> – 설치 프로그램은 2단계를 테스트로만 실행했어요.</li><li><b>확인하기:</b><code>.\Test-BackupKit.ps1</code> – 모든 줄에 <code>[OK]</code>가 나와야 해요. Claude Usage Monitor에서: 패널을 오른쪽 클릭 → <em>백업 상태 표시줄</em>. 5분 안에 표시등 세 개가 녹색으로 바뀌고, <em>백업…</em> → <em>지금 확인</em>을 누르면 바로 바뀌어요.</li></ol>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_what">백업되는 것 – 그리고 절대 백업되지 않는 것</summary>
+      <ul class="ticks" data-i18n="bk.what"><li><b>Claude Code</b>(<code>%USERPROFILE%\.claude</code>) – 스킬, 설정, <code>CLAUDE.md</code>, 프로젝트 메모리, 플러그인.</li><li><b>Claude Desktop</b>(<code>%APPDATA%\Claude</code>) – 설정과 MCP 서버.</li><li><b>에이전트 대화 로그</b> – 세션마다 ZIP 하나.</li><li><b>Obsidian 보관소</b> – 실행할 때마다 날짜가 붙은 ZIP 스냅샷, 30일간 보관.</li><li><b>추가 폴더</b> – <code>config.psd1</code>에 적은 폴더 전부.</li><li><b>절대 백업하지 않는 것:</b> Claude Code 로그인 토큰(<code>.credentials.json</code>), Claude Desktop의 쿠키와 캐시, 다시 내려받을 수 있는 대용량 VM 이미지.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_settings">앱의 설정 → 백업, 항목별 안내</summary>
+      <div class="cmpwrap"><table class="keys" data-i18n="bk.settings"><tr><th>패널에 백업 상태 표시줄 표시</th><td>표시등 세 개를 켜거나 꺼요. 오른쪽 클릭 메뉴의 <em>백업 상태 표시줄</em>에서도 바꿀 수 있어요.</td></tr><tr><th>표시등</th><td>표시할 표시등: OneDrive, Nextcloud, Obsidian. Obsidian 보관소가 없다면 선택을 해제하세요.</td></tr><tr><th>표시등 옆 레이블</th><td>이름과 경과 시간 · 이름만 · 표시등만.</td></tr><tr><th>녹색: 최대 / 노란색: 최대</th><td>시간 단위 기준값 – 기본값은 24와 48이에요. 일주일에 한 번 백업한다면 170과 340으로 설정하세요.</td></tr><tr><th>백업 폴더</th><td>1단계가 기록하는 폴더, 예: <code>OneDrive\ClaudeBackup</code>. <em>자동</em>으로 두세요 – 설치 프로그램이 이미 모니터에 알려 줬어요.</td></tr><tr><th>백업 스크립트 구성</th><td>키트의 <code>config.psd1</code>. 모니터는 여기서 보관소 경로와 클라우드 대상만 읽어요 – 비밀번호는 절대 읽지 않아요.</td></tr><tr><th>예약된 작업 필터</th><td><code>ClaudeBackup*</code> – 세부 정보 창에 표시할 Windows 작업.</td></tr><tr><th>세부 정보 창에 표시</th><td>보고 싶은 항목을 선택하세요: 백업 항목, 내용, 오류 및 경고, 예약된 작업, 로그.</td></tr></table></div>
+      <p class="fine" data-i18n="bk.settings_note">설치 프로그램은 <code>%APPDATA%\ClaudeUsageMonitor\backup_profile.json</code> 파일을 만들어요 – 폴더 경로만 들어 있고, 비밀번호나 토큰은 없어요. 백업 탭에서 설정한 값이 이 파일보다 우선해요.</p>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_sec">보안 – 키트가 데이터를 지키는 방법</summary>
+      <ul class="ticks" data-i18n="bk.sec"><li><b>키트의 어떤 파일에도 비밀번호가 없어요.</b> 앱 비밀번호는 화면에 표시되지 않게 입력되고, rclone 자체 구성에만 난독화되어 저장돼요. Nextcloud에서 언제든지 취소할 수 있어요.</li><li><b>로그인 토큰은 절대 복사하지 않아요.</b> Claude Desktop의 쿠키도 마찬가지예요.</li><li><b>미러링하지 않아요.</b> 컴퓨터에서 삭제한 파일도 두 백업에는 그대로 남아요 – 미러링은 실수까지 충실히 복사하니까요.</li><li><b>날짜별 보관소 스냅샷</b> 덕분에 나중에 잘못된 사본이 이전의 정상 상태를 덮어쓸 수 없어요.</li><li><b>서로 독립된 두 업체.</b> 한쪽에 장애가 생기거나 계정이 잠겨도 다른 쪽에 모든 것이 남아 있어요.</li><li><b>알아 두세요:</b> Claude Desktop 구성과 <code>.claude\settings.json</code>에는 MCP 서버의 API 키가 들어 있을 수 있어요. 복원할 때 필요하므로 이 파일도 내 OneDrive와 내 클라우드에 백업돼요. 두 계정 모두 2단계 인증으로 보호하세요.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_restore">복원 – 필요할 때</summary>
+      <table class="keys" data-i18n="bk.restore"><tr><th>노트의 이전 버전</th><td>onedrive.com → 파일을 오른쪽 클릭 → <em>버전 기록</em>.</td></tr><tr><th>삭제한 파일</th><td>OneDrive <em>휴지통</em>(30일) 또는 Nextcloud <em>삭제된 파일</em>.</td></tr><tr><th>특정 날짜의 보관소 전체</th><td><code>vault-snapshots\Vault_…zip</code>을 빈 폴더에 압축 해제한 뒤 Obsidian에서 여세요: <em>폴더를 보관소로 열기</em>.</td></tr><tr><th>Claude Code 스킬과 설정</th><td><code>files\claude-code</code>를 <code>%USERPROFILE%\.claude</code>로 다시 복사한 뒤 Claude Code에 다시 로그인하세요.</td></tr><tr><th>Claude Desktop 설정</th><td>Claude Desktop을 닫고 <code>files\claude-desktop</code>을 <code>%APPDATA%\Claude</code>로 다시 복사하세요.</td></tr></table>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_own">이미 쓰는 백업이 있나요? 모니터에 필요한 것</summary>
+      <ul class="ticks" data-i18n="bk.own"><li><b>실행마다 로그 하나</b> – 백업 폴더의 <code>logs</code> 하위 폴더에 <code>onedrive_YYYY-MM-DD_HHMMSS.log</code>, <code>nextcloud_…log</code> 형식의 이름으로 두고, 모든 줄은 날짜와 시각으로 시작해야 해요.</li><li><b>분명한 끝 표시:</b> 성공한 실행은 <code>KESZ</code>가 들어간 줄로, 실패한 실행은 <code>HIBAVAL ZARULT</code>가 들어간 줄로 끝나야 해요. 모니터가 알아듣는 모든 단어는 키트의 <code>Common.ps1</code>에 정리되어 있어요.</li><li><b>확인할 위치:</b> 백업 탭에서 <em>백업 폴더</em>를 지정하세요. 폴더나 파일 이름이 다르면 <code>backup_profile.json</code>에서 설정할 수 있어요 – 방법은 키트의 README에 있어요.</li><li><b>Mac:</b> macOS에서도 표시등은 같은 로그를 읽어요. 키트 자체와 예약된 작업 목록은 Windows 전용이에요.</li></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Claude Usage Monitor란?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor는 Claude(클로드) 구독의 사용 한도를 실시간으로 보여 주는 Windows 10/11 및 macOS용 무료 오픈 소스 데스크톱 위젯이에요</b> – 5시간 세션, 주간 한도, 모델별 주간 한도를 각각 초기화까지 남은 시간과 함께 보여 줘요. 다른 창 위에 항상 떠 있어서, 설정 → 사용량을 열지 않아도, 터미널 없이도 Claude 사용량을 확인할 수 있어요.</p>
+  <p class="about__def" data-i18n="about.p2">Windows와 Mac 모두 앱 하나로 써요. claude.ai, Claude Desktop, Claude Code 등 플랜 사용량에 포함되는 모든 것을 내 모든 기기에서 합산해요. 터미널 도구인 “Claude Code Usage Monitor”와는 다른 프로그램이에요. 이 앱은 알림 영역 아이콘이 있는 그래픽 패널이고, 명령줄이 필요 없어요.</p>
+  <dl class="facts" data-i18n="facts.dl"><dt>가격</dt><dd>무료 – 정식 버전, 유료 버전 없음, 체험판 아님</dd><dt>플랫폼</dt><dd>Windows 10 / 11(64비트), macOS 12 이상</dd><dt>언어</dt><dd>인터페이스 언어 34개</dd><dt>표시 항목</dt><dd>5시간 세션, 주간 한도, 모델별 주간 한도, 초기화 카운트다운, 페이스, 소모율</dd><dt>데이터 소스</dt><dd>Claude Desktop의 로컬 로그, 또는 모든 기기를 아우르는 claude.ai 로그인</dd><dt>개인정보</dt><dd>텔레메트리 없음, 광고 없음, 별도 계정 불필요</dd><dt>라이선스</dt><dd>MIT, GitHub에 공개된 오픈 소스</dd><dt>제작자</dt><dd>Vidovics Gábor, 헝가리 – 독립 개발자, Anthropic과 무관</dd></dl>
+  <p class="fine about__meta"><span data-i18n="about.updated">마지막 업데이트</span>: <time data-win="date">2026-10-07</time> · <span data-i18n="dls.version">버전</span> <span data-win="version">2.7.1</span> · <span data-i18n="about.by">제작:</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">핵심 용어, 정확하게</summary>
+    <dl>
+      <dt data-i18n="gl.1t">5시간 세션(5시간 제한)</dt>
+      <dd data-i18n="gl.1d">Claude의 단기 사용 한도예요. 세션 기반 한도는 5시간마다 초기화돼요. Anthropic은 이를 “현재 세션”이라고 부르고, 많은 사용자는 5시간 제한이나 5시간 윈도우라고도 해요.</dd>
+      <dt data-i18n="gl.2t">주간 한도</dt>
+      <dd data-i18n="gl.2d">유료 Claude 플랜에 적용되는 두 번째 한도로, 모든 모델에 걸쳐 적용되며 계정마다 정해진 매주 같은 시각에 초기화돼요. 주간 한도는 2025년 8월 28일부터 시행되고 있어요.</dd>
+      <dt data-i18n="gl.3t">모델별 주간 한도</dt>
+      <dd data-i18n="gl.3d">특정 모델 하나에만 적용되는 별도의 주간 한도로, Claude 사용량 페이지에서 다른 모든 모델의 한도 옆에 표시돼요. 위젯은 선택한 모델의 한도를 세 번째 게이지로 보여 줘요.</dd>
+      <dt data-i18n="gl.4t">초기화(리셋)</dt>
+      <dd data-i18n="gl.4d">한도가 다시 0%로 돌아가는 시점이에요. 위젯은 그때까지 카운트다운해요. claude.ai에 로그인하면 Anthropic 서버에서 정확한 시각을 받아 오고, 로컬 로그를 쓰면 추정치예요.</dd>
+      <dt data-i18n="gl.5t">페이스</dt>
+      <dd data-i18n="gl.5d">한 주를 고르게 썼을 때와 비교해 얼마나 앞서 있거나 뒤처져 있는지를 나타내요. “페이스 대비 +12%”는 한 주 중 지나간 시간의 비율보다 주간 한도를 12%포인트 더 많이 썼다는 뜻이에요.</dd>
+      <dt data-i18n="gl.6t">소모율</dt>
+      <dd data-i18n="gl.6d">지금 한도가 얼마나 빠르게 차오르는지를 나타내요. 세션은 시간당 %, 주간 한도는 하루당 %로 보여 주고, 이 속도라면 언제 100%에 도달하는지도 알려 줘요.</dd>
+      <dt data-i18n="gl.7t">사용량 크레딧(추가 사용량)</dt>
+      <dd data-i18n="gl.7d">플랜 한도에 도달한 뒤에도 쓴 만큼 비용을 내고 계속 쓸 수 있는 선택형 사용량으로, 월간 지출 한도를 정할 수 있어요. 위젯은 켜져 있는지, 지출 한도, 지금까지 쓴 금액을 보여 줘요.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">이런 기능이 있어요</p>
+  <h2 data-i18n="feat.h2">Claude 사용 한도를 전부, 한눈에.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">미리 알아차리세요</h3>
+        <p data-i18n="feat.1d">녹색, 노란색, 빨간색. 한도가 바닥나기 훨씬 전에 패널 색이 바뀌어요. 초기화까지의 카운트다운과 100%에 도달할 예상 시각도 함께 보여 줘요.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Claude 사용량 78% – 위젯이 노란색으로 바뀜"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Claude 사용량 94% – 위젯이 빨간색으로 바뀜"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">너무 빨리 쓰고 있나요?</h3>
+      <p data-i18n="feat.2d">페이스 표시기가 한 주가 흘러가는 속도보다 주간 한도가 더 빨리 녹아내리고 있는지 알려 주고, 이대로 가면 주말에 어디쯤 도달할지 예측해 줘요.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">모든 기기를 숫자 하나로</h3>
+      <p data-i18n="feat.3d">Claude Code처럼 내 브라우저로 로그인하면 휴대폰, 브라우저, 다른 모든 컴퓨터에서 쓴 사용량까지 볼 수 있어요.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">모델별 한도</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, 사용량 크레딧 – 서버가 알려 주는 모든 한도와 이번 주 모델별 사용 비율까지.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">꼭 필요한 알림만</h3>
+      <p data-i18n="feat.5d">70%와 90%(직접 설정 가능)에 도달할 때, 그리고 한도가 초기화될 때 조용히 알려 줘요. 그 밖의 알림은 절대 없어요.</p>
+    </article>
+    <article class="cell cell--wide cell--hist reveal">
+      <div class="cell__histhead">
+        <div>
+          <h3 data-i18n="feat.7t">한 주 전체를 차트 하나로</h3>
+          <p data-i18n="feat.7d">위젯을 더블 클릭하면 두 한도를 타임라인 하나에서 볼 수 있어요. 6시간, 24시간, 7일 단위로 주간 최고치, 일평균, 주 마감 예측까지 표시되고, 한도를 넘기기 전에 예측 색이 바뀌어요.</p>
+        </div>
+        <div class="seg" id="hist-range" role="radiogroup" aria-label="Range">
+          <button type="button" role="radio" aria-checked="false" data-range="6h" data-i18n="hist.r6">6시간</button>
+          <button type="button" role="radio" aria-checked="false" data-range="24h" data-i18n="hist.r24">24시간</button>
+          <button type="button" role="radio" aria-checked="true" data-range="7d" data-i18n="hist.r7">7일</button>
+        </div>
+      </div>
+      <img id="hist-img" class="cell__histimg" src="../img/history-7d-midnight.webp" width="1280" height="840" data-i18n-attr="alt:img.history" loading="lazy" decoding="async" alt="Claude Usage Monitor 기록 창: 시간에 따른 5시간 세션과 주간 한도, 주간 최고치, 일평균 소모, 주 마감 예측">
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">엿보지 않아요. 절대로.</h3>
+      <p data-i18n="feat.6d">텔레메트리도, 분석 도구도, 별도 계정도 없어요. 오직 Anthropic하고만, 오직 내 사용량을 확인하기 위해서만 통신해요. 로그인 토큰은 Windows DPAPI 또는 macOS 키체인으로 암호화되어 내 컴퓨터에만 저장돼요.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">네, 정말 무료예요.</h2>
+      <p data-i18n="band1.p">체험 기간 카운트다운도, “Pro” 업그레이드 권유도, 숨은 조건도 없어요. 다운로드하면 그냥 내 것이에요.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">궁금한 분만</p>
+  <h2 data-i18n="tabs.h2">자세한 내용은 – 원할 때 보세요.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">표시 항목</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">데이터 출처</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">개인정보 &amp; 보안</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">조작 방법</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">설정</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">비교</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5시간 세션</b> – 현재 %, 초기화까지 카운트다운, 소모율(%/시간), 가득 찰 예상 시각.</li><li><b>주간 한도</b> – 현재 %, 주간 초기화까지 남은 시간, 하루 소모율, 고르게 쓴 한 주와 비교한 페이스.</li><li><b>모델별 주간 한도</b> – 지켜볼 모델의 세 번째 게이지(기본값은 Fable).</li><li><b>플랜 배지</b> – PRO, MAX 5×, MAX 20×, TEAM 또는 ENTERPRISE.</li><li><b>기록 창</b> – 6시간 / 24시간 / 7일 차트, 주간 최고치, 일평균, 주 마감 예측.</li><li><b>알림 영역 / 메뉴 막대 아이콘</b> – 선택한 비율을 링으로 표시, 마우스를 올리면 세부 정보.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · 로컬 로그 <span class="chip">기본값 · 로그인 불필요</span></h4><p>Claude Desktop이 컴퓨터에 이미 기록하고 있는 사용량 로그를 읽어요. 어디에도 전송하지 않아요. 이 컴퓨터만 측정하고, 약 5분마다 새로 고쳐요.</p></div><div><h4>2 · claude.ai <span class="chip">모든 기기</span></h4><p>Claude Code와 같은 브라우저 로그인 방식이에요 – 내장 브라우저도 없고, 앱에 비밀번호를 입력하지도 않아요. 서버에서 받은 정확한 초기화 시각, 약 2분마다 새로 고침.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>텔레메트리 없음.</b> 앱에는 분석 기능이 없고 몰래 정보를 보내지도 않아요 – 이 사이트에서 새 버전이 있는지만 확인해요.</li><li><b>토큰은 내 것.</b> Windows DPAPI로 암호화하거나 macOS 키체인에 저장해요. 일반 파일에 저장하는 일은 절대 없어요.</li><li><b>대화 내용은 절대 읽지 않아요.</b> 로컬 로그에서는 모델 이름, 토큰 수, 타임스탬프만 사용해요.</li><li><b>검증된 업데이트.</b> HTTPS로만 받고, 모든 다운로드는 설치 전에 SHA-256으로 확인해요. 실패하면 이전 버전으로 돌아가요.</li><li><b>오픈 소스.</b> 믿지 말고 확인하세요: 전체 소스 코드가 MIT 라이선스로 GitHub에 공개되어 있어요.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>끌기</th><td>패널 이동(화면 가장자리에 달라붙음)</td></tr><tr><th>오른쪽 클릭</th><td>메뉴: 레이아웃, 테마, 크기, 언어, 설정</td></tr><tr><th>더블 클릭</th><td>기록 및 통계 창</td></tr><tr><th>Ctrl + 스크롤</th><td>크기 조절</td></tr><tr><th>알림 영역 아이콘 클릭</th><td>패널 숨기기 / 표시</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>모양</b> – 테마 6종, 원하는 강조 색상, 레이아웃 3종, 크기, 불투명도, 항상 위에 표시, 위치 잠금, 클릭 통과.</li><li><b>내용</b> – 표시할 게이지, 순서와 크기, 추세 곡선, 소모율, 카운트다운.</li><li><b>알림</b> – 주의 및 위험 임계값(기본값 70% / 90%), 초기화 알림, 오래된 데이터 알림.</li><li><b>시스템</b> – 컴퓨터 시작 시 자동 실행, 자동 업데이트, 34개 언어.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claude 자체의 설정 → 사용량 페이지</th><th>Claude Code 로그를 읽는 터미널 도구</th></tr><tr><th>작업 중에도 늘 보임</th><td>예 – 항상 위에 뜨는 위젯과 알림 영역 아이콘</td><td>아니요 – 직접 열어야 함</td><td>터미널을 열어 둔 경우에만</td></tr><tr><th>Windows와 macOS</th><td>예, 앱 하나로 둘 다</td><td>예(웹 페이지)</td><td>도구마다 다름, 명령줄</td></tr><tr><th>터미널 필요</th><td>아니요</td><td>아니요</td><td>예</td></tr><tr><th>모든 기기의 claude.ai, Claude Desktop, Claude Code 합산</th><td>예, claude.ai 로그인 시</td><td>예</td><td>아니요 – 이 컴퓨터의 Claude Code만</td></tr><tr><th>페이스, 소모율, 주 마감 예측</th><td>예</td><td>아니요</td><td>일부</td></tr><tr><th>원하는 임계값에서 알림</th><td>예(기본값 70% / 90%)</td><td>아니요</td><td>드묾</td></tr><tr><th>가격</th><td>무료, 오픈 소스(MIT)</td><td>플랜에 포함</td><td>대부분 무료</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">나만의 스타일로</p>
+    <h2 data-i18n="th.h2">테마 6종, 레이아웃 3종. 여기서 바로 써 보세요.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="선택한 테마와 레이아웃을 적용한 Claude Usage Monitor">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">테마</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">미드나이트 글라스</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude(따뜻한 다크)</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">그래파이트</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">네온</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">라이트 페이퍼</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">포스트잇 옐로</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">은은하게 빛나는 짙은 파란색 유리. 기본 테마예요 – 차분하고 잘 읽히며, 어떤 어두운 바탕 화면에도 잘 어울려요.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">레이아웃</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">카드</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">링</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">슬림 바</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">여기에 원하는 강조 색상, 70%부터 200%까지 크기, 불투명도도 조절할 수 있어요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">가격</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">무료. 전부 다. 영원히.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>정식 버전 – 다른 버전은 없음</li><li>데모도, 체험판도, 사용 기간 제한도 없음</li><li>“Pro” 버전도, 잠긴 기능도 없음</li><li>광고도, 가입도, 데이터 수집도 없음</li><li>무료 업데이트, 자동으로</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">다운로드</p>
+    <h2 data-i18n="dls.h2">언제나 최신 버전. 언제나 무료.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">무료</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Windows용 다운로드</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">버전</span> <b data-win="version">2.7.1</b> · <span data-win="size">47 MB</span> · <span data-win="date">2026-10-07</span></p>
+        <details><summary data-i18n="dls.how">설치 방법(3단계)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>zip 파일 전체 압축 풀기</b>(오른쪽 클릭 → 모두 압축 풀기…).</li><li><code>INSTALL.bat</code>을 더블 클릭하세요.</li><li>질문 두 개에 답하세요 – Enter를 누르면 권장 답변이 선택돼요. 끝!</li></ol>
+          <p class="fine" data-i18n="dls.win_note">관리자 권한은 필요 없어요. “Windows의 PC 보호” 창이 뜨면: 추가 정보 → 실행. 앱은 오픈 소스지만 코드 서명은 되어 있지 않아요.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">다운로드 검증(SHA-256)</summary><code class="sha" data-win="sha">1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">무료</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">macOS용 다운로드</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">버전</span> <b data-mac="version">2.6.1</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-21</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">macOS 버전은 준비 중이에요 – 곧 다시 확인해 주세요.</p>
+        <details><summary data-i18n="dls.how">설치 방법(3단계)</summary>
+          <ol data-i18n="dls.mac_steps"><li>zip 파일을 열고 <b>ClaudeUsageMonitor</b>를 <b>응용 프로그램</b> 폴더로 끌어다 놓으세요.</li><li>처음 실행할 때: <b>오른쪽 클릭 → 열기</b>(Apple의 공증을 받지 않은 앱이에요).</li><li>메뉴 막대에서 아이콘을 찾으세요. 끝!</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">다운로드 검증(SHA-256)</summary><code class="sha" data-mac="sha">86d75d796269812dbc7b1050ef1f207c1a367a45fd5965f1090daefc3c8f76c9</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">회 다운로드(이 페이지 기준)</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">다운로드하면 <a href="#terms" data-legal="terms">이용약관</a>에 동의하는 것으로 간주됩니다. 앱과 Backup Kit은 무료이며 어떠한 보증도 없이 “있는 그대로” 제공되고, 사용에 따른 위험은 사용자 본인이 부담합니다.</p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">이 버튼은 언제나 최신 릴리스를 가리켜요. 한 번 설치하면 앱이 알아서 최신 상태를 유지해요.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">활발히 개발 중</p>
+  <h2><span data-i18n="new.h2">새로운 기능 – 버전</span> <span class="grad" data-win="version">2.7.1</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">릴리스 노트는 영어와 헝가리어로 작성돼요.</p>
+  <ul class="notes" id="notes"><li>“개발자에게 메시지” 창이 더 잘 보이게 바뀌었어요. 별점 평가는 더 크고 또렷한 별로 표시되고, 필수 동의 체크박스는 강조된 상자 안에 있어요. 체크하지 않고 보내려고 하면 상자가 빨간색으로 바뀌어요. 옆의 텍스트를 클릭해도 체크할 수 있어요.</li><li>프로그램의 모든 체크박스(설정, 메시지 창)가 이제 어두운 배경에서도 잘 보여요. 테두리는 밝은색이고, 켜져 있으면 흰색 체크 표시가 있는 주황색 상자로 표시돼요.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">이전 버전</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">새 버전이 나오면 이메일로 알려 드릴게요</h3>
+      <p data-i18n="sub.p">릴리스 소식만 보내요 – 버전마다 짧게 몇 줄. 마케팅 메일은 절대 없어요. 클릭 한 번으로 구독 취소.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">알림 받기</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">출시 알림을 받기 위해 내 이메일 주소가 <a href="#privacy" data-legal="privacy">개인정보 처리방침</a>에 설명된 대로 사용되는 것에 동의합니다. 이 동의는 언제든지 철회할 수 있습니다.</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">reCAPTCHA로 스팸을 막고 있으며, Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a> 및 <a href="https://policies.google.com/terms" target="_blank" rel="noopener">서비스 약관</a>이 적용됩니다.</p>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">이런 분께 추천해요</p>
+    <h2 data-i18n="who.h2">하나라도 해당된다면, 분명 마음에 드실 거예요.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Claude Code 개발자</b><span data-i18n="who.1d">긴 에이전트 작업은 5시간 세션을 금세 바닥내요. 작업 도중에 멈춰 버리기 전에 미리 확인하세요.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pro &amp; Max 구독자</b><span data-i18n="who.2d">낸 만큼 알차게 쓰세요 – 목요일에 한도가 바닥나는 일 없이.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">여러 기기를 쓰는 분</b><span data-i18n="who.3d">휴대폰, 브라우저, 노트북, 데스크톱: 모두를 아우르는 정직한 숫자 하나.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">깔끔한 바탕 화면을 좋아하는 분</b><span data-i18n="who.4d">작고 보기 좋은 패널이 방해되지 않게 자리를 지켜요 – 슬림 바로 줄일 수도 있어요.</span></div>
+    </div>
+
+    <div class="reviews" id="reviews" hidden>
+      <h3 class="reviews__h" data-i18n="rev.h">사용자 후기</h3>
+      <p class="reviews__sum" id="rating-sum" hidden><span class="quote__stars" aria-hidden="true">★★★★★</span> <b data-r="avg">0</b> / 5 · <span data-i18n="rev.count">앱에서 보낸 평가</span>: <b data-r="count">0</b></p>
+      <div id="testimonials" class="quotes"></div>
+      <p class="fine reviews__how" data-i18n="rev.how">보낸 분이 게시에 동의하고 제작자가 읽은 메시지만 여기에 표시돼요. 앱을 쓰고 있나요? 패널을 오른쪽 클릭 → <b>개발자에게 메시지 보내기…</b> – 별점을 주고 의견을 들려주세요.</p>
+    </div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">“제가 쓰려고 만들었어요. 일하다 보면 자꾸 한도에 걸렸거든요. 그러다 하루 종일 봐도 기분 좋을 만큼 다듬었죠. 이런 도구는 무료여야 한다고 생각해서 무료로 공개했어요. 마음껏 쓰시고, 어떠셨는지 알려 주세요.”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">Claude Usage Monitor 제작자 겸 개발자 · 헝가리</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">GitHub의 소스 코드</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">저에게 메시지 보내기</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Claude 사용 한도에 관한 질문 – 짧은 답변.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">정말 무료예요? 숨은 조건은 없나요?</summary><p data-i18n="faq.a1">정말 무료이고, 숨은 조건도 없어요. 데모도, 체험판도, 기능을 뺀 버전도 아니에요 – 이게 완전한 유일한 버전이에요. 광고도, 유료 버전도, 데이터 수집도 없어요. 소스 코드는 MIT 라이선스로 공개되어 있어요.</p></details>
+    <details><summary data-i18n="faq.q8">설정을 열지 않고 Claude 사용량을 확인하려면 어떻게 하나요?</summary><p data-i18n="faq.a8">Claude Usage Monitor를 설치하세요. 5시간 세션, 주간 한도, 모델별 한도를 항상 위에 떠 있는 작은 위젯과 알림 영역 또는 메뉴 막대의 퍼센트로 늘 화면에 보여 줘요. Claude 자체의 수치는 설정 → 사용량에 있지만, 위젯은 같은 한도를 클릭 한 번 없이 보여 줘요.</p></details>
+    <details><summary data-i18n="faq.q9">Claude 5시간 세션과 주간 한도는 언제 초기화되나요?</summary><p data-i18n="faq.a9">세션 기반 한도는 5시간마다 초기화돼요. 주간 한도는 Anthropic이 계정마다 정한 매주 같은 시각에 초기화되므로 사람마다 달라요. 위젯은 두 초기화까지 남은 시간을 실시간으로 카운트다운하고, claude.ai에 로그인하면 Anthropic 서버의 정확한 시각을 사용해요.</p></details>
+    <details><summary data-i18n="faq.q10">Claude Code 사용량도 claude.ai 한도에 포함되나요?</summary><p data-i18n="faq.a10">네. Anthropic에 따르면 claude.ai, Claude Desktop, Claude Code에서의 사용량은 모두 같은 사용 한도에 포함돼요. 그래서 위젯의 claude.ai 모드는 위젯이 실행 중인 컴퓨터뿐 아니라 모든 기기와 앱을 합친 숫자 하나를 보여 줘요.</p></details>
+    <details><summary data-i18n="faq.q11">“Claude Code Usage Monitor”와 같은 프로그램인가요?</summary><p data-i18n="faq.a11">아니요. “Claude Code Usage Monitor”는 다른 개발자가 만든 별개의 터미널 기반 도구예요. Vidovics Gábor가 만든 Claude Usage Monitor는 알림 영역 아이콘, 테마, 알림을 갖춘 Windows·macOS용 그래픽 데스크톱 위젯이고, 명령줄이 필요 없어요.</p></details>
+    <details><summary data-i18n="faq.q13">Claude Usage Monitor를 평가하거나 의견을 보내려면 어떻게 하나요?</summary><p data-i18n="faq.a13">패널을 오른쪽 클릭하고 “개발자에게 메시지 보내기…”를 선택하거나, 패널 머리글의 메시지 아이콘을 클릭하세요. 별 1~5개로 평가하고 메시지를 쓸 수 있으며, 직접 체크한 경우에만 평가와 이름이 이 웹사이트에 표시돼요. 모든 메시지는 제작자 Vidovics Gábor가 직접 읽고, 동의 없이는 아무것도 게시하지 않아요. 앱이 없다면 이 페이지 맨 아래의 양식을 이용하세요.</p></details>
+    <details><summary data-i18n="faq.q14">Claude Usage Monitor는 어떤 언어를 지원하나요?</summary><p data-i18n="faq.a14">34개 언어를 지원해요. 유럽연합의 모든 공식 언어에 일본어, 한국어, 중국어 간체와 번체, 인도네시아어, 베트남어가 더해지고, 포르투갈어는 유럽과 브라질, 스페인어는 스페인과 중남미 버전이 따로 있어요. 앱은 시스템 언어를 자동으로 선택하며, 이 웹사이트도 이 모든 언어로 제공돼요.</p></details>
+    <details><summary data-i18n="faq.q15">Claude Pro, Max, Team, Enterprise에서도 작동하나요?</summary><p data-i18n="faq.a15">네. 내 Claude 플랜의 한도를 그대로 보여 줘요 – Pro, Max 5×, Max 20×, Team, Enterprise 모두요. Claude가 설정 → 사용량에 표시하는 것과 같은 한도이고, 패널 머리글의 플랜 배지를 보면 지금 어떤 플랜인지도 알 수 있어요.</p></details>
+    <details><summary data-i18n="faq.q12">Claude Usage Monitor로 Claude 파일이 백업됐는지 알 수 있나요?</summary><p data-i18n="faq.a12">네 – 이것도 무료예요. 백업 상태 표시줄을 켜면 패널의 표시등 세 개가 OneDrive 백업, Nextcloud 같은 두 번째 클라우드 백업, Obsidian 보관소 백업이 최신인지 보여 줘요. 24시간 이내면 녹색, 48시간 이내면 노란색, 더 오래됐거나 없으면 빨간색이고, 가장 최근 실행이 실패하면 빨간 테두리가 표시돼요. 모니터는 백업 로그를 읽기만 하고, 백업 자체는 무료 Claude Backup Kit이 해요. 키트는 Claude Code 스킬, CLAUDE.md, 프로젝트 메모리, Claude Desktop 설정, 에이전트 로그를 매일 복사하며, 로그인 토큰은 절대 복사하지 않아요. 키트는 누구나 수정할 수 있는 무료 출발점이므로 백업에 대해서는 책임을 지지 않아요. 백업이 완전하고 복원 가능한지 확인하는 것은 각 사용자의 책임이에요.</p></details>
+    <details><summary data-i18n="faq.q2">Anthropic 공식 제품인가요?</summary><p data-i18n="faq.a2">아니요. Vidovics Gábor가 만든 독립 커뮤니티 도구이며, Anthropic과 제휴 관계가 없어요. “Claude”는 Anthropic, PBC의 상표예요.</p></details>
+    <details><summary data-i18n="faq.q3">비밀번호를 입력해야 하나요?</summary><p data-i18n="faq.a3">절대 아니에요. 로그인하지 않으면 Claude Desktop의 로컬 로그를 읽어요. 모든 기기의 사용량을 보고 싶다면 내 브라우저에서 claude.ai에 로그인하면 돼요 – 앱은 비밀번호를 절대 보지 못해요.</p></details>
+    <details><summary data-i18n="faq.q4">실행하면 Windows가 경고를 띄워요. 왜 그런가요?</summary><p data-i18n="faq.a4">앱에 코드 서명이 되어 있지 않기 때문이에요(인증서는 유료인데 앱은 무료니까요). 추가 정보 → 실행을 클릭하세요. 다운로드한 파일은 SHA-256 체크섬으로 검증할 수 있고, GitHub에서 소스 코드도 확인할 수 있어요.</p></details>
+    <details><summary data-i18n="faq.q5">어떤 Mac을 지원하나요?</summary><p data-i18n="faq.a5">macOS 12 이상이에요. 위의 다운로드 카드에 현재 빌드가 어떤 프로세서용인지 항상 표시돼요. macOS 버전은 나온 지 얼마 안 됐으니 의견을 보내 주시면 큰 도움이 돼요.</p></details>
+    <details><summary data-i18n="faq.q6">업데이트는 어떻게 되나요?</summary><p data-i18n="faq.a6">앱이 하루에 몇 번 이 사이트를 확인해요. 새 버전이 있으면 알려 주고, 클릭 한 번으로 다운로드·검증·설치한 뒤 다시 시작해요. 이 기능은 끌 수 있어요.</p></details>
+    <details><summary data-i18n="faq.q7">삭제하려면 어떻게 하나요?</summary><p data-i18n="faq.a7">Windows: 설정 → 앱 → 설치된 앱 → Claude Usage Monitor → 제거. macOS: 앱을 휴지통으로 끌어다 놓으세요. 그게 다예요.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">제작자에게 직접</p>
+      <h2 data-i18n="fb.h2">아이디어? 버그? 그냥 마음에 들었나요? 알려 주세요.</h2>
+      <p data-i18n="fb.p">메시지는 저, Vidovics Gábor에게 바로 전달돼요. 하나도 빠짐없이 읽어요. 답장을 원할 때만 이메일 주소를 남겨 주세요.</p>
+      <p class="fine" data-i18n="fb.privacy">메시지는 답변과 앱 개선에만 사용돼요 – 자세한 내용은 <a href="#privacy" data-legal="privacy">개인정보 처리방침</a>을 확인하세요.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">이름</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">이메일</span> <i data-i18n="fb.optional">(선택)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">어떤 내용인가요?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">의견</option>
+          <option value="idea" data-i18n="fb.t_idea">아이디어 / 기능 요청</option>
+          <option value="bug" data-i18n="fb.t_bug">버그 신고</option>
+          <option value="recommend" data-i18n="fb.t_rec">추천해요! (후기)</option>
+          <option value="other" data-i18n="fb.t_other">기타</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">메시지</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">내 메시지를 이 페이지에 추천 후기로 게시하는 데 동의합니다(이름만 표시).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">메시지 보내기</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">reCAPTCHA로 스팸을 막고 있으며, Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a> 및 <a href="https://policies.google.com/terms" target="_blank" rel="noopener">서비스 약관</a>이 적용됩니다.</p>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">2분이면, 내 한도가 지금 어디까지 왔는지 정확히 알 수 있어요.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">무료 다운로드</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>무료. 앞으로도 쭉.</b> 데모도, 체험판도 아니에요. 잠긴 기능도 없어요.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.7.1</span></p>
+      <p><span data-i18n="foot.made">디자인·개발:</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Anthropic과 제휴하지 않은 비공식 커뮤니티 도구예요. “Claude”는 Anthropic, PBC의 상표예요.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">MIT 라이선스</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">변경 기록</a>
+      <a href="#feedback" data-i18n="foot.contact">문의</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">개인정보 처리방침</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">운영자 정보</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">이용약관</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">쿠키 설정</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">이 페이지는 쿠키도, 추적 도구도 쓰지 않으며 제3자로부터 아무것도 불러오지 않아요.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="닫기">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">법률 문서는 헝가리어와 영어로 제공됩니다. 헝가리어 버전이 우선합니다.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">네, 구독을 취소할게요</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">닫기</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">쿠키 – 직접 선택하세요</h2>
+  <p data-i18n="ck.p">이 페이지는 쿠키 없이도 모든 기능이 작동해요. 허락해 주시면 Google 측정 도구로 방문자 수를 파악해 제작자에게 도움이 돼요. 동의하기 전에는 아무것도 불러오지 않아요.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">필수 – 언어와 이 선택을 기억(쿠키 없이 로컬 저장소만 사용)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">통계 – Google 애널리틱스</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">마케팅 – Google Ads 전환 측정</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">거부</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">설정</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">선택 저장</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">모두 허용</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">개인정보 처리방침</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% 무료</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">내 컴퓨터로 링크 보내기</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script id="um-hints" type="application/json">{"en":"This page is also available in English","bg":"Тази страница е достъпна и на български","cs":"Tato stránka je k dispozici i v češtině","da":"Denne side findes også på dansk","de":"Diese Seite gibt es auch auf Deutsch","et":"See leht on saadaval ka eesti keeles","el":"Αυτή η σελίδα είναι διαθέσιμη και στα ελληνικά","es":"Esta página también está disponible en español","es-419":"Esta página también está disponible en español de Latinoamérica","fr":"Cette page existe aussi en français","ga":"Tá an leathanach seo ar fáil i nGaeilge freisin","hr":"Ova je stranica dostupna i na hrvatskom","id":"Halaman ini juga tersedia dalam bahasa Indonesia","it":"Questa pagina è disponibile anche in italiano","lv":"Šī lapa ir pieejama arī latviešu valodā","lt":"Šį puslapį galima skaityti ir lietuviškai","hu":"Ez az oldal magyarul is elérhető","mt":"Din il-paġna hija disponibbli wkoll bil-Malti","nl":"Deze pagina is ook beschikbaar in het Nederlands","pl":"Ta strona jest dostępna także po polsku","pt":"Esta página também está disponível em português","pt-pt":"Esta página também está disponível em português europeu","ro":"Această pagină este disponibilă și în limba română","ru":"Эта страница есть и на русском языке","sk":"Táto stránka je dostupná aj po slovensky","sl":"Ta stran je na voljo tudi v slovenščini","fi":"Tämä sivu on saatavilla myös suomeksi","sv":"Den här sidan finns även på svenska","tr":"Bu sayfa Türkçe olarak da mevcut","vi":"Trang này cũng có bằng tiếng Việt","ja":"このページは日本語でもご覧いただけます","ko":"이 페이지는 한국어로도 볼 수 있어요","zh-cn":"本页面也提供简体中文版","zh-tw":"本頁也提供繁體中文版"}</script>
+<script src="../assets/site.js?v=10" defer></script>
+</body>
+</html>

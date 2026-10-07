@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="zh-Hans" data-lang="zh-cn" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude 用量限额免费实时查看｜Claude Usage Monitor</title>
+<meta name="description" content="免费开源的 Claude 用量监控小组件，支持 Windows 和 macOS：实时查看 5 小时会话、每周限额和模型限额，附重置倒计时与提醒。">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://claudeusagemonitor.com/">
+<link rel="alternate" hreflang="bg" href="https://claudeusagemonitor.com/bg/">
+<link rel="alternate" hreflang="cs" href="https://claudeusagemonitor.com/cs/">
+<link rel="alternate" hreflang="da" href="https://claudeusagemonitor.com/da/">
+<link rel="alternate" hreflang="de" href="https://claudeusagemonitor.com/de/">
+<link rel="alternate" hreflang="et" href="https://claudeusagemonitor.com/et/">
+<link rel="alternate" hreflang="el" href="https://claudeusagemonitor.com/el/">
+<link rel="alternate" hreflang="es" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-ES" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-419" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-MX" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-AR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CL" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-VE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-EC" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-GT" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CU" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-BO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-DO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-HN" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-SV" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-NI" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PA" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-UY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-US" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="fr" href="https://claudeusagemonitor.com/fr/">
+<link rel="alternate" hreflang="ga" href="https://claudeusagemonitor.com/ga/">
+<link rel="alternate" hreflang="hr" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="id" href="https://claudeusagemonitor.com/id/">
+<link rel="alternate" hreflang="it" href="https://claudeusagemonitor.com/it/">
+<link rel="alternate" hreflang="lv" href="https://claudeusagemonitor.com/lv/">
+<link rel="alternate" hreflang="lt" href="https://claudeusagemonitor.com/lt/">
+<link rel="alternate" hreflang="hu" href="https://claudeusagemonitor.com/hu/">
+<link rel="alternate" hreflang="mt" href="https://claudeusagemonitor.com/mt/">
+<link rel="alternate" hreflang="nl" href="https://claudeusagemonitor.com/nl/">
+<link rel="alternate" hreflang="pl" href="https://claudeusagemonitor.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-AO" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-MZ" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="ro" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://claudeusagemonitor.com/ru/">
+<link rel="alternate" hreflang="sk" href="https://claudeusagemonitor.com/sk/">
+<link rel="alternate" hreflang="sl" href="https://claudeusagemonitor.com/sl/">
+<link rel="alternate" hreflang="fi" href="https://claudeusagemonitor.com/fi/">
+<link rel="alternate" hreflang="sv" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="tr" href="https://claudeusagemonitor.com/tr/">
+<link rel="alternate" hreflang="vi" href="https://claudeusagemonitor.com/vi/">
+<link rel="alternate" hreflang="ja" href="https://claudeusagemonitor.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="zh" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-SG" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-TW" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-HK" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-MO" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://claudeusagemonitor.com/">
+<meta http-equiv="content-language" content="zh-Hans">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor：适用于 Windows 和 macOS 的免费 Claude 用量小组件">
+<meta property="og:description" content="一眼看清 Claude 的 5 小时会话、每周限额和使用进度——手机和浏览器上的用量也算在内。始终置顶，开源，100% 免费。">
+<meta property="og:url" content="https://claudeusagemonitor.com/zh-cn/">
+<meta property="og:image" content="https://claudeusagemonitor.com/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor：适用于 Windows 和 macOS 的免费 Claude 用量小组件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="bg_BG">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ga_IE">
+<meta property="og:locale:alternate" content="hr_HR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="lv_LV">
+<meta property="og:locale:alternate" content="lt_LT">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="mt_MT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor：适用于 Windows 和 macOS 的免费 Claude 用量小组件">
+<meta name="twitter:description" content="一眼看清 Claude 的 5 小时会话、每周限额和使用进度——手机和浏览器上的用量也算在内。始终置顶，开源，100% 免费。">
+<meta name="twitter:image" content="https://claudeusagemonitor.com/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://claudeusagemonitor.com/#site","name":"Claude Usage Monitor","url":"https://claudeusagemonitor.com/","inLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"publisher":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"WebPage","@id":"https://claudeusagemonitor.com/zh-cn/#page","url":"https://claudeusagemonitor.com/zh-cn/","name":"Claude 用量限额免费实时查看｜Claude Usage Monitor","description":"免费开源的 Claude 用量监控小组件，支持 Windows 和 macOS：实时查看 5 小时会话、每周限额和模型限额，附重置倒计时与提醒。","inLanguage":"zh-Hans","isPartOf":{"@id":"https://claudeusagemonitor.com/#site"},"about":{"@id":"https://claudeusagemonitor.com/#app"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["#about .about__def","#about .facts"]},"mainEntity":{"@id":"https://claudeusagemonitor.com/#app"},"primaryImageOfPage":"https://claudeusagemonitor.com/img/og.png","dateModified":"2026-10-07","author":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"SoftwareApplication","@id":"https://claudeusagemonitor.com/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Windows 10/11 和 macOS，可实时显示 Claude 订阅用户的用量限额：5 小时会话、每周限额和模型每周限额，并提供各项重置倒计时、进度、消耗速率和提醒。它涵盖所有设备上的 claude.ai、Claude Desktop 和 Claude Code，无需终端。","url":"https://claudeusagemonitor.com/zh-cn/","inLanguage":"zh-Hans","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.7.1","dateModified":"2026-10-07T05:31:15Z","downloadUrl":"https://claudeusagemonitor.com/usage-api/dl.php?os=win","installUrl":"https://claudeusagemonitor.com/zh-cn/#download","fileSize":"47 MB","releaseNotes":"https://claudeusagemonitor.com/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://claudeusagemonitor.com/#author"},"publisher":{"@id":"https://claudeusagemonitor.com/#author"},"image":"https://claudeusagemonitor.com/img/og.png","screenshot":["https://claudeusagemonitor.com/img/panel-full-midnight.png","https://claudeusagemonitor.com/img/history-7d-midnight.png","https://claudeusagemonitor.com/img/ring-neon.png","https://claudeusagemonitor.com/img/compact-claude.png"],"featureList":["提前预知","用得太快了吗？","所有设备，一个数字","各模型限额","只在关键时刻提醒","不监视你，就这么简单。","备份指示灯——看看你的 Claude 工作成果是否已备份"],"availableLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"sameAs":["https://github.com/gaborvidovics76/ClaudeUsageMonitor"]},{"@type":"Person","@id":"https://claudeusagemonitor.com/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://claudeusagemonitor.com/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://claudeusagemonitor.com/zh-cn/#faq","inLanguage":"zh-Hans","mainEntity":[{"@type":"Question","name":"真的免费吗？有什么套路？","acceptedAnswer":{"@type":"Answer","text":"真的免费，没有任何套路。它不是演示版、不是试用版，也不是阉割版——这就是完整且唯一的版本。没有广告，没有付费版本，不收集数据。源代码以 MIT 许可证公开。"}},{"@type":"Question","name":"这是 Anthropic 的官方产品吗？","acceptedAnswer":{"@type":"Answer","text":"不是。这是由 Vidovics Gábor 开发的独立社区工具，与 Anthropic 没有任何关联。“Claude”是 Anthropic, PBC 的商标。"}},{"@type":"Question","name":"我需要把密码告诉它吗？","acceptedAnswer":{"@type":"Answer","text":"绝对不需要。不登录时，它读取 Claude Desktop 的本地日志。如果想查看所有设备，你需要在自己的浏览器中登录 claude.ai——应用永远看不到你的密码。"}},{"@type":"Question","name":"运行时 Windows 弹出警告，这是为什么？","acceptedAnswer":{"@type":"Answer","text":"因为本应用没有代码签名（证书要花钱，而应用是免费的）。点击“更多信息”→“仍要运行”即可。你可以用 SHA-256 校验和验证下载文件，也可以在 GitHub 上阅读源代码。"}},{"@type":"Question","name":"支持哪些 Mac？","acceptedAnswer":{"@type":"Answer","text":"macOS 12 或更高版本。上方的下载卡片始终会显示当前版本适用的处理器。macOS 版刚刚推出——非常欢迎反馈。"}},{"@type":"Question","name":"更新是怎样进行的？","acceptedAnswer":{"@type":"Answer","text":"应用每天会向本网站检查几次。有新版本时会通知你；一键即可下载、校验并安装，然后自动重启。你也可以关闭此功能。"}},{"@type":"Question","name":"如何卸载？","acceptedAnswer":{"@type":"Answer","text":"Windows：设置 → 应用 → 安装的应用 → Claude Usage Monitor → 卸载。macOS：把应用拖到废纸篓。就这么简单。"}},{"@type":"Question","name":"不打开设置，怎样查看我的 Claude 用量？","acceptedAnswer":{"@type":"Answer","text":"安装 Claude Usage Monitor：它以一个始终置顶的小组件，以及托盘或菜单栏中的百分比，把你的 5 小时会话、每周限额和模型限额一直显示在屏幕上。Claude 自己的数据在“设置 → 使用情况”中；小组件无需任何点击就能显示同样的限额。"}},{"@type":"Question","name":"Claude 的 5 小时会话和每周限额什么时候重置？","acceptedAnswer":{"@type":"Answer","text":"基于会话的限额每五小时重置一次。每周限额在 Anthropic 为你的账户分配的每周固定时间重置，因此每个人都不一样。小组件会实时倒计时到这两次重置——通过 claude.ai 登录时，使用的是来自 Anthropic 服务器的精确时间。"}},{"@type":"Question","name":"Claude Code 的用量会计入我的 claude.ai 限额吗？","acceptedAnswer":{"@type":"Answer","text":"会。根据 Anthropic 的说明，claude.ai、Claude Desktop 和 Claude Code 中的用量都计入同一个用量限额。因此，小组件的 claude.ai 模式显示的是你所有设备和应用的一个总数，而不只是它所运行的那台电脑。"}},{"@type":"Question","name":"它和“Claude Code Usage Monitor”是同一个东西吗？","acceptedAnswer":{"@type":"Answer","text":"不是。“Claude Code Usage Monitor”是另一位作者开发的独立终端工具。Vidovics Gábor 开发的 Claude Usage Monitor 是适用于 Windows 和 macOS 的图形化桌面小组件，带托盘图标、主题和提醒，不需要命令行。"}},{"@type":"Question","name":"Claude Usage Monitor 能显示我的 Claude 文件是否已备份吗？","acceptedAnswer":{"@type":"Answer","text":"能——而且同样免费。开启备份状态栏后，面板上的三盏指示灯会显示备份到 OneDrive、备份到第二个云盘（如 Nextcloud）以及 Obsidian 仓库的备份是否最新：24 小时内为绿色，48 小时内为黄色，更早或缺失为红色，最近一次运行失败时显示红色圆环。本程序只读取备份日志；备份本身由免费的 Claude Backup Kit 完成，它每天复制你的 Claude Code 技能、CLAUDE.md、项目记忆、Claude Desktop 设置和智能体日志——绝不复制登录令牌。该工具包是任何人都可以修改的免费起点，因此我们对备份不承担任何责任：确保备份完整且可以恢复，是每位用户自己的责任。"}},{"@type":"Question","name":"怎样给 Claude Usage Monitor 评分或发送反馈？","acceptedAnswer":{"@type":"Answer","text":"右键点击面板并选择“给开发者留言…”，或点击面板标题栏中的留言图标。你可以打一到五颗星、写一段留言，并且——只有在你勾选的情况下——允许你的评分和姓名显示在本网站上。每一条留言都由作者 Vidovics Gábor 亲自阅读，未经你的同意，任何内容都不会公开。如果没有安装应用，请使用本页底部的表单。"}},{"@type":"Question","name":"Claude Usage Monitor 支持哪些语言？","acceptedAnswer":{"@type":"Answer","text":"支持 34 种语言：欧盟所有官方语言，外加日语、韩语、简体中文、繁体中文、印度尼西亚语和越南语——葡萄牙语分为欧洲版和巴西版，西班牙语分为西班牙版和拉丁美洲版。应用会自动选择你的系统语言，本网站也提供所有这些语言的版本。"}},{"@type":"Question","name":"它支持 Claude Pro、Max、Team 和 Enterprise 吗？","acceptedAnswer":{"@type":"Answer","text":"支持。它显示你自己的 Claude 套餐所具有的限额——Pro、Max 5×、Max 20×、Team 或 Enterprise——与 Claude 在“设置 → 使用情况”中列出的完全相同；面板标题栏中的套餐徽章会告诉你当前使用的是哪个套餐。"}}]},{"@type":"HowTo","@id":"https://claudeusagemonitor.com/zh-cn/#install","name":"如何安装（3 步） – Windows","inLanguage":"zh-Hans","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"text":"解压整个 zip 文件 （右键点击 → 全部解压缩…）。"},{"@type":"HowToStep","position":2,"text":"双击 INSTALL.bat 。"},{"@type":"HowToStep","position":3,"text":"回答两个问题——按 Enter 即接受推荐选项。完成。"}]},{"@type":"DefinedTermSet","@id":"https://claudeusagemonitor.com/zh-cn/#glossary","name":"关键术语，准确定义","inLanguage":"zh-Hans","hasDefinedTerm":[{"@type":"DefinedTerm","name":"5 小时会话（5 小时窗口）","description":"Claude 的短期用量限额。基于会话的限额每五小时重置一次。Anthropic 称之为“当前会话”；很多用户称其为 5 小时窗口或 5 小时限制。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"每周限额（周限额）","description":"Claude 付费套餐的第二道上限，适用于所有模型，在分配给你账户的每周固定时间重置。每周限额自 2025 年 8 月 28 日起生效。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"模型每周限额","description":"针对某一个特定模型的单独每周上限，在 Claude 的用量页面上与其他所有模型的限额并列显示。小组件会把你所选模型的这项限额显示为第三个仪表。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"重置","description":"限额回到 0% 的时刻。小组件会倒计时到这一刻。通过 claude.ai 登录时，精确时间来自 Anthropic 的服务器；使用本地日志时则为估算值。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"进度（pace）","description":"与均匀使用一周相比，你超前或落后了多少。“较进度 +12%”表示你已用掉的每周限额，比本周已过去的时间比例多出 12 个百分点。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"消耗速率","description":"限额此刻被消耗的速度——会话按每小时百分比计算，每周限额按每天百分比计算——以及照此速度何时会达到 100%。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"},{"@type":"DefinedTerm","name":"用量额度（extra usage）","description":"达到套餐限额后可选的按量付费用量，可设置每月支出上限。小组件会显示它是否已开启、上限是多少，以及你已花费多少。","inDefinedTermSet":"https://claudeusagemonitor.com/zh-cn/#glossary"}]}]}</script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://claudeusagemonitor.com/zh-cn/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Claude Usage Monitor releases" href="https://claudeusagemonitor.com/releases.xml">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">跳到正文</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">功能</a>
+      <a href="#backups" data-i18n="nav.backups">备份</a>
+      <a href="#themes" data-i18n="nav.themes">主题</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">更新内容</a>
+      <a href="#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="#feedback" data-i18n="nav.feedback">反馈</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">ZH-CN</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="bg" lang="bg" href="../bg/" data-lang="bg">Български <span>bg</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="da" lang="da" href="../da/" data-lang="da">Dansk <span>da</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="et" lang="et" href="../et/" data-lang="et">Eesti <span>et</span></a></li><li><a role="option" hreflang="el" lang="el" href="../el/" data-lang="el">Ελληνικά <span>el</span></a></li><li><a role="option" hreflang="es-ES" lang="es-ES" href="../es/" data-lang="es">Español (España) <span>es</span></a></li><li><a role="option" hreflang="es-419" lang="es-419" href="../es-419/" data-lang="es-419">Español (Latinoamérica) <span>es-419</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="ga" lang="ga" href="../ga/" data-lang="ga">Gaeilge <span>ga</span></a></li><li><a role="option" hreflang="hr" lang="hr" href="../hr/" data-lang="hr">Hrvatski <span>hr</span></a></li><li><a role="option" hreflang="id" lang="id" href="../id/" data-lang="id">Bahasa Indonesia <span>id</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="lv" lang="lv" href="../lv/" data-lang="lv">Latviešu <span>lv</span></a></li><li><a role="option" hreflang="lt" lang="lt" href="../lt/" data-lang="lt">Lietuvių <span>lt</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="mt" lang="mt" href="../mt/" data-lang="mt">Malti <span>mt</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="pt-BR" lang="pt-BR" href="../pt/" data-lang="pt">Português (Brasil) <span>pt</span></a></li><li><a role="option" hreflang="pt-PT" lang="pt-PT" href="../pt-pt/" data-lang="pt-pt">Português (Portugal) <span>pt-pt</span></a></li><li><a role="option" hreflang="ro" lang="ro" href="../ro/" data-lang="ro">Română <span>ro</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="sk" lang="sk" href="../sk/" data-lang="sk">Slovenčina <span>sk</span></a></li><li><a role="option" hreflang="sl" lang="sl" href="../sl/" data-lang="sl">Slovenščina <span>sl</span></a></li><li><a role="option" hreflang="fi" lang="fi" href="../fi/" data-lang="fi">Suomi <span>fi</span></a></li><li><a role="option" hreflang="sv" lang="sv" href="../sv/" data-lang="sv">Svenska <span>sv</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li><li><a role="option" hreflang="vi" lang="vi" href="../vi/" data-lang="vi">Tiếng Việt <span>vi</span></a></li><li><a role="option" hreflang="ja" lang="ja" href="../ja/" data-lang="ja">日本語 <span>ja</span></a></li><li><a role="option" hreflang="ko" lang="ko" href="../ko/" data-lang="ko">한국어 <span>ko</span></a></li><li><a role="option" hreflang="zh-Hans" lang="zh-Hans" href="../zh-cn/" aria-current="page" data-lang="zh-cn">简体中文 <span>zh-cn</span></a></li><li><a role="option" hreflang="zh-Hant" lang="zh-Hant" href="../zh-tw/" data-lang="zh-tw">繁體中文 <span>zh-tw</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">免费下载</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100% 免费</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">版本</span> <span data-win="version">2.7.1</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor：适用于 Windows 和 macOS 的免费用量小组件</span> <span data-i18n="hero.h1">撞上 Claude 限额，<em>再也不会措手不及。</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">一款始终置顶的小组件，实时显示你的 Claude 用量：5 小时会话、每周限额，以及你的使用进度。连手机上用掉的也算在内。支持 Windows 和 macOS。</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">你的系统</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">你的系统</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>免费，而且永久免费。</b>不是演示版，不是试用版，没有任何功能被锁定。</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">次下载（本页累计）</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">这是一款桌面应用——把链接发到你的电脑上</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Claude Usage Monitor 小组件：5 小时会话为 47%，模型每周限额为 61%，每周限额为 23%">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">应用真实截图，数据为演示数值。</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100% 免费</span><i>✦</i><span data-i18n="mq.2">不是演示版</span><i>✦</i><span data-i18n="mq.3">功能全开放</span><i>✦</i><span data-i18n="mq.4">无广告</span><i>✦</i><span data-i18n="mq.5">无需注册</span><i>✦</i><span data-i18n="mq.6">无跟踪</span><i>✦</i><span data-i18n="mq.7">开源</span><i>✦</i><span data-i18n="mq.8">34 种语言</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">永久免费</b><span data-i18n="trust.1d">完整版，根本没有付费版本。</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">开源</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">MIT 许可证——每一行代码都能在 GitHub 上查看</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">注重隐私</b><span data-i18n="trust.3d">无遥测、无广告、无 Cookie。</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">自动更新</b><span data-i18n="trust.4d">一键完成，经 SHA-256 校验。</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">它不只是一个日志读取器</p>
+  <h2 data-i18n="more.h2">手机也在消耗你的限额。<em>现在，你在桌面上就能看到。</em></h2>
+  <p class="more__lead" data-i18n="more.p">很多用量统计工具读取的是你电脑上的日志文件，所以它们只知道<b>这一台电脑</b>用了多少。Claude Usage Monitor 则可以直接向 Anthropic 的服务器查询，显示整个账户真实的用量：手机应用、浏览器、另一台电脑以及 Claude Code 中的使用全部计算在内，并汇总在一处——就在你的桌面上。</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">手机上的 Claude 应用</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">浏览器中的 claude.ai</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">你的另一台电脑</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code 和 Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="一个 Claude Usage Monitor 小组件，显示所有设备的合计用量">
+      <figcaption data-i18n="more.sum">整个账户，一个真实的数字——始终在你眼前。</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">只读取本地日志的工具</h3>
+      <ul data-i18n="more.a_li"><li class="no">手机上的用量——看不到</li><li class="no">浏览器中的用量——看不到</li><li class="no">你的其他电脑——看不到</li><li class="yes">仅限这台电脑上的 Claude Code</li><li class="no">重置时间靠猜</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">使用 claude.ai 数据源的 Claude Usage Monitor</h3>
+      <ul data-i18n="more.b_li"><li class="yes">手机、浏览器、每台电脑——全部计入</li><li class="yes">包括 Claude Code 和 Claude Desktop</li><li class="yes">与 Claude 在“设置 → 使用情况”中显示的数字完全一致</li><li class="yes">来自 Anthropic 服务器的精确重置时间</li><li class="yes">不登录也能用，读取本地日志</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">怎么用：选择“claude.ai（所有设备）”数据源，然后在你自己的浏览器中登录一次——与 Claude Code 使用的登录方式相同；应用永远看不到你的密码。不登录时，小组件读取 Claude Desktop 的本地日志，只统计这台电脑。</p>
+</section>
+
+<!-- ============================ +1 EXTRA: BACKUPS ============================ -->
+<section class="sec wrap more bk" id="backups">
+  <p class="eyebrow"><span class="plus1">+1</span> <span data-i18n="bk.eyebrow">附加功能——同样免费</span></p>
+  <h2 data-i18n="bk.h2">它还能显示你的备份状态。<em>一夜之间就可能丢失的知识，到底值多少？</em></h2>
+  <p class="more__lead" data-i18n="bk.p">所有用量统计工具都止步于数字。Claude Usage Monitor 更进一步：它还会显示<b>与 Claude 相关的备份</b>是否最新——你的技能、<code>CLAUDE.md</code> 规则、项目记忆、MCP 设置、智能体对话记录和 Obsidian 笔记。这些文件通常只存放在一块硬盘上。硬盘一坏、笔记本一丢、一次误删——几个月的心血就没了。面板上的三盏小指示灯时时刻刻都在告诉你：这种事不会发生在你身上。</p>
+
+  <div class="bk__top">
+    <figure class="bk__panel reveal">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Claude Usage Monitor 面板，三盏绿色备份指示灯：OneDrive、Nextcloud 和 Obsidian，均在一分钟前完成备份"></a>
+    </figure>
+    <div class="bk__legend reveal">
+      <h3 data-i18n="bk.lamps_h">三盏灯，看一眼，心里就有数。</h3>
+      <ul class="lamps" data-i18n="bk.lamps"><li><i class="lamp lamp--g"></i><span><b>绿色</b>——上次成功备份不超过 24 小时。</span></li><li><i class="lamp lamp--y"></i><span><b>黄色</b>——已过去 24 到 48 小时，该看看了。</span></li><li><i class="lamp lamp--r"></i><span><b>红色</b>——超过 48 小时，或者根本没有备份。</span></li><li><i class="lamp lamp--ring"></i><span><b>红色圆环</b>——最近一次运行失败或未完成，即使较早的备份仍让指示灯保持绿色。</span></li></ul>
+      <p class="fine" data-i18n="bk.lamps_note">三盏灯分别是 <b>OneDrive</b>（第一份副本）、<b>Nextcloud</b>（第二个独立云盘——rclone 支持的任何云存储都可以）和 <b>Obsidian</b>（仓库的带日期快照）。只有真正完成的运行才算数：失败、中断或测试运行绝不会让指示灯变绿。小时数可以调整。点击任意一盏灯即可查看详情。</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="bk.a_t">其他用量统计工具</h3>
+      <ul data-i18n="bk.a_li"><li class="no">只显示数字——对你的数据一无所知</li><li class="no">无法告诉你技能和笔记是否安全</li><li class="no">备份坏了，要等到需要恢复时才发现——为时已晚</li><li class="no">不帮你设置备份</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="bk.b_t">Claude Usage Monitor + 免费的 Backup Kit</h3>
+      <ul data-i18n="bk.b_li"><li class="yes">OneDrive、第二个云盘和 Obsidian 仓库各有一盏指示灯</li><li class="yes">运行失败或未完成，立即标出</li><li class="yes">备份了什么、存在哪里、多少个文件、多大</li><li class="yes">计划任务和日志——一键直达</li><li class="yes">免费工具包，10 分钟完成备份设置</li></ul>
+    </article>
+  </div>
+
+  <div class="bk__shows">
+    <figure class="bk__shot reveal">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Claude Usage Monitor 备份详情窗口：状态为“最新”，已备份的 Obsidian 仓库快照、Claude Code、Claude Desktop、一个额外文件夹和智能体日志，附文件数和大小，无错误，并显示计划任务"></a>
+    </figure>
+    <div>
+      <h3 data-i18n="bk.shows_h">点击指示灯，你会看到这些</h3>
+      <ul class="ticks" data-i18n="bk.shows"><li><b>状态</b>——最新、较旧、过旧或未找到备份，并显示上次成功备份和上次运行的时间。</li><li><b>备份了哪些内容</b>——每一项的来源文件夹、目标、文件数和大小：Obsidian 仓库快照、Claude Code、Claude Desktop、你的额外文件夹和智能体日志。</li><li><b>内容</b>——最新的仓库快照、保留了多少个快照、你最近编辑的笔记，以及自上次快照以来有多少条笔记发生了更改。</li><li><b>已上传</b>——在 Nextcloud 选项卡中：本次运行新增和替换的文件（按文件夹分组），以及云盘的剩余空间。</li><li><b>错误和警告</b>——直接取自日志，用通俗的话说明。</li><li><b>计划任务</b>——执行备份的 Windows 任务的状态、上次结果和下次运行时间。</li><li><b>日志</b>——最后几行，日志文件一键打开。</li></ul>
+      <p class="fine" data-i18n="bk.shows_note">本程序只读取——绝不修改、移动或上传任何文件。它每 5 分钟重新检查一次，也可以点击“立即检查”马上检查。仅在 OneDrive 中联机存储的快照，不会为了列出内容而下载。</p>
+    </div>
+  </div>
+
+  <div class="bk__kit reveal">
+    <div class="bk__kittxt">
+      <h3><span class="freebadge" data-i18n="dls.free">免费</span> <span data-i18n="bk.kit_h">实话实说：本程序只负责盯着，备份由工具包完成。</span></h3>
+      <p data-i18n="bk.kit_p">Claude Usage Monitor 不会复制你的文件——它只告诉你复制是否成功。复制工作由 <b>Claude Backup Kit</b> 完成：几个简短的 PowerShell 脚本，你可以逐行阅读。它每天把你的 Claude 工作成果备份到 OneDrive 和第二个独立云盘，并写入指示灯所读取的日志。无需账户，无需订阅，不会向我们发送任何数据。</p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · MIT 许可证</span> · ZIP <span data-kit="size">24 KB</span></p>
+    </div>
+    <div class="bk__kitbtns">
+      <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">免费下载 Backup Kit</span></a>
+      <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">在 GitHub 上查看每个脚本</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">下载即表示你接受<a href="#terms" data-legal="terms">使用条款</a>：本应用和 Backup Kit 均免费，按“现状”提供，不附带任何担保，使用风险由你自行承担。</p>
+    </div>
+  </div>
+
+  <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
+    <h3 data-i18n="bk.disc_h">免责声明——请务必阅读</h3>
+    <p data-i18n="bk.disc"><b>我们对备份、数据丢失或任何损失不承担任何责任。</b>Claude Usage Monitor 只读取并显示你的备份日志——它不会创建、检查或保证任何备份。Claude Backup Kit 是作为帮助免费提供的起点，而不是成品：任何人都可以（也被允许）根据自己的电脑修改脚本，因此无法保证备份的质量和完整性。<b>确保备份完整且可以恢复，是每个人自己的责任。</b>请留意指示灯、阅读日志，并不时测试一次恢复。本工具包依据 MIT 许可证按“现状”提供，不附带任何担保。</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">使用条款</a></p>
+  </aside>
+
+  <div class="bkhelp" id="backup-help">
+    <h3 data-i18n="bk.help_h">帮助：设置一个能被本程序显示的备份</h3>
+    <p class="fine" data-i18n="bk.help_p">只展开你需要的部分。每一步都在这里——用什么、设置什么、点击什么。工具包是一个可以修改的起点——请阅读上方的<a href="#backup-disclaimer">免责声明</a>。</p>
+
+    <details open>
+      <summary data-i18n="bk.q_steps">10 分钟完成设置——分步说明</summary>
+      <ol class="steps" data-i18n="bk.steps"><li><b>准备工作。</b>Windows 10 或 11，已登录 OneDrive，已安装 Claude Usage Monitor。第二份副本需要：一个 Nextcloud 账户——或 rclone 支持的任何其他云存储（Google Drive、Dropbox、S3、pCloud、SFTP…）。没有第二个云盘？第 2 步可以跳过。</li><li><b>创建应用密码</b>（仅第二个云盘需要）。在 Nextcloud 中：你的头像 → <em>个人设置</em> → <em>安全</em> → <em>设备与会话</em> → 应用名称 <code>rclone-backup</code> → <em>创建新应用密码</em>。复制它——它只显示一次。它<b>不是</b>你的账户密码，你可以随时撤销。</li><li><b>下载并解压</b> Backup Kit 到一个固定的文件夹，例如 <code>C:\Tools\ClaudeBackup</code>。</li><li><b>用记事本编辑 <code>config.psd1</code></b>：<code>VaultPath</code> = 你的 Obsidian 仓库（留空 = 不使用 Obsidian），<code>ExtraFolders</code> = 其他要备份的内容，<code>NextcloudRemote</code> 和 <code>NextcloudBasePath</code> = 第二个云盘（留空 = 跳过），<code>DailyTime</code> = 每天的运行时间。其他保持不变即可。</li><li><b>以管理员身份运行安装程序：</b>Win+X → <em>终端管理员</em>，然后依次运行 <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>、<code>cd C:\Tools\ClaudeBackup</code>、<code>Unblock-File *.ps1</code>、<code>.\Install-BackupKit.ps1</code>。它会在需要时安装 rclone，询问云端地址、用户名和应用密码（输入时隐藏），创建两个计划任务，告诉本程序去哪里查看，并进行首次运行。</li><li><b>首次正式上传：</b><code>.\Backup-Step2-Cloud.ps1</code>——安装程序只对第 2 步做了一次测试运行。</li><li><b>检查：</b><code>.\Test-BackupKit.ps1</code>——每一行都应显示 <code>[OK]</code>。在 Claude Usage Monitor 中：右键点击面板 → <em>备份状态栏</em>。三盏指示灯会在 5 分钟内变绿，或者点击 <em>备份…</em> → <em>立即检查</em> 立刻变绿。</li></ol>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_what">会备份什么——以及绝不会备份什么</summary>
+      <ul class="ticks" data-i18n="bk.what"><li><b>Claude Code</b>（<code>%USERPROFILE%\.claude</code>）——技能、设置、<code>CLAUDE.md</code>、项目记忆、插件。</li><li><b>Claude Desktop</b>（<code>%APPDATA%\Claude</code>）——设置和 MCP 服务器。</li><li><b>智能体对话记录</b>——每个会话一个 ZIP。</li><li><b>Obsidian 仓库</b>——每次运行生成一个带日期的 ZIP 快照，保留 30 天。</li><li><b>你的额外文件夹</b>——你在 <code>config.psd1</code> 中列出的任何内容。</li><li><b>绝不备份：</b>Claude Code 的登录令牌（<code>.credentials.json</code>）、Claude Desktop 的 Cookie 和缓存，以及可以重新下载的大型虚拟机镜像。</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_settings">应用中的“设置 → 备份”，逐项说明</summary>
+      <div class="cmpwrap"><table class="keys" data-i18n="bk.settings"><tr><th>在面板上显示备份状态栏</th><td>打开或关闭三盏指示灯。也可以在右键菜单中操作：<em>备份状态栏</em>。</td></tr><tr><th>指示灯</th><td>要显示哪些指示灯：OneDrive、Nextcloud、Obsidian。没有 Obsidian 仓库？取消勾选即可。</td></tr><tr><th>指示灯旁的标签</th><td>名称和时间 · 仅名称 · 仅指示灯。</td></tr><tr><th>绿色上限 / 黄色上限</th><td>以小时为单位的时效上限——默认为 24 和 48。每周备份一次？设为 170 和 340。</td></tr><tr><th>备份文件夹</th><td>第 1 步写入的文件夹，例如 <code>OneDrive\ClaudeBackup</code>。保持<em>自动</em>即可——安装程序已经告诉本程序了。</td></tr><tr><th>备份脚本配置</th><td>工具包的 <code>config.psd1</code>。本程序从中读取仓库路径和云端目标——绝不读取密码。</td></tr><tr><th>计划任务筛选</th><td><code>ClaudeBackup*</code>——详情窗口列出哪些 Windows 任务。</td></tr><tr><th>详情窗口显示</th><td>勾选你想看到的内容：备份了哪些内容、内容、错误和警告、计划任务、日志。</td></tr></table></div>
+      <p class="fine" data-i18n="bk.settings_note">安装程序会写入 <code>%APPDATA%\ClaudeUsageMonitor\backup_profile.json</code>——只包含文件夹路径，没有密码，也没有令牌。你在“备份”选项卡中的设置优先于此文件。</p>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_sec">安全——工具包如何保护你的数据</summary>
+      <ul class="ticks" data-i18n="bk.sec"><li><b>工具包的任何文件中都没有密码。</b>应用密码以隐藏方式输入，仅以混淆形式保存在 rclone 自己的配置中。你可以随时在 Nextcloud 中撤销它。</li><li><b>登录令牌绝不会被复制。</b>Claude Desktop 的 Cookie 也不会。</li><li><b>不做镜像同步。</b>你在电脑上删除的文件，在两份备份中都会保留——镜像同步会把误操作也原样复制过去。</li><li><b>带日期的仓库快照</b>，之后出错的副本永远无法覆盖较早的正确状态。</li><li><b>两个独立的服务商。</b>即使其中一个出故障或锁定了你的账户，另一个仍保有全部内容。</li><li><b>值得注意：</b>Claude Desktop 的配置和 <code>.claude\settings.json</code> 中可能包含 MCP 服务器的 API 密钥。它们会被备份（恢复时需要），存入你自己的 OneDrive 和你自己的云盘。请为这两个账户开启两步验证。</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_restore">恢复——需要时这样做</summary>
+      <table class="keys" data-i18n="bk.restore"><tr><th>某条笔记的旧版本</th><td>onedrive.com → 右键点击文件 → <em>版本历史记录</em>。</td></tr><tr><th>已删除的文件</th><td>OneDrive <em>回收站</em>（30 天）或 Nextcloud <em>已删除的文件</em>。</td></tr><tr><th>某一天的整个仓库</th><td>将 <code>vault-snapshots\Vault_…zip</code> 解压到一个空文件夹，然后在 Obsidian 中打开：<em>打开本地仓库</em>。</td></tr><tr><th>Claude Code 的技能和设置</th><td>将 <code>files\claude-code</code> 复制回 <code>%USERPROFILE%\.claude</code>，然后重新登录 Claude Code。</td></tr><tr><th>Claude Desktop 设置</th><td>关闭 Claude Desktop，将 <code>files\claude-desktop</code> 复制回 <code>%APPDATA%\Claude</code>。</td></tr></table>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_own">已经有自己的备份方案？本程序需要这些</summary>
+      <ul class="ticks" data-i18n="bk.own"><li><b>每次运行一个日志</b>，放在备份文件夹的 <code>logs</code> 子文件夹中，命名为 <code>onedrive_YYYY-MM-DD_HHMMSS.log</code> 和 <code>nextcloud_…log</code>，每行以日期和时间开头。</li><li><b>明确的结束标记：</b>成功的运行以包含 <code>KESZ</code> 的一行结束，失败的运行则以 <code>HIBAVAL ZARULT</code> 结束。工具包的 <code>Common.ps1</code> 记录了本程序能识别的所有关键词。</li><li><b>去哪里找：</b>在“备份”选项卡中设置<em>备份文件夹</em>。不同的文件夹名或文件名可以在 <code>backup_profile.json</code> 中设置——工具包的 README 中有说明。</li><li><b>Mac：</b>在 macOS 上，指示灯同样读取这些日志；工具包本身和计划任务列表仅适用于 Windows。</li></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Claude Usage Monitor 是什么？</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Windows 10/11 和 macOS，可实时显示你的 Claude 订阅的用量限额</b>——5 小时会话、每周限额和模型每周限额，并分别显示距离重置的剩余时间。它始终显示在其他窗口之上，你无需打开“设置 → 使用情况”，也无需终端，就能随时查看 Claude 用量。</p>
+  <p class="about__def" data-i18n="about.p2">一个应用，同时支持 Windows 和 Mac。它涵盖所有计入你套餐的用量——claude.ai、Claude Desktop 和 Claude Code，覆盖你的所有设备。它不是终端工具“Claude Code Usage Monitor”：本应用是带托盘图标的图形化面板，不需要命令行。</p>
+  <dl class="facts" data-i18n="facts.dl"><dt>价格</dt><dd>免费——完整版，没有付费版本，也不是试用版</dd><dt>平台</dt><dd>Windows 10 / 11（64 位）和 macOS 12 或更高版本</dd><dt>语言</dt><dd>34 种界面语言</dd><dt>显示内容</dt><dd>5 小时会话、每周限额、模型每周限额、重置倒计时、进度和消耗速率</dd><dt>数据源</dt><dd>Claude Desktop 的本地日志，或通过 claude.ai 登录查看所有设备</dd><dt>隐私</dt><dd>无遥测、无广告，无需在我们这里注册账户</dd><dt>许可证</dt><dd>MIT，在 GitHub 上开源</dd><dt>作者</dt><dd>Vidovics Gábor，匈牙利——独立开发者，与 Anthropic 无关联</dd></dl>
+  <p class="fine about__meta"><span data-i18n="about.updated">最后更新</span>: <time data-win="date">2026-10-07</time> · <span data-i18n="dls.version">版本</span> <span data-win="version">2.7.1</span> · <span data-i18n="about.by">作者</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">关键术语，准确定义</summary>
+    <dl>
+      <dt data-i18n="gl.1t">5 小时会话（5 小时窗口）</dt>
+      <dd data-i18n="gl.1d">Claude 的短期用量限额。基于会话的限额每五小时重置一次。Anthropic 称之为“当前会话”；很多用户称其为 5 小时窗口或 5 小时限制。</dd>
+      <dt data-i18n="gl.2t">每周限额（周限额）</dt>
+      <dd data-i18n="gl.2d">Claude 付费套餐的第二道上限，适用于所有模型，在分配给你账户的每周固定时间重置。每周限额自 2025 年 8 月 28 日起生效。</dd>
+      <dt data-i18n="gl.3t">模型每周限额</dt>
+      <dd data-i18n="gl.3d">针对某一个特定模型的单独每周上限，在 Claude 的用量页面上与其他所有模型的限额并列显示。小组件会把你所选模型的这项限额显示为第三个仪表。</dd>
+      <dt data-i18n="gl.4t">重置</dt>
+      <dd data-i18n="gl.4d">限额回到 0% 的时刻。小组件会倒计时到这一刻。通过 claude.ai 登录时，精确时间来自 Anthropic 的服务器；使用本地日志时则为估算值。</dd>
+      <dt data-i18n="gl.5t">进度（pace）</dt>
+      <dd data-i18n="gl.5d">与均匀使用一周相比，你超前或落后了多少。“较进度 +12%”表示你已用掉的每周限额，比本周已过去的时间比例多出 12 个百分点。</dd>
+      <dt data-i18n="gl.6t">消耗速率</dt>
+      <dd data-i18n="gl.6d">限额此刻被消耗的速度——会话按每小时百分比计算，每周限额按每天百分比计算——以及照此速度何时会达到 100%。</dd>
+      <dt data-i18n="gl.7t">用量额度（extra usage）</dt>
+      <dd data-i18n="gl.7d">达到套餐限额后可选的按量付费用量，可设置每月支出上限。小组件会显示它是否已开启、上限是多少，以及你已花费多少。</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">你能得到什么</p>
+  <h2 data-i18n="feat.h2">所有 Claude 用量限额，一眼看清。</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">提前预知</h3>
+        <p data-i18n="feat.1d">绿、黄、红。在你用完之前很久，面板就会变色——同时显示重置倒计时，并预估你何时会用到 100%。</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Claude 用量达到 78%——小组件变为黄色"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Claude 用量达到 94%——小组件变为红色"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">用得太快了吗？</h3>
+      <p data-i18n="feat.2d">进度指示会告诉你，每周限额的消耗是否快过一周时间的流逝——并预测你最终会用到多少。</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">所有设备，一个数字</h3>
+      <p data-i18n="feat.3d">通过你自己的浏览器登录——就像 Claude Code 那样——手机、浏览器和其他每台电脑上的用量也都能看到。</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">各模型限额</h3>
+      <p data-i18n="feat.4d">Fable、Opus、Sonnet、Claude Code、用量额度——服务器报告的每一项限额，外加本周各模型的用量分布。</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">只在关键时刻提醒</h3>
+      <p data-i18n="feat.5d">在 70% 和 90%（可自选）以及限额重置时，安静地弹出通知。除此之外，绝不打扰。</p>
+    </article>
+    <article class="cell cell--wide cell--hist reveal">
+      <div class="cell__histhead">
+        <div>
+          <h3 data-i18n="feat.7t">一张图看完整周</h3>
+          <p data-i18n="feat.7d">双击小组件：两项限额显示在同一条时间轴上——6 小时、24 小时或 7 天——包括每周峰值、日均消耗，以及本周结束预测，在你超出之前就会变色提醒。</p>
+        </div>
+        <div class="seg" id="hist-range" role="radiogroup" aria-label="Range">
+          <button type="button" role="radio" aria-checked="false" data-range="6h" data-i18n="hist.r6">6 小时</button>
+          <button type="button" role="radio" aria-checked="false" data-range="24h" data-i18n="hist.r24">24 小时</button>
+          <button type="button" role="radio" aria-checked="true" data-range="7d" data-i18n="hist.r7">7 天</button>
+        </div>
+      </div>
+      <img id="hist-img" class="cell__histimg" src="../img/history-7d-midnight.webp" width="1280" height="840" data-i18n-attr="alt:img.history" loading="lazy" decoding="async" alt="Claude Usage Monitor 历史记录窗口：5 小时会话和每周限额随时间的变化，以及每周峰值、日均消耗和本周结束预测">
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">不监视你，就这么简单。</h3>
+      <p data-i18n="feat.6d">无遥测、无统计分析，无需在我们这里注册账户。它只和 Anthropic 通信，只为获取你自己的数据。你的登录令牌加密保存在你的电脑上——使用 Windows DPAPI 或 macOS 钥匙串。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">是的，真的免费。</h2>
+      <p data-i18n="band1.p">没有试用倒计时，没有“Pro”升级推销，没有套路。下载下来，它就是你的。</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">感兴趣的话再看</p>
+  <h2 data-i18n="tabs.h2">想了解细节？都在这里。</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">显示内容</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">数据来源</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">隐私与安全</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">操作方式</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">设置</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">对比</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>5 小时会话</b>——当前百分比、重置倒计时、消耗速率（%/小时）以及预计何时用尽。</li><li><b>每周限额</b>——当前百分比、距每周重置的时间、每日速率，以及与均匀使用一周相比的进度。</li><li><b>模型每周限额</b>——你关注的模型的第三个仪表（默认为 Fable）。</li><li><b>套餐徽章</b>——PRO、MAX 5×、MAX 20×、TEAM 或 ENTERPRISE。</li><li><b>历史记录窗口</b>——6 小时 / 24 小时 / 7 天图表、每周峰值、日均消耗和本周结束预测。</li><li><b>托盘 / 菜单栏图标</b>——以圆环显示你选择的百分比，鼠标悬停即可查看详情。</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · 本地日志 <span class="chip">默认 · 无需登录</span></h4><p>读取 Claude Desktop 已经在你电脑上写入的用量日志。不会向任何地方发送数据。只统计这台电脑，大约每 5 分钟刷新一次。</p></div><div><h4>2 · claude.ai <span class="chip">所有设备</span></h4><p>与 Claude Code 相同的浏览器登录方式——没有内嵌浏览器，也不用在应用里输入密码。重置时间精确来自服务器，大约每 2 分钟刷新一次。</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>无遥测。</b>应用没有任何统计分析，绝不“回传”数据——只会向本网站检查是否有新版本。</li><li><b>令牌只属于你。</b>使用 Windows DPAPI 加密，或保存在 macOS 钥匙串中，绝不以明文文件保存。</li><li><b>绝不读取对话内容。</b>本地日志中只使用模型名称、token 数量和时间戳。</li><li><b>经过校验的更新。</b>仅通过 HTTPS 下载，每个安装包在安装前都会核对 SHA-256；一旦失败，自动恢复旧版本。</li><li><b>开源。</b>不必轻信，自己验证：全部源代码以 MIT 许可证发布在 GitHub 上。</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>拖动</th><td>移动面板（自动吸附到屏幕边缘）</td></tr><tr><th>右键点击</th><td>菜单：布局、主题、大小、语言、设置</td></tr><tr><th>双击</th><td>历史记录和统计窗口</td></tr><tr><th>Ctrl + 滚轮</th><td>调整大小</td></tr><tr><th>点击托盘图标</th><td>隐藏 / 显示面板</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>外观</b>——6 种主题、自定义强调色、3 种布局、大小、不透明度、始终置顶、锁定位置、鼠标穿透。</li><li><b>内容</b>——显示哪些仪表、仪表的顺序和大小、趋势曲线、消耗速率、倒计时。</li><li><b>提醒</b>——警告和严重阈值（默认 70% / 90%）、重置通知和数据过旧通知。</li><li><b>系统</b>——开机自启、自动更新、34 种语言。</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claude 自带的“设置 → 使用情况”页面</th><th>读取 Claude Code 日志的终端工具</th></tr><tr><th>工作时始终可见</th><td>是——始终置顶的小组件和托盘图标</td><td>否——需要手动打开</td><td>仅在打开的终端中</td></tr><tr><th>Windows 和 macOS</th><td>是，一个应用同时支持</td><td>是（网页）</td><td>视工具而定，命令行</td></tr><tr><th>需要终端</th><td>否</td><td>否</td><td>是</td></tr><tr><th>统计所有设备上的 claude.ai、Claude Desktop 和 Claude Code</th><td>是，需通过 claude.ai 登录</td><td>是</td><td>否——仅限这台电脑上的 Claude Code</td></tr><tr><th>进度、消耗速率和本周结束预测</th><td>是</td><td>否</td><td>部分支持</td></tr><tr><th>按自定义阈值提醒</th><td>是（默认 70% / 90%）</td><td>否</td><td>很少</td></tr><tr><th>价格</th><td>免费，开源（MIT）</td><td>包含在你的套餐中</td><td>大多免费</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">打造你的专属风格</p>
+    <h2 data-i18n="th.h2">6 种主题，3 种布局，现在就试试。</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="所选主题和布局下的 Claude Usage Monitor">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">主题</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">午夜玻璃</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude（暖色深色）</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">石墨</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">霓虹</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">浅色纸张</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">便利贴黄</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">深蓝色玻璃质感，带着清冷的光晕。默认主题——沉稳、清晰，适合任何深色桌面。</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">布局</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">卡片</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">圆环</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">细条</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">另外还可以自定义强调色、70% 到 200% 的大小，以及不透明度。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">价格</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">免费。全部功能。永久。</h2>
+    <ul class="price__list" data-i18n="price.list"><li>完整版——也是唯一的版本</li><li>不是演示版，不是试用版，没有时间限制</li><li>没有“Pro”版本，没有锁定的功能</li><li>没有广告，无需注册，不收集数据</li><li>免费更新，自动完成</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">下载</p>
+    <h2 data-i18n="dls.h2">永远是最新版本，永远免费。</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">免费</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">下载 Windows 版</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">版本</span> <b data-win="version">2.7.1</b> · <span data-win="size">47 MB</span> · <span data-win="date">2026-10-07</span></p>
+        <details><summary data-i18n="dls.how">如何安装（3 步）</summary>
+          <ol data-i18n="dls.win_steps"><li><b>解压整个 zip 文件</b>（右键点击 → 全部解压缩…）。</li><li>双击 <code>INSTALL.bat</code>。</li><li>回答两个问题——按 Enter 即接受推荐选项。完成。</li></ol>
+          <p class="fine" data-i18n="dls.win_note">无需管理员权限。如果 Windows 显示“Windows 已保护你的电脑”：点击“更多信息”→“仍要运行”。本应用是开源的，但没有代码签名。</p>
+        </details>
+        <details><summary data-i18n="dls.verify">校验下载文件（SHA-256）</summary><code class="sha" data-win="sha">1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">免费</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">下载 macOS 版</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">版本</span> <b data-mac="version">2.6.1</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-21</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">macOS 版即将推出——请稍后再来看看。</p>
+        <details><summary data-i18n="dls.how">如何安装（3 步）</summary>
+          <ol data-i18n="dls.mac_steps"><li>打开 zip 文件，将 <b>ClaudeUsageMonitor</b> 拖到<b>应用程序</b>文件夹。</li><li>首次启动：<b>右键点击 → 打开</b>（本应用未经 Apple 公证）。</li><li>在菜单栏中找到图标。完成。</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">校验下载文件（SHA-256）</summary><code class="sha" data-mac="sha">86d75d796269812dbc7b1050ef1f207c1a367a45fd5965f1090daefc3c8f76c9</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">次下载（本页累计）</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">下载即表示你接受<a href="#terms" data-legal="terms">使用条款</a>：本应用和 Backup Kit 均免费，按“现状”提供，不附带任何担保，使用风险由你自行承担。</p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">这些按钮始终指向最新版本——安装之后，应用会自动保持最新。</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">持续开发中</p>
+  <h2><span data-i18n="new.h2">新版本</span> <span class="grad" data-win="version">2.7.1</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">更新说明以英语和匈牙利语撰写。</p>
+  <ul class="notes" id="notes"><li>“给开发者留言”窗口更加醒目：星级评分现在显示为更大、更清晰的星星；必填的同意复选框位于突出显示的边框内——如果未勾选就尝试发送，边框会变成红色。点击旁边的文字也可以勾选。</li><li>程序中的所有复选框（设置、留言窗口）现在在深色背景上都清晰可见：浅色边框，勾选时显示为带白色对勾的橙色方框。</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">早期版本</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">新版本发布时邮件通知我</h3>
+      <p data-i18n="sub.p">只发送版本更新消息——每个版本几行简短说明。绝无营销内容。一键退订。</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">通知我</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">我同意按照<a href="#privacy" data-legal="privacy">隐私政策</a>中的说明，使用我的邮箱地址向我发送版本发布通知。我可以随时撤回此同意。</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">本网站受 reCAPTCHA 保护，以防止垃圾信息——适用 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隐私权政策</a>和<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服务条款</a>。</p>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">适合人群</p>
+    <h2 data-i18n="who.h2">只要你是其中之一，你就会喜欢它。</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Claude Code 开发者</b><span data-i18n="who.1d">智能体一跑就是很久，5 小时会话的限额很快就会耗尽。在它把你卡在任务中途之前，提前看到。</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pro 和 Max 订阅用户</b><span data-i18n="who.2d">把你付费买来的额度用到极致——别到周四就撞墙。</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">多设备用户</b><span data-i18n="who.3d">手机、浏览器、笔记本、台式机：所有设备，一个真实的数字。</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">喜欢整洁桌面的人</b><span data-i18n="who.4d">一个小巧好看的面板，从不碍事——还能缩成一根细条。</span></div>
+    </div>
+
+    <div class="reviews" id="reviews" hidden>
+      <h3 class="reviews__h" data-i18n="rev.h">用户怎么说</h3>
+      <p class="reviews__sum" id="rating-sum" hidden><span class="quote__stars" aria-hidden="true">★★★★★</span> <b data-r="avg">0</b> / 5 · <span data-i18n="rev.count">来自应用内的评分</span>: <b data-r="count">0</b></p>
+      <div id="testimonials" class="quotes"></div>
+      <p class="fine reviews__how" data-i18n="rev.how">这里只显示发送者同意公开、且作者已阅读过的留言。正在使用本应用？右键点击面板 → <b>给开发者留言…</b>——打个分，说说你的想法。</p>
+    </div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">“这是我为自己做的，因为我总是在工作到一半时撞上限额。后来我不断打磨，直到自己愿意整天看着它。它是免费的，因为这样的工具本就应该免费——尽管用，用得开心，再告诉我你的想法。”</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">Claude Usage Monitor 的创建者和开发者 · 匈牙利</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">GitHub 上的源代码</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">给我写信</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Claude 用量限额常见问题，简短解答。</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">真的免费吗？有什么套路？</summary><p data-i18n="faq.a1">真的免费，没有任何套路。它不是演示版、不是试用版，也不是阉割版——这就是完整且唯一的版本。没有广告，没有付费版本，不收集数据。源代码以 MIT 许可证公开。</p></details>
+    <details><summary data-i18n="faq.q8">不打开设置，怎样查看我的 Claude 用量？</summary><p data-i18n="faq.a8">安装 Claude Usage Monitor：它以一个始终置顶的小组件，以及托盘或菜单栏中的百分比，把你的 5 小时会话、每周限额和模型限额一直显示在屏幕上。Claude 自己的数据在“设置 → 使用情况”中；小组件无需任何点击就能显示同样的限额。</p></details>
+    <details><summary data-i18n="faq.q9">Claude 的 5 小时会话和每周限额什么时候重置？</summary><p data-i18n="faq.a9">基于会话的限额每五小时重置一次。每周限额在 Anthropic 为你的账户分配的每周固定时间重置，因此每个人都不一样。小组件会实时倒计时到这两次重置——通过 claude.ai 登录时，使用的是来自 Anthropic 服务器的精确时间。</p></details>
+    <details><summary data-i18n="faq.q10">Claude Code 的用量会计入我的 claude.ai 限额吗？</summary><p data-i18n="faq.a10">会。根据 Anthropic 的说明，claude.ai、Claude Desktop 和 Claude Code 中的用量都计入同一个用量限额。因此，小组件的 claude.ai 模式显示的是你所有设备和应用的一个总数，而不只是它所运行的那台电脑。</p></details>
+    <details><summary data-i18n="faq.q11">它和“Claude Code Usage Monitor”是同一个东西吗？</summary><p data-i18n="faq.a11">不是。“Claude Code Usage Monitor”是另一位作者开发的独立终端工具。Vidovics Gábor 开发的 Claude Usage Monitor 是适用于 Windows 和 macOS 的图形化桌面小组件，带托盘图标、主题和提醒，不需要命令行。</p></details>
+    <details><summary data-i18n="faq.q13">怎样给 Claude Usage Monitor 评分或发送反馈？</summary><p data-i18n="faq.a13">右键点击面板并选择“给开发者留言…”，或点击面板标题栏中的留言图标。你可以打一到五颗星、写一段留言，并且——只有在你勾选的情况下——允许你的评分和姓名显示在本网站上。每一条留言都由作者 Vidovics Gábor 亲自阅读，未经你的同意，任何内容都不会公开。如果没有安装应用，请使用本页底部的表单。</p></details>
+    <details><summary data-i18n="faq.q14">Claude Usage Monitor 支持哪些语言？</summary><p data-i18n="faq.a14">支持 34 种语言：欧盟所有官方语言，外加日语、韩语、简体中文、繁体中文、印度尼西亚语和越南语——葡萄牙语分为欧洲版和巴西版，西班牙语分为西班牙版和拉丁美洲版。应用会自动选择你的系统语言，本网站也提供所有这些语言的版本。</p></details>
+    <details><summary data-i18n="faq.q15">它支持 Claude Pro、Max、Team 和 Enterprise 吗？</summary><p data-i18n="faq.a15">支持。它显示你自己的 Claude 套餐所具有的限额——Pro、Max 5×、Max 20×、Team 或 Enterprise——与 Claude 在“设置 → 使用情况”中列出的完全相同；面板标题栏中的套餐徽章会告诉你当前使用的是哪个套餐。</p></details>
+    <details><summary data-i18n="faq.q12">Claude Usage Monitor 能显示我的 Claude 文件是否已备份吗？</summary><p data-i18n="faq.a12">能——而且同样免费。开启备份状态栏后，面板上的三盏指示灯会显示备份到 OneDrive、备份到第二个云盘（如 Nextcloud）以及 Obsidian 仓库的备份是否最新：24 小时内为绿色，48 小时内为黄色，更早或缺失为红色，最近一次运行失败时显示红色圆环。本程序只读取备份日志；备份本身由免费的 Claude Backup Kit 完成，它每天复制你的 Claude Code 技能、CLAUDE.md、项目记忆、Claude Desktop 设置和智能体日志——绝不复制登录令牌。该工具包是任何人都可以修改的免费起点，因此我们对备份不承担任何责任：确保备份完整且可以恢复，是每位用户自己的责任。</p></details>
+    <details><summary data-i18n="faq.q2">这是 Anthropic 的官方产品吗？</summary><p data-i18n="faq.a2">不是。这是由 Vidovics Gábor 开发的独立社区工具，与 Anthropic 没有任何关联。“Claude”是 Anthropic, PBC 的商标。</p></details>
+    <details><summary data-i18n="faq.q3">我需要把密码告诉它吗？</summary><p data-i18n="faq.a3">绝对不需要。不登录时，它读取 Claude Desktop 的本地日志。如果想查看所有设备，你需要在自己的浏览器中登录 claude.ai——应用永远看不到你的密码。</p></details>
+    <details><summary data-i18n="faq.q4">运行时 Windows 弹出警告，这是为什么？</summary><p data-i18n="faq.a4">因为本应用没有代码签名（证书要花钱，而应用是免费的）。点击“更多信息”→“仍要运行”即可。你可以用 SHA-256 校验和验证下载文件，也可以在 GitHub 上阅读源代码。</p></details>
+    <details><summary data-i18n="faq.q5">支持哪些 Mac？</summary><p data-i18n="faq.a5">macOS 12 或更高版本。上方的下载卡片始终会显示当前版本适用的处理器。macOS 版刚刚推出——非常欢迎反馈。</p></details>
+    <details><summary data-i18n="faq.q6">更新是怎样进行的？</summary><p data-i18n="faq.a6">应用每天会向本网站检查几次。有新版本时会通知你；一键即可下载、校验并安装，然后自动重启。你也可以关闭此功能。</p></details>
+    <details><summary data-i18n="faq.q7">如何卸载？</summary><p data-i18n="faq.a7">Windows：设置 → 应用 → 安装的应用 → Claude Usage Monitor → 卸载。macOS：把应用拖到废纸篓。就这么简单。</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">与作者交流</p>
+      <h2 data-i18n="fb.h2">有想法？发现 bug？只是喜欢？告诉我。</h2>
+      <p data-i18n="fb.p">你的留言会直接发给我——Vidovics Gábor。每一条我都会读。只有在希望收到回复时，才需要留下邮箱地址。</p>
+      <p class="fine" data-i18n="fb.privacy">你的留言仅用于回复你和改进应用——详见<a href="#privacy" data-legal="privacy">隐私政策</a>。</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">姓名</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">邮箱</span> <i data-i18n="fb.optional">（可选）</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">关于什么？</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">反馈</option>
+          <option value="idea" data-i18n="fb.t_idea">想法 / 功能建议</option>
+          <option value="bug" data-i18n="fb.t_bug">错误报告</option>
+          <option value="recommend" data-i18n="fb.t_rec">我要推荐！（用户评价）</option>
+          <option value="other" data-i18n="fb.t_other">其他</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">留言</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">允许将我的留言作为推荐公开在本页面上（仅显示我的姓名）。</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">发送留言</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">本网站受 reCAPTCHA 保护，以防止垃圾信息——适用 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隐私权政策</a>和<a href="https://policies.google.com/terms" target="_blank" rel="noopener">服务条款</a>。</p>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">两分钟后，你就能清楚知道自己还剩多少。</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">免费下载</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>免费，而且永久免费。</b>不是演示版，不是试用版，没有任何功能被锁定。</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.7.1</span></p>
+      <p><span data-i18n="foot.made">设计与开发：</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">非官方社区工具，与 Anthropic 无关联。“Claude”是 Anthropic, PBC 的商标。</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">MIT 许可证</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">更新日志</a>
+      <a href="#feedback" data-i18n="foot.contact">联系方式</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">隐私政策</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">法律声明</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">使用条款</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Cookie 设置</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">本页面不使用 Cookie，不使用跟踪器，也不加载任何第三方内容。</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="关闭">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">法律文本提供匈牙利语和英语版本，以匈牙利语版本为准。</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">是的，取消订阅</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">关闭</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Cookie——由你决定</h2>
+  <p data-i18n="ck.p">不使用 Cookie，本页面也能完整运行。在你允许的情况下，Google 统计可以帮助作者了解有多少人访问。在你同意之前，不会加载任何内容。</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">必要——记住你的语言和此项选择（不使用 Cookie，仅使用本地存储）</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">统计——Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">营销——Google Ads 转化跟踪</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">拒绝</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">设置</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">保存我的选择</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">全部接受</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">隐私政策</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100% 免费</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">把链接发到我的电脑</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script id="um-hints" type="application/json">{"en":"This page is also available in English","bg":"Тази страница е достъпна и на български","cs":"Tato stránka je k dispozici i v češtině","da":"Denne side findes også på dansk","de":"Diese Seite gibt es auch auf Deutsch","et":"See leht on saadaval ka eesti keeles","el":"Αυτή η σελίδα είναι διαθέσιμη και στα ελληνικά","es":"Esta página también está disponible en español","es-419":"Esta página también está disponible en español de Latinoamérica","fr":"Cette page existe aussi en français","ga":"Tá an leathanach seo ar fáil i nGaeilge freisin","hr":"Ova je stranica dostupna i na hrvatskom","id":"Halaman ini juga tersedia dalam bahasa Indonesia","it":"Questa pagina è disponibile anche in italiano","lv":"Šī lapa ir pieejama arī latviešu valodā","lt":"Šį puslapį galima skaityti ir lietuviškai","hu":"Ez az oldal magyarul is elérhető","mt":"Din il-paġna hija disponibbli wkoll bil-Malti","nl":"Deze pagina is ook beschikbaar in het Nederlands","pl":"Ta strona jest dostępna także po polsku","pt":"Esta página também está disponível em português","pt-pt":"Esta página também está disponível em português europeu","ro":"Această pagină este disponibilă și în limba română","ru":"Эта страница есть и на русском языке","sk":"Táto stránka je dostupná aj po slovensky","sl":"Ta stran je na voljo tudi v slovenščini","fi":"Tämä sivu on saatavilla myös suomeksi","sv":"Den här sidan finns även på svenska","tr":"Bu sayfa Türkçe olarak da mevcut","vi":"Trang này cũng có bằng tiếng Việt","ja":"このページは日本語でもご覧いただけます","ko":"이 페이지는 한국어로도 볼 수 있어요","zh-cn":"本页面也提供简体中文版","zh-tw":"本頁也提供繁體中文版"}</script>
+<script src="../assets/site.js?v=10" defer></script>
+</body>
+</html>

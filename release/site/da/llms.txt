@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Dansk)
+
+> Gratis open source-widget til Windows og macOS: se dine Claude-forbrugsgrænser live – 5-timers session, ugegrænse og grænse pr. model, med nedtælling.
+
+Claude Usage Monitor er en gratis open source-widget til Windows 10/11 og macOS, der viser forbrugsgrænserne i dit Claude-abonnement i realtid – din 5-timers session, din ugegrænse og din ugegrænse pr. model, hver med den tid, der er tilbage, til den nulstilles. Den ligger oven på dine andre vinduer, så du kan tjekke dit Claude-forbrug uden at åbne Settings → Usage og uden en terminal.
+
+Én app til både Windows og Mac. Den dækker alt, hvad der tæller med i dit abonnement – claude.ai, Claude Desktop og Claude Code, på alle dine enheder. Det er ikke terminalværktøjet »Claude Code Usage Monitor«: dette er et grafisk panel med et ikon i meddelelsesområdet, og det kræver ingen kommandolinje.
+
+- **Pris**: Gratis – den fulde version, ingen betalingsversion, ingen prøveperiode
+- **Platforme**: Windows 10 / 11 (64-bit) og macOS 12 eller nyere
+- **Sprog**: 34 sprog i brugerfladen
+- **Det viser den**: 5-timers session, ugegrænse, ugegrænse pr. model, nedtælling til nulstilling, tempo og forbrugshastighed
+- **Datakilde**: Claude Desktops lokale log eller dit claude.ai-login for alle enheder
+- **Privatliv**: Ingen telemetri, ingen reklamer, ingen konto hos os
+- **Licens**: MIT, open source på GitHub
+- **Udvikler**: Gábor Vidovics, Ungarn – uafhængig, ikke tilknyttet Anthropic
+
+- Version: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/da/
+
+## Alle dine Claude-forbrugsgrænser. Ét blik.
+
+- **Se det komme**: Grøn, gul, rød. Panelet skifter farve længe før, du løber tør – med nedtælling til nulstillingen og et skøn over, hvornår du rammer 100 %.
+- **Går det for stærkt?**: Tempoindikatoren fortæller, om din ugegrænse smelter hurtigere, end ugen går – og regner ud, hvor du ender.
+- **Alle dine enheder, ét tal**: Log på via din egen browser – ligesom Claude Code gør – og se også forbruget fra din telefon, browseren og alle dine andre computere.
+- **Grænser pr. model**: Fable, Opus, Sonnet, Claude Code, forbrugskreditter – alle de grænser, serveren rapporterer, plus ugens fordeling mellem modellerne.
+- **Advarsler, der betyder noget**: En diskret besked ved 70 % og 90 % (du bestemmer selv), og når din grænse nulstilles. Intet andet, nogensinde.
+- **Den spionerer ikke. Punktum.**: Ingen telemetri, ingen analyse, ingen konto hos os. Den taler kun med Anthropic og kun om dine egne tal. Dit login-token forbliver krypteret på din computer – med Windows DPAPI eller i macOS-nøgleringen.
+- **Hele ugen i ét diagram**: Dobbeltklik på widgetten: begge grænser på én tidslinje – 6 timer, 24 timer eller 7 dage – med ugens top, dagligt gennemsnit og en prognose for ugens udgang, der skifter farve, før du skyder over.
+
+## FAQ
+
+### Er den virkelig gratis? Hvor er hagen?
+Virkelig gratis, og der er ingen hage. Det er ikke en demo, ikke en prøveversion og ikke en beskåret udgave – det er den fulde og eneste version. Ingen reklamer, ingen betalingsversion, ingen dataindsamling. Kildekoden er offentlig under MIT-licensen.
+
+### Er det et officielt Anthropic-produkt?
+Nej. Det er et uafhængigt community-værktøj lavet af Gábor Vidovics. Det er ikke tilknyttet Anthropic. »Claude« er et varemærke tilhørende Anthropic, PBC.
+
+### Skal jeg give den min adgangskode?
+Aldrig. Uden login læser den Claude Desktops lokale log. Vil du have alle enheder med, logger du på claude.ai i din egen browser – appen ser aldrig din adgangskode.
+
+### Windows advarer mig, når jeg starter den. Hvorfor?
+Fordi appen ikke er kodesigneret (certifikater koster penge, og appen er gratis). Klik på Flere oplysninger → Kør alligevel. Du kan verificere downloaden med dens SHA-256-kontrolsum og læse kildekoden på GitHub.
+
+### Hvilke Mac-computere understøttes?
+macOS 12 eller nyere. Downloadkortet ovenfor viser altid, hvilken processor den aktuelle version er bygget til. macOS-versionen er ny – feedback er meget velkommen.
+
+### Hvordan virker opdateringer?
+Appen tjekker denne side et par gange om dagen. Når der er en ny version, får du besked; ét klik downloader, verificerer og installerer den og genstarter derefter appen. Du kan slå det fra.
+
+### Hvordan fjerner jeg den?
+Windows: Indstillinger → Apps → Installerede apps → Claude Usage Monitor → Fjern installation. macOS: træk appen til papirkurven. Det er det hele.
+
+### Hvordan tjekker jeg mit Claude-forbrug uden at åbne indstillingerne?
+Installér Claude Usage Monitor: den holder din 5-timers session, din ugegrænse og din grænse pr. model på skærmen hele tiden – som en lille widget, der altid ligger øverst, og som en procentsats i meddelelsesområdet eller menulinjen. Claudes egne tal findes under Settings → Usage; widgetten viser de samme grænser helt uden klik.
+
+### Hvornår nulstilles Claudes 5-timers session og ugegrænsen?
+Den sessionsbaserede grænse nulstilles hver femte time. Ugegrænsen nulstilles på et fast tidspunkt hver uge, som Anthropic tildeler din konto, så det varierer fra person til person. Widgetten viser en live nedtælling til begge nulstillinger – med claude.ai-login bruger den de præcise tidspunkter fra Anthropics server.
+
+### Tæller forbruget i Claude Code med i min claude.ai-grænse?
+Ja. Ifølge Anthropic tæller forbruget på claude.ai, i Claude Desktop og i Claude Code med i den samme forbrugsgrænse. Derfor viser widgettens claude.ai-tilstand ét tal for alle dine enheder og apps – ikke kun for den computer, den kører på.
+
+### Er det det samme som »Claude Code Usage Monitor«?
+Nej. »Claude Code Usage Monitor« er et separat, terminalbaseret værktøj fra en anden udvikler. Claude Usage Monitor af Gábor Vidovics er en grafisk skrivebordswidget til Windows og macOS med ikon i meddelelsesområdet, temaer og advarsler, og den kræver ingen kommandolinje.
+
+### Kan Claude Usage Monitor vise, om der er taget backup af mine Claude-filer?
+Ja – og det er også gratis. Når statuslinjen for sikkerhedskopier er slået til, viser tre lamper på panelet, om backuppen til OneDrive, til en anden sky som Nextcloud og af din Obsidian-vault er frisk: grøn op til 24 timer, gul op til 48, rød, når den er ældre eller mangler, og en rød ring, når den seneste kørsel mislykkedes. Monitoren læser kun backuplogs; selve backuppen laves af det gratis Claude Backup Kit, som hver dag kopierer dine Claude Code-skills, CLAUDE.md, projekthukommelse, Claude Desktop-indstillinger og agentlogs – aldrig login-tokenet. Kittet er et gratis udgangspunkt, som alle kan ændre, så vi påtager os intet ansvar for backups: det er den enkelte brugers ansvar at sikre, at de er komplette og kan gendannes.
+
+### Hvordan kan jeg bedømme Claude Usage Monitor eller sende feedback?
+Højreklik på panelet, og vælg »Besked til udvikleren…«, eller klik på beskedikonet i panelets titellinje. Du kan give fra én til fem stjerner, skrive en besked og – kun hvis du sætter flueben – tillade, at din bedømmelse og dit navn vises på dette websted. Hver besked læses af udvikleren, Gábor Vidovics, og intet offentliggøres uden dit samtykke. Uden appen kan du bruge formularen nederst på denne side.
+
+### Hvilke sprog findes Claude Usage Monitor på?
+På 34 sprog: alle EU's officielle sprog plus japansk, koreansk, forenklet og traditionelt kinesisk, indonesisk og vietnamesisk – med separate versioner for europæisk og brasiliansk portugisisk og for spansk fra Spanien og Latinamerika. Appen vælger selv dit systemsprog, og dette websted findes også på alle disse sprog.
+
+### Virker den med Claude Pro, Max, Team og Enterprise?
+Ja. Den viser de grænser, dit eget Claude-abonnement har – Pro, Max 5×, Max 20×, Team eller Enterprise – de samme, som Claude viser under Settings → Usage, og abonnementsbadget i panelets titellinje fortæller, hvilket abonnement du har.

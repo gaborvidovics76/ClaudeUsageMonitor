@@ -6,22 +6,45 @@
 - Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
 - Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
 - Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.
-- Interface languages: English, Magyar, Deutsch, Français, Español, Italiano, Português, Polski, Nederlands, Русский, Čeština, Türkçe.
+- Interface languages (34): English, Български, Čeština, Dansk, Deutsch, Eesti, Ελληνικά, Español (España), Español (Latinoamérica), Français, Gaeilge, Hrvatski, Bahasa Indonesia, Italiano, Latviešu, Lietuvių, Magyar, Malti, Nederlands, Polski, Português (Brasil), Português (Portugal), Română, Русский, Slovenčina, Slovenščina, Suomi, Svenska, Türkçe, Tiếng Việt, 日本語, 한국어, 简体中文, 繁體中文.
+- Full text for AI assistants: https://claudeusagemonitor.com/llms-full.txt - every language also has its own llms.txt (e.g. https://claudeusagemonitor.com/hu/llms.txt).
 
 ## Pages
 
-- [English](https://claudeusagemonitor.com/): the page in English
-- [Magyar](https://claudeusagemonitor.com/hu/): the page in Magyar
-- [Deutsch](https://claudeusagemonitor.com/de/): the page in Deutsch
-- [Français](https://claudeusagemonitor.com/fr/): the page in Français
-- [Español](https://claudeusagemonitor.com/es/): the page in Español
-- [Italiano](https://claudeusagemonitor.com/it/): the page in Italiano
-- [Português](https://claudeusagemonitor.com/pt/): the page in Português
-- [Polski](https://claudeusagemonitor.com/pl/): the page in Polski
-- [Nederlands](https://claudeusagemonitor.com/nl/): the page in Nederlands
-- [Русский](https://claudeusagemonitor.com/ru/): the page in Русский
-- [Čeština](https://claudeusagemonitor.com/cs/): the page in Čeština
-- [Türkçe](https://claudeusagemonitor.com/tr/): the page in Türkçe
+- [English](https://claudeusagemonitor.com/): the page in English (en)
+- [Български](https://claudeusagemonitor.com/bg/): the page in Български (bg) - [llms.txt](https://claudeusagemonitor.com/bg/llms.txt)
+- [Čeština](https://claudeusagemonitor.com/cs/): the page in Čeština (cs) - [llms.txt](https://claudeusagemonitor.com/cs/llms.txt)
+- [Dansk](https://claudeusagemonitor.com/da/): the page in Dansk (da) - [llms.txt](https://claudeusagemonitor.com/da/llms.txt)
+- [Deutsch](https://claudeusagemonitor.com/de/): the page in Deutsch (de) - [llms.txt](https://claudeusagemonitor.com/de/llms.txt)
+- [Eesti](https://claudeusagemonitor.com/et/): the page in Eesti (et) - [llms.txt](https://claudeusagemonitor.com/et/llms.txt)
+- [Ελληνικά](https://claudeusagemonitor.com/el/): the page in Ελληνικά (el) - [llms.txt](https://claudeusagemonitor.com/el/llms.txt)
+- [Español (España)](https://claudeusagemonitor.com/es/): the page in Español (España) (es-ES) - [llms.txt](https://claudeusagemonitor.com/es/llms.txt)
+- [Español (Latinoamérica)](https://claudeusagemonitor.com/es-419/): the page in Español (Latinoamérica) (es-419) - [llms.txt](https://claudeusagemonitor.com/es-419/llms.txt)
+- [Français](https://claudeusagemonitor.com/fr/): the page in Français (fr) - [llms.txt](https://claudeusagemonitor.com/fr/llms.txt)
+- [Gaeilge](https://claudeusagemonitor.com/ga/): the page in Gaeilge (ga) - [llms.txt](https://claudeusagemonitor.com/ga/llms.txt)
+- [Hrvatski](https://claudeusagemonitor.com/hr/): the page in Hrvatski (hr) - [llms.txt](https://claudeusagemonitor.com/hr/llms.txt)
+- [Bahasa Indonesia](https://claudeusagemonitor.com/id/): the page in Bahasa Indonesia (id) - [llms.txt](https://claudeusagemonitor.com/id/llms.txt)
+- [Italiano](https://claudeusagemonitor.com/it/): the page in Italiano (it) - [llms.txt](https://claudeusagemonitor.com/it/llms.txt)
+- [Latviešu](https://claudeusagemonitor.com/lv/): the page in Latviešu (lv) - [llms.txt](https://claudeusagemonitor.com/lv/llms.txt)
+- [Lietuvių](https://claudeusagemonitor.com/lt/): the page in Lietuvių (lt) - [llms.txt](https://claudeusagemonitor.com/lt/llms.txt)
+- [Magyar](https://claudeusagemonitor.com/hu/): the page in Magyar (hu) - [llms.txt](https://claudeusagemonitor.com/hu/llms.txt)
+- [Malti](https://claudeusagemonitor.com/mt/): the page in Malti (mt) - [llms.txt](https://claudeusagemonitor.com/mt/llms.txt)
+- [Nederlands](https://claudeusagemonitor.com/nl/): the page in Nederlands (nl) - [llms.txt](https://claudeusagemonitor.com/nl/llms.txt)
+- [Polski](https://claudeusagemonitor.com/pl/): the page in Polski (pl) - [llms.txt](https://claudeusagemonitor.com/pl/llms.txt)
+- [Português (Brasil)](https://claudeusagemonitor.com/pt/): the page in Português (Brasil) (pt-BR) - [llms.txt](https://claudeusagemonitor.com/pt/llms.txt)
+- [Português (Portugal)](https://claudeusagemonitor.com/pt-pt/): the page in Português (Portugal) (pt-PT) - [llms.txt](https://claudeusagemonitor.com/pt-pt/llms.txt)
+- [Română](https://claudeusagemonitor.com/ro/): the page in Română (ro) - [llms.txt](https://claudeusagemonitor.com/ro/llms.txt)
+- [Русский](https://claudeusagemonitor.com/ru/): the page in Русский (ru) - [llms.txt](https://claudeusagemonitor.com/ru/llms.txt)
+- [Slovenčina](https://claudeusagemonitor.com/sk/): the page in Slovenčina (sk) - [llms.txt](https://claudeusagemonitor.com/sk/llms.txt)
+- [Slovenščina](https://claudeusagemonitor.com/sl/): the page in Slovenščina (sl) - [llms.txt](https://claudeusagemonitor.com/sl/llms.txt)
+- [Suomi](https://claudeusagemonitor.com/fi/): the page in Suomi (fi) - [llms.txt](https://claudeusagemonitor.com/fi/llms.txt)
+- [Svenska](https://claudeusagemonitor.com/sv/): the page in Svenska (sv) - [llms.txt](https://claudeusagemonitor.com/sv/llms.txt)
+- [Türkçe](https://claudeusagemonitor.com/tr/): the page in Türkçe (tr) - [llms.txt](https://claudeusagemonitor.com/tr/llms.txt)
+- [Tiếng Việt](https://claudeusagemonitor.com/vi/): the page in Tiếng Việt (vi) - [llms.txt](https://claudeusagemonitor.com/vi/llms.txt)
+- [日本語](https://claudeusagemonitor.com/ja/): the page in 日本語 (ja) - [llms.txt](https://claudeusagemonitor.com/ja/llms.txt)
+- [한국어](https://claudeusagemonitor.com/ko/): the page in 한국어 (ko) - [llms.txt](https://claudeusagemonitor.com/ko/llms.txt)
+- [简体中文](https://claudeusagemonitor.com/zh-cn/): the page in 简体中文 (zh-Hans) - [llms.txt](https://claudeusagemonitor.com/zh-cn/llms.txt)
+- [繁體中文](https://claudeusagemonitor.com/zh-tw/): the page in 繁體中文 (zh-Hant) - [llms.txt](https://claudeusagemonitor.com/zh-tw/llms.txt)
 
 ## Download
 
@@ -89,3 +112,12 @@ No. “Claude Code Usage Monitor” is a separate, terminal-based tool by anothe
 
 ### Can Claude Usage Monitor show whether my Claude files are backed up?
 Yes – and it is free as well. With the backup status bar switched on, three lamps on the panel show whether the backup to OneDrive, to a second cloud such as Nextcloud and of your Obsidian vault is fresh: green up to 24 hours, yellow up to 48, red when it is older or missing, and a red ring when the latest run failed. The monitor only reads the backup logs; the backup itself is made by the free Claude Backup Kit, which copies your Claude Code skills, CLAUDE.md, project memory, Claude Desktop settings and agent logs every day – never the sign-in token. The kit is a free starting point that anyone can change, so we accept no liability for backups: making sure they are complete and can be restored is up to each user.
+
+### How can I rate Claude Usage Monitor or send feedback?
+Right-click the panel and choose “Message to the developer…”, or click the message icon in the panel header. You can give one to five stars, write a message, and – only if you tick it – allow your rating and name to be shown on this website. Every message is read by the author, Vidovics Gábor, and nothing is published without your consent. Without the app, use the form at the bottom of this page.
+
+### Which languages is Claude Usage Monitor available in?
+In 34 languages: every official language of the European Union plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese – with separate versions for European and Brazilian Portuguese and for Spain and Latin-American Spanish. The app picks your system language by itself, and this website exists in each of these languages too.
+
+### Does it work with Claude Pro, Max, Team and Enterprise?
+Yes. It shows the limits your own Claude plan has – Pro, Max 5×, Max 20×, Team or Enterprise – the same ones Claude lists under Settings → Usage, and the plan badge in the panel header tells you which plan you are on.

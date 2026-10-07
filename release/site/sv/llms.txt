@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Svenska)
+
+> Gratis widget med öppen källkod för Windows och macOS: se dina användningsgränser i Claude live – 5-timmarssession, veckogräns och modellgräns, med nedräkning.
+
+Claude Usage Monitor är en gratis skrivbordswidget med öppen källkod för Windows 10/11 och macOS som visar användningsgränserna i ditt Claude-abonnemang i realtid – 5-timmarssessionen, veckogränsen och veckogränsen per modell, var och en med tiden som är kvar till nollställningen. Den ligger ovanpå dina andra fönster, så att du kan kolla din Claude-användning utan att öppna Settings → Usage och utan terminal.
+
+En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnemang – claude.ai, Claude Desktop och Claude Code, på alla dina enheter. Det är inte terminalverktyget ”Claude Code Usage Monitor”: det här är en grafisk panel med en ikon i meddelandefältet, och den kräver ingen kommandorad.
+
+- **Pris**: Gratis – den fullständiga versionen, ingen betalversion, ingen provperiod
+- **Plattformar**: Windows 10 / 11 (64-bitars) och macOS 12 eller senare
+- **Språk**: 34 gränssnittsspråk
+- **Det här visas**: 5-timmarssession, veckogräns, veckogräns per modell, nedräkning till nollställning, takt och förbrukningstakt
+- **Datakälla**: Claude Desktops lokala logg eller din claude.ai-inloggning för alla enheter
+- **Integritet**: Ingen telemetri, ingen reklam, inget konto hos oss
+- **Licens**: MIT, öppen källkod på GitHub
+- **Utvecklare**: Gábor Vidovics, Ungern – oberoende, inte knuten till Anthropic
+
+- Version: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/sv/
+
+## Alla dina användningsgränser i Claude. En blick.
+
+- **Se det komma**: Grönt, gult, rött. Panelen byter färg långt innan det tar slut – med nedräkning till nollställningen och en uppskattning av när du når 100 %.
+- **Går det för fort?**: Taktindikatorn visar om din veckogräns smälter snabbare än veckan går – och räknar ut var du kommer att hamna.
+- **Alla dina enheter, en siffra**: Logga in via din egen webbläsare – precis som Claude Code gör – och se användningen även från mobilen, webbläsaren och alla dina andra datorer.
+- **Gränser per modell**: Fable, Opus, Sonnet, Claude Code, användningskrediter – alla gränser som servern rapporterar, plus veckans fördelning mellan modellerna.
+- **Varningar som spelar roll**: En diskret avisering vid 70 % och 90 % (du väljer själv) och när gränsen nollställs. Inget annat, någonsin.
+- **Den spionerar inte. Punkt.**: Ingen telemetri, ingen analys, inget konto hos oss. Den pratar bara med Anthropic, och bara om dina egna siffror. Din inloggningstoken förblir krypterad på datorn – med Windows DPAPI eller i macOS-nyckelringen.
+- **Hela veckan i ett diagram**: Dubbelklicka på widgeten: båda gränserna på en tidslinje – 6 timmar, 24 timmar eller 7 dagar – med veckans topp, dagligt genomsnitt och en prognos för veckans slut som byter färg innan du går över.
+
+## FAQ
+
+### Är den verkligen gratis? Var är haken?
+Verkligen gratis, och det finns ingen hake. Det är ingen demo, ingen testversion och ingen nedbantad utgåva – det här är den fullständiga och enda versionen. Ingen reklam, ingen betalversion, ingen datainsamling. Källkoden är offentlig under MIT-licensen.
+
+### Är det här en officiell Anthropic-produkt?
+Nej. Det är ett oberoende communityverktyg gjort av Gábor Vidovics. Det är inte knutet till Anthropic. ”Claude” är ett varumärke som tillhör Anthropic, PBC.
+
+### Måste jag ge den mitt lösenord?
+Aldrig. Utan inloggning läser den Claude Desktops lokala logg. Vill du ha med alla enheter loggar du in på claude.ai i din egen webbläsare – appen ser aldrig ditt lösenord.
+
+### Windows varnar när jag startar den. Varför?
+Eftersom appen inte är kodsignerad (certifikat kostar pengar, och appen är gratis). Klicka på Mer info → Kör ändå. Du kan verifiera nedladdningen med dess SHA-256-kontrollsumma och läsa källkoden på GitHub.
+
+### Vilka Mac-datorer stöds?
+macOS 12 eller senare. Nedladdningskortet ovan visar alltid vilken processor den aktuella versionen är byggd för. macOS-versionen är ny – feedback är mycket välkommen.
+
+### Hur fungerar uppdateringar?
+Appen kollar den här webbplatsen några gånger om dagen. När det finns en ny version får du veta det; ett klick laddar ned, verifierar och installerar den och startar sedan om appen. Du kan stänga av det.
+
+### Hur tar jag bort den?
+Windows: Inställningar → Appar → Installerade appar → Claude Usage Monitor → Avinstallera. macOS: dra appen till papperskorgen. Det är allt.
+
+### Hur kollar jag min Claude-användning utan att öppna inställningarna?
+Installera Claude Usage Monitor: den visar din 5-timmarssession, veckogräns och modellgräns på skärmen hela tiden – som en liten widget som alltid ligger överst och som en procentsats i meddelandefältet eller menyraden. Claudes egna siffror finns under Settings → Usage; widgeten visar samma gränser helt utan klick.
+
+### När nollställs Claudes 5-timmarssession och veckogräns?
+Den sessionsbaserade gränsen nollställs var femte timme. Veckogränsen nollställs vid en fast tidpunkt varje vecka som Anthropic tilldelar ditt konto, så den skiljer sig från person till person. Widgeten visar en live-nedräkning till båda nollställningarna – med claude.ai-inloggning använder den de exakta tiderna från Anthropics server.
+
+### Räknas användningen i Claude Code mot min claude.ai-gräns?
+Ja. Enligt Anthropic räknas användningen på claude.ai, i Claude Desktop och i Claude Code mot samma användningsgräns. Därför visar widgetens claude.ai-läge en siffra för alla dina enheter och appar, inte bara för datorn den körs på.
+
+### Är det samma sak som ”Claude Code Usage Monitor”?
+Nej. ”Claude Code Usage Monitor” är ett separat, terminalbaserat verktyg av en annan utvecklare. Claude Usage Monitor av Gábor Vidovics är en grafisk skrivbordswidget för Windows och macOS med ikon i meddelandefältet, teman och varningar, och den kräver ingen kommandorad.
+
+### Kan Claude Usage Monitor visa om mina Claude-filer är säkerhetskopierade?
+Ja – och det är också gratis. När statusfältet för säkerhetskopior är aktiverat visar tre lampor på panelen om säkerhetskopieringen till OneDrive, till ett andra moln som Nextcloud och av ditt Obsidian-valv är aktuell: grönt upp till 24 timmar, gult upp till 48, rött när den är äldre eller saknas, och en röd ring när den senaste körningen misslyckades. Programmet läser bara loggarna från säkerhetskopieringen; själva säkerhetskopieringen görs av det kostnadsfria Claude Backup Kit, som varje dag kopierar dina skills i Claude Code, CLAUDE.md, projektminne, inställningar för Claude Desktop och agentloggar – aldrig inloggningstoken. Kitet är en kostnadsfri utgångspunkt som vem som helst kan ändra, så vi ansvarar inte för säkerhetskopior: det är varje användares eget ansvar att se till att de är fullständiga och går att återställa.
+
+### Hur kan jag betygsätta Claude Usage Monitor eller skicka feedback?
+Högerklicka på panelen och välj ”Meddelande till utvecklaren…”, eller klicka på meddelandeikonen i panelens rubrikrad. Du kan ge en till fem stjärnor, skriva ett meddelande och – bara om du kryssar i rutan – tillåta att ditt betyg och ditt namn visas på den här webbplatsen. Varje meddelande läses av utvecklaren, Gábor Vidovics, och ingenting publiceras utan ditt samtycke. Utan appen kan du använda formuläret längst ned på den här sidan.
+
+### Vilka språk finns Claude Usage Monitor på?
+På 34 språk: alla EU:s officiella språk plus japanska, koreanska, förenklad och traditionell kinesiska, indonesiska och vietnamesiska – med separata versioner för europeisk och brasiliansk portugisiska och för spanska från Spanien och Latinamerika. Appen väljer själv ditt systemspråk, och den här webbplatsen finns också på alla dessa språk.
+
+### Fungerar den med Claude Pro, Max, Team och Enterprise?
+Ja. Den visar de gränser som ditt eget Claude-abonnemang har – Pro, Max 5×, Max 20×, Team eller Enterprise – samma som Claude visar under Settings → Usage, och abonnemangsmärket i panelens rubrikrad visar vilket abonnemang du har.

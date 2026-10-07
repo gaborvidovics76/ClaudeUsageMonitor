@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Nederlands)
+
+> Claude Usage Monitor: gratis open-source widget voor Windows & macOS. Toont je Claude-gebruikslimieten live – 5-uurssessie, weeklimiet, reset en meldingen.
+
+Claude Usage Monitor is een gratis, open-source desktopwidget voor Windows 10/11 en macOS die de gebruikslimieten van je Claude-abonnement in realtime laat zien – de 5-uurssessie, de weeklimiet en de weeklimiet per model, elk met de tijd die overblijft tot de reset. De widget blijft boven je andere vensters staan. Zo bekijk je je Claude-gebruik zonder “Settings → Usage” (Instellingen → Gebruik) te openen en zonder terminal.
+
+Eén app voor Windows én Mac. Hij telt alles mee wat onder je abonnement valt – claude.ai, Claude Desktop en Claude Code, op al je apparaten. Het is niet de terminaltool “Claude Code Usage Monitor”: dit is een grafisch paneel met een systeemvakpictogram, en een opdrachtregel heb je niet nodig.
+
+- **Prijs**: Gratis – de volledige versie, geen betaalde variant, geen proefperiode
+- **Platforms**: Windows 10 / 11 (64-bit) en macOS 12 of nieuwer
+- **Talen**: Interface in 34 talen
+- **Wat je ziet**: 5-uurssessie, weeklimiet, weeklimiet per model, aftellen tot de reset, tempo en verbruikssnelheid
+- **Gegevensbron**: Het lokale logboek van Claude Desktop, of je claude.ai-login voor al je apparaten
+- **Privacy**: Geen telemetrie, geen reclame, geen account bij ons
+- **Licentie**: MIT, open source op GitHub
+- **Maker**: Gábor Vidovics, Hongarije – onafhankelijk, niet verbonden aan Anthropic
+
+- Versie: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/nl/
+
+## Al je Claude-gebruikslimieten. In één oogopslag.
+
+- **Zie het aankomen**: Groen, geel, rood. Het paneel verandert van kleur lang voordat je je gebruikslimiet bereikt – met een aftelklok tot de reset en een schatting van wanneer je de 100% zou raken.
+- **Ga je er te hard doorheen?**: De tempometer vertelt je of je weeklimiet sneller wegsmelt dan de week voorbijgaat – en voorspelt waar je uitkomt.
+- **Al je apparaten, één getal**: Log in via je eigen browser – net als bij Claude Code – en zie ook het verbruik van je telefoon, je browser en elke andere computer.
+- **Limieten per model**: Fable, Opus, Sonnet, Claude Code, gebruikstegoed – elke limiet die de server doorgeeft, plus de verdeling van deze week over de modellen.
+- **Meldingen die ertoe doen**: Een rustige melding bij 70% en 90% (jij kiest de waarden) en wanneer je limiet wordt gereset. Verder niets. Nooit.
+- **Het spioneert niet. Punt.**: Geen telemetrie, geen analytics, geen account bij ons. De app praat alleen met Anthropic, en alleen voor je eigen cijfers. Je inlogtoken blijft versleuteld op je eigen computer – met Windows DPAPI of in de macOS-sleutelhanger.
+- **Je hele week in één grafiek**: Dubbelklik op de widget: beide limieten op één tijdlijn – 6 uur, 24 uur of 7 dagen – met weekpiek, daggemiddelde en een prognose voor het einde van de week die van kleur verandert voordat je over de limiet gaat.
+
+## FAQ
+
+### Is het echt gratis? Waar zit het addertje?
+Echt gratis, en er is geen addertje. Het is geen demo, geen proefversie en geen uitgeklede editie – dit is de volledige en enige versie. Geen reclame, geen betaalde variant, geen dataverzameling. De broncode is openbaar onder de MIT-licentie.
+
+### Is dit een officieel product van Anthropic?
+Nee. Het is een onafhankelijke communitytool, gemaakt door Gábor Vidovics. Het is niet verbonden aan Anthropic. “Claude” is een handelsmerk van Anthropic, PBC.
+
+### Moet ik mijn wachtwoord afgeven?
+Nooit. Zonder in te loggen leest de app het lokale logboek van Claude Desktop. Wil je al je apparaten zien, dan log je in op claude.ai in je eigen browser – de app krijgt je wachtwoord nooit te zien.
+
+### Windows waarschuwt me als ik het start. Waarom?
+Omdat de app geen codehandtekening heeft (certificaten kosten geld; de app is gratis). Klik op Meer informatie → Toch uitvoeren. Je kunt de download controleren met de SHA-256-controlesom en de broncode lezen op GitHub.
+
+### Welke Macs worden ondersteund?
+macOS 12 of nieuwer. De downloadkaart hierboven laat altijd zien voor welke processor de huidige build is gemaakt. De macOS-versie is nieuw – feedback is erg welkom.
+
+### Hoe werken de updates?
+De app kijkt een paar keer per dag op deze site. Is er een nieuwe versie, dan laat hij het je weten; met één klik wordt die gedownload, gecontroleerd en geïnstalleerd, waarna de app opnieuw start. Je kunt dit uitzetten.
+
+### Hoe verwijder ik het?
+Windows: Instellingen → Apps → Geïnstalleerde apps → Claude Usage Monitor → Verwijderen. macOS: sleep de app naar de prullenmand. Dat is alles.
+
+### Hoe bekijk ik mijn Claude-gebruik zonder de instellingen te openen?
+Installeer Claude Usage Monitor: die houdt je 5-uurssessie, je weeklimiet en je weeklimiet per model de hele tijd in beeld – als kleine widget die altijd bovenop blijft en als percentage in het systeemvak of de menubalk. De cijfers van Claude zelf staan onder “Settings → Usage” (Instellingen → Gebruik); de widget toont dezelfde limieten zonder dat je hoeft te klikken.
+
+### Wanneer worden de 5-uurssessie en de weeklimiet van Claude gereset?
+De sessielimiet wordt elke vijf uur gereset. De weeklimiet wordt elke week gereset op een vast tijdstip dat Anthropic aan je account toewijst; het verschilt dus per persoon. De widget toont een live aftelklok tot beide resets – met de claude.ai-login gebruikt hij de exacte tijden van de server van Anthropic.
+
+### Telt het gebruik van Claude Code mee voor mijn claude.ai-limiet?
+Ja. Volgens Anthropic telt het gebruik van claude.ai, Claude Desktop en Claude Code mee voor dezelfde gebruikslimiet. Daarom toont de widget in de claude.ai-modus één getal voor al je apparaten en apps, en niet alleen voor de computer waarop hij draait.
+
+### Is dit hetzelfde als “Claude Code Usage Monitor”?
+Nee. “Claude Code Usage Monitor” is een aparte tool voor de terminal, van een andere maker. Claude Usage Monitor van Gábor Vidovics is een grafische desktopwidget voor Windows en macOS met een systeemvakpictogram, thema's en meldingen. Een opdrachtregel heb je niet nodig.
+
+### Kan Claude Usage Monitor laten zien of er een back-up van mijn Claude-bestanden is?
+Ja – en ook dat is gratis. Met de back-upstatusbalk ingeschakeld laten drie lampjes op het paneel zien of de back-up naar OneDrive, naar een tweede cloud zoals Nextcloud en van je Obsidian-vault actueel is: groen tot 24 uur, geel tot 48, rood als hij ouder is of ontbreekt, en een rode ring als de laatste uitvoering is mislukt. De monitor leest alleen de back-uplogs; de back-up zelf maakt de gratis Claude Backup Kit, die elke dag je Claude Code-skills, CLAUDE.md, projectgeheugen, Claude Desktop-instellingen en agentlogs kopieert – nooit het aanmeldtoken. De kit is een gratis startpunt dat iedereen kan aanpassen, daarom aanvaarden wij geen aansprakelijkheid voor back-ups: ervoor zorgen dat ze volledig zijn en hersteld kunnen worden, is aan elke gebruiker zelf.
+
+### Hoe kan ik Claude Usage Monitor beoordelen of feedback geven?
+Klik met de rechtermuisknop op het paneel en kies “Bericht aan de ontwikkelaar…”, of klik op het berichtpictogram in de kop van het paneel. Je kunt één tot vijf sterren geven, een bericht schrijven en – alleen als je dat aanvinkt – toestaan dat je beoordeling en je naam op deze website worden getoond. Elk bericht wordt gelezen door de maker, Gábor Vidovics, en zonder jouw toestemming wordt er niets gepubliceerd. Heb je de app niet? Gebruik dan het formulier onderaan deze pagina.
+
+### In welke talen is Claude Usage Monitor beschikbaar?
+In 34 talen: alle officiële talen van de Europese Unie, plus Japans, Koreaans, vereenvoudigd en traditioneel Chinees, Indonesisch en Vietnamees – met aparte versies voor Europees en Braziliaans Portugees en voor het Spaans van Spanje en van Latijns-Amerika. De app kiest zelf de taal van je systeem, en ook deze website bestaat in al die talen.
+
+### Werkt het met Claude Pro, Max, Team en Enterprise?
+Ja. Het toont de limieten van je eigen Claude-abonnement – Pro, Max 5×, Max 20×, Team of Enterprise –, dezelfde die Claude onder “Settings → Usage” (Instellingen → Gebruik) vermeldt. En de abonnementsbadge in de kop van het paneel laat zien welk abonnement je hebt.

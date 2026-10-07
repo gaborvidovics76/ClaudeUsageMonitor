@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Lietuvių)
+
+> Nemokamas Claude Usage Monitor Windows ir macOS: Claude naudojimo limitai realiuoju laiku – 5 valandų sesija, savaitės limitas, laikas iki atsinaujinimo.
+
+Claude Usage Monitor – nemokamas atvirojo kodo darbalaukio valdiklis, skirtas Windows 10/11 ir macOS, kuris realiuoju laiku rodo jūsų Claude prenumeratos naudojimo limitus – 5 valandų sesiją, savaitės limitą ir modelio savaitės limitą, prie kiekvieno – kiek laiko liko iki atsinaujinimo. Jis lieka virš kitų langų, todėl Claude naudojimą galite patikrinti neatidarę „Settings → Usage“ ir be terminalo.
+
+Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiuojama į jūsų planą, – claude.ai, Claude Desktop ir Claude Code visuose jūsų įrenginiuose. Tai ne terminalo įrankis „Claude Code Usage Monitor“: šis yra grafinis skydelis su piktograma pranešimų srityje, ir komandinės eilutės jam nereikia.
+
+- **Kaina**: Nemokama – pilna versija, be mokamo plano, be bandomojo laikotarpio
+- **Platformos**: Windows 10 / 11 (64 bitų) ir macOS 12 ar naujesnė
+- **Kalbos**: 34 sąsajos kalbos
+- **Ką rodo**: 5 valandų sesiją, savaitės limitą, modelio savaitės limitą, atgalinį skaičiavimą iki atsinaujinimo, tempą ir naudojimo spartą
+- **Duomenų šaltinis**: Vietinis Claude Desktop žurnalas arba jūsų prisijungimas prie claude.ai visiems įrenginiams
+- **Privatumas**: Jokios telemetrijos, jokių reklamų, pas mus paskyros kurti nereikia
+- **Licencija**: MIT, atvirasis kodas GitHub
+- **Autorius**: Gábor Vidovics, Vengrija – nepriklausomas kūrėjas, nesusijęs su Anthropic
+
+- Versija: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/lt/
+
+## Visi jūsų Claude naudojimo limitai. Vienu žvilgsniu.
+
+- **Pamatykite iš anksto**: Žalia, geltona, raudona. Skydelis pakeičia spalvą gerokai anksčiau, nei limitas baigiasi, – su atgaliniu skaičiavimu iki atsinaujinimo ir prognoze, kada pasieksite 100 %.
+- **Ar nenaudojate per greitai?**: Tempo rodiklis parodo, ar jūsų savaitės limitas tirpsta greičiau, nei bėga savaitė, – ir prognozuoja, kur atsidursite.
+- **Visi įrenginiai, vienas skaičius**: Prisijunkite savo naršyklėje – kaip tai daro Claude Code – ir matykite naudojimą telefone, naršyklėje bei visuose kituose kompiuteriuose.
+- **Modelių limitai**: Fable, Opus, Sonnet, Claude Code, naudojimo kreditai – kiekvienas serverio pateikiamas limitas ir šios savaitės pasiskirstymas tarp modelių.
+- **Įspėjimai, kurie svarbūs**: Tylus pranešimas ties 70 % ir 90 % (ribas renkatės patys) ir kai limitas atsinaujina. Daugiau nieko – niekada.
+- **Jis nešnipinėja. Taškas.**: Jokios telemetrijos, jokios analitikos, pas mus paskyros kurti nereikia. Jis bendrauja tik su Anthropic ir tik dėl jūsų pačių skaičių. Jūsų prisijungimo žetonas lieka užšifruotas jūsų kompiuteryje – Windows DPAPI arba macOS Keychain.
+- **Visa savaitė viename grafike**: Dukart spustelėkite valdiklį: abu limitai vienoje laiko juostoje – 6 valandos, 24 valandos ar 7 dienos – su savaitės maksimumu, dienos vidurkiu ir savaitės pabaigos prognoze, kuri pakeičia spalvą dar prieš jums viršijant limitą.
+
+## FAQ
+
+### Ar tikrai nemokama? Kur kabliukas?
+Tikrai nemokama, ir jokio kabliuko nėra. Tai ne demoversija, ne bandomoji ir ne apkarpyta versija – tai pilna ir vienintelė versija. Jokių reklamų, jokio mokamo plano, jokio duomenų rinkimo. Pirminis kodas viešas, su MIT licencija.
+
+### Ar tai oficialus Anthropic produktas?
+Ne. Tai nepriklausomas bendruomenės įrankis, kurį sukūrė Gábor Vidovics. Jis nesusijęs su Anthropic. „Claude“ yra Anthropic, PBC prekių ženklas.
+
+### Ar turiu jam duoti savo slaptažodį?
+Niekada. Neprisijungus jis skaito vietinį Claude Desktop žurnalą. Jei norite matyti visus įrenginius, prisijungiate prie claude.ai savo naršyklėje – programa jūsų slaptažodžio niekada nemato.
+
+### Paleidžiant programą Windows mane įspėja. Kodėl?
+Todėl, kad programa nėra pasirašyta skaitmeniniu parašu (sertifikatai kainuoja, o programa nemokama). Spustelėkite Daugiau informacijos → Vis tiek paleisti. Atsisiuntimą galite patikrinti pagal jo SHA-256 kontrolinę sumą, o pirminį kodą – perskaityti GitHub.
+
+### Kurie Mac kompiuteriai palaikomi?
+macOS 12 ar naujesnė. Aukščiau esančioje atsisiuntimo kortelėje visada nurodyta, kokiam procesoriui skirta dabartinė versija. macOS versija nauja – atsiliepimai labai laukiami.
+
+### Kaip veikia naujinimai?
+Programa kelis kartus per dieną patikrina šią svetainę. Kai pasirodo nauja versija, ji apie tai praneša; vienu spustelėjimu versija atsisiunčiama, patikrinama ir įdiegiama, tada programa paleidžiama iš naujo. Tai galima išjungti.
+
+### Kaip ją pašalinti?
+Windows: Parametrai → Programėlės → Įdiegtos programėlės → Claude Usage Monitor → Šalinti. macOS: nuvilkite programą į šiukšliadėžę (Trash). Tai viskas.
+
+### Kaip patikrinti Claude naudojimą neatidarant nustatymų?
+Įdiekite Claude Usage Monitor: jis nuolat rodo ekrane jūsų 5 valandų sesiją, savaitės limitą ir modelio limitą – kaip mažą, visada viršuje esantį valdiklį ir kaip procentus pranešimų srityje ar meniu juostoje. Paties Claude skaičiai yra skiltyje „Settings → Usage“ (Nustatymai → Naudojimas); valdiklis rodo tuos pačius limitus be jokių spustelėjimų.
+
+### Kada atsinaujina Claude 5 valandų sesija ir savaitės limitas?
+Sesijos limitas atsinaujina kas penkias valandas. Savaitės limitas atsinaujina kartą per savaitę fiksuotu laiku, kurį Anthropic priskiria jūsų paskyrai, todėl kiekvienam jis skiriasi. Valdiklis rodo tiesioginį atgalinį skaičiavimą iki abiejų atsinaujinimų – prisijungus prie claude.ai jis naudoja tikslų laiką iš Anthropic serverio.
+
+### Ar Claude Code naudojimas įskaičiuojamas į mano claude.ai limitą?
+Taip. Pasak Anthropic, naudojimas claude.ai, Claude Desktop ir Claude Code įskaičiuojamas į tą patį naudojimo limitą. Todėl valdiklio claude.ai režimas rodo vieną skaičių visiems jūsų įrenginiams ir programoms, o ne tik kompiuteriui, kuriame jis veikia.
+
+### Ar tai tas pats, kas „Claude Code Usage Monitor“?
+Ne. „Claude Code Usage Monitor“ – atskiras, terminale veikiantis kito autoriaus įrankis. Gábor Vidovics sukurtas Claude Usage Monitor – grafinis darbalaukio valdiklis, skirtas Windows ir macOS, su piktograma pranešimų srityje, temomis ir įspėjimais, ir komandinės eilutės jam nereikia.
+
+### Ar Claude Usage Monitor gali parodyti, ar mano Claude failų atsarginės kopijos padarytos?
+Taip – ir tai irgi nemokama. Įjungus atsarginių kopijų būsenos juostą, trys lemputės skydelyje rodo, ar atsarginė kopija OneDrive, antrame debesyje, pvz., Nextcloud, ir jūsų Obsidian saugyklos kopija yra aktuali: žalia – iki 24 valandų, geltona – iki 48, raudona – kai kopija senesnė arba jos nėra, o raudonas žiedas – kai paskutinis paleidimas nepavyko. Monitorius tik skaito atsarginio kopijavimo žurnalus; pačią kopiją daro nemokamas Claude Backup Kit, kuris kasdien kopijuoja jūsų Claude Code įgūdžius, CLAUDE.md, projektų atmintį, Claude Desktop nustatymus ir agentų žurnalus – prisijungimo žetono niekada. Rinkinys – nemokamas pradinis taškas, kurį gali keisti bet kas, todėl už atsargines kopijas neprisiimame jokios atsakomybės: kiekvienas naudotojas pats atsako už tai, kad jos būtų išsamios ir jas būtų galima atkurti.
+
+### Kaip įvertinti Claude Usage Monitor ar atsiųsti atsiliepimą?
+Spustelėkite skydelį dešiniuoju pelės mygtuku ir pasirinkite „Žinutė kūrėjui…“ arba spustelėkite žinutės piktogramą skydelio antraštėje. Galite skirti nuo vienos iki penkių žvaigždučių, parašyti žinutę ir – tik jei tai pažymėsite – leisti savo įvertinimą ir vardą rodyti šioje svetainėje. Kiekvieną žinutę perskaito autorius Gábor Vidovics, ir be jūsų sutikimo niekas neskelbiama. Jei programos neturite po ranka, naudokite formą šio puslapio apačioje.
+
+### Kokiomis kalbomis galima naudoti Claude Usage Monitor?
+34 kalbomis: visomis oficialiosiomis Europos Sąjungos kalbomis, taip pat japonų, korėjiečių, kinų (supaprastinta ir tradicine rašyba), indoneziečių ir vietnamiečių – su atskiromis Europos ir Brazilijos portugalų bei Ispanijos ir Lotynų Amerikos ispanų kalbos versijomis. Programa pati pasirenka jūsų sistemos kalbą, o ši svetainė taip pat pateikiama kiekviena iš šių kalbų.
+
+### Ar veikia su Claude Pro, Max, Team ir Enterprise?
+Taip. Jis rodo tuos limitus, kuriuos turi jūsų Claude planas – Pro, Max 5×, Max 20×, Team ar Enterprise, – tuos pačius, kuriuos Claude pateikia skiltyje „Settings → Usage“, o plano ženklelis skydelio antraštėje parodo, kokį planą turite.

@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="hr" data-lang="hr" data-root="../" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ograničenja Claudea uživo – Claude Usage Monitor, besplatno</title>
+<meta name="description" content="Besplatan Claude Usage Monitor otvorenog kôda za Windows i macOS: uživo pratite sesiju od 5 sati, tjedno ograničenje i ograničenje po modelu te reset.">
+<meta name="author" content="Vidovics Gábor">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="en" href="https://claudeusagemonitor.com/">
+<link rel="alternate" hreflang="bg" href="https://claudeusagemonitor.com/bg/">
+<link rel="alternate" hreflang="cs" href="https://claudeusagemonitor.com/cs/">
+<link rel="alternate" hreflang="da" href="https://claudeusagemonitor.com/da/">
+<link rel="alternate" hreflang="de" href="https://claudeusagemonitor.com/de/">
+<link rel="alternate" hreflang="et" href="https://claudeusagemonitor.com/et/">
+<link rel="alternate" hreflang="el" href="https://claudeusagemonitor.com/el/">
+<link rel="alternate" hreflang="es" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-ES" href="https://claudeusagemonitor.com/es/">
+<link rel="alternate" hreflang="es-419" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-MX" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-AR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CL" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-VE" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-EC" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-GT" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CU" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-BO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-DO" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-HN" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-SV" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-NI" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-CR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PA" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-UY" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-PR" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="es-US" href="https://claudeusagemonitor.com/es-419/">
+<link rel="alternate" hreflang="fr" href="https://claudeusagemonitor.com/fr/">
+<link rel="alternate" hreflang="ga" href="https://claudeusagemonitor.com/ga/">
+<link rel="alternate" hreflang="hr" href="https://claudeusagemonitor.com/hr/">
+<link rel="alternate" hreflang="id" href="https://claudeusagemonitor.com/id/">
+<link rel="alternate" hreflang="it" href="https://claudeusagemonitor.com/it/">
+<link rel="alternate" hreflang="lv" href="https://claudeusagemonitor.com/lv/">
+<link rel="alternate" hreflang="lt" href="https://claudeusagemonitor.com/lt/">
+<link rel="alternate" hreflang="hu" href="https://claudeusagemonitor.com/hu/">
+<link rel="alternate" hreflang="mt" href="https://claudeusagemonitor.com/mt/">
+<link rel="alternate" hreflang="nl" href="https://claudeusagemonitor.com/nl/">
+<link rel="alternate" hreflang="pl" href="https://claudeusagemonitor.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://claudeusagemonitor.com/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-AO" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="pt-MZ" href="https://claudeusagemonitor.com/pt-pt/">
+<link rel="alternate" hreflang="ro" href="https://claudeusagemonitor.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://claudeusagemonitor.com/ru/">
+<link rel="alternate" hreflang="sk" href="https://claudeusagemonitor.com/sk/">
+<link rel="alternate" hreflang="sl" href="https://claudeusagemonitor.com/sl/">
+<link rel="alternate" hreflang="fi" href="https://claudeusagemonitor.com/fi/">
+<link rel="alternate" hreflang="sv" href="https://claudeusagemonitor.com/sv/">
+<link rel="alternate" hreflang="tr" href="https://claudeusagemonitor.com/tr/">
+<link rel="alternate" hreflang="vi" href="https://claudeusagemonitor.com/vi/">
+<link rel="alternate" hreflang="ja" href="https://claudeusagemonitor.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://claudeusagemonitor.com/ko/">
+<link rel="alternate" hreflang="zh" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-CN" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-SG" href="https://claudeusagemonitor.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-TW" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-HK" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="zh-MO" href="https://claudeusagemonitor.com/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://claudeusagemonitor.com/">
+<meta http-equiv="content-language" content="hr">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Claude Usage Monitor">
+<meta property="og:title" content="Claude Usage Monitor – besplatno praćenje potrošnje Claudea">
+<meta property="og:description" content="Sesija od 5 sati, tjedno ograničenje i tempo u Claudeu jednim pogledom – i potrošnja s mobitela i preglednika. Uvijek na vrhu, otvoreni kôd. 100 % besplatno.">
+<meta property="og:url" content="https://claudeusagemonitor.com/hr/">
+<meta property="og:image" content="https://claudeusagemonitor.com/img/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Claude Usage Monitor – besplatno praćenje potrošnje Claudea">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="bg_BG">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="et_EE">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ga_IE">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="lv_LV">
+<meta property="og:locale:alternate" content="lt_LT">
+<meta property="og:locale:alternate" content="hu_HU">
+<meta property="og:locale:alternate" content="mt_MT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="ro_RO">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="sl_SI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Usage Monitor – besplatno praćenje potrošnje Claudea">
+<meta name="twitter:description" content="Sesija od 5 sati, tjedno ograničenje i tempo u Claudeu jednim pogledom – i potrošnja s mobitela i preglednika. Uvijek na vrhu, otvoreni kôd. 100 % besplatno.">
+<meta name="twitter:image" content="https://claudeusagemonitor.com/img/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://claudeusagemonitor.com/#site","name":"Claude Usage Monitor","url":"https://claudeusagemonitor.com/","inLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"publisher":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"WebPage","@id":"https://claudeusagemonitor.com/hr/#page","url":"https://claudeusagemonitor.com/hr/","name":"Ograničenja Claudea uživo – Claude Usage Monitor, besplatno","description":"Besplatan Claude Usage Monitor otvorenog kôda za Windows i macOS: uživo pratite sesiju od 5 sati, tjedno ograničenje i ograničenje po modelu te reset.","inLanguage":"hr","isPartOf":{"@id":"https://claudeusagemonitor.com/#site"},"about":{"@id":"https://claudeusagemonitor.com/#app"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["#about .about__def","#about .facts"]},"mainEntity":{"@id":"https://claudeusagemonitor.com/#app"},"primaryImageOfPage":"https://claudeusagemonitor.com/img/og.png","dateModified":"2026-10-07","author":{"@id":"https://claudeusagemonitor.com/#author"}},{"@type":"SoftwareApplication","@id":"https://claudeusagemonitor.com/#app","name":"Claude Usage Monitor","description":"Claude Usage Monitor besplatan je widget otvorenog kôda za Windows 10/11 i macOS koji pretplatniku na Claude u stvarnom vremenu prikazuje ograničenja potrošnje: sesiju od pet sati, tjedno ograničenje i tjedno ograničenje po modelu, s odbrojavanjem do svakog reseta, tempom, brzinom potrošnje i upozorenjima. Obuhvaća claude.ai, Claude Desktop i Claude Code na svim uređajima i ne treba mu terminal.","url":"https://claudeusagemonitor.com/hr/","inLanguage":"hr","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Desktop widget","operatingSystem":"Windows 10, Windows 11, macOS 12+","softwareVersion":"2.7.1","dateModified":"2026-10-07T05:31:15Z","downloadUrl":"https://claudeusagemonitor.com/usage-api/dl.php?os=win","installUrl":"https://claudeusagemonitor.com/hr/#download","fileSize":"47 MB","releaseNotes":"https://claudeusagemonitor.com/CHANGELOG.md","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/gaborvidovics76/ClaudeUsageMonitor","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"},"author":{"@id":"https://claudeusagemonitor.com/#author"},"publisher":{"@id":"https://claudeusagemonitor.com/#author"},"image":"https://claudeusagemonitor.com/img/og.png","screenshot":["https://claudeusagemonitor.com/img/panel-full-midnight.png","https://claudeusagemonitor.com/img/history-7d-midnight.png","https://claudeusagemonitor.com/img/ring-neon.png","https://claudeusagemonitor.com/img/compact-claude.png"],"featureList":["Vidjet ćete na vrijeme","Trošite li prebrzo?","Svi uređaji, jedna brojka","Ograničenja po modelu","Upozorenja koja su važna","Ne špijunira. Točka.","Lampice sigurnosnih kopija – provjerite je li vaš rad s Claudeom sigurnosno kopiran"],"availableLanguage":["en","bg","cs","da","de","et","el","es-ES","es-419","fr","ga","hr","id","it","lv","lt","hu","mt","nl","pl","pt-BR","pt-PT","ro","ru","sk","sl","fi","sv","tr","vi","ja","ko","zh-Hans","zh-Hant"],"sameAs":["https://github.com/gaborvidovics76/ClaudeUsageMonitor"]},{"@type":"Person","@id":"https://claudeusagemonitor.com/#author","name":"Vidovics Gábor","alternateName":"Gábor Vidovics","url":"https://claudeusagemonitor.com/","sameAs":["https://github.com/gaborvidovics76"],"nationality":"HU"},{"@type":"FAQPage","@id":"https://claudeusagemonitor.com/hr/#faq","inLanguage":"hr","mainEntity":[{"@type":"Question","name":"Je li stvarno besplatno? Gdje je kvaka?","acceptedAnswer":{"@type":"Answer","text":"Stvarno je besplatno i nema kvake. Nije demo, nije probna verzija i nije okrnjeno izdanje – ovo je puna i jedina verzija. Bez oglasa, bez plaćene razine, bez prikupljanja podataka. Izvorni kôd javno je dostupan pod licencom MIT."}},{"@type":"Question","name":"Je li ovo službeni proizvod tvrtke Anthropic?","acceptedAnswer":{"@type":"Answer","text":"Nije. Riječ je o neovisnom alatu zajednice koji je izradio Gábor Vidovics. Nije povezan s tvrtkom Anthropic. „Claude“ je zaštitni znak tvrtke Anthropic, PBC."}},{"@type":"Question","name":"Moram li mu dati svoju lozinku?","acceptedAnswer":{"@type":"Answer","text":"Nikada. Bez prijave čita lokalni zapisnik programa Claude Desktop. Ako želite sve uređaje, prijavljujete se na claude.ai u vlastitom pregledniku – aplikacija nikad ne vidi vašu lozinku."}},{"@type":"Question","name":"Windows me upozorava kad ga pokrenem. Zašto?","acceptedAnswer":{"@type":"Answer","text":"Zato što aplikacija nije digitalno potpisana (certifikati koštaju, a aplikacija je besplatna). Kliknite Više informacija → Svejedno pokreni. Preuzetu datoteku možete provjeriti njezinim SHA-256 kontrolnim zbrojem, a izvorni kôd pročitati na GitHubu."}},{"@type":"Question","name":"Koji su Macovi podržani?","acceptedAnswer":{"@type":"Answer","text":"macOS 12 ili noviji. Kartica za preuzimanje iznad uvijek pokazuje za koji je procesor trenutačna verzija. Verzija za macOS je nova – povratne informacije su vrlo dobrodošle."}},{"@type":"Question","name":"Kako funkcioniraju ažuriranja?","acceptedAnswer":{"@type":"Answer","text":"Aplikacija nekoliko puta dnevno provjerava ovu stranicu. Kad postoji nova verzija, javit će vam; jednim je klikom preuzima, provjerava i instalira, a zatim se ponovno pokreće. To možete isključiti."}},{"@type":"Question","name":"Kako ga ukloniti?","acceptedAnswer":{"@type":"Answer","text":"Windows: Postavke → Aplikacije → Instalirane aplikacije → Claude Usage Monitor → Deinstaliraj. macOS: povucite aplikaciju u Smeće. To je sve."}},{"@type":"Question","name":"Kako provjeriti potrošnju Claudea bez otvaranja postavki?","acceptedAnswer":{"@type":"Answer","text":"Instalirajte Claude Usage Monitor: sesiju od pet sati, tjedno ograničenje i ograničenje po modelu stalno drži na zaslonu – kao mali widget uvijek iznad ostalih prozora i kao postotak u području obavijesti ili traci izbornika. Claudeove vlastite brojke nalaze se pod Settings → Usage; widget prikazuje ista ograničenja bez ikakvog klikanja."}},{"@type":"Question","name":"Kada se resetiraju sesija od 5 sati i tjedno ograničenje u Claudeu?","acceptedAnswer":{"@type":"Answer","text":"Ograničenje temeljeno na sesiji resetira se svakih pet sati. Tjedno ograničenje resetira se jednom tjedno u fiksno vrijeme koje Anthropic dodjeljuje vašem računu, pa se razlikuje od osobe do osobe. Widget uživo odbrojava do oba reseta – uz prijavu na claude.ai koristi točna vremena s poslužitelja tvrtke Anthropic."}},{"@type":"Question","name":"Računa li se potrošnja Claude Codea u moje ograničenje na claude.ai?","acceptedAnswer":{"@type":"Answer","text":"Da. Prema tvrtki Anthropic, potrošnja na claude.ai, u Claude Desktopu i u Claude Codeu računa se u isto ograničenje potrošnje. Zato način rada claude.ai u widgetu prikazuje jednu brojku za sve vaše uređaje i aplikacije, a ne samo za računalo na kojem radi."}},{"@type":"Question","name":"Je li ovo isto što i „Claude Code Usage Monitor“?","acceptedAnswer":{"@type":"Answer","text":"Nije. „Claude Code Usage Monitor“ zaseban je terminalski alat drugog autora. Claude Usage Monitor, čiji je autor Gábor Vidovics, grafički je widget za Windows i macOS s ikonom u području obavijesti, temama i upozorenjima, a naredbeni redak mu ne treba."}},{"@type":"Question","name":"Može li Claude Usage Monitor pokazati jesu li moje datoteke za Claude sigurnosno kopirane?","acceptedAnswer":{"@type":"Answer","text":"Da – i to također besplatno. Kad je uključena traka stanja sigurnosnih kopija, tri lampice na panelu pokazuju jesu li svježe sigurnosna kopija na OneDriveu, kopija u drugom oblaku poput Nextclouda i kopija vašeg Obsidian trezora: zelena do 24 sata, žuta do 48, crvena kad je kopija starija ili je nema, a crveni prsten kad posljednje pokretanje nije uspjelo. Monitor samo čita zapisnike sigurnosnih kopija; samu kopiju izrađuje besplatni Claude Backup Kit, koji svaki dan kopira vaše vještine za Claude Code, CLAUDE.md, memoriju projekata, postavke programa Claude Desktop i zapisnike agenata – nikad token za prijavu. Paket je besplatna polazna točka koju svatko može mijenjati, pa ne preuzimamo nikakvu odgovornost za sigurnosne kopije: svaki je korisnik sam odgovoran za to da su potpune i da se mogu vratiti."}},{"@type":"Question","name":"Kako mogu ocijeniti Claude Usage Monitor ili poslati povratnu informaciju?","acceptedAnswer":{"@type":"Answer","text":"Desnom tipkom kliknite panel i odaberite „Poruka programeru…“ ili kliknite ikonu poruke u zaglavlju panela. Možete dati od jedne do pet zvjezdica, napisati poruku i – samo ako to označite – dopustiti da se vaša ocjena i ime prikažu na ovoj web-stranici. Svaku poruku čita autor, Gábor Vidovics, i ništa se ne objavljuje bez vašeg pristanka. Bez aplikacije upotrijebite obrazac na dnu ove stranice."}},{"@type":"Question","name":"Na kojim je jezicima dostupan Claude Usage Monitor?","acceptedAnswer":{"@type":"Answer","text":"Na 34 jezika: na svim službenim jezicima Europske unije te na japanskom, korejskom, pojednostavnjenom i tradicionalnom kineskom, indonezijskom i vijetnamskom – s posebnim verzijama za europski i brazilski portugalski te za španjolski iz Španjolske i Latinske Amerike. Aplikacija sama odabire jezik vašeg sustava, a ova web-stranica također postoji na svakom od tih jezika."}},{"@type":"Question","name":"Radi li s paketima Claude Pro, Max, Team i Enterprise?","acceptedAnswer":{"@type":"Answer","text":"Da. Prikazuje ograničenja vašeg paketa Claude – Pro, Max 5×, Max 20×, Team ili Enterprise – ista ona koja Claude navodi pod Settings → Usage, a oznaka paketa u zaglavlju panela pokazuje koji paket koristite."}}]},{"@type":"HowTo","@id":"https://claudeusagemonitor.com/hr/#install","name":"Kako instalirati (3 koraka) – Windows","inLanguage":"hr","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"text":"Raspakirajte cijelu zip-datoteku (desni klik → Izdvoji sve…)."},{"@type":"HowToStep","position":2,"text":"Dvokliknite INSTALL.bat ."},{"@type":"HowToStep","position":3,"text":"Odgovorite na dva pitanja – Enter prihvaća preporučeni odgovor. Gotovo."}]},{"@type":"DefinedTermSet","@id":"https://claudeusagemonitor.com/hr/#glossary","name":"Ključni pojmovi, precizno definirani","inLanguage":"hr","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Sesija od 5 sati (prozor od 5 sati)","description":"Kratkoročno ograničenje potrošnje u Claudeu. Ograničenje temeljeno na sesiji resetira se svakih pet sati. Anthropic ga naziva „trenutačnom sesijom“ (current session); mnogi korisnici govore o prozoru od 5 sati ili limitu od 5 sati.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Tjedno ograničenje","description":"Drugo ograničenje u plaćenim paketima Claudea, koje vrijedi za sve modele i resetira se svaki tjedan u fiksno vrijeme dodijeljeno vašem računu. Tjedna ograničenja na snazi su od 28. kolovoza 2025.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Tjedno ograničenje po modelu","description":"Zasebno tjedno ograničenje za jedan određeni model, navedeno na Claudeovoj stranici potrošnje uz ograničenje za sve ostale modele. Widget ga prikazuje kao treći mjerač za model koji odaberete.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Reset (resetiranje)","description":"Trenutak u kojem se ograničenje vraća na 0 %. Widget odbrojava do njega. Uz prijavu na claude.ai točno vrijeme dolazi s poslužitelja tvrtke Anthropic; s lokalnim zapisnikom riječ je o procjeni.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Tempo","description":"Koliko ste ispred ili iza ravnomjerno iskorištenog tjedna. „+12% vs tempo“ znači da ste iskoristili 12 postotnih bodova više tjednog ograničenja nego što iznosi dio tjedna koji je već protekao.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Brzina potrošnje","description":"Koliko se brzo ograničenje trenutačno puni – postotak po satu za sesiju, postotak po danu za tjedan – i kada bi tom brzinom doseglo 100 %.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"},{"@type":"DefinedTerm","name":"Krediti za potrošnju (extra usage)","description":"Neobavezna dodatna potrošnja s plaćanjem po potrošnji nakon što dosegnete ograničenja svojeg paketa, uz mjesečnu gornju granicu troška. Widget pokazuje je li uključena, kolika je gornja granica i koliko ste potrošili.","inDefinedTermSet":"https://claudeusagemonitor.com/hr/#glossary"}]}]}</script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://claudeusagemonitor.com/hr/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Claude Usage Monitor releases" href="https://claudeusagemonitor.com/releases.xml">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<link rel="preload" href="../fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/panel-full-midnight.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../assets/site.css?v=12">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Prijeđi na sadržaj</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Claude Usage Monitor">
+      <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><path d="M32 9a23 23 0 0 1 21.7 30.6" fill="none" stroke="url(#lg)" stroke-width="9" stroke-linecap="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+      <span>Claude Usage Monitor</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features" data-i18n="nav.features">Značajke</a>
+      <a href="#backups" data-i18n="nav.backups">Sigurnosne kopije</a>
+      <a href="#themes" data-i18n="nav.themes">Teme</a>
+      <a href="#whatsnew" data-i18n="nav.whatsnew">Novosti</a>
+      <a href="#faq" data-i18n="nav.faq">Česta pitanja</a>
+      <a href="#feedback" data-i18n="nav.feedback">Vaše mišljenje</a>
+    </nav>
+    <div class="nav__right">
+      <a class="iconbtn" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <div class="lang" id="lang">
+        <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span id="lang-cur">HR</span>
+        </button>
+        <ul class="lang__list" id="lang-list" role="listbox" hidden><li><a role="option" hreflang="en" lang="en" href="../" data-lang="en">English <span>en</span></a></li><li><a role="option" hreflang="bg" lang="bg" href="../bg/" data-lang="bg">Български <span>bg</span></a></li><li><a role="option" hreflang="cs" lang="cs" href="../cs/" data-lang="cs">Čeština <span>cs</span></a></li><li><a role="option" hreflang="da" lang="da" href="../da/" data-lang="da">Dansk <span>da</span></a></li><li><a role="option" hreflang="de" lang="de" href="../de/" data-lang="de">Deutsch <span>de</span></a></li><li><a role="option" hreflang="et" lang="et" href="../et/" data-lang="et">Eesti <span>et</span></a></li><li><a role="option" hreflang="el" lang="el" href="../el/" data-lang="el">Ελληνικά <span>el</span></a></li><li><a role="option" hreflang="es-ES" lang="es-ES" href="../es/" data-lang="es">Español (España) <span>es</span></a></li><li><a role="option" hreflang="es-419" lang="es-419" href="../es-419/" data-lang="es-419">Español (Latinoamérica) <span>es-419</span></a></li><li><a role="option" hreflang="fr" lang="fr" href="../fr/" data-lang="fr">Français <span>fr</span></a></li><li><a role="option" hreflang="ga" lang="ga" href="../ga/" data-lang="ga">Gaeilge <span>ga</span></a></li><li><a role="option" hreflang="hr" lang="hr" href="../hr/" aria-current="page" data-lang="hr">Hrvatski <span>hr</span></a></li><li><a role="option" hreflang="id" lang="id" href="../id/" data-lang="id">Bahasa Indonesia <span>id</span></a></li><li><a role="option" hreflang="it" lang="it" href="../it/" data-lang="it">Italiano <span>it</span></a></li><li><a role="option" hreflang="lv" lang="lv" href="../lv/" data-lang="lv">Latviešu <span>lv</span></a></li><li><a role="option" hreflang="lt" lang="lt" href="../lt/" data-lang="lt">Lietuvių <span>lt</span></a></li><li><a role="option" hreflang="hu" lang="hu" href="../hu/" data-lang="hu">Magyar <span>hu</span></a></li><li><a role="option" hreflang="mt" lang="mt" href="../mt/" data-lang="mt">Malti <span>mt</span></a></li><li><a role="option" hreflang="nl" lang="nl" href="../nl/" data-lang="nl">Nederlands <span>nl</span></a></li><li><a role="option" hreflang="pl" lang="pl" href="../pl/" data-lang="pl">Polski <span>pl</span></a></li><li><a role="option" hreflang="pt-BR" lang="pt-BR" href="../pt/" data-lang="pt">Português (Brasil) <span>pt</span></a></li><li><a role="option" hreflang="pt-PT" lang="pt-PT" href="../pt-pt/" data-lang="pt-pt">Português (Portugal) <span>pt-pt</span></a></li><li><a role="option" hreflang="ro" lang="ro" href="../ro/" data-lang="ro">Română <span>ro</span></a></li><li><a role="option" hreflang="ru" lang="ru" href="../ru/" data-lang="ru">Русский <span>ru</span></a></li><li><a role="option" hreflang="sk" lang="sk" href="../sk/" data-lang="sk">Slovenčina <span>sk</span></a></li><li><a role="option" hreflang="sl" lang="sl" href="../sl/" data-lang="sl">Slovenščina <span>sl</span></a></li><li><a role="option" hreflang="fi" lang="fi" href="../fi/" data-lang="fi">Suomi <span>fi</span></a></li><li><a role="option" hreflang="sv" lang="sv" href="../sv/" data-lang="sv">Svenska <span>sv</span></a></li><li><a role="option" hreflang="tr" lang="tr" href="../tr/" data-lang="tr">Türkçe <span>tr</span></a></li><li><a role="option" hreflang="vi" lang="vi" href="../vi/" data-lang="vi">Tiếng Việt <span>vi</span></a></li><li><a role="option" hreflang="ja" lang="ja" href="../ja/" data-lang="ja">日本語 <span>ja</span></a></li><li><a role="option" hreflang="ko" lang="ko" href="../ko/" data-lang="ko">한국어 <span>ko</span></a></li><li><a role="option" hreflang="zh-Hans" lang="zh-Hans" href="../zh-cn/" data-lang="zh-cn">简体中文 <span>zh-cn</span></a></li><li><a role="option" hreflang="zh-Hant" lang="zh-Hant" href="../zh-tw/" data-lang="zh-tw">繁體中文 <span>zh-tw</span></a></li></ul>
+      </div>
+      <a class="btn btn--sm btn--acc" href="#download"><span data-i18n="nav.cta">Besplatno preuzimanje</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap hero__in">
+    <p class="pill"><span class="pill__dot"></span><b data-i18n="hero.pill_free">100 % BESPLATNO</b><span class="pill__sep"></span><span><span data-i18n="hero.pill_ver">Verzija</span> <span data-win="version">2.7.1</span></span><span class="pill__sep"></span><span data-i18n="hero.pill_os">Windows + macOS</span></p>
+    <h1><span class="kicker" data-i18n="hero.kicker">Claude Usage Monitor – besplatan widget za praćenje potrošnje za Windows i macOS</span> <span data-i18n="hero.h1">Claudeovo ograničenje više vas nikad neće <em>iznenaditi.</em></span></h1>
+    <p class="lead" data-i18n="hero.lead">Mali widget koji je uvijek iznad ostalih prozora i uživo prikazuje vašu potrošnju Claudea – sesiju od 5 sati, tjedno ograničenje i vaš tempo. Čak i ono što potroši mobitel. Za Windows i macOS.</p>
+
+    <div class="dlrow" id="hero-dl">
+      <a class="osbtn osbtn--win" data-dl="win" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>Windows</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Vaš sustav</span>
+      </a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="https://claudeusagemonitor.com/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg>
+        <span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>macOS</b></span>
+        <span class="osbtn__tag" data-i18n="dl.your_os">Vaš sustav</span>
+      </a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Besplatno. Zauvijek.</b> Nije demo. Nije probna verzija. Ništa nije zaključano.</p>
+    <p class="counter" data-counter hidden><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><b data-count="total">0</b> <span data-i18n="counter.label">preuzimanja s ove stranice dosad</span></p>
+    <button class="sharebtn" id="share-hero" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="mobile.send">Ovo je aplikacija za stolna računala – pošaljite si poveznicu na računalo</span>
+    </button>
+
+    <div class="stage" id="stage">
+      <div class="stage__glow" aria-hidden="true"></div>
+      <img id="hero-img" class="stage__img" src="../img/panel-full-midnight.webp" width="636" height="740" data-i18n-attr="alt:img.hero" fetchpriority="high" decoding="async" alt="Widget Claude Usage Monitor prikazuje sesiju od 5 sati na 47 %, tjedno ograničenje po modelu na 61 % i tjedno ograničenje na 23 %">
+      <img class="stage__side stage__side--l" src="../img/ring-claude.webp" width="636" height="372" alt="" loading="lazy" aria-hidden="true">
+      <img class="stage__side stage__side--r" src="../img/compact-neon.webp" width="852" height="128" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <p class="stage__cap" data-i18n="hero.cap">Stvarne snimke zaslona aplikacije, s oglednim brojkama.</p>
+  </div>
+</section>
+
+<!-- ============================ FREE MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span data-i18n="mq.1">100 % BESPLATNO</span><i>✦</i><span data-i18n="mq.2">NIJE DEMO</span><i>✦</i><span data-i18n="mq.3">NIŠTA ZAKLJUČANO</span><i>✦</i><span data-i18n="mq.4">BEZ OGLASA</span><i>✦</i><span data-i18n="mq.5">BEZ REGISTRACIJE</span><i>✦</i><span data-i18n="mq.6">BEZ PRAĆENJA</span><i>✦</i><span data-i18n="mq.7">OTVORENI KÔD</span><i>✦</i><span data-i18n="mq.8">34 JEZIKA</span><i>✦</i><span>WINDOWS + macOS</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============================ TRUST ============================ -->
+<section class="trust wrap" aria-label="Trust">
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg><div><b data-i18n="trust.1t">Zauvijek besplatno</b><span data-i18n="trust.1d">Puna verzija. Plaćena inačica ne postoji.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-code"/></svg><div><b data-i18n="trust.2t">Otvoreni kôd</b><span><a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener" data-i18n="trust.2d">Licenca MIT – svaki redak pročitajte na GitHubu</a></span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><div><b data-i18n="trust.3t">Privatno</b><span data-i18n="trust.3d">Bez telemetrije, bez oglasa, bez kolačića.</span></div></div>
+  <div class="trust__i"><svg viewBox="0 0 24 24"><use href="#i-refresh"/></svg><div><b data-i18n="trust.4t">Sam se ažurira</b><span data-i18n="trust.4d">Provjera algoritmom SHA-256, jednim klikom.</span></div></div>
+</section>
+
+<!-- ============================ WHAT MAKES IT MORE (the differentiator) ============================ -->
+<section class="sec wrap more" id="more">
+  <p class="eyebrow" data-i18n="more.eyebrow">Po čemu je više od čitača zapisnika</p>
+  <h2 data-i18n="more.h2">I mobitel troši vaše ograničenje. <em>Sada to vidite – na radnoj površini.</em></h2>
+  <p class="more__lead" data-i18n="more.p">Mnogi alati za praćenje potrošnje čitaju zapisnike na vašem računalu, pa znaju samo koliko je potrošilo <b>to jedno računalo</b>. Claude Usage Monitor umjesto toga može pitati poslužitelj tvrtke Anthropic – i prikazuje stvarnu brojku za cijeli račun: računa se sve što koristite u aplikaciji na mobitelu, u pregledniku, na drugom računalu i u Claude Codeu, a sve to vidite na jednom mjestu, na radnoj površini.</p>
+
+  <div class="flow reveal">
+    <ul class="flow__src">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="more.d1">Aplikacija Claude na mobitelu</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="more.d2">claude.ai u pregledniku</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-devices"/></svg><span data-i18n="more.d3">Vaše drugo računalo</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="more.d4">Claude Code i Claude Desktop</span></li>
+    </ul>
+    <div class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+    <figure class="flow__out">
+      <img src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.more" loading="lazy" decoding="async" alt="Jedan widget Claude Usage Monitor prikazuje zbrojenu potrošnju svih uređaja">
+      <figcaption data-i18n="more.sum">Jedna stvarna brojka za cijeli račun – uvijek pred očima.</figcaption>
+    </figure>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="more.a_t">Alati koji čitaju samo lokalne zapisnike</h3>
+      <ul data-i18n="more.a_li"><li class="no">Potrošnja na mobitelu – nevidljiva</li><li class="no">Potrošnja u pregledniku – nevidljiva</li><li class="no">Vaša druga računala – nevidljiva</li><li class="yes">Claude Code na ovom jednom računalu</li><li class="no">Vremena reseta samo se nagađaju</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="more.b_t">Claude Usage Monitor s izvorom claude.ai</h3>
+      <ul data-i18n="more.b_li"><li class="yes">Mobitel, preglednik, svako računalo – sve se računa</li><li class="yes">Uključeni su i Claude Code i Claude Desktop</li><li class="yes">Iste brojke koje sam Claude prikazuje pod Settings → Usage</li><li class="yes">Točna vremena reseta s poslužitelja tvrtke Anthropic</li><li class="yes">Radi i bez prijave, iz lokalnog zapisnika</li></ul>
+    </article>
+  </div>
+  <p class="fine more__note" data-i18n="more.note">Kako: odaberite izvor podataka „claude.ai (svi uređaji)“ i jednom se prijavite u vlastitom pregledniku – istom prijavom kojom se služi i Claude Code; aplikacija nikad ne vidi vašu lozinku. Bez prijave widget čita lokalni zapisnik programa Claude Desktop, koji obuhvaća samo ovo računalo.</p>
+</section>
+
+<!-- ============================ +1 EXTRA: BACKUPS ============================ -->
+<section class="sec wrap more bk" id="backups">
+  <p class="eyebrow"><span class="plus1">+1</span> <span data-i18n="bk.eyebrow">Dodatak – i to besplatan</span></p>
+  <h2 data-i18n="bk.h2">Pokazuje čak i vaše sigurnosne kopije. <em>Koliko vrijedi znanje koje se može uništiti?</em></h2>
+  <p class="more__lead" data-i18n="bk.p">Svaki alat za praćenje potrošnje staje na brojkama. Claude Usage Monitor ide korak dalje: pokazuje i jesu li <b>sigurnosne kopije vezane uz Claude</b> svježe – vaše vještine (skills), pravila u <code>CLAUDE.md</code>, memorija projekata, MCP postavke, zapisnici razgovora agenata i bilješke u Obsidianu. Obično se nalaze na jednom jedinom disku. Jedan pokvaren disk, jedan ukraden prijenosnik, jedno pogrešno brisanje – i mjeseci rada nestaju. Tri male lampice na panelu u svakoj minuti dana govore vam da se to vama ne može dogoditi.</p>
+
+  <div class="bk__top">
+    <figure class="bk__panel reveal">
+      <a class="zoomimg" href="../img/backup-panel.png" target="_blank" rel="noopener"><img src="../img/backup-panel.webp" width="1272" height="840" data-i18n-attr="alt:img.bk_panel" loading="lazy" decoding="async" alt="Panel aplikacije Claude Usage Monitor s tri zelene lampice sigurnosnih kopija: OneDrive, Nextcloud i Obsidian, sve kopirane prije jedne minute"></a>
+    </figure>
+    <div class="bk__legend reveal">
+      <h3 data-i18n="bk.lamps_h">Tri lampice. Jedan pogled. I znate.</h3>
+      <ul class="lamps" data-i18n="bk.lamps"><li><i class="lamp lamp--g"></i><span><b>Zelena</b> – posljednja uspješna sigurnosna kopija nije starija od 24 sata.</span></li><li><i class="lamp lamp--y"></i><span><b>Žuta</b> – stara je od 24 do 48 sati. Vrijeme je da pogledate.</span></li><li><i class="lamp lamp--r"></i><span><b>Crvena</b> – starija je od 48 sati ili sigurnosne kopije uopće nema.</span></li><li><i class="lamp lamp--ring"></i><span><b>Crveni prsten</b> – posljednje pokretanje nije uspjelo ili nije dovršeno, čak i ako starija kopija lampicu još drži zelenom.</span></li></ul>
+      <p class="fine" data-i18n="bk.lamps_note">Lampice su <b>OneDrive</b> (prva kopija), <b>Nextcloud</b> (drugi, neovisni oblak – radi svaki oblak koji podržava rclone) i <b>Obsidian</b> (datirana snimka vašeg trezora). Računa se samo pokretanje koje je stvarno dovršeno: neuspjelo, prekinuto ili probno pokretanje nikad ne pali zelenu lampicu. Broj sati možete podesiti. Kliknite bilo koju lampicu za pojedinosti.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <article class="vs__card vs__card--no reveal">
+      <h3 data-i18n="bk.a_t">Drugi alati za praćenje potrošnje</h3>
+      <ul data-i18n="bk.a_li"><li class="no">Pokazuju brojke – a o vašim podacima ništa</li><li class="no">Ne mogu vam reći jesu li vaše vještine i bilješke na sigurnom</li><li class="no">Pokvarena sigurnosna kopija otkrije se tek kad zatreba – prekasno</li><li class="no">Nema pomoći pri postavljanju sigurnosnog kopiranja</li></ul>
+    </article>
+    <article class="vs__card vs__card--yes reveal">
+      <h3 data-i18n="bk.b_t">Claude Usage Monitor + besplatni Backup Kit</h3>
+      <ul data-i18n="bk.b_li"><li class="yes">Lampice za OneDrive, drugi oblak i vaš Obsidian trezor</li><li class="yes">Neuspjelo ili nedovršeno pokretanje označi se čim se dogodi</li><li class="yes">Što se kopira, kamo, koliko datoteka i koliko je sve veliko</li><li class="yes">Zakazani zadaci i zapisnik – jedan klik dalje</li><li class="yes">Besplatan paket koji sigurnosno kopiranje postavi za 10 minuta</li></ul>
+    </article>
+  </div>
+
+  <div class="bk__shows">
+    <figure class="bk__shot reveal">
+      <a class="zoomimg" href="../img/backup-details.png" target="_blank" rel="noopener"><img src="../img/backup-details.webp" width="1400" height="1460" data-i18n-attr="alt:img.bk_details" loading="lazy" decoding="async" alt="Prozor pojedinosti o sigurnosnim kopijama u aplikaciji Claude Usage Monitor: stanje Svježa, kopirana snimka Obsidian trezora, Claude Code, Claude Desktop, dodatna mapa i zapisnici agenata s brojem datoteka i veličinama, bez pogrešaka, te zakazani zadatak"></a>
+    </figure>
+    <div>
+      <h3 data-i18n="bk.shows_h">Kliknite lampicu – evo što ćete vidjeti</h3>
+      <ul class="ticks" data-i18n="bk.shows"><li><b>Stanje</b> – Svježa, Postaje zastarjela, Zastarjela ili Sigurnosna kopija nije pronađena, uz vrijeme posljednje uspješne sigurnosne kopije i posljednjeg pokretanja.</li><li><b>Što se sigurnosno kopira</b> – svaka stavka s izvornom mapom, odredištem, brojem datoteka i veličinom: snimka Obsidian trezora, Claude Code, Claude Desktop, vaše dodatne mape i zapisnici agenata.</li><li><b>Sadržaj</b> – najnovija snimka trezora, koliko se snimaka čuva, nedavno uređene bilješke i koliko se bilješki promijenilo od posljednje snimke.</li><li><b>Preneseno</b> – na kartici Nextcloud: nove i zamijenjene datoteke u ovom pokretanju, grupirane po mapama, te koliko vam je prostora ostalo u oblaku.</li><li><b>Pogreške i upozorenja</b> – izravno iz zapisnika, jednostavnim riječima.</li><li><b>Zakazani zadaci</b> – stanje, posljednji rezultat i sljedeće pokretanje Windows zadataka koji izrađuju sigurnosnu kopiju.</li><li><b>Zapisnik</b> – posljednji retci, a datoteka zapisnika udaljena je jedan klik.</li></ul>
+      <p class="fine" data-i18n="bk.shows_note">Monitor samo čita – nikad ne mijenja, ne premješta i ne prenosi nijednu datoteku. Ponovno provjerava svakih 5 minuta ili odmah, klikom na „Provjeri sada“. Snimka koja je u OneDriveu dostupna samo na mreži ne preuzima se samo zato da bi se prikazao njezin sadržaj.</p>
+    </div>
+  </div>
+
+  <div class="bk__kit reveal">
+    <div class="bk__kittxt">
+      <h3><span class="freebadge" data-i18n="dls.free">BESPLATNO</span> <span data-i18n="bk.kit_h">Iskreno: monitor nadzire, a paket izrađuje kopije.</span></h3>
+      <p data-i18n="bk.kit_p">Claude Usage Monitor ne kopira vaše datoteke – pokazuje vam je li kopiranje uspjelo. Kopiranje obavlja <b>Claude Backup Kit</b>: nekoliko kratkih PowerShell skripti koje možete pročitati redak po redak. Svaki dan sigurnosno kopira vaš rad s Claudeom na OneDrive i u drugi, neovisni oblak te piše zapisnik koji lampice čitaju. Bez računa, bez pretplate, ništa se ne šalje nama.</p>
+      <p class="bk__kitmeta"><span data-i18n="bk.kit_for">Windows 10/11 · PowerShell · licenca MIT</span> · ZIP <span data-kit="size">24 KB</span></p>
+    </div>
+    <div class="bk__kitbtns">
+      <a class="btn btn--xl btn--acc" href="../kit/ClaudeBackupKit.zip" download><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="bk.kit_btn">Preuzmite Backup Kit – besplatno</span></a>
+      <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/tree/main/backup-kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="bk.kit_gh">Pročitajte svaku skriptu na GitHubu</span></a>
+      <p class="fine dlterms" data-i18n="dls.terms">Preuzimanjem prihvaćate <a href="#terms" data-legal="terms">Uvjete korištenja</a>: aplikacija i Backup Kit besplatni su i pružaju se „kakvi jesu“, bez jamstva, na vlastitu odgovornost.</p>
+    </div>
+  </div>
+
+  <aside class="bk__disc reveal" id="backup-disclaimer" role="note">
+    <h3 data-i18n="bk.disc_h">Odricanje od odgovornosti – pročitajte</h3>
+    <p data-i18n="bk.disc"><b>Ne preuzimamo nikakvu odgovornost za sigurnosne kopije, izgubljene podatke ni bilo kakvu štetu.</b> Claude Usage Monitor samo čita i prikazuje zapisnike vaših sigurnosnih kopija – ne izrađuje, ne provjerava i ne jamči nijednu sigurnosnu kopiju. Claude Backup Kit besplatna je polazna točka ponuđena kao pomoć, a ne gotov proizvod: svatko može – i smije – prilagoditi skripte svojem računalu, pa se kvaliteta i potpunost sigurnosne kopije ne mogu jamčiti. <b>Svatko je sam odgovoran za to da su njegove sigurnosne kopije potpune i da se mogu vratiti.</b> Provjeravajte lampice, čitajte zapisnik i povremeno isprobajte vraćanje. Paket se pruža „kakav jest“, bez ikakvog jamstva, pod licencom MIT.</p>
+    <p class="bk__discmore">→ <a href="#terms" data-legal="terms" data-i18n="foot.terms">Uvjeti korištenja</a></p>
+  </aside>
+
+  <div class="bkhelp" id="backup-help">
+    <h3 data-i18n="bk.help_h">Pomoć: postavite sigurnosno kopiranje koje monitor može prikazati</h3>
+    <p class="fine" data-i18n="bk.help_p">Otvorite samo ono što vam treba. Ovdje je svaki korak – što koristiti, što postaviti, što kliknuti. Paket je polazna točka koju možete mijenjati – pročitajte <a href="#backup-disclaimer">odricanje od odgovornosti</a> iznad.</p>
+
+    <details open>
+      <summary data-i18n="bk.q_steps">Postavljanje za 10 minuta – korak po korak</summary>
+      <ol class="steps" data-i18n="bk.steps"><li><b>Što vam treba.</b> Windows 10 ili 11, OneDrive s prijavljenim računom i instaliran Claude Usage Monitor. Za drugu kopiju: Nextcloud račun – ili bilo koji drugi oblak koji podržava rclone (Google Drive, Dropbox, S3, pCloud, SFTP…). Nemate drugi oblak? 2. korak nije obavezan.</li><li><b>Izradite lozinku za aplikaciju</b> (samo za drugi oblak). U Nextcloudu: vaš avatar → <em>Osobne postavke</em> → <em>Sigurnost</em> → <em>Uređaji i sesije</em> → naziv aplikacije <code>rclone-backup</code> → <em>Izradi novu lozinku aplikacije</em>. Kopirajte je – prikazuje se samo jednom. To <b>nije</b> lozinka vašeg računa i možete je opozvati u bilo kojem trenutku.</li><li><b>Preuzmite i raspakirajte</b> Backup Kit u trajnu mapu, primjerice <code>C:\Tools\ClaudeBackup</code>.</li><li><b>Uredite <code>config.psd1</code></b> u Bloku za pisanje: <code>VaultPath</code> = vaš Obsidian trezor (prazno = bez Obsidiana), <code>ExtraFolders</code> = sve ostalo što želite kopirati, <code>NextcloudRemote</code> i <code>NextcloudBasePath</code> = drugi oblak (prazno = preskače se), <code>DailyTime</code> = kada se pokreće. Sve ostalo može ostati kako jest.</li><li><b>Pokrenite instalacijski program kao administrator:</b> Win+X → <em>Terminal (administrator)</em>, zatim <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code>, <code>cd C:\Tools\ClaudeBackup</code>, <code>Unblock-File *.ps1</code>, <code>.\Install-BackupKit.ps1</code>. Po potrebi instalira rclone, traži adresu oblaka, korisničko ime i lozinku aplikacije (unos je skriven), izrađuje dva zakazana zadatka, javlja monitoru gdje treba gledati i obavlja prvo pokretanje.</li><li><b>Prvi pravi prijenos:</b><code>.\Backup-Step2-Cloud.ps1</code> – instalacijski program 2. korak je pokrenuo samo probno.</li><li><b>Provjera:</b><code>.\Test-BackupKit.ps1</code> – svaki redak mora glasiti <code>[OK]</code>. U programu Claude Usage Monitor: desni klik na panel → <em>Traka stanja sigurnosnih kopija</em>. Tri lampice pozelene u roku od 5 minuta, a odmah ako odaberete <em>Sigurnosne kopije…</em> → <em>Provjeri sada</em>.</li></ol>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_what">Što se kopira – a što nikada</summary>
+      <ul class="ticks" data-i18n="bk.what"><li><b>Claude Code</b> (<code>%USERPROFILE%\.claude</code>) – vještine, postavke, <code>CLAUDE.md</code>, memorija projekata, dodaci.</li><li><b>Claude Desktop</b> (<code>%APPDATA%\Claude</code>) – postavke i MCP poslužitelji.</li><li><b>Zapisnici razgovora agenata</b> – jedan ZIP po sesiji.</li><li><b>Obsidian trezor</b> – datirana ZIP snimka pri svakom pokretanju, čuva se 30 dana.</li><li><b>Vaše dodatne mape</b> – sve što navedete u <code>config.psd1</code>.</li><li><b>Nikada:</b> token za prijavu u Claude Code (<code>.credentials.json</code>), kolačići programa Claude Desktop, predmemorije i velike slike virtualnih strojeva koje se mogu ponovno preuzeti.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_settings">Postavke → Sigurnosne kopije u aplikaciji, polje po polje</summary>
+      <div class="cmpwrap"><table class="keys" data-i18n="bk.settings"><tr><th>Prikaži traku stanja sigurnosnih kopija na panelu</th><td>Uključuje ili isključuje tri lampice. Isto i u izborniku desnog klika: <em>Traka stanja sigurnosnih kopija</em>.</td></tr><tr><th>Lampice</th><td>Koje se lampice prikazuju: OneDrive, Nextcloud, Obsidian. Nemate Obsidian trezor? Uklonite kvačicu.</td></tr><tr><th>Oznaka uz lampicu</th><td>Naziv i starost · Samo naziv · Samo lampice.</td></tr><tr><th>Zelena do / Žuta do</th><td>Granice starosti u satima – zadano 24 i 48. Tjedna sigurnosna kopija? Postavite 170 i 340.</td></tr><tr><th>Mapa sigurnosnih kopija</th><td>Mapa u koju zapisuje 1. korak, npr. <code>OneDrive\ClaudeBackup</code>. Ostavite je na <em>automatski</em> – instalacijski program već je obavijestio monitor.</td></tr><tr><th>Konfiguracija skripte za sigurnosne kopije</th><td>Datoteka <code>config.psd1</code> iz paketa. Monitor iz nje čita putanju trezora i odredište u oblaku – nikad lozinku.</td></tr><tr><th>Filtar zakazanih zadataka</th><td><code>ClaudeBackup*</code> – koje Windows zadatke prikazuje prozor pojedinosti.</td></tr><tr><th>Prozor pojedinosti prikazuje</th><td>Označite što želite vidjeti: što se sigurnosno kopira, sadržaj, pogreške i upozorenja, zakazane zadatke, zapisnik.</td></tr></table></div>
+      <p class="fine" data-i18n="bk.settings_note">Instalacijski program zapisuje <code>%APPDATA%\ClaudeUsageMonitor\backup_profile.json</code> – samo putanje mapa, bez lozinke i bez tokena. Sve što postavite na kartici Sigurnosne kopije ima prednost pred tom datotekom.</p>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_sec">Sigurnost – kako paket štiti vaše podatke</summary>
+      <ul class="ticks" data-i18n="bk.sec"><li><b>Nijedna datoteka paketa ne sadrži lozinku.</b> Lozinka aplikacije upisuje se skriveno i pohranjuje samo u vlastitoj konfiguraciji programa rclone, i to zamaskirana. U Nextcloudu je možete opozvati kad god želite.</li><li><b>Token za prijavu nikad se ne kopira.</b> Ni kolačići programa Claude Desktop.</li><li><b>Bez zrcaljenja.</b> Datoteka koju izbrišete na računalu ostaje u obje sigurnosne kopije – zrcaljenje bi vjerno preslikalo i pogrešku.</li><li><b>Datirane snimke trezora</b>, pa kasnija loša kopija nikad ne može prebrisati stariju ispravnu verziju.</li><li><b>Dva neovisna pružatelja usluge.</b> Ako jedan zakaže ili vam blokira pristup, kod drugoga je i dalje sve.</li><li><b>Dobro je znati:</b> konfiguracija programa Claude Desktop i <code>.claude\settings.json</code> mogu sadržavati API ključeve MCP poslužitelja. Oni se kopiraju – trebaju vam za vraćanje – na vaš vlastiti OneDrive i u vaš vlastiti oblak. Oba računa zaštitite prijavom u dva koraka.</li></ul>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_restore">Vraćanje – kad zatreba</summary>
+      <table class="keys" data-i18n="bk.restore"><tr><th>Starija verzija bilješke</th><td>onedrive.com → desni klik na datoteku → <em>Povijest verzija</em>.</td></tr><tr><th>Izbrisana datoteka</th><td>OneDrive <em>Koš za smeće</em> (30 dana) ili Nextcloud <em>Izbrisane datoteke</em>.</td></tr><tr><th>Cijeli trezor s određenog dana</th><td>Raspakirajte <code>vault-snapshots\Vault_…zip</code> u praznu mapu i otvorite je u Obsidianu: <em>Open folder as vault</em>.</td></tr><tr><th>Vještine i postavke Claude Codea</th><td>Kopirajte <code>files\claude-code</code> natrag u <code>%USERPROFILE%\.claude</code>, a zatim se ponovno prijavite u Claude Code.</td></tr><tr><th>Postavke programa Claude Desktop</th><td>Zatvorite Claude Desktop i kopirajte <code>files\claude-desktop</code> natrag u <code>%APPDATA%\Claude</code>.</td></tr></table>
+    </details>
+
+    <details>
+      <summary data-i18n="bk.q_own">Već imate vlastito sigurnosno kopiranje? Što treba monitoru</summary>
+      <ul class="ticks" data-i18n="bk.own"><li><b>Zapisnik za svako pokretanje</b> u podmapi <code>logs</code> vaše mape sigurnosnih kopija, s nazivima <code>onedrive_YYYY-MM-DD_HHMMSS.log</code> i <code>nextcloud_…log</code>, pri čemu svaki redak počinje datumom i vremenom.</li><li><b>Jasan završetak:</b> uspješno pokretanje završava retkom koji sadrži <code>KESZ</code>, a neuspjelo retkom s <code>HIBAVAL ZARULT</code>. Datoteka <code>Common.ps1</code> iz paketa dokumentira svaku riječ koju monitor razumije.</li><li><b>Gdje gledati:</b> na kartici Sigurnosne kopije postavite polje <em>Mapa sigurnosnih kopija</em>. Druge nazive mapa ili datoteka možete postaviti u <code>backup_profile.json</code> – README paketa pokazuje kako.</li><li><b>Mac:</b> lampice i na macOS-u čitaju iste zapisnike; sam paket i popis zakazanih zadataka namijenjeni su Windowsima.</li></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ WHAT IS IT (definition + glossary) ============================ -->
+<section class="sec wrap about" id="about">
+  <h2 data-i18n="about.h2">Što je Claude Usage Monitor?</h2>
+  <p class="about__def" data-i18n="about.p"><b>Claude Usage Monitor besplatan je widget otvorenog kôda za Windows 10/11 i macOS koji u stvarnom vremenu prikazuje ograničenja potrošnje vaše pretplate na Claude</b> – sesiju od pet sati, tjedno ograničenje i tjedno ograničenje po modelu, svako s vremenom preostalim do reseta. Ostaje iznad ostalih prozora, pa potrošnju Claudea možete provjeriti bez otvaranja stranice Settings → Usage (Postavke → Potrošnja) i bez terminala.</p>
+  <p class="about__def" data-i18n="about.p2">Jedna aplikacija i za Windows i za Mac. Obuhvaća sve što se računa u vaš paket – claude.ai, Claude Desktop i Claude Code, na svim vašim uređajima. Ovo nije terminalski alat „Claude Code Usage Monitor“: ovo je grafički panel s ikonom u području obavijesti i ne treba mu naredbeni redak.</p>
+  <dl class="facts" data-i18n="facts.dl"><dt>Cijena</dt><dd>Besplatno – puna verzija, bez plaćene razine, bez probnog razdoblja</dd><dt>Platforme</dt><dd>Windows 10 / 11 (64-bitni) i macOS 12 ili noviji</dd><dt>Jezici</dt><dd>34 jezika sučelja</dd><dt>Što prikazuje</dt><dd>Sesiju od 5 sati, tjedno ograničenje, tjedno ograničenje po modelu, odbrojavanje do reseta, tempo i brzinu potrošnje</dd><dt>Izvor podataka</dt><dd>Lokalni zapisnik programa Claude Desktop ili vaša prijava na claude.ai za sve uređaje</dd><dt>Privatnost</dt><dd>Bez telemetrije, bez oglasa, bez računa kod nas</dd><dt>Licenca</dt><dd>MIT, otvoreni kôd na GitHubu</dd><dt>Autor</dt><dd>Gábor Vidovics, Mađarska – neovisan, nije povezan s tvrtkom Anthropic</dd></dl>
+  <p class="fine about__meta"><span data-i18n="about.updated">Posljednje ažuriranje</span>: <time data-win="date">2026-10-07</time> · <span data-i18n="dls.version">Verzija</span> <span data-win="version">2.7.1</span> · <span data-i18n="about.by">izradio</span> Vidovics Gábor</p>
+  <details class="glossary" id="glossary">
+    <summary data-i18n="gl.h">Ključni pojmovi, precizno definirani</summary>
+    <dl>
+      <dt data-i18n="gl.1t">Sesija od 5 sati (prozor od 5 sati)</dt>
+      <dd data-i18n="gl.1d">Kratkoročno ograničenje potrošnje u Claudeu. Ograničenje temeljeno na sesiji resetira se svakih pet sati. Anthropic ga naziva „trenutačnom sesijom“ (current session); mnogi korisnici govore o prozoru od 5 sati ili limitu od 5 sati.</dd>
+      <dt data-i18n="gl.2t">Tjedno ograničenje</dt>
+      <dd data-i18n="gl.2d">Drugo ograničenje u plaćenim paketima Claudea, koje vrijedi za sve modele i resetira se svaki tjedan u fiksno vrijeme dodijeljeno vašem računu. Tjedna ograničenja na snazi su od 28. kolovoza 2025.</dd>
+      <dt data-i18n="gl.3t">Tjedno ograničenje po modelu</dt>
+      <dd data-i18n="gl.3d">Zasebno tjedno ograničenje za jedan određeni model, navedeno na Claudeovoj stranici potrošnje uz ograničenje za sve ostale modele. Widget ga prikazuje kao treći mjerač za model koji odaberete.</dd>
+      <dt data-i18n="gl.4t">Reset (resetiranje)</dt>
+      <dd data-i18n="gl.4d">Trenutak u kojem se ograničenje vraća na 0 %. Widget odbrojava do njega. Uz prijavu na claude.ai točno vrijeme dolazi s poslužitelja tvrtke Anthropic; s lokalnim zapisnikom riječ je o procjeni.</dd>
+      <dt data-i18n="gl.5t">Tempo</dt>
+      <dd data-i18n="gl.5d">Koliko ste ispred ili iza ravnomjerno iskorištenog tjedna. „+12% vs tempo“ znači da ste iskoristili 12 postotnih bodova više tjednog ograničenja nego što iznosi dio tjedna koji je već protekao.</dd>
+      <dt data-i18n="gl.6t">Brzina potrošnje</dt>
+      <dd data-i18n="gl.6d">Koliko se brzo ograničenje trenutačno puni – postotak po satu za sesiju, postotak po danu za tjedan – i kada bi tom brzinom doseglo 100 %.</dd>
+      <dt data-i18n="gl.7t">Krediti za potrošnju (extra usage)</dt>
+      <dd data-i18n="gl.7d">Neobavezna dodatna potrošnja s plaćanjem po potrošnji nakon što dosegnete ograničenja svojeg paketa, uz mjesečnu gornju granicu troška. Widget pokazuje je li uključena, kolika je gornja granica i koliko ste potrošili.</dd>
+    </dl>
+  </details>
+</section>
+
+<!-- ============================ FEATURES (BENTO) ============================ -->
+<section class="sec wrap" id="features">
+  <p class="eyebrow" data-i18n="feat.eyebrow">Što dobivate</p>
+  <h2 data-i18n="feat.h2">Sva ograničenja potrošnje Claudea. Jednim pogledom.</h2>
+  <div class="bento">
+    <article class="cell cell--wide cell--img reveal">
+      <div class="cell__txt">
+        <h3 data-i18n="feat.1t">Vidjet ćete na vrijeme</h3>
+        <p data-i18n="feat.1d">Zeleno, žuto, crveno. Panel mijenja boju mnogo prije nego što vam ponestane – uz odbrojavanje do reseta i procjenu kada ćete doseći 100 %.</p>
+      </div>
+      <div class="cell__shots"><img src="../img/state-warn.webp" width="636" height="380" data-i18n-attr="alt:img.warn" loading="lazy" decoding="async" alt="Potrošnja Claudea na 78 % – widget postaje žut"><img src="../img/state-danger.webp" width="636" height="380" data-i18n-attr="alt:img.danger" loading="lazy" decoding="async" alt="Potrošnja Claudea na 94 % – widget postaje crven"></div>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-gauge"/></svg>
+      <h3 data-i18n="feat.2t">Trošite li prebrzo?</h3>
+      <p data-i18n="feat.2d">Pokazatelj tempa govori vam topi li se tjedno ograničenje brže nego što tjedan prolazi – i procjenjuje gdje ćete završiti.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-devices"/></svg>
+      <h3 data-i18n="feat.3t">Svi uređaji, jedna brojka</h3>
+      <p data-i18n="feat.3d">Prijavite se u vlastitom pregledniku – kao što to radi Claude Code – i vidjet ćete potrošnju i s mobitela, preglednika i svakog drugog računala.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+      <h3 data-i18n="feat.4t">Ograničenja po modelu</h3>
+      <p data-i18n="feat.4d">Fable, Opus, Sonnet, Claude Code, krediti za potrošnju – svako ograničenje koje poslužitelj javlja, plus ovotjedna raspodjela po modelima.</p>
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-bell"/></svg>
+      <h3 data-i18n="feat.5t">Upozorenja koja su važna</h3>
+      <p data-i18n="feat.5d">Nenametljiva obavijest na 70 % i 90 % (sami birate) i kad se ograničenje resetira. Ništa drugo, nikada.</p>
+    </article>
+    <article class="cell cell--wide cell--hist reveal">
+      <div class="cell__histhead">
+        <div>
+          <h3 data-i18n="feat.7t">Cijeli tjedan na jednom grafikonu</h3>
+          <p data-i18n="feat.7d">Dvokliknite widget: oba ograničenja na jednoj vremenskoj crti – 6 sati, 24 sata ili 7 dana – s tjednim maksimumom, dnevnim prosjekom i projekcijom do kraja tjedna koja mijenja boju prije nego što prekoračite ograničenje.</p>
+        </div>
+        <div class="seg" id="hist-range" role="radiogroup" aria-label="Range">
+          <button type="button" role="radio" aria-checked="false" data-range="6h" data-i18n="hist.r6">6 sati</button>
+          <button type="button" role="radio" aria-checked="false" data-range="24h" data-i18n="hist.r24">24 sata</button>
+          <button type="button" role="radio" aria-checked="true" data-range="7d" data-i18n="hist.r7">7 dana</button>
+        </div>
+      </div>
+      <img id="hist-img" class="cell__histimg" src="../img/history-7d-midnight.webp" width="1280" height="840" data-i18n-attr="alt:img.history" loading="lazy" decoding="async" alt="Prozor povijesti u aplikaciji Claude Usage Monitor: sesija od 5 sati i tjedno ograničenje kroz vrijeme, s tjednim maksimumom, dnevnom potrošnjom i projekcijom do kraja tjedna">
+    </article>
+    <article class="cell reveal">
+      <svg class="cell__ico" viewBox="0 0 24 24"><use href="#i-lock"/></svg>
+      <h3 data-i18n="feat.6t">Ne špijunira. Točka.</h3>
+      <p data-i18n="feat.6d">Bez telemetrije, bez analitike, bez računa kod nas. Komunicira samo s tvrtkom Anthropic i samo radi vaših brojki. Vaš token za prijavu ostaje šifriran na vašem računalu – Windows DPAPI ili privjesak ključeva u macOS-u (Keychain).</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND 1 ============================ -->
+<section class="band">
+  <div class="wrap band__in">
+    <div>
+      <h2 data-i18n="band1.h">Da, stvarno je besplatno.</h2>
+      <p data-i18n="band1.p">Nema odbrojavanja probnog razdoblja. Nema nagovaranja na „Pro“. Nema kvake. Preuzmite ga i vaš je.</p>
+    </div>
+    <div class="dlrow dlrow--tight">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>macOS</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DETAILS (TABS) ============================ -->
+<section class="sec wrap" id="details">
+  <p class="eyebrow" data-i18n="tabs.eyebrow">Samo ako vas zanima</p>
+  <h2 data-i18n="tabs.h2">Pojedinosti – kad ih poželite.</h2>
+  <div class="tabs" id="tabs">
+    <div class="tabs__bar" role="tablist" aria-label="Details">
+      <button role="tab" aria-selected="true" aria-controls="tp-1" id="tb-1" data-i18n="tabs.t1">Što prikazuje</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-2" id="tb-2" tabindex="-1" data-i18n="tabs.t2">Odakle dolaze podaci</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-3" id="tb-3" tabindex="-1" data-i18n="tabs.t3">Privatnost i sigurnost</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-4" id="tb-4" tabindex="-1" data-i18n="tabs.t4">Upravljanje</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-5" id="tb-5" tabindex="-1" data-i18n="tabs.t5">Postavke</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-6" id="tb-6" tabindex="-1" data-i18n="tabs.t6">Usporedba</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1">
+      <ul class="ticks" data-i18n="tabs.p1"><li><b>Sesija od 5 sati</b> – trenutačni postotak, odbrojavanje do reseta, brzina potrošnje (%/h) i kada bi se ispunila.</li><li><b>Tjedno ograničenje</b> – trenutačni postotak, vrijeme do tjednog reseta, dnevna brzina i vaš tempo u odnosu na ravnomjeran tjedan.</li><li><b>Tjedno ograničenje po modelu</b> – treći mjerač za model koji pratite (zadano Fable).</li><li><b>Oznaka paketa</b> – PRO, MAX 5×, MAX 20×, TEAM ili ENTERPRISE.</li><li><b>Prozor povijesti</b> – grafikoni za 6 h / 24 h / 7 dana, tjedni maksimum, dnevni prosjek i projekcija do kraja tjedna.</li><li><b>Ikona u području obavijesti / traci izbornika</b> – odabrani postotak kao prsten, pojedinosti kad prijeđete mišem.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden>
+      <div class="two" data-i18n="tabs.p2"><div><h4>1 · Lokalni zapisnik <span class="chip">zadano · bez prijave</span></h4><p>Čita zapisnik potrošnje koji Claude Desktop već vodi na vašem računalu. Ništa se nikamo ne šalje. Mjeri samo ovo računalo i osvježava se otprilike svakih 5 minuta.</p></div><div><h4>2 · claude.ai <span class="chip">svi uređaji</span></h4><p>Ista prijava u pregledniku kojom se služi Claude Code – bez ugrađenog preglednika, bez upisivanja lozinke u aplikaciju. Točna vremena reseta s poslužitelja, osvježavanje otprilike svake 2 minute.</p></div></div>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden>
+      <ul class="ticks" data-i18n="tabs.p3"><li><b>Bez telemetrije.</b> Aplikacija nema analitiku i ne „javlja se kući“ – samo na ovoj stranici provjerava postoji li novija verzija.</li><li><b>Vaš token ostaje vaš.</b> Šifriran pomoću Windows DPAPI-ja ili pohranjen u privjesku ključeva macOS-a. Nikad u običnoj datoteci.</li><li><b>Razgovori se nikad ne čitaju.</b> Iz lokalnih zapisnika koriste se samo naziv modela, broj tokena i vremenske oznake.</li><li><b>Provjerena ažuriranja.</b> Samo HTTPS; svako se preuzimanje prije instalacije provjerava prema SHA-256 sažetku, a ako provjera ne uspije, vraća se stara verzija.</li><li><b>Otvoreni kôd.</b> Ne vjerujte – provjerite: cijeli izvorni kôd nalazi se na GitHubu pod licencom MIT.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden>
+      <table class="keys" data-i18n="tabs.p4"><tr><th>Povlačenje</th><td>premješta panel (prianja uz rubove zaslona)</td></tr><tr><th>Desni klik</th><td>izbornik: raspored, tema, veličina, jezik, postavke</td></tr><tr><th>Dvoklik</th><td>prozor povijesti i statistike</td></tr><tr><th>Ctrl + kotačić</th><td>promjena veličine</td></tr><tr><th>Klik na ikonu u području obavijesti</th><td>sakrij / prikaži panel</td></tr></table>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-5" aria-labelledby="tb-5" hidden>
+      <ul class="ticks" data-i18n="tabs.p5"><li><b>Izgled</b> – 6 tema, vlastita boja naglaska, 3 rasporeda, veličina, neprozirnost, uvijek na vrhu, zaključavanje položaja, propuštanje klikova.</li><li><b>Sadržaj</b> – koji mjerači, njihov redoslijed i veličina, krivulja trenda, brzina potrošnje, odbrojavanje.</li><li><b>Upozorenja</b> – prag upozorenja i kritični prag (zadano 70 % / 90 %), obavijesti o resetu i zastarjelim podacima.</li><li><b>Sustav</b> – pokretanje s računalom, automatska ažuriranja, 34 jezika.</li></ul>
+    </div>
+    <div class="tabs__panel" role="tabpanel" id="tp-6" aria-labelledby="tb-6" hidden>
+      <div class="cmpwrap"><table class="cmp" data-i18n="tabs.p6"><tr><th></th><th>Claude Usage Monitor</th><th>Claudeova stranica Settings → Usage</th><th>Terminalski alati koji čitaju zapisnike Claude Codea</th></tr><tr><th>Uvijek vidljivo dok radite</th><td>Da – widget uvijek na vrhu i ikona u području obavijesti</td><td>Ne – morate je otvoriti</td><td>Samo u otvorenom terminalu</td></tr><tr><th>Windows i macOS</th><td>Da, jedna aplikacija za oba</td><td>Da (web-stranica)</td><td>Ovisi, naredbeni redak</td></tr><tr><th>Treba terminal</th><td>Ne</td><td>Ne</td><td>Da</td></tr><tr><th>Računa claude.ai, Claude Desktop i Claude Code na svim uređajima</th><td>Da, uz prijavu na claude.ai</td><td>Da</td><td>Ne – samo Claude Code na ovom računalu</td></tr><tr><th>Tempo, brzina potrošnje i projekcija do kraja tjedna</th><td>Da</td><td>Ne</td><td>Neki</td></tr><tr><th>Upozorenja na vlastitim pragovima</th><td>Da (zadano 70 % / 90 %)</td><td>Ne</td><td>Rijetko</td></tr><tr><th>Cijena</th><td>Besplatno, otvoreni kôd (MIT)</td><td>Uključeno u vaš paket</td><td>Uglavnom besplatno</td></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THEMES ============================ -->
+<section class="sec sec--tint" id="themes">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="th.eyebrow">Prilagodite ga sebi</p>
+    <h2 data-i18n="th.h2">6 tema. 3 rasporeda. Isprobajte ih odmah ovdje.</h2>
+    <div class="studio">
+      <div class="studio__view">
+        <div class="stage__glow" aria-hidden="true"></div>
+        <img id="studio-img" src="../img/panel-midnight.webp" width="636" height="380" data-i18n-attr="alt:img.studio" loading="lazy" decoding="async" alt="Claude Usage Monitor u odabranoj temi i rasporedu">
+      </div>
+      <div class="studio__ctl">
+        <h3 class="studio__lbl" data-i18n="th.theme">Tema</h3>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" aria-checked="true" data-theme="midnight" style="--a:#78a2ff;--b:#141824"><i></i><span data-i18n="th.midnight">Ponoćno staklo</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="claude" style="--a:#d97757;--b:#1c1816"><i></i><span data-i18n="th.claude">Claude (topla tamna)</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="graphite" style="--a:#a8b0be;--b:#18191b"><i></i><span data-i18n="th.graphite">Grafit</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="neon" style="--a:#5eeaff;--b:#0b0d14"><i></i><span data-i18n="th.neon">Neonski sjaj</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="paper" style="--a:#3a6ee8;--b:#fcfcfd"><i></i><span data-i18n="th.paper">Svijetli papir</span></button>
+          <button type="button" role="radio" aria-checked="false" data-theme="postit" style="--a:#c45c28;--b:#ffe478"><i></i><span data-i18n="th.postit">Post-it žuta</span></button>
+        </div>
+        <p class="studio__desc" id="theme-desc" data-i18n="th.d_midnight">Tamnoplavo staklo s hladnim sjajem. Zadana tema – mirna, čitljiva i kao kod kuće na svakoj tamnoj radnoj površini.</p>
+        <h3 class="studio__lbl" data-i18n="th.layout">Raspored</h3>
+        <div class="seg" id="layouts" role="radiogroup" aria-label="Layout">
+          <button type="button" role="radio" aria-checked="true" data-layout="panel" data-i18n="th.l_card">Kartica</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="ring" data-i18n="th.l_ring">Prstenovi</button>
+          <button type="button" role="radio" aria-checked="false" data-layout="compact" data-i18n="th.l_bar">Uska traka</button>
+        </div>
+        <p class="studio__note" data-i18n="th.note">Uz to vlastita boja naglaska, veličina od 70 % do 200 % i neprozirnost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICE ============================ -->
+<section class="sec wrap price" id="price">
+  <div class="price__card reveal">
+    <p class="eyebrow" data-i18n="price.eyebrow">Cijena</p>
+    <div class="price__num"><span>0</span><small>Ft · € · $</small></div>
+    <h2 data-i18n="price.h2">Besplatno. Sve. Zauvijek.</h2>
+    <ul class="price__list" data-i18n="price.list"><li>Puna verzija – druge nema</li><li>Bez demoverzije, bez probnog razdoblja, bez vremenskog ograničenja</li><li>Bez razine „Pro“, bez zaključanih funkcija</li><li>Bez oglasa, bez registracije, bez prikupljanja podataka</li><li>Besplatna ažuriranja, automatski</li></ul>
+  </div>
+</section>
+
+<!-- ============================ DOWNLOAD ============================ -->
+<section class="sec sec--tint" id="download">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="dls.eyebrow">Preuzimanje</p>
+    <h2 data-i18n="dls.h2">Uvijek najnovija verzija. Uvijek besplatno.</h2>
+    <div class="dlcards">
+      <article class="dlcard dlcard--win" data-os="win">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><div><h3>Windows</h3><p>Windows 10 / 11 · 64-bit</p></div><span class="freebadge" data-i18n="dls.free">BESPLATNO</span></header>
+        <a class="btn btn--xl btn--acc" data-dl="win" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_win">Preuzmite za Windows</span></a>
+        <p class="dlmeta"><span data-i18n="dls.version">Verzija</span> <b data-win="version">2.7.1</b> · <span data-win="size">47 MB</span> · <span data-win="date">2026-10-07</span></p>
+        <details><summary data-i18n="dls.how">Kako instalirati (3 koraka)</summary>
+          <ol data-i18n="dls.win_steps"><li><b>Raspakirajte cijelu zip-datoteku</b> (desni klik → Izdvoji sve…).</li><li>Dvokliknite <code>INSTALL.bat</code>.</li><li>Odgovorite na dva pitanja – Enter prihvaća preporučeni odgovor. Gotovo.</li></ol>
+          <p class="fine" data-i18n="dls.win_note">Administratorska prava nisu potrebna. Ako Windows prikaže poruku „Windows je zaštitio vaše računalo“: Više informacija → Svejedno pokreni. Aplikacija je otvorenog kôda, ali nije digitalno potpisana.</p>
+        </details>
+        <details><summary data-i18n="dls.verify">Provjerite preuzetu datoteku (SHA-256)</summary><code class="sha" data-win="sha">1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974</code><p class="fine">PowerShell: <code>Get-FileHash .\ClaudeUsageMonitor-Setup-*.zip</code></p></details>
+      </article>
+      <article class="dlcard dlcard--mac" data-os="mac">
+        <header><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><div><h3>macOS</h3><p><span data-mac="requires">macOS 12 or newer</span> · <span data-mac="arch">Apple Silicon</span></p></div><span class="freebadge" data-i18n="dls.free">BESPLATNO</span></header>
+        <a class="btn btn--xl btn--light" data-dl="mac" href="https://claudeusagemonitor.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dls.btn_mac">Preuzmite za macOS</span></a>
+        <p class="dlmeta" id="mac-meta"><span data-i18n="dls.version">Verzija</span> <b data-mac="version">2.6.1</b> · <span data-mac="size">29 MB</span> · <span data-mac="date">2026-09-21</span></p>
+        <p class="dlmeta" id="mac-soon" hidden data-i18n="dls.mac_soon">Verzija za macOS je na putu – navratite uskoro.</p>
+        <details><summary data-i18n="dls.how">Kako instalirati (3 koraka)</summary>
+          <ol data-i18n="dls.mac_steps"><li>Otvorite zip-datoteku i povucite <b>ClaudeUsageMonitor</b> u mapu <b>Aplikacije</b>.</li><li>Prvo pokretanje: <b>desni klik → Otvori</b> (Apple nije ovjerio aplikaciju).</li><li>Potražite ikonu u traci izbornika. Gotovo.</li></ol>
+        </details>
+        <details><summary data-i18n="dls.verify">Provjerite preuzetu datoteku (SHA-256)</summary><code class="sha" data-mac="sha">86d75d796269812dbc7b1050ef1f207c1a367a45fd5965f1090daefc3c8f76c9</code><p class="fine">Terminal: <code>shasum -a 256 ClaudeUsageMonitor-macOS-*.zip</code></p></details>
+      </article>
+    </div>
+    <p class="counter counter--big" data-counter hidden><b data-count="total">0</b> <span data-i18n="counter.label">preuzimanja s ove stranice dosad</span> <i>·</i> Windows <b data-count="win">0</b> <i>·</i> macOS <b data-count="mac">0</b></p>
+    <p class="fine dlterms" data-i18n="dls.terms">Preuzimanjem prihvaćate <a href="#terms" data-legal="terms">Uvjete korištenja</a>: aplikacija i Backup Kit besplatni su i pružaju se „kakvi jesu“, bez jamstva, na vlastitu odgovornost.</p>
+    <p class="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg><span data-i18n="dls.auto">Ovi gumbi uvijek vode na najnovije izdanje – a nakon instalacije aplikacija se sama ažurira.</span></p>
+  </div>
+</section>
+
+<!-- ============================ WHAT'S NEW ============================ -->
+<section class="sec wrap" id="whatsnew">
+  <p class="eyebrow" data-i18n="new.eyebrow">Aktivan razvoj</p>
+  <h2><span data-i18n="new.h2">Novosti u verziji</span> <span class="grad" data-win="version">2.7.1</span></h2>
+  <p class="langnote" id="notes-langnote" hidden data-i18n="new.langnote">Napomene o izdanju pišu se na engleskom i mađarskom.</p>
+  <ul class="notes" id="notes"><li>Bolja vidljivost u prozoru „Poruka programeru”: ocjena sada prikazuje veće, jasno vidljive zvjezdice, a obvezni potvrdni okvir za privolu nalazi se u istaknutom polju – ako pokušate poslati poruku bez označavanja, polje postaje crveno. Možete ga označiti i klikom na tekst pokraj njega.</li><li>Svi potvrdni okviri u programu (Postavke, prozor za poruke) sada su jasno vidljivi na tamnoj pozadini: svijetli rub, a kad su uključeni, narančasti kvadratić s bijelom kvačicom.</li></ul>
+  <details class="older" id="older">
+    <summary data-i18n="new.older">Ranije verzije</summary>
+    <div class="timeline" id="timeline"></div>
+    <p class="fine"><a href="../CHANGELOG.md">CHANGELOG.md</a></p>
+  </details>
+
+  <div class="subscribe" id="subscribe">
+    <div class="subscribe__txt">
+      <h3 data-i18n="sub.h">Primite e-poruku kad izađe nova verzija</h3>
+      <p data-i18n="sub.p">Samo novosti o izdanjima – nekoliko kratkih redaka po verziji. Nikakvog marketinga, nikada. Odjava jednim klikom.</p>
+    </div>
+    <form class="subscribe__form" id="sub-form" novalidate>
+      <div class="subscribe__row">
+        <input name="email" type="email" maxlength="120" autocomplete="email" required placeholder="you@example.com" data-i18n-attr="aria-label:sub.email" aria-label="E-mail address">
+        <select name="os" data-i18n-attr="aria-label:sub.os" aria-label="Platform">
+          <option value="both" data-i18n="sub.os_both">Windows + macOS</option>
+          <option value="win">Windows</option>
+          <option value="mac">macOS</option>
+        </select>
+        <button class="btn btn--acc" type="submit"><span data-i18n="sub.btn">Obavijestite me</span></button>
+      </div>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="consent" type="checkbox" required><span data-i18n="sub.consent">Pristajem da se moja adresa e-pošte koristi za slanje obavijesti o novim izdanjima, kako je opisano u <a href="#privacy" data-legal="privacy">Pravilima privatnosti</a>. Ovu privolu mogu povući u bilo kojem trenutku.</span></label>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Zaštićeno od neželjene pošte uslugom reCAPTCHA – primjenjuju se Googleova <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Pravila o privatnosti</a> i <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Uvjeti pružanja usluge</a>.</p>
+      <p class="form__status" id="sub-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ WHO / AUTHOR / RECOMMENDATIONS ============================ -->
+<section class="sec sec--tint" id="who">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="who.eyebrow">Preporučeno za</p>
+    <h2 data-i18n="who.h2">Ako se prepoznajete u nečemu od ovoga, svidjet će vam se.</h2>
+    <div class="who">
+      <div class="who__i reveal"><b data-i18n="who.1t">Programeri koji rade u Claude Codeu</b><span data-i18n="who.1d">Dugi zadaci agenata brzo troše sesiju od 5 sati. Vidite to prije nego što vas zaustavi usred posla.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.2t">Pretplatnici na Pro i Max</b><span data-i18n="who.2d">Izvucite najviše iz onoga što plaćate – a da već u četvrtak ne udarite u zid.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.3t">Korisnici s mnogo uređaja</b><span data-i18n="who.3d">Mobitel, preglednik, prijenosnik, stolno računalo: jedna poštena brojka za sve.</span></div>
+      <div class="who__i reveal"><b data-i18n="who.4t">Svi koji vole urednu radnu površinu</b><span data-i18n="who.4d">Mali, lijepi panel koji ne smeta – ili se smanji u usku traku.</span></div>
+    </div>
+
+    <div class="reviews" id="reviews" hidden>
+      <h3 class="reviews__h" data-i18n="rev.h">Što kažu korisnici</h3>
+      <p class="reviews__sum" id="rating-sum" hidden><span class="quote__stars" aria-hidden="true">★★★★★</span> <b data-r="avg">0</b> / 5 · <span data-i18n="rev.count">ocjene poslane iz aplikacije</span>: <b data-r="count">0</b></p>
+      <div id="testimonials" class="quotes"></div>
+      <p class="fine reviews__how" data-i18n="rev.how">Ovdje se pojavljuju samo poruke za koje je pošiljatelj pristao da se objave i koje je autor pročitao. Koristite aplikaciju? Desni klik na panel → <b>Poruka programeru…</b> – ocijenite je i recite mi što mislite.</p>
+    </div>
+
+    <figure class="author reveal">
+      <div class="author__badge" aria-hidden="true">VG</div>
+      <blockquote data-i18n="author.quote">„Napravio sam ga za sebe, jer sam usred posla stalno udarao u ograničenje. Onda sam ga dotjerivao sve dok ga nisam rado gledao cijeli dan. Besplatan je jer takav alat to i treba biti – koristite ga, uživajte i recite mi što mislite.“</blockquote>
+      <figcaption><b>Vidovics Gábor</b><span data-i18n="author.role">autor i programer aplikacije Claude Usage Monitor · Mađarska</span></figcaption>
+      <div class="author__links">
+        <a class="btn btn--ghost" href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="author.gh">Izvorni kôd na GitHubu</span></a>
+        <a class="btn btn--ghost" href="#feedback"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="author.write">Pišite mi</span></a>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec wrap" id="faq">
+  <p class="eyebrow">FAQ</p>
+  <h2 data-i18n="faq.h2">Pitanja o ograničenjima potrošnje Claudea – kratki odgovori.</h2>
+  <div class="faq">
+    <details><summary data-i18n="faq.q1">Je li stvarno besplatno? Gdje je kvaka?</summary><p data-i18n="faq.a1">Stvarno je besplatno i nema kvake. Nije demo, nije probna verzija i nije okrnjeno izdanje – ovo je puna i jedina verzija. Bez oglasa, bez plaćene razine, bez prikupljanja podataka. Izvorni kôd javno je dostupan pod licencom MIT.</p></details>
+    <details><summary data-i18n="faq.q8">Kako provjeriti potrošnju Claudea bez otvaranja postavki?</summary><p data-i18n="faq.a8">Instalirajte Claude Usage Monitor: sesiju od pet sati, tjedno ograničenje i ograničenje po modelu stalno drži na zaslonu – kao mali widget uvijek iznad ostalih prozora i kao postotak u području obavijesti ili traci izbornika. Claudeove vlastite brojke nalaze se pod Settings → Usage; widget prikazuje ista ograničenja bez ikakvog klikanja.</p></details>
+    <details><summary data-i18n="faq.q9">Kada se resetiraju sesija od 5 sati i tjedno ograničenje u Claudeu?</summary><p data-i18n="faq.a9">Ograničenje temeljeno na sesiji resetira se svakih pet sati. Tjedno ograničenje resetira se jednom tjedno u fiksno vrijeme koje Anthropic dodjeljuje vašem računu, pa se razlikuje od osobe do osobe. Widget uživo odbrojava do oba reseta – uz prijavu na claude.ai koristi točna vremena s poslužitelja tvrtke Anthropic.</p></details>
+    <details><summary data-i18n="faq.q10">Računa li se potrošnja Claude Codea u moje ograničenje na claude.ai?</summary><p data-i18n="faq.a10">Da. Prema tvrtki Anthropic, potrošnja na claude.ai, u Claude Desktopu i u Claude Codeu računa se u isto ograničenje potrošnje. Zato način rada claude.ai u widgetu prikazuje jednu brojku za sve vaše uređaje i aplikacije, a ne samo za računalo na kojem radi.</p></details>
+    <details><summary data-i18n="faq.q11">Je li ovo isto što i „Claude Code Usage Monitor“?</summary><p data-i18n="faq.a11">Nije. „Claude Code Usage Monitor“ zaseban je terminalski alat drugog autora. Claude Usage Monitor, čiji je autor Gábor Vidovics, grafički je widget za Windows i macOS s ikonom u području obavijesti, temama i upozorenjima, a naredbeni redak mu ne treba.</p></details>
+    <details><summary data-i18n="faq.q13">Kako mogu ocijeniti Claude Usage Monitor ili poslati povratnu informaciju?</summary><p data-i18n="faq.a13">Desnom tipkom kliknite panel i odaberite „Poruka programeru…“ ili kliknite ikonu poruke u zaglavlju panela. Možete dati od jedne do pet zvjezdica, napisati poruku i – samo ako to označite – dopustiti da se vaša ocjena i ime prikažu na ovoj web-stranici. Svaku poruku čita autor, Gábor Vidovics, i ništa se ne objavljuje bez vašeg pristanka. Bez aplikacije upotrijebite obrazac na dnu ove stranice.</p></details>
+    <details><summary data-i18n="faq.q14">Na kojim je jezicima dostupan Claude Usage Monitor?</summary><p data-i18n="faq.a14">Na 34 jezika: na svim službenim jezicima Europske unije te na japanskom, korejskom, pojednostavnjenom i tradicionalnom kineskom, indonezijskom i vijetnamskom – s posebnim verzijama za europski i brazilski portugalski te za španjolski iz Španjolske i Latinske Amerike. Aplikacija sama odabire jezik vašeg sustava, a ova web-stranica također postoji na svakom od tih jezika.</p></details>
+    <details><summary data-i18n="faq.q15">Radi li s paketima Claude Pro, Max, Team i Enterprise?</summary><p data-i18n="faq.a15">Da. Prikazuje ograničenja vašeg paketa Claude – Pro, Max 5×, Max 20×, Team ili Enterprise – ista ona koja Claude navodi pod Settings → Usage, a oznaka paketa u zaglavlju panela pokazuje koji paket koristite.</p></details>
+    <details><summary data-i18n="faq.q12">Može li Claude Usage Monitor pokazati jesu li moje datoteke za Claude sigurnosno kopirane?</summary><p data-i18n="faq.a12">Da – i to također besplatno. Kad je uključena traka stanja sigurnosnih kopija, tri lampice na panelu pokazuju jesu li svježe sigurnosna kopija na OneDriveu, kopija u drugom oblaku poput Nextclouda i kopija vašeg Obsidian trezora: zelena do 24 sata, žuta do 48, crvena kad je kopija starija ili je nema, a crveni prsten kad posljednje pokretanje nije uspjelo. Monitor samo čita zapisnike sigurnosnih kopija; samu kopiju izrađuje besplatni Claude Backup Kit, koji svaki dan kopira vaše vještine za Claude Code, CLAUDE.md, memoriju projekata, postavke programa Claude Desktop i zapisnike agenata – nikad token za prijavu. Paket je besplatna polazna točka koju svatko može mijenjati, pa ne preuzimamo nikakvu odgovornost za sigurnosne kopije: svaki je korisnik sam odgovoran za to da su potpune i da se mogu vratiti.</p></details>
+    <details><summary data-i18n="faq.q2">Je li ovo službeni proizvod tvrtke Anthropic?</summary><p data-i18n="faq.a2">Nije. Riječ je o neovisnom alatu zajednice koji je izradio Gábor Vidovics. Nije povezan s tvrtkom Anthropic. „Claude“ je zaštitni znak tvrtke Anthropic, PBC.</p></details>
+    <details><summary data-i18n="faq.q3">Moram li mu dati svoju lozinku?</summary><p data-i18n="faq.a3">Nikada. Bez prijave čita lokalni zapisnik programa Claude Desktop. Ako želite sve uređaje, prijavljujete se na claude.ai u vlastitom pregledniku – aplikacija nikad ne vidi vašu lozinku.</p></details>
+    <details><summary data-i18n="faq.q4">Windows me upozorava kad ga pokrenem. Zašto?</summary><p data-i18n="faq.a4">Zato što aplikacija nije digitalno potpisana (certifikati koštaju, a aplikacija je besplatna). Kliknite Više informacija → Svejedno pokreni. Preuzetu datoteku možete provjeriti njezinim SHA-256 kontrolnim zbrojem, a izvorni kôd pročitati na GitHubu.</p></details>
+    <details><summary data-i18n="faq.q5">Koji su Macovi podržani?</summary><p data-i18n="faq.a5">macOS 12 ili noviji. Kartica za preuzimanje iznad uvijek pokazuje za koji je procesor trenutačna verzija. Verzija za macOS je nova – povratne informacije su vrlo dobrodošle.</p></details>
+    <details><summary data-i18n="faq.q6">Kako funkcioniraju ažuriranja?</summary><p data-i18n="faq.a6">Aplikacija nekoliko puta dnevno provjerava ovu stranicu. Kad postoji nova verzija, javit će vam; jednim je klikom preuzima, provjerava i instalira, a zatim se ponovno pokreće. To možete isključiti.</p></details>
+    <details><summary data-i18n="faq.q7">Kako ga ukloniti?</summary><p data-i18n="faq.a7">Windows: Postavke → Aplikacije → Instalirane aplikacije → Claude Usage Monitor → Deinstaliraj. macOS: povucite aplikaciju u Smeće. To je sve.</p></details>
+  </div>
+</section>
+
+<!-- ============================ FEEDBACK ============================ -->
+<section class="sec sec--tint" id="feedback">
+  <div class="wrap fb">
+    <div class="fb__txt">
+      <p class="eyebrow" data-i18n="fb.eyebrow">Razgovarajte s autorom</p>
+      <h2 data-i18n="fb.h2">Ideja? Pogreška? Ili vam se jednostavno sviđa? Javite mi.</h2>
+      <p data-i18n="fb.p">Vašu poruku primam izravno ja, Gábor Vidovics, i čitam svaku. Adresu e-pošte ostavite samo ako želite odgovor.</p>
+      <p class="fine" data-i18n="fb.privacy">Vaša se poruka koristi samo za odgovor vama i za poboljšanje aplikacije – pojedinosti su u <a href="#privacy" data-legal="privacy">Pravilima privatnosti</a>.</p>
+    </div>
+    <form class="form" id="fb-form" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="fb.name">Ime</span><input name="name" type="text" maxlength="80" autocomplete="name" required></label>
+        <label><span><span data-i18n="fb.email">E-pošta</span> <i data-i18n="fb.optional">(neobavezno)</i></span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="fb.topic">O čemu se radi?</span>
+        <select name="topic">
+          <option value="feedback" data-i18n="fb.t_feedback">Povratna informacija</option>
+          <option value="idea" data-i18n="fb.t_idea">Ideja / prijedlog nove funkcije</option>
+          <option value="bug" data-i18n="fb.t_bug">Prijava pogreške</option>
+          <option value="recommend" data-i18n="fb.t_rec">Preporučujem! (preporuka)</option>
+          <option value="other" data-i18n="fb.t_other">Nešto drugo</option>
+        </select>
+      </label>
+      <label><span data-i18n="fb.msg">Poruka</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input name="publish" type="checkbox"><span data-i18n="fb.publish">Moju poruku smijete objaviti na ovoj stranici kao preporuku (samo s mojim imenom).</span></label>
+      <button class="btn btn--xl btn--acc" type="submit"><span data-i18n="fb.send">Pošalji poruku</span></button>
+      <p class="fine rcnote" data-if-recaptcha hidden data-i18n="fb.recaptcha">Zaštićeno od neželjene pošte uslugom reCAPTCHA – primjenjuju se Googleova <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Pravila o privatnosti</a> i <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Uvjeti pružanja usluge</a>.</p>
+      <p class="form__status" id="fb-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="aurora aurora--low" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap final__in">
+    <h2 data-i18n="final.h2">Za dvije minute znat ćete točno na čemu ste.</h2>
+    <div class="dlrow">
+      <a class="osbtn osbtn--win" data-dl="win" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-win"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>Windows</b></span></a>
+      <a class="osbtn osbtn--mac" data-dl="mac" href="#download"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-apple"/></svg><span class="osbtn__t"><small data-i18n="dl.free_for">Besplatno preuzimanje za</small><b>macOS</b></span></a>
+    </div>
+    <p class="hero__free" data-i18n="hero.free_line"><b>Besplatno. Zauvijek.</b> Nije demo. Nije probna verzija. Ništa nije zaključano.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p class="foot__brand">Claude Usage Monitor <span data-win="version">2.7.1</span></p>
+      <p><span data-i18n="foot.made">Dizajnirao i izradio</span> <b>Vidovics Gábor</b> · © <span id="year">2026</span></p>
+      <p class="fine" data-i18n="foot.disclaimer">Neslužbeni alat zajednice, nije povezan s tvrtkom Anthropic. „Claude“ je zaštitni znak tvrtke Anthropic, PBC.</p>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://github.com/gaborvidovics76/ClaudeUsageMonitor/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="foot.licence">Licenca MIT</a>
+      <a href="../CHANGELOG.md" data-i18n="foot.changelog">Popis promjena</a>
+      <a href="#feedback" data-i18n="foot.contact">Kontakt</a>
+      <a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Pravila privatnosti</a>
+      <a href="#imprint" data-legal="imprint" data-i18n="foot.imprint">Impresum</a>
+      <a href="#terms" data-legal="terms" data-i18n="foot.terms">Uvjeti korištenja</a>
+      <a href="#cookies" id="cookie-settings" hidden data-i18n="foot.cookies">Postavke kolačića</a>
+    </nav>
+  </div>
+  <p class="foot__nocookie wrap" id="nocookie" data-i18n="foot.nocookie">Ova stranica ne koristi kolačiće ni alate za praćenje i ne učitava ništa od trećih strana.</p>
+</footer>
+
+<!-- legal texts open here (privacy / imprint / terms) -->
+<dialog class="dlg" id="legal-dlg" aria-labelledby="legal-title">
+  <form method="dialog" class="dlg__bar"><h2 id="legal-title">…</h2><button class="iconbtn" value="close" data-i18n-attr="aria-label:a11y.close" aria-label="Zatvori">✕</button></form>
+  <p class="dlg__note" id="legal-langnote" hidden data-i18n="legal.langnote">Pravni tekstovi dostupni su na mađarskom i engleskom. Mjerodavna je mađarska verzija.</p>
+  <div class="dlg__body legal" id="legal-body"></div>
+</dialog>
+
+<!-- messages after the e-mail links (confirmed / unsubscribe) -->
+<dialog class="dlg dlg--sm" id="sub-dlg">
+  <div class="dlg__body">
+    <h2 id="sub-dlg-title">…</h2>
+    <p id="sub-dlg-text"></p>
+    <div class="dlg__actions">
+      <button class="btn btn--acc" id="sub-dlg-yes" type="button" hidden><span data-i18n="sub.unsub_yes">Da, odjavi me</span></button>
+      <form method="dialog"><button class="btn btn--ghost" value="close"><span data-i18n="a11y.close">Zatvori</span></button></form>
+    </div>
+  </div>
+</dialog>
+
+<!-- cookie consent: only ever shown when a Google measurement ID is configured in config.json -->
+<div class="consent" id="consent" role="dialog" aria-labelledby="consent-h" hidden>
+  <h2 id="consent-h" data-i18n="ck.h">Kolačići – vi odlučujete</h2>
+  <p data-i18n="ck.p">Stranica u potpunosti radi bez kolačića. Uz vaše dopuštenje Googleovo mjerenje pomaže autoru vidjeti koliko ljudi posjećuje stranicu. Ništa se ne učitava dok ne pristanete.</p>
+  <div class="consent__opts" id="consent-opts" hidden>
+    <label class="check"><input type="checkbox" checked disabled><span data-i18n="ck.need">Nužno – pamćenje vašeg jezika i ovog odabira (bez kolačića, samo lokalna pohrana)</span></label>
+    <label class="check"><input type="checkbox" id="ck-analytics"><span data-i18n="ck.analytics">Statistika – Google Analytics</span></label>
+    <label class="check" id="ck-ads-row" hidden><input type="checkbox" id="ck-ads"><span data-i18n="ck.ads">Marketing – mjerenje konverzija Google Ads</span></label>
+  </div>
+  <div class="consent__btns">
+    <button class="btn btn--acc" type="button" id="ck-reject"><span data-i18n="ck.reject">Odbij</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-custom"><span data-i18n="ck.custom">Postavke</span></button>
+    <button class="btn btn--ghost" type="button" id="ck-save" hidden><span data-i18n="ck.save">Spremi moj odabir</span></button>
+    <button class="btn btn--acc" type="button" id="ck-accept"><span data-i18n="ck.accept">Prihvati sve</span></button>
+  </div>
+  <p class="fine"><a href="#privacy" data-legal="privacy" data-i18n="foot.privacy">Pravila privatnosti</a></p>
+</div>
+
+<!-- "this page exists in your language" - a suggestion, never a redirect -->
+<div class="langhint" id="langhint" hidden><a id="langhint-go" href="./"></a><button type="button" id="langhint-x" aria-label="Close">✕</button></div>
+
+<!-- mobile sticky bar -->
+<div class="mbar" id="mbar" hidden>
+  <span><b data-i18n="hero.pill_free">100 % BESPLATNO</b> · Windows + macOS</span>
+  <button class="btn btn--sm btn--acc" id="share-bar" type="button"><span data-i18n="mobile.send_short">Pošalji poveznicu na moje računalo</span></button>
+</div>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.5 4v7.5H3zM11.5 3.9 21 2.5v9h-9.5zM3 12.5h7.5V20L3 18.9zM11.5 12.5H21v9l-9.5-1.4z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9s-1.800-.8-3-.8c-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7 2-1.100 2.800-2.300c.9-1.300 1.200-2.500 1.300-2.600-.100 0-2.500-1-2.500-3.800zM14.100 5.700c.6-.8 1.100-1.900.9-3-.900 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.100-.5 2.800-1.300z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.160 19.490c.5.090.680-.220.680-.480v-1.700c-2.780.6-3.370-1.340-3.370-1.340-.450-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.610.070-.610 1 .070 1.530 1.030 1.530 1.030.9 1.530 2.340 1.090 2.910.830.090-.650.350-1.090.640-1.340-2.220-.250-4.560-1.110-4.560-4.940 0-1.090.390-1.980 1.030-2.680-.1-.250-.450-1.270.1-2.650 0 0 .840-.270 2.750 1.020a9.560 9.560 0 0 1 5 0c1.910-1.290 2.750-1.020 2.750-1.020.550 1.380.2 2.400.1 2.650.640.7 1.030 1.590 1.030 2.680 0 3.840-2.340 4.680-4.570 4.930.360.310.680.920.680 1.850v2.750c0 .270.180.580.690.480A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 3 2.800 15 0 18M12 3c-2.800 3-2.800 15 0 18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.500-4.500M12 15l4.500-4.500M5 20h14"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7s-1-4-4-4a2 2 0 0 0 0 4zM12 7s1-4 4-4a2 2 0 0 1 0 4z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M13.500 4l-3 16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.500 3.200 8 8 9 4.800-1 8-4.500 8-9V6zM9 12l2.200 2.200L15.500 10"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 0 0-14.500-3.500M4 4v4h4M4 13a8 8 0 0 0 14.500 3.500M20 20v-4h-4"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4.500 17a8.500 8.500 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.500" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5h13v9H3zM1.500 17h12M17 9h4.500v11H17z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5zM3 12.500l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4M12 15v2.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<script id="um-hints" type="application/json">{"en":"This page is also available in English","bg":"Тази страница е достъпна и на български","cs":"Tato stránka je k dispozici i v češtině","da":"Denne side findes også på dansk","de":"Diese Seite gibt es auch auf Deutsch","et":"See leht on saadaval ka eesti keeles","el":"Αυτή η σελίδα είναι διαθέσιμη και στα ελληνικά","es":"Esta página también está disponible en español","es-419":"Esta página también está disponible en español de Latinoamérica","fr":"Cette page existe aussi en français","ga":"Tá an leathanach seo ar fáil i nGaeilge freisin","hr":"Ova je stranica dostupna i na hrvatskom","id":"Halaman ini juga tersedia dalam bahasa Indonesia","it":"Questa pagina è disponibile anche in italiano","lv":"Šī lapa ir pieejama arī latviešu valodā","lt":"Šį puslapį galima skaityti ir lietuviškai","hu":"Ez az oldal magyarul is elérhető","mt":"Din il-paġna hija disponibbli wkoll bil-Malti","nl":"Deze pagina is ook beschikbaar in het Nederlands","pl":"Ta strona jest dostępna także po polsku","pt":"Esta página também está disponível em português","pt-pt":"Esta página também está disponível em português europeu","ro":"Această pagină este disponibilă și în limba română","ru":"Эта страница есть и на русском языке","sk":"Táto stránka je dostupná aj po slovensky","sl":"Ta stran je na voljo tudi v slovenščini","fi":"Tämä sivu on saatavilla myös suomeksi","sv":"Den här sidan finns även på svenska","tr":"Bu sayfa Türkçe olarak da mevcut","vi":"Trang này cũng có bằng tiếng Việt","ja":"このページは日本語でもご覧いただけます","ko":"이 페이지는 한국어로도 볼 수 있어요","zh-cn":"本页面也提供简体中文版","zh-tw":"本頁也提供繁體中文版"}</script>
+<script src="../assets/site.js?v=10" defer></script>
+</body>
+</html>

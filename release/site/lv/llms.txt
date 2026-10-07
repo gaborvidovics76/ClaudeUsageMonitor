@@ -1,0 +1,78 @@
+# Claude Usage Monitor (Latviešu)
+
+> Bezmaksas Claude Usage Monitor Windows un macOS: Claude lietojuma limiti tiešraidē – 5 stundu sesija, nedēļas limits, laiks līdz atiestatīšanai un brīdinājumi.
+
+Claude Usage Monitor ir bezmaksas atvērtā pirmkoda darbvirsmas logrīks Windows 10/11 un macOS, kas reāllaikā rāda jūsu Claude abonementa lietojuma limitus – 5 stundu sesiju, nedēļas limitu un modeļa nedēļas limitu, katram ar atlikušo laiku līdz atiestatīšanai. Tas paliek virs citiem logiem, tāpēc Claude lietojumu varat pārbaudīt, neatverot „Settings → Usage” un bez termināļa.
+
+Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskaitīts jūsu plānā, – claude.ai, Claude Desktop un Claude Code visās jūsu ierīcēs. Tas nav termināļa rīks „Claude Code Usage Monitor”: šis ir grafisks panelis ar ikonu paziņojumu apgabalā, un komandrinda tam nav vajadzīga.
+
+- **Cena**: Bez maksas – pilna versija, bez maksas līmeņa, bez izmēģinājuma perioda
+- **Platformas**: Windows 10 / 11 (64 bitu) un macOS 12 vai jaunāka
+- **Valodas**: 34 saskarnes valodas
+- **Ko rāda**: 5 stundu sesiju, nedēļas limitu, modeļa nedēļas limitu, atpakaļskaitīšanu līdz atiestatīšanai, tempu un patēriņa ātrumu
+- **Datu avots**: Claude Desktop lokālais žurnāls vai jūsu claude.ai pierakstīšanās visām ierīcēm
+- **Privātums**: Bez telemetrijas, bez reklāmām, pie mums konts nav jāveido
+- **Licence**: MIT, atvērtais pirmkods GitHub
+- **Autors**: Gábor Vidovics, Ungārija – neatkarīgs izstrādātājs, nav saistīts ar Anthropic
+
+- Versija: 2.7.1
+- Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
+- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- https://claudeusagemonitor.com/lv/
+
+## Visi jūsu Claude lietojuma limiti. Vienā skatienā.
+
+- **Ieraugiet laikus**: Zaļš, dzeltens, sarkans. Panelis maina krāsu krietni pirms limita beigām – ar atpakaļskaitīšanu līdz atiestatīšanai un prognozi, kad sasniegsiet 100 %.
+- **Vai tērējat pārāk ātri?**: Tempa rādītājs pasaka, vai jūsu nedēļas limits kūst ātrāk, nekā paiet nedēļa, – un prognozē, kur nonāksiet.
+- **Visas ierīces, viens skaitlis**: Pierakstieties savā pārlūkprogrammā – tāpat kā Claude Code – un redziet arī lietojumu tālrunī, pārlūkprogrammā un visos citos datoros.
+- **Modeļu limiti**: Fable, Opus, Sonnet, Claude Code, lietojuma kredīti – katrs limits, ko norāda serveris, un šīs nedēļas sadalījums starp modeļiem.
+- **Brīdinājumi, kam ir nozīme**: Kluss paziņojums pie 70 % un 90 % (sliekšņus izvēlaties jūs) un tad, kad limits tiek atiestatīts. Nekas cits – nekad.
+- **Tas neizspiego. Punkts.**: Bez telemetrijas, bez analītikas, pie mums konts nav jāveido. Tas sazinās tikai ar Anthropic un tikai par jūsu pašu skaitļiem. Jūsu pierakstīšanās marķieris glabājas šifrēts jūsu datorā – Windows DPAPI vai macOS Keychain.
+- **Visa nedēļa vienā diagrammā**: Veiciet dubultklikšķi uz logrīka: abi limiti uz vienas laika ass – 6 stundas, 24 stundas vai 7 dienas – ar nedēļas maksimumu, vidējo patēriņu dienā un prognozi nedēļas beigām, kas nomaina krāsu, pirms limits ir pārsniegts.
+
+## FAQ
+
+### Vai tiešām bez maksas? Kur ir āķis?
+Tiešām bez maksas, un āķa nav. Tā nav demoversija, nav izmēģinājuma versija un nav apcirpts izdevums – šī ir pilnā un vienīgā versija. Bez reklāmām, bez maksas līmeņa, bez datu vākšanas. Pirmkods ir publiski pieejams ar MIT licenci.
+
+### Vai tas ir oficiāls Anthropic produkts?
+Nē. Tas ir neatkarīgs kopienas rīks, ko izstrādājis Gábor Vidovics. Tas nav saistīts ar Anthropic. „Claude” ir Anthropic, PBC preču zīme.
+
+### Vai man tam jāatklāj sava parole?
+Nekad. Bez pierakstīšanās tas nolasa Claude Desktop lokālo žurnālu. Ja vēlaties redzēt visas ierīces, jūs pierakstāties claude.ai savā pārlūkprogrammā – programma jūsu paroli nekad neredz.
+
+### Windows brīdina, kad to palaižu. Kāpēc?
+Tāpēc, ka programma nav digitāli parakstīta (sertifikāti maksā naudu, bet programma ir bez maksas). Noklikšķiniet uz Papildinformācija → Tomēr palaist. Lejupielādi varat pārbaudīt ar tās SHA-256 kontrolsummu, un pirmkodu varat izlasīt GitHub.
+
+### Kuri Mac datori tiek atbalstīti?
+macOS 12 vai jaunāka. Lejupielādes kartītē augstāk vienmēr redzams, kādam procesoram paredzēta pašreizējā versija. macOS versija ir jauna – atsauksmes ļoti gaidītas.
+
+### Kā notiek atjaunināšana?
+Programma dažas reizes dienā pārbauda šo vietni. Kad iznāk jauna versija, tā par to paziņo; ar vienu klikšķi versija tiek lejupielādēta, pārbaudīta un instalēta, un programma restartējas. To var izslēgt.
+
+### Kā to noņemt?
+Windows: Iestatījumi → Programmas → Instalētās programmas → Claude Usage Monitor → Atinstalēt. macOS: ievelciet programmu atkritnē (Trash). Tas ir viss.
+
+### Kā pārbaudīt Claude lietojumu, neatverot iestatījumus?
+Instalējiet Claude Usage Monitor: tas pastāvīgi rāda ekrānā jūsu 5 stundu sesiju, nedēļas limitu un modeļa limitu – kā mazu logrīku, kas vienmēr ir virs citiem logiem, un kā procentus paziņojumu apgabalā vai izvēļņu joslā. Claude paša skaitļi atrodami sadaļā „Settings → Usage” (Iestatījumi → Lietojums); logrīks rāda tos pašus limitus bez neviena klikšķa.
+
+### Kad tiek atiestatīta Claude 5 stundu sesija un nedēļas limits?
+Uz sesiju balstītais limits tiek atiestatīts ik pēc piecām stundām. Nedēļas limits tiek atiestatīts reizi nedēļā noteiktā laikā, ko Anthropic piešķir jūsu kontam, tāpēc katram tas ir citā laikā. Logrīks rāda tiešraides atpakaļskaitīšanu līdz abām atiestatīšanām – ar claude.ai pierakstīšanos tas izmanto precīzus laikus no Anthropic servera.
+
+### Vai Claude Code lietojums tiek ieskaitīts manā claude.ai limitā?
+Jā. Saskaņā ar Anthropic sniegto informāciju lietojums claude.ai, Claude Desktop un Claude Code tiek ieskaitīts vienā un tajā pašā lietojuma limitā. Tāpēc logrīka claude.ai režīms rāda vienu skaitli visām jūsu ierīcēm un lietotnēm, nevis tikai datoram, kurā tas darbojas.
+
+### Vai tas ir tas pats, kas „Claude Code Usage Monitor”?
+Nē. „Claude Code Usage Monitor” ir atsevišķs, terminālī darbināms cita autora rīks. Claude Usage Monitor, ko izstrādājis Gábor Vidovics, ir grafisks darbvirsmas logrīks Windows un macOS ar ikonu paziņojumu apgabalā, dizainiem un brīdinājumiem, un komandrinda tam nav vajadzīga.
+
+### Vai Claude Usage Monitor var parādīt, vai mani Claude faili ir dublēti?
+Jā – un arī tas ir bez maksas. Kad dublējumu statusa josla ir ieslēgta, trīs indikatori panelī rāda, vai dublējums pakalpojumā OneDrive, otrā mākonī, piemēram, Nextcloud, un jūsu Obsidian glabātavas dublējums ir svaigs: zaļš – līdz 24 stundām, dzeltens – līdz 48, sarkans – ja tas ir vecāks vai tā nav, un sarkans aplis – ja pēdējā palaišana neizdevās. Monitors tikai nolasa dublēšanas žurnālus; pašu dublējumu veido bezmaksas Claude Backup Kit, kas katru dienu kopē jūsu Claude Code prasmes, CLAUDE.md, projektu atmiņu, Claude Desktop iestatījumus un aģentu žurnālus – pierakstīšanās marķieri nekad. Komplekts ir bezmaksas sākumpunkts, ko ikviens var mainīt, tāpēc mēs neuzņemamies atbildību par dublējumiem: katrs lietotājs pats atbild par to, lai tie būtu pilnīgi un atjaunojami.
+
+### Kā novērtēt Claude Usage Monitor vai nosūtīt atsauksmi?
+Noklikšķiniet uz paneļa ar peles labo pogu un izvēlieties „Ziņa izstrādātājam…” vai noklikšķiniet uz ziņas ikonas paneļa galvenē. Varat piešķirt no vienas līdz piecām zvaigznēm, uzrakstīt ziņu un – tikai tad, ja to atzīmējat, – atļaut parādīt savu vērtējumu un vārdu šajā vietnē. Katru ziņu izlasa autors Gábor Vidovics, un bez jūsu piekrišanas nekas netiek publicēts. Ja programma nav pie rokas, izmantojiet veidlapu šīs lapas apakšā.
+
+### Kādās valodās ir pieejams Claude Usage Monitor?
+34 valodās: visās Eiropas Savienības oficiālajās valodās, kā arī japāņu, korejiešu, vienkāršotajā un tradicionālajā ķīniešu, indonēziešu un vjetnamiešu valodā – ar atsevišķām versijām Eiropas un Brazīlijas portugāļu valodai, kā arī Spānijas un Latīņamerikas spāņu valodai. Programma pati izvēlas jūsu sistēmas valodu, un arī šī vietne ir pieejama katrā no šīm valodām.
+
+### Vai tas darbojas ar Claude Pro, Max, Team un Enterprise?
+Jā. Tas rāda tos limitus, kas ir jūsu Claude plānam – Pro, Max 5×, Max 20×, Team vai Enterprise –, tos pašus, ko Claude norāda sadaļā „Settings → Usage”, un plāna emblēma paneļa galvenē parāda, kāds plāns jums ir.
