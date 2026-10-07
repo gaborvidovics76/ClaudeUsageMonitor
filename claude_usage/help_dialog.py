@@ -45,10 +45,16 @@ QLabel a {{ color: #8fb0ff; }}
 """
 
 
+# The website has one page per app language, in lower-case folders; /es/ is Spain's Spanish, /pt/ Brazilian Portuguese.
+SITE_FOLDER = {"es-ES": "es", "pt-BR": "pt", "pt-PT": "pt-pt", "es-419": "es-419", "zh-CN": "zh-cn", "zh-TW": "zh-tw"}
+
+
 def site_url(lang: Optional[str] = None) -> str:
-    """The website in the program's language (/ = English, /hu/, /de/ …)."""
+    """The website in the program's language (/ = English, /hu/, /pt-pt/, /zh-cn/ …)."""
     lang = lang or current_language()
-    return SITE if lang in ("", "en") else f"{SITE}{lang}/"
+    if lang in ("", "en"):
+        return SITE
+    return f"{SITE}{SITE_FOLDER.get(lang, lang.lower())}/"
 
 
 def _link(url: str, text: str) -> str:
