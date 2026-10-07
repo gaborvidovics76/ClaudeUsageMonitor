@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2011-0078D4)](#installation)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776AB)](#run-from-source)
-[![UI languages](https://img.shields.io/badge/UI-12%20languages-brightgreen)](#languages)
+[![UI languages](https://img.shields.io/badge/UI-34%20languages-brightgreen)](#languages)
 
 <p align="center">
   <img src="docs/screenshot-panel.png" alt="Claude Usage Monitor panel on the desktop" width="760">
@@ -48,8 +48,8 @@ is passing.
   adjustable size and opacity, edge snapping, click-through "decoration only" mode.
 - **Alerts** — configurable warning and critical thresholds (70% / 90% by default), plus
   notifications on quota reset and stale data.
-- **12 languages** — the entire interface (panel, menu, tray, settings, history and sign-in),
-  auto-detected from Windows.
+- **34 languages** — the entire interface (panel, menu, tray, settings, history, sign-in and the
+  message-to-the-developer window), auto-detected from the system language.
 - **Starts with Windows** via a proper Scheduled Task (more reliable than a Run registry key),
   and adds a **Start menu** shortcut.
 
@@ -243,15 +243,18 @@ Startup log (in case it ever fails to launch): `%APPDATA%\ClaudeUsageMonitor\sta
 
 ## Languages
 
-The **entire interface** is available in **12 languages** — panel, menu, tray, notifications,
-settings, history and the sign-in window: English, Hungarian, German, French, Spanish, Italian,
-Portuguese, Polish, Dutch, Russian, Czech, Turkish. On first launch it picks up your
-**Windows language** if supported, and falls back to English. You can switch manually from
-**right-click → Language**; the choice is remembered.
+The **entire interface** is available in **34 languages** — panel, menu, tray, notifications,
+settings, history, the sign-in window and the message-to-the-developer window: English, Hungarian, German, French, Spanish (Spain and Latin America), Italian, Portuguese (Portugal and Brazil), Polish, Dutch, Russian, Czech, Turkish, Japanese, Korean, Chinese (Simplified and Traditional), Indonesian, Vietnamese, Romanian, Greek, Bulgarian, Slovak, Croatian, Swedish, Finnish, Danish, Lithuanian, Slovenian, Latvian, Estonian, Maltese and Irish — every official EU language is covered.
+On first launch it picks up your **system language** (full Windows LANGID, so Brazilian and European
+Portuguese, Latin-American and Spain Spanish, Simplified and Traditional Chinese are told apart; on macOS
+the UI language list) and falls back to English. You can switch manually from **right-click → Language**;
+the choice is remembered. A missing text falls back to the sibling variant (pt-BR ↔ pt-PT, es-ES ↔ es-419), then
+to English; the Chinese variants never fall back on each other.
 
-**Adding a language is easy** and a great first contribution: add your code to `LANG_NAMES`
-in [claude_usage/i18n.py](claude_usage/i18n.py) and fill in translations for the `STRINGS`
-keys. Anything missing falls back to English. See [CONTRIBUTING.md](CONTRIBUTING.md).
+**Adding or improving a language:** every language lives in its own module under
+[claude_usage/langs/](claude_usage/langs/) (`ja.py`, `pt_BR.py`, …), with a glossary and review notes in
+[docs/i18n/](docs/i18n/). `python tools/check_i18n.py <code>` checks placeholders, line breaks, script rules
+and completeness. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Privacy
 

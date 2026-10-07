@@ -2,6 +2,21 @@
 
 <!-- newer-versions-here -->
 
+## [2.7.0] - 2026-10-07
+
+- New: the app now speaks 34 languages – every official EU language plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese. Portuguese and Spanish are split into European and Brazilian Portuguese, and Spain and Latin-American Spanish. The system language is recognised automatically; Chinese, Japanese and Korean get their own font so the characters look right.
+- New: "Message to the developer" – a small speech-bubble icon in the panel header (and a menu item) opens a form: an optional 1–5 star rating, name, e-mail and message. It goes over an encrypted connection (HTTPS) straight to claudeusagemonitor.com; nothing is sent unless you press Send. A privacy notice in your language is shown in the window, and accepting it is required.
+- If you allow it, a positive rating (with your name, if you gave one) may appear on claudeusagemonitor.com – only after the author has read it.
+- The icon can be switched off in Settings → Content.
+
+*Magyarul:*
+
+- Új: a program mostantól 34 nyelven beszél – az EU összes hivatalos nyelvén, valamint japánul, koreaiul, egyszerűsített és hagyományos kínaiul, indonézül és vietnámiul. A portugál és a spanyol kettévált: európai és brazil portugál, spanyolországi és latin-amerikai spanyol. A rendszer nyelvét magától felismeri; a kínai, a japán és a koreai saját betűtípust kap, hogy az írásjegyek helyesen jelenjenek meg.
+- Új: „Üzenet a fejlesztőnek” – a panel fejlécében egy kis beszédbuborék-ikon (és egy menüpont) megnyit egy űrlapot: nem kötelező 1–5 csillagos értékelés, név, e-mail-cím és üzenet. Titkosított kapcsolaton (HTTPS) közvetlenül a claudeusagemonitor.com-ra megy; semmi nem megy el, amíg nem nyomod meg a Küldést. Az ablakban a saját nyelveden olvasható az adatkezelési tájékoztató, amelynek elfogadása kötelező.
+- Ha engedélyezed, a pozitív értékelésed (és a neved, ha megadtad) megjelenhet a claudeusagemonitor.com oldalon – de csak azután, hogy a készítő elolvasta.
+- Az ikon a Beállítások → Tartalom lapon kikapcsolható.
+
+
 ## [2.6.5] - 2026-09-28
 
 - Fixed: the sign-in could be lost after the computer had been asleep, and the panel then showed a raw server message ("HTTP 400: invalid_grant"). The access token is now renewed 15 minutes BEFORE it expires, while the app is awake and online, so the session survives sleep and short network outages.

@@ -24,7 +24,7 @@ from PySide6.QtWidgets import QToolTip, QWidget
 from . import backups as bk
 from .backup_dialog import LAMP, level_of, short_age, tooltip_text
 from .datasource import Gauge, Metrics, detail_label, fmt_age, fmt_delta
-from .i18n import tr
+from .i18n import tr, ui_font_families
 from .settings import GAUGE_IDS, Settings
 from .theme import Palette, qc, with_alpha
 
@@ -48,6 +48,10 @@ def _font(size: float, weight: QFont.Weight = QFont.Weight.Normal, spacing: floa
             f = QFont("Segoe UI")
     else:
         f = QFont(QFontDatabase.systemFont(QFontDatabase.SystemFont.GeneralFont).family())
+    extra = ui_font_families()
+    if extra:
+        # CJK languages: their own family first, the platform font stays as the Latin fallback
+        f.setFamilies(extra + [f.family()])
     f.setPointSizeF(max(5.0, size))
     f.setWeight(weight)
     if spacing:
@@ -55,9 +59,28 @@ def _font(size: float, weight: QFont.Weight = QFont.Weight.Normal, spacing: floa
     return f
 
 
+def _draw_fitted(p: QPainter, rect: QRectF, flags, text: str, font: QFont, min_scale: float = 0.8) -> None:
+    """Draws one line of text so that it always fits the rectangle, in any language: first the extra
+    letter spacing goes, then the font shrinks (down to min_scale), and only then is it elided with …"""
+    width = max(1.0, rect.width())
+    f = QFont(font)
+    if QFontMetrics(f).horizontalAdvance(text) > width and f.letterSpacing() != 0:
+        f.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 0.0)
+    base = f.pointSizeF()
+    adv = QFontMetrics(f).horizontalAdvance(text)
+    if adv > width and base > 0:
+        f.setPointSizeF(max(base * min_scale, base * width / adv))
+    fm = QFontMetrics(f)
+    if fm.horizontalAdvance(text) > width:
+        text = fm.elidedText(text, Qt.TextElideMode.ElideRight, int(width))
+    p.setFont(f)
+    p.drawText(rect, flags, text)
+
+
 class UsageWidget(QWidget):
     menuRequested = Signal(QPoint)
     doubleClicked = Signal()
+    feedbackRequested = Signal()
     backupClicked = Signal(str)
 
     def __init__(self, settings: Settings):
@@ -84,6 +107,9 @@ class UsageWidget(QWidget):
         self._age_rect = QRectF()       # header status text - hover shows the details
         self._badge_rect = QRectF()     # plan badge - hover shows the profile card
         self._hover_badge = False
+        self._fb_rect = QRectF()        # "message to the developer" icon in the header
+        self._hover_fb = False
+        self._press_fb = False
         self._rows_shown = 0
         self.local_models: list = []    # ModelShare rows from Claude Code's local logs
         self._hover_age = False
@@ -491,6 +517,7 @@ class UsageWidget(QWidget):
             return
         self._press_global = e.globalPosition().toPoint()
         self._press_key = self._backup_hit(e.position())
+        self._press_fb = self._fb_hit(e.position())
         self._dragging = False
         if not self.s["locked"]:
             self._drag_offset = self._press_global - self.frameGeometry().topLeft()
@@ -523,8 +550,15 @@ class UsageWidget(QWidget):
             self.s.save()
         elif self._press_key and self._press_key == self._backup_hit(e.position()):
             self.backupClicked.emit(self._press_key)
+        elif self._press_fb and self._fb_hit(e.position()):
+            self.feedbackRequested.emit()
         self._press_key = None
+        self._press_fb = False
         e.accept()
+
+    def _fb_hit(self, pos) -> bool:
+        return bool(self.s["show_feedback_icon"]) and not self._fb_rect.isNull() \
+            and self._fb_rect.contains(QPointF(pos))
 
     def _status_tooltip(self) -> str:
         m = self.metrics
@@ -548,6 +582,16 @@ class UsageWidget(QWidget):
             self._hover_badge = over_badge
             if over_badge:
                 QToolTip.showText(e.globalPosition().toPoint(), self._profile_tooltip(), self)
+        over_fb = self._fb_hit(e.position())
+        if over_fb != self._hover_fb:
+            self._hover_fb = over_fb
+            if over_fb:
+                self.setCursor(Qt.CursorShape.PointingHandCursor)
+                QToolTip.showText(e.globalPosition().toPoint(), tr("fb.title"), self)
+            elif not self._hover_key:
+                self.unsetCursor()
+                QToolTip.hideText()
+            self.update()
         key = self._backup_hit(e.position())
         if key == self._hover_key:
             return
@@ -555,7 +599,7 @@ class UsageWidget(QWidget):
         if key:
             self.setCursor(Qt.CursorShape.PointingHandCursor)
             QToolTip.showText(e.globalPosition().toPoint(), tooltip_text(key, self.backup, self.s), self)
-        else:
+        elif not self._hover_fb:
             self.unsetCursor()
             QToolTip.hideText()
 
@@ -578,7 +622,8 @@ class UsageWidget(QWidget):
         self.move(x, y)
 
     def mouseDoubleClickEvent(self, e) -> None:
-        if e.button() == Qt.MouseButton.LeftButton and not self._backup_hit(e.position()):
+        if e.button() == Qt.MouseButton.LeftButton and not self._backup_hit(e.position()) \
+                and not self._fb_hit(e.position()):
             self.doubleClicked.emit()
 
     def contextMenuEvent(self, e) -> None:
@@ -599,8 +644,9 @@ class UsageWidget(QWidget):
 
     def leaveEvent(self, e) -> None:
         self._hover = False
-        if self._hover_key:
+        if self._hover_key or self._hover_fb:
             self._hover_key = None
+            self._hover_fb = False
             self.unsetCursor()
         self.update()
 
@@ -739,6 +785,17 @@ class UsageWidget(QWidget):
     def _paint_error(self, p: QPainter, r: QRectF) -> None:
         pal = self.palette_
         text = self.metrics.error or tr("panel.no_data")
+        k = self.k
+        # the icon stays reachable in the error state too - that is when people want to write
+        if self.s["show_feedback_icon"]:
+            if self.s["layout"] == "compact":
+                self._paint_fb_icon(p, r.right() - 11 * k, r.center().y() - 5.5 * k, 11 * k)
+                r = r.adjusted(0, 0, -15 * k, 0)
+            else:
+                self._paint_fb_icon(p, r.right() - 12 * k, r.top() + 1 * k, 12 * k)
+                r = r.adjusted(0, 0, -16 * k, 0)
+        else:
+            self._fb_rect = QRectF()
         p.setPen(QPen(qc(pal.danger)))
         if self.s["layout"] == "compact":
             # one thin line: keep the first sentence and make it fit instead of clipping it
@@ -774,6 +831,14 @@ class UsageWidget(QWidget):
                        Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft,
                        "\u2191 " + self.update_version)
 
+        # "message to the developer" icon at the far right; the status text moves left of it
+        right = r.right()
+        if self.s["show_feedback_icon"]:
+            self._paint_fb_icon(p, r.right() - 12 * k, r.top() + 1 * k, 12 * k)
+            right -= 16 * k
+        else:
+            self._fb_rect = QRectF()
+
         act, act_color = self._activity_text()
         if act or self.s["show_age"]:
             # activity (refreshing / retrying) always shows, even if the age is switched off
@@ -785,10 +850,35 @@ class UsageWidget(QWidget):
                 color = pal.danger if m.stale else (pal.warn if failing else with_alpha(pal.dim, 190))
             p.setPen(QPen(qc(color)))
             p.setFont(_font(6.6 * k, QFont.Weight.DemiBold if act else QFont.Weight.Normal))
-            self._age_rect = QRectF(r.left() + r.width() * 0.55, r.top() - 2 * k, r.width() * 0.45, 18 * k)
-            p.drawText(QRectF(r.left() + r.width() * 0.4, r.top(), r.width() * 0.6, 14 * k),
+            self._age_rect = QRectF(r.left() + r.width() * 0.55, r.top() - 2 * k, right - r.left() - r.width() * 0.55, 18 * k)
+            p.drawText(QRectF(r.left() + r.width() * 0.4, r.top(), right - r.left() - r.width() * 0.4, 14 * k),
                        Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, text)
         return r.top() + 20 * k
+
+    def _paint_fb_icon(self, p: QPainter, x: float, y: float, size: float) -> None:
+        """A small speech bubble: click = message to the developer."""
+        pal = self.palette_
+        rect = QRectF(x, y, size, size)
+        self._fb_rect = rect.adjusted(-3, -3, 3, 3)
+        color = pal.accent if self._hover_fb else with_alpha(pal.dim, 150)
+        pen = QPen(qc(color))
+        pen.setWidthF(max(1.0, size * 0.1))
+        pen.setJoinStyle(Qt.PenJoinStyle.RoundJoin)
+        p.setPen(pen)
+        p.setBrush(Qt.BrushStyle.NoBrush)
+        body = QRectF(x, y + size * 0.08, size, size * 0.68)
+        path = QPainterPath()
+        path.addRoundedRect(body, size * 0.26, size * 0.26)
+        # the tail
+        path.moveTo(x + size * 0.26, body.bottom() - 1)
+        path.lineTo(x + size * 0.18, y + size * 0.98)
+        path.lineTo(x + size * 0.48, body.bottom() - 1)
+        p.drawPath(path)
+        if self._hover_fb:
+            p.setBrush(qc(color))
+            for i in range(3):
+                cx = x + size * (0.32 + 0.18 * i)
+                p.drawEllipse(QRectF(cx - size * 0.05, body.center().y() - size * 0.05, size * 0.1, size * 0.1))
 
     def _paint_postit(self, p: QPainter, r: QRectF) -> None:
         k = self.k
@@ -805,15 +895,19 @@ class UsageWidget(QWidget):
         k, pal = self.k * sc, self.palette_      # sc: per-gauge size factor
         warn, danger = self.s["warn_threshold"], self.s["danger_threshold"]
 
+        pct_font = _font(15.0 * k, QFont.Weight.Bold)
+        pct_text = f"{g.value:.0f}%"
+        pct_w = QFontMetrics(pct_font).horizontalAdvance(pct_text)
         p.setPen(QPen(qc(pal.dim)))
-        p.setFont(_font(7.0 * k, QFont.Weight.DemiBold, 1.0 * k))
-        p.drawText(QRectF(r.left(), r.top(), r.width() * 0.6, 18 * k),
-                   Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, title)
+        # the label gets everything left of the percentage, and is fitted (never clipped) in every language
+        _draw_fitted(p, QRectF(r.left(), r.top(), max(10.0, r.width() - pct_w - 8 * k), 18 * k),
+                     Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, title,
+                     _font(7.0 * k, QFont.Weight.DemiBold, 1.0 * k))
 
         p.setPen(QPen(qc(pal.status(g.value, warn, danger))))
-        p.setFont(_font(15.0 * k, QFont.Weight.Bold))
+        p.setFont(pct_font)
         p.drawText(QRectF(r.left() + r.width() * 0.4, r.top() - 3 * k, r.width() * 0.6, 24 * k),
-                   Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, f"{g.value:.0f}%")
+                   Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignRight, pct_text)
 
         self._paint_bar(p, QRectF(r.left(), r.top() + 22 * k, r.width(), 8 * k), g.value)
 
@@ -833,9 +927,8 @@ class UsageWidget(QWidget):
 
         if parts:
             p.setPen(QPen(qc(with_alpha(pal.dim, 210))))
-            p.setFont(_font(6.6 * k))
-            p.drawText(QRectF(r.left(), r.top() + 32 * k, r.width(), 14 * k),
-                       Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, " · ".join(parts))
+            _draw_fitted(p, QRectF(r.left(), r.top() + 32 * k, r.width(), 14 * k),
+                         Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, " · ".join(parts), _font(6.6 * k))
         return r.top() + 52 * k
 
     def _paint_bar(self, p: QPainter, r: QRectF, value: float) -> None:
@@ -934,9 +1027,9 @@ class UsageWidget(QWidget):
 
         sub = fmt_delta(g.reset_in_ms) if (self.s["show_reset"] and g.reset_in_ms is not None) else ""
         p.setPen(QPen(qc(pal.dim)))
-        p.setFont(_font(6.6 * k, QFont.Weight.DemiBold, 1.0 * k))
-        p.drawText(QRectF(r.left(), box.bottom() + 2 * k, r.width(), 12 * k),
-                   Qt.AlignmentFlag.AlignCenter, label + (f"  ·  {sub}" if sub else ""))
+        _draw_fitted(p, QRectF(r.left(), box.bottom() + 2 * k, r.width(), 12 * k),
+                     Qt.AlignmentFlag.AlignCenter, label + (f"  ·  {sub}" if sub else ""),
+                     _font(6.6 * k, QFont.Weight.DemiBold, 1.0 * k))
 
     def _paint_compact(self, p: QPainter, r: QRectF) -> None:
         k, pal = self.k, self.palette_
@@ -952,8 +1045,15 @@ class UsageWidget(QWidget):
         self._paint_status_dot(p, QRectF(x, r.center().y() - 4 * k, 8 * k, 8 * k), dot_color)
         x += 16 * k
 
+        right = r.right()
+        if self.s["show_feedback_icon"]:
+            self._paint_fb_icon(p, r.right() - 11 * k, r.center().y() - 5.5 * k, 11 * k)
+            right -= 15 * k
+        else:
+            self._fb_rect = QRectF()
+
         total = sum(it[4] for it in items)
-        avail = r.right() - x
+        avail = right - x
         for gid, label, g, _hourly, sc in items:
             if gid == "mo":
                 label = label[:6]

@@ -181,9 +181,15 @@
         var box = $('#testimonials'); box.textContent = ''; box.hidden = false;
         s.testimonials.forEach(function (q) {
           var f = document.createElement('figure'); f.className = 'quote';
-          var p = document.createElement('p'); p.textContent = '“' + q.text + '”';
-          var c = document.createElement('cite'); c.textContent = q.name;
-          f.appendChild(p); f.appendChild(c); box.appendChild(f);
+          if (q.rating > 0) {
+            // star rating sent from inside the app (only 4-5 stars are ever published)
+            var st = document.createElement('span'); st.className = 'quote__stars';
+            st.setAttribute('aria-label', q.rating + '/5'); st.textContent = '★★★★★'.slice(0, q.rating) + '☆☆☆☆☆'.slice(0, 5 - q.rating);
+            f.appendChild(st);
+          }
+          if (q.text) { var p = document.createElement('p'); p.textContent = '“' + q.text + '”'; f.appendChild(p); }
+          if (q.name) { var c = document.createElement('cite'); c.textContent = q.name; f.appendChild(c); }
+          box.appendChild(f);
         });
       }
     }).catch(function () { state.apiOk = false; });

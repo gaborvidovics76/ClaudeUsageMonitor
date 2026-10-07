@@ -230,6 +230,7 @@ class SettingsDialog(QDialog):
         form.addRow("", self._check("show_burn", tr("set.show_burn")))
         form.addRow("", self._check("show_reset", tr("set.show_reset")))
         form.addRow("", self._check("show_age", tr("set.show_age")))
+        form.addRow("", self._check("show_feedback_icon", tr("set.show_feedback_icon")))
 
         self.cb_tray = QComboBox()
         _tm = {"five_hour": "five", "weekly": "weekly", "max": "max"}

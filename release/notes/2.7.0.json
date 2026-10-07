@@ -1,0 +1,218 @@
+{
+  "en": [
+    "New: the app now speaks 34 languages – every official EU language plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese. Portuguese and Spanish are split into European and Brazilian Portuguese, and Spain and Latin-American Spanish. The system language is recognised automatically; Chinese, Japanese and Korean get their own font so the characters look right.",
+    "New: \"Message to the developer\" – a small speech-bubble icon in the panel header (and a menu item) opens a form: an optional 1–5 star rating, name, e-mail and message. It goes over an encrypted connection (HTTPS) straight to claudeusagemonitor.com; nothing is sent unless you press Send. A privacy notice in your language is shown in the window, and accepting it is required.",
+    "If you allow it, a positive rating (with your name, if you gave one) may appear on claudeusagemonitor.com – only after the author has read it.",
+    "The icon can be switched off in Settings → Content."
+  ],
+  "hu": [
+    "Új: a program mostantól 34 nyelven beszél – az EU összes hivatalos nyelvén, valamint japánul, koreaiul, egyszerűsített és hagyományos kínaiul, indonézül és vietnámiul. A portugál és a spanyol kettévált: európai és brazil portugál, spanyolországi és latin-amerikai spanyol. A rendszer nyelvét magától felismeri; a kínai, a japán és a koreai saját betűtípust kap, hogy az írásjegyek helyesen jelenjenek meg.",
+    "Új: „Üzenet a fejlesztőnek” – a panel fejlécében egy kis beszédbuborék-ikon (és egy menüpont) megnyit egy űrlapot: nem kötelező 1–5 csillagos értékelés, név, e-mail-cím és üzenet. Titkosított kapcsolaton (HTTPS) közvetlenül a claudeusagemonitor.com-ra megy; semmi nem megy el, amíg nem nyomod meg a Küldést. Az ablakban a saját nyelveden olvasható az adatkezelési tájékoztató, amelynek elfogadása kötelező.",
+    "Ha engedélyezed, a pozitív értékelésed (és a neved, ha megadtad) megjelenhet a claudeusagemonitor.com oldalon – de csak azután, hogy a készítő elolvasta.",
+    "Az ikon a Beállítások → Tartalom lapon kikapcsolható."
+  ],
+  "de": [
+    "Neu: Die App spricht jetzt 34 Sprachen – alle Amtssprachen der EU sowie Japanisch, Koreanisch, vereinfachtes und traditionelles Chinesisch, Indonesisch und Vietnamesisch. Portugiesisch und Spanisch gibt es jetzt getrennt: europäisches und brasilianisches Portugiesisch sowie Spanisch für Spanien und für Lateinamerika. Die Systemsprache wird automatisch erkannt; Chinesisch, Japanisch und Koreanisch bekommen eine eigene Schriftart, damit die Schriftzeichen richtig aussehen.",
+    "Neu: „Nachricht an den Entwickler“ – ein kleines Sprechblasen-Symbol in der Kopfzeile des Panels (und ein Menüeintrag) öffnet ein Formular: optionale Bewertung mit 1–5 Sternen, Name, E-Mail und Nachricht. Sie geht über eine verschlüsselte Verbindung (HTTPS) direkt an claudeusagemonitor.com; gesendet wird erst, wenn du auf „Senden“ klickst. Im Fenster steht eine Datenschutzerklärung in deiner Sprache, die du akzeptieren musst.",
+    "Wenn du es erlaubst, kann eine positive Bewertung (mit deinem Namen, falls angegeben) auf claudeusagemonitor.com erscheinen – aber erst, nachdem der Autor sie gelesen hat.",
+    "Das Symbol lässt sich unter Einstellungen → Inhalt ausschalten."
+  ],
+  "fr": [
+    "Nouveau : l'application parle désormais 34 langues – toutes les langues officielles de l'UE, ainsi que le japonais, le coréen, le chinois simplifié et traditionnel, l'indonésien et le vietnamien. Le portugais et l'espagnol sont maintenant séparés : portugais européen et brésilien, espagnol d'Espagne et d'Amérique latine. La langue du système est reconnue automatiquement ; le chinois, le japonais et le coréen ont leur propre police pour que les caractères s'affichent correctement.",
+    "Nouveau : « Message au développeur » – une petite icône en forme de bulle dans l'en-tête du panneau (et une entrée de menu) ouvre un formulaire : une note facultative de 1 à 5 étoiles, nom, adresse e-mail et message. Il part via une connexion chiffrée (HTTPS) directement vers claudeusagemonitor.com ; rien n'est envoyé tant que vous n'appuyez pas sur « Envoyer ». La fenêtre affiche une politique de confidentialité dans votre langue, qu'il faut accepter.",
+    "Si vous l'autorisez, une note positive (avec votre nom, si vous l'avez indiqué) peut apparaître sur claudeusagemonitor.com – uniquement après lecture par l'auteur.",
+    "L'icône peut être désactivée dans Paramètres → Contenu."
+  ],
+  "es": [
+    "Novedad: la aplicación ya habla 34 idiomas (todos los oficiales de la UE, además de japonés, coreano, chino simplificado y tradicional, indonesio y vietnamita). El portugués y el español se dividen en portugués europeo y de Brasil, y en español de España y de Latinoamérica. El idioma del sistema se detecta automáticamente; el chino, el japonés y el coreano tienen su propia fuente para que los caracteres se vean bien.",
+    "Novedad: «Mensaje al desarrollador». Un pequeño icono de bocadillo en la cabecera del panel (y una opción del menú) abre un formulario con una valoración opcional de 1 a 5 estrellas, nombre, correo electrónico y mensaje. Viaja por una conexión cifrada (HTTPS) directamente a claudeusagemonitor.com; no se envía nada hasta que pulses «Enviar». La ventana muestra la política de privacidad en tu idioma, y es obligatorio aceptarla.",
+    "Si lo permites, una valoración positiva (con tu nombre, si lo has indicado) puede aparecer en claudeusagemonitor.com, pero solo después de que el autor la haya leído.",
+    "El icono se puede desactivar en Configuración → Contenido."
+  ],
+  "it": [
+    "Novità: l'app ora parla 34 lingue – tutte le lingue ufficiali dell'UE, più giapponese, coreano, cinese semplificato e tradizionale, indonesiano e vietnamita. Portoghese e spagnolo ora sono separati: portoghese europeo e brasiliano, spagnolo di Spagna e dell'America Latina. La lingua del sistema viene riconosciuta automaticamente; cinese, giapponese e coreano hanno un font dedicato, così i caratteri si vedono correttamente.",
+    "Novità: «Messaggio allo sviluppatore» – una piccola icona a fumetto nell'intestazione del pannello (e una voce di menu) apre un modulo: valutazione facoltativa da 1 a 5 stelle, nome, e-mail e messaggio. Viaggia su una connessione crittografata (HTTPS) direttamente verso claudeusagemonitor.com; non viene inviato nulla finché non premi «Invia». Nella finestra trovi l'informativa sulla privacy nella tua lingua, che è necessario accettare.",
+    "Se lo consenti, una valutazione positiva (con il tuo nome, se l'hai indicato) può comparire su claudeusagemonitor.com – solo dopo che l'autore l'ha letta.",
+    "L'icona si può disattivare in Impostazioni → Contenuto."
+  ],
+  "pt": [
+    "Novidade: a aplicação fala agora 34 línguas – todas as línguas oficiais da UE, mais japonês, coreano, chinês simplificado e tradicional, indonésio e vietnamita. O português e o espanhol foram divididos em português europeu e do Brasil, e em espanhol de Espanha e da América Latina. A língua do sistema é reconhecida automaticamente; o chinês, o japonês e o coreano têm um tipo de letra próprio para que os caracteres apareçam corretamente.",
+    "Novidade: «Mensagem ao programador» – um pequeno ícone de balão de fala no cabeçalho do painel (e um item de menu) abre um formulário: avaliação opcional de 1 a 5 estrelas, nome, e-mail e mensagem. A mensagem segue por uma ligação encriptada (HTTPS) diretamente para claudeusagemonitor.com; nada é enviado enquanto não carregares em «Enviar». A janela mostra a Política de Privacidade na tua língua, e é obrigatório aceitá-la.",
+    "Se o autorizares, uma avaliação positiva (com o teu nome, se o indicaste) pode aparecer em claudeusagemonitor.com – só depois de o autor a ler.",
+    "O ícone pode ser desativado em Definições → Conteúdo."
+  ],
+  "pl": [
+    "Nowość: aplikacja mówi teraz 34 językami – wszystkimi językami urzędowymi UE oraz japońskim, koreańskim, chińskim uproszczonym i tradycyjnym, indonezyjskim i wietnamskim. Portugalski i hiszpański zostały rozdzielone: portugalski europejski i brazylijski oraz hiszpański z Hiszpanii i z Ameryki Łacińskiej. Język systemu jest rozpoznawany automatycznie; chiński, japoński i koreański mają własną czcionkę, dzięki czemu znaki wyglądają poprawnie.",
+    "Nowość: „Wiadomość do autora” – mała ikona dymku w nagłówku panelu (i pozycja w menu) otwiera formularz: opcjonalna ocena od 1 do 5 gwiazdek, imię, e-mail i wiadomość. Trafia ona szyfrowanym połączeniem (HTTPS) prosto na claudeusagemonitor.com; nic nie zostanie wysłane, dopóki nie klikniesz „Wyślij”. W oknie wyświetla się polityka prywatności w Twoim języku – jej akceptacja jest wymagana.",
+    "Jeśli wyrazisz zgodę, pozytywna ocena (wraz z Twoim imieniem, jeśli zostało podane) może pojawić się na claudeusagemonitor.com – ale dopiero po przeczytaniu jej przez autora.",
+    "Ikonę można wyłączyć w sekcji Ustawienia → Zawartość."
+  ],
+  "nl": [
+    "Nieuw: de app spreekt nu 34 talen – alle officiële EU-talen plus Japans, Koreaans, vereenvoudigd en traditioneel Chinees, Indonesisch en Vietnamees. Portugees en Spaans zijn opgesplitst in Europees en Braziliaans Portugees, en Spaans voor Spanje en voor Latijns-Amerika. De systeemtaal wordt automatisch herkend; Chinees, Japans en Koreaans krijgen een eigen lettertype, zodat de tekens er goed uitzien.",
+    "Nieuw: “Bericht aan de ontwikkelaar” – een klein tekstballonpictogram in de kop van het paneel (en een menu-item) opent een formulier: een optionele beoordeling van 1–5 sterren, naam, e-mailadres en bericht. Het gaat via een versleutelde verbinding (HTTPS) rechtstreeks naar claudeusagemonitor.com; er wordt niets verstuurd zolang je niet op “Verzenden” klikt. In het venster staat een privacyverklaring in jouw taal, die je moet accepteren.",
+    "Als je dat toestaat, kan een positieve beoordeling (met je naam, als je die hebt opgegeven) op claudeusagemonitor.com verschijnen – pas nadat de maker die heeft gelezen.",
+    "Het pictogram kun je uitschakelen via Instellingen → Inhoud."
+  ],
+  "ru": [
+    "Новое: приложение теперь говорит на 34 языках – на всех официальных языках ЕС, а также на японском, корейском, упрощённом и традиционном китайском, индонезийском и вьетнамском. Португальский и испанский разделены: европейский и бразильский португальский, испанский для Испании и для Латинской Америки. Язык системы определяется автоматически; для китайского, японского и корейского используется собственный шрифт, чтобы символы отображались правильно.",
+    "Новое: «Сообщение разработчику» – небольшой значок-облачко в заголовке панели (и пункт меню) открывает форму: необязательная оценка от 1 до 5 звёзд, имя, e-mail и сообщение. Оно передаётся по зашифрованному соединению (HTTPS) прямо на claudeusagemonitor.com; ничего не отправляется, пока вы не нажмёте «Отправить». В окне показана политика конфиденциальности на вашем языке – её нужно принять.",
+    "Если вы разрешите, положительная оценка (с вашим именем, если вы его указали) может появиться на claudeusagemonitor.com – только после того, как автор её прочитает.",
+    "Значок можно отключить в разделе Настройки → Содержимое."
+  ],
+  "cs": [
+    "Novinka: aplikace je nyní ve 34 jazycích – ve všech úředních jazycích EU a také v japonštině, korejštině, zjednodušené a tradiční čínštině, indonéštině a vietnamštině. Portugalština a španělština se rozdělily na evropskou a brazilskou portugalštinu a na španělštinu pro Španělsko a pro Latinskou Ameriku. Jazyk systému se rozpozná automaticky; čínština, japonština a korejština mají vlastní písmo, aby se znaky zobrazovaly správně.",
+    "Novinka: „Zpráva pro vývojáře“ – malá ikona bubliny v záhlaví panelu (a položka v nabídce) otevře formulář: nepovinné hodnocení 1 až 5 hvězdičkami, jméno, e-mail a zpráva. Odchází šifrovaným připojením (HTTPS) přímo na claudeusagemonitor.com; nic se neodešle, dokud nestisknete „Odeslat“. V okně se zobrazí zásady ochrany osobních údajů ve vašem jazyce a jejich přijetí je povinné.",
+    "Pokud to povolíte, může se kladné hodnocení (s vaším jménem, pokud jste ho uvedli) objevit na claudeusagemonitor.com – ale až poté, co si ho autor přečte.",
+    "Ikonu lze vypnout v Nastavení → Obsah."
+  ],
+  "tr": [
+    "Yeni: Uygulama artık 34 dil konuşuyor – AB'nin tüm resmî dilleri ve ayrıca Japonca, Korece, Basitleştirilmiş ve Geleneksel Çince, Endonezce ve Vietnamca. Portekizce ve İspanyolca ikiye ayrıldı: Avrupa ve Brezilya Portekizcesi ile İspanya ve Latin Amerika İspanyolcası. Sistem dili otomatik olarak tanınır; Çince, Japonca ve Korece, karakterlerin doğru görünmesi için kendi yazı tipini kullanır.",
+    "Yeni: “Geliştiriciye mesaj” – panel başlığındaki küçük konuşma balonu simgesi (ve bir menü öğesi) bir form açar: isteğe bağlı 1–5 yıldızlı puan, ad, e-posta ve mesaj. Mesaj şifreli bağlantıyla (HTTPS) doğrudan claudeusagemonitor.com'a gider; “Gönder” düğmesine basmadıkça hiçbir şey gönderilmez. Pencerede kendi dilinde bir gizlilik bildirimi gösterilir ve bunu kabul etmen gerekir.",
+    "İzin verirsen, olumlu puanın (verdiysen adınla birlikte) claudeusagemonitor.com'da yayımlanabilir – ama yalnızca yazar okuduktan sonra.",
+    "Simge, Ayarlar → İçerik bölümünden kapatılabilir."
+  ],
+  "pt-PT": [
+    "Novidade: a aplicação fala agora 34 línguas – todas as línguas oficiais da UE, mais japonês, coreano, chinês simplificado e tradicional, indonésio e vietnamita. O português e o espanhol foram divididos em português europeu e do Brasil, e em espanhol de Espanha e da América Latina. A língua do sistema é reconhecida automaticamente; o chinês, o japonês e o coreano têm um tipo de letra próprio para que os caracteres apareçam corretamente.",
+    "Novidade: «Mensagem ao programador» – um pequeno ícone de balão de fala no cabeçalho do painel (e um item de menu) abre um formulário: avaliação opcional de 1 a 5 estrelas, nome, e-mail e mensagem. A mensagem segue por uma ligação encriptada (HTTPS) diretamente para claudeusagemonitor.com; nada é enviado enquanto não carregares em «Enviar». A janela mostra a Política de Privacidade na tua língua, e é obrigatório aceitá-la.",
+    "Se o autorizares, uma avaliação positiva (com o teu nome, se o indicaste) pode aparecer em claudeusagemonitor.com – só depois de o autor a ler.",
+    "O ícone pode ser desativado em Definições → Conteúdo."
+  ],
+  "pt-BR": [
+    "Novidade: o aplicativo agora fala 34 idiomas – todos os idiomas oficiais da UE, além de japonês, coreano, chinês simplificado e tradicional, indonésio e vietnamita. Português e espanhol foram divididos em português europeu e brasileiro, e em espanhol da Espanha e da América Latina. O idioma do sistema é reconhecido automaticamente; chinês, japonês e coreano ganham uma fonte própria para que os caracteres apareçam corretamente.",
+    "Novidade: “Mensagem para o desenvolvedor” – um pequeno ícone de balão de fala no cabeçalho do painel (e um item de menu) abre um formulário: avaliação opcional de 1 a 5 estrelas, nome, e-mail e mensagem. Ela vai por uma conexão criptografada (HTTPS) direto para claudeusagemonitor.com; nada é enviado até você clicar em “Enviar”. A janela mostra a Política de Privacidade no seu idioma, e é obrigatório aceitá-la.",
+    "Se você permitir, uma avaliação positiva (com o seu nome, se você o informou) pode aparecer em claudeusagemonitor.com – só depois que o autor a ler.",
+    "O ícone pode ser desativado em Configurações → Conteúdo."
+  ],
+  "es-ES": [
+    "Novedad: la aplicación ya habla 34 idiomas (todos los oficiales de la UE, además de japonés, coreano, chino simplificado y tradicional, indonesio y vietnamita). El portugués y el español se dividen en portugués europeo y de Brasil, y en español de España y de Latinoamérica. El idioma del sistema se detecta automáticamente; el chino, el japonés y el coreano tienen su propia fuente para que los caracteres se vean bien.",
+    "Novedad: «Mensaje al desarrollador». Un pequeño icono de bocadillo en la cabecera del panel (y una opción del menú) abre un formulario con una valoración opcional de 1 a 5 estrellas, nombre, correo electrónico y mensaje. Viaja por una conexión cifrada (HTTPS) directamente a claudeusagemonitor.com; no se envía nada hasta que pulses «Enviar». La ventana muestra la política de privacidad en tu idioma, y es obligatorio aceptarla.",
+    "Si lo permites, una valoración positiva (con tu nombre, si lo has indicado) puede aparecer en claudeusagemonitor.com, pero solo después de que el autor la haya leído.",
+    "El icono se puede desactivar en Configuración → Contenido."
+  ],
+  "es-419": [
+    "Novedad: ahora la app habla 34 idiomas (todos los oficiales de la UE, además de japonés, coreano, chino simplificado y tradicional, indonesio y vietnamita). El portugués y el español se dividen en portugués europeo y brasileño, y en español de España y de Latinoamérica. El idioma del sistema se detecta automáticamente; el chino, el japonés y el coreano tienen su propia fuente para que los caracteres se vean bien.",
+    "Novedad: “Mensaje al desarrollador”. Un pequeño ícono de globo de diálogo en el encabezado del panel (y una opción del menú) abre un formulario con una calificación opcional de 1 a 5 estrellas, nombre, correo electrónico y mensaje. Se envía por una conexión cifrada (HTTPS) directamente a claudeusagemonitor.com; no se manda nada hasta que presiones “Enviar”. La ventana muestra la política de privacidad en tu idioma, y es obligatorio aceptarla.",
+    "Si lo permites, una calificación positiva (con tu nombre, si lo indicaste) puede aparecer en claudeusagemonitor.com, pero solo después de que el autor la haya leído.",
+    "El ícono se puede desactivar en Configuración → Contenido."
+  ],
+  "ja": [
+    "新機能：34言語に対応しました。EU の全公用語に加え、日本語、韓国語、簡体字中国語、繁体字中国語、インドネシア語、ベトナム語を利用できます。ポルトガル語とスペイン語は、ヨーロッパとブラジルのポルトガル語、スペインと中南米のスペイン語に分かれました。システムの言語は自動的に認識されます。中国語、日本語、韓国語には専用のフォントを使うので、文字が正しく表示されます。",
+    "新機能：「開発者へのメッセージ」。パネルのヘッダーにある小さな吹き出しアイコン（またはメニュー項目）からフォームを開けます。1～5つ星の評価（任意）、名前、メールアドレス、メッセージを送れます。内容は暗号化された接続（HTTPS）で claudeusagemonitor.com に直接届き、「送信」を押すまでは何も送信されません。ウィンドウにはお使いの言語でプライバシーポリシーが表示され、同意が必要です。",
+    "許可した場合、高い評価（名前を入力した場合は名前も）が claudeusagemonitor.com に掲載されることがあります。ただし、掲載は作者が読んだ後に限ります。",
+    "このアイコンは「設定」→「表示内容」でオフにできます。"
+  ],
+  "ko": [
+    "새 기능: 이제 34개 언어를 지원해요. EU의 모든 공용어와 함께 일본어, 한국어, 중국어(간체), 중국어(번체), 인도네시아어, 베트남어를 쓸 수 있어요. 포르투갈어와 스페인어는 유럽·브라질 포르투갈어, 스페인·중남미 스페인어로 나뉘었어요. 시스템 언어는 자동으로 인식돼요. 중국어, 일본어, 한국어에는 전용 글꼴이 적용되어 글자가 올바르게 보여요.",
+    "새 기능: “개발자에게 메시지” – 패널 머리글의 작은 말풍선 아이콘(또는 메뉴 항목)으로 양식을 열 수 있어요. 별 1~5개 평가(선택 사항), 이름, 이메일, 메시지를 보낼 수 있어요. 내용은 암호화된 연결(HTTPS)로 claudeusagemonitor.com에 바로 전송되며, “보내기”를 누르기 전에는 아무것도 전송되지 않아요. 창에 내 언어로 된 개인정보 처리방침이 표시되며, 이에 동의해야 해요.",
+    "허용하면 긍정적인 평가(이름을 입력했다면 이름도 함께)가 claudeusagemonitor.com에 게시될 수 있어요. 단, 제작자가 읽은 뒤에만 게시돼요.",
+    "아이콘은 설정 → 내용에서 끌 수 있어요."
+  ],
+  "zh-CN": [
+    "新功能：应用现在支持 34 种语言——欧盟全部官方语言，以及日语、韩语、简体中文、繁体中文、印度尼西亚语和越南语。葡萄牙语和西班牙语分别拆分为欧洲葡萄牙语和巴西葡萄牙语、西班牙本土西班牙语和拉丁美洲西班牙语。系统语言会自动识别；中文、日语和韩语使用专用字体，确保文字显示正确。",
+    "新功能：“给开发者留言”——点击面板标题栏中的小气泡图标（或菜单项）即可打开表单：可选的 1 到 5 星评分、姓名、邮箱和留言。内容通过加密连接（HTTPS）直接发送到 claudeusagemonitor.com；在你点击“发送”之前，不会发出任何内容。窗口中会以你的语言显示隐私政策，必须同意后才能发送。",
+    "如果你允许，好评（以及你填写的姓名）可能会显示在 claudeusagemonitor.com 上——但只会在作者读过之后。",
+    "可以在“设置 → 内容”中关闭该图标。"
+  ],
+  "zh-TW": [
+    "新功能：應用程式現在支援 34 種語言——歐盟所有官方語言，以及日文、韓文、簡體中文、繁體中文、印尼文和越南文。葡萄牙文和西班牙文分別拆分為歐洲葡萄牙文與巴西葡萄牙文、西班牙本土西班牙文與拉丁美洲西班牙文。系統語言會自動辨識；中文、日文和韓文使用專屬字型，讓文字正確顯示。",
+    "新功能：「傳訊息給開發者」——按一下面板標題列中的小對話泡泡圖示（或選單項目）即可開啟表單：選填的 1～5 星評分、姓名、電子郵件和訊息。內容會透過加密連線（HTTPS）直接傳送到 claudeusagemonitor.com；在你按下「傳送」之前，不會送出任何內容。視窗中會以你的語言顯示隱私權政策，必須同意後才能傳送。",
+    "如果你允許，正面評價（以及你填寫的姓名）可能會顯示在 claudeusagemonitor.com 上，但一定是在作者讀過之後。",
+    "可以在「設定 → 內容」中關閉此圖示。"
+  ],
+  "id": [
+    "Baru: aplikasi kini tersedia dalam 34 bahasa – semua bahasa resmi UE, ditambah bahasa Jepang, Korea, Tionghoa Sederhana dan Tradisional, Indonesia, serta Vietnam. Bahasa Portugis dan Spanyol kini dipisah menjadi Portugis Eropa dan Brasil, serta Spanyol (Spanyol) dan Spanyol (Amerika Latin). Bahasa sistem dikenali secara otomatis; bahasa Tionghoa, Jepang, dan Korea mendapat font tersendiri agar karakternya tampil dengan benar.",
+    "Baru: “Pesan untuk pengembang” – ikon balon percakapan kecil di header panel (dan sebuah item menu) membuka formulir: penilaian bintang 1–5 (opsional), nama, email, dan pesan. Pesan dikirim melalui koneksi terenkripsi (HTTPS) langsung ke claudeusagemonitor.com; tidak ada yang terkirim sebelum Anda menekan “Kirim”. Jendela menampilkan Kebijakan Privasi dalam bahasa Anda, dan Anda wajib menyetujuinya.",
+    "Jika Anda mengizinkan, penilaian positif (beserta nama Anda, jika diisi) dapat ditampilkan di claudeusagemonitor.com – tetapi hanya setelah dibaca oleh pembuatnya.",
+    "Ikon ini dapat dimatikan di Pengaturan → Konten."
+  ],
+  "vi": [
+    "Mới: ứng dụng giờ đây hỗ trợ 34 ngôn ngữ – tất cả ngôn ngữ chính thức của EU, cùng tiếng Nhật, tiếng Hàn, tiếng Trung giản thể và phồn thể, tiếng Indonesia và tiếng Việt. Tiếng Bồ Đào Nha và tiếng Tây Ban Nha được tách riêng: tiếng Bồ Đào Nha châu Âu và Brazil, tiếng Tây Ban Nha của Tây Ban Nha và của Mỹ Latinh. Ngôn ngữ hệ thống được nhận diện tự động; tiếng Trung, tiếng Nhật và tiếng Hàn có phông chữ riêng để các ký tự hiển thị đúng.",
+    "Mới: “Tin nhắn cho nhà phát triển” – một biểu tượng bong bóng hội thoại nhỏ trên đầu bảng (và một mục menu) mở ra biểu mẫu: đánh giá từ 1 đến 5 sao (không bắt buộc), tên, email và tin nhắn. Tin nhắn được gửi qua kết nối mã hóa (HTTPS) thẳng tới claudeusagemonitor.com; không có gì được gửi đi cho đến khi bạn nhấn “Gửi”. Cửa sổ hiển thị chính sách quyền riêng tư bằng ngôn ngữ của bạn và bạn cần chấp nhận chính sách này.",
+    "Nếu bạn cho phép, đánh giá tích cực (kèm tên của bạn, nếu bạn đã nhập) có thể xuất hiện trên claudeusagemonitor.com – nhưng chỉ sau khi tác giả đã đọc.",
+    "Có thể tắt biểu tượng này trong Cài đặt → Nội dung."
+  ],
+  "ro": [
+    "Nou: aplicația vorbește acum 34 de limbi – toate limbile oficiale ale UE, plus japoneza, coreeana, chineza simplificată și tradițională, indoneziana și vietnameza. Portugheza și spaniola s-au împărțit în portugheza europeană și braziliană, respectiv spaniola din Spania și din America Latină. Limba sistemului este recunoscută automat; chineza, japoneza și coreeana primesc un font propriu, ca să se afișeze corect caracterele.",
+    "Nou: „Mesaj către dezvoltator” – o mică pictogramă în formă de balon de dialog din antetul panoului (și un element de meniu) deschide un formular: evaluare opțională de la 1 la 5 stele, nume, adresă de e-mail și mesaj. Mesajul ajunge printr-o conexiune criptată (HTTPS) direct la claudeusagemonitor.com; nu se trimite nimic până nu apeși „Trimite”. Fereastra afișează Politica de confidențialitate în limba ta, iar acceptarea ei este obligatorie.",
+    "Dacă permiți, o evaluare pozitivă (cu numele tău, dacă l-ai completat) poate apărea pe claudeusagemonitor.com – dar numai după ce autorul a citit-o.",
+    "Pictograma poate fi dezactivată din Setări → Conținut."
+  ],
+  "el": [
+    "Νέο: η εφαρμογή μιλά πλέον 34 γλώσσες – όλες τις επίσημες γλώσσες της ΕΕ, καθώς και ιαπωνικά, κορεατικά, απλοποιημένα και παραδοσιακά κινεζικά, ινδονησιακά και βιετναμέζικα. Τα πορτογαλικά και τα ισπανικά χωρίστηκαν σε πορτογαλικά Ευρώπης και Βραζιλίας και σε ισπανικά Ισπανίας και Λατινικής Αμερικής. Η γλώσσα του συστήματος αναγνωρίζεται αυτόματα· τα κινεζικά, τα ιαπωνικά και τα κορεατικά έχουν δική τους γραμματοσειρά, ώστε οι χαρακτήρες να εμφανίζονται σωστά.",
+    "Νέο: «Μήνυμα προς τον προγραμματιστή» – ένα μικρό εικονίδιο με συννεφάκι διαλόγου στην κεφαλίδα του πίνακα (και μια επιλογή στο μενού) ανοίγει μια φόρμα: προαιρετική αξιολόγηση με 1–5 αστέρια, όνομα, e-mail και μήνυμα. Αποστέλλεται μέσω κρυπτογραφημένης σύνδεσης (HTTPS) απευθείας στο claudeusagemonitor.com· τίποτα δεν αποστέλλεται αν δεν πατήσετε «Αποστολή». Στο παράθυρο εμφανίζεται η Πολιτική απορρήτου στη γλώσσα σας, την οποία πρέπει να αποδεχτείτε.",
+    "Αν το επιτρέψετε, μια θετική αξιολόγηση (με το όνομά σας, αν το δώσατε) μπορεί να εμφανιστεί στο claudeusagemonitor.com – μόνο αφού τη διαβάσει ο δημιουργός.",
+    "Το εικονίδιο μπορεί να απενεργοποιηθεί από τις Ρυθμίσεις → Περιεχόμενο."
+  ],
+  "bg": [
+    "Ново: приложението вече говори 34 езика – всички официални езици на ЕС, както и японски, корейски, опростен и традиционен китайски, индонезийски и виетнамски. Португалският и испанският са разделени на европейски и бразилски португалски и на испански за Испания и за Латинска Америка. Езикът на системата се разпознава автоматично; китайският, японският и корейският получават собствен шрифт, за да се показват знаците правилно.",
+    "Ново: „Съобщение до разработчика“ – малка икона с балонче в заглавката на панела (и елемент в менюто) отваря формуляр: незадължителна оценка от 1 до 5 звезди, име, имейл и съобщение. То се изпраща по криптирана връзка (HTTPS) направо до claudeusagemonitor.com; нищо не се изпраща, докато не натиснеш „Изпращане“. В прозореца се показва Политика за поверителност на твоя език и приемането ѝ е задължително.",
+    "Ако разрешиш, положителна оценка (с името ти, ако е посочено) може да се появи на claudeusagemonitor.com – но едва след като авторът я е прочел.",
+    "Иконата може да се изключи от Настройки → Съдържание."
+  ],
+  "sk": [
+    "Novinka: aplikácia teraz hovorí 34 jazykmi – všetkými úradnými jazykmi EÚ a navyše japončinou, kórejčinou, zjednodušenou a tradičnou čínštinou, indonézštinou a vietnamčinou. Portugalčina a španielčina sa rozdelili na európsku a brazílsku portugalčinu a na španielčinu pre Španielsko a pre Latinskú Ameriku. Jazyk systému sa rozpozná automaticky; čínština, japončina a kórejčina majú vlastné písmo, aby sa znaky zobrazovali správne.",
+    "Novinka: „Správa vývojárovi“ – malá ikona bubliny v hlavičke panela (a položka v ponuke) otvorí formulár: nepovinné hodnotenie 1 až 5 hviezdičkami, meno, e-mail a správa. Ide šifrovaným pripojením (HTTPS) priamo na claudeusagemonitor.com; nič sa neodošle, kým nestlačíš „Odoslať“. V okne sa zobrazia zásady ochrany osobných údajov v tvojom jazyku a ich prijatie je povinné.",
+    "Ak to povolíš, kladné hodnotenie (s tvojím menom, ak je uvedené) sa môže objaviť na claudeusagemonitor.com – ale až potom, čo si ho autor prečíta.",
+    "Ikonu môžeš vypnúť v časti Nastavenia → Obsah."
+  ],
+  "hr": [
+    "Novo: aplikacija sada govori 34 jezika – sve službene jezike EU-a te japanski, korejski, pojednostavnjeni i tradicionalni kineski, indonezijski i vijetnamski. Portugalski i španjolski podijeljeni su na europski i brazilski portugalski te španjolski za Španjolsku i za Latinsku Ameriku. Jezik sustava prepoznaje se automatski; kineski, japanski i korejski dobivaju vlastiti font kako bi se znakovi ispravno prikazivali.",
+    "Novo: „Poruka programeru” – mala ikona oblačića u zaglavlju panela (i stavka izbornika) otvara obrazac: neobavezna ocjena od 1 do 5 zvjezdica, ime, e-pošta i poruka. Poruka putuje šifriranom vezom (HTTPS) izravno na claudeusagemonitor.com; ništa se ne šalje dok ne pritisnete „Pošalji”. U prozoru se prikazuju pravila privatnosti na vašem jeziku, a njihovo je prihvaćanje obvezno.",
+    "Ako dopustite, pozitivna ocjena (s vašim imenom, ako ste ga upisali) može se pojaviti na claudeusagemonitor.com – ali tek nakon što je autor pročita.",
+    "Ikona se može isključiti u odjeljku Postavke → Sadržaj."
+  ],
+  "sv": [
+    "Nytt: appen talar nu 34 språk – alla EU:s officiella språk samt japanska, koreanska, förenklad och traditionell kinesiska, indonesiska och vietnamesiska. Portugisiska och spanska är uppdelade i europeisk och brasiliansk portugisiska samt spanska för Spanien och för Latinamerika. Systemspråket känns igen automatiskt; kinesiska, japanska och koreanska får ett eget teckensnitt så att tecknen ser rätt ut.",
+    "Nytt: ”Meddelande till utvecklaren” – en liten pratbubbelikon i panelens rubrikrad (och ett menyalternativ) öppnar ett formulär: valfritt betyg med 1–5 stjärnor, namn, e-postadress och meddelande. Det skickas över en krypterad anslutning (HTTPS) direkt till claudeusagemonitor.com; ingenting skickas förrän du trycker på ”Skicka”. I fönstret visas integritetspolicyn på ditt språk, och du måste godkänna den.",
+    "Om du tillåter det kan ett positivt betyg (med ditt namn, om du har angett det) visas på claudeusagemonitor.com – men först efter att utvecklaren har läst det.",
+    "Ikonen kan stängas av under Inställningar → Innehåll."
+  ],
+  "fi": [
+    "Uutta: sovellus puhuu nyt 34 kieltä – kaikkia EU:n virallisia kieliä sekä japania, koreaa, yksinkertaistettua ja perinteistä kiinaa, indonesiaa ja vietnamia. Portugali ja espanja on jaettu Euroopan ja Brasilian portugaliksi sekä Espanjan ja Latinalaisen Amerikan espanjaksi. Järjestelmän kieli tunnistetaan automaattisesti; kiina, japani ja korea saavat oman fonttinsa, jotta merkit näkyvät oikein.",
+    "Uutta: ”Viesti kehittäjälle” – pieni puhekuplakuvake paneelin otsikossa (ja valikon kohta) avaa lomakkeen: valinnainen 1–5 tähden arvio, nimi, sähköposti ja viesti. Viesti kulkee salattua yhteyttä (HTTPS) suoraan sivustolle claudeusagemonitor.com; mitään ei lähetetä ennen kuin painat ”Lähetä”. Ikkunassa näkyy tietosuojaseloste omalla kielelläsi, ja se on hyväksyttävä.",
+    "Jos sallit sen, myönteinen arvio (ja nimesi, jos annoit sen) voi näkyä sivustolla claudeusagemonitor.com – mutta vasta kun tekijä on lukenut sen.",
+    "Kuvakkeen voi poistaa käytöstä kohdassa Asetukset → Sisältö."
+  ],
+  "da": [
+    "Nyt: appen taler nu 34 sprog – alle EU's officielle sprog plus japansk, koreansk, forenklet og traditionelt kinesisk, indonesisk og vietnamesisk. Portugisisk og spansk er delt op i europæisk og brasiliansk portugisisk samt spansk for Spanien og for Latinamerika. Systemsproget genkendes automatisk; kinesisk, japansk og koreansk får deres egen skrifttype, så tegnene vises korrekt.",
+    "Nyt: “Besked til udvikleren” – et lille talebobleikon i panelets titellinje (og et menupunkt) åbner en formular: valgfri bedømmelse med 1–5 stjerner, navn, e-mail og besked. Den sendes via en krypteret forbindelse (HTTPS) direkte til claudeusagemonitor.com; intet bliver sendt, før du trykker på “Send”. Vinduet viser privatlivspolitikken på dit sprog, og du skal acceptere den.",
+    "Hvis du tillader det, kan en positiv bedømmelse (med dit navn, hvis du har angivet det) blive vist på claudeusagemonitor.com – men først når udvikleren har læst den.",
+    "Ikonet kan slås fra under Indstillinger → Indhold."
+  ],
+  "lt": [
+    "Nauja: programa dabar kalba 34 kalbomis – visomis oficialiosiomis ES kalbomis, taip pat japonų, korėjiečių, supaprastinta ir tradicine kinų, indoneziečių ir vietnamiečių kalbomis. Portugalų ir ispanų kalbos atskirtos: Europos ir Brazilijos portugalų, Ispanijos ir Lotynų Amerikos ispanų. Sistemos kalba atpažįstama automatiškai; kinų, japonų ir korėjiečių kalboms naudojamas atskiras šriftas, kad rašmenys būtų rodomi teisingai.",
+    "Nauja: „Žinutė kūrėjui“ – maža debesėlio piktograma skydelio antraštėje (ir meniu punktas) atveria formą: neprivalomas įvertinimas nuo 1 iki 5 žvaigždučių, vardas, el. paštas ir žinutė. Ji siunčiama šifruotu ryšiu (HTTPS) tiesiai į claudeusagemonitor.com; niekas neišsiunčiama, kol nepaspaudžiate „Siųsti“. Lange rodoma privatumo politika jūsų kalba – ją būtina priimti.",
+    "Jei leisite, teigiamas įvertinimas (su jūsų vardu, jei jį nurodėte) gali būti paskelbtas claudeusagemonitor.com svetainėje – tik po to, kai autorius jį perskaitys.",
+    "Piktogramą galima išjungti skiltyje Parametrai → Turinys."
+  ],
+  "sl": [
+    "Novo: aplikacija zdaj govori 34 jezikov – vse uradne jezike EU ter japonščino, korejščino, poenostavljeno in tradicionalno kitajščino, indonezijščino in vietnamščino. Portugalščina in španščina sta razdeljeni na evropsko in brazilsko portugalščino ter na španščino za Španijo in za Latinsko Ameriko. Jezik sistema se prepozna samodejno; kitajščina, japonščina in korejščina imajo svojo pisavo, da so znaki prikazani pravilno.",
+    "Novo: „Sporočilo razvijalcu“ – majhna ikona oblačka v glavi plošče (in element v meniju) odpre obrazec: neobvezna ocena od 1 do 5 zvezdic, ime, e-pošta in sporočilo. Sporočilo potuje po šifrirani povezavi (HTTPS) neposredno na claudeusagemonitor.com; nič se ne pošlje, dokler ne kliknete „Pošlji“. V oknu je prikazana politika zasebnosti v vašem jeziku, ki jo morate sprejeti.",
+    "Če to dovolite, se lahko pozitivna ocena (z vašim imenom, če ste ga navedli) prikaže na claudeusagemonitor.com – a šele potem, ko jo avtor prebere.",
+    "Ikono lahko izklopite v razdelku Nastavitve → Vsebina."
+  ],
+  "lv": [
+    "Jaunums: lietotne tagad runā 34 valodās – visās ES oficiālajās valodās, kā arī japāņu, korejiešu, vienkāršotajā un tradicionālajā ķīniešu, indonēziešu un vjetnamiešu valodā. Portugāļu un spāņu valoda ir sadalīta Eiropas un Brazīlijas portugāļu valodā, kā arī Spānijas un Latīņamerikas spāņu valodā. Sistēmas valoda tiek atpazīta automātiski; ķīniešu, japāņu un korejiešu valodai ir savs fonts, lai rakstzīmes izskatītos pareizi.",
+    "Jaunums: „Ziņa izstrādātājam” – neliela runas burbuļa ikona paneļa galvenē (un izvēlnes vienums) atver veidlapu: neobligāts vērtējums ar 1–5 zvaigznēm, vārds, e-pasts un ziņa. Tā tiek nosūtīta pa šifrētu savienojumu (HTTPS) tieši uz claudeusagemonitor.com; nekas netiek nosūtīts, kamēr nenoklikšķināt uz „Sūtīt”. Logā redzama privātuma politika jūsu valodā, un tā ir jāpieņem.",
+    "Ja atļausiet, pozitīvs vērtējums (ar jūsu vārdu, ja to norādījāt) var parādīties vietnē claudeusagemonitor.com – taču tikai pēc tam, kad autors to būs izlasījis.",
+    "Ikonu var izslēgt sadaļā Iestatījumi → Saturs."
+  ],
+  "et": [
+    "Uus: rakendus räägib nüüd 34 keelt – kõiki ELi ametlikke keeli ning lisaks jaapani, korea, lihtsustatud ja traditsioonilist hiina, indoneesia ja vietnami keelt. Portugali ja hispaania keel on jagatud Euroopa ja Brasiilia portugali keeleks ning Hispaania ja Ladina-Ameerika hispaania keeleks. Süsteemi keel tuvastatakse automaatselt; hiina, jaapani ja korea keel saavad oma fondi, et märgid näeksid õiged välja.",
+    "Uus: „Sõnum arendajale“ – väike jutumulli ikoon paneeli päises (ja menüükäsk) avab vormi: valikuline hinnang 1–5 tärniga, nimi, e-post ja sõnum. See liigub krüptitud ühenduse (HTTPS) kaudu otse saidile claudeusagemonitor.com; midagi ei saadeta enne, kui vajutad „Saada“. Aknas kuvatakse privaatsuspoliitika sinu keeles ja sellega tuleb nõustuda.",
+    "Kui lubad, võib positiivne hinnang (koos sinu nimega, kui selle andsid) ilmuda saidil claudeusagemonitor.com – aga alles pärast seda, kui autor on selle läbi lugenud.",
+    "Ikooni saab välja lülitada jaotises Sätted → Sisu."
+  ],
+  "mt": [
+    "Ġdid: l-app issa titkellem 34 lingwa – il-lingwi uffiċjali kollha tal-UE, flimkien mal-Ġappuniż, il-Korean, iċ-Ċiniż Simplifikat u Tradizzjonali, l-Indoneżjan u l-Vjetnamiż. Il-Portugiż u l-Ispanjol inqasmu f'Portugiż Ewropew u Brażiljan, u Spanjol ta' Spanja u tal-Amerika Latina. Il-lingwa tas-sistema tingħaraf awtomatikament; iċ-Ċiniż, il-Ġappuniż u l-Korean għandhom font tagħhom, biex il-karattri jidhru sew.",
+    "Ġdid: “Messaġġ lill-iżviluppatur” – ikona żgħira ta' bużżieqa tad-diskors fl-intestatura tal-pannell (u għażla fil-menu) tiftaħ formola: valutazzjoni mhux obbligatorja minn 1 sa 5 stilel, isem, email u messaġġ. Il-messaġġ imur permezz ta' konnessjoni kriptata (HTTPS) dirett lejn claudeusagemonitor.com; ma jintbagħat xejn sakemm ma tagħfasx “Ibgħat”. Fit-tieqa tidher il-Politika tal-Privatezza bil-lingwa tiegħek, u trid taċċettaha.",
+    "Jekk tippermetti, valutazzjoni pożittiva (b'ismek, jekk tajtu) tista' tidher fuq claudeusagemonitor.com – iżda biss wara li l-awtur ikun qraha.",
+    "L-ikona tista' titfiha fl-Issettjar → Kontenut."
+  ],
+  "ga": [
+    "Nua: labhraíonn an aip 34 theanga anois – gach teanga oifigiúil de chuid an AE, chomh maith le Seapáinis, Cóiréis, Sínis Shimplithe agus Thraidisiúnta, Indinéisis agus Vítneaimis. Tá an Phortaingéilis agus an Spáinnis roinnte anois: Portaingéilis na hEorpa agus na Brasaíle, agus Spáinnis na Spáinne agus Mheiriceá Laidinigh. Aithnítear teanga an chórais go huathoibríoch; faigheann an tSínis, an tSeapáinis agus an Chóiréis a gcló féin, ionas go mbeidh cuma cheart ar na carachtair.",
+    "Nua: “Teachtaireacht chuig an bhforbróir” – osclaíonn deilbhín beag i bhfoirm bolgáin chainte i gceanntásc an phainéil (agus mír roghchláir) foirm: rátáil roghnach 1–5 réalta, ainm, ríomhphost agus teachtaireacht. Téann sí thar cheangal criptithe (HTTPS) díreach chuig claudeusagemonitor.com; ní sheoltar aon rud go dtí go mbrúnn tú “Seol”. Taispeántar an Polasaí Príobháideachais i do theanga féin san fhuinneog, agus caithfidh tú glacadh leis.",
+    "Má cheadaíonn tú é, d'fhéadfadh rátáil dhearfach (le d'ainm, má thug tú é) a bheith le feiceáil ar claudeusagemonitor.com – ach amháin tar éis don údar í a léamh.",
+    "Is féidir an deilbhín a mhúchadh faoi Socruithe → Ábhar."
+  ]
+}

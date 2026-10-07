@@ -197,14 +197,15 @@ A beállítások helye: `%APPDATA%\ClaudeUsageMonitor\settings.json` (kézzel is
 
 ## Nyelvek
 
-A felület **12 nyelven** elérhető (a panel, a menü, a tálca és az értesítések):
-angol, magyar, német, francia, spanyol, olasz, portugál, lengyel, holland, orosz,
-cseh, török. Induláskor a **rendszer nyelvét** veszi fel (ha támogatott), különben
-angol. Kézzel a **jobb gomb → Nyelv** menüből váltható; a választás megmarad.
+A felület **34 nyelven** elérhető (a panel, a menü, a tálca, az értesítések, a beállítások, az előzmények,
+a bejelentkezés és az „Üzenet a fejlesztőnek” ablak): angol, magyar, német, francia, spanyol (spanyolországi és latin-amerikai), olasz, portugál (európai és brazil), lengyel, holland, orosz, cseh, török, japán, koreai, kínai (egyszerűsített és hagyományos), indonéz, vietnámi, román, görög, bolgár, szlovák, horvát, svéd, finn, dán, litván, szlovén, lett, észt, máltai és ír — az EU minden hivatalos nyelve.
+Induláskor a **rendszer nyelvét** veszi fel (a teljes Windows-nyelvkód alapján, így a brazil és az európai
+portugál, a kétféle spanyol és a kétféle kínai is szétválik), különben angol. Kézzel a **jobb gomb → Nyelv** menüből váltható; a választás megmarad.
 
-Új nyelv hozzáadása egyszerű: a [claude_usage/i18n.py](claude_usage/i18n.py) `LANG_NAMES`
-listájához vedd fel a kódot, és tölts a `STRINGS` kulcsaihoz egy fordítást. Ami hiányzik,
-angolul jelenik meg.
+Minden nyelv saját modulban van a [claude_usage/langs/](claude_usage/langs/) mappában (`ja.py`, `pt_BR.py`, …),
+szójegyzékkel és lektori jegyzettel a [docs/i18n/](docs/i18n/) alatt. A `python tools/check_i18n.py <kód>` ellenőrzi a
+helyőrzőket, a sortöréseket, az írásrendszer szabályait és a teljességet. Ami hiányzik, a testérváltozat
+(pt-BR ↔ pt-PT, es-ES ↔ es-419), majd az angol jelenik meg.
 
 ## Fejlesztés / forrás
 

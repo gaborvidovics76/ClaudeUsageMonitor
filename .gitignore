@@ -44,3 +44,4 @@ macos-doctor-report.txt
 
 # ...but the hand-written macOS spec belongs to the source
 !macos/*.spec
+build-shots/

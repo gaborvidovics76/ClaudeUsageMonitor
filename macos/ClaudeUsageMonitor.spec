@@ -2,6 +2,8 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
 
+from PyInstaller.utils.hooks import collect_submodules
+
 ROOT = os.path.abspath(os.path.join(SPECPATH, ".."))
 VERSION = os.environ.get("UM_VERSION", "0.0.0")
 
@@ -16,7 +18,7 @@ EXCLUDES = [
 a = Analysis(
     [os.path.join(ROOT, "main.py")],
     pathex=[ROOT],
-    hiddenimports=["keyring.backends.macOS"],     # the Keychain backend is chosen by hand when frozen
+    hiddenimports=["keyring.backends.macOS"] + collect_submodules("claude_usage.langs"),     # the Keychain backend is chosen by hand when frozen
     excludes=EXCLUDES,
     noarchive=False,
 )

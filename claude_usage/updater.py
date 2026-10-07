@@ -65,7 +65,14 @@ class UpdateInfo:
     notes: Dict[str, List[str]] = field(default_factory=dict)   # language code -> lines
 
     def notes_for(self, lang: str) -> List[str]:
-        return self.notes.get(lang) or self.notes.get("en") or next(iter(self.notes.values()), [])
+        # exact code -> the other variant (pt-BR <-> pt-PT, es-ES <-> es-419) -> the plain code of older
+        # manifests ("pt", "es") -> English. The Chinese variants never borrow from each other.
+        from .i18n import SIBLINGS
+
+        for code in (lang, SIBLINGS.get(lang, ""), lang.split("-")[0] if not lang.startswith("zh") else ""):
+            if code and self.notes.get(code):
+                return self.notes[code]
+        return self.notes.get("en") or next(iter(self.notes.values()), [])
 
 
 # --------------------------------------------------------------------------- versions

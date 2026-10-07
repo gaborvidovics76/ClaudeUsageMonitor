@@ -23,10 +23,35 @@ from .i18n import (
     available_languages,
     current_language,
     language_name,
+    migrate_language,
+    qt_locale_name,
     set_language,
     system_language,
     tr,
+    ui_font_families,
 )
+
+
+def apply_language_env(app: QApplication) -> None:
+    """Locale and font for the chosen language (CJK languages need their own font family)."""
+    from PySide6.QtCore import QLocale
+    from PySide6.QtGui import QFont
+
+    try:
+        QLocale.setDefault(QLocale(qt_locale_name()))
+    except Exception:  # noqa: BLE001
+        pass
+    base = getattr(apply_language_env, "_base_font", None)
+    if base is None:
+        base = QFont(app.font())
+        apply_language_env._base_font = base      # type: ignore[attr-defined]
+    extra = ui_font_families()
+    if extra:
+        f = QFont(base)
+        f.setFamilies(extra + [base.family()])
+        app.setFont(f)
+    else:
+        app.setFont(base)
 from .history import HistoryWindow
 from .settings import GAUGE_ORDERS, APP_TITLE, Settings, config_dir
 from .settings_dialog import LAYOUTS, SettingsDialog
@@ -63,7 +88,11 @@ class MonitorApp:
         self.app = app
         self.settings = Settings()
         # language: saved value, or the system language (if supported), else English
+        if self.settings["language"] in ("pt", "es"):
+            # settings written before 2.7.0 stored the undivided code
+            self.settings["language"] = migrate_language(self.settings["language"])
         set_language(self.settings["language"] or system_language())
+        apply_language_env(app)
         # If the exe moved in the meantime, fix the autostart entry.
         self.settings["autostart"] = winutil.sync_autostart()
         self.settings.save()
@@ -89,6 +118,8 @@ class MonitorApp:
         self._backup_version = -1
         self.backup_dialog = None
         self.help_dialog = None
+        self.feedback_dialog = None
+        self.widget.feedbackRequested.connect(self.show_feedback)
 
         self.tray = QSystemTrayIcon(winutil.app_icon())
         self.tray.setToolTip(APP_TITLE)
@@ -560,6 +591,7 @@ class MonitorApp:
         menu.addAction(tr("menu.backups"), lambda: self.show_backups(None))
         menu.addAction(tr("menu.settings"), self.show_settings)
         menu.addAction(tr("menu.help"), self.show_help)
+        menu.addAction(tr("menu.feedback"), self.show_feedback)
         ref = menu.addAction(tr("menu.refresh"), self.force_refresh)
         if self._is_busy():
             ref.setText(tr("panel.refreshing") + "…")
@@ -581,6 +613,7 @@ class MonitorApp:
 
     def _set_language(self, code: str) -> None:
         set_language(code)
+        apply_language_env(self.app)
         self.settings["language"] = code
         self.settings.save()
         # redraw the whole UI in the new language
@@ -598,6 +631,12 @@ class MonitorApp:
         if self.update_dialog is not None:
             self.update_dialog.close()
             self.update_dialog = None
+        if self.feedback_dialog is not None:
+            self.feedback_dialog.close()
+            self.feedback_dialog = None
+        if self.help_dialog is not None:
+            self.help_dialog.close()
+            self.help_dialog = None
         if self.help_dialog is not None:
             self.help_dialog.close()
             self.help_dialog = None
@@ -710,6 +749,19 @@ class MonitorApp:
         self.help_dialog.raise_()
         self.help_dialog.activateWindow()
 
+    def show_feedback(self) -> None:
+        from .feedback_dialog import FeedbackDialog
+
+        # a fresh form every time (the previous one may have been sent already)
+        if self.feedback_dialog is not None and self.feedback_dialog.isVisible():
+            self.feedback_dialog.raise_()
+            self.feedback_dialog.activateWindow()
+            return
+        self.feedback_dialog = FeedbackDialog()
+        self.feedback_dialog.show()
+        self.feedback_dialog.raise_()
+        self.feedback_dialog.activateWindow()
+
     def show_history(self) -> None:
         # always with the current source (not stale after a local/API switch)
         if self.history is None:
@@ -744,6 +796,13 @@ def _handle_cli(argv) -> Optional[int]:
         # no window; the outcome is written to update.log in the config folder
         url = next((a.split("=", 1)[1] for a in argv if a.startswith("--manifest-url=")), "")
         return run_cli_update(url or Settings()["update_url"] or "", apply="--update-now" in argv)
+    fb_url = next((a.split("=", 1)[1] for a in argv if a.startswith("--feedback-url=")), "")
+    if fb_url:
+        # local test target for the "message to the developer" form (only http://127.0.0.1 / localhost is accepted)
+        from . import feedback
+
+        feedback.override_url = fb_url
+        log(f"feedback target overridden: {feedback.target_url()}")
     return None
 
 
@@ -761,7 +820,8 @@ def run() -> int:
         app.setWindowIcon(winutil.app_icon())
 
         # language first, so even the "already running" message is localized
-        set_language(Settings()["language"] or system_language())
+        set_language(migrate_language(Settings()["language"]) or system_language())
+        apply_language_env(app)
 
         # only one instance at a time
         lock = QSharedMemory("ClaudeUsageMonitor-single-instance")

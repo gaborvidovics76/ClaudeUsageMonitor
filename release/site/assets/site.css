@@ -357,7 +357,7 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 .who__i b{display:block;margin-bottom:8px;font-size:1.05rem;letter-spacing:-.01em}.who__i span{color:var(--dim);font-size:.94rem;display:block;line-height:1.5}
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:40px}
 .quote{margin:0;padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--card)}
-.quote p{color:var(--ink);font-size:1rem;white-space:pre-line}.quote cite{display:block;margin-top:14px;color:var(--acc);font-style:normal;font-weight:600;font-size:.92rem}
+.quote p{color:var(--ink);font-size:1rem;white-space:pre-line}.quote__stars{display:block;margin-bottom:10px;color:#f2b134;letter-spacing:2px;font-size:1.05rem}.quote cite{display:block;margin-top:14px;color:var(--acc);font-style:normal;font-weight:600;font-size:.92rem}
 .author{position:relative;margin:60px auto 0;max-width:860px;padding:44px;border-radius:30px;border:1px solid var(--line2);background:radial-gradient(100% 120% at 100% 0,color-mix(in oklab,var(--hot) 20%,transparent),transparent 55%),var(--card2);text-align:center}
 .author__badge{width:72px;height:72px;margin:-80px auto 22px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.5rem;letter-spacing:-.02em;background:linear-gradient(135deg,var(--hot),var(--acc2));color:#fff;border:4px solid var(--bg2);box-shadow:0 14px 40px -10px var(--hot)}
 .author blockquote{margin:0;font-size:clamp(1.1rem,2.2vw,1.4rem);line-height:1.5;letter-spacing:-.01em;text-wrap:pretty}

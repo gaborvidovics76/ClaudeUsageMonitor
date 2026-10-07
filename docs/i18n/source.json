@@ -1,0 +1,2466 @@
+{
+ "keys": {
+  "backup.age_d": {
+   "en": "{}d",
+   "hu": "{}n",
+   "where": "backup status bar / details window"
+  },
+  "backup.age_h": {
+   "en": "{}h",
+   "hu": "{}ó",
+   "where": "backup status bar / details window"
+  },
+  "backup.age_m": {
+   "en": "{}m",
+   "hu": "{}p",
+   "where": "backup status bar / details window"
+  },
+  "backup.and_more": {
+   "en": "…and {} more",
+   "hu": "…és még {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.checked_at": {
+   "en": "Checked: {}",
+   "hu": "Ellenőrizve: {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.checking": {
+   "en": "Checking…",
+   "hu": "Ellenőrzés…",
+   "where": "backup status bar / details window"
+  },
+  "backup.cloud_only": {
+   "en": "The snapshot is online-only in OneDrive; its contents are not listed so it does not have to be downloaded.",
+   "hu": "A pillanatkép csak online érhető el a OneDrive-ban; a tartalmát nem listázom, hogy ne kelljen letölteni.",
+   "where": "backup status bar / details window"
+  },
+  "backup.comp.cowork": {
+   "en": "Cowork chat logs (ZIP per session)",
+   "hu": "Cowork beszélgetésnaplók (munkamenetenként ZIP)",
+   "where": "backup status bar / details window"
+  },
+  "backup.comp.vault": {
+   "en": "Obsidian vault snapshot (ZIP)",
+   "hu": "Obsidian vault pillanatkép (ZIP)",
+   "where": "backup status bar / details window"
+  },
+  "backup.disclaimer_short": {
+   "en": "The monitor only shows what the backup logs say. We accept no liability for backups – checking that they are complete and can be restored is up to you.",
+   "hu": "A monitor csak azt mutatja, amit a mentési naplók írnak. A mentésekért nem vállalunk felelősséget – hogy teljesek és visszaállíthatók-e, azt neked kell ellenőrizned.",
+   "where": "backup status bar / details window"
+  },
+  "backup.done": {
+   "en": "done",
+   "hu": "kész",
+   "where": "backup status bar / details window"
+  },
+  "backup.dry_run": {
+   "en": "(test run, nothing uploaded)",
+   "hu": "(próbafutás, nem töltött fel semmit)",
+   "where": "backup status bar / details window"
+  },
+  "backup.failed": {
+   "en": "FAILED",
+   "hu": "HIBA",
+   "where": "backup status bar / details window"
+  },
+  "backup.files_size": {
+   "en": "{} files, {}",
+   "hu": "{} fájl, {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.folders": {
+   "en": "Folders",
+   "hu": "Mappák",
+   "where": "backup status bar / details window"
+  },
+  "backup.label_age": {
+   "en": "Name and age",
+   "hu": "Név és eltelt idő",
+   "where": "backup status bar / details window"
+  },
+  "backup.label_name": {
+   "en": "Name only",
+   "hu": "Csak név",
+   "where": "backup status bar / details window"
+  },
+  "backup.label_none": {
+   "en": "Lamps only",
+   "hu": "Csak lámpák",
+   "where": "backup status bar / details window"
+  },
+  "backup.last_ok": {
+   "en": "Last successful backup: {} ({} ago)",
+   "hu": "Utolsó sikeres mentés: {} ({} ezelőtt)",
+   "where": "backup status bar / details window"
+  },
+  "backup.last_run": {
+   "en": "Last run: {} – {}",
+   "hu": "Utolsó futás: {} – {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.legend": {
+   "en": "Green: not older than {} h · Yellow: up to {} h · Red: older, or no backup",
+   "hu": "Zöld: legfeljebb {} órás · Sárga: legfeljebb {} órás · Piros: régebbi, vagy nincs mentés",
+   "where": "backup status bar / details window"
+  },
+  "backup.level_green": {
+   "en": "Fresh",
+   "hu": "Friss",
+   "where": "backup status bar / details window"
+  },
+  "backup.level_none": {
+   "en": "No backup found",
+   "hu": "Nincs mentés",
+   "where": "backup status bar / details window"
+  },
+  "backup.level_red": {
+   "en": "Outdated",
+   "hu": "Elavult",
+   "where": "backup status bar / details window"
+  },
+  "backup.level_yellow": {
+   "en": "Getting old",
+   "hu": "Kezd elavulni",
+   "where": "backup status bar / details window"
+  },
+  "backup.log_file": {
+   "en": "Log file",
+   "hu": "Naplófájl",
+   "where": "backup status bar / details window"
+  },
+  "backup.name.nextcloud": {
+   "en": "Nextcloud",
+   "hu": "Nextcloud",
+   "where": "backup status bar / details window"
+  },
+  "backup.name.obsidian": {
+   "en": "Obsidian",
+   "hu": "Obsidian",
+   "where": "backup status bar / details window"
+  },
+  "backup.name.onedrive": {
+   "en": "OneDrive",
+   "hu": "OneDrive",
+   "where": "backup status bar / details window"
+  },
+  "backup.no_root": {
+   "en": "Backup folder not found: {}",
+   "hu": "Nem található a mentési mappa: {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.none_found": {
+   "en": "None.",
+   "hu": "Nincs.",
+   "where": "backup status bar / details window"
+  },
+  "backup.open": {
+   "en": "open",
+   "hu": "megnyitás",
+   "where": "backup status bar / details window"
+  },
+  "backup.rc_copied": {
+   "en": "new or changed files copied",
+   "hu": "új vagy módosult fájlok átmásolva",
+   "where": "backup status bar / details window"
+  },
+  "backup.rc_failed": {
+   "en": "FAILED (code {})",
+   "hu": "HIBA (kód: {})",
+   "where": "backup status bar / details window"
+  },
+  "backup.rc_nochange": {
+   "en": "up to date, nothing to copy",
+   "hu": "naprakész, nem volt mit másolni",
+   "where": "backup status bar / details window"
+  },
+  "backup.recent_notes": {
+   "en": "Most recently edited notes in the snapshot",
+   "hu": "A pillanatkép legutóbb szerkesztett jegyzetei",
+   "where": "backup status bar / details window"
+  },
+  "backup.refresh": {
+   "en": "Check now",
+   "hu": "Ellenőrzés most",
+   "where": "backup status bar / details window"
+  },
+  "backup.sec_components": {
+   "en": "What is backed up",
+   "hu": "Mi van elmentve",
+   "where": "backup status bar / details window"
+  },
+  "backup.sec_contents": {
+   "en": "Contents",
+   "hu": "Tartalom",
+   "where": "backup status bar / details window"
+  },
+  "backup.sec_log": {
+   "en": "Log (last lines)",
+   "hu": "Napló (utolsó sorok)",
+   "where": "backup status bar / details window"
+  },
+  "backup.sec_problems": {
+   "en": "Errors and warnings",
+   "hu": "Hibák és figyelmeztetések",
+   "where": "backup status bar / details window"
+  },
+  "backup.sec_tasks": {
+   "en": "Scheduled tasks",
+   "hu": "Ütemezett feladatok",
+   "where": "backup status bar / details window"
+  },
+  "backup.skipped": {
+   "en": "skipped (folder not found)",
+   "hu": "kihagyva (nincs ilyen mappa)",
+   "where": "backup status bar / details window"
+  },
+  "backup.snap_kept": {
+   "en": "{} snapshots kept, {} in total",
+   "hu": "{} pillanatkép megőrizve, összesen {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.snapshot": {
+   "en": "Latest snapshot",
+   "hu": "Legfrissebb pillanatkép",
+   "where": "backup status bar / details window"
+  },
+  "backup.source": {
+   "en": "Source",
+   "hu": "Forrás",
+   "where": "backup status bar / details window"
+  },
+  "backup.state_error": {
+   "en": "finished with errors",
+   "hu": "hibával zárult",
+   "where": "backup status bar / details window"
+  },
+  "backup.state_interrupted": {
+   "en": "did not finish",
+   "hu": "nem fejeződött be",
+   "where": "backup status bar / details window"
+  },
+  "backup.state_ok": {
+   "en": "completed successfully",
+   "hu": "sikeresen lefutott",
+   "where": "backup status bar / details window"
+  },
+  "backup.state_running": {
+   "en": "running now",
+   "hu": "most fut",
+   "where": "backup status bar / details window"
+  },
+  "backup.storage": {
+   "en": "Remote storage: {} used of {}, {} free",
+   "hu": "Távoli tárhely: {} / {} foglalt, {} szabad",
+   "where": "backup status bar / details window"
+  },
+  "backup.target": {
+   "en": "Destination",
+   "hu": "Cél",
+   "where": "backup status bar / details window"
+  },
+  "backup.task_event": {
+   "en": "on event",
+   "hu": "eseményre",
+   "where": "backup status bar / details window"
+  },
+  "backup.task_row": {
+   "en": "last run {} · result {} · next {}",
+   "hu": "utolsó futás {} · eredmény {} · következő {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.tip_click": {
+   "en": "Click for details",
+   "hu": "Kattints a részletekért",
+   "where": "backup status bar / details window"
+  },
+  "backup.title": {
+   "en": "Backups",
+   "hu": "Mentések",
+   "where": "backup status bar / details window"
+  },
+  "backup.tray": {
+   "en": "Backups: {}",
+   "hu": "Mentések: {}",
+   "where": "backup status bar / details window"
+  },
+  "backup.uploaded": {
+   "en": "Uploaded in this run: {} new, {} replaced, {} errors",
+   "hu": "Ebben a futásban feltöltve: {} új, {} cserélt, {} hiba",
+   "where": "backup status bar / details window"
+  },
+  "backup.uploaded_files": {
+   "en": "Uploaded files",
+   "hu": "Feltöltött fájlok",
+   "where": "backup status bar / details window"
+  },
+  "backup.uploaded_groups": {
+   "en": "Uploaded files by folder",
+   "hu": "Feltöltött fájlok mappánként",
+   "where": "backup status bar / details window"
+  },
+  "backup.uploaded_no": {
+   "en": "Uploaded to Nextcloud: not yet",
+   "hu": "Feltöltve a Nextcloudra: még nem",
+   "where": "backup status bar / details window"
+  },
+  "backup.uploaded_yes": {
+   "en": "Uploaded to Nextcloud: yes ({})",
+   "hu": "Feltöltve a Nextcloudra: igen ({})",
+   "where": "backup status bar / details window"
+  },
+  "backup.vault": {
+   "en": "Vault",
+   "hu": "Vault",
+   "where": "backup status bar / details window"
+  },
+  "backup.vault_changed": {
+   "en": "{} notes changed in the vault since this snapshot",
+   "hu": "A vaultban {} jegyzet módosult a pillanatkép óta",
+   "where": "backup status bar / details window"
+  },
+  "backup.zip_new": {
+   "en": "{} new/updated ZIP",
+   "hu": "{} új/frissített ZIP",
+   "where": "backup status bar / details window"
+  },
+  "backup.zip_summary": {
+   "en": "{} files ({} notes), {} uncompressed",
+   "hu": "{} fájl ({} jegyzet), kicsomagolva {}",
+   "where": "backup status bar / details window"
+  },
+  "detail.extra": {
+   "en": "Usage credits",
+   "hu": "Használati kredit",
+   "where": "general"
+  },
+  "detail.local_header": {
+   "en": "CLAUDE CODE · THIS PC · THIS WEEK'S SPLIT",
+   "hu": "CLAUDE CODE · EZ A GÉP · E HETI MEGOSZLÁS",
+   "where": "general"
+  },
+  "detail.off": {
+   "en": "off",
+   "hu": "kikapcsolva",
+   "where": "general"
+  },
+  "detail.on": {
+   "en": "on",
+   "hu": "bekapcsolva",
+   "where": "general"
+  },
+  "detail.surface.oauth_apps": {
+   "en": "Connected apps",
+   "hu": "Külső alkalmazások",
+   "where": "general"
+  },
+  "detail.unlimited": {
+   "en": "no limit",
+   "hu": "nincs limit",
+   "where": "general"
+  },
+  "dlg.cancel": {
+   "en": "Cancel",
+   "hu": "Mégse",
+   "where": "general"
+  },
+  "dlg.checking": {
+   "en": "Checking…",
+   "hu": "Ellenőrzés…",
+   "where": "general"
+  },
+  "dlg.err_badcode": {
+   "en": "The code was not accepted.\n\n{}\n\nCheck that you pasted the whole code, or try the browser sign-in again (always a fresh code).",
+   "hu": "A kód nem fogadható el.\n\n{}\n\nEllenőrizd, hogy a teljes kódot másoltad-e be, vagy próbáld újra a böngészős bejelentkezést (mindig friss kód kell).",
+   "where": "general"
+  },
+  "dlg.err_ratelimit": {
+   "en": "Too many sign-in attempts in a short time.\n\nThe server is limiting you temporarily. Close this window, wait 10–15 minutes (don't try in the meantime), then start ONE new browser sign-in with a fresh code.",
+   "hu": "Túl sok bejelentkezési próbálkozás rövid idő alatt.\n\nA szerver átmenetileg korlátoz. Zárd be ezt az ablakot, várj 10–15 percet (ne próbálkozz közben), majd indíts EGYETLEN új böngészős bejelentkezést friss kóddal.",
+   "where": "general"
+  },
+  "dlg.hint1": {
+   "en": "Sign in on the page that opens and approve access. You'll get a code at the end.",
+   "hu": "A megnyíló oldalon lépj be és engedélyezd a hozzáférést. A végén kapsz egy kódot.",
+   "where": "general"
+  },
+  "dlg.intro": {
+   "en": "Sign in to your claude.ai account in your own browser (your saved passwords and passkeys already work there).",
+   "hu": "Bejelentkezés a claude.ai-fiókodba a saját böngésződben (ott a jelszavaid és passkey-d már működnek).",
+   "where": "general"
+  },
+  "dlg.login_title": {
+   "en": "sign in",
+   "hu": "bejelentkezés",
+   "where": "general"
+  },
+  "dlg.open_browser": {
+   "en": "Open sign-in in your browser",
+   "hu": "Bejelentkezés megnyitása a böngészőben",
+   "where": "general"
+  },
+  "dlg.paste_label": {
+   "en": "Paste the code you received here:",
+   "hu": "Másold be ide a kapott kódot:",
+   "where": "general"
+  },
+  "dlg.paste_placeholder": {
+   "en": "paste code here",
+   "hu": "kód beillesztése ide",
+   "where": "general"
+  },
+  "dlg.signin": {
+   "en": "Sign in",
+   "hu": "Bejelentkezés",
+   "where": "general"
+  },
+  "dlg.step1": {
+   "en": "Step 1",
+   "hu": "1. lépés",
+   "where": "general"
+  },
+  "dlg.step2": {
+   "en": "Step 2",
+   "hu": "2. lépés",
+   "where": "general"
+  },
+  "dlg.unknown_err": {
+   "en": "Unknown error.",
+   "hu": "Ismeretlen hiba.",
+   "where": "general"
+  },
+  "err.already_running": {
+   "en": "The app is already running (check the tray).",
+   "hu": "A program már fut (nézd meg a tálcán).",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.bad_token_resp": {
+   "en": "invalid response from the token endpoint",
+   "hu": "érvénytelen válasz a token-végponttól",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.bad_usage_resp": {
+   "en": "invalid response from the usage endpoint",
+   "hu": "érvénytelen válasz a usage-végponttól",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.connection": {
+   "en": "connection error: {}",
+   "hu": "kapcsolati hiba: {}",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.file_empty": {
+   "en": "The usage file is empty.",
+   "hu": "A használati fájl üres.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.file_not_found": {
+   "en": "Usage file not found.\nIs Claude Desktop running?",
+   "hu": "A használati fájl nem található.\nFut a Claude Desktop?",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.file_unreadable": {
+   "en": "The usage file is currently unreadable.",
+   "hu": "A használati fájl jelenleg nem olvasható.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.loading": {
+   "en": "Signing in / querying…",
+   "hu": "Bejelentkezés / lekérdezés folyamatban…",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.network": {
+   "en": "network error: {}",
+   "hu": "hálózati hiba: {}",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.no_code": {
+   "en": "No code pasted.",
+   "hu": "Nincs beillesztett kód.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.no_data_profile": {
+   "en": "No data for this profile.",
+   "hu": "Ehhez a profilhoz nincs adat.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.no_tray": {
+   "en": "System tray not available; the tray icon is skipped.",
+   "hu": "A rendszertálca nem érhető el, a tálcaikon kimarad.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.no_usage_data": {
+   "en": "No usage data.",
+   "hu": "Nincs használati adat.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.not_signed_in": {
+   "en": "Not signed in.",
+   "hu": "Nincs bejelentkezés.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.query_http": {
+   "en": "Query error (HTTP {}).",
+   "hu": "Lekérdezési hiba (HTTP {}).",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.rate_limited": {
+   "en": "The server is rate limiting requests (429) – retrying automatically.",
+   "hu": "A szerver most korlátozza a lekérdezéseket (429) – automatikusan újrapróbálom.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.session_expired": {
+   "en": "The session has expired, sign in again.",
+   "hu": "A munkamenet lejárt, jelentkezz be újra.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.session_expired_nl": {
+   "en": "The session has expired.\nSign in again.",
+   "hu": "A munkamenet lejárt.\nJelentkezz be újra.",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.signin_needed": {
+   "en": "The claude.ai sign-in has expired.\nSign in again: right-click → Sign in to claude.ai",
+   "hu": "A claude.ai bejelentkezés lejárt.\nJelentkezz be újra: jobb gomb → Bejelentkezés a claude.ai-ra",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "err.unexpected": {
+   "en": "Unexpected error: {}",
+   "hu": "Váratlan hiba: {}",
+   "where": "error message shown on the panel or in a dialog"
+  },
+  "fb.cancel": {
+   "en": "Cancel",
+   "hu": "Mégse",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.close": {
+   "en": "Close",
+   "hu": "Bezárás",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.consent": {
+   "en": "I have read and accept the {}.",
+   "hu": "Elolvastam és elfogadom: {}.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.email": {
+   "en": "E-mail",
+   "hu": "E-mail-cím",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.email_hint": {
+   "en": "only if you'd like a reply",
+   "hu": "csak ha választ szeretnél",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_consent": {
+   "en": "To send, please accept the privacy notice.",
+   "hu": "A küldéshez el kell fogadnod az adatkezelési tájékoztatót.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_email": {
+   "en": "This e-mail address doesn't look right.",
+   "hu": "Ez az e-mail-cím nem tűnik érvényesnek.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_empty": {
+   "en": "Write a message or pick a rating first.",
+   "hu": "Előbb írj üzenetet, vagy válassz értékelést.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_links": {
+   "en": "Too many links in the message.",
+   "hu": "Túl sok link van az üzenetben.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_network": {
+   "en": "Could not reach claudeusagemonitor.com. Check your connection and try again.",
+   "hu": "Nem érhető el a claudeusagemonitor.com. Ellenőrizd a kapcsolatot, és próbáld újra.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_rate": {
+   "en": "Too many messages in a short time – please try again later.",
+   "hu": "Túl sok üzenet rövid idő alatt – próbáld meg később.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.err_server": {
+   "en": "The server could not take the message right now. Please try again later.",
+   "hu": "A szerver most nem tudta fogadni az üzenetet. Próbáld meg később.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.intro": {
+   "en": "An idea, a bug, or you simply like it? Tell me. Every message is read by me, Vidovics Gábor, the author.",
+   "hu": "Ötlet, hiba, vagy egyszerűen tetszik? Írd meg. Minden üzenetet én olvasok el, Vidovics Gábor, a program készítője.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.message": {
+   "en": "Message",
+   "hu": "Üzenet",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.message_ph": {
+   "en": "What works, what doesn't, what's missing?",
+   "hu": "Mi működik, mi nem, mi hiányzik?",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.meta": {
+   "en": "Sent along with the message: program version {0}, operating system ({1}), interface language ({2}).",
+   "hu": "Az üzenettel együtt elmegy: a program verziója ({0}), az operációs rendszer ({1}), a felület nyelve ({2}).",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.name": {
+   "en": "Name",
+   "hu": "Név",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.optional": {
+   "en": "(optional)",
+   "hu": "(nem kötelező)",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.privacy_hide": {
+   "en": "Hide the notice",
+   "hu": "Tájékoztató elrejtése",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.privacy_text": {
+   "en": "Controller: Vidovics Gábor, private individual (Hungary), the author of Claude Usage Monitor. The full privacy policy is on the website: https://claudeusagemonitor.com/#privacy\n\nWhat is sent: what you type here – name (optional), e-mail address (optional), message, star rating – and, so that I can understand the context: the program version, the operating system name and version, the interface language and the time of sending. The server stores no IP address; to prevent abuse it only uses a daily-changing hash that cannot be turned back into an address.\n\nWhy: to read and answer your message and to improve the program (legitimate interest, GDPR Art. 6(1)(f); the reply itself at your request). Your rating and your name appear on the website only if you tick the separate box for it (consent, Art. 6(1)(a)), and only after the author has reviewed it; you can withdraw that consent at any time.\n\nHow long: messages for at most 2 years; a published rating until you withdraw your consent. If the author has switched on e-mail forwarding, a copy also reaches the author's mailbox.\n\nWho sees it: only the controller, and – as processor – the hosting provider (server in the EU, Germany). Nothing is sold or passed on; there is no profiling and no automated decision-making.\n\nYour rights: access, rectification, erasure, restriction, objection, withdrawal of consent, and a complaint to a supervisory authority (in Hungary: NAIH, naih.hu) or to the authority of your own country. Contact: this form or the website.\n\nTransport: encrypted (HTTPS/TLS) to claudeusagemonitor.com. Version of this notice: 2026-10-06.",
+   "hu": "Adatkezelő: Vidovics Gábor, magánszemély (Magyarország), a Claude Usage Monitor készítője. A teljes adatkezelési tájékoztató a weboldalon olvasható: https://claudeusagemonitor.com/hu/#privacy\n\nMi megy el: amit ide beírsz – név (nem kötelező), e-mail-cím (nem kötelező), üzenet, csillagos értékelés –, és hogy értsem az összefüggést: a program verziója, az operációs rendszer neve és verziója, a felület nyelve és a küldés időpontja. A szerver IP-címet nem tárol; a visszaélések ellen csak egy naponta változó, címmé vissza nem fejthető lenyomatot használ.\n\nMiért: hogy elolvassam és megválaszoljam az üzenetet, és hogy javítsam a programot (jogos érdek, GDPR 6. cikk (1) f); maga a válasz a te kérésedre). Az értékelésed és a neved csak akkor jelenik meg a weboldalon, ha ezt külön bejelölöd (hozzájárulás, 6. cikk (1) a), és csak miután a készítő átnézte; a hozzájárulást bármikor visszavonhatod.\n\nMeddig: az üzeneteket legfeljebb 2 évig; a közzétett értékelést a hozzájárulás visszavonásáig. Ha a készítő bekapcsolta az e-mailes továbbítást, egy másolat a készítő postafiókjába is megérkezik.\n\nKi látja: csak az adatkezelő, és adatfeldolgozóként a tárhelyszolgáltató (a szerver az EU-ban, Németországban van). Semmit nem adok el és nem adok tovább; profilalkotás és automatizált döntéshozatal nincs.\n\nJogaid: hozzáférés, helyesbítés, törlés, korlátozás, tiltakozás, a hozzájárulás visszavonása, valamint panasz a felügyeleti hatóságnál (Magyarországon: NAIH, naih.hu) vagy a saját országod hatóságánál. Kapcsolat: ez az űrlap vagy a weboldal.\n\nÁtvitel: titkosítva (HTTPS/TLS) a claudeusagemonitor.com felé. A tájékoztató verziója: 2026-10-06.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.privacy_title": {
+   "en": "Privacy Notice",
+   "hu": "Adatkezelési tájékoztató",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.publish": {
+   "en": "My rating and my name (if given) may be shown on claudeusagemonitor.com.",
+   "hu": "Az értékelésem és a nevem (ha megadtam) megjelenhet a claudeusagemonitor.com oldalon.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.rating": {
+   "en": "Overall rating",
+   "hu": "Általános értékelés",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.rating_clear": {
+   "en": "clear",
+   "hu": "törlés",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.rating_hint": {
+   "en": "optional – click a star",
+   "hu": "nem kötelező – kattints egy csillagra",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.rating_tip": {
+   "en": "{} of 5",
+   "hu": "{} / 5",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.secure": {
+   "en": "Encrypted connection (HTTPS) to claudeusagemonitor.com.",
+   "hu": "Titkosított kapcsolat (HTTPS) a claudeusagemonitor.com felé.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.send": {
+   "en": "Send",
+   "hu": "Küldés",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.sending": {
+   "en": "Sending…",
+   "hu": "Küldés…",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.sent": {
+   "en": "Thank you – it has arrived!",
+   "hu": "Köszönöm – megérkezett!",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.sent_sub": {
+   "en": "I read every message. If you left an e-mail address, I'll reply there.",
+   "hu": "Minden üzenetet elolvasok. Ha megadtál e-mail-címet, oda válaszolok.",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "fb.title": {
+   "en": "Message to the developer",
+   "hu": "Üzenet a fejlesztőnek",
+   "where": "'Message to the developer' window (form, consent, privacy notice)"
+  },
+  "help.disclaimer": {
+   "en": "An independent, free tool – not made by or affiliated with Anthropic. “Claude” is a trademark of Anthropic.",
+   "hu": "Független, ingyenes eszköz – nem az Anthropic készítette, és nem áll kapcsolatban vele. A „Claude” az Anthropic védjegye.",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.feedback": {
+   "en": "Questions, ideas, bug reports: the message form on the website.",
+   "hu": "Kérdés, ötlet, hibajelzés: az üzenetküldő űrlap a weboldalon.",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.free": {
+   "en": "Free forever · MIT licence · open source · no telemetry",
+   "hu": "Örökre ingyenes · MIT-licenc · nyílt forrás · nincs telemetria",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.guide": {
+   "en": "\n<h2>What the widget shows</h2>\n<ul>\n<li><b>5-hour session</b> – how much of your current session limit is used. It resets every five hours; the widget counts down to the reset.</li>\n<li><b>Weekly limit</b> – usage across all models; it resets at a fixed weekly time of your account.</li>\n<li><b>Per-model weekly limit</b> – a third gauge when the server reports one (e.g. for a specific model).</li>\n<li><b>Pace and burn rate</b> – how fast you are using the limit and whether it will last until the reset; the end-of-week forecast warns in time.</li>\n<li><b>Usage credits</b> and your plan badge – when you switch them on under <i>Plan badge and extra limits</i>.</li>\n</ul>\n<h2>Where the data comes from</h2>\n<ul>\n<li><b>claude.ai (all devices)</b> – asks Anthropic’s server, so usage on your phone, in the browser and on other computers is included. Needs a one-time sign-in in your own browser (menu: <i>Sign in</i>). Refreshes every 2 minutes, slower if the server asks for it.</li>\n<li><b>Local (this PC only)</b> – reads the usage log of Claude Desktop on this computer. No sign-in, but it only knows this PC.</li>\n</ul>\n<p>Switch between them in the menu: <i>Data source</i>.</p>\n<h2>Using the widget</h2>\n<ul>\n<li><b>Right-click</b> the widget (or the tray icon) – the full menu.</li>\n<li><b>Double-click</b> a gauge – the <b>History</b> window: 6 hours, 24 hours, 7 days or everything, with peaks, daily average and a forecast.</li>\n<li><b>Drag</b> to move it; it snaps to the screen edges. <b>Ctrl + mouse wheel</b> – bigger or smaller.</li>\n<li>Layouts: post-it card, slim bar, rings; 6 themes. <i>Lock position</i> and <i>Click-through</i> are in the Settings.</li>\n</ul>\n<h2>Alerts</h2>\n<p>Yellow from 70 %, red from 90 % (adjustable). Optional notifications when a limit resets and when the data is getting old.</p>\n<h2>Backups (optional)</h2>\n<p>The small lamps show whether your scheduled backups ran and finished. Click a lamp for the details. The monitor only reads the backup logs – making and testing the backups is your job (see the Terms of use).</p>\n<h2>Updates</h2>\n<p>The program checks for new versions by itself and updates in one click. Every package is checked with SHA-256 and comes only from <b>claudeusagemonitor.com</b>. New versions and release notes: {site}</p>\n<h2>Privacy</h2>\n<p>No telemetry, no tracking. The claude.ai sign-in is stored encrypted on this computer only; nothing is sent anywhere else.</p>\n<h2>If something is wrong</h2>\n<ul>\n<li><i>429 / rate limited</i> – the server is slowing requests down; the program retries by itself.</li>\n<li>No data – check the <i>Data source</i>; with claude.ai, sign in again.</li>\n<li>History is kept for 7 days and survives restarts and updates.</li>\n<li>Logs and settings: <code>{cfg}</code> (<code>api.log</code>, <code>update.log</code>).</li>\n</ul>\n",
+   "hu": "\n<h2>Mit mutat a widget</h2>\n<ul>\n<li><b>5 órás munkamenet</b> – az aktuális munkamenet limitjének mekkora része fogyott el. Ötóránként visszaáll; a widget visszaszámol a resetig.</li>\n<li><b>Heti limit</b> – minden modell együtt; a fiókodhoz rögzített heti időpontban áll vissza.</li>\n<li><b>Modellenkénti heti limit</b> – harmadik mérő, ha a szerver jelent ilyet (egy adott modellre).</li>\n<li><b>Tempó és fogyási ütem</b> – milyen gyorsan fogy a limit, és kitart-e a resetig; a hét végi előrejelzés időben szól.</li>\n<li><b>Használati kredit</b> és a csomagjelvény – ha bekapcsolod a <i>Csomagjelvény és további limitek</i> menüben.</li>\n</ul>\n<h2>Honnan jön az adat</h2>\n<ul>\n<li><b>claude.ai (minden eszköz)</b> – az Anthropic szerverétől kérdez, így a telefonon, böngészőben, másik gépen elhasznált rész is látszik. Egyszeri belépés kell a saját böngésződben (menü: <i>Bejelentkezés</i>). 2 percenként frissül, lassabban, ha a szerver ezt kéri.</li>\n<li><b>Helyi (csak ez a gép)</b> – a Claude Desktop naplóját olvassa ezen a gépen. Nem kell belépni, de csak ezt a gépet ismeri.</li>\n</ul>\n<p>Váltás a menüben: <i>Adatforrás</i>.</p>\n<h2>Kezelés</h2>\n<ul>\n<li><b>Jobb kattintás</b> a widgeten (vagy a tálcaikonon) – a teljes menü.</li>\n<li><b>Dupla kattintás</b> egy mérőn – az <b>Előzmények</b> ablak: 6 óra, 24 óra, 7 nap vagy teljes, csúccsal, napi átlaggal és előrejelzéssel.</li>\n<li><b>Húzással</b> mozgatható, a képernyő széléhez tapad. <b>Ctrl + egérgörgő</b> – nagyítás, kicsinyítés.</li>\n<li>Elrendezések: post-it kártya, vékony sáv, körgyűrűk; 6 téma. <i>Pozíció rögzítése</i> és <i>Kattintás-átengedés</i> a Beállításokban.</li>\n</ul>\n<h2>Riasztások</h2>\n<p>70 %-tól sárga, 90 %-tól piros (állítható). Kérhető értesítés, amikor egy limit visszaáll, és amikor az adat elavul.</p>\n<h2>Mentések (nem kötelező)</h2>\n<p>A kis lámpák mutatják, hogy az ütemezett mentéseid lefutottak-e és befejeződtek-e. Kattints egy lámpára a részletekért. A program csak a mentési naplókat olvassa – a mentés elkészítése és kipróbálása a te feladatod (lásd a Felhasználási feltételeket).</p>\n<h2>Frissítések</h2>\n<p>A program magától keres új verziót, és egy kattintással frissül. Minden csomagot SHA-256-tal ellenőriz, és kizárólag a <b>claudeusagemonitor.com</b>-ról tölt le. Új verziók és újdonságok: {site}</p>\n<h2>Adatvédelem</h2>\n<p>Nincs telemetria, nincs követés. A claude.ai-belépés titkosítva, csak ezen a gépen tárolódik; semmi nem megy máshová.</p>\n<h2>Ha valami nem stimmel</h2>\n<ul>\n<li><i>429 / korlátozás</i> – a szerver lassítja a lekérdezéseket; a program magától újrapróbálja.</li>\n<li>Nincs adat – nézd meg az <i>Adatforrás</i>t; claude.ai esetén jelentkezz be újra.</li>\n<li>Az előzmények 7 napig megmaradnak, újraindítás és frissítés után is.</li>\n<li>Naplók és beállítások: <code>{cfg}</code> (<code>api.log</code>, <code>update.log</code>).</li>\n</ul>\n",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.made_by": {
+   "en": "Made by",
+   "hu": "Készítette",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.moved": {
+   "en": "New address since 21 September 2026 – the former dinorr.hu/claude-usage-monitor page redirects here.",
+   "hu": "Új cím 2026. szeptember 21. óta – a korábbi dinorr.hu/claude-usage-monitor oldal ide irányít át.",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.official": {
+   "en": "OFFICIAL WEBSITE",
+   "hu": "HIVATALOS WEBOLDAL",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.open_site": {
+   "en": "Open claudeusagemonitor.com",
+   "hu": "claudeusagemonitor.com megnyitása",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.privacy": {
+   "en": "Privacy policy",
+   "hu": "Adatkezelési tájékoztató",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.site_what": {
+   "en": "Downloads, automatic updates, what’s new, the Claude Backup Kit, terms of use and privacy – all in one place.",
+   "hu": "Letöltés, automatikus frissítések, újdonságok, a Claude Backup Kit, felhasználási feltételek és adatvédelem – egy helyen.",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.source_code": {
+   "en": "Source code (GitHub)",
+   "hu": "Forráskód (GitHub)",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.tab_author": {
+   "en": "Author",
+   "hu": "Készítő",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.tab_guide": {
+   "en": "How it works",
+   "hu": "Használat",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.terms": {
+   "en": "Terms of use",
+   "hu": "Felhasználási feltételek",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.title": {
+   "en": "Help",
+   "hu": "Súgó",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "help.version": {
+   "en": "Version",
+   "hu": "Verzió",
+   "where": "Help window (HTML allowed where the English has it)"
+  },
+  "hist.legend_5h": {
+   "en": "5-hour session",
+   "hu": "5 órás munkamenet",
+   "where": "History window"
+  },
+  "hist.legend_week": {
+   "en": "weekly limit",
+   "hu": "heti limit",
+   "where": "History window"
+  },
+  "hist.no_data": {
+   "en": "Not enough data for this period.",
+   "hu": "Nincs elég adat ehhez az időszakhoz.",
+   "where": "History window"
+  },
+  "hist.range_24h": {
+   "en": "24 hours",
+   "hu": "24 óra",
+   "where": "History window"
+  },
+  "hist.range_6h": {
+   "en": "6 hours",
+   "hu": "6 óra",
+   "where": "History window"
+  },
+  "hist.range_7d": {
+   "en": "7 days",
+   "hu": "7 nap",
+   "where": "History window"
+  },
+  "hist.range_all": {
+   "en": "All",
+   "hu": "Teljes",
+   "where": "History window"
+  },
+  "hist.stat_burn": {
+   "en": "Avg daily burn",
+   "hu": "Napi átlag fogyás",
+   "where": "History window"
+  },
+  "hist.stat_forecast": {
+   "en": "End-of-week projection",
+   "hu": "Hét végére – előrejelzés",
+   "where": "History window"
+  },
+  "hist.stat_now": {
+   "en": "Current weekly",
+   "hu": "Jelenlegi heti",
+   "where": "History window"
+  },
+  "hist.stat_peak": {
+   "en": "Weekly peak",
+   "hu": "Heti csúcs",
+   "where": "History window"
+  },
+  "hist.stat_sessions": {
+   "en": "5-hour sessions",
+   "hu": "5 órás munkamenetek",
+   "where": "History window"
+  },
+  "hist.title": {
+   "en": "history",
+   "hu": "előzmények",
+   "where": "History window"
+  },
+  "layout.compact": {
+   "en": "Slim bar",
+   "hu": "Vékony sáv",
+   "where": "menu option (layout name)"
+  },
+  "layout.postit": {
+   "en": "Post-it card",
+   "hu": "Post-it kártya",
+   "where": "menu option (layout name)"
+  },
+  "layout.ring": {
+   "en": "Rings",
+   "hu": "Körgyűrűk",
+   "where": "menu option (layout name)"
+  },
+  "menu.always_top": {
+   "en": "Always on top",
+   "hu": "Mindig felül",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.autostart": {
+   "en": "Start with Windows",
+   "hu": "Induljon a Windowsszal",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.backup_bar": {
+   "en": "Backup status bar",
+   "hu": "Mentési állapotsor",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.backups": {
+   "en": "Backups…",
+   "hu": "Mentések…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.check_update": {
+   "en": "Check for program updates…",
+   "hu": "Programfrissítés keresése…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.click_through": {
+   "en": "Click-through",
+   "hu": "Kattintás-átengedés",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.details": {
+   "en": "Plan badge and extra limits",
+   "hu": "Csomagjelvény és további limitek",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.feedback": {
+   "en": "Message to the developer…",
+   "hu": "Üzenet a fejlesztőnek…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.help": {
+   "en": "Help…",
+   "hu": "Súgó (HELP)…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.history": {
+   "en": "History & stats…",
+   "hu": "Előzmények és statisztika…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.language": {
+   "en": "Language",
+   "hu": "Nyelv",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.layout": {
+   "en": "Layout",
+   "hu": "Elrendezés",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.locked": {
+   "en": "Lock position",
+   "hu": "Pozíció rögzítve",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.login": {
+   "en": "Sign in (claude.ai, browser)…",
+   "hu": "Bejelentkezés (claude.ai, böngésző)…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.logout": {
+   "en": "Sign out",
+   "hu": "Kijelentkezés",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.model_gauge": {
+   "en": "{} gauge",
+   "hu": "{} mérő",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.order": {
+   "en": "Order",
+   "hu": "Sorrend",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.panel_visible": {
+   "en": "Show panel",
+   "hu": "Panel látszik",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.quit": {
+   "en": "Quit",
+   "hu": "Kilépés",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.refresh": {
+   "en": "Refresh usage data now",
+   "hu": "Használati adatok frissítése most",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.settings": {
+   "en": "Settings…",
+   "hu": "Beállítások…",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.size": {
+   "en": "Size",
+   "hu": "Méret",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.source": {
+   "en": "Data source",
+   "hu": "Adatforrás",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.start_menu": {
+   "en": "Show in Start menu",
+   "hu": "Start menüben megjelenítés",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.theme": {
+   "en": "Theme",
+   "hu": "Téma",
+   "where": "context-menu item (may end with …)"
+  },
+  "menu.update_available": {
+   "en": "Program update: install version {}…",
+   "hu": "Programfrissítés: a(z) {} verzió telepítése…",
+   "where": "context-menu item (may end with …)"
+  },
+  "notify.autostart_fail": {
+   "en": "Could not set up automatic start.",
+   "hu": "Az automatikus indítást nem sikerült beállítani.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.autostart_off": {
+   "en": "Disabled: the app won't start with Windows.",
+   "hu": "Kikapcsolva: a program nem indul a Windowsszal.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.autostart_on": {
+   "en": "Enabled: the app starts with Windows.",
+   "hu": "Bekapcsolva: a program elindul a Windowsszal.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.first_run": {
+   "en": "The panel appeared in the top-right corner.\nRight-click the panel or the tray icon = menu.",
+   "hu": "A panel a képernyő jobb felső sarkában jelent meg.\nJobb gomb a panelen vagy a tálcaikonon = menü.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.login_ok": {
+   "en": "Signed in – server data incoming.",
+   "hu": "Sikeres bejelentkezés – a szerveradatok érkeznek.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.logout": {
+   "en": "Signed out. Switched to local source.",
+   "hu": "Kijelentkeztél. A panel a helyi forrásra váltott.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.reset_done": {
+   "en": "{}: reset — a new period has started.",
+   "hu": "{}: visszaállt — kezdődik az új időszak.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.signin_needed": {
+   "en": "The claude.ai sign-in has expired. Right-click the panel and sign in again to keep seeing usage from all your devices.",
+   "hu": "A claude.ai bejelentkezés lejárt. Jobb gomb a panelen, majd jelentkezz be újra, hogy továbbra is lásd az összes eszközöd használatát.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.stale_body": {
+   "en": "Last reading is {} old. Is Claude Desktop running?",
+   "hu": "Az utolsó mérés {} régi. Fut a Claude Desktop?",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.stale_title": {
+   "en": "Stale data",
+   "hu": "Elavult adat",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.threshold": {
+   "en": "{}: {}% used.",
+   "hu": "{}: {}% elfogyott.",
+   "where": "desktop notification - short and friendly"
+  },
+  "notify.update": {
+   "en": "Program version {} is available. Right-click the panel → Program update.",
+   "hu": "Elérhető a program {} verziója. Jobb gomb a panelen → Programfrissítés.",
+   "where": "desktop notification - short and friendly"
+  },
+  "panel.five_hour": {
+   "en": "5-HOUR SESSION",
+   "hu": "5 ÓRÁS MUNKAMENET",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.five_hour_short": {
+   "en": "5H",
+   "hu": "5 ÓRA",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.full_in": {
+   "en": "full: {}",
+   "hu": "tele: {}",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.model": {
+   "en": "{} WEEKLY",
+   "hu": "{} HETI",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.no_data": {
+   "en": "No data",
+   "hu": "Nincs adat",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.pace": {
+   "en": "{} vs pace",
+   "hu": "{} a tempóhoz",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.per_day": {
+   "en": "{}%/day",
+   "hu": "{}%/nap",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.per_hour": {
+   "en": "{}%/h",
+   "hu": "{}%/óra",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.refreshing": {
+   "en": "fetching data",
+   "hu": "adatlekérés",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.reset": {
+   "en": "reset {}",
+   "hu": "reset {}",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.retry_in": {
+   "en": "retry in {} s",
+   "hu": "újra {} mp múlva",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.updated": {
+   "en": "updated: {}",
+   "hu": "frissítve: {}",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.week_short": {
+   "en": "WEEK",
+   "hu": "HÉT",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "panel.weekly": {
+   "en": "WEEKLY LIMIT",
+   "hu": "HETI LIMIT",
+   "where": "panel label on the floating widget - very tight space; Latin scripts use UPPERCASE"
+  },
+  "profile.extra": {
+   "en": "Usage credits: {}",
+   "hu": "Használati kredit: {}",
+   "where": "general"
+  },
+  "profile.plan": {
+   "en": "Plan: {}",
+   "hu": "Csomag: {}",
+   "where": "general"
+  },
+  "profile.since": {
+   "en": "Member since: {}",
+   "hu": "Tag ezóta: {}",
+   "where": "general"
+  },
+  "profile.tier": {
+   "en": "Rate-limit tier: {}",
+   "hu": "Korlátozási szint: {}",
+   "where": "general"
+  },
+  "set.about": {
+   "en": "{}\nNo telemetry. It only asks Anthropic for your own usage and reads the version number from the update server.",
+   "hu": "{}\nNincs telemetria. Csak az Anthropic-tól kéri le a saját használatodat, és a frissítési szerverről olvas ki egy verziószámot.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.accent": {
+   "en": "Accent color",
+   "hu": "Kiemelőszín",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.always_top": {
+   "en": "Above all other windows",
+   "hu": "Mindig a többi ablak felett",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.auto": {
+   "en": "automatic",
+   "hu": "automatikus",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_config": {
+   "en": "Backup script config",
+   "hu": "Mentőszkript konfigja",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_details": {
+   "en": "Details window shows",
+   "hu": "A részletező ablak mutassa",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_disclaimer": {
+   "en": "Claude Usage Monitor only reads and displays the logs of your backup – it does not make, check or guarantee any backup. The Claude Backup Kit is a free starting point offered as help: anyone can change the scripts, so the quality and completeness of a backup cannot be guaranteed. We accept no liability for backups, lost data or any damage. Making sure your backups are complete and can be restored is everyone's own responsibility – test a restore from time to time.",
+   "hu": "A Claude Usage Monitor csak beolvassa és megjeleníti a mentésed naplóit – nem készít, nem ellenőriz és nem garantál semmilyen mentést. A Claude Backup Kit segítségként adott, ingyenes kiindulási alap: a szkripteket bárki módosíthatja, ezért a mentések minősége és teljessége nem garantálható. A mentésekért, az adatvesztésért és bármilyen kárért nem vállalunk felelősséget. Azt, hogy a mentések teljesek és visszaállíthatók legyenek, mindenkinek magának kell biztosítania – időnként próbálj ki egy visszaállítást.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_disclaimer_h": {
+   "en": "Disclaimer",
+   "hu": "Felelősségkizárás",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_enabled": {
+   "en": "Show backup status bar on the panel",
+   "hu": "Mentési állapotsor a panelen",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_found": {
+   "en": "Found: {}",
+   "hu": "Megtalálva: {}",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_green": {
+   "en": "Green up to",
+   "hu": "Zöld eddig",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_label": {
+   "en": "Label next to the lamp",
+   "hu": "Felirat a lámpa mellett",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_lamps": {
+   "en": "Lamps",
+   "hu": "Lámpák",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_root": {
+   "en": "Backup folder",
+   "hu": "Mentési mappa",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_tasks": {
+   "en": "Scheduled task filter",
+   "hu": "Ütemezett feladatok szűrője",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_unconfigured": {
+   "en": "No backup folder is set, so the status bar stays hidden. Pick the folder your backup script writes into.",
+   "hu": "Nincs megadva mentési mappa, ezért az állapotsor rejtve marad. Add meg azt a mappát, ahová a mentőszkripted ír.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.backup_yellow": {
+   "en": "Yellow up to",
+   "hu": "Sárga eddig",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.browse": {
+   "en": "Browse…",
+   "hu": "Tallózás…",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.click_through": {
+   "en": "Click-through (decoration only, ignores mouse)",
+   "hu": "Kattintás-átengedés (csak dísz, nem fogad egeret)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.close": {
+   "en": "Close",
+   "hu": "Bezárás",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.color_hint": {
+   "en": "Colors change with the thresholds: green → yellow → red.",
+   "hu": "A színek a küszöbök szerint váltanak: zöld → sárga → piros.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.danger": {
+   "en": "Critical",
+   "hu": "Vészjelzés",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.data_hint": {
+   "en": "Local log: Claude Desktop's plan-usage-history.json. No sign-in, but measures only this PC and refreshes about every 5 minutes.\n\nclaude.ai: after sign-in it queries the server. You see usage from all your devices, with exact reset times and more frequent refresh.",
+   "hu": "Helyi napló: a Claude Desktop plan-usage-history.json fájlja. Nem kell bejelentkezés, de csak ezt a gépet méri, és kb. 5 percenként frissül.\n\nclaude.ai: a bejelentkezés után a szerverről kérdez le. Minden eszközöd használatát látod, pontos reset-időkkel, gyakoribb frissítéssel.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.datafile": {
+   "en": "Data file",
+   "hu": "Adatfájl",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.default": {
+   "en": "Default",
+   "hu": "Alap",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.details_api_only": {
+   "en": "These come from the claude.ai data source (sign-in needed); the local log does not contain them.",
+   "hu": "Ezek a claude.ai adatforrásból jönnek (belépés kell hozzá); a helyi naplóban nincsenek benne.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.file_filter": {
+   "en": "JSON (*.json);;All files (*.*)",
+   "hu": "JSON (*.json);;Minden fájl (*.*)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.gauge_order": {
+   "en": "Gauge order",
+   "hu": "Mérők sorrendje",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.hours_suffix": {
+   "en": " h",
+   "hu": " óra",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.layout": {
+   "en": "Layout",
+   "hu": "Elrendezés",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.local_models_hint": {
+   "en": "The server keeps a separate counter only for some models (e.g. Fable). For the others this shows how this week's Claude Code work on this PC is split - a share of your own usage and the output tokens, not a share of a limit. Only the model name and token counts are read, never the conversation.",
+   "hu": "A szerver csak egyes modellekhez tart külön számlálót (pl. Fable). A többinél ez azt mutatja, hogyan oszlik meg az e heti Claude Code-munkád ezen a gépen - a saját használatod aránya és a kimeneti tokenek, nem egy limit százaléka. Csak a modell nevét és a tokenszámokat olvassa, a beszélgetést soha.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.local_models_none": {
+   "en": "No Claude Code log folder was found - this group simply stays hidden. Nothing else is affected.",
+   "hu": "Nem találtam Claude Code naplómappát - ez a csoport egyszerűen rejtve marad. Minden más zavartalanul működik.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.local_models_path": {
+   "en": "Claude Code log folder",
+   "hu": "A Claude Code naplómappája",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.lock": {
+   "en": "Lock position (not draggable)",
+   "hu": "Pozíció rögzítése (nem húzható)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.login_btn_in": {
+   "en": "Sign out of claude.ai",
+   "hu": "Kijelentkezés a claude.ai-ról",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.login_btn_out": {
+   "en": "Sign in to claude.ai…",
+   "hu": "Bejelentkezés a claude.ai-ra…",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.model_filter": {
+   "en": "Model to track",
+   "hu": "Figyelt modell",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.model_scale": {
+   "en": "Model gauge size",
+   "hu": "Modell-mérő mérete",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.not_set": {
+   "en": "not set",
+   "hu": "nincs megadva",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.notify_enabled": {
+   "en": "Notify on threshold crossing",
+   "hu": "Értesítés a küszöbök átlépésekor",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.notify_reset": {
+   "en": "Notify when a limit resets",
+   "hu": "Értesítés, ha egy limit visszaáll (reset)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.notify_stale": {
+   "en": "Notify when data goes stale",
+   "hu": "Értesítés, ha elavul az adat",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.opacity": {
+   "en": "Opacity",
+   "hu": "Átlátszatlanság",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.open_config": {
+   "en": "Open settings folder",
+   "hu": "Beállítások mappa megnyitása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.pick_color": {
+   "en": "Choose color…",
+   "hu": "Szín választása…",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.pick_file_title": {
+   "en": "Choose usage log",
+   "hu": "Használati napló kiválasztása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.profile": {
+   "en": "Profile / account",
+   "hu": "Profil / fiók",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.profile_auto": {
+   "en": "Automatic (last used)",
+   "hu": "Automatikus (legutóbb használt)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.profile_n": {
+   "en": "Profile {} – …{}",
+   "hu": "Profil {} – …{}",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.refresh": {
+   "en": "Refresh",
+   "hu": "Frissítés",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.reset_confirm": {
+   "en": "Are you sure you want to restore the default settings?",
+   "hu": "Biztosan visszaállítod az alapértelmezett beállításokat?",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.restore": {
+   "en": "Restore defaults",
+   "hu": "Alapértelmezések visszaállítása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.rows_available": {
+   "en": "What can be shown right now – untick what you do not want to see:",
+   "hu": "Ami most megjeleníthető – vedd ki a pipát abból, amit nem akarsz látni:",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.rows_none": {
+   "en": "The server sends no further limits for your account at the moment. They appear here by themselves as soon as it does.",
+   "hu": "A szerver jelenleg nem küld további limitet a fiókodhoz. Amint küld, magától megjelenik itt.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.sec_suffix": {
+   "en": " s",
+   "hu": " mp",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_age": {
+   "en": "Data freshness",
+   "hu": "Adat frissessége",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_burn": {
+   "en": "Burn rate (%/hour, %/day)",
+   "hu": "Fogyási ütem (%/óra, %/nap)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_extra_usage": {
+   "en": "Usage credits (pay-as-you-go)",
+   "hu": "Használati kredit (usage credits)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_feedback_icon": {
+   "en": "Message icon in the panel header",
+   "hu": "Üzenet-ikon a panel fejlécében",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_five_hour": {
+   "en": "Show 5-hour session",
+   "hu": "5 órás munkamenet mutatása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_local_models": {
+   "en": "Split between the models, from Claude Code's logs on this PC",
+   "hu": "Modellek közti megoszlás a Claude Code naplóiból (ez a gép)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_model": {
+   "en": "Show model weekly limit (claude.ai source)",
+   "hu": "Modell heti limitjének mutatása (claude.ai forrás)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_model_list": {
+   "en": "Weekly limits of the other models",
+   "hu": "A többi modell heti limitje",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_plan_badge": {
+   "en": "Plan badge in the header (Pro / Max…)",
+   "hu": "Csomagjelvény a fejlécben (Pro / Max…)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_plan_name": {
+   "en": "Show my name on the badge",
+   "hu": "A nevem is látsszon a jelvényen",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_reset": {
+   "en": "Countdown to reset",
+   "hu": "Visszaszámlálás a resetig",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_spark": {
+   "en": "Trend curve (sparkline)",
+   "hu": "Trendgörbe (sparkline)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_surfaces": {
+   "en": "Per-surface limits (Claude Code, connected apps…)",
+   "hu": "Felületenkénti limitek (Claude Code, külső alkalmazások…)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.show_weekly": {
+   "en": "Show weekly limit",
+   "hu": "Heti limit mutatása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.size": {
+   "en": "Size",
+   "hu": "Méret",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.snap": {
+   "en": "Snap to screen edge",
+   "hu": "Tapadás a képernyő széléhez",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.source_api": {
+   "en": "claude.ai – all devices (sign-in required)",
+   "hu": "claude.ai – minden eszköz (bejelentkezés kell)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.source_label": {
+   "en": "Measurement source",
+   "hu": "Mérés forrása",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.source_local": {
+   "en": "Local log – this PC only",
+   "hu": "Helyi napló – csak ez a gép",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_alerts": {
+   "en": "Alerts",
+   "hu": "Riasztások",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_appearance": {
+   "en": "Appearance",
+   "hu": "Megjelenés",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_content": {
+   "en": "Content",
+   "hu": "Tartalom",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_data": {
+   "en": "Data source",
+   "hu": "Adatforrás",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_details": {
+   "en": "Details",
+   "hu": "Részletek",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tab_system": {
+   "en": "System",
+   "hu": "Rendszer",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.taskbar": {
+   "en": "Show on the taskbar (as a window)",
+   "hu": "Megjelenés a tálcán (ablakként)",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.theme": {
+   "en": "Theme",
+   "hu": "Téma",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.theme_default": {
+   "en": "Theme default",
+   "hu": "Téma szerinti",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tip": {
+   "en": "Tip: drag the panel with the left button, Ctrl+scroll resizes,\nright-click = menu, double-click = history.",
+   "hu": "Tipp: a panelt bal gombbal húzhatod, Ctrl+görgő méretez,\njobb gomb = menü, dupla kattintás = előzmények.",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.title": {
+   "en": "settings",
+   "hu": "beállítások",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tray_five": {
+   "en": "5-hour session",
+   "hu": "5 órás munkamenet",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tray_max": {
+   "en": "Whichever is higher",
+   "hu": "Amelyik magasabb",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tray_value": {
+   "en": "Tray icon value",
+   "hu": "Tálcaikon értéke",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.tray_weekly": {
+   "en": "Weekly limit",
+   "hu": "Heti limit",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.update_check": {
+   "en": "Check for program updates automatically",
+   "hu": "Programfrissítések automatikus keresése",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.version": {
+   "en": "Version",
+   "hu": "Verzió",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.visible": {
+   "en": "Floating panel visible",
+   "hu": "Lebegő panel látszik",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "set.warn": {
+   "en": "Warning",
+   "hu": "Figyelmeztetés",
+   "where": "Settings window: tab name, label, checkbox or hint"
+  },
+  "size.extra": {
+   "en": "Extra",
+   "hu": "Extra",
+   "where": "menu option (size)"
+  },
+  "size.large": {
+   "en": "Large",
+   "hu": "Nagy",
+   "where": "menu option (size)"
+  },
+  "size.normal": {
+   "en": "Normal",
+   "hu": "Normál",
+   "where": "menu option (size)"
+  },
+  "size.small": {
+   "en": "Small",
+   "hu": "Kicsi",
+   "where": "menu option (size)"
+  },
+  "source.api": {
+   "en": "claude.ai (all devices)",
+   "hu": "claude.ai (minden eszköz)",
+   "where": "menu option (data source)"
+  },
+  "source.local": {
+   "en": "Local (this PC only)",
+   "hu": "Helyi (csak ez a gép)",
+   "where": "menu option (data source)"
+  },
+  "theme.claude": {
+   "en": "Claude (warm dark)",
+   "hu": "Claude (meleg sötét)",
+   "where": "menu option (theme name)"
+  },
+  "theme.graphite": {
+   "en": "Graphite",
+   "hu": "Grafit",
+   "where": "menu option (theme name)"
+  },
+  "theme.midnight": {
+   "en": "Midnight glass",
+   "hu": "Éjkék üveg",
+   "where": "menu option (theme name)"
+  },
+  "theme.neon": {
+   "en": "Neon",
+   "hu": "Neon",
+   "where": "menu option (theme name)"
+  },
+  "theme.paper": {
+   "en": "Light paper",
+   "hu": "Világos papír",
+   "where": "menu option (theme name)"
+  },
+  "theme.postit": {
+   "en": "Post-it yellow",
+   "hu": "Post-it sárga",
+   "where": "menu option (theme name)"
+  },
+  "time.day": {
+   "en": "{} d",
+   "hu": "{} nap",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.dh": {
+   "en": "{}d {}h",
+   "hu": "{}n {}ó",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.hm": {
+   "en": "{}h {}m",
+   "hu": "{}ó {}p",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.hour": {
+   "en": "{} h",
+   "hu": "{} óra",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.m": {
+   "en": "{}m",
+   "hu": "{}p",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.min": {
+   "en": "{} min",
+   "hu": "{} perc",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.none": {
+   "en": "no data",
+   "hu": "nincs adat",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "time.sec": {
+   "en": "{} sec",
+   "hu": "{} mp",
+   "where": "time unit / short time format on the panel - keep it as short as the English"
+  },
+  "tray.head": {
+   "en": "5h: {}%   ·   Week: {}%",
+   "hu": "5 óra: {}%   ·   Hét: {}%",
+   "where": "tray icon tooltip / menu head - short"
+  },
+  "tray.line": {
+   "en": "{}: {}%",
+   "hu": "{}: {}%",
+   "where": "tray icon tooltip / menu head - short"
+  },
+  "update.available": {
+   "en": "Version {} is available.",
+   "hu": "Elérhető a(z) {} verzió.",
+   "where": "general"
+  },
+  "update.check_failed": {
+   "en": "Could not check for updates: {}",
+   "hu": "Nem sikerült frissítést keresni: {}",
+   "where": "general"
+  },
+  "update.check_now": {
+   "en": "Check now",
+   "hu": "Keresés most",
+   "where": "general"
+  },
+  "update.checking": {
+   "en": "Checking for updates…",
+   "hu": "Frissítés keresése…",
+   "where": "general"
+  },
+  "update.downloading": {
+   "en": "Downloading… {} of {}",
+   "hu": "Letöltés… {} / {}",
+   "where": "general"
+  },
+  "update.failed": {
+   "en": "The update failed: {}",
+   "hu": "A frissítés nem sikerült: {}",
+   "where": "general"
+  },
+  "update.install": {
+   "en": "Install now",
+   "hu": "Telepítés most",
+   "where": "general"
+  },
+  "update.installed": {
+   "en": "Installed version: {}",
+   "hu": "Telepített verzió: {}",
+   "where": "general"
+  },
+  "update.later": {
+   "en": "Later",
+   "hu": "Később",
+   "where": "general"
+  },
+  "update.manual": {
+   "en": "This copy cannot update itself (it runs from source or a read-only folder). Download the new package instead.",
+   "hu": "Ez a példány nem tudja magát frissíteni (forrásból vagy írásvédett mappából fut). Töltsd le az új csomagot.",
+   "where": "general"
+  },
+  "update.open_page": {
+   "en": "Open download page",
+   "hu": "Letöltőoldal megnyitása",
+   "where": "general"
+  },
+  "update.restarting": {
+   "en": "Installing – the app restarts in a moment.",
+   "hu": "Telepítés – az alkalmazás mindjárt újraindul.",
+   "where": "general"
+  },
+  "update.skip": {
+   "en": "Skip this version",
+   "hu": "Ezt a verziót kihagyom",
+   "where": "general"
+  },
+  "update.title": {
+   "en": "Program update",
+   "hu": "Programfrissítés",
+   "where": "general"
+  },
+  "update.uptodate": {
+   "en": "You have the latest version.",
+   "hu": "A legfrissebb verziót használod.",
+   "where": "general"
+  },
+  "update.verifying": {
+   "en": "Verifying and unpacking…",
+   "hu": "Ellenőrzés és kicsomagolás…",
+   "where": "general"
+  },
+  "update.whats_new": {
+   "en": "What's new",
+   "hu": "Újdonságok",
+   "where": "general"
+  }
+ },
+ "mac": {
+  "menu.autostart": {
+   "en": "Start at login",
+   "hu": "Induljon bejelentkezéskor"
+  },
+  "notify.autostart_on": {
+   "en": "Enabled: the app starts when you log in.",
+   "hu": "Bekapcsolva: a program elindul bejelentkezéskor."
+  },
+  "notify.autostart_off": {
+   "en": "Disabled: the app won't start at login.",
+   "hu": "Kikapcsolva: a program nem indul bejelentkezéskor."
+  },
+  "notify.first_run": {
+   "en": "The panel appeared in the top-right corner.\nRight-click the panel or the menu bar icon = menu.",
+   "hu": "A panel a képernyő jobb felső sarkában jelent meg.\nJobb gomb a panelen vagy a menüsor ikonján = menü."
+  }
+ },
+ "legacy": {
+  "pt-PT": {
+   "backup.age_d": "{}d",
+   "backup.age_h": "{}h",
+   "backup.age_m": "{}min",
+   "backup.and_more": "…e mais {}",
+   "backup.checked_at": "Verificado: {}",
+   "backup.checking": "A verificar…",
+   "backup.cloud_only": "O instantâneo está só online no OneDrive; o conteúdo não é listado para não ter de o transferir.",
+   "backup.comp.cowork": "Registos de conversa Cowork (um ZIP por sessão)",
+   "backup.comp.vault": "Instantâneo do cofre Obsidian (ZIP)",
+   "backup.disclaimer_short": "O monitor mostra apenas o que dizem os registos da cópia. Não assumimos responsabilidade pelas cópias – verificar se estão completas e podem ser restauradas cabe a si.",
+   "backup.done": "concluído",
+   "backup.dry_run": "(teste, nada foi enviado)",
+   "backup.failed": "FALHOU",
+   "backup.files_size": "{} ficheiros, {}",
+   "backup.folders": "Pastas",
+   "backup.label_age": "Nome e idade",
+   "backup.label_name": "Só nome",
+   "backup.label_none": "Só indicadores",
+   "backup.last_ok": "Última cópia bem-sucedida: {} (há {})",
+   "backup.last_run": "Última execução: {} – {}",
+   "backup.legend": "Verde: no máximo {} h · Amarelo: até {} h · Vermelho: mais antiga ou sem cópia",
+   "backup.level_green": "Atualizado",
+   "backup.level_none": "Nenhuma cópia encontrada",
+   "backup.level_red": "Desatualizado",
+   "backup.level_yellow": "A envelhecer",
+   "backup.log_file": "Ficheiro de registo",
+   "backup.name.nextcloud": "Nextcloud",
+   "backup.name.obsidian": "Obsidian",
+   "backup.name.onedrive": "OneDrive",
+   "backup.no_root": "Pasta de cópias não encontrada: {}",
+   "backup.none_found": "Nenhum.",
+   "backup.open": "abrir",
+   "backup.rc_copied": "ficheiros novos ou alterados copiados",
+   "backup.rc_failed": "FALHOU (código {})",
+   "backup.rc_nochange": "atualizado, nada a copiar",
+   "backup.recent_notes": "Notas editadas mais recentemente no instantâneo",
+   "backup.refresh": "Verificar agora",
+   "backup.sec_components": "O que é guardado",
+   "backup.sec_contents": "Conteúdo",
+   "backup.sec_log": "Registo (últimas linhas)",
+   "backup.sec_problems": "Erros e avisos",
+   "backup.sec_tasks": "Tarefas agendadas",
+   "backup.skipped": "ignorado (pasta não encontrada)",
+   "backup.snap_kept": "{} instantâneos guardados, {} no total",
+   "backup.snapshot": "Instantâneo mais recente",
+   "backup.source": "Origem",
+   "backup.state_error": "terminou com erros",
+   "backup.state_interrupted": "não terminou",
+   "backup.state_ok": "concluída com sucesso",
+   "backup.state_running": "em execução",
+   "backup.storage": "Armazenamento remoto: {} usados de {}, {} livres",
+   "backup.target": "Destino",
+   "backup.task_event": "por evento",
+   "backup.task_row": "última execução {} · resultado {} · próxima {}",
+   "backup.tip_click": "Clique para ver detalhes",
+   "backup.title": "Cópias de segurança",
+   "backup.tray": "Cópias: {}",
+   "backup.uploaded": "Enviado nesta execução: {} novos, {} substituídos, {} erros",
+   "backup.uploaded_files": "Ficheiros enviados",
+   "backup.uploaded_groups": "Ficheiros enviados por pasta",
+   "backup.uploaded_no": "Enviado para o Nextcloud: ainda não",
+   "backup.uploaded_yes": "Enviado para o Nextcloud: sim ({})",
+   "backup.vault": "Cofre",
+   "backup.vault_changed": "{} notas alteradas no cofre desde este instantâneo",
+   "backup.zip_new": "{} ZIP novos/atualizados",
+   "backup.zip_summary": "{} ficheiros ({} notas), {} descomprimidos",
+   "detail.extra": "Créditos de uso",
+   "detail.local_header": "CLAUDE CODE · ESTE PC · DIVISÃO DA SEMANA",
+   "detail.off": "desativado",
+   "detail.on": "ativado",
+   "detail.surface.oauth_apps": "Apps ligadas",
+   "detail.unlimited": "sem limite",
+   "dlg.cancel": "Cancelar",
+   "dlg.checking": "A verificar…",
+   "dlg.err_badcode": "O código não foi aceite.\n\n{}\n\nVerifica se colaste o código completo, ou tenta o início de sessão de novo (sempre um código novo).",
+   "dlg.err_ratelimit": "Demasiadas tentativas de início de sessão em pouco tempo.\n\nO servidor limita-te temporariamente. Fecha esta janela, espera 10–15 minutos (não tentes entretanto) e inicia UM único novo início de sessão no navegador com um código novo.",
+   "dlg.hint1": "Inicia sessão na página que abre e aprova o acesso. No fim recebes um código.",
+   "dlg.intro": "Entra na tua conta claude.ai no teu navegador (as tuas palavras-passe e passkeys guardadas já funcionam aí).",
+   "dlg.login_title": "entrar",
+   "dlg.open_browser": "Abrir o início de sessão no navegador",
+   "dlg.paste_label": "Cola aqui o código recebido:",
+   "dlg.paste_placeholder": "cola o código aqui",
+   "dlg.signin": "Entrar",
+   "dlg.step1": "Passo 1",
+   "dlg.step2": "Passo 2",
+   "dlg.unknown_err": "Erro desconhecido.",
+   "err.already_running": "O app já está em execução (veja a bandeja).",
+   "err.bad_token_resp": "resposta inválida do endpoint de token",
+   "err.bad_usage_resp": "resposta inválida do endpoint de uso",
+   "err.connection": "erro de ligação: {}",
+   "err.file_empty": "O ficheiro de uso está vazio.",
+   "err.file_not_found": "Ficheiro de uso não encontrado.\nO Claude Desktop está aberto?",
+   "err.file_unreadable": "O ficheiro de uso está ilegível de momento.",
+   "err.loading": "A entrar / a consultar…",
+   "err.network": "erro de rede: {}",
+   "err.no_code": "Nenhum código colado.",
+   "err.no_data_profile": "Sem dados para este perfil.",
+   "err.no_tray": "Bandeja indisponível; ícone ignorado.",
+   "err.no_usage_data": "Sem dados de uso.",
+   "err.not_signed_in": "Sem sessão iniciada.",
+   "err.query_http": "Erro de consulta (HTTP {}).",
+   "err.rate_limited": "O servidor está a limitar os pedidos (429) – nova tentativa automática.",
+   "err.session_expired": "A sessão expirou, entra novamente.",
+   "err.session_expired_nl": "A sessão expirou.\nEntra novamente.",
+   "err.signin_needed": "A sessão do claude.ai expirou.\nInicie sessão de novo: clique direito → Iniciar sessão no claude.ai",
+   "err.unexpected": "Erro inesperado: {}",
+   "help.disclaimer": "Uma ferramenta independente e gratuita – não é feita pela Anthropic nem afiliada a ela. “Claude” é uma marca da Anthropic.",
+   "help.feedback": "Dúvidas, ideias, relatos de erro: o formulário de mensagem no site.",
+   "help.free": "Grátis para sempre · licença MIT · código aberto · sem telemetria",
+   "help.guide": "\n<h2>O que o widget mostra</h2>\n<ul>\n<li><b>Sessão de 5 horas</b> – quanto do limite da sessão atual já foi usado. É redefinido a cada cinco horas; o widget faz a contagem regressiva.</li>\n<li><b>Limite semanal</b> – todos os modelos juntos; é redefinido num horário semanal fixo da sua conta.</li>\n<li><b>Limite semanal por modelo</b> – um terceiro medidor quando o servidor informa um.</li>\n<li><b>Ritmo e taxa de consumo</b> – quão rápido o limite cai e se durará até a redefinição; a previsão de fim de semana avisa a tempo.</li>\n<li><b>Créditos de uso</b> e selo do plano – se você os ativar em <i>Selo do plano e limites extras</i>.</li>\n</ul>\n<h2>De onde vêm os dados</h2>\n<ul>\n<li><b>claude.ai (todos os dispositivos)</b> – consulta o servidor da Anthropic, então inclui o uso no celular, no navegador e em outros computadores. Exige um login único no seu próprio navegador (menu: <i>Entrar</i>). Atualiza a cada 2 minutos, mais devagar se o servidor pedir.</li>\n<li><b>Local (só este PC)</b> – lê o registro de uso do Claude Desktop neste computador. Sem login, mas só conhece este PC.</li>\n</ul>\n<p>Troque no menu: <i>Origem dos dados</i>.</p>\n<h2>Uso</h2>\n<ul>\n<li><b>Clique direito</b> no widget (ou no ícone da bandeja) – o menu completo.</li>\n<li><b>Clique duplo</b> num medidor – a janela <b>Histórico</b>: 6 horas, 24 horas, 7 dias ou tudo, com picos, média diária e previsão.</li>\n<li><b>Arraste</b> para mover; ele se encaixa nas bordas da tela. <b>Ctrl + roda do mouse</b> – maior ou menor.</li>\n<li>Layouts: post-it, barra fina, anéis; 6 temas. <i>Travar posição</i> e <i>Clique através</i> ficam nas Configurações.</li>\n</ul>\n<h2>Alertas</h2>\n<p>Amarelo a partir de 70 %, vermelho a partir de 90 % (ajustável). Notificações opcionais quando um limite é redefinido e quando os dados ficam antigos.</p>\n<h2>Backups (opcional)</h2>\n<p>As pequenas luzes mostram se seus backups agendados rodaram e terminaram. Clique numa luz para ver os detalhes. O programa só lê os registros – fazer e testar os backups é tarefa sua (veja os Termos de uso).</p>\n<h2>Atualizações</h2>\n<p>O programa procura novas versões sozinho e atualiza com um clique. Cada pacote é verificado com SHA-256 e vem somente de <b>claudeusagemonitor.com</b>. Novas versões e novidades: {site}</p>\n<h2>Privacidade</h2>\n<p>Sem telemetria, sem rastreamento. O login do claude.ai fica guardado criptografado só neste computador; nada é enviado para outro lugar.</p>\n<h2>Se algo der errado</h2>\n<ul>\n<li><i>429 / limitado</i> – o servidor está freando as requisições; o programa tenta de novo sozinho.</li>\n<li>Sem dados – confira a <i>Origem dos dados</i>; com o claude.ai, entre novamente.</li>\n<li>O histórico é mantido por 7 dias, mesmo após reinícios e atualizações.</li>\n<li>Registros e configurações: <code>{cfg}</code> (<code>api.log</code>, <code>update.log</code>).</li>\n</ul>\n",
+   "help.made_by": "Criado por",
+   "help.moved": "Novo endereço desde 21 de setembro de 2026 – a antiga página dinorr.hu/claude-usage-monitor redireciona para cá.",
+   "help.official": "SITE OFICIAL",
+   "help.open_site": "Abrir claudeusagemonitor.com",
+   "help.privacy": "Política de privacidade",
+   "help.site_what": "Downloads, atualizações automáticas, novidades, o Claude Backup Kit, termos de uso e privacidade – tudo em um só lugar.",
+   "help.source_code": "Código-fonte (GitHub)",
+   "help.tab_author": "Autor",
+   "help.tab_guide": "Como funciona",
+   "help.terms": "Termos de uso",
+   "help.title": "Ajuda",
+   "help.version": "Versão",
+   "hist.legend_5h": "sessão de 5 h",
+   "hist.legend_week": "limite semanal",
+   "hist.no_data": "Dados insuficientes para este período.",
+   "hist.range_24h": "24 horas",
+   "hist.range_6h": "6 horas",
+   "hist.range_7d": "7 dias",
+   "hist.range_all": "Tudo",
+   "hist.stat_burn": "Consumo médio/dia",
+   "hist.stat_forecast": "Projeção fim de semana",
+   "hist.stat_now": "Semanal atual",
+   "hist.stat_peak": "Pico semanal",
+   "hist.stat_sessions": "Sessões de 5 h",
+   "hist.title": "histórico",
+   "layout.compact": "Barra fina",
+   "layout.postit": "Cartão post-it",
+   "layout.ring": "Anéis",
+   "menu.always_top": "Sempre no topo",
+   "menu.autostart": "Iniciar com o Windows",
+   "menu.backup_bar": "Barra de estado das cópias",
+   "menu.backups": "Cópias de segurança…",
+   "menu.check_update": "Procurar atualização do programa…",
+   "menu.click_through": "Clique passante",
+   "menu.details": "Emblema do plano e outros limites",
+   "menu.help": "Ajuda…",
+   "menu.history": "Histórico e estatísticas…",
+   "menu.language": "Idioma",
+   "menu.layout": "Layout",
+   "menu.locked": "Fixar posição",
+   "menu.login": "Entrar (claude.ai, navegador)…",
+   "menu.logout": "Sair",
+   "menu.model_gauge": "Indicador {}",
+   "menu.order": "Ordem",
+   "menu.panel_visible": "Mostrar painel",
+   "menu.quit": "Sair",
+   "menu.refresh": "Atualizar dados de utilização agora",
+   "menu.settings": "Configurações…",
+   "menu.size": "Tamanho",
+   "menu.source": "Fonte de dados",
+   "menu.start_menu": "Mostrar no menu Iniciar",
+   "menu.theme": "Tema",
+   "menu.update_available": "Atualização do programa: instalar a versão {}…",
+   "notify.autostart_fail": "Não foi possível configurar o início automático.",
+   "notify.autostart_off": "Desativado: não inicia com o Windows.",
+   "notify.autostart_on": "Ativado: o app inicia com o Windows.",
+   "notify.first_run": "O painel apareceu no canto superior direito.\nClique direito no painel ou ícone = menu.",
+   "notify.login_ok": "Conectado – dados do servidor a chegar.",
+   "notify.logout": "Sessão terminada. Mudou para fonte local.",
+   "notify.reset_done": "{}: redefinição concluída — começou um novo período.",
+   "notify.signin_needed": "A sessão do claude.ai expirou. Clique direito no painel e inicie sessão de novo para continuar a ver a utilização de todos os seus dispositivos.",
+   "notify.stale_body": "Última leitura há {}. O Claude Desktop está aberto?",
+   "notify.stale_title": "Dados desatualizados",
+   "notify.threshold": "{}: {}% usado.",
+   "notify.update": "A versão {} do programa está disponível. Clique direito no painel → Atualização do programa.",
+   "panel.five_hour": "SESSÃO DE 5 HORAS",
+   "panel.five_hour_short": "5 H",
+   "panel.full_in": "cheio: {}",
+   "panel.model": "{} SEMANAL",
+   "panel.no_data": "Sem dados",
+   "panel.pace": "{} vs ritmo",
+   "panel.per_day": "{}%/dia",
+   "panel.per_hour": "{}%/h",
+   "panel.refreshing": "a carregar dados",
+   "panel.reset": "redefinição {}",
+   "panel.retry_in": "nova tentativa em {} s",
+   "panel.updated": "atualizado: {}",
+   "panel.week_short": "SEM.",
+   "panel.weekly": "LIMITE SEMANAL",
+   "profile.extra": "Créditos de uso: {}",
+   "profile.plan": "Plano: {}",
+   "profile.since": "Membro desde: {}",
+   "profile.tier": "Nível de limite: {}",
+   "set.about": "{}\nSem telemetria. Só consulta a Anthropic sobre a sua própria utilização e lê o número da versão no servidor de atualizações.",
+   "set.accent": "Cor de destaque",
+   "set.always_top": "Acima das outras janelas",
+   "set.auto": "automático",
+   "set.backup_config": "Config. do script de cópias",
+   "set.backup_details": "A janela de detalhes mostra",
+   "set.backup_disclaimer": "O Claude Usage Monitor apenas lê e mostra os registos da sua cópia de segurança – não cria, não verifica nem garante nenhuma cópia. O Claude Backup Kit é um ponto de partida gratuito, oferecido como ajuda: qualquer pessoa pode alterar os scripts, pelo que a qualidade e a integridade de uma cópia não podem ser garantidas. Não assumimos qualquer responsabilidade pelas cópias de segurança, perda de dados ou quaisquer danos. Cabe a cada pessoa garantir que as suas cópias estão completas e podem ser restauradas – teste um restauro de vez em quando.",
+   "set.backup_disclaimer_h": "Isenção de responsabilidade",
+   "set.backup_enabled": "Mostrar barra de estado das cópias no painel",
+   "set.backup_found": "Encontrado: {}",
+   "set.backup_green": "Verde até",
+   "set.backup_label": "Rótulo junto ao indicador",
+   "set.backup_lamps": "Indicadores",
+   "set.backup_root": "Pasta de cópias",
+   "set.backup_tasks": "Filtro de tarefas agendadas",
+   "set.backup_unconfigured": "Nenhuma pasta de cópias definida, por isso a barra fica oculta. Escolha a pasta onde o seu script escreve.",
+   "set.backup_yellow": "Amarelo até",
+   "set.browse": "Procurar…",
+   "set.click_through": "Clique passante (só decorativo, ignora o rato)",
+   "set.close": "Fechar",
+   "set.color_hint": "As cores mudam com os limiares: verde → amarelo → vermelho.",
+   "set.danger": "Crítico",
+   "set.data_hint": "Registo local: o plan-usage-history.json do Claude Desktop. Sem login, mas mede só este PC e atualiza a cada ~5 minutos.\n\nclaude.ai: após o login consulta o servidor. Vês o uso de todos os teus dispositivos, com horas de redefinição exatas e atualização mais frequente.",
+   "set.datafile": "Ficheiro de dados",
+   "set.default": "Padrão",
+   "set.details_api_only": "Vêm da fonte de dados claude.ai (requer início de sessão); o registo local não os contém.",
+   "set.file_filter": "JSON (*.json);;Todos os ficheiros (*.*)",
+   "set.gauge_order": "Ordem dos indicadores",
+   "set.hours_suffix": " h",
+   "set.layout": "Layout",
+   "set.local_models_hint": "O servidor só mantém um contador separado para alguns modelos (p. ex. Fable). Para os outros, isto mostra como se divide o trabalho do Claude Code desta semana neste PC - uma parte da sua própria utilização e os tokens de saída, não uma parte de um limite. Só são lidos o nome do modelo e as contagens de tokens, nunca a conversa.",
+   "set.local_models_none": "Não foi encontrada pasta de registos do Claude Code - este grupo fica simplesmente oculto. Nada mais é afetado.",
+   "set.local_models_path": "Pasta de registos do Claude Code",
+   "set.lock": "Fixar posição (não arrastável)",
+   "set.login_btn_in": "Sair de claude.ai",
+   "set.login_btn_out": "Entrar em claude.ai…",
+   "set.model_filter": "Modelo a seguir",
+   "set.model_scale": "Tamanho do indicador do modelo",
+   "set.not_set": "não definido",
+   "set.notify_enabled": "Notificar ao cruzar um limiar",
+   "set.notify_reset": "Notificar quando um limite é redefinido",
+   "set.notify_stale": "Notificar quando os dados ficam desatualizados",
+   "set.opacity": "Opacidade",
+   "set.open_config": "Abrir pasta de configurações",
+   "set.pick_color": "Escolher cor…",
+   "set.pick_file_title": "Escolher o registo de uso",
+   "set.profile": "Perfil / conta",
+   "set.profile_auto": "Automático (último usado)",
+   "set.profile_n": "Perfil {} – …{}",
+   "set.refresh": "Atualização",
+   "set.reset_confirm": "Tens a certeza de que queres restaurar as predefinições?",
+   "set.restore": "Restaurar predefinições",
+   "set.rows_available": "O que pode ser mostrado agora – desmarque o que não quer ver:",
+   "set.rows_none": "De momento o servidor não envia mais limites para a sua conta. Aparecerão aqui sozinhos assim que o fizer.",
+   "set.sec_suffix": " s",
+   "set.show_age": "Atualidade dos dados",
+   "set.show_burn": "Ritmo de consumo (%/h, %/dia)",
+   "set.show_extra_usage": "Créditos de uso (pagamento conforme o uso)",
+   "set.show_five_hour": "Mostrar sessão de 5 horas",
+   "set.show_local_models": "Divisão entre modelos a partir dos registos do Claude Code (este PC)",
+   "set.show_model": "Mostrar limite semanal do modelo (fonte claude.ai)",
+   "set.show_model_list": "Limites semanais dos outros modelos",
+   "set.show_plan_badge": "Emblema do plano no cabeçalho (Pro / Max…)",
+   "set.show_plan_name": "Mostrar o meu nome no emblema",
+   "set.show_reset": "Contagem decrescente até a redefinição",
+   "set.show_spark": "Curva de tendência (sparkline)",
+   "set.show_surfaces": "Limites por superfície (Claude Code, apps ligadas…)",
+   "set.show_weekly": "Mostrar limite semanal",
+   "set.size": "Tamanho",
+   "set.snap": "Encaixar na borda do ecrã",
+   "set.source_api": "claude.ai – todos os dispositivos (login necessário)",
+   "set.source_label": "Fonte de medição",
+   "set.source_local": "Registo local – só este PC",
+   "set.tab_alerts": "Alertas",
+   "set.tab_appearance": "Aparência",
+   "set.tab_content": "Conteúdo",
+   "set.tab_data": "Fonte de dados",
+   "set.tab_details": "Detalhes",
+   "set.tab_system": "Sistema",
+   "set.taskbar": "Mostrar na barra de tarefas (como janela)",
+   "set.theme": "Tema",
+   "set.theme_default": "Conforme o tema",
+   "set.tip": "Dica: arrasta o painel com o botão esquerdo, Ctrl+roda redimensiona,\nclique direito = menu, duplo clique = histórico.",
+   "set.title": "configurações",
+   "set.tray_five": "Sessão de 5 horas",
+   "set.tray_max": "O que for maior",
+   "set.tray_value": "Valor do ícone",
+   "set.tray_weekly": "Limite semanal",
+   "set.update_check": "Procurar atualizações do programa automaticamente",
+   "set.version": "Versão",
+   "set.visible": "Painel flutuante visível",
+   "set.warn": "Aviso",
+   "size.extra": "Extra",
+   "size.large": "Grande",
+   "size.normal": "Normal",
+   "size.small": "Pequeno",
+   "source.api": "claude.ai (todos os dispositivos)",
+   "source.local": "Local (só este PC)",
+   "theme.claude": "Claude (escuro quente)",
+   "theme.graphite": "Grafite",
+   "theme.midnight": "Vidro meia-noite",
+   "theme.neon": "Néon",
+   "theme.paper": "Papel claro",
+   "theme.postit": "Amarelo post-it",
+   "time.day": "{} d",
+   "time.dh": "{}d {}h",
+   "time.hm": "{}h {}m",
+   "time.hour": "{} h",
+   "time.m": "{}m",
+   "time.min": "{} min",
+   "time.none": "sem dados",
+   "time.sec": "{} s",
+   "tray.head": "5h: {}%   ·   Sem.: {}%",
+   "tray.line": "{}: {}%",
+   "update.available": "A versão {} está disponível.",
+   "update.check_failed": "Não foi possível procurar atualizações: {}",
+   "update.check_now": "Procurar agora",
+   "update.checking": "A procurar atualizações…",
+   "update.downloading": "A transferir… {} de {}",
+   "update.failed": "A atualização falhou: {}",
+   "update.install": "Instalar agora",
+   "update.installed": "Versão instalada: {}",
+   "update.later": "Mais tarde",
+   "update.manual": "Esta cópia não se consegue atualizar sozinha (código-fonte ou pasta só de leitura). Transfira o novo pacote.",
+   "update.open_page": "Abrir página de transferência",
+   "update.restarting": "A instalar – a aplicação reinicia de seguida.",
+   "update.skip": "Ignorar esta versão",
+   "update.title": "Atualização do programa",
+   "update.uptodate": "Tem a versão mais recente.",
+   "update.verifying": "A verificar e a extrair…",
+   "update.whats_new": "Novidades"
+  },
+  "es-ES": {
+   "backup.age_d": "{}d",
+   "backup.age_h": "{}h",
+   "backup.age_m": "{}min",
+   "backup.and_more": "…y {} más",
+   "backup.checked_at": "Comprobado: {}",
+   "backup.checking": "Comprobando…",
+   "backup.cloud_only": "La instantánea solo está en línea en OneDrive; no se lista su contenido para no descargarla.",
+   "backup.comp.cowork": "Registros de chat de Cowork (un ZIP por sesión)",
+   "backup.comp.vault": "Instantánea de la bóveda de Obsidian (ZIP)",
+   "backup.disclaimer_short": "El monitor solo muestra lo que dicen los registros de la copia. No asumimos responsabilidad por las copias: comprobar que estén completas y se puedan restaurar depende de ti.",
+   "backup.done": "hecho",
+   "backup.dry_run": "(prueba, no se subió nada)",
+   "backup.failed": "ERROR",
+   "backup.files_size": "{} archivos, {}",
+   "backup.folders": "Carpetas",
+   "backup.label_age": "Nombre y antigüedad",
+   "backup.label_name": "Solo nombre",
+   "backup.label_none": "Solo indicadores",
+   "backup.last_ok": "Última copia correcta: {} (hace {})",
+   "backup.last_run": "Última ejecución: {} – {}",
+   "backup.legend": "Verde: como máximo {} h · Amarillo: hasta {} h · Rojo: más antigua o sin copia",
+   "backup.level_green": "Al día",
+   "backup.level_none": "No se encontró copia",
+   "backup.level_red": "Desactualizado",
+   "backup.level_yellow": "Envejeciendo",
+   "backup.log_file": "Archivo de registro",
+   "backup.name.nextcloud": "Nextcloud",
+   "backup.name.obsidian": "Obsidian",
+   "backup.name.onedrive": "OneDrive",
+   "backup.no_root": "No se encontró la carpeta de copias: {}",
+   "backup.none_found": "Ninguno.",
+   "backup.open": "abrir",
+   "backup.rc_copied": "archivos nuevos o modificados copiados",
+   "backup.rc_failed": "ERROR (código {})",
+   "backup.rc_nochange": "al día, nada que copiar",
+   "backup.recent_notes": "Notas editadas más recientemente en la instantánea",
+   "backup.refresh": "Comprobar ahora",
+   "backup.sec_components": "Qué se guarda",
+   "backup.sec_contents": "Contenido",
+   "backup.sec_log": "Registro (últimas líneas)",
+   "backup.sec_problems": "Errores y advertencias",
+   "backup.sec_tasks": "Tareas programadas",
+   "backup.skipped": "omitido (carpeta no encontrada)",
+   "backup.snap_kept": "{} instantáneas guardadas, {} en total",
+   "backup.snapshot": "Última instantánea",
+   "backup.source": "Origen",
+   "backup.state_error": "terminó con errores",
+   "backup.state_interrupted": "no finalizó",
+   "backup.state_ok": "completada correctamente",
+   "backup.state_running": "en curso",
+   "backup.storage": "Almacenamiento remoto: {} usados de {}, {} libres",
+   "backup.target": "Destino",
+   "backup.task_event": "por evento",
+   "backup.task_row": "última ejecución {} · resultado {} · próxima {}",
+   "backup.tip_click": "Haz clic para ver detalles",
+   "backup.title": "Copias de seguridad",
+   "backup.tray": "Copias: {}",
+   "backup.uploaded": "Subido en esta ejecución: {} nuevos, {} reemplazados, {} errores",
+   "backup.uploaded_files": "Archivos subidos",
+   "backup.uploaded_groups": "Archivos subidos por carpeta",
+   "backup.uploaded_no": "Subido a Nextcloud: todavía no",
+   "backup.uploaded_yes": "Subido a Nextcloud: sí ({})",
+   "backup.vault": "Bóveda",
+   "backup.vault_changed": "{} notas cambiaron en la bóveda desde esta instantánea",
+   "backup.zip_new": "{} ZIP nuevos/actualizados",
+   "backup.zip_summary": "{} archivos ({} notas), {} sin comprimir",
+   "detail.extra": "Créditos de uso",
+   "detail.local_header": "CLAUDE CODE · ESTE PC · REPARTO DE LA SEMANA",
+   "detail.off": "desactivado",
+   "detail.on": "activado",
+   "detail.surface.oauth_apps": "Apps conectadas",
+   "detail.unlimited": "sin límite",
+   "dlg.cancel": "Cancelar",
+   "dlg.checking": "Comprobando…",
+   "dlg.err_badcode": "El código no fue aceptado.\n\n{}\n\nComprueba que pegaste el código completo, o vuelve a intentar el inicio de sesión (siempre un código nuevo).",
+   "dlg.err_ratelimit": "Demasiados intentos de inicio de sesión en poco tiempo.\n\nEl servidor te limita temporalmente. Cierra esta ventana, espera 10–15 minutos (no lo intentes mientras), y luego inicia UN solo nuevo inicio de sesión con un código nuevo.",
+   "dlg.hint1": "Inicia sesión en la página que se abre y aprueba el acceso. Al final obtendrás un código.",
+   "dlg.intro": "Inicia sesión en tu cuenta de claude.ai en tu navegador (tus contraseñas y passkeys guardados ya funcionan ahí).",
+   "dlg.login_title": "iniciar sesión",
+   "dlg.open_browser": "Abrir el inicio de sesión en el navegador",
+   "dlg.paste_label": "Pega aquí el código recibido:",
+   "dlg.paste_placeholder": "pega el código aquí",
+   "dlg.signin": "Iniciar sesión",
+   "dlg.step1": "Paso 1",
+   "dlg.step2": "Paso 2",
+   "dlg.unknown_err": "Error desconocido.",
+   "err.already_running": "La app ya está en ejecución (mira la bandeja).",
+   "err.bad_token_resp": "respuesta no válida del endpoint de token",
+   "err.bad_usage_resp": "respuesta no válida del endpoint de uso",
+   "err.connection": "error de conexión: {}",
+   "err.file_empty": "El archivo de uso está vacío.",
+   "err.file_not_found": "Archivo de uso no encontrado.\n¿Claude Desktop está abierto?",
+   "err.file_unreadable": "El archivo de uso no se puede leer ahora.",
+   "err.loading": "Iniciando sesión / consultando…",
+   "err.network": "error de red: {}",
+   "err.no_code": "No se pegó ningún código.",
+   "err.no_data_profile": "Sin datos para este perfil.",
+   "err.no_tray": "Bandeja no disponible; se omite el icono.",
+   "err.no_usage_data": "Sin datos de uso.",
+   "err.not_signed_in": "Sin sesión iniciada.",
+   "err.query_http": "Error de consulta (HTTP {}).",
+   "err.rate_limited": "El servidor está limitando las solicitudes (429): se reintenta automáticamente.",
+   "err.session_expired": "La sesión expiró, vuelve a iniciar sesión.",
+   "err.session_expired_nl": "La sesión expiró.\nVuelve a iniciar sesión.",
+   "err.signin_needed": "La sesión de claude.ai ha caducado.\nInicia sesión de nuevo: clic derecho → Iniciar sesión en claude.ai",
+   "err.unexpected": "Error inesperado: {}",
+   "help.disclaimer": "Una herramienta independiente y gratuita: no está creada por Anthropic ni afiliada a ella. «Claude» es una marca de Anthropic.",
+   "help.feedback": "Preguntas, ideas, errores: el formulario de mensajes del sitio web.",
+   "help.free": "Gratis para siempre · licencia MIT · código abierto · sin telemetría",
+   "help.guide": "\n<h2>Qué muestra el widget</h2>\n<ul>\n<li><b>Sesión de 5 horas</b> – cuánto se ha usado del límite de la sesión actual. Se reinicia cada cinco horas; el widget cuenta atrás hasta el reinicio.</li>\n<li><b>Límite semanal</b> – todos los modelos juntos; se reinicia a una hora semanal fija de tu cuenta.</li>\n<li><b>Límite semanal por modelo</b> – un tercer indicador cuando el servidor informa de uno.</li>\n<li><b>Ritmo y velocidad de consumo</b> – lo rápido que baja el límite y si llegará hasta el reinicio; la previsión de fin de semana avisa a tiempo.</li>\n<li><b>Créditos de uso</b> e insignia del plan – si los activas en <i>Insignia del plan y límites adicionales</i>.</li>\n</ul>\n<h2>De dónde vienen los datos</h2>\n<ul>\n<li><b>claude.ai (todos los dispositivos)</b> – consulta el servidor de Anthropic, así que incluye el uso en el móvil, el navegador y otros equipos. Requiere iniciar sesión una vez en tu propio navegador (menú: <i>Iniciar sesión</i>). Se actualiza cada 2 minutos, más despacio si el servidor lo pide.</li>\n<li><b>Local (solo este PC)</b> – lee el registro de uso de Claude Desktop en este equipo. Sin inicio de sesión, pero solo conoce este PC.</li>\n</ul>\n<p>Cambia en el menú: <i>Origen de datos</i>.</p>\n<h2>Uso</h2>\n<ul>\n<li><b>Clic derecho</b> en el widget (o en el icono de la bandeja) – el menú completo.</li>\n<li><b>Doble clic</b> en un indicador – la ventana <b>Historial</b>: 6 horas, 24 horas, 7 días o todo, con picos, media diaria y previsión.</li>\n<li><b>Arrastra</b> para moverlo; se ajusta a los bordes de la pantalla. <b>Ctrl + rueda</b> – más grande o más pequeño.</li>\n<li>Diseños: nota adhesiva, barra fina, anillos; 6 temas. <i>Bloquear posición</i> y <i>Clic a través</i> están en Ajustes.</li>\n</ul>\n<h2>Alertas</h2>\n<p>Amarillo desde el 70 %, rojo desde el 90 % (ajustable). Avisos opcionales cuando un límite se reinicia y cuando los datos se quedan antiguos.</p>\n<h2>Copias de seguridad (opcional)</h2>\n<p>Las pequeñas luces muestran si tus copias programadas se ejecutaron y terminaron. Haz clic en una luz para ver los detalles. El programa solo lee los registros: hacer y probar las copias es responsabilidad tuya (consulta las Condiciones de uso).</p>\n<h2>Actualizaciones</h2>\n<p>El programa busca nuevas versiones por sí mismo y se actualiza con un clic. Cada paquete se comprueba con SHA-256 y procede solo de <b>claudeusagemonitor.com</b>. Nuevas versiones y novedades: {site}</p>\n<h2>Privacidad</h2>\n<p>Sin telemetría ni seguimiento. El inicio de sesión de claude.ai se guarda cifrado solo en este equipo; no se envía nada a ningún otro sitio.</p>\n<h2>Si algo falla</h2>\n<ul>\n<li><i>429 / limitado</i> – el servidor frena las solicitudes; el programa reintenta solo.</li>\n<li>Sin datos – revisa el <i>Origen de datos</i>; con claude.ai, vuelve a iniciar sesión.</li>\n<li>El historial se conserva 7 días, también tras reinicios y actualizaciones.</li>\n<li>Registros y ajustes: <code>{cfg}</code> (<code>api.log</code>, <code>update.log</code>).</li>\n</ul>\n",
+   "help.made_by": "Creado por",
+   "help.moved": "Nueva dirección desde el 21 de septiembre de 2026: la antigua página dinorr.hu/claude-usage-monitor redirige aquí.",
+   "help.official": "SITIO OFICIAL",
+   "help.open_site": "Abrir claudeusagemonitor.com",
+   "help.privacy": "Política de privacidad",
+   "help.site_what": "Descargas, actualizaciones automáticas, novedades, el Claude Backup Kit, condiciones de uso y privacidad, todo en un solo lugar.",
+   "help.source_code": "Código fuente (GitHub)",
+   "help.tab_author": "Autor",
+   "help.tab_guide": "Cómo funciona",
+   "help.terms": "Condiciones de uso",
+   "help.title": "Ayuda",
+   "help.version": "Versión",
+   "hist.legend_5h": "sesión de 5 h",
+   "hist.legend_week": "límite semanal",
+   "hist.no_data": "No hay datos suficientes para este período.",
+   "hist.range_24h": "24 horas",
+   "hist.range_6h": "6 horas",
+   "hist.range_7d": "7 días",
+   "hist.range_all": "Todo",
+   "hist.stat_burn": "Consumo medio diario",
+   "hist.stat_forecast": "Proyección fin de semana",
+   "hist.stat_now": "Semanal actual",
+   "hist.stat_peak": "Pico semanal",
+   "hist.stat_sessions": "Sesiones de 5 h",
+   "hist.title": "historial",
+   "layout.compact": "Barra fina",
+   "layout.postit": "Tarjeta post-it",
+   "layout.ring": "Anillos",
+   "menu.always_top": "Siempre visible",
+   "menu.autostart": "Iniciar con Windows",
+   "menu.backup_bar": "Barra de estado de copias",
+   "menu.backups": "Copias de seguridad…",
+   "menu.check_update": "Buscar actualización del programa…",
+   "menu.click_through": "Clic transparente",
+   "menu.details": "Insignia del plan y otros límites",
+   "menu.help": "Ayuda…",
+   "menu.history": "Historial y estadísticas…",
+   "menu.language": "Idioma",
+   "menu.layout": "Diseño",
+   "menu.locked": "Fijar posición",
+   "menu.login": "Iniciar sesión (claude.ai, navegador)…",
+   "menu.logout": "Cerrar sesión",
+   "menu.model_gauge": "Indicador {}",
+   "menu.order": "Orden",
+   "menu.panel_visible": "Mostrar panel",
+   "menu.quit": "Salir",
+   "menu.refresh": "Actualizar datos de uso ahora",
+   "menu.settings": "Ajustes…",
+   "menu.size": "Tamaño",
+   "menu.source": "Origen de datos",
+   "menu.start_menu": "Mostrar en el menú Inicio",
+   "menu.theme": "Tema",
+   "menu.update_available": "Actualización del programa: instalar la versión {}…",
+   "notify.autostart_fail": "No se pudo configurar el inicio automático.",
+   "notify.autostart_off": "Desactivado: no se inicia con Windows.",
+   "notify.autostart_on": "Activado: la app se inicia con Windows.",
+   "notify.first_run": "El panel apareció arriba a la derecha.\nClic derecho en el panel o el icono = menú.",
+   "notify.login_ok": "Sesión iniciada – llegan los datos del servidor.",
+   "notify.logout": "Sesión cerrada. Cambiado a origen local.",
+   "notify.reset_done": "{}: se ha reiniciado — comienza un nuevo período.",
+   "notify.signin_needed": "La sesión de claude.ai ha caducado. Haz clic derecho en el panel e inicia sesión de nuevo para seguir viendo el uso de todos tus dispositivos.",
+   "notify.stale_body": "La última lectura tiene {}. ¿Claude Desktop está abierto?",
+   "notify.stale_title": "Datos obsoletos",
+   "notify.threshold": "{}: {}% usado.",
+   "notify.update": "La versión {} del programa está disponible. Clic derecho en el panel → Actualización del programa.",
+   "panel.five_hour": "SESIÓN DE 5 HORAS",
+   "panel.five_hour_short": "5 H",
+   "panel.full_in": "lleno: {}",
+   "panel.model": "{} SEMANAL",
+   "panel.no_data": "Sin datos",
+   "panel.pace": "{} vs ritmo",
+   "panel.per_day": "{}%/día",
+   "panel.per_hour": "{}%/h",
+   "panel.refreshing": "cargando datos",
+   "panel.reset": "reinicio {}",
+   "panel.retry_in": "reintento en {} s",
+   "panel.updated": "actualizado: {}",
+   "panel.week_short": "SEM.",
+   "panel.weekly": "LÍMITE SEMANAL",
+   "profile.extra": "Créditos de uso: {}",
+   "profile.plan": "Plan: {}",
+   "profile.since": "Miembro desde: {}",
+   "profile.tier": "Nivel de límite: {}",
+   "set.about": "{}\nSin telemetría. Solo consulta a Anthropic tu propio uso y lee el número de versión del servidor de actualizaciones.",
+   "set.accent": "Color de acento",
+   "set.always_top": "Sobre las demás ventanas",
+   "set.auto": "automático",
+   "set.backup_config": "Config. del script de copias",
+   "set.backup_details": "La ventana de detalles muestra",
+   "set.backup_disclaimer": "Claude Usage Monitor solo lee y muestra los registros de tu copia de seguridad: no crea, no comprueba ni garantiza ninguna copia. El Claude Backup Kit es un punto de partida gratuito que se ofrece como ayuda: cualquiera puede modificar los scripts, por lo que no se puede garantizar la calidad ni la integridad de una copia. No asumimos ninguna responsabilidad por las copias de seguridad, la pérdida de datos ni por ningún daño. Cada persona debe asegurarse por sí misma de que sus copias estén completas y se puedan restaurar; prueba una restauración de vez en cuando.",
+   "set.backup_disclaimer_h": "Exención de responsabilidad",
+   "set.backup_enabled": "Mostrar barra de estado de copias en el panel",
+   "set.backup_found": "Encontrado: {}",
+   "set.backup_green": "Verde hasta",
+   "set.backup_label": "Etiqueta junto al indicador",
+   "set.backup_lamps": "Indicadores",
+   "set.backup_root": "Carpeta de copias",
+   "set.backup_tasks": "Filtro de tareas programadas",
+   "set.backup_unconfigured": "No hay carpeta de copias definida, por eso la barra permanece oculta. Elige la carpeta donde escribe tu script.",
+   "set.backup_yellow": "Amarillo hasta",
+   "set.browse": "Examinar…",
+   "set.click_through": "Clic transparente (solo decorativo, ignora el ratón)",
+   "set.close": "Cerrar",
+   "set.color_hint": "Los colores cambian con los umbrales: verde → amarillo → rojo.",
+   "set.danger": "Crítico",
+   "set.data_hint": "Registro local: el plan-usage-history.json de Claude Desktop. Sin inicio de sesión, pero mide solo este PC y se actualiza cada ~5 minutos.\n\nclaude.ai: tras iniciar sesión consulta el servidor. Ves el uso de todos tus dispositivos, con horas de reinicio exactas y actualización más frecuente.",
+   "set.datafile": "Archivo de datos",
+   "set.default": "Predet.",
+   "set.details_api_only": "Proceden del origen de datos claude.ai (requiere iniciar sesión); el registro local no los contiene.",
+   "set.file_filter": "JSON (*.json);;Todos los archivos (*.*)",
+   "set.gauge_order": "Orden de los indicadores",
+   "set.hours_suffix": " h",
+   "set.layout": "Diseño",
+   "set.local_models_hint": "El servidor solo lleva un contador aparte para algunos modelos (p. ej. Fable). Para los demás, esto muestra cómo se reparte el trabajo de Claude Code de esta semana en este PC: una parte de tu propio uso y los tokens de salida, no una parte de un límite. Solo se leen el nombre del modelo y los recuentos de tokens, nunca la conversación.",
+   "set.local_models_none": "No se encontró carpeta de registros de Claude Code: este grupo simplemente queda oculto. Lo demás no se ve afectado.",
+   "set.local_models_path": "Carpeta de registros de Claude Code",
+   "set.lock": "Fijar posición (no arrastrable)",
+   "set.login_btn_in": "Cerrar sesión de claude.ai",
+   "set.login_btn_out": "Iniciar sesión en claude.ai…",
+   "set.model_filter": "Modelo a seguir",
+   "set.model_scale": "Tamaño del indicador del modelo",
+   "set.not_set": "sin definir",
+   "set.notify_enabled": "Notificar al cruzar un umbral",
+   "set.notify_reset": "Notificar cuando un límite se reinicia",
+   "set.notify_stale": "Notificar cuando los datos se vuelven obsoletos",
+   "set.opacity": "Opacidad",
+   "set.open_config": "Abrir carpeta de ajustes",
+   "set.pick_color": "Elegir color…",
+   "set.pick_file_title": "Elegir el registro de uso",
+   "set.profile": "Perfil / cuenta",
+   "set.profile_auto": "Automático (último usado)",
+   "set.profile_n": "Perfil {} – …{}",
+   "set.refresh": "Actualización",
+   "set.reset_confirm": "¿Seguro que quieres restaurar los ajustes predeterminados?",
+   "set.restore": "Restaurar predeterminados",
+   "set.rows_available": "Lo que se puede mostrar ahora – desmarca lo que no quieras ver:",
+   "set.rows_none": "El servidor no envía por ahora más límites para tu cuenta. Aparecerán aquí por sí solos en cuanto lo haga.",
+   "set.sec_suffix": " s",
+   "set.show_age": "Frescura de los datos",
+   "set.show_burn": "Ritmo de consumo (%/h, %/día)",
+   "set.show_extra_usage": "Créditos de uso (pago por consumo)",
+   "set.show_five_hour": "Mostrar sesión de 5 horas",
+   "set.show_local_models": "Reparto entre modelos según los registros de Claude Code (este PC)",
+   "set.show_model": "Mostrar límite semanal del modelo (origen claude.ai)",
+   "set.show_model_list": "Límites semanales de los otros modelos",
+   "set.show_plan_badge": "Insignia del plan en la cabecera (Pro / Max…)",
+   "set.show_plan_name": "Mostrar mi nombre en la insignia",
+   "set.show_reset": "Cuenta atrás hasta el reinicio",
+   "set.show_spark": "Curva de tendencia (sparkline)",
+   "set.show_surfaces": "Límites por superficie (Claude Code, apps conectadas…)",
+   "set.show_weekly": "Mostrar límite semanal",
+   "set.size": "Tamaño",
+   "set.snap": "Ajustar al borde de la pantalla",
+   "set.source_api": "claude.ai – todos los dispositivos (requiere sesión)",
+   "set.source_label": "Origen de medición",
+   "set.source_local": "Registro local – solo este PC",
+   "set.tab_alerts": "Alertas",
+   "set.tab_appearance": "Apariencia",
+   "set.tab_content": "Contenido",
+   "set.tab_data": "Origen de datos",
+   "set.tab_details": "Detalles",
+   "set.tab_system": "Sistema",
+   "set.taskbar": "Mostrar en la barra de tareas (como ventana)",
+   "set.theme": "Tema",
+   "set.theme_default": "Según el tema",
+   "set.tip": "Consejo: arrastra el panel con el botón izquierdo, Ctrl+rueda cambia el tamaño,\nclic derecho = menú, doble clic = historial.",
+   "set.title": "ajustes",
+   "set.tray_five": "Sesión de 5 horas",
+   "set.tray_max": "El que sea mayor",
+   "set.tray_value": "Valor del icono",
+   "set.tray_weekly": "Límite semanal",
+   "set.update_check": "Buscar actualizaciones del programa automáticamente",
+   "set.version": "Versión",
+   "set.visible": "Panel flotante visible",
+   "set.warn": "Advertencia",
+   "size.extra": "Extra",
+   "size.large": "Grande",
+   "size.normal": "Normal",
+   "size.small": "Pequeño",
+   "source.api": "claude.ai (todos los dispositivos)",
+   "source.local": "Local (solo este PC)",
+   "theme.claude": "Claude (oscuro cálido)",
+   "theme.graphite": "Grafito",
+   "theme.midnight": "Cristal medianoche",
+   "theme.neon": "Neón",
+   "theme.paper": "Papel claro",
+   "theme.postit": "Amarillo post-it",
+   "time.day": "{} d",
+   "time.dh": "{}d {}h",
+   "time.hm": "{}h {}m",
+   "time.hour": "{} h",
+   "time.m": "{}m",
+   "time.min": "{} min",
+   "time.none": "sin datos",
+   "time.sec": "{} s",
+   "tray.head": "5 h: {}%   ·   Sem.: {}%",
+   "tray.line": "{}: {}%",
+   "update.available": "La versión {} está disponible.",
+   "update.check_failed": "No se pudo buscar actualizaciones: {}",
+   "update.check_now": "Buscar ahora",
+   "update.checking": "Buscando actualizaciones…",
+   "update.downloading": "Descargando… {} de {}",
+   "update.failed": "La actualización falló: {}",
+   "update.install": "Instalar ahora",
+   "update.installed": "Versión instalada: {}",
+   "update.later": "Más tarde",
+   "update.manual": "Esta copia no puede actualizarse sola (código fuente o carpeta de solo lectura). Descarga el paquete nuevo.",
+   "update.open_page": "Abrir página de descarga",
+   "update.restarting": "Instalando: la aplicación se reiniciará enseguida.",
+   "update.skip": "Omitir esta versión",
+   "update.title": "Actualización del programa",
+   "update.uptodate": "Tienes la última versión.",
+   "update.verifying": "Verificando y descomprimiendo…",
+   "update.whats_new": "Novedades"
+  }
+ }
+}

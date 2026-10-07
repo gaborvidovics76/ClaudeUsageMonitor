@@ -27,6 +27,7 @@ Write-Host "[2/3] PyInstaller..." -ForegroundColor Cyan
 # -> a csomag ~90 MB (a ~430 MB helyett).
 python -m PyInstaller --noconfirm --clean `
     --onedir --windowed `
+    --collect-submodules claude_usage.langs `
     --name ClaudeUsageMonitor `
     --icon app.ico `
     --exclude-module PySide6.QtWebEngineCore `

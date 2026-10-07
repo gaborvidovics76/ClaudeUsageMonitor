@@ -10,26 +10,77 @@ every key in STRINGS. Anything missing shows in English.
 from __future__ import annotations
 
 import locale
-from typing import Dict, List
+import sys
+from typing import Dict, List, Optional
 
-# The available languages - shown in their own name.
+# The available languages - shown in their own name. English first, then the rest by their own name.
+# The ten "core" languages are translated inline in the i18n*.py modules; every other language
+# (and the extra keys of the core ones) lives in claude_usage/langs/<code>.py.
 LANG_NAMES: Dict[str, str] = {
     "en": "English",
-    "hu": "Magyar",
-    "de": "Deutsch",
-    "fr": "Français",
-    "es": "Español",
-    "it": "Italiano",
-    "pt": "Português",
-    "pl": "Polski",
-    "nl": "Nederlands",
-    "ru": "Русский",
+    "bg": "Български",
     "cs": "Čeština",
+    "da": "Dansk",
+    "de": "Deutsch",
+    "et": "Eesti",
+    "el": "Ελληνικά",
+    "es-ES": "Español (España)",
+    "es-419": "Español (Latinoamérica)",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hr": "Hrvatski",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "lv": "Latviešu",
+    "lt": "Lietuvių",
+    "hu": "Magyar",
+    "mt": "Malti",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt-BR": "Português (Brasil)",
+    "pt-PT": "Português (Portugal)",
+    "ro": "Română",
+    "ru": "Русский",
+    "sk": "Slovenčina",
+    "sl": "Slovenščina",
+    "fi": "Suomi",
+    "sv": "Svenska",
     "tr": "Türkçe",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
 }
 
 DEFAULT_LANG = "en"
 _current = DEFAULT_LANG
+
+# A missing text falls back to the other variant of the same language, then to English.
+# The two Chinese variants do NOT fall back on each other: the other script is foreign to the reader.
+SIBLINGS: Dict[str, str] = {"pt-BR": "pt-PT", "pt-PT": "pt-BR", "es-ES": "es-419", "es-419": "es-ES"}
+
+# Languages whose script has no upper/lower case (labels are not emphasised by case there).
+CJK = ("ja", "ko", "zh-CN", "zh-TW")
+
+# Windows LANGID (full value, so that the region tells pt-BR from pt-PT, Croatian from Serbian …).
+_LANGID: Dict[int, str] = {
+    0x0402: "bg", 0x0405: "cs", 0x0406: "da", 0x0407: "de", 0x0408: "el", 0x0425: "et",
+    0x040B: "fi", 0x040C: "fr", 0x083C: "ga", 0x041A: "hr", 0x101A: "hr", 0x040E: "hu",
+    0x0421: "id", 0x0410: "it", 0x0411: "ja", 0x0412: "ko", 0x0427: "lt", 0x0426: "lv",
+    0x043A: "mt", 0x0413: "nl", 0x0415: "pl", 0x0416: "pt-BR", 0x0816: "pt-PT", 0x0418: "ro",
+    0x0419: "ru", 0x041B: "sk", 0x0424: "sl", 0x041D: "sv", 0x041F: "tr", 0x042A: "vi",
+    0x0804: "zh-CN", 0x1004: "zh-CN", 0x0404: "zh-TW", 0x0C04: "zh-TW", 0x1404: "zh-TW",
+    0x0C0A: "es-ES", 0x040A: "es-ES",
+}
+# primary-language fallbacks when the full LANGID is not in the table
+_PRIMARY: Dict[int, str] = {
+    0x09: "en", 0x0A: "es-419", 0x16: "pt-BR", 0x04: "zh-CN", 0x07: "de", 0x0C: "fr", 0x10: "it",
+    0x13: "nl", 0x1D: "sv", 0x0E: "hu", 0x15: "pl", 0x19: "ru", 0x05: "cs", 0x1F: "tr",
+    0x02: "bg", 0x06: "da", 0x08: "el", 0x25: "et", 0x0B: "fi", 0x3C: "ga", 0x21: "id",
+    0x11: "ja", 0x12: "ko", 0x27: "lt", 0x26: "lv", 0x3A: "mt", 0x18: "ro", 0x1B: "sk",
+    0x24: "sl", 0x2A: "vi",
+}
 
 
 def available_languages() -> List[str]:
@@ -40,6 +91,37 @@ def language_name(code: str) -> str:
     return LANG_NAMES.get(code, code)
 
 
+def normalize_tag(tag: str) -> str:
+    """Maps a BCP-47 tag ('zh-Hant-TW', 'pt_BR', 'es-MX', 'hr-HR', 'sr-Latn') to a supported code or ''."""
+    parts = [p for p in str(tag or "").replace("_", "-").split("-") if p]
+    if not parts:
+        return ""
+    lang = parts[0].lower()
+    rest = [p.lower() for p in parts[1:]]
+    if lang == "zh":
+        if "hant" in rest or any(r in ("tw", "hk", "mo") for r in rest):
+            return "zh-TW"
+        return "zh-CN"
+    if lang == "pt":
+        return "pt-PT" if any(r in ("pt", "ao", "mz", "cv", "gw", "st", "tl") for r in rest) else "pt-BR"
+    if lang == "es":
+        return "es-ES" if (not rest or "es" in rest or "ea" in rest or "ic" in rest) else "es-419"
+    if lang in ("sr", "bs"):
+        return ""           # Serbian and Bosnian share the Windows primary id with Croatian but are not Croatian
+    return lang if lang in LANG_NAMES else ""
+
+
+def migrate_language(code: str) -> str:
+    """Old settings stored 'pt' or 'es': pick the variant that fits the system, else the European one."""
+    if code == "pt":
+        sys_code = system_language()
+        return sys_code if sys_code in ("pt-BR", "pt-PT") else "pt-PT"
+    if code == "es":
+        sys_code = system_language()
+        return sys_code if sys_code in ("es-ES", "es-419") else "es-ES"
+    return code
+
+
 def system_language() -> str:
     """Guesses a supported code from the OS language (else English)."""
     code = ""
@@ -48,12 +130,11 @@ def system_language() -> str:
         # regional format instead, e.g. "hu_HU" for an English UI or vice versa).
         import ctypes
 
-        lang_id = ctypes.windll.kernel32.GetUserDefaultUILanguage() & 0x3FF
-        code = {0x09: "en", 0x0E: "hu", 0x07: "de", 0x0C: "fr", 0x0A: "es", 0x10: "it",
-                0x16: "pt", 0x15: "pl", 0x13: "nl", 0x19: "ru", 0x05: "cs", 0x1F: "tr"}.get(lang_id, "")
+        lang_id = int(ctypes.windll.kernel32.GetUserDefaultUILanguage())
+        code = _LANGID.get(lang_id) or _PRIMARY.get(lang_id & 0x3FF, "")
     except Exception:  # noqa: BLE001 - not Windows or lookup failed
         try:
-            code = (locale.getlocale()[0] or "").split("_")[0].lower()
+            code = normalize_tag(locale.getlocale()[0] or "")
         except Exception:  # noqa: BLE001
             code = ""
         if code not in LANG_NAMES:
@@ -62,9 +143,9 @@ def system_language() -> str:
                 from PySide6.QtCore import QLocale
 
                 for name in QLocale.system().uiLanguages():
-                    short = name.replace("_", "-").split("-")[0].lower()
-                    if short in LANG_NAMES:
-                        code = short
+                    found = normalize_tag(name)
+                    if found in LANG_NAMES:
+                        code = found
                         break
             except Exception:  # noqa: BLE001
                 pass
@@ -80,15 +161,54 @@ def current_language() -> str:
     return _current
 
 
-def tr(key: str, *args) -> str:
+def lookup(key: str, lang: Optional[str] = None) -> str:
+    """The text of a key in a language, following the fallback chain (variant -> sibling -> English)."""
     entry = STRINGS.get(key, {})
-    text = entry.get(_current) or entry.get("en") or key
+    lang = lang or _current
+    text = entry.get(lang)
+    if not text and lang in SIBLINGS:
+        text = entry.get(SIBLINGS[lang])
+    return text or entry.get("en") or key
+
+
+def tr(key: str, *args) -> str:
+    text = lookup(key)
     if args:
         try:
             return text.format(*args)
         except (IndexError, KeyError):
             return text
     return text
+
+
+# ---------------------------------------------------------------------------
+# Fonts: the CJK scripts share code points (Han unification) and only look right in a font
+# made for that language, so those languages get their own family first; everything else
+# keeps the platform font.
+# ---------------------------------------------------------------------------
+
+_FONT_FAMILIES: Dict[str, Dict[str, List[str]]] = {
+    "ja":    {"win": ["Yu Gothic UI", "Meiryo UI"],       "mac": ["Hiragino Sans", "Hiragino Kaku Gothic ProN"]},
+    "ko":    {"win": ["Malgun Gothic"],                   "mac": ["Apple SD Gothic Neo"]},
+    "zh-TW": {"win": ["Microsoft JhengHei UI", "Microsoft JhengHei"], "mac": ["PingFang TC"]},
+    "zh-CN": {"win": ["Microsoft YaHei UI", "Microsoft YaHei"],       "mac": ["PingFang SC"]},
+}
+
+
+def ui_font_families(code: Optional[str] = None) -> List[str]:
+    """Extra font families for the language (empty = keep the platform default)."""
+    code = code or _current
+    spec = _FONT_FAMILIES.get(code)
+    if not spec:
+        return []
+    return list(spec["mac" if sys.platform == "darwin" else "win"])
+
+
+def qt_locale_name(code: Optional[str] = None) -> str:
+    """QLocale name for the language ('es-419' -> 'es_419', 'zh-TW' -> 'zh_TW')."""
+    code = code or _current
+    return {"en": "en_US", "pt-PT": "pt_PT", "pt-BR": "pt_BR", "es-ES": "es_ES", "es-419": "es_419",
+            "zh-TW": "zh_TW", "zh-CN": "zh_CN"}.get(code, code)
 
 
 # ---------------------------------------------------------------------------
@@ -1254,10 +1374,24 @@ from .i18n_help import STRINGS_HELP as _STRINGS_HELP  # noqa: E402
 
 STRINGS.update(_STRINGS_HELP)
 
-# macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
-import sys as _sys  # noqa: E402
+# "Message to the developer" window (form, consent, privacy notice)
+from .i18n_feedback import STRINGS_FEEDBACK as _STRINGS_FEEDBACK  # noqa: E402
 
-if _sys.platform == "darwin":
+STRINGS.update(_STRINGS_FEEDBACK)
+
+# macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
+if sys.platform == "darwin":
     from .i18n_mac import STRINGS_MAC as _STRINGS_MAC  # noqa: E402
 
     STRINGS.update(_STRINGS_MAC)
+
+# The old "pt" / "es" inline texts (if any are left) serve the European variants.
+for _entry in STRINGS.values():
+    for _old, _new in (("pt", "pt-PT"), ("es", "es-ES")):
+        if _old in _entry:
+            _entry.setdefault(_new, _entry.pop(_old))
+
+# Every other language, and the extra keys of the core ones: claude_usage/langs/<code>.py
+from . import langs as _langs  # noqa: E402
+
+_langs.load_into(STRINGS, darwin=(sys.platform == "darwin"))

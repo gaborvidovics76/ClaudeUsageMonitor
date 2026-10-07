@@ -82,6 +82,7 @@ DEFAULTS: Dict[str, Any] = {
     "show_burn": True,
     "show_reset": True,
     "show_age": True,
+    "show_feedback_icon": True,      # speech-bubble icon in the header: message to the developer
     "tray_metric": "five_hour",      # five_hour | weekly | max
 
     # --- backups: status of the OneDrive / Nextcloud / Obsidian backup scripts

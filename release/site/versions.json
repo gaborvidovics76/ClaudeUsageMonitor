@@ -1,7 +1,14 @@
 {
     "slug":  "claude-usage-monitor",
-    "latest":  "2.6.5",
+    "latest":  "2.7.0",
     "versions":  [
+                     {
+                         "version":  "2.7.0",
+                         "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.7.0.zip",
+                         "sha256":  "f092eacc2f3de4b2b615b967a38848f7cdf638a3323985a38ec08fbc4a8dc1f0",
+                         "released":  "2026-10-07T05:20:22Z",
+                         "bytes":  49140677
+                     },
                      {
                          "version":  "2.6.5",
                          "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.6.5.zip",
