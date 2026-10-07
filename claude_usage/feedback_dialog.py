@@ -11,6 +11,7 @@ from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen
 from PySide6.QtWidgets import (
     QCheckBox,
     QDialog,
+    QFrame,
     QHBoxLayout,
     QLabel,
     QLineEdit,
@@ -45,6 +46,11 @@ QPushButton#send:hover {{ background: #e5896b; }}
 QPushButton#send:disabled {{ background: #5a4a44; color: #cfc4bf; }}
 QPushButton#clear {{ background: transparent; border: none; color: #79839a; padding: 0 4px; }}
 QPushButton#clear:hover {{ color: #c9cfdd; }}
+QFrame#ratingBox {{ background: #1f232b; border: 1px solid #3a4150; border-radius: 10px; }}
+QLabel#ratingLabel {{ color: #eef1f8; font-weight: 600; }}
+QFrame#consentBox {{ background: rgba(217, 119, 87, 26); border: 1px solid rgba(217, 119, 87, 160); border-radius: 9px; }}
+QFrame#consentBox[error="true"] {{ background: rgba(255, 107, 107, 34); border: 2px solid #ff6b6b; }}
+QLabel#consentLabel {{ color: #eef1f8; }}
 """
 
 
@@ -57,7 +63,7 @@ class StarBar(QWidget):
         super().__init__(parent)
         self.value = 0
         self._hover = 0
-        self._size = 26
+        self._size = 30
         self.setMouseTracking(True)
         self.setCursor(Qt.CursorShape.PointingHandCursor)
         self.setFixedSize(self._size * 5 + 8, self._size + 6)
@@ -109,15 +115,38 @@ class StarBar(QWidget):
         for i in range(5):
             cx = 4 + self._size * i + self._size / 2
             cy = self.height() / 2
-            path = self._star(cx, cy, self._size * 0.42)
+            path = self._star(cx, cy, self._size * 0.44)
             if i < shown:
-                color = QColor("#f2b134") if not self._hover or self._hover == self.value else QColor("#f7c86a")
+                color = QColor("#f5b83d") if not self._hover or self._hover == self.value else QColor("#f9cf74")
                 p.fillPath(path, color)
-                p.setPen(QPen(QColor("#a87714"), 1.0))
+                pen = QPen(QColor("#c98a12"), 1.4)
             else:
-                p.fillPath(path, QColor("#2a2f3a"))
-                p.setPen(QPen(QColor("#4a5160"), 1.0))
+                # an empty star must still be clearly visible on the dark background
+                p.fillPath(path, QColor("#3a404d"))
+                pen = QPen(QColor("#b4bccb") if not self._hover else QColor("#f9cf74"), 1.6)
+            pen.setJoinStyle(Qt.PenJoinStyle.RoundJoin)
+            p.setPen(pen)
             p.drawPath(path)
+
+
+class ConsentLabel(QLabel):
+    """The consent text: a click on the words ticks the box, a click on the link opens the notice."""
+
+    clicked = Signal()
+
+    def __init__(self, text: str, parent: Optional[QWidget] = None) -> None:
+        super().__init__(text, parent)
+        self._over_link = False
+        self.linkHovered.connect(self._hovered)
+        self.setCursor(Qt.CursorShape.PointingHandCursor)
+
+    def _hovered(self, href: str) -> None:
+        self._over_link = bool(href)
+
+    def mouseReleaseEvent(self, e) -> None:
+        super().mouseReleaseEvent(e)
+        if e.button() == Qt.MouseButton.LeftButton and not self._over_link:
+            self.clicked.emit()
 
 
 class FeedbackDialog(QDialog):
@@ -149,9 +178,13 @@ class FeedbackDialog(QDialog):
         intro.setWordWrap(True)
         f.addWidget(intro)
 
-        rating_row = QHBoxLayout()
-        rating_row.setSpacing(8)
+        rating_box = QFrame()
+        rating_box.setObjectName("ratingBox")
+        rating_row = QHBoxLayout(rating_box)
+        rating_row.setContentsMargins(12, 8, 12, 8)
+        rating_row.setSpacing(10)
         lab = QLabel(tr("fb.rating"))
+        lab.setObjectName("ratingLabel")
         rating_row.addWidget(lab)
         self.stars = StarBar()
         self.stars.changed.connect(self._rating_changed)
@@ -162,11 +195,11 @@ class FeedbackDialog(QDialog):
         self.btn_clear.clicked.connect(lambda: self.stars.set_value(0))
         self.btn_clear.setVisible(False)
         rating_row.addWidget(self.btn_clear)
-        hint = QLabel(tr("fb.rating_hint"))
-        hint.setObjectName("hint")
-        rating_row.addWidget(hint)
+        self.rating_hint = QLabel(tr("fb.rating_hint"))
+        self.rating_hint.setObjectName("hint")
+        rating_row.addWidget(self.rating_hint)
         rating_row.addStretch(1)
-        f.addLayout(rating_row)
+        f.addWidget(rating_box)
 
         self.ed_name = QLineEdit()
         self.ed_name.setMaxLength(feedback.MAX_NAME)
@@ -183,18 +216,28 @@ class FeedbackDialog(QDialog):
         f.addWidget(self._labelled(tr("fb.message"), self.ed_msg))
 
         # consent (required) with a link that opens the privacy notice right here
-        consent_row = QHBoxLayout()
-        consent_row.setSpacing(6)
+        self.consent_box = QFrame()
+        self.consent_box.setObjectName("consentBox")
+        consent_row = QHBoxLayout(self.consent_box)
+        consent_row.setContentsMargins(10, 8, 10, 8)
+        consent_row.setSpacing(8)
         self.cb_consent = QCheckBox()
+        self.cb_consent.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.cb_consent.toggled.connect(lambda _on: self._mark_consent(False))
         consent_row.addWidget(self.cb_consent, 0, Qt.AlignmentFlag.AlignTop)
-        link = f'<a href="privacy" style="color:{LINK}; text-decoration:none;">{html.escape(tr("fb.privacy_title"))}</a>'
-        self.lab_consent = QLabel(html.escape(tr("fb.consent", "\u0000")).replace("\u0000", link))
+        link = (f'<a href="privacy" style="color:{LINK}; text-decoration:underline;">'
+                f'{html.escape(tr("fb.privacy_title"))}</a>')
+        text = html.escape(tr("fb.consent", "\u0000")).replace("\u0000", link)
+        # the required mark makes it obvious that the box must be ticked
+        self.lab_consent = ConsentLabel(text + ' <span style="color:#ff8a8a;">*</span>')
+        self.lab_consent.setObjectName("consentLabel")
         self.lab_consent.setTextFormat(Qt.TextFormat.RichText)
         self.lab_consent.setWordWrap(True)
         self.lab_consent.setOpenExternalLinks(False)
         self.lab_consent.linkActivated.connect(lambda _h: self._toggle_privacy())
+        self.lab_consent.clicked.connect(self.cb_consent.toggle)
         consent_row.addWidget(self.lab_consent, 1)
-        f.addLayout(consent_row)
+        f.addWidget(self.consent_box)
 
         self.privacy = QTextBrowser()
         self.privacy.setObjectName("privacy")
@@ -281,6 +324,7 @@ class FeedbackDialog(QDialog):
 
     def _rating_changed(self, v: int) -> None:
         self.btn_clear.setVisible(v > 0)
+        self.rating_hint.setVisible(v == 0)      # the "clear" button takes its place
         self.cb_publish.setEnabled(v > 0)
         if v == 0:
             self.cb_publish.setChecked(False)
@@ -292,6 +336,13 @@ class FeedbackDialog(QDialog):
             self.ed_msg.setPlainText(text[:feedback.MAX_MESSAGE])
             cur.setPosition(min(cur.position(), feedback.MAX_MESSAGE))
             self.ed_msg.setTextCursor(cur)
+
+    def _mark_consent(self, error: bool) -> None:
+        self.consent_box.setProperty("error", "true" if error else "false")
+        self.consent_box.style().unpolish(self.consent_box)
+        self.consent_box.style().polish(self.consent_box)
+        if not error and self.lab_error.text() == tr("fb.err_consent"):
+            self._error("")
 
     def _toggle_privacy(self) -> None:
         show = not self.privacy.isVisible()
@@ -324,6 +375,8 @@ class FeedbackDialog(QDialog):
             return
         if not self.cb_consent.isChecked():
             self._error(tr("fb.err_consent"))
+            self._mark_consent(True)
+            self.cb_consent.setFocus()
             return
         payload = feedback.build_payload(self.ed_name.text(), email, msg, rating,
                                          self.cb_publish.isChecked(), current_language())

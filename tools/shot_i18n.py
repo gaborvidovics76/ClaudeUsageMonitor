@@ -25,6 +25,10 @@ from PySide6.QtWidgets import QApplication, QTabWidget  # noqa: E402
 
 app = QApplication([])
 
+from claude_usage.uistyle import checkbox_qss  # noqa: E402
+
+app.setStyleSheet(checkbox_qss())
+
 from claude_usage import i18n  # noqa: E402
 from claude_usage import settings as settings_mod  # noqa: E402
 from claude_usage.datasource import Gauge, Metrics  # noqa: E402

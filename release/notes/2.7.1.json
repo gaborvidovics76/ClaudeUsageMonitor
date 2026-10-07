@@ -1,0 +1,146 @@
+{
+  "en": [
+    "Better visibility in the \"Message to the developer\" window: the star rating now shows clearly visible, larger stars, and the required consent checkbox sits in a highlighted box – if you try to send without ticking it, the box turns red. Clicking the text next to it also ticks it.",
+    "Every checkbox in the program (Settings, message window) is now clearly visible on the dark background: a light frame, and an orange box with a white tick when it is on."
+  ],
+  "hu": [
+    "Jobban látható „Üzenet a fejlesztőnek” ablak: a csillagos értékelés jól látható, nagyobb csillagokat kapott, a kötelező hozzájáruló jelölőnégyzet pedig kiemelt keretben van – ha bejelölés nélkül próbálod elküldeni, a keret pirosra vált. A mellette lévő szövegre kattintva is bejelölhető.",
+    "A program összes jelölőnégyzete (Beállítások, üzenetablak) jól látható lett a sötét háttéren: világos keret, bekapcsolva pedig narancssárga négyzet fehér pipával."
+  ],
+  "de": [
+    "Bessere Sichtbarkeit im Fenster „Nachricht an den Entwickler“: Die Sternebewertung zeigt jetzt größere, gut sichtbare Sterne, und das erforderliche Einwilligungs-Kontrollkästchen steht in einem hervorgehobenen Rahmen – wenn du ohne Häkchen senden willst, wird der Rahmen rot. Ein Klick auf den Text daneben setzt das Häkchen ebenfalls.",
+    "Alle Kontrollkästchen im Programm (Einstellungen, Nachrichtenfenster) sind jetzt auf dem dunklen Hintergrund gut zu erkennen: ein heller Rahmen und, wenn aktiviert, ein orangefarbenes Kästchen mit weißem Häkchen."
+  ],
+  "fr": [
+    "Meilleure visibilité dans la fenêtre « Message au développeur » : la note affiche désormais des étoiles plus grandes et bien visibles, et la case de consentement obligatoire se trouve dans un cadre mis en évidence – si vous essayez d'envoyer sans la cocher, le cadre devient rouge. Un clic sur le texte à côté coche aussi la case.",
+    "Toutes les cases à cocher du programme (Paramètres, fenêtre de message) sont désormais bien visibles sur le fond sombre : un cadre clair et, une fois cochées, une case orange avec une coche blanche."
+  ],
+  "es": [
+    "Mejor visibilidad en la ventana «Mensaje al desarrollador»: la valoración muestra ahora estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se vuelve rojo. También puedes marcarla haciendo clic en el texto que tiene al lado.",
+    "Todas las casillas del programa (Configuración, ventana de mensaje) se ven ahora con claridad sobre el fondo oscuro: un marco claro y, cuando están activadas, un cuadro naranja con una marca blanca."
+  ],
+  "it": [
+    "Migliore visibilità nella finestra «Messaggio allo sviluppatore»: la valutazione ora mostra stelle più grandi e ben visibili, e la casella obbligatoria del consenso si trova in un riquadro evidenziato – se provi a inviare senza spuntarla, il riquadro diventa rosso. Puoi spuntarla anche facendo clic sul testo accanto.",
+    "Tutte le caselle di controllo del programma (Impostazioni, finestra dei messaggi) ora si vedono bene sullo sfondo scuro: un bordo chiaro e, quando sono attive, un riquadro arancione con un segno di spunta bianco."
+  ],
+  "pt": [
+    "Melhor visibilidade na janela «Mensagem ao programador»: a avaliação mostra agora estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica numa moldura destacada – se tentares enviar sem a assinalar, a moldura fica vermelha. Também a podes assinalar clicando no texto ao lado.",
+    "Todas as caixas de verificação do programa (Definições, janela de mensagem) estão agora bem visíveis no fundo escuro: uma moldura clara e, quando ativadas, uma caixa laranja com um visto branco."
+  ],
+  "pl": [
+    "Lepiej widoczne okno „Wiadomość do autora”: ocena pokazuje teraz większe, wyraźne gwiazdki, a wymagane pole zgody znajduje się w wyróżnionej ramce – jeśli spróbujesz wysłać wiadomość bez jego zaznaczenia, ramka zmieni kolor na czerwony. Pole można też zaznaczyć, klikając tekst obok niego.",
+    "Wszystkie pola wyboru w programie (Ustawienia, okno wiadomości) są teraz dobrze widoczne na ciemnym tle: jasna ramka, a po zaznaczeniu pomarańczowy kwadrat z białym znacznikiem."
+  ],
+  "nl": [
+    "Beter zichtbaar venster “Bericht aan de ontwikkelaar”: de beoordeling toont nu grotere, goed zichtbare sterren, en het verplichte toestemmingsvakje staat in een gemarkeerd kader – als je probeert te verzenden zonder het aan te vinken, wordt het kader rood. Je kunt het ook aanvinken door op de tekst ernaast te klikken.",
+    "Alle selectievakjes in het programma (Instellingen, berichtvenster) zijn nu goed zichtbaar op de donkere achtergrond: een lichte rand en, als ze aanstaan, een oranje vakje met een wit vinkje."
+  ],
+  "ru": [
+    "Окно «Сообщение разработчику» стало нагляднее: в оценке теперь крупные, хорошо заметные звёзды, а обязательный флажок согласия выделен рамкой – если попытаться отправить сообщение, не отметив его, рамка станет красной. Флажок можно отметить и нажатием на текст рядом с ним.",
+    "Все флажки в программе (Настройки, окно сообщения) теперь хорошо видны на тёмном фоне: светлая рамка, а во включённом состоянии – оранжевый квадрат с белой галочкой."
+  ],
+  "cs": [
+    "Lepší viditelnost v okně „Zpráva pro vývojáře“: hodnocení teď zobrazuje větší, dobře viditelné hvězdičky a povinné zaškrtávací políčko souhlasu je ve zvýrazněném rámečku – pokud se pokusíte zprávu odeslat bez jeho zaškrtnutí, rámeček zčervená. Políčko zaškrtnete i kliknutím na text vedle něj.",
+    "Všechna zaškrtávací políčka v programu (Nastavení, okno zprávy) jsou teď na tmavém pozadí dobře vidět: světlý rámeček a po zapnutí oranžový čtvereček s bílým zaškrtnutím."
+  ],
+  "tr": [
+    "“Geliştiriciye mesaj” penceresi artık daha iyi görünüyor: yıldızlı puanlama daha büyük ve net görünen yıldızlar gösteriyor, zorunlu onay kutusu ise vurgulanmış bir çerçevenin içinde – işaretlemeden göndermeye çalışırsan çerçeve kırmızıya döner. Yanındaki metne tıklayarak da işaretleyebilirsin.",
+    "Programdaki tüm onay kutuları (Ayarlar, mesaj penceresi) artık koyu arka planda net görünüyor: açık renkli bir çerçeve, işaretliyken de beyaz onay işaretli turuncu bir kutu."
+  ],
+  "pt-PT": [
+    "Melhor visibilidade na janela «Mensagem ao programador»: a avaliação mostra agora estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica numa moldura destacada – se tentares enviar sem a assinalar, a moldura fica vermelha. Também a podes assinalar clicando no texto ao lado.",
+    "Todas as caixas de verificação do programa (Definições, janela de mensagem) estão agora bem visíveis no fundo escuro: uma moldura clara e, quando ativadas, uma caixa laranja com um visto branco."
+  ],
+  "pt-BR": [
+    "Melhor visibilidade na janela “Mensagem para o desenvolvedor”: a avaliação agora mostra estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica em um quadro destacado – se você tentar enviar sem marcá-la, o quadro fica vermelho. Clicar no texto ao lado também marca a caixa.",
+    "Todas as caixas de seleção do programa (Configurações, janela de mensagem) agora aparecem com clareza no fundo escuro: uma borda clara e, quando ativadas, uma caixa laranja com uma marca de seleção branca."
+  ],
+  "es-ES": [
+    "Mejor visibilidad en la ventana «Mensaje al desarrollador»: la valoración muestra ahora estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se vuelve rojo. También puedes marcarla haciendo clic en el texto que tiene al lado.",
+    "Todas las casillas del programa (Configuración, ventana de mensaje) se ven ahora con claridad sobre el fondo oscuro: un marco claro y, cuando están activadas, un cuadro naranja con una marca blanca."
+  ],
+  "es-419": [
+    "Mejor visibilidad en la ventana “Mensaje al desarrollador”: la calificación ahora muestra estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se pone rojo. También puedes marcarla haciendo clic en el texto de al lado.",
+    "Todas las casillas del programa (Configuración, ventana de mensaje) ahora se ven claramente sobre el fondo oscuro: un borde claro y, cuando están activadas, un cuadro naranja con una marca de verificación blanca."
+  ],
+  "ja": [
+    "「開発者へのメッセージ」ウィンドウが見やすくなりました。星の評価は大きくはっきりした星で表示され、必須の同意チェックボックスは強調された枠で囲まれています。チェックを入れずに送信しようとすると、枠が赤くなります。横のテキストをクリックしてもチェックを入れられます。",
+    "プログラム内のすべてのチェックボックス（「設定」、メッセージウィンドウ）が暗い背景でもはっきり見えるようになりました。枠は明るい色になり、オンのときは白いチェックマーク付きのオレンジ色のボックスになります。"
+  ],
+  "ko": [
+    "“개발자에게 메시지” 창이 더 잘 보이게 바뀌었어요. 별점 평가는 더 크고 또렷한 별로 표시되고, 필수 동의 체크박스는 강조된 상자 안에 있어요. 체크하지 않고 보내려고 하면 상자가 빨간색으로 바뀌어요. 옆의 텍스트를 클릭해도 체크할 수 있어요.",
+    "프로그램의 모든 체크박스(설정, 메시지 창)가 이제 어두운 배경에서도 잘 보여요. 테두리는 밝은색이고, 켜져 있으면 흰색 체크 표시가 있는 주황색 상자로 표시돼요."
+  ],
+  "zh-CN": [
+    "“给开发者留言”窗口更加醒目：星级评分现在显示为更大、更清晰的星星；必填的同意复选框位于突出显示的边框内——如果未勾选就尝试发送，边框会变成红色。点击旁边的文字也可以勾选。",
+    "程序中的所有复选框（设置、留言窗口）现在在深色背景上都清晰可见：浅色边框，勾选时显示为带白色对勾的橙色方框。"
+  ],
+  "zh-TW": [
+    "「傳訊息給開發者」視窗更加清楚易讀：星級評分現在以更大、更醒目的星星顯示；必填的同意核取方塊位於醒目的外框中——如果未勾選就嘗試傳送，外框會變成紅色。按一下旁邊的文字也能勾選。",
+    "程式中的所有核取方塊（設定、訊息視窗）現在在深色背景上都清晰可見：淺色外框，勾選時則顯示為帶有白色勾號的橘色方塊。"
+  ],
+  "id": [
+    "Jendela “Pesan untuk pengembang” kini lebih jelas: penilaian bintang sekarang menampilkan bintang yang lebih besar dan mudah terlihat, dan kotak centang persetujuan yang wajib berada di dalam bingkai yang disorot – jika Anda mencoba mengirim tanpa mencentangnya, bingkai berubah menjadi merah. Mengeklik teks di sebelahnya juga akan mencentangnya.",
+    "Semua kotak centang di program (Pengaturan, jendela pesan) kini terlihat jelas di latar belakang gelap: bingkai terang, dan saat aktif berupa kotak oranye dengan tanda centang putih."
+  ],
+  "vi": [
+    "Cửa sổ “Tin nhắn cho nhà phát triển” dễ nhìn hơn: phần đánh giá giờ hiển thị các ngôi sao lớn và rõ hơn, còn ô đánh dấu đồng ý bắt buộc nằm trong một khung được làm nổi bật – nếu bạn gửi mà chưa đánh dấu, khung sẽ chuyển sang màu đỏ. Bấm vào dòng chữ bên cạnh cũng đánh dấu được ô này.",
+    "Mọi ô đánh dấu trong chương trình (Cài đặt, cửa sổ tin nhắn) giờ đều hiện rõ trên nền tối: khung màu sáng, và khi bật là ô màu cam với dấu tích trắng."
+  ],
+  "ro": [
+    "Fereastra „Mesaj către dezvoltator” se vede mai bine: evaluarea afișează acum stele mai mari și bine vizibile, iar caseta obligatorie de consimțământ stă într-un chenar evidențiat – dacă încerci să trimiți fără s-o bifezi, chenarul devine roșu. O poți bifa și dând clic pe textul de lângă ea.",
+    "Toate casetele de bifat din program (Setări, fereastra de mesaj) se văd acum clar pe fundalul întunecat: un chenar deschis la culoare, iar când sunt bifate, un pătrat portocaliu cu o bifă albă."
+  ],
+  "el": [
+    "Καλύτερη ορατότητα στο παράθυρο «Μήνυμα προς τον προγραμματιστή»: η αξιολόγηση δείχνει πλέον μεγαλύτερα, ευδιάκριτα αστέρια, και το υποχρεωτικό πλαίσιο ελέγχου συγκατάθεσης βρίσκεται μέσα σε τονισμένο περίγραμμα – αν προσπαθήσετε να στείλετε χωρίς να το επιλέξετε, το περίγραμμα γίνεται κόκκινο. Μπορείτε να το επιλέξετε και κάνοντας κλικ στο κείμενο δίπλα του.",
+    "Όλα τα πλαίσια ελέγχου του προγράμματος (Ρυθμίσεις, παράθυρο μηνύματος) διακρίνονται πλέον καθαρά στο σκούρο φόντο: ανοιχτόχρωμο περίγραμμα και, όταν είναι ενεργά, πορτοκαλί τετράγωνο με λευκό σημάδι επιλογής."
+  ],
+  "bg": [
+    "По-добра видимост в прозореца „Съобщение до разработчика“: оценката вече показва по-големи, ясно видими звезди, а задължителното поле за съгласие е в открояваща се рамка – ако опиташ да изпратиш, без да го отметнеш, рамката става червена. Можеш да го отметнеш и с щракване върху текста до него.",
+    "Всички полета за отметка в програмата (Настройки, прозорец за съобщение) вече се виждат ясно на тъмния фон: светла рамка, а когато са включени – оранжево квадратче с бяла отметка."
+  ],
+  "sk": [
+    "Lepšia viditeľnosť v okne „Správa vývojárovi“: hodnotenie teraz zobrazuje väčšie, dobre viditeľné hviezdičky a povinné začiarkavacie políčko súhlasu je vo zvýraznenom rámčeku – ak sa pokúsiš správu odoslať bez jeho začiarknutia, rámček sčervenie. Políčko začiarkneš aj kliknutím na text vedľa neho.",
+    "Všetky začiarkavacie políčka v programe (Nastavenia, okno správy) sú teraz na tmavom pozadí dobre viditeľné: svetlý rámček a po zapnutí oranžový štvorček s bielou fajkou."
+  ],
+  "hr": [
+    "Bolja vidljivost u prozoru „Poruka programeru”: ocjena sada prikazuje veće, jasno vidljive zvjezdice, a obvezni potvrdni okvir za privolu nalazi se u istaknutom polju – ako pokušate poslati poruku bez označavanja, polje postaje crveno. Možete ga označiti i klikom na tekst pokraj njega.",
+    "Svi potvrdni okviri u programu (Postavke, prozor za poruke) sada su jasno vidljivi na tamnoj pozadini: svijetli rub, a kad su uključeni, narančasti kvadratić s bijelom kvačicom."
+  ],
+  "sv": [
+    "Fönstret ”Meddelande till utvecklaren” syns bättre: betyget visas nu med större, tydliga stjärnor, och den obligatoriska kryssrutan för samtycke ligger i en markerad ram – om du försöker skicka utan att kryssa i den blir ramen röd. Du kan också kryssa i den genom att klicka på texten bredvid.",
+    "Alla kryssrutor i programmet (Inställningar, meddelandefönstret) syns nu tydligt mot den mörka bakgrunden: en ljus ram och, när de är ikryssade, en orange ruta med en vit bock."
+  ],
+  "fi": [
+    "”Viesti kehittäjälle” -ikkuna näkyy paremmin: arviossa on nyt isommat, selvästi näkyvät tähdet, ja pakollinen suostumuksen valintaruutu on korostetussa kehyksessä – jos yrität lähettää valitsematta sitä, kehys muuttuu punaiseksi. Ruudun voi valita myös napsauttamalla sen vieressä olevaa tekstiä.",
+    "Kaikki ohjelman valintaruudut (Asetukset, viesti-ikkuna) näkyvät nyt selvästi tummaa taustaa vasten: vaalea kehys ja valittuna oranssi ruutu, jossa on valkoinen valintamerkki."
+  ],
+  "da": [
+    "Bedre synlighed i vinduet “Besked til udvikleren”: bedømmelsen viser nu større, tydelige stjerner, og det obligatoriske afkrydsningsfelt til samtykke står i en fremhævet ramme – hvis du prøver at sende uden at sætte kryds, bliver rammen rød. Du kan også sætte krydset ved at klikke på teksten ved siden af.",
+    "Alle afkrydsningsfelter i programmet (Indstillinger, beskedvinduet) ses nu tydeligt på den mørke baggrund: en lys ramme og, når de er slået til, en orange boks med et hvidt flueben."
+  ],
+  "lt": [
+    "Geriau matomas langas „Žinutė kūrėjui“: įvertinime dabar rodomos didesnės, aiškiai matomos žvaigždutės, o privalomas sutikimo žymimasis langelis yra paryškintame rėmelyje – jei bandysite siųsti jo nepažymėję, rėmelis taps raudonas. Langelį galima pažymėti ir spustelėjus šalia esantį tekstą.",
+    "Visi programos žymimieji langeliai (Parametrai, žinutės langas) dabar gerai matomi tamsiame fone: šviesus rėmelis, o įjungus – oranžinis langelis su balta varnele."
+  ],
+  "sl": [
+    "Boljša vidnost v oknu „Sporočilo razvijalcu“: ocena zdaj prikazuje večje, dobro vidne zvezdice, obvezno potrditveno polje za privolitev pa je v poudarjenem okvirju – če poskusite poslati sporočilo, ne da bi polje označili, okvir postane rdeč. Polje lahko označite tudi s klikom na besedilo poleg njega.",
+    "Vsa potrditvena polja v programu (Nastavitve, okno za sporočila) so zdaj dobro vidna na temnem ozadju: svetel okvir, ko so vklopljena, pa oranžen kvadratek z belo kljukico."
+  ],
+  "lv": [
+    "Labāk saskatāms logs „Ziņa izstrādātājam”: vērtējumā tagad redzamas lielākas, labi saskatāmas zvaigznes, un obligātā piekrišanas izvēles rūtiņa atrodas izceltā rāmī – ja mēģināsiet sūtīt, to neatzīmējot, rāmis kļūs sarkans. Rūtiņu var atzīmēt, arī noklikšķinot uz blakus esošā teksta.",
+    "Visas programmas izvēles rūtiņas (Iestatījumi, ziņas logs) tagad ir labi redzamas uz tumšā fona: gaišs rāmis, bet ieslēgtā stāvoklī – oranžs lodziņš ar baltu ķeksīti."
+  ],
+  "et": [
+    "Aken „Sõnum arendajale“ on paremini nähtav: hinnangus on nüüd suuremad ja selgelt nähtavad tärnid ning kohustuslik nõusoleku märkeruut on esiletõstetud raamis – kui proovid saata ilma seda märkimata, muutub raam punaseks. Märkeruudu saab märkida ka selle kõrval olevale tekstile klõpsates.",
+    "Kõik programmi märkeruudud (Sätted, sõnumiaken) on nüüd tumedal taustal selgelt nähtavad: hele raam ning sisselülitatuna oranž ruut valge linnukesega."
+  ],
+  "mt": [
+    "Viżibbiltà aħjar fit-tieqa “Messaġġ lill-iżviluppatur”: il-valutazzjoni issa turi stilel akbar li jidhru sew, u l-kaxxa obbligatorja tal-kunsens tinsab f'qafas enfasizzat – jekk tipprova tibgħat mingħajr ma timmarkaha, il-qafas isir aħmar. Tista' timmarkaha wkoll billi tikklikkja fuq it-test ħdejha.",
+    "Il-kaxxi tal-għażla kollha fil-programm (Issettjar, tieqa tal-messaġġ) issa jidhru ċar fuq l-isfond skur: qafas ta' kulur ċar, u meta jkunu mixgħula, kaxxa oranġjo b'marka bajda."
+  ],
+  "ga": [
+    "Tá an fhuinneog “Teachtaireacht chuig an bhforbróir” níos soiléire anois: taispeánann an rátáil réaltaí níos mó atá furasta a fheiceáil, agus tá an ticbhosca toilithe éigeantach i bhfráma aibhsithe – má dhéanann tú iarracht seoladh gan tic a chur ann, éiríonn an fráma dearg. Má chliceálann tú ar an téacs in aice leis, cuirtear tic ann freisin.",
+    "Tá gach ticbhosca sa ríomhchlár (Socruithe, fuinneog na teachtaireachta) le feiceáil go soiléir ar an gcúlra dorcha anois: fráma geal, agus nuair a bhíonn sé ar siúl, bosca oráiste le tic bán."
+  ]
+}

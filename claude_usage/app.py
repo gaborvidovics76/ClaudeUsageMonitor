@@ -818,6 +818,10 @@ def run() -> int:
         app.setApplicationName(APP_TITLE)
         app.setQuitOnLastWindowClosed(False)
         app.setWindowIcon(winutil.app_icon())
+        # clearly visible checkboxes in every dialog (the native ones vanish on the dark theme)
+        from .uistyle import checkbox_qss
+
+        app.setStyleSheet(app.styleSheet() + checkbox_qss())
 
         # language first, so even the "already running" message is localized
         set_language(migrate_language(Settings()["language"]) or system_language())

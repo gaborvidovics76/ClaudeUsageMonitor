@@ -2,6 +2,17 @@
 
 <!-- newer-versions-here -->
 
+## [2.7.1] - 2026-10-07
+
+- Better visibility in the "Message to the developer" window: the star rating now shows clearly visible, larger stars, and the required consent checkbox sits in a highlighted box – if you try to send without ticking it, the box turns red. Clicking the text next to it also ticks it.
+- Every checkbox in the program (Settings, message window) is now clearly visible on the dark background: a light frame, and an orange box with a white tick when it is on.
+
+*Magyarul:*
+
+- Jobban látható „Üzenet a fejlesztőnek” ablak: a csillagos értékelés jól látható, nagyobb csillagokat kapott, a kötelező hozzájáruló jelölőnégyzet pedig kiemelt keretben van – ha bejelölés nélkül próbálod elküldeni, a keret pirosra vált. A mellette lévő szövegre kattintva is bejelölhető.
+- A program összes jelölőnégyzete (Beállítások, üzenetablak) jól látható lett a sötét háttéren: világos keret, bekapcsolva pedig narancssárga négyzet fehér pipával.
+
+
 ## [2.7.0] - 2026-10-07
 
 - New: the app now speaks 34 languages – every official EU language plus Japanese, Korean, Simplified and Traditional Chinese, Indonesian and Vietnamese. Portuguese and Spanish are split into European and Brazilian Portuguese, and Spain and Latin-American Spanish. The system language is recognised automatically; Chinese, Japanese and Korean get their own font so the characters look right.
