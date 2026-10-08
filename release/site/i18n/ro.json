@@ -169,7 +169,7 @@
  "dls.win_note": "Nu sunt necesare drepturi de administrator. Dacă Windows afișează „Windows a protejat PC-ul”: Mai multe informații → Rulează oricum. Aplicația este open source, dar nu este semnată digital.",
  "dls.verify": "Verifică descărcarea (SHA-256)",
  "dls.btn_mac": "Descarcă pentru macOS",
- "dls.mac_soon": "Versiunea pentru macOS e pe drum – revino în curând.",
+ "dls.mac_soon": "Dăm ultimele retușuri versiunii pentru macOS – foarte curând o vei putea descărca din nou. Ne pare rău pentru scurta așteptare și îți mulțumim pentru răbdare! <a href=\"#subscribe\">Primește un e-mail când e gata.</a>",
  "dls.mac_steps": "<li>Deschide fișierul zip și trage <b>ClaudeUsageMonitor</b> în <b>Aplicații</b>.</li><li>Prima pornire: <b>clic dreapta → Deschide</b> (aplicația nu este notarizată de Apple).</li><li>Caută pictograma în bara de meniu. Gata.</li>",
  "dls.auto": "Aceste butoane duc mereu la cea mai nouă versiune – iar odată instalată, aplicația se actualizează singură.",
  "new.eyebrow": "Dezvoltat activ",
@@ -318,5 +318,7 @@
  "bk.feat": "Leduri de backup – vezi dacă munca ta cu Claude are backup",
  "img.bk_panel": "Panoul Claude Usage Monitor cu trei leduri verzi de backup: OneDrive, Nextcloud și Obsidian, fiecare salvat acum un minut",
  "img.bk_details": "Fereastra de detalii backup din Claude Usage Monitor: starea Recent, instantaneul salvat al seifului Obsidian, Claude Code, Claude Desktop, un folder suplimentar și jurnalele agenților, cu numărul și dimensiunea fișierelor, fără erori, și activitatea planificată",
- "lang.hint": "Această pagină este disponibilă și în limba română"
+ "lang.hint": "Această pagină este disponibilă și în limba română",
+ "dl.soon": "În curând",
+ "dls.btn_mac_soon": "Versiunea pentru macOS – în curând"
 }

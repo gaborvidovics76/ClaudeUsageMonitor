@@ -169,7 +169,7 @@
  "dls.win_note": "Skrbniške pravice niso potrebne. Če Windows prikaže sporočilo „Windows je zaščitil vaš računalnik“: Več informacij → Vseeno zaženi. Program je odprtokoden, vendar ni digitalno podpisan.",
  "dls.verify": "Preverite prenos (SHA-256)",
  "dls.btn_mac": "Prenesi za macOS",
- "dls.mac_soon": "Različica za macOS je na poti – kmalu preverite znova.",
+ "dls.mac_soon": "Pri različici za macOS urejamo še zadnje podrobnosti – zelo kmalu jo boste spet lahko prenesli. Oprostite za kratko čakanje in hvala za vašo potrpežljivost! <a href=\"#subscribe\">Prejmite e-sporočilo, ko bo pripravljena.</a>",
  "dls.mac_steps": "<li>Odprite datoteko zip in povlecite <b>ClaudeUsageMonitor</b> v mapo <b>Applications</b>.</li><li>Prvi zagon: <b>desni klik → Open (Odpri)</b> – Apple programa ni overil.</li><li>Poiščite ikono v menijski vrstici. Končano.</li>",
  "dls.auto": "Ti gumbi vedno vodijo do najnovejše izdaje – po namestitvi pa se program posodablja sam.",
  "new.eyebrow": "Aktiven razvoj",
@@ -318,5 +318,7 @@
  "bk.feat": "Lučke varnostnih kopij – preverite, ali je vaše delo s Claudom varnostno kopirano",
  "img.bk_panel": "Plošča programa Claude Usage Monitor s tremi zelenimi lučkami varnostnih kopij: OneDrive, Nextcloud in Obsidian, vse varnostno kopirane pred eno minuto",
  "img.bk_details": "Okno s podrobnostmi o varnostnih kopijah v programu Claude Usage Monitor: stanje Sveže, varnostno kopirani posnetek stanja trezorja Obsidian, Claude Code, Claude Desktop, dodatna mapa in dnevniki agentov s številom datotek in velikostmi, brez napak, ter načrtovano opravilo",
- "lang.hint": "Ta stran je na voljo tudi v slovenščini"
+ "lang.hint": "Ta stran je na voljo tudi v slovenščini",
+ "dl.soon": "Kmalu na voljo",
+ "dls.btn_mac_soon": "Različica za macOS – kmalu na voljo"
 }

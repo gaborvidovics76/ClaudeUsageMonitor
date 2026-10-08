@@ -17,7 +17,7 @@ Satu aplikasi untuk Windows dan Mac sekaligus. Mencakup semua yang dihitung ke d
 
 - Versi: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Segera hadir
 - https://claudeusagemonitor.com/id/
 
 ## Semua batas penggunaan Claude Anda. Sekali lirik.

@@ -17,7 +17,7 @@ Una sola app per Windows e per Mac. Copre tutto ciò che conta per il tuo piano 
 
 - Versione: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Presto disponibile
 - https://claudeusagemonitor.com/it/
 
 ## Tutti i tuoi limiti di utilizzo di Claude. In un colpo d'occhio.

@@ -17,7 +17,7 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 
 - Versija: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Drīzumā
 - https://claudeusagemonitor.com/lv/
 
 ## Visi jūsu Claude lietojuma limiti. Vienā skatienā.

@@ -169,7 +169,7 @@
  "dls.win_note": "Inga administratörsrättigheter behövs. Om Windows visar ”Windows skyddade datorn”: Mer info → Kör ändå. Appen har öppen källkod men är inte kodsignerad.",
  "dls.verify": "Verifiera nedladdningen (SHA-256)",
  "dls.btn_mac": "Ladda ned för macOS",
- "dls.mac_soon": "macOS-versionen är på väg – titta in igen snart.",
+ "dls.mac_soon": "Vi lägger sista handen vid macOS-versionen – mycket snart går den att ladda ned igen. Förlåt för den korta väntan, och tack för ditt tålamod! <a href=\"#subscribe\">Få ett mejl när den är klar.</a>",
  "dls.mac_steps": "<li>Öppna zip-filen och dra <b>ClaudeUsageMonitor</b> till <b>Program</b>.</li><li>Första starten: <b>högerklicka → Öppna</b> (appen är inte notariserad av Apple).</li><li>Leta efter ikonen i menyraden. Klart.</li>",
  "dls.auto": "Knapparna pekar alltid på den senaste versionen – och när appen väl är installerad håller den sig själv uppdaterad.",
  "new.eyebrow": "Utvecklas aktivt",
@@ -318,5 +318,7 @@
  "bk.feat": "Lampor för säkerhetskopior – se om ditt Claude-arbete är säkerhetskopierat",
  "img.bk_panel": "Claude Usage Monitor-panel med tre gröna lampor för säkerhetskopior: OneDrive, Nextcloud och Obsidian, alla säkerhetskopierade för en minut sedan",
  "img.bk_details": "Detaljfönstret för säkerhetskopior i Claude Usage Monitor: status Aktuell, den säkerhetskopierade ögonblicksbilden av Obsidian-valvet, Claude Code, Claude Desktop, en extra mapp och agentloggarna med antal filer och storlekar, inga fel och den schemalagda aktiviteten",
- "lang.hint": "Den här sidan finns även på svenska"
+ "lang.hint": "Den här sidan finns även på svenska",
+ "dl.soon": "Kommer snart",
+ "dls.btn_mac_soon": "macOS-version – kommer snart"
 }

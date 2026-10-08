@@ -17,7 +17,7 @@ Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear 
 
 - Leagan: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Ag teacht go luath
 - https://claudeusagemonitor.com/ga/
 
 ## Do theorainneacha úsáide Claude go léir. Sracfhéachaint amháin.

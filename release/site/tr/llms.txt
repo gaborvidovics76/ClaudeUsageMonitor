@@ -17,7 +17,7 @@ Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: clau
 
 - Sürüm: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Çok yakında
 - https://claudeusagemonitor.com/tr/
 
 ## Tüm Claude kullanım limitlerin. Tek bakışta.

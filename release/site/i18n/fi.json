@@ -169,7 +169,7 @@
  "dls.win_note": "Järjestelmänvalvojan oikeuksia ei tarvita. Jos Windows näyttää ilmoituksen ”Windows suojasi tietokonettasi”: Lisätietoja → Suorita silti. Sovellus on avointa lähdekoodia, mutta sillä ei ole koodiallekirjoitusta.",
  "dls.verify": "Tarkista lataus (SHA-256)",
  "dls.btn_mac": "Lataa macOS:lle",
- "dls.mac_soon": "macOS-versio on tulossa – palaa pian takaisin.",
+ "dls.mac_soon": "Viimeistelemme macOS-versiota – se on hyvin pian taas ladattavissa. Pahoittelut lyhyestä odotuksesta ja kiitos kärsivällisyydestäsi! <a href=\"#subscribe\">Tilaa sähköposti-ilmoitus, kun se on valmis.</a>",
  "dls.mac_steps": "<li>Avaa zip-tiedosto ja vedä <b>ClaudeUsageMonitor</b> kansioon <b>Ohjelmat</b>.</li><li>Ensimmäinen käynnistys: <b>hiiren kakkospainike → Avaa</b> (Apple ei ole notarisoinut sovellusta).</li><li>Etsi kuvake valikkoriviltä. Valmista.</li>",
  "dls.auto": "Nämä painikkeet osoittavat aina uusimpaan julkaisuun – ja asennuksen jälkeen sovellus pitää itsensä ajan tasalla.",
  "new.eyebrow": "Aktiivisessa kehityksessä",
@@ -318,5 +318,7 @@
  "bk.feat": "Varmuuskopioiden merkkivalot – näe, onko Claude-työsi varmuuskopioitu",
  "img.bk_panel": "Claude Usage Monitor -paneeli ja kolme vihreää varmuuskopioinnin merkkivaloa: OneDrive, Nextcloud ja Obsidian, kukin varmuuskopioitu minuutti sitten",
  "img.bk_details": "Claude Usage Monitorin varmuuskopioiden tietoikkuna: tila Tuore, varmuuskopioitu Obsidian-holvin tilannevedos, Claude Code, Claude Desktop, lisäkansio ja agenttien lokit tiedostomäärineen ja kokoineen, ei virheitä, sekä ajoitettu tehtävä",
- "lang.hint": "Tämä sivu on saatavilla myös suomeksi"
+ "lang.hint": "Tämä sivu on saatavilla myös suomeksi",
+ "dl.soon": "Tulossa pian",
+ "dls.btn_mac_soon": "macOS-versio – tulossa pian"
 }

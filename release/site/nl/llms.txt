@@ -17,7 +17,7 @@ Eén app voor Windows én Mac. Hij telt alles mee wat onder je abonnement valt �
 
 - Versie: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Binnenkort
 - https://claudeusagemonitor.com/nl/
 
 ## Al je Claude-gebruikslimieten. In één oogopslag.

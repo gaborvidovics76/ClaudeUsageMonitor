@@ -108,9 +108,12 @@
   function safeUrl(u) { return /^https:\/\/claudeusagemonitor\.com\//.test(u || '') ? u : null; }
 
   function fillDownloads() {
+    if (state.macMissing) html.classList.add('mac-soon');
+    var macSoon = html.classList.contains('mac-soon');      // site/config.json mac.status "soon": no macOS download
     [['win', state.win], ['mac', state.mac]].forEach(function (pair) {
       var os = pair[0], m = pair[1];
       if (!m) return;
+      if (os === 'mac' && macSoon) { $$('[data-dl="mac"]').forEach(function (a) { a.href = '#download'; a.removeAttribute('rel'); }); return; }
       var arch = m.arch === 'arm64' ? 'Apple Silicon' : (m.arch === 'x86_64' ? 'Intel' : (m.arch || ''));
       var map = { version: m.version, size: mb(m.bytes), date: day(m.last_updated), sha: m.sha256, requires: m.requires, arch: arch };
       Object.keys(map).forEach(function (k) { $$('[data-' + os + '="' + k + '"]').forEach(function (el) { if (map[k]) el.textContent = map[k]; }); });
@@ -120,7 +123,6 @@
         a.setAttribute('rel', 'nofollow');
       });
     });
-    if (state.macMissing) { $('#mac-meta').hidden = true; $('#mac-soon').hidden = false; $$('[data-dl="mac"]').forEach(function (a) { a.href = '#download'; }); }
   }
 
   function parseChangelog(md) {

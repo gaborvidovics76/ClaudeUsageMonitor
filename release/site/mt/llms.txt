@@ -17,7 +17,7 @@ App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd g
 
 - Verżjoni: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Ġej dalwaqt
 - https://claudeusagemonitor.com/mt/
 
 ## Il-limiti tal-użu kollha tiegħek ta' Claude. Ħarsa waħda.

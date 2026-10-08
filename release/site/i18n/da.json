@@ -169,7 +169,7 @@
  "dls.win_note": "Kræver ikke administratorrettigheder. Hvis Windows viser »Windows beskyttede din pc«: Flere oplysninger → Kør alligevel. Appen er open source, men ikke kodesigneret.",
  "dls.verify": "Verificér downloaden (SHA-256)",
  "dls.btn_mac": "Hent til macOS",
- "dls.mac_soon": "macOS-versionen er på vej – kig forbi igen snart.",
+ "dls.mac_soon": "Vi lægger sidste hånd på macOS-versionen – om ganske kort tid kan den hentes igen. Undskyld den korte ventetid, og tak for din tålmodighed! <a href=\"#subscribe\">Få en e-mail, når den er klar.</a>",
  "dls.mac_steps": "<li>Åbn zip-filen, og træk <b>ClaudeUsageMonitor</b> til <b>Programmer</b>.</li><li>Første start: <b>højreklik → Åbn</b> (appen er ikke notariseret af Apple).</li><li>Find ikonet i menulinjen. Færdig.</li>",
  "dls.auto": "Knapperne peger altid på den nyeste udgivelse – og når appen først er installeret, holder den sig selv opdateret.",
  "new.eyebrow": "Under aktiv udvikling",
@@ -318,5 +318,7 @@
  "bk.feat": "Backup-lamper – se, om der er taget backup af dit Claude-arbejde",
  "img.bk_panel": "Claude Usage Monitor-panel med tre grønne backup-lamper: OneDrive, Nextcloud og Obsidian, alle sikkerhedskopieret for et minut siden",
  "img.bk_details": "Claude Usage Monitors detaljevindue for backup: status Frisk, det sikkerhedskopierede øjebliksbillede af Obsidian-vaulten, Claude Code, Claude Desktop, en ekstra mappe og agentlogs med antal filer og størrelser, ingen fejl samt den planlagte opgave",
- "lang.hint": "Denne side findes også på dansk"
+ "lang.hint": "Denne side findes også på dansk",
+ "dl.soon": "Kommer snart",
+ "dls.btn_mac_soon": "macOS-version – kommer snart"
 }

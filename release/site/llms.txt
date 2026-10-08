@@ -49,7 +49,7 @@
 ## Download
 
 - [Latest Windows package](https://claudeusagemonitor.com/usage-api/dl.php?os=win): always redirects to the newest release
-- [Latest macOS package](https://claudeusagemonitor.com/usage-api/dl.php?os=mac): always redirects to the newest release
+- macOS package: coming soon - temporarily not available for download
 - [Release manifest (JSON)](https://claudeusagemonitor.com/manifest.json): version, size, SHA-256, release notes
 - [Changelog](https://claudeusagemonitor.com/CHANGELOG.md)
 - [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)

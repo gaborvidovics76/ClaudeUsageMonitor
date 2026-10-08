@@ -169,7 +169,7 @@
  "dls.win_note": "Práva správcu nie sú potrebné. Ak Windows zobrazí hlásenie „Systém Windows ochránil váš počítač“: Ďalšie informácie → Spustiť aj tak. Aplikácia má otvorený zdrojový kód, ale nie je digitálne podpísaná.",
  "dls.verify": "Over si stiahnutý súbor (SHA-256)",
  "dls.btn_mac": "Stiahnuť pre macOS",
- "dls.mac_soon": "Verzia pre macOS je na ceste – čoskoro sa sem znova pozri.",
+ "dls.mac_soon": "Na verzii pre macOS dolaďujeme posledné detaily – už čoskoro si ju budeš môcť znova stiahnuť. Prepáč za krátke čakanie a ďakujeme za trpezlivosť! <a href=\"#subscribe\">Nechaj si poslať e-mail, keď bude hotová.</a>",
  "dls.mac_steps": "<li>Otvor zip a presuň <b>ClaudeUsageMonitor</b> do priečinka <b>Aplikácie</b>.</li><li>Prvé spustenie: <b>pravé tlačidlo → Otvoriť</b> (aplikácia nie je notarizovaná spoločnosťou Apple).</li><li>Ikonu nájdeš v lište menu. Hotovo.</li>",
  "dls.auto": "Tieto tlačidlá vždy vedú na najnovšie vydanie – a po inštalácii sa aplikácia aktualizuje sama.",
  "new.eyebrow": "Aktívne vyvíjaný",
@@ -318,5 +318,7 @@
  "bk.feat": "Kontrolky záloh – uvidíš, či je tvoja práca s Claude zálohovaná",
  "img.bk_panel": "Panel Claude Usage Monitor s tromi zelenými kontrolkami záloh: OneDrive, Nextcloud a Obsidian, každá zálohovaná pred minútou",
  "img.bk_details": "Okno podrobností záloh Claude Usage Monitor: stav Aktuálna, zálohovaná snímka trezora Obsidian, Claude Code, Claude Desktop, ďalší priečinok a záznamy agentov s počtami súborov a veľkosťami, bez chýb, a naplánovaná úloha",
- "lang.hint": "Táto stránka je dostupná aj po slovensky"
+ "lang.hint": "Táto stránka je dostupná aj po slovensky",
+ "dl.soon": "Už čoskoro",
+ "dls.btn_mac_soon": "Verzia pre macOS – už čoskoro"
 }

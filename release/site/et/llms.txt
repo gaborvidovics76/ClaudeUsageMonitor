@@ -17,7 +17,7 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 
 - Versioon: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Varsti saadaval
 - https://claudeusagemonitor.com/et/
 
 ## Kõik Claude'i kasutuslimiidid. Ühe pilguga.

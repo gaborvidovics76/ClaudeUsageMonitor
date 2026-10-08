@@ -17,7 +17,7 @@ Claude Usage Monitor е безплатен уиджет с отворен код
 
 - Версия: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Съвсем скоро
 - https://claudeusagemonitor.com/bg/
 
 ## Всичките ти лимити в Claude. С един поглед.

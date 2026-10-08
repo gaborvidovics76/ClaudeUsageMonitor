@@ -17,7 +17,7 @@ Windows と Mac の両方で使える1つのアプリです。claude.ai、Claude
 
 - バージョン: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: 近日公開
 - https://claudeusagemonitor.com/ja/
 
 ## Claude の使用制限を、すべてひと目で。

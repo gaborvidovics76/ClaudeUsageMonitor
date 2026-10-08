@@ -17,7 +17,7 @@ En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnem
 
 - Version: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Kommer snart
 - https://claudeusagemonitor.com/sv/
 
 ## Alla dina användningsgränser i Claude. En blick.

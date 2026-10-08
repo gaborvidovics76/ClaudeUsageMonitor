@@ -17,7 +17,7 @@ Claude Usage Monitor 是一款免費、開放原始碼的桌面小工具，適�
 
 - 版本: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: 即將推出
 - https://claudeusagemonitor.com/zh-tw/
 
 ## 所有 Claude 使用上限，一眼看清。

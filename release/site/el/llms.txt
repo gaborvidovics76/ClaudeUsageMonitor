@@ -17,7 +17,7 @@
 
 - Έκδοση: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Έρχεται σύντομα
 - https://claudeusagemonitor.com/el/
 
 ## Όλα τα όρια χρήσης του Claude. Με μία ματιά.

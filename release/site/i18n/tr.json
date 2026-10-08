@@ -169,7 +169,7 @@
  "dls.win_note": "Yönetici hakları gerekmez. Windows “Windows kişisel bilgisayarınızı korudu” uyarısını gösterirse: Ek bilgi → Yine de çalıştır. Uygulama açık kaynaklıdır ama kod imzası yoktur.",
  "dls.verify": "İndirmeyi doğrula (SHA-256)",
  "dls.btn_mac": "macOS için indir",
- "dls.mac_soon": "macOS sürümü yolda – yakında tekrar uğra.",
+ "dls.mac_soon": "macOS sürümüne son rötuşları yapıyoruz – çok yakında yeniden indirilebilecek. Kısa bekleme için kusura bakma, sabrın için teşekkürler! <a href=\"#subscribe\">Hazır olunca e-posta al.</a>",
  "dls.mac_steps": "<li>Zip dosyasını aç ve <b>ClaudeUsageMonitor</b> uygulamasını <b>Uygulamalar</b> klasörüne sürükle.</li><li>İlk açılış: <b>sağ tık → Aç</b> (uygulama Apple tarafından onaylanmamıştır).</li><li>Menü çubuğundaki simgeyi bul. Hepsi bu.</li>",
  "dls.auto": "Bu düğmeler her zaman en yeni sürüme götürür – kurduktan sonra da uygulama kendini güncel tutar.",
  "new.eyebrow": "Aktif olarak geliştiriliyor",
@@ -318,5 +318,7 @@
  "bk.feat": "Yedek lambaları – Claude çalışmanın yedeklenip yedeklenmediğini gör",
  "img.bk_panel": "Üç yeşil yedek lambalı Claude Usage Monitor paneli: OneDrive, Nextcloud ve Obsidian, her biri bir dakika önce yedeklenmiş",
  "img.bk_details": "Claude Usage Monitor yedek ayrıntı penceresi: Güncel durumu, yedeklenmiş Obsidian kasası anlık görüntüsü, Claude Code, Claude Desktop, bir ek klasör ve dosya sayıları ile boyutlarıyla agent günlükleri, hata yok, ve zamanlanmış görev",
- "lang.hint": "Bu sayfa Türkçe olarak da mevcut"
+ "lang.hint": "Bu sayfa Türkçe olarak da mevcut",
+ "dl.soon": "Çok yakında",
+ "dls.btn_mac_soon": "macOS sürümü – çok yakında"
 }

@@ -48,6 +48,12 @@ if [ "$PULL" = 1 ] && [ -d .git ]; then
     fi
 fi
 
+# Publishing can be paused by the project owner: while macos/RELEASE_PAUSED exists nothing is uploaded.
+# Building and packaging (--no-upload) still work, for testing.
+if [ -f macos/RELEASE_PAUSED ] && [ "$UPLOAD" = 1 ]; then
+    die "macOS publishing is paused for now (macos/RELEASE_PAUSED) - nothing was uploaded. Ask Gabor before publishing; --no-upload still builds and packages."
+fi
+
 [ "$BUILD" = 1 ] && ./macos/build.sh
 # shellcheck disable=SC1091
 source .venv-macos/bin/activate

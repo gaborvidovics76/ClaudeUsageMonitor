@@ -17,7 +17,7 @@ Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan
 
 - Versio: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Tulossa pian
 - https://claudeusagemonitor.com/fi/
 
 ## Kaikki Clauden käyttörajasi. Yhdellä silmäyksellä.

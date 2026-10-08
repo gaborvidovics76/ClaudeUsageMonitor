@@ -17,7 +17,7 @@ Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiu
 
 - Versija: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Jau netrukus
 - https://claudeusagemonitor.com/lt/
 
 ## Visi jūsų Claude naudojimo limitai. Vienu žvilgsniu.

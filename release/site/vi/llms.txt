@@ -17,7 +17,7 @@ Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được t�
 
 - Phiên bản: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Sắp ra mắt
 - https://claudeusagemonitor.com/vi/
 
 ## Mọi giới hạn sử dụng Claude của bạn. Chỉ một cái liếc.

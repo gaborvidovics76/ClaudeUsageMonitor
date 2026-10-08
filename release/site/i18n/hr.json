@@ -169,7 +169,7 @@
  "dls.win_note": "Administratorska prava nisu potrebna. Ako Windows prikaže poruku „Windows je zaštitio vaše računalo“: Više informacija → Svejedno pokreni. Aplikacija je otvorenog kôda, ali nije digitalno potpisana.",
  "dls.verify": "Provjerite preuzetu datoteku (SHA-256)",
  "dls.btn_mac": "Preuzmite za macOS",
- "dls.mac_soon": "Verzija za macOS je na putu – navratite uskoro.",
+ "dls.mac_soon": "Na verziji za macOS dovršavamo posljednje detalje – uskoro će ponovno biti dostupna za preuzimanje. Ispričavamo se zbog kratkog čekanja i hvala vam na strpljenju! <a href=\"#subscribe\">Primite e-poruku kad bude spremna.</a>",
  "dls.mac_steps": "<li>Otvorite zip-datoteku i povucite <b>ClaudeUsageMonitor</b> u mapu <b>Aplikacije</b>.</li><li>Prvo pokretanje: <b>desni klik → Otvori</b> (Apple nije ovjerio aplikaciju).</li><li>Potražite ikonu u traci izbornika. Gotovo.</li>",
  "dls.auto": "Ovi gumbi uvijek vode na najnovije izdanje – a nakon instalacije aplikacija se sama ažurira.",
  "new.eyebrow": "Aktivan razvoj",
@@ -318,5 +318,7 @@
  "bk.feat": "Lampice sigurnosnih kopija – provjerite je li vaš rad s Claudeom sigurnosno kopiran",
  "img.bk_panel": "Panel aplikacije Claude Usage Monitor s tri zelene lampice sigurnosnih kopija: OneDrive, Nextcloud i Obsidian, sve kopirane prije jedne minute",
  "img.bk_details": "Prozor pojedinosti o sigurnosnim kopijama u aplikaciji Claude Usage Monitor: stanje Svježa, kopirana snimka Obsidian trezora, Claude Code, Claude Desktop, dodatna mapa i zapisnici agenata s brojem datoteka i veličinama, bez pogrešaka, te zakazani zadatak",
- "lang.hint": "Ova je stranica dostupna i na hrvatskom"
+ "lang.hint": "Ova je stranica dostupna i na hrvatskom",
+ "dl.soon": "Uskoro dostupno",
+ "dls.btn_mac_soon": "Verzija za macOS – uskoro"
 }

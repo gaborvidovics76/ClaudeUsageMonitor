@@ -17,7 +17,7 @@ Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tv
 
 - Verzia: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Už čoskoro
 - https://claudeusagemonitor.com/sk/
 
 ## Všetky tvoje limity využitia Claude. Na jeden pohľad.

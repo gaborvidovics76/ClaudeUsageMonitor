@@ -17,7 +17,7 @@ En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.
 
 - Različica: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Kmalu na voljo
 - https://claudeusagemonitor.com/sl/
 
 ## Vse omejitve porabe v Claudu. Na en pogled.

@@ -49,7 +49,7 @@
 ## Download
 
 - [Latest Windows package](https://claudeusagemonitor.com/usage-api/dl.php?os=win): always redirects to the newest release
-- [Latest macOS package](https://claudeusagemonitor.com/usage-api/dl.php?os=mac): always redirects to the newest release
+- macOS package: coming soon - temporarily not available for download
 - [Release manifest (JSON)](https://claudeusagemonitor.com/manifest.json): version, size, SHA-256, release notes
 - [Changelog](https://claudeusagemonitor.com/CHANGELOG.md)
 - [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)
@@ -282,13 +282,6 @@ Price | Free, open source (MIT) | Included in your plan | Mostly free |
 - Answer two questions – Enter accepts the recommended answer. Done.
 
 No admin rights needed. If Windows shows “Windows protected your PC”: More info → Run anyway. The app is open source but not code-signed.
-
-
-## Install on macOS
-
-- Open the zip and drag **ClaudeUsageMonitor** to **Applications**.
-- First start: **right-click → Open** (the app is not notarised by Apple).
-- Look for the icon in the menu bar. Done.
 
 
 ## Releases

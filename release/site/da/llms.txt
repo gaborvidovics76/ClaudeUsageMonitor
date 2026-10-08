@@ -17,7 +17,7 @@ Claude Usage Monitor er en gratis open source-widget til Windows 10/11 og macOS,
 
 - Version: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Kommer snart
 - https://claudeusagemonitor.com/da/
 
 ## Alle dine Claude-forbrugsgrænser. Ét blik.

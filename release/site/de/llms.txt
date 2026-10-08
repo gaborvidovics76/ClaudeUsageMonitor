@@ -17,7 +17,7 @@ Eine App für Windows und Mac. Sie erfasst alles, was auf deinen Plan angerechne
 
 - Version: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Bald verfügbar
 - https://claudeusagemonitor.com/de/
 
 ## Alle deine Claude-Nutzungslimits. Auf einen Blick.

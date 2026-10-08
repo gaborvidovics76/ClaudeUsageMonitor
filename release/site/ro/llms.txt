@@ -17,7 +17,7 @@ O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în 
 
 - Versiunea: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: În curând
 - https://claudeusagemonitor.com/ro/
 
 ## Toate limitele tale de utilizare Claude. Dintr-o privire.

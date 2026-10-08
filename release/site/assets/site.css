@@ -487,3 +487,16 @@ html:lang(ko){word-break:keep-all;overflow-wrap:anywhere}
 .reviews__sum{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--dim);margin-bottom:6px}.reviews__sum b{color:var(--ink)}.reviews__sum .quote__stars{display:inline;margin:0}
 .reviews .quotes{margin-top:18px}.reviews__how{margin-top:16px;max-width:80ch}
 @media (max-width:720px){.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
+
+/* ---------- macOS download "coming soon" (site/config.json -> mac.status = "soon"; the build puts .mac-soon on <html>) ---------- */
+html:not(.mac-soon) .soon-only{display:none!important}
+html.mac-soon .soon-hide{display:none!important}
+html.mac-soon .osbtn--mac{opacity:.78;cursor:default}
+html.mac-soon .osbtn--mac:hover{transform:none;box-shadow:none;border-color:var(--line2)}
+html.mac-soon.os-mac .osbtn--mac{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.03));color:var(--ink);border-color:var(--line2);box-shadow:none}
+html.mac-soon.os-mac .osbtn--mac small{color:var(--dim)}
+html.mac-soon .osbtn--mac .osbtn__tag{display:none!important}
+html.mac-soon .dlcard--mac .btn{opacity:.7;cursor:default;box-shadow:none}
+.macsoon{margin-top:14px;padding:14px 16px;border-radius:var(--r-sm);border:1px solid color-mix(in oklab,var(--acc) 40%,transparent);background:color-mix(in oklab,var(--acc) 8%,transparent);color:var(--ink);line-height:1.55}
+.macsoon a{color:var(--acc);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+html.mac-soon .dlcard--mac .btn svg{display:none}

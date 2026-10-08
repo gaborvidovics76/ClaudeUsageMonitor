@@ -17,7 +17,7 @@ Jedna aplikace pro Windows i Mac. Pokrývá všechno, co se počítá do tvého 
 
 - Verze: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Už brzy
 - https://claudeusagemonitor.com/cs/
 
 ## Všechny tvoje limity využití Claude. Jediným pohledem.

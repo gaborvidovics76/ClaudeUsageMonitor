@@ -17,7 +17,7 @@ Une seule application pour Windows et pour Mac. Elle couvre tout ce qui compte d
 
 - Version: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: Bientôt disponible
 - https://claudeusagemonitor.com/fr/
 
 ## Toutes vos limites d'utilisation Claude. En un coup d'œil.

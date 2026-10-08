@@ -17,7 +17,7 @@ Windows와 Mac 모두 앱 하나로 써요. claude.ai, Claude Desktop, Claude Co
 
 - 버전: 2.7.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
-- macOS: https://claudeusagemonitor.com/usage-api/dl.php?os=mac
+- macOS: 곧 출시
 - https://claudeusagemonitor.com/ko/
 
 ## Claude 사용 한도를 전부, 한눈에.
