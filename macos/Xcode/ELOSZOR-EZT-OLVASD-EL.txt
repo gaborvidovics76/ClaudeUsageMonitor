@@ -1,0 +1,45 @@
+CLAUDE USAGE MONITOR - macOS / Mac App Store kit (Xcode)
+========================================================
+
+Ez a csomag a natív macOS appot tartalmazza Xcode-projektként, és mindent, ami a
+Mac App Store-ba beadáshoz kell. Gábor Windowson készítette, Mac nélkül - a fordítást
+a GitHub Macje már ellenőrizte (BUILD SUCCEEDED), a futtatás és a beadás a tiéd.
+
+AJÁNLOTT ÚT: ne a zipből dolgozz, hanem gitből (mindig a legfrissebb, és a javításaid
+Pull Requestként visszajutnak):
+
+    git clone https://github.com/gaborvidovics76/ClaudeUsageMonitor.git
+    cd ClaudeUsageMonitor
+    open macos/Xcode/ClaudeUsageMonitor.xcodeproj
+
+A zip ugyanezt tartalmazza, ha nincs git: csomagold ki, és nyisd meg
+    ClaudeUsageMonitor/macos/Xcode/ClaudeUsageMonitor.xcodeproj
+
+MIT OLVASS EL, EBBEN A SORRENDBEN
+  1. macos/Xcode/README.md                  - mi hol van, fordítás, verziók, a CLAUDE_SIGN_IN kapcsoló
+  2. macos/Xcode/docs/APP-STORE-BEADAS.md   - LÉPÉSRŐL LÉPÉSRE: fiók, aláírás, teszt Macen,
+                                              App Store Connect, metaadatok, képernyőképek, feltöltés
+  3. macos/Xcode/docs/MEGFELELES.md         - mit követel az Apple, mi a kockázat, mi a B-terv
+  4. macos/Xcode/docs/KOLLEGA-PROMPT-XCODE.md - bemásolható prompt, ha Claude Code-dal dolgozol
+  (angolul: macos/Xcode/docs/START-HERE-XCODE.md)
+
+AMI KELL HOZZÁ
+  - Mac, macOS 15+ (Xcode 26) vagy macOS 26.6+ (Xcode 27)
+  - Xcode 26 vagy újabb a Mac App Store-ból
+  - Apple Developer Program tagság (fizetős) - kérdezd Gábort, melyik fiók
+
+AZ EGYETLEN KÖTELEZŐ KÉZI BEÁLLÍTÁS AZ XCODE-BAN
+  Target "ClaudeUsageMonitor" -> Signing & Capabilities -> Team: a saját csapatod.
+  (A DEVELOPMENT_TEAM szándékosan üres a projektben. Semmi mást ne kapcsolj át.)
+
+ELSŐ INDÍTÁS
+  Az app menüsor-ikon + lebegő panel. Első indításkor a Beállítások ablak nyílik meg:
+  válassz adatforrást - "Demo data" fiók nélkül is mindent megmutat; a "Local log"-hoz
+  engedélyezd a Claude Desktop naplójának olvasását (Grant access...).
+
+HA ELAKADSZ
+  Küldd Gábornak az Xcode hibaüzenetét szó szerint (Report navigator, Cmd+9), vagy az
+  App Store Connect / Resolution Center szövegét. A GitHub "Xcode build" Actions-futás
+  mutatja, hogy a forrás a GitHub Macjén lefordul - ha nálad nem, a különbség a gép.
+
+Verzió: lásd MARKETING_VERSION a project.pbxproj-ban (= a Windows-verzió).
