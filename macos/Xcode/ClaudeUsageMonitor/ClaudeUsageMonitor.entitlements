@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Mandatory for the Mac App Store. -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- Outgoing HTTPS: claude.ai usage (when signed in) and the "message to the developer" form. -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<!-- Read-only access to the files the user chooses in the Open panel (Claude Desktop's usage log,
+	     Claude Code's folder); kept across launches with security-scoped bookmarks. -->
+	<key>com.apple.security.files.user-selected.read-only</key>
+	<true/>
+</dict>
+</plist>

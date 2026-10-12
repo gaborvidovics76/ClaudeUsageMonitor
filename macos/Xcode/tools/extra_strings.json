@@ -1,0 +1,111 @@
+{
+  "_comment": "Keys that exist only in the macOS / App Store app. Languages not listed fall back to English (see gen_xcstrings.py). Keep the {} placeholders.",
+
+  "set.grant_access_btn": {
+    "en": "Grant access…", "hu": "Hozzáférés engedélyezése…", "de": "Zugriff erlauben…", "fr": "Autoriser l'accès…",
+    "es-ES": "Permitir acceso…", "es-419": "Permitir acceso…", "it": "Consenti accesso…", "pt-BR": "Permitir acesso…",
+    "pt-PT": "Permitir acesso…", "pl": "Zezwól na dostęp…", "nl": "Toegang verlenen…", "ru": "Разрешить доступ…",
+    "cs": "Povolit přístup…", "tr": "Erişime izin ver…"
+  },
+  "set.dock": {
+    "en": "Show icon in the Dock", "hu": "Ikon a Dockban", "de": "Symbol im Dock anzeigen", "fr": "Icône dans le Dock",
+    "es-ES": "Icono en el Dock", "es-419": "Ícono en el Dock", "it": "Icona nel Dock", "pt-BR": "Ícone no Dock",
+    "pt-PT": "Ícone na Dock", "pl": "Ikona w Docku", "nl": "Icoon in het Dock", "ru": "Значок в Dock",
+    "cs": "Ikona v Docku", "tr": "Dock'ta simge"
+  },
+  "set.tip_mac": {
+    "en": "Tip: drag the panel with the mouse, ⌃ + scroll resizes,\nright-click = menu, double-click = history.",
+    "hu": "Tipp: a panelt egérrel húzhatod, ⌃ + görgetés = átméretezés,\njobb gomb = menü, dupla kattintás = előzmények.",
+    "de": "Tipp: Panel mit der Maus ziehen, ⌃ + Scrollen ändert die Größe,\nRechtsklick = Menü, Doppelklick = Verlauf.",
+    "fr": "Astuce : déplacez le panneau à la souris, ⌃ + molette = taille,\nclic droit = menu, double-clic = historique."
+  },
+  "set.claude_code_hint_mac": {
+    "en": "macOS keeps this app in a sandbox: choose Claude Code's folder (~/.claude) once, so the app may read its logs. Nothing else on your disk is touched.",
+    "hu": "A macOS homokozóban futtatja ezt az appot: válaszd ki egyszer a Claude Code mappáját (~/.claude), hogy az app olvashassa a naplóit. A lemez többi részéhez nem nyúl.",
+    "de": "macOS führt diese App in einer Sandbox aus: Wähle einmal den Ordner von Claude Code (~/.claude), damit die App seine Protokolle lesen darf. Sonst wird nichts auf der Festplatte angefasst.",
+    "fr": "macOS exécute cette app dans un bac à sable : choisissez une fois le dossier de Claude Code (~/.claude) pour que l'app puisse lire ses journaux. Rien d'autre n'est touché."
+  },
+  "set.source_demo": {
+    "en": "Demo data – no account needed", "hu": "Demóadatok – nem kell fiók", "de": "Demodaten – kein Konto nötig",
+    "fr": "Données de démo – sans compte", "es-ES": "Datos de demostración – sin cuenta", "es-419": "Datos de demostración – sin cuenta",
+    "it": "Dati demo – senza account", "pt-BR": "Dados de demonstração – sem conta", "pt-PT": "Dados de demonstração – sem conta",
+    "pl": "Dane demo – bez konta", "nl": "Demogegevens – geen account nodig", "ru": "Демо-данные – без аккаунта",
+    "cs": "Demo data – bez účtu", "tr": "Demo verileri – hesap gerekmez"
+  },
+  "source.demo": {
+    "en": "Demo data", "hu": "Demóadatok", "de": "Demodaten", "fr": "Données de démo", "es-ES": "Datos de demostración",
+    "es-419": "Datos de demostración", "it": "Dati demo", "pt-BR": "Dados de demonstração", "pt-PT": "Dados de demonstração",
+    "pl": "Dane demo", "nl": "Demogegevens", "ru": "Демо-данные", "cs": "Demo data", "tr": "Demo verileri"
+  },
+  "set.datafile_hint_mac": {
+    "en": "macOS keeps this app in a sandbox: choose Claude Desktop's usage log once (Library → Application Support → Claude → plan-usage-history.json), so the app may read it.",
+    "hu": "A macOS homokozóban futtatja ezt az appot: válaszd ki egyszer a Claude Desktop használati naplóját (Library → Application Support → Claude → plan-usage-history.json), hogy az app olvashassa.",
+    "de": "macOS führt diese App in einer Sandbox aus: Wähle einmal das Nutzungsprotokoll von Claude Desktop (Library → Application Support → Claude → plan-usage-history.json), damit die App es lesen darf.",
+    "fr": "macOS exécute cette app dans un bac à sable : choisissez une fois le journal d'utilisation de Claude Desktop (Library → Application Support → Claude → plan-usage-history.json) pour que l'app puisse le lire."
+  },
+  "set.demo_hint": {
+    "en": "Demo data: generated sample figures, so the panel can be tried without a Claude account or the Claude desktop app. Nothing is fetched or sent.",
+    "hu": "Demóadatok: generált mintaszámok, hogy a panel Claude-fiók és Claude asztali app nélkül is kipróbálható legyen. Semmi nem töltődik le és nem megy el sehova.",
+    "de": "Demodaten: erzeugte Beispielwerte, damit das Panel ohne Claude-Konto und ohne die Claude-Desktop-App ausprobiert werden kann. Es wird nichts geladen oder gesendet.",
+    "fr": "Données de démo : des valeurs d'exemple générées, pour essayer le panneau sans compte Claude ni l'app Claude Desktop. Rien n'est téléchargé ni envoyé."
+  },
+  "set.about_mac": {
+    "en": "{}\nNo telemetry. It only asks Anthropic for your own usage. Updates arrive through the App Store.",
+    "hu": "{}\nNincs telemetria. Csak a saját használatodat kérdezi le az Anthropictól. A frissítések az App Store-on át érkeznek.",
+    "de": "{}\nKeine Telemetrie. Es fragt nur deine eigene Nutzung bei Anthropic ab. Updates kommen über den App Store.",
+    "fr": "{}\nAucune télémétrie. L'app ne demande à Anthropic que votre propre utilisation. Les mises à jour arrivent par l'App Store."
+  },
+  "set.rate_app_store": {
+    "en": "Rate on the App Store…", "hu": "Értékelés az App Store-ban…", "de": "Im App Store bewerten…", "fr": "Noter sur l'App Store…",
+    "es-ES": "Valorar en el App Store…", "es-419": "Calificar en el App Store…", "it": "Valuta sull'App Store…",
+    "pt-BR": "Avaliar na App Store…", "pt-PT": "Avaliar na App Store…", "pl": "Oceń w App Store…", "nl": "Beoordelen in de App Store…",
+    "ru": "Оценить в App Store…", "cs": "Ohodnotit v App Storu…", "tr": "App Store'da değerlendir…"
+  },
+  "err.no_access_mac": {
+    "en": "No access to Claude Desktop's usage log yet.\nRight-click → Allow access to the log… (or use the demo data)",
+    "hu": "Még nincs hozzáférés a Claude Desktop használati naplójához.\nJobb gomb → Napló elérésének engedélyezése… (vagy demóadatok)",
+    "de": "Noch kein Zugriff auf das Nutzungsprotokoll von Claude Desktop.\nRechtsklick → Zugriff auf das Protokoll erlauben… (oder Demodaten)",
+    "fr": "Pas encore d'accès au journal d'utilisation de Claude Desktop.\nClic droit → Autoriser l'accès au journal… (ou données de démo)",
+    "es-ES": "Aún no hay acceso al registro de uso de Claude Desktop.\nClic derecho → Permitir acceso al registro… (o datos de demostración)",
+    "es-419": "Aún no hay acceso al registro de uso de Claude Desktop.\nClic derecho → Permitir acceso al registro… (o datos de demostración)",
+    "it": "Nessun accesso al registro d'uso di Claude Desktop.\nClic destro → Consenti l'accesso al registro… (o dati demo)",
+    "pt-BR": "Ainda sem acesso ao registro de uso do Claude Desktop.\nClique direito → Permitir acesso ao registro… (ou dados de demonstração)",
+    "pt-PT": "Ainda sem acesso ao registo de utilização do Claude Desktop.\nClique direito → Permitir acesso ao registo… (ou dados de demonstração)",
+    "pl": "Brak dostępu do dziennika użycia Claude Desktop.\nPrawy przycisk → Zezwól na dostęp do dziennika… (lub dane demo)",
+    "nl": "Nog geen toegang tot het gebruikslogboek van Claude Desktop.\nRechtsklik → Toegang tot het logboek verlenen… (of demogegevens)",
+    "ru": "Нет доступа к журналу использования Claude Desktop.\nПравый клик → Разрешить доступ к журналу… (или демо-данные)",
+    "cs": "Zatím není přístup k protokolu využití Claude Desktop.\nPravé tlačítko → Povolit přístup k protokolu… (nebo demo data)",
+    "tr": "Claude Desktop kullanım günlüğüne henüz erişim yok.\nSağ tık → Günlüğe erişime izin ver… (veya demo verileri)"
+  },
+  "menu.grant_access": {
+    "en": "Allow access to Claude Desktop's log…", "hu": "Claude Desktop naplójának elérése…", "de": "Zugriff auf das Claude-Desktop-Protokoll erlauben…",
+    "fr": "Autoriser l'accès au journal de Claude Desktop…", "es-ES": "Permitir acceso al registro de Claude Desktop…",
+    "es-419": "Permitir acceso al registro de Claude Desktop…", "it": "Consenti l'accesso al registro di Claude Desktop…",
+    "pt-BR": "Permitir acesso ao registro do Claude Desktop…", "pt-PT": "Permitir acesso ao registo do Claude Desktop…",
+    "pl": "Zezwól na dostęp do dziennika Claude Desktop…", "nl": "Toegang tot het Claude Desktop-logboek verlenen…",
+    "ru": "Разрешить доступ к журналу Claude Desktop…", "cs": "Povolit přístup k protokolu Claude Desktop…", "tr": "Claude Desktop günlüğüne erişime izin ver…"
+  },
+  "help.updates_mac_h": {
+    "en": "Updates", "hu": "Frissítések", "de": "Updates", "fr": "Mises à jour", "es-ES": "Actualizaciones", "es-419": "Actualizaciones",
+    "it": "Aggiornamenti", "pt-BR": "Atualizações", "pt-PT": "Atualizações", "pl": "Aktualizacje", "nl": "Updates", "ru": "Обновления",
+    "cs": "Aktualizace", "tr": "Güncellemeler"
+  },
+  "help.updates_mac": {
+    "en": "This copy comes from the Mac App Store and is updated there (App Store → Updates). New versions and release notes: {site}",
+    "hu": "Ez a példány a Mac App Store-ból származik, és ott frissül (App Store → Frissítések). Új verziók és újdonságok: {site}",
+    "de": "Diese Kopie stammt aus dem Mac App Store und wird dort aktualisiert (App Store → Updates). Neue Versionen und Änderungen: {site}",
+    "fr": "Cette copie vient du Mac App Store et s'y met à jour (App Store → Mises à jour). Nouvelles versions et notes : {site}"
+  },
+  "help.sandbox_mac_h": {
+    "en": "Files on this Mac", "hu": "Fájlok ezen a Macen", "de": "Dateien auf diesem Mac", "fr": "Fichiers sur ce Mac",
+    "es-ES": "Archivos en este Mac", "es-419": "Archivos en esta Mac", "it": "File su questo Mac", "pt-BR": "Arquivos neste Mac",
+    "pt-PT": "Ficheiros neste Mac", "pl": "Pliki na tym Macu", "nl": "Bestanden op deze Mac", "ru": "Файлы на этом Mac",
+    "cs": "Soubory na tomto Macu", "tr": "Bu Mac'teki dosyalar"
+  },
+  "help.sandbox_mac": {
+    "en": "The app runs in Apple's sandbox: it only reads the files you have chosen in Settings (Claude Desktop's usage log and Claude Code's folder). Choose another file at any time, or restore the defaults to forget them.",
+    "hu": "Az app az Apple homokozójában fut: csak azokat a fájlokat olvassa, amelyeket a Beállításokban kiválasztottál (a Claude Desktop használati naplója és a Claude Code mappája). Bármikor választhatsz másik fájlt, vagy az alapértékek visszaállításával elfelejtheted őket.",
+    "de": "Die App läuft in Apples Sandbox: Sie liest nur die Dateien, die du in den Einstellungen ausgewählt hast (das Nutzungsprotokoll von Claude Desktop und den Ordner von Claude Code). Du kannst jederzeit eine andere Datei wählen oder die Standardwerte wiederherstellen.",
+    "fr": "L'app s'exécute dans le bac à sable d'Apple : elle ne lit que les fichiers choisis dans les Réglages (le journal d'utilisation de Claude Desktop et le dossier de Claude Code). Choisissez un autre fichier à tout moment, ou restaurez les réglages par défaut pour les oublier."
+  }
+}

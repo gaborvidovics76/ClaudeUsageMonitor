@@ -1,0 +1,50 @@
+# Compiles the native macOS (Xcode) app on GitHub's own Mac - a compile check that needs no Mac at
+# hand. Runs on every push that touches macos/Xcode, and by hand (Actions > "Xcode build").
+# It builds unsigned: signing, archiving and the App Store upload stay on the colleague's Mac.
+name: Xcode build
+
+on:
+  push:
+    paths:
+      - "macos/Xcode/**"
+      - ".github/workflows/xcode-build.yml"
+  pull_request:
+    paths:
+      - "macos/Xcode/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-26          # Xcode 26 (Apple Silicon)
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      - name: Build (Release, unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild -project macos/Xcode/ClaudeUsageMonitor.xcodeproj \
+                     -scheme ClaudeUsageMonitor -configuration Release \
+                     -derivedDataPath build-xcode \
+                     CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+                     build 2>&1 | tee build-xcode.log | grep -E "error:|warning:|BUILD|Compiling|Ld " || true
+          test -d build-xcode/Build/Products/Release/ClaudeUsageMonitor.app
+      - name: Check the bundle (localisations, privacy manifest, Info.plist)
+        run: |
+          APP=build-xcode/Build/Products/Release/ClaudeUsageMonitor.app
+          echo "lproj folders:"; ls "$APP/Contents/Resources" | grep -c '\.lproj$'
+          test -f "$APP/Contents/Resources/PrivacyInfo.xcprivacy"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" -c "Print :CFBundleVersion" -c "Print :LSUIElement" "$APP/Contents/Info.plist"
+      - name: Package (zip, for a look at the result)
+        run: ditto -c -k --keepParent build-xcode/Build/Products/Release/ClaudeUsageMonitor.app ClaudeUsageMonitor-unsigned.zip
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ClaudeUsageMonitor-xcode
+          path: |
+            ClaudeUsageMonitor-unsigned.zip
+            build-xcode.log
+          if-no-files-found: warn
