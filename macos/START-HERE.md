@@ -11,6 +11,10 @@ the source is shared, everything macOS-specific lives in this `macos/` folder.
 > [UJ-DOMAIN-KOLLEGA.md](UJ-DOMAIN-KOLLEGA.md) (Hungarian); a ready-to-paste prompt for Claude Code
 > is in [KOLLEGA-PROMPT.md](KOLLEGA-PROMPT.md) (has an English version too).
 
+> **2026-10-12 – Mac App Store.** The native Xcode version for the App Store lives in `macos/Xcode/`:
+> [Xcode/docs/START-HERE-XCODE.md](Xcode/docs/START-HERE-XCODE.md). What follows is the PyInstaller
+> package for the website download, not the App Store build.
+
 ## Build – one command
 
 ```bash

@@ -330,7 +330,7 @@ final class PanelView: NSView {
         if !fbRect.isEmpty { addToolTip(fbRect, owner: self, userData: nil) }
     }
 
-    override func view(_ view: NSView, stringForToolTip tag: NSView.ToolTipTag, point: NSPoint, userData data: UnsafeMutableRawPointer?) -> String {
+    @objc func view(_ view: NSView, stringForToolTip tag: NSView.ToolTipTag, point: NSPoint, userData data: UnsafeMutableRawPointer?) -> String {
         if fbRect.contains(point) { return tr("fb.title") }
         if badgeRect.contains(point) { return profileTooltip() }
         if ageRect.contains(point) { return statusTooltip() }

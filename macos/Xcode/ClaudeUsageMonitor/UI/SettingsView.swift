@@ -201,7 +201,8 @@ private struct DetailsTab: View {
                 HStack { Spacer().frame(width: 150); HintText(tr("set.claude_code_hint_mac")) }
 
                 SectionLabel(rows.isEmpty ? tr("set.rows_none") : tr("set.rows_available"))
-                ForEach(rows, id: \.0) { rid, label in
+                ForEach(rows, id: \.0) { pair in
+                    let (rid, label) = pair
                     HStack {
                         Spacer().frame(width: 150)
                         Toggle(label, isOn: Binding(get: { !s.isHidden(rid) }, set: { s.setHidden(rid, !$0) })).toggleStyle(.checkbox)
@@ -260,8 +261,8 @@ private struct DataTab: View {
                 Row(tr("set.profile")) {
                     Picker("", selection: $s.org) {
                         Text(tr("set.profile_auto")).tag("")
-                        ForEach(Array(actions.orgs().enumerated()), id: \.element) { i, org in
-                            Text(tr("set.profile_n", i + 1, String(org.suffix(8)))).tag(org)
+                        ForEach(Array(actions.orgs().enumerated()), id: \.element) { item in
+                            Text(tr("set.profile_n", item.offset + 1, String(item.element.suffix(8)))).tag(item.element)
                         }
                     }.labelsHidden().frame(width: 300)
                 }

@@ -519,7 +519,7 @@ final class MonitorController {
 
     func showHistory() {
         if historyModel == nil {
-            historyModel = HistoryModel(settings: settings) { [weak self] in self?.reader ?? DemoSource() }
+            historyModel = HistoryModel(settings: settings) { [weak self] in self?.reader ?? (DemoSource() as UsageSource) }
         }
         if historyWindow == nil {
             let model = historyModel!, s = settings

@@ -19,7 +19,9 @@ final class SignInModel: ObservableObject {
     init() {
         let (v, challenge) = OAuth.newPKCE()
         verifier = v
-        (url, state) = OAuth.buildAuthorize(verifier: v, challenge: challenge)
+        let (u, st) = OAuth.buildAuthorize(verifier: v, challenge: challenge)
+        url = u
+        state = st
     }
 
     func openBrowser() { openURL(url) }

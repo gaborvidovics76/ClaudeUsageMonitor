@@ -45,3 +45,11 @@ macos-doctor-report.txt
 # ...but the hand-written macOS spec belongs to the source
 !macos/*.spec
 build-shots/
+
+# Xcode (macos/Xcode)
+/build-xcode/
+build-xcode.log
+xcuserdata/
+*.xcuserstate
+DerivedData/
+*.xcworkspace/xcuserdata/

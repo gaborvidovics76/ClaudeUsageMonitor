@@ -11,6 +11,11 @@ a program forrása közös, a macOS-es részek ebben a `macos/` mappában vannak
 > akadt meg tőle a Claude Code: **[UJ-DOMAIN-KOLLEGA.md](UJ-DOMAIN-KOLLEGA.md)**.
 > Bemásolható prompt a Claude Code-hoz: [KOLLEGA-PROMPT.md](KOLLEGA-PROMPT.md).
 
+> [!important] 2026-10-12 – Mac App Store
+> Az App Store-ba szánt **natív Xcode-változat** a `macos/Xcode/` mappában van, saját leírással:
+> [Xcode/README.md](Xcode/README.md) · beadás lépésről lépésre: [Xcode/docs/APP-STORE-BEADAS.md](Xcode/docs/APP-STORE-BEADAS.md).
+> Az alábbi (PyInstalleres) csomag a weboldalról letölthető változat, nem az App Store-os.
+
 ---
 
 ## 1. Fordítás – egy parancs

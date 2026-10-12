@@ -151,12 +151,12 @@ enum L10n {
 
 /// Short alias used throughout the UI code.
 @inline(__always) func tr(_ key: String, _ args: Any...) -> String {
-    L10n.tr(key, args)
+    L10n.trArgs(key, args)
 }
 
 extension L10n {
     /// tr() with an already-built argument array (the variadic helper above forwards here).
-    static func tr(_ key: String, _ args: [Any]) -> String {
+    static func trArgs(_ key: String, _ args: [Any]) -> String {
         let text = lookup(key)
         return args.isEmpty ? text : format(text, args)
     }

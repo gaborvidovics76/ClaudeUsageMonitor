@@ -39,7 +39,20 @@ builds and publishes the **macOS** version from the same source. That is the onl
    `claude_usage/macutil.py`, `secretstore_mac.py`, `updater_mac.py`, `i18n_mac.py`. Anything else
    also runs on Windows - discuss before touching it.
 
-## How a macOS release is published
+## The macOS app has two builds
+
+| Build | Where | Distribution |
+|---|---|---|
+| **Xcode / native Swift** (new, 2026-10) | `macos/Xcode/` - its own README, `docs/APP-STORE-BEADAS.md` (submission), `docs/MEGFELELES.md` (Apple requirements, risks) | **Mac App Store**, built and uploaded by the colleague from Xcode; updates through the App Store |
+| PyInstaller (the Python app packaged for macOS) | `macos/build.sh`, `macos/release.sh` | zip on claudeusagemonitor.com/macos/ (currently paused) |
+
+The Xcode app shares the translations (`tools/gen_xcstrings.py` builds `Localizable.xcstrings`
+from `claude_usage/i18n*.py` + `langs/`) and the version number (`MARKETING_VERSION` =
+`claude_usage/__init__.py`). The claude.ai sign-in is behind the `CLAUDE_SIGN_IN` compilation
+condition because of Anthropic's third-party terms - see `macos/Xcode/docs/MEGFELELES.md`.
+The GitHub Actions workflow `xcode-build.yml` compiles it on every push to `macos/Xcode/`.
+
+## How a macOS release is published (PyInstaller build)
 
 ```bash
 ./macos/release.sh          # git pull -> build -> package -> upload -> verify over HTTPS

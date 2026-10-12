@@ -31,7 +31,7 @@ final class LocalLogReader: UsageSource {
         let result: ([Sample], String)? = Bookmarks.withAccess(settings.desktopLogBookmark) { url in
             self.loadFrom(url)
         }
-        guard let (rows, err) = result else {
+        guard let found = result else {
             // no bookmark: tell the user how to grant access (sandbox)
             samples = []
             stamp = nil
@@ -39,6 +39,7 @@ final class LocalLogReader: UsageSource {
             error = tr("err.no_access_mac")
             return
         }
+        let (rows, err) = found
         if !rows.isEmpty || !err.isEmpty {
             samples = rows
             error = err
