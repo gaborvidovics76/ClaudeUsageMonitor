@@ -284,3 +284,7 @@ Keychain, start at login through a LaunchAgent). Download it from the same page,
 yourself on a Mac with one command - see [macos/START-HERE.md](macos/START-HERE.md)
 ([magyarul](macos/KEZDD-ITT.md)). The Windows release is the base of the project; macOS builds are
 made from the same source and published separately, so the two never get in each other's way.
+
+**Mac App Store:** a native Swift/Xcode version is in [macos/Xcode](macos/Xcode/README.md)
+([English](macos/Xcode/docs/START-HERE-XCODE.md)) - sandboxed, with the same 34 languages generated
+from this repository's translations. It is built, signed and submitted from a Mac with Xcode.
