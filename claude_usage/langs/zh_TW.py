@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """繁體中文（台灣） – UI strings of Claude Usage Monitor.
 
 你-form, Microsoft / Apple Taiwanese terminology, full-width punctuation.
@@ -119,7 +119,7 @@ STRINGS = {
     "err.bad_usage_resp": "使用量端點的回應無效",
     "err.connection": "連線錯誤：{}",
     "err.file_empty": "使用量檔案是空的。",
-    "err.file_not_found": "找不到使用量檔案。\nClaude Desktop 正在執行嗎？",
+    "err.file_not_found": "這臺電腦上沒有 Claude Desktop 用量記錄。\n請啟動 Claude Desktop，或用你的 claude.ai 帳戶登入：\n在面板上按右鍵 › 登入。",
     "err.file_unreadable": "目前無法讀取使用量檔案。",
     "err.loading": "登入／查詢中…",
     "err.network": "網路錯誤：{}",
@@ -127,7 +127,7 @@ STRINGS = {
     "err.no_data_profile": "此設定檔沒有資料。",
     "err.no_tray": "無法使用系統匣，因此不會顯示系統匣圖示。",
     "err.no_usage_data": "沒有使用量資料。",
-    "err.not_signed_in": "尚未登入。",
+    "err.not_signed_in": "尚未登入。\n在面板上按右鍵 › 登入（claude.ai，瀏覽器）。",
     "err.query_http": "查詢錯誤（HTTP {}）。",
     "err.rate_limited": "伺服器正在限制請求速率（429），將自動重試。",
     "err.session_expired": "登入已過期，請重新登入。",

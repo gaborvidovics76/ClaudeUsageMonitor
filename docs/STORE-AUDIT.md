@@ -39,7 +39,7 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 | Szabály | Állapot | Megjegyzés |
 |---|---|---|
 | **10.1.1 pontos bemutatás; a név egyedi, nincs benne marketingszöveg; nem állíthatja magáról, hogy más cégtől származik** | ⚠️ | A leírásban és a listázásban **kötelező** a „nem hivatalos, nem az Anthropic terméke; a Claude az Anthropic PBC védjegye” mondat (a weboldal láblécében már így van). **A név kockázata:** a „Claude Usage Monitor” tartalmazza az Anthropic védjegyét; a szabályzat szövege ezt nem tiltja kifejezetten, de a névfoglalásnál és a tanúsításnál elutasíthatják, mint más entitásra utaló nevet. Tartalék név a `display_name`-hez: **„Usage Monitor for Claude”** (a „… for X” alak az iparági gyakorlat), vagy semleges: „AI Usage Monitor”. Foglald le a nevet a Partner Centerben MIELŐTT bármit beküldesz: ott azonnal kiderül. |
-| 10.1.1 „a termék értékajánlata az első indításkor világos legyen” / **10.1.2 teljesen működőképes a céleszközön** | ⚠️ | **A legnagyobb buktató.** A tesztelő gépén nincs Claude Desktop és nincs Claude-előfizetés: az app „Nincs adat” állapotot mutat, és bejelentkezni csak Claude-fiókkal lehet. Teendők: (a) a beküldés „Notes for certification” mezőjébe pontos leírás (3. szakasz, kész szöveg); (b) erősen ajánlott egy magyarázó üres állapot a panelen („Nincs Claude Desktop-napló – jelentkezz be a claude.ai fiókoddal a jobb gombos menüben”) a jelenlegi „Nincs adat” helyett – ez 34 nyelvű szöveg, egy következő verzióba. |
+| 10.1.1 „a termék értékajánlata az első indításkor világos legyen” / **10.1.2 teljesen működőképes a céleszközön** | ⚠️ | **A legnagyobb buktató.** A tesztelő gépén nincs Claude Desktop és nincs Claude-előfizetés, bejelentkezni csak Claude-fiókkal lehet. Teendők: (a) a beküldés „Notes for certification” mezőjébe pontos leírás (3. szakasz, kész szöveg); (b) **kész (2.9.1):** a panel üres állapota magyarázó szöveg lett mind a 34 nyelven – „Ezen a gépen nincs Claude Desktop használati napló. Indítsd el a Claude Desktopot, vagy jelentkezz be a claude.ai fiókoddal: jobb gomb a panelen › Bejelentkezés.” (helyi mód), illetve „Nincs bejelentkezés. Jobb gomb a panelen › Bejelentkezés (claude.ai, böngésző).” (claude.ai mód). **A Store-ba a 2.9.1.0 csomagot küldd be.** |
 | 10.1.3 keresőkifejezések: max 7, releváns, nincs ár, nincs más termék neve | ✅ | javasolt: `claude, usage, limits, monitor, anthropic, quota, tray` – a „claude”/„anthropic” mint kulcsszó releváns, de ha a név miatt kifogás jön, ezeket is cseréld |
 | 10.1.4 értékes, minőségi, aktív termék | ✅ | 2.9.0, 34 nyelv, rendszeres kiadások, nyilvános forrás |
 | 10.2 biztonság; 10.2.2 nincs dinamikus kódbetöltés | ✅ | Store-módban nincs önfrissítő, nem tölt le futtatható kódot; a hálózati forgalom: Anthropic API (saját belépéssel), claudeusagemonitor.com (csak az üzenetküldő űrlap, ha a felhasználó elküldi) |
@@ -64,9 +64,10 @@ Claude Usage Monitor is a utility for subscribers of Anthropic's Claude (Pro/Max
 subscription's usage limits in an always-on-top panel and a tray icon.
 
 Testing without a Claude account: the app starts in "local log" mode and reads the usage history that the
-Claude Desktop application writes on this PC. Without Claude Desktop installed the panel shows "No data" by
-design; all UI (settings, themes, layouts, 34 languages, help, history window) is still available from the
-right-click menu of the panel or of the tray icon. The "claude.ai" data source needs the tester's own Claude
+Claude Desktop application writes on this PC. Without Claude Desktop installed the panel shows, by design,
+"No Claude Desktop usage log on this computer. Start Claude Desktop, or sign in with your claude.ai account:
+right-click the panel > Sign in."; all UI (settings, themes, layouts, 34 languages, help, history window) is
+still available from the right-click menu of the panel or of the tray icon. The "claude.ai" data source needs the tester's own Claude
 subscription (OAuth sign-in in the system browser, same flow as Anthropic's Claude Code tool); no test
 credentials can be shared because they are personal accounts.
 
@@ -147,8 +148,8 @@ Nem kell: 2:3 poszter és 1:1 dobozkép (csak játékokhoz), Xbox-képek, előze
 
 1. **Helyőrző azonosító a manifestben** → biztos elutasítás, amíg az `identity.json` nincs kitöltve.
 2. **A név „Claude” része** → névfoglalásnál vagy tanúsításnál kifogás jöhet; tartalék név készen.
-3. **Tesztelő Claude-fiók nélkül** → „Nincs adat”; a „Notes for certification” szöveg kezeli, az üres-állapot szöveg
-   javítása ajánlott.
+3. **Tesztelő Claude-fiók nélkül** → a 2.9.1 óta a panel maga mondja el, mi a teendő (Claude Desktop indítása vagy
+   bejelentkezés a jobb gombos menüből); a „Notes for certification” szöveg ugyanezt írja le.
 4. **WACK kihagyása** → a Store ugyanazt futtatja; a bináris ellenőrzést itt előre elvégeztem (tiszta), de a telepítési
    és indítási teszt csak a te gépeden megy.
 5. **Adatvédelmi URL** → az önálló `legal/en.html` oldalt add meg, ne a `#privacy` horgonyt.

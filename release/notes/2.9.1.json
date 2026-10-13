@@ -1,0 +1,146 @@
+{
+  "en": [
+    "A friendlier empty state. When there is no Claude Desktop usage log on the computer yet, or you are not signed in, the panel no longer just says \"not found\": it tells you what to do next – start Claude Desktop, or right-click the panel and sign in with your claude.ai account. In all 34 languages, on Windows and macOS.",
+    "Why a new version? Because the first minute with the program should be as clear as the rest – for you, and for everyone who installs it from the Microsoft Store."
+  ],
+  "hu": [
+    "Barátságosabb üres állapot. Ha a gépen még nincs Claude Desktop használati napló, vagy nem vagy bejelentkezve, a panel már nem csak annyit mond, hogy „nem található”: elmondja, mi a következő lépés – indítsd el a Claude Desktopot, vagy jobb gombbal a panelen jelentkezz be a claude.ai fiókoddal. Mind a 34 nyelven, Windowson és macOS-en.",
+    "Miért új verzió? Mert a programmal töltött első percnek is ugyanolyan világosnak kell lennie, mint a többinek – neked, és mindenkinek, aki a Microsoft Store-ból telepíti."
+  ],
+  "de": [
+    "Ein freundlicherer Leerzustand. Wenn auf dem Rechner noch kein Claude-Desktop-Nutzungsprotokoll liegt oder du nicht angemeldet bist, sagt das Panel nicht mehr nur „nicht gefunden“: Es sagt dir, was als Nächstes zu tun ist – Claude Desktop starten oder per Rechtsklick auf das Panel mit deinem claude.ai-Konto anmelden. In allen 34 Sprachen, unter Windows und macOS.",
+    "Warum eine neue Version? Weil die erste Minute mit dem Programm genauso klar sein soll wie der Rest – für dich und für alle, die es aus dem Microsoft Store installieren."
+  ],
+  "fr": [
+    "Un état vide plus accueillant. Quand il n'y a pas encore de journal d'usage de Claude Desktop sur l'ordinateur, ou que tu n'es pas connecté, le panneau ne dit plus seulement « introuvable » : il indique la suite – lancer Claude Desktop, ou faire un clic droit sur le panneau et se connecter avec ton compte claude.ai. Dans les 34 langues, sous Windows et macOS.",
+    "Pourquoi une nouvelle version ? Parce que la première minute avec le programme doit être aussi claire que le reste – pour toi, et pour tous ceux qui l'installent depuis le Microsoft Store."
+  ],
+  "es": [
+    "Un estado vacío más amable. Cuando aún no hay registro de uso de Claude Desktop en el equipo, o no has iniciado sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
+    "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+  ],
+  "it": [
+    "Uno stato vuoto più amichevole. Quando sul computer non c'è ancora un registro d'uso di Claude Desktop, o non hai effettuato l'accesso, il pannello non dice più solo «non trovato»: ti dice cosa fare – avviare Claude Desktop, oppure fare clic destro sul pannello e accedere con il tuo account claude.ai. In tutte le 34 lingue, su Windows e macOS.",
+    "Perché una nuova versione? Perché il primo minuto con il programma deve essere chiaro quanto il resto – per te e per chi lo installa dal Microsoft Store."
+  ],
+  "pt": [
+    "Um estado vazio mais simpático. Quando ainda não há registo de uso do Claude Desktop no computador, ou não tens sessão iniciada, o painel já não diz apenas «não encontrado»: diz-te o que fazer a seguir – abrir o Claude Desktop, ou clicar com o botão direito no painel e iniciar sessão com a tua conta claude.ai. Nas 34 línguas, no Windows e no macOS.",
+    "Porquê uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro como o resto – para ti e para todos os que o instalam a partir da Microsoft Store."
+  ],
+  "pl": [
+    "Przyjaźniejszy stan pusty. Gdy na komputerze nie ma jeszcze dziennika użycia Claude Desktop albo nie jesteś zalogowany, panel nie mówi już tylko „nie znaleziono”: podpowiada, co zrobić dalej – uruchomić Claude Desktop albo kliknąć panel prawym przyciskiem i zalogować się kontem claude.ai. We wszystkich 34 językach, w Windows i macOS.",
+    "Dlaczego nowa wersja? Bo pierwsza minuta z programem ma być tak samo jasna jak reszta – dla Ciebie i dla każdego, kto instaluje go ze sklepu Microsoft Store."
+  ],
+  "nl": [
+    "Een vriendelijkere lege toestand. Als er op de computer nog geen gebruikslogboek van Claude Desktop is, of je niet bent aangemeld, zegt het paneel niet langer alleen „niet gevonden”: het vertelt wat je nu kunt doen – Claude Desktop starten, of met rechts op het paneel klikken en je aanmelden met je claude.ai-account. In alle 34 talen, op Windows en macOS.",
+    "Waarom een nieuwe versie? Omdat de eerste minuut met het programma net zo duidelijk moet zijn als de rest – voor jou, en voor iedereen die het uit de Microsoft Store installeert."
+  ],
+  "ru": [
+    "Более дружелюбное пустое состояние. Если на компьютере ещё нет журнала использования Claude Desktop или вы не вошли в учётную запись, панель больше не пишет просто «не найден»: она подсказывает следующий шаг – запустить Claude Desktop или щёлкнуть панель правой кнопкой и войти с учётной записью claude.ai. На всех 34 языках, в Windows и macOS.",
+    "Почему новая версия? Потому что первая минута с программой должна быть такой же понятной, как и всё остальное – для вас и для всех, кто устанавливает её из Microsoft Store."
+  ],
+  "cs": [
+    "Přívětivější prázdný stav. Když na počítači ještě není záznam využití Claude Desktop nebo nejste přihlášeni, panel už neříká jen „nenalezeno“: řekne, co dál – spustit Claude Desktop, nebo kliknout na panel pravým tlačítkem a přihlásit se účtem claude.ai. Ve všech 34 jazycích, na Windows i macOS.",
+    "Proč nová verze? Protože první minuta s programem má být stejně jasná jako ty ostatní – pro vás i pro všechny, kdo ho instalují z Microsoft Store."
+  ],
+  "tr": [
+    "Daha dost canlısı bir boş durum. Bilgisayarda henüz Claude Desktop kullanım günlüğü yoksa ya da giriş yapmadıysan panel artık sadece „bulunamadı” demiyor: sonraki adımı söylüyor – Claude Desktop'ı başlat ya da panele sağ tıklayıp claude.ai hesabınla giriş yap. 34 dilin hepsinde, Windows ve macOS'te.",
+    "Neden yeni sürüm? Çünkü programla geçen ilk dakika da gerisi kadar açık olmalı – senin için ve Microsoft Store'dan yükleyen herkes için."
+  ],
+  "pt-PT": [
+    "Um estado vazio mais simpático. Quando ainda não há registo de utilização do Claude Desktop no computador, ou não tens sessão iniciada, o painel já não diz apenas «não encontrado»: diz-te o que fazer a seguir – abrir o Claude Desktop, ou clicar com o botão direito no painel e iniciar sessão com a tua conta claude.ai. Nas 34 línguas, no Windows e no macOS.",
+    "Porquê uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro como o resto – para ti e para todos os que o instalam a partir da Microsoft Store."
+  ],
+  "pt-BR": [
+    "Um estado vazio mais amigável. Quando ainda não há registro de uso do Claude Desktop no computador, ou você não está conectado, o painel não diz mais apenas «não encontrado»: ele mostra o próximo passo – abrir o Claude Desktop, ou clicar com o botão direito no painel e entrar com sua conta claude.ai. Em todos os 34 idiomas, no Windows e no macOS.",
+    "Por que uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro quanto o resto – para você e para todos que o instalam pela Microsoft Store."
+  ],
+  "es-ES": [
+    "Un estado vacío más amable. Cuando aún no hay registro de uso de Claude Desktop en el ordenador, o no has iniciado sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
+    "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+  ],
+  "es-419": [
+    "Un estado vacío más amable. Cuando todavía no hay registro de uso de Claude Desktop en la computadora, o no iniciaste sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
+    "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+  ],
+  "ja": [
+    "より親切な空の状態。パソコンにまだ Claude Desktop の使用量ログがないとき、またはサインインしていないとき、パネルは「見つかりません」とだけ表示するのをやめました。次に何をすればよいかを示します – Claude Desktop を起動するか、パネルを右クリックして claude.ai アカウントでサインインします。34 言語すべてで、Windows と macOS で。",
+    "なぜ新しいバージョンなのか？ プログラムとの最初の 1 分も、それ以降と同じように分かりやすくあるべきだからです – あなたのために、そして Microsoft Store からインストールするすべての人のために。"
+  ],
+  "ko": [
+    "더 친절한 빈 상태. 컴퓨터에 아직 Claude Desktop 사용량 로그가 없거나 로그인하지 않았을 때, 패널은 더 이상 「찾을 수 없음」만 보여주지 않습니다. 다음에 할 일을 알려줍니다 – Claude Desktop을 실행하거나, 패널에서 오른쪽 클릭하여 claude.ai 계정으로 로그인하세요. 34개 언어 모두, Windows와 macOS에서.",
+    "왜 새 버전일까요? 프로그램과의 첫 1분도 나머지와 똑같이 명확해야 하기 때문입니다 – 여러분을 위해, 그리고 Microsoft Store에서 설치하는 모든 분을 위해."
+  ],
+  "zh-CN": [
+    "更友好的空状态。当电脑上还没有 Claude Desktop 用量日志，或你尚未登录时，面板不再只显示“未找到”，而是告诉你下一步怎么做 – 启动 Claude Desktop，或右键点击面板并用你的 claude.ai 账户登录。全部 34 种语言，Windows 和 macOS 均适用。",
+    "为什么发布新版本？因为使用程序的第一分钟也应该和之后一样清楚 – 为了你，也为了每一位从 Microsoft Store 安装它的人。"
+  ],
+  "zh-TW": [
+    "更友善的空白狀態。當電腦上還沒有 Claude Desktop 用量記錄，或你尚未登入時，面板不再只顯示「找不到」，而是告訴你下一步該怎麼做 – 啟動 Claude Desktop，或在面板上按右鍵並用你的 claude.ai 帳戶登入。全部 34 種語言，Windows 與 macOS 皆適用。",
+    "為什麼要發布新版本？因為使用程式的第一分鐘也應該和之後一樣清楚 – 為了你，也為了每一位從 Microsoft Store 安裝它的人。"
+  ],
+  "id": [
+    "Keadaan kosong yang lebih ramah. Saat belum ada log penggunaan Claude Desktop di komputer, atau Anda belum masuk, panel tidak lagi hanya berkata „tidak ditemukan”: ia memberi tahu langkah berikutnya – jalankan Claude Desktop, atau klik kanan panel dan masuk dengan akun claude.ai Anda. Dalam semua 34 bahasa, di Windows dan macOS.",
+    "Mengapa versi baru? Karena menit pertama bersama program harus sejelas sisanya – untuk Anda, dan untuk semua orang yang memasangnya dari Microsoft Store."
+  ],
+  "vi": [
+    "Trạng thái trống thân thiện hơn. Khi máy tính chưa có nhật ký mức sử dụng của Claude Desktop, hoặc bạn chưa đăng nhập, bảng không còn chỉ nói „không tìm thấy”: nó cho bạn biết bước tiếp theo – mở Claude Desktop, hoặc nhấp chuột phải vào bảng và đăng nhập bằng tài khoản claude.ai của bạn. Trong tất cả 34 ngôn ngữ, trên Windows và macOS.",
+    "Vì sao có phiên bản mới? Vì phút đầu tiên với chương trình cũng phải rõ ràng như phần còn lại – cho bạn, và cho mọi người cài đặt nó từ Microsoft Store."
+  ],
+  "ro": [
+    "O stare goală mai prietenoasă. Când pe computer nu există încă un jurnal de utilizare Claude Desktop, sau nu ești conectat, panoul nu mai spune doar „nu a fost găsit”: îți spune ce urmează – pornește Claude Desktop, sau dă clic dreapta pe panou și conectează-te cu contul tău claude.ai. În toate cele 34 de limbi, pe Windows și macOS.",
+    "De ce o versiune nouă? Pentru că primul minut cu programul trebuie să fie la fel de clar ca restul – pentru tine și pentru toți cei care îl instalează din Microsoft Store."
+  ],
+  "el": [
+    "Μια πιο φιλική κενή κατάσταση. Όταν δεν υπάρχει ακόμη αρχείο καταγραφής χρήσης του Claude Desktop στον υπολογιστή, ή δεν έχετε συνδεθεί, το πλαίσιο δεν λέει πια μόνο «δεν βρέθηκε»: σας λέει τι να κάνετε στη συνέχεια – εκκινήστε το Claude Desktop ή κάντε δεξί κλικ στο πλαίσιο και συνδεθείτε με τον λογαριασμό σας στο claude.ai. Και στις 34 γλώσσες, σε Windows και macOS.",
+    "Γιατί νέα έκδοση; Επειδή το πρώτο λεπτό με το πρόγραμμα πρέπει να είναι εξίσου σαφές με τα υπόλοιπα – για εσάς και για όλους όσοι το εγκαθιστούν από το Microsoft Store."
+  ],
+  "bg": [
+    "По-дружелюбно празно състояние. Когато на компютъра още няма дневник на използването на Claude Desktop или не сте влезли, панелът вече не казва само „не е намерен“: казва ви какво да направите – стартирайте Claude Desktop или щракнете с десния бутон върху панела и влезте с акаунта си в claude.ai. На всичките 34 езика, в Windows и macOS.",
+    "Защо нова версия? Защото първата минута с програмата трябва да е също толкова ясна, колкото и останалото – за вас и за всички, които я инсталират от Microsoft Store."
+  ],
+  "sk": [
+    "Prívetivejší prázdny stav. Keď na počítači ešte nie je záznam využitia Claude Desktop alebo nie ste prihlásení, panel už nehovorí len „nenájdené“: povie, čo ďalej – spustiť Claude Desktop, alebo kliknúť na panel pravým tlačidlom a prihlásiť sa účtom claude.ai. Vo všetkých 34 jazykoch, na Windows aj macOS.",
+    "Prečo nová verzia? Pretože prvá minúta s programom má byť rovnako jasná ako tie ostatné – pre vás aj pre všetkých, ktorí ho inštalujú z Microsoft Store."
+  ],
+  "hr": [
+    "Prijaznije prazno stanje. Kad na računalu još nema zapisnika korištenja Claude Desktopa ili niste prijavljeni, ploča više ne kaže samo „nije pronađeno“: kaže vam što dalje – pokrenite Claude Desktop ili desnim klikom na ploču prijavite se svojim claude.ai računom. Na sva 34 jezika, na Windowsu i macOS-u.",
+    "Zašto nova verzija? Jer prva minuta s programom treba biti jednako jasna kao i ostatak – za vas i za sve koji ga instaliraju iz Microsoft Storea."
+  ],
+  "sv": [
+    "Ett vänligare tomt läge. När det ännu inte finns någon användningslogg från Claude Desktop på datorn, eller du inte är inloggad, säger panelen inte längre bara ”hittades inte”: den talar om nästa steg – starta Claude Desktop eller högerklicka på panelen och logga in med ditt claude.ai-konto. På alla 34 språk, i Windows och macOS.",
+    "Varför en ny version? För att den första minuten med programmet ska vara lika tydlig som resten – för dig och för alla som installerar det från Microsoft Store."
+  ],
+  "fi": [
+    "Ystävällisempi tyhjä tila. Kun tietokoneella ei vielä ole Claude Desktopin käyttölokia tai et ole kirjautunut, paneeli ei enää sano pelkästään ”ei löydy”: se kertoo, mitä tehdä seuraavaksi – käynnistä Claude Desktop tai napsauta paneelia hiiren oikealla painikkeella ja kirjaudu claude.ai-tililläsi. Kaikilla 34 kielellä, Windowsissa ja macOS:ssä.",
+    "Miksi uusi versio? Koska ensimmäisen minuutin ohjelman kanssa pitää olla yhtä selkeä kuin muidenkin – sinulle ja kaikille, jotka asentavat sen Microsoft Storesta."
+  ],
+  "da": [
+    "En venligere tom tilstand. Når der endnu ikke er en Claude Desktop-forbrugslog på computeren, eller du ikke er logget ind, siger panelet ikke længere bare „ikke fundet“: det fortæller, hvad du skal gøre – start Claude Desktop, eller højreklik på panelet og log ind med din claude.ai-konto. På alle 34 sprog, på Windows og macOS.",
+    "Hvorfor en ny version? Fordi det første minut med programmet skal være lige så klart som resten – for dig og for alle, der installerer det fra Microsoft Store."
+  ],
+  "lt": [
+    "Draugiškesnė tuščia būsena. Kai kompiuteryje dar nėra Claude Desktop naudojimo žurnalo arba nesate prisijungę, skydelis nebesako tik „nerasta“: jis pasako, ką daryti toliau – paleisti Claude Desktop arba dešiniuoju pelės mygtuku spustelėti skydelį ir prisijungti su claude.ai paskyra. Visomis 34 kalbomis, „Windows“ ir „macOS“.",
+    "Kodėl nauja versija? Nes pirmoji minutė su programa turi būti tokia pat aiški kaip ir visa kita – jums ir visiems, kurie ją diegia iš „Microsoft Store“."
+  ],
+  "sl": [
+    "Prijaznejše prazno stanje. Ko na računalniku še ni dnevnika uporabe Claude Desktop ali niste prijavljeni, plošča ne pravi več samo „ni najdeno“: pove vam, kaj storiti – zaženite Claude Desktop ali z desnim klikom na ploščo prijavite se s svojim računom claude.ai. V vseh 34 jezikih, v sistemih Windows in macOS.",
+    "Zakaj nova različica? Ker mora biti prva minuta s programom enako jasna kot vse ostalo – za vas in za vse, ki ga namestijo iz trgovine Microsoft Store."
+  ],
+  "lv": [
+    "Draudzīgāks tukšais stāvoklis. Kad datorā vēl nav Claude Desktop lietojuma žurnāla vai neesat pierakstījies, panelis vairs nesaka tikai „nav atrasts“: tas pasaka, ko darīt tālāk – palaist Claude Desktop vai ar labo klikšķi uz paneļa pierakstīties ar savu claude.ai kontu. Visās 34 valodās, Windows un macOS.",
+    "Kāpēc jauna versija? Jo pirmajai minūtei ar programmu jābūt tikpat skaidrai kā pārējām – jums un visiem, kas to instalē no Microsoft Store."
+  ],
+  "et": [
+    "Sõbralikum tühi olek. Kui arvutis pole veel Claude Desktopi kasutuslogi või sa pole sisse logitud, ei ütle paneel enam ainult „ei leitud“: ta ütleb, mida edasi teha – käivita Claude Desktop või tee paneelil paremklõps ja logi sisse oma claude.ai kontoga. Kõigis 34 keeles, Windowsis ja macOS-is.",
+    "Miks uus versioon? Sest esimene minut programmiga peab olema sama selge kui ülejäänud – sinu jaoks ja kõigi jaoks, kes selle Microsoft Store'ist paigaldavad."
+  ],
+  "mt": [
+    "Stat vojt aktar ħanin. Meta fuq il-kompjuter għadu m'hemmx reġistru tal-użu ta' Claude Desktop, jew m'intix imdaħħal, il-pannell ma jgħidx biss „ma nstabx“: jgħidlek x'għandek tagħmel – ibda Claude Desktop, jew ikklikkja bil-lemin fuq il-pannell u idħol bil-kont claude.ai tiegħek. Fl-34 lingwa kollha, fuq Windows u macOS.",
+    "Għaliex verżjoni ġdida? Għax l-ewwel minuta mal-programm għandha tkun ċara daqs il-bqija – għalik, u għal kull min jinstallah mill-Microsoft Store."
+  ],
+  "ga": [
+    "Staid fholamh níos cairdiúla. Nuair nach bhfuil loga úsáide Claude Desktop ar an ríomhaire fós, nó nuair nach bhfuil tú sínithe isteach, ní deir an painéal „níor aimsíodh“ amháin a thuilleadh: insíonn sé duit cad atá le déanamh – tosaigh Claude Desktop, nó deaschliceáil ar an bpainéal agus sínigh isteach le do chuntas claude.ai. Sna 34 theanga ar fad, ar Windows agus macOS.",
+    "Cén fáth leagan nua? Mar ba chóir don chéad nóiméad leis an gclár a bheith chomh soiléir leis an gcuid eile – duitse, agus do gach duine a shuiteálann é ón Microsoft Store."
+  ]
+}

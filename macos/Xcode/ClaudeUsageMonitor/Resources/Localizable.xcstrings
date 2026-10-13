@@ -6068,205 +6068,205 @@
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Файлът с данни за използването не е намерен.\nРаботи ли Claude Desktop?"
+            "value": "На този компютър няма дневник на използването на Claude Desktop.\nСтартирайте Claude Desktop или влезте с акаунта си в claude.ai:\nдесен бутон върху панела › Вход."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Soubor s využitím nenalezen.\nBěží Claude Desktop?"
+            "value": "Na tomto počítači není záznam využití Claude Desktop.\nSpusťte Claude Desktop nebo se přihlaste účtem claude.ai:\npravé tlačítko na panelu › Přihlásit."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Forbrugsfilen blev ikke fundet.\nKører Claude Desktop?"
+            "value": "Ingen Claude Desktop-forbrugslog på denne computer.\nStart Claude Desktop, eller log ind med din claude.ai-konto:\nhøjreklik på panelet › Log ind."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nutzungsdatei nicht gefunden.\nLäuft Claude Desktop?"
+            "value": "Auf diesem Rechner gibt es kein Claude-Desktop-Nutzungsprotokoll.\nStarte Claude Desktop oder melde dich mit deinem claude.ai-Konto an:\nRechtsklick auf das Panel › Anmelden."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Το αρχείο χρήσης δεν βρέθηκε.\nΕκτελείται το Claude Desktop;"
+            "value": "Σε αυτόν τον υπολογιστή δεν υπάρχει αρχείο καταγραφής χρήσης του Claude Desktop.\nΕκκινήστε το Claude Desktop ή συνδεθείτε με τον λογαριασμό σας στο claude.ai:\nδεξί κλικ στο πλαίσιο › Σύνδεση."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Usage file not found.\nIs Claude Desktop running?"
+            "value": "No Claude Desktop usage log on this computer.\nStart Claude Desktop, or sign in with your claude.ai account:\nright-click the panel › Sign in."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No se encuentra el archivo de uso.\n¿Está abierto Claude Desktop?"
+            "value": "No hay registro de uso de Claude Desktop en este ordenador.\nAbre Claude Desktop o inicia sesión con tu cuenta de claude.ai:\nclic derecho en el panel › Iniciar sesión."
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "No se encontró el archivo de uso.\n¿Claude Desktop está abierto?"
+            "value": "No hay registro de uso de Claude Desktop en esta computadora.\nAbre Claude Desktop o inicia sesión con tu cuenta de claude.ai:\nclic derecho en el panel › Iniciar sesión."
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kasutusfaili ei leitud.\nKas Claude Desktop töötab?"
+            "value": "Selles arvutis pole Claude Desktopi kasutuslogi.\nKäivita Claude Desktop või logi sisse oma claude.ai kontoga:\nparemklõps paneelil › Logi sisse."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Käyttötiedostoa ei löytynyt.\nOnko Claude Desktop käynnissä?"
+            "value": "Tällä tietokoneella ei ole Claude Desktopin käyttölokia.\nKäynnistä Claude Desktop tai kirjaudu claude.ai-tililläsi:\nhiiren oikea painike paneelissa › Kirjaudu."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fichier d'usage introuvable.\nClaude Desktop est-il lancé ?"
+            "value": "Aucun journal d'usage de Claude Desktop sur cet ordinateur.\nLance Claude Desktop ou connecte-toi avec ton compte claude.ai :\nclic droit sur le panneau › Se connecter."
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "Níor aimsíodh an comhad úsáide.\nAn bhfuil Claude Desktop ag rith?"
+            "value": "Níl aon loga úsáide Claude Desktop ar an ríomhaire seo.\nTosaigh Claude Desktop, nó sínigh isteach le do chuntas claude.ai:\ndeaschliceáil ar an bpainéal › Sínigh isteach."
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Datoteka potrošnje nije pronađena.\nJe li Claude Desktop pokrenut?"
+            "value": "Na ovom računalu nema zapisnika korištenja Claude Desktopa.\nPokreni Claude Desktop ili se prijavi svojim claude.ai računom:\ndesni klik na ploču › Prijava."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A használati fájl nem található.\nFut a Claude Desktop?"
+            "value": "Ezen a gépen nincs Claude Desktop használati napló.\nIndítsd el a Claude Desktopot, vagy jelentkezz be a claude.ai fiókoddal:\njobb gomb a panelen › Bejelentkezés."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "File penggunaan tidak ditemukan.\nApakah Claude Desktop berjalan?"
+            "value": "Tidak ada log penggunaan Claude Desktop di komputer ini.\nJalankan Claude Desktop, atau masuk dengan akun claude.ai Anda:\nklik kanan panel › Masuk."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "File d'uso non trovato.\nClaude Desktop è in esecuzione?"
+            "value": "Nessun registro d'uso di Claude Desktop su questo computer.\nAvvia Claude Desktop oppure accedi con il tuo account claude.ai:\nclic destro sul pannello › Accedi."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用量ファイルが見つかりません。\nClaude Desktop は起動していますか？"
+            "value": "このパソコンに Claude Desktop の使用量ログがありません。\nClaude Desktop を起動するか、claude.ai アカウントでサインインしてください：\nパネルを右クリック › サインイン。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "사용량 파일을 찾을 수 없어요.\nClaude Desktop이 실행 중인가요?"
+            "value": "이 컴퓨터에 Claude Desktop 사용량 로그가 없습니다.\nClaude Desktop을 실행하거나 claude.ai 계정으로 로그인하세요:\n패널에서 오른쪽 클릭 › 로그인."
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Naudojimo failas nerastas.\nAr veikia Claude Desktop?"
+            "value": "Šiame kompiuteryje nėra Claude Desktop naudojimo žurnalo.\nPaleiskite Claude Desktop arba prisijunkite su savo claude.ai paskyra:\ndešinysis pelės mygtukas ant skydelio › Prisijungti."
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lietojuma fails nav atrasts.\nVai Claude Desktop darbojas?"
+            "value": "Šajā datorā nav Claude Desktop lietojuma žurnāla.\nPalaidiet Claude Desktop vai pierakstieties ar savu claude.ai kontu:\nlabais klikšķis uz paneļa › Pierakstīties."
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il-fajl tal-użu ma nstabx.\nClaude Desktop għaddej?"
+            "value": "F'dan il-kompjuter m'hemmx reġistru tal-użu ta' Claude Desktop.\nIbda Claude Desktop, jew idħol bil-kont claude.ai tiegħek:\nklikk bil-lemin fuq il-pannell › Idħol."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Gebruiksbestand niet gevonden.\nDraait Claude Desktop?"
+            "value": "Geen gebruikslogboek van Claude Desktop op deze computer.\nStart Claude Desktop of meld je aan met je claude.ai-account:\nrechtsklik op het paneel › Aanmelden."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nie znaleziono pliku użycia.\nCzy Claude Desktop działa?"
+            "value": "Na tym komputerze nie ma dziennika użycia Claude Desktop.\nUruchom Claude Desktop albo zaloguj się kontem claude.ai:\nprawy przycisk na panelu › Zaloguj."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Arquivo de uso não encontrado.\nO Claude Desktop está aberto?"
+            "value": "Não há registro de uso do Claude Desktop neste computador.\nAbra o Claude Desktop ou entre com sua conta claude.ai:\nclique direito no painel › Entrar."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ficheiro de utilização não encontrado.\nO Claude Desktop está aberto?"
+            "value": "Não há registo de utilização do Claude Desktop neste computador.\nAbre o Claude Desktop ou inicia sessão com a tua conta claude.ai:\nclique direito no painel › Iniciar sessão."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fișierul de utilizare nu a fost găsit.\nEste pornit Claude Desktop?"
+            "value": "Pe acest computer nu există jurnal de utilizare Claude Desktop.\nPornește Claude Desktop sau conectează-te cu contul tău claude.ai:\nclic dreapta pe panou › Conectare."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Файл использования не найден.\nClaude Desktop запущен?"
+            "value": "На этом компьютере нет журнала использования Claude Desktop.\nЗапустите Claude Desktop или войдите с учётной записью claude.ai:\nправый клик по панели › Войти."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Súbor s údajmi o využití sa nenašiel.\nJe Claude Desktop spustený?"
+            "value": "Na tomto počítači nie je záznam využitia Claude Desktop.\nSpustite Claude Desktop alebo sa prihláste účtom claude.ai:\npravé tlačidlo na paneli › Prihlásiť."
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Datoteke s podatki o porabi ni mogoče najti.\nAli se Claude Desktop izvaja?"
+            "value": "Na tem računalniku ni dnevnika uporabe Claude Desktop.\nZaženite Claude Desktop ali se prijavite s svojim računom claude.ai:\ndesni klik na ploščo › Prijava."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Användningsfilen hittades inte.\nKörs Claude Desktop?"
+            "value": "Ingen användningslogg från Claude Desktop på den här datorn.\nStarta Claude Desktop eller logga in med ditt claude.ai-konto:\nhögerklicka på panelen › Logga in."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kullanım dosyası bulunamadı.\nClaude Desktop çalışıyor mu?"
+            "value": "Bu bilgisayarda Claude Desktop kullanım günlüğü yok.\nClaude Desktop'ı başlat ya da claude.ai hesabınla giriş yap:\npanelde sağ tık › Giriş yap."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Không tìm thấy tệp mức sử dụng.\nClaude Desktop có đang chạy không?"
+            "value": "Máy tính này không có nhật ký mức sử dụng của Claude Desktop.\nHãy mở Claude Desktop hoặc đăng nhập bằng tài khoản claude.ai của bạn:\nnhấp chuột phải vào bảng › Đăng nhập."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未找到用量文件。\nClaude Desktop 正在运行吗？"
+            "value": "这台电脑上没有 Claude Desktop 用量日志。\n请启动 Claude Desktop，或用你的 claude.ai 账户登录：\n右键点击面板 › 登录。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "找不到使用量檔案。\nClaude Desktop 正在執行嗎？"
+            "value": "這臺電腦上沒有 Claude Desktop 用量記錄。\n請啟動 Claude Desktop，或用你的 claude.ai 帳戶登入：\n在面板上按右鍵 › 登入。"
           }
         }
       }
@@ -7620,205 +7620,205 @@
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Не е извършено влизане."
+            "value": "Не сте влезли.\nДесен бутон върху панела › Вход (claude.ai, браузър)."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nepřihlášeno."
+            "value": "Nepřihlášeno.\nPravé tlačítko na panelu › Přihlásit (claude.ai, prohlížeč)."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ikke logget på."
+            "value": "Ikke logget ind.\nHøjreklik på panelet › Log ind (claude.ai, browser)."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nicht angemeldet."
+            "value": "Nicht angemeldet.\nRechtsklick auf das Panel › Anmelden (claude.ai, Browser)."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Δεν έχετε συνδεθεί."
+            "value": "Δεν έχετε συνδεθεί.\nΔεξί κλικ στο πλαίσιο › Σύνδεση (claude.ai, πρόγραμμα περιήγησης)."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Not signed in."
+            "value": "Not signed in.\nRight-click the panel › Sign in (claude.ai, browser)."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No has iniciado sesión."
+            "value": "Sin sesión iniciada.\nClic derecho en el panel › Iniciar sesión (claude.ai, navegador)."
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "No has iniciado sesión."
+            "value": "No has iniciado sesión.\nClic derecho en el panel › Iniciar sesión (claude.ai, navegador)."
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pole sisse logitud."
+            "value": "Pole sisse logitud.\nParemklõps paneelil › Logi sisse (claude.ai, brauser)."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et ole kirjautunut sisään."
+            "value": "Et ole kirjautunut.\nHiiren oikea painike paneelissa › Kirjaudu (claude.ai, selain)."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non connecté."
+            "value": "Non connecté.\nClic droit sur le panneau › Se connecter (claude.ai, navigateur)."
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "Níl tú sínithe isteach."
+            "value": "Níl tú sínithe isteach.\nDeaschliceáil ar an bpainéal › Sínigh isteach (claude.ai, brabhsálaí)."
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niste prijavljeni."
+            "value": "Niste prijavljeni.\nDesni klik na ploču › Prijava (claude.ai, preglednik)."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nincs bejelentkezés."
+            "value": "Nincs bejelentkezés.\nJobb gomb a panelen › Bejelentkezés (claude.ai, böngésző)."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Belum masuk."
+            "value": "Belum masuk.\nKlik kanan panel › Masuk (claude.ai, browser)."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non connesso."
+            "value": "Non connesso.\nClic destro sul pannello › Accedi (claude.ai, browser)."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "サインインしていません。"
+            "value": "サインインしていません。\nパネルを右クリック › サインイン（claude.ai、ブラウザー）。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "로그인되어 있지 않아요."
+            "value": "로그인되어 있지 않습니다.\n패널에서 오른쪽 클릭 › 로그인 (claude.ai, 브라우저)."
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neprisijungta."
+            "value": "Neprisijungta.\nDešinysis pelės mygtukas ant skydelio › Prisijungti (claude.ai, naršyklė)."
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nav veikta pierakstīšanās."
+            "value": "Nav pierakstīts.\nLabais klikšķis uz paneļa › Pierakstīties (claude.ai, pārlūks)."
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ma sar l-ebda login."
+            "value": "M'intix imdaħħal.\nKlikk bil-lemin fuq il-pannell › Idħol (claude.ai, browser)."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niet aangemeld."
+            "value": "Niet aangemeld.\nRechtsklik op het paneel › Aanmelden (claude.ai, browser)."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niezalogowano."
+            "value": "Niezalogowano.\nPrawy przycisk na panelu › Zaloguj (claude.ai, przeglądarka)."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Não conectado."
+            "value": "Não conectado.\nClique direito no painel › Entrar (claude.ai, navegador)."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sem sessão iniciada."
+            "value": "Sem sessão iniciada.\nClique direito no painel › Iniciar sessão (claude.ai, navegador)."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nu ești conectat."
+            "value": "Neconectat.\nClic dreapta pe panou › Conectare (claude.ai, browser)."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Вход не выполнен."
+            "value": "Вход не выполнен.\nПравый клик по панели › Войти (claude.ai, браузер)."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bez prihlásenia."
+            "value": "Neprihlásené.\nPravé tlačidlo na paneli › Prihlásiť (claude.ai, prehliadač)."
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niste prijavljeni."
+            "value": "Niste prijavljeni.\nDesni klik na ploščo › Prijava (claude.ai, brskalnik)."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inte inloggad."
+            "value": "Inte inloggad.\nHögerklicka på panelen › Logga in (claude.ai, webbläsare)."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giriş yapılmadı."
+            "value": "Giriş yapılmadı.\nPanelde sağ tık › Giriş yap (claude.ai, tarayıcı)."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Chưa đăng nhập."
+            "value": "Chưa đăng nhập.\nNhấp chuột phải vào bảng › Đăng nhập (claude.ai, trình duyệt)."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "未登录。"
+            "value": "未登录。\n右键点击面板 › 登录（claude.ai，浏览器）。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "尚未登入。"
+            "value": "尚未登入。\n在面板上按右鍵 › 登入（claude.ai，瀏覽器）。"
           }
         }
       }
