@@ -11,6 +11,8 @@ CODE = "ko"
 NAME = "한국어"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store 버전에서는 Windows가 관리해요: 설정 › 앱 › 시작 프로그램.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "모든 기기 · 이번 주 제품별 비중",
     "detail.product.chat": "채팅",

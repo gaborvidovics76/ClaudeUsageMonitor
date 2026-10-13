@@ -5,6 +5,8 @@ CODE = "lv"
 NAME = "Latviešu"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store versijā to pārslēdz Windows: Iestatījumi › Programmas › Startēšana.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "VISAS IERĪCES · ŠONEDĒĻ PA PRODUKTIEM",
     "detail.product.chat": "Sarunas",

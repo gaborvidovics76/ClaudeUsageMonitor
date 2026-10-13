@@ -5,6 +5,8 @@ CODE = "hr"
 NAME = "Hrvatski"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "U verziji iz Microsoft Storea to uključuje Windows: Postavke › Aplikacije › Pokretanje.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "SVI UREĐAJI · OVAJ TJEDAN PO PROIZVODU",
     "detail.product.chat": "Razgovori",

@@ -5,6 +5,8 @@ CODE = "pt-BR"
 NAME = "Português (Brasil)"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Na versão da Microsoft Store, quem controla isso é o Windows: Configurações › Aplicativos › Inicialização.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "TODOS OS DISPOSITIVOS · ESTA SEMANA POR PRODUTO",
     "detail.product.chat": "Conversas",

@@ -9,6 +9,8 @@ CODE = "zh-TW"
 NAME = "繁體中文"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "在 Microsoft Store 版本中，由 Windows 控制：設定 › 應用程式 › 啟動。",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "所有裝置 · 本週依產品",
     "detail.product.chat": "對話",

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Claude Usage Monitor - MSIX package manifest (Microsoft Store). tools\make_msix.ps1 fills the {{...}} fields:
+  the identity comes from packaging\msix\identity.json (copy it from Partner Center > Product identity),
+  the version from claude_usage\__init__.py (X.Y.Z -> X.Y.Z.0, as the Store requires).
+
+  Full-trust desktop app (the same PyInstaller build as the ZIP). Inside the package the program
+  switches itself to "Store mode": no self-updater (the Store updates it), Windows switches the
+  start-at-sign-in (the startup task below, off until the user turns it on in Settings > Apps > Startup).
+-->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap desktop rescap">
+
+  <Identity Name="{{NAME}}" Publisher="{{PUBLISHER}}" Version="{{VERSION}}" ProcessorArchitecture="x64" />
+
+  <Properties>
+    <DisplayName>{{DISPLAY_NAME}}</DisplayName>
+    <PublisherDisplayName>{{PUBLISHER_DISPLAY_NAME}}</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>{{DESCRIPTION}}</Description>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+{{RESOURCES}}
+  </Resources>
+
+  <Applications>
+    <Application Id="ClaudeUsageMonitor" Executable="ClaudeUsageMonitor\ClaudeUsageMonitor.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="{{DISPLAY_NAME}}"
+        Description="{{DESCRIPTION}}"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="{{SHORT_NAME}}" />
+      </uap:VisualElements>
+      <Extensions>
+        <!-- start at sign-in: off until the user switches it on (Settings > Apps > Startup) -->
+        <desktop:Extension Category="windows.startupTask" Executable="ClaudeUsageMonitor\ClaudeUsageMonitor.exe" EntryPoint="Windows.FullTrustApplication">
+          <desktop:StartupTask TaskId="ClaudeUsageMonitorStartup" Enabled="false" DisplayName="{{DISPLAY_NAME}}" />
+        </desktop:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

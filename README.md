@@ -269,6 +269,14 @@ and completeness. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - OAuth tokens are encrypted with Windows DPAPI and never leave your machine.
 - There is no telemetry, no analytics, and no third-party service of any kind.
 
+## Microsoft Store (MSIX)
+
+The same build is also packaged as an MSIX for the Microsoft Store (`tools/make_msix.ps1`, or
+`release.ps1 -Msix`); the ZIP on the website stays. Inside the package the program runs in "Store
+mode": no self-updater (the Store updates it), Windows switches start-at-sign-in (Settings › Apps ›
+Startup), and the ZIP install's scheduled task and Start menu shortcut are left alone. Details and
+the Partner Center checklist: [docs/MICROSOFT-STORE.md](docs/MICROSOFT-STORE.md).
+
 ## Code signing
 
 Releases from 2.9.1 on are Authenticode-signed with a Certum *Open Source Developer* certificate

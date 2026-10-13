@@ -93,13 +93,16 @@ class MonitorApp:
             self.settings["language"] = migrate_language(self.settings["language"])
         set_language(self.settings["language"] or system_language())
         apply_language_env(app)
-        # If the exe moved in the meantime, fix the autostart entry.
-        self.settings["autostart"] = winutil.sync_autostart()
-        self.settings.save()
-        # Start menu shortcut (packaged exe only, if requested and not yet present)
-        if self.settings["start_menu"]:
-            winutil.ensure_start_menu_shortcut()
-        winutil.sync_installed_version(__version__)
+        # Microsoft Store package: Windows owns start-at-sign-in, the Start menu entry and the uninstaller -
+        # never point the ZIP install's scheduled task or shortcut at the package's folder.
+        if not winutil.is_packaged():
+            # If the exe moved in the meantime, fix the autostart entry.
+            self.settings["autostart"] = winutil.sync_autostart()
+            self.settings.save()
+            # Start menu shortcut (packaged exe only, if requested and not yet present)
+            if self.settings["start_menu"]:
+                winutil.ensure_start_menu_shortcut()
+            winutil.sync_installed_version(__version__)
         self.local_reader = UsageReader(self.settings.resolved_data_path())
         self.api_reader = ApiReader(
             tokens=secretstore.load_tokens(),
@@ -282,6 +285,8 @@ class MonitorApp:
     # ------------------------------------------------------------ updates
 
     def _auto_update_check(self) -> None:
+        if winutil.is_packaged():
+            return                      # the Microsoft Store delivers the updates of the packaged app
         if self.settings["update_check"]:
             self.updater.manifest_url = self.settings["update_url"] or ""
             self.updater.check()
@@ -296,6 +301,8 @@ class MonitorApp:
         return ""
 
     def _poll_update(self) -> None:
+        if winutil.is_packaged():
+            return
         up = self.updater
         if self.settings["update_check"] and up.due() and not up.busy \
                 and up.state not in ("downloading", "ready"):
@@ -311,6 +318,8 @@ class MonitorApp:
             self.notify(APP_TITLE, tr("notify.update", version))
 
     def show_update(self) -> None:
+        if winutil.is_packaged():
+            return                      # never replace the package's files - the Store updates it
         from .update_dialog import UpdateDialog
 
         if self.update_dialog is None:
@@ -571,12 +580,16 @@ class MonitorApp:
         toggle(tr("menu.locked"), "locked")
         toggle(tr("menu.click_through"), "click_through")
 
-        auto = menu.addAction(tr("menu.autostart"))
-        auto.setCheckable(True)
-        auto.setChecked(winutil.autostart_enabled())
-        auto.toggled.connect(self._toggle_autostart)
+        if winutil.is_packaged():
+            # Store package: Windows switches it (Settings > Apps > Startup)
+            menu.addAction(tr("menu.autostart") + "…", self._open_startup_settings)
+        else:
+            auto = menu.addAction(tr("menu.autostart"))
+            auto.setCheckable(True)
+            auto.setChecked(winutil.autostart_enabled())
+            auto.toggled.connect(self._toggle_autostart)
 
-        if sys.platform.startswith("win"):
+        if sys.platform.startswith("win") and not winutil.is_packaged():
             startm = menu.addAction(tr("menu.start_menu"))
             startm.setCheckable(True)
             startm.setChecked(winutil.start_menu_exists())
@@ -611,10 +624,11 @@ class MonitorApp:
 
         # the PROGRAM update lives apart from the data refresh, so the two are never mixed up
         menu.addSeparator()
-        new_version = self.update_available()
-        menu.addAction(tr("menu.update_available", new_version) if new_version
-                       else tr("menu.check_update"), self.show_update)
-        menu.addSeparator()
+        if not winutil.is_packaged():           # the Store version is updated by the Store
+            new_version = self.update_available()
+            menu.addAction(tr("menu.update_available", new_version) if new_version
+                           else tr("menu.check_update"), self.show_update)
+            menu.addSeparator()
         menu.addAction(tr("menu.quit"), self.quit)
         return menu
 
@@ -700,6 +714,11 @@ class MonitorApp:
             winutil.create_start_menu_shortcut()
         else:
             winutil.remove_start_menu_shortcut()
+
+    def _open_startup_settings(self) -> None:
+        """Store package: start-at-sign-in is switched in Windows' own Startup settings."""
+        winutil.open_startup_settings()
+        self.notify(APP_TITLE, tr("set.autostart_store"))
 
     def _toggle_autostart(self, enabled: bool) -> None:
         if not winutil.set_autostart(enabled):
@@ -797,6 +816,10 @@ class MonitorApp:
 
 def _handle_cli(argv) -> Optional[int]:
     """A few switches available from the command line, without a window."""
+    if winutil.is_packaged() and any(a in argv for a in ("--enable-autostart", "--disable-autostart",
+                                                          "--check-update", "--update-now")):
+        log("CLI: not available in the Microsoft Store version (Windows manages start-up, the Store the updates)")
+        return 0
     if "--enable-autostart" in argv or "--disable-autostart" in argv:
         want = "--enable-autostart" in argv
         ok = winutil.set_autostart(want)
@@ -861,7 +884,10 @@ def run() -> int:
 
         monitor = MonitorApp(app)
         app._monitor = monitor  # keep a reference
-        log(f"started - autostart={winutil.autostart_method() or 'none'}")
+        if winutil.is_packaged():
+            log(f"started - Microsoft Store package {winutil.package_family_name() or '(forced)'}")
+        else:
+            log(f"started - autostart={winutil.autostart_method() or 'none'}")
         return app.exec()
     except BaseException:
         log("ERROR:\n" + traceback.format_exc())

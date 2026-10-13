@@ -5,6 +5,8 @@ CODE = "bg"
 NAME = "Български"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Във версията от Microsoft Store това се включва от Windows: Настройки › Приложения › Стартиране.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "ВСИЧКИ УСТРОЙСТВА · ТАЗИ СЕДМИЦА ПО ПРОДУКТИ",
     "detail.product.chat": "Чатове",

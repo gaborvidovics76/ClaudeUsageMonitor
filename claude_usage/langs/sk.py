@@ -5,6 +5,8 @@ CODE = "sk"
 NAME = "Slovenčina"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Vo verzii z Microsoft Storu to prepína Windows: Nastavenia › Aplikácie › Po spustení.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "VŠETKY ZARIADENIA · TENTO TÝŽDEŇ PODĽA PRODUKTU",
     "detail.product.chat": "Chaty",

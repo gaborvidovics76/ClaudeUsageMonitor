@@ -5,6 +5,8 @@ CODE = "fi"
 NAME = "Suomi"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store -versiossa tämän kytkee Windows: Asetukset › Sovellukset › Käynnistys.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "KAIKKI LAITTEET · TÄMÄ VIIKKO TUOTTEITTAIN",
     "detail.product.chat": "Keskustelut",

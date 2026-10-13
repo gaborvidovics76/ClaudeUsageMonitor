@@ -11,6 +11,8 @@
   4. zips it (forward-slash entries) into release\site\versions\,
   5. updates manifest.json / versions.json / CHANGELOG.md (SHA-256 included),
   6. optionally mirrors the site folder and uploads it (-Upload), then verifies it over HTTPS.
+  7. optionally (-Msix) packs the same build as an MSIX for the Microsoft Store into release\msix\
+     (tools\make_msix.ps1; the ZIP stays the website's download, the MSIX goes to Partner Center by hand).
 
   Machine-specific things (where the local web mirror is, which rclone remote to use) are NOT
   in this file. They come from release.local.psd1 next to it, which is git-ignored:
@@ -39,7 +41,8 @@ param(
     [string]$BaseUrl = "https://claudeusagemonitor.com/",
     [switch]$SkipBuild,
     [switch]$Upload,
-    [switch]$NoSign
+    [switch]$NoSign,
+    [switch]$Msix          # also build the Microsoft Store package (tools\make_msix.ps1) into release\msix\ - never uploaded
 )
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
@@ -286,3 +289,10 @@ if ($Upload) {
 Write-Host ""
 Write-Host "DONE  $ZipPath" -ForegroundColor Cyan
 Write-Host "SHA-256: $sha" -ForegroundColor DarkGray
+
+# ---------------------------------------------------------------- 7. Microsoft Store package (optional)
+if ($Msix) {
+    Write-Host ""
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "tools\make_msix.ps1")
+    if ($LASTEXITCODE -ne 0) { throw "MSIX packaging failed (the ZIP release above is complete)" }
+}

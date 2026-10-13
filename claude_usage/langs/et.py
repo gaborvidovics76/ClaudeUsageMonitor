@@ -5,6 +5,8 @@ CODE = "et"
 NAME = "Eesti"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store'i versioonis lülitab seda Windows: Sätted › Rakendused › Käivitus.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "KÕIK SEADMED · SEE NÄDAL TOOTE KAUPA",
     "detail.product.chat": "Vestlused",

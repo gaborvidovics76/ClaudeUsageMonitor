@@ -5,6 +5,8 @@ CODE = "mt"
 NAME = "Malti"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Fil-verżjoni tal-Microsoft Store, dan jaqilbu Windows: Settings › Apps › Startup.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "L-APPARATI KOLLHA · DIN IL-ĠIMGĦA SKONT IL-PRODOTT",
     "detail.product.chat": "Konverżazzjonijiet",

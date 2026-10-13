@@ -5,6 +5,8 @@ CODE = "ga"
 NAME = "Gaeilge"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "I leagan Microsoft Store, is é Windows a athraíonn é seo: Socruithe › Aipeanna › Tosú.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "GACH GLÉAS · AN TSEACHTAIN SEO DE RÉIR TÁIRGE",
     "detail.product.chat": "Comhráite",

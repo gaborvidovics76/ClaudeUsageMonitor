@@ -1,6 +1,7 @@
 <#
 .SYNOPSIS
-  Puts Microsoft's signtool.exe into tools\signtool\ without installing the whole Windows SDK.
+  Puts Microsoft's signtool.exe, makeappx.exe and makepri.exe into tools\signtool\ without installing the
+  whole Windows SDK (signing: tools\sign_release.ps1; MSIX packaging: tools\make_msix.ps1).
 
 .DESCRIPTION
   Downloads the official "Microsoft.Windows.SDK.BuildTools" package from NuGet (a signed Microsoft package,
@@ -24,9 +25,9 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $x64 = Get-ChildItem (Join-Path $tmp "x\bin\*\x64") -Directory | Sort-Object FullName -Descending | Select-Object -First 1
 if (-not $x64) { throw "no bin\<version>\x64 folder in the package" }
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
-Get-ChildItem $x64.FullName -File | Where-Object {
-    $_.Name -ieq "signtool.exe" -or $_.Name -imatch '^(Microsoft\.Windows\.Build\.(Signing|Appx)|mssign32|wintrust|appxsip|appxpackaging|opcservices|makecat|certmgr)' -or $_.Name -imatch '\.(manifest)$'
-} | Copy-Item -Destination $dest -Force
+# the whole x64 tool folder: signtool, makeappx and makepri (MSIX packaging - tools\make_msix.ps1) and the
+# libraries they load from their own folder
+Copy-Item (Join-Path $x64.FullName "*") -Destination $dest -Recurse -Force
 Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
 $exe = Join-Path $dest "signtool.exe"
 if (-not (Test-Path $exe)) { throw "signtool.exe was not extracted" }
@@ -34,4 +35,7 @@ $prev = $ErrorActionPreference; $ErrorActionPreference = "Continue"
 $first = (& $exe 2>&1 | Select-Object -First 1); $ErrorActionPreference = $prev
 Write-Host "ready: $exe"
 Write-Host "  $first"
+foreach ($t in "makeappx.exe", "makepri.exe") {
+    Write-Host ("  {0}: {1}" -f $t, $(if (Test-Path (Join-Path $dest $t)) { "ok" } else { "MISSING" }))
+}
 Write-Host "  (tools\signtool\ is git-ignored - every machine fetches its own copy)"

@@ -5,6 +5,8 @@ CODE = "vi"
 NAME = "Tiếng Việt"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Ở phiên bản Microsoft Store, Windows bật/tắt mục này: Cài đặt › Ứng dụng › Khởi động.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "MỌI THIẾT BỊ · TUẦN NÀY THEO SẢN PHẨM",
     "detail.product.chat": "Trò chuyện",

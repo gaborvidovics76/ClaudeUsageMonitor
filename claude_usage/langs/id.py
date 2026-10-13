@@ -5,6 +5,8 @@ CODE = "id"
 NAME = "Bahasa Indonesia"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Di versi Microsoft Store, Windows yang mengaturnya: Pengaturan › Aplikasi › Startup.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "SEMUA PERANGKAT · MINGGU INI PER PRODUK",
     "detail.product.chat": "Obrolan",

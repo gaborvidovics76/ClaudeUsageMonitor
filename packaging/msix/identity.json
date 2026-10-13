@@ -1,0 +1,11 @@
+{
+  "_comment": "MSIX package identity. Copy the three values from Partner Center > your app > Product management > Product identity (Package/Identity/Name, Package/Identity/Publisher, Package/Properties/PublisherDisplayName). display_name must be the app name reserved in Partner Center. Until then these placeholders build a package that installs only for local testing; the Store rejects it.",
+  "name": "VidovicsGabor.ClaudeUsageMonitor",
+  "publisher": "CN=Vidovics Gabor",
+  "publisher_display_name": "Vidovics Gábor",
+  "display_name": "Claude Usage Monitor",
+  "short_name": "Usage Monitor",
+  "description": "Always-on-top panel that shows how much of your own Claude subscription is used: the 5-hour and weekly limits, per-model limits, reset times, pace and notifications. Free, open source, no telemetry.",
+  "languages": ["en-US", "bg", "cs", "da", "de", "et", "el", "es-ES", "es-MX", "fr", "ga", "hr", "id", "it", "lv", "lt", "hu",
+                "mt", "nl", "pl", "pt-BR", "pt-PT", "ro", "ru", "sk", "sl", "fi", "sv", "tr", "vi", "ja", "ko", "zh-CN", "zh-TW"]
+}

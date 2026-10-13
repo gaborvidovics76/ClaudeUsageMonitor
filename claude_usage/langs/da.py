@@ -5,6 +5,8 @@ CODE = "da"
 NAME = "Dansk"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "I Microsoft Store-versionen styrer Windows det: Indstillinger › Apps › Start.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "ALLE ENHEDER · DENNE UGE PR. PRODUKT",
     "detail.product.chat": "Samtaler",

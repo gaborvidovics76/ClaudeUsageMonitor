@@ -5,6 +5,8 @@ CODE = "el"
 NAME = "Ελληνικά"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Στην έκδοση του Microsoft Store, το ρυθμίζουν τα Windows: Ρυθμίσεις › Εφαρμογές › Εκκίνηση.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "ΟΛΕΣ ΟΙ ΣΥΣΚΕΥΕΣ · ΑΥΤΗ Η ΕΒΔΟΜΑΔΑ ΑΝΑ ΠΡΟΪΟΝ",
     "detail.product.chat": "Συνομιλίες",

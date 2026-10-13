@@ -9,6 +9,8 @@ CODE = "es-ES"
 NAME = "Español (España)"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "En la versión de Microsoft Store, lo controla Windows: Configuración › Aplicaciones › Inicio.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "TODOS LOS DISPOSITIVOS · ESTA SEMANA POR PRODUCTO",
     "detail.product.chat": "Conversaciones",

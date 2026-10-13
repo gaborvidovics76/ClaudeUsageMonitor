@@ -5,6 +5,8 @@ CODE = "sl"
 NAME = "Slovenščina"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "V različici iz trgovine Microsoft Store to preklaplja Windows: Nastavitve › Aplikacije › Zagon.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "VSE NAPRAVE · TA TEDEN PO IZDELKIH",
     "detail.product.chat": "Klepeti",

@@ -557,13 +557,24 @@ class SettingsDialog(QDialog):
     def _tab_system(self) -> QWidget:
         page, form = self._page()
 
-        self.cb_auto = QCheckBox(tr("menu.autostart"))
-        self.cb_auto.setChecked(winutil.autostart_enabled())
-        self.cb_auto.toggled.connect(self._toggle_autostart)
-        form.addRow("", self.cb_auto)
+        packaged = winutil.is_packaged()
+        if packaged:
+            # Microsoft Store package: Windows switches start-at-sign-in (Settings > Apps > Startup)
+            btn_auto = QPushButton(tr("menu.autostart") + "…")
+            btn_auto.clicked.connect(winutil.open_startup_settings)
+            form.addRow("", btn_auto)
+            hint_auto = QLabel(tr("set.autostart_store"))
+            hint_auto.setObjectName("hint")
+            hint_auto.setWordWrap(True)
+            form.addRow("", hint_auto)
+        else:
+            self.cb_auto = QCheckBox(tr("menu.autostart"))
+            self.cb_auto.setChecked(winutil.autostart_enabled())
+            self.cb_auto.toggled.connect(self._toggle_autostart)
+            form.addRow("", self.cb_auto)
 
         btn_dir = QPushButton(tr("set.open_config"))
-        btn_dir.clicked.connect(lambda: winutil.open_path(config_dir()))
+        btn_dir.clicked.connect(lambda: winutil.open_path(winutil.visible_path(config_dir())))
         form.addRow("", btn_dir)
 
         btn_reset = QPushButton(tr("set.restore"))
@@ -572,14 +583,16 @@ class SettingsDialog(QDialog):
 
         from . import __version__
 
-        form.addRow("", self._check("update_check", tr("set.update_check")))
+        if not packaged:                        # the Store version is updated by the Store
+            form.addRow("", self._check("update_check", tr("set.update_check")))
         ver_box = QWidget()
         vlay = QHBoxLayout(ver_box)
         vlay.setContentsMargins(0, 0, 0, 0)
-        vlay.addWidget(QLabel(__version__), 1)
-        btn_upd = QPushButton(tr("menu.check_update"))
-        btn_upd.clicked.connect(self.updateRequested.emit)
-        vlay.addWidget(btn_upd)
+        vlay.addWidget(QLabel(__version__ + ("  ·  Microsoft Store" if packaged else "")), 1)
+        if not packaged:
+            btn_upd = QPushButton(tr("menu.check_update"))
+            btn_upd.clicked.connect(self.updateRequested.emit)
+            vlay.addWidget(btn_upd)
         form.addRow(tr("set.version"), ver_box)
 
         about = QLabel(tr("set.about", APP_TITLE))

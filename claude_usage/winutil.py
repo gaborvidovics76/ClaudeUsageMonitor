@@ -404,6 +404,72 @@ def open_path(path: str) -> None:
         pass
 
 
+# ------------------------------------------------------------------ Microsoft Store (MSIX) package
+#
+# Installed from the Microsoft Store the program runs inside an MSIX package: its folder is read-only, the
+# Store delivers the updates, the Start menu entry and the uninstaller come from the package, and Windows
+# itself switches the start-at-sign-in on and off (Settings > Apps > Startup). The functions below let the
+# rest of the program tell the two installs apart; the ZIP install behaves exactly as before.
+
+_PACKAGED: Optional[bool] = None
+_FAMILY: Optional[str] = None
+STARTUP_SETTINGS_URI = "ms-settings:startupapps"
+
+
+def package_family_name() -> str:
+    """The MSIX package family name when running from a package, else ""."""
+    global _FAMILY
+    if _FAMILY is not None:
+        return _FAMILY
+    _FAMILY = ""
+    if sys.platform.startswith("win"):
+        try:
+            import ctypes
+            from ctypes import wintypes
+
+            fn = ctypes.windll.kernel32.GetCurrentPackageFamilyName
+            length = wintypes.UINT(0)
+            rc = fn(ctypes.byref(length), None)
+            if rc != 15700 and length.value:          # 15700 = APPMODEL_ERROR_NO_PACKAGE
+                buf = ctypes.create_unicode_buffer(length.value)
+                if fn(ctypes.byref(length), buf) == 0:
+                    _FAMILY = buf.value
+        except (AttributeError, OSError):
+            pass
+    return _FAMILY
+
+
+def is_packaged() -> bool:
+    """True when running from the Microsoft Store (MSIX) package. CLAUDE_USAGE_MONITOR_PACKAGED=1 forces it
+    on for testing the packaged behaviour from a normal install."""
+    global _PACKAGED
+    if _PACKAGED is None:
+        _PACKAGED = os.environ.get("CLAUDE_USAGE_MONITOR_PACKAGED") == "1" or bool(package_family_name())
+    return _PACKAGED
+
+
+def open_startup_settings() -> None:
+    """Settings > Apps > Startup - where Windows switches a packaged app's start-at-sign-in."""
+    try:
+        os.startfile(STARTUP_SETTINGS_URI)
+    except (OSError, AttributeError):
+        pass
+
+
+def visible_path(path: str) -> str:
+    """Inside a package, files the program writes under %APPDATA% land in the package's private copy
+    (%LOCALAPPDATA%\\Packages\\<family>\\LocalCache\\Roaming). For "open the folder" show that copy."""
+    fam = package_family_name()
+    appdata, local = os.environ.get("APPDATA") or "", os.environ.get("LOCALAPPDATA") or ""
+    if not fam or not appdata or not local:
+        return path
+    full, base = os.path.abspath(path), os.path.abspath(appdata)
+    if not os.path.normcase(full).startswith(os.path.normcase(base)):
+        return path
+    candidate = os.path.join(local, "Packages", fam, "LocalCache", "Roaming", full[len(base):].lstrip("\\/"))
+    return candidate if os.path.exists(candidate) else path
+
+
 UNINSTALL_KEY = r"Software\Microsoft\Windows\CurrentVersion\Uninstall\ClaudeUsageMonitor"
 
 

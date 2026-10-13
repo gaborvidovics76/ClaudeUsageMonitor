@@ -5,6 +5,8 @@ CODE = "ro"
 NAME = "Română"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "În versiunea din Microsoft Store, Windows comută asta: Setări › Aplicații › Pornire.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "TOATE DISPOZITIVELE · SĂPTĂMÂNA ACEASTA PE PRODUSE",
     "detail.product.chat": "Conversații",

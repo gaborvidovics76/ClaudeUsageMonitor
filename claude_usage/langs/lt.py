@@ -5,6 +5,8 @@ CODE = "lt"
 NAME = "Lietuvių"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store versijoje tai valdo Windows: Parametrai › Programos › Paleistis.",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "VISI ĮRENGINIAI · ŠI SAVAITĖ PAGAL PRODUKTĄ",
     "detail.product.chat": "Pokalbiai",

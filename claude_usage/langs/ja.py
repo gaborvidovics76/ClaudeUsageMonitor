@@ -10,6 +10,8 @@ CODE = "ja"
 NAME = "日本語"
 
 STRINGS = {
+    # --- MSIX (Microsoft Store) -------------------------------------------------------------
+    "set.autostart_store": "Microsoft Store 版では Windows が切り替えます：設定 › アプリ › スタートアップ。",
     # --- 2.9.0: this week by product --------------------------------------------------------
     "detail.products_header": "すべてのデバイス · 今週の製品別内訳",
     "detail.product.chat": "チャット",

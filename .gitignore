@@ -56,3 +56,8 @@ DerivedData/
 
 # signtool fetched by tools/get_signtool.ps1 (machine-local)
 /tools/signtool/
+
+# MSIX (Microsoft Store) packages - built by tools/make_msix.ps1, uploaded to Partner Center by hand
+*.msix
+*.msixupload
+/release/msix/
