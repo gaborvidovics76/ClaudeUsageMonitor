@@ -114,7 +114,18 @@ final class PanelView: NSView {
 
     func detailRows() -> [PanelRow] {
         guard metrics.ok else { return [] }
-        return serverRows() + localRows()
+        return serverRows() + productRows() + localRows()
+    }
+
+    /// This week's split by product, from the server (every device). A share, not a limit - its own
+    /// header and neutral colours, like the local split. Off unless asked for.
+    private func productRows() -> [PanelRow] {
+        guard settings.showProducts else { return [] }
+        let rows = metrics.products.filter { !settings.isHidden("product:" + $0.key) && $0.percent >= 0.5 }.map {
+            PanelRow(id: "product:" + $0.key, label: $0.displayLabel, value: $0.percent, right: "\(pct0($0.percent))%", resetMs: nil)
+        }
+        if rows.isEmpty { return [] }
+        return [PanelRow(id: "@header", label: tr("detail.products_header"), value: nil, right: "", resetMs: nil)] + rows
     }
 
     private func serverRows() -> [PanelRow] {
@@ -642,7 +653,7 @@ final class PanelView: NSView {
                 y += rowHeight * k
                 continue
             }
-            let local = row.id.hasPrefix("local:")
+            let local = row.id.hasPrefix("local:") || row.id.hasPrefix("product:")
             let color: RGBA
             if local { color = pal.accent }
             else if let v = row.value { color = pal.status(v, warn: settings.warn, danger: settings.danger) }

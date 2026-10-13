@@ -117,7 +117,7 @@
   "feat.3t": "Svi uređaji, jedna brojka",
   "feat.3d": "Prijavite se u vlastitom pregledniku – kao što to radi Claude Code – i vidjet ćete potrošnju i s mobitela, preglednika i svakog drugog računala.",
   "feat.4t": "Ograničenja po modelu",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, krediti za potrošnju – svako ograničenje koje poslužitelj javlja, plus ovotjedna raspodjela po modelima.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, krediti za potrošnju, spremljena resetiranja ograničenja – svako ograničenje koje poslužitelj javlja, plus podjela tjedna po modelima i, na zahtjev, po proizvodima (Claude Code, razgovori, Cowork) na svim vašim uređajima.",
   "feat.5t": "Upozorenja koja su važna",
   "feat.5d": "Tiha obavijest pri 70% i 90% (vi birate), kad se vaše ograničenje resetira i kad spremljeno resetiranje ograničenja uskoro istječe neiskorišteno. Ništa drugo, nikada.",
   "feat.7t": "Cijeli tjedan na jednom grafikonu",

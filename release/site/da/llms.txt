@@ -15,7 +15,7 @@ Claude Usage Monitor er en gratis open source-widget til Windows 10/11 og macOS,
 - **Licens**: MIT, open source på GitHub
 - **Udvikler**: Gábor Vidovics, Ungarn – uafhængig, ikke tilknyttet Anthropic
 
-- Version: 2.8.1
+- Version: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kommer snart
 - https://claudeusagemonitor.com/da/
@@ -25,7 +25,7 @@ Claude Usage Monitor er en gratis open source-widget til Windows 10/11 og macOS,
 - **Se det komme**: Grøn, gul, rød. Panelet skifter farve længe før, du løber tør – med nedtælling til nulstillingen og et skøn over, hvornår du rammer 100 %.
 - **Går det for stærkt?**: Tempoindikatoren fortæller, om din ugegrænse smelter hurtigere, end ugen går – og regner ud, hvor du ender.
 - **Alle dine enheder, ét tal**: Log på via din egen browser – ligesom Claude Code gør – og se også forbruget fra din telefon, browseren og alle dine andre computere.
-- **Grænser pr. model**: Fable, Opus, Sonnet, Claude Code, forbrugskreditter – alle de grænser, serveren rapporterer, plus ugens fordeling mellem modellerne.
+- **Grænser pr. model**: Fable, Opus, Sonnet, Claude Code, forbrugskreditter, gemte grænsenulstillinger – hver grænse, serveren rapporterer, plus ugens fordeling pr. model og, på forespørgsel, pr. produkt (Claude Code, chats, Cowork) på tværs af alle dine enheder.
 - **Advarsler, der betyder noget**: En stille notifikation ved 70% og 90% (du vælger), når din grænse nulstilles, og når en gemt grænsenulstilling er ved at udløbe ubrugt. Intet andet, nogensinde.
 - **Den spionerer ikke. Punktum.**: Ingen telemetri, ingen analyse, ingen konto hos os. Den taler kun med Anthropic og kun om dine egne tal. Dit login-token forbliver krypteret på din computer – med Windows DPAPI eller i macOS-nøgleringen.
 - **Hele ugen i ét diagram**: Dobbeltklik på widgetten: begge grænser på én tidslinje – 6 timer, 24 timer eller 7 dage – med ugens top, dagligt gennemsnit og en prognose for ugens udgang, der skifter farve, før du skyder over.

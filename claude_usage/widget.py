@@ -23,7 +23,7 @@ from PySide6.QtWidgets import QToolTip, QWidget
 
 from . import backups as bk
 from .backup_dialog import LAMP, level_of, short_age, tooltip_text
-from .datasource import Gauge, Metrics, detail_label, fmt_age, fmt_delta
+from .datasource import Gauge, Metrics, detail_label, fmt_age, fmt_delta, product_label
 from .i18n import tr, ui_font_families
 from .settings import GAUGE_IDS, Settings
 from .theme import Palette, qc, with_alpha
@@ -205,6 +205,17 @@ class UsageWidget(QWidget):
             return []
         return [("@header", tr("detail.local_header"), None, "", None)] + rows
 
+    def _product_rows(self, hidden: set) -> list:
+        """This week's split by product, from the server (every device). A share, not a limit -
+        its own header and neutral colours, like the local split. Off unless asked for."""
+        if not self.s["show_products"]:
+            return []
+        rows = [("product:" + p.key, product_label(p), p.percent, f"{p.percent:.0f}%", None)
+                for p in self.metrics.products if ("product:" + p.key) not in hidden and p.percent >= 0.5]
+        if not rows:
+            return []
+        return [("@header", tr("detail.products_header"), None, "", None)] + rows
+
     def detail_rows(self) -> list:
         """Visible lines of the small list: (id, label, percent|None, right text, reset ms|None).
         Every category and every single row can be switched off."""
@@ -212,7 +223,7 @@ class UsageWidget(QWidget):
         if not m.ok:
             return []
         hidden = set(s["detail_hidden"] or [])
-        return self._server_rows(hidden) + self._local_rows(hidden)
+        return self._server_rows(hidden) + self._product_rows(hidden) + self._local_rows(hidden)
 
     def _server_rows(self, hidden: set) -> list:
         m, s = self.metrics, self.s
@@ -340,7 +351,7 @@ class UsageWidget(QWidget):
                            Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft, label)
                 y += ROW_H * k
                 continue
-            local = rid.startswith("local:")
+            local = rid.startswith(("local:", "product:"))
             if local:
                 color = pal.accent          # a share of your own work - nothing to warn about
             else:

@@ -5,6 +5,12 @@ CODE = "zh-CN"
 NAME = "简体中文"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "所有设备 · 本周按产品",
+    "detail.product.chat": "对话",
+    "detail.product.other": "其他",
+    "detail.product.group": "按产品",
+    "set.show_products": "本周按产品划分（Claude Code、对话、Cowork）——所有设备，来自服务器",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "已保存的额度重置",
     "detail.surface.cowork": "例程（Cowork）",

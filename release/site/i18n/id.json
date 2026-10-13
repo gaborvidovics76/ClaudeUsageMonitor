@@ -118,7 +118,7 @@
   "feat.3t": "Semua perangkat, satu angka",
   "feat.3d": "Masuk lewat browser Anda sendiri – seperti Claude Code – dan lihat juga pemakaian dari ponsel, browser, dan setiap komputer lain.",
   "feat.4t": "Batas per model",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredit penggunaan – setiap batas yang dilaporkan server, plus pembagian antarmodel minggu ini.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredit penggunaan, reset batas tersimpan – setiap batas yang dilaporkan server, ditambah pembagian minggu ini per model dan, atas permintaan, per produk (Claude Code, obrolan, Cowork) di semua perangkat Anda.",
   "feat.5t": "Peringatan yang penting saja",
   "feat.5d": "Notifikasi senyap pada 70% dan 90% (Anda yang memilih), saat batas Anda direset, dan saat reset batas tersimpan hampir kedaluwarsa tanpa dipakai. Tidak ada yang lain, selamanya.",
   "feat.7t": "Seminggu penuh dalam satu grafik",

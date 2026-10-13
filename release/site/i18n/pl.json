@@ -118,7 +118,7 @@
   "feat.3t": "Wszystkie urządzenia, jedna liczba",
   "feat.3d": "Zaloguj się we własnej przeglądarce – tak jak robi to Claude Code – i zobacz zużycie także z telefonu, przeglądarki i każdego innego komputera.",
   "feat.4t": "Limity dla poszczególnych modeli",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredyty użycia – każdy limit, który zgłasza serwer, plus podział tego tygodnia między modele.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredyty użycia, zapisane resety limitu – każdy limit raportowany przez serwer, plus podział tygodnia na modele i, na życzenie, na produkty (Claude Code, czaty, Cowork) na wszystkich Twoich urządzeniach.",
   "feat.5t": "Tylko ważne alerty",
   "feat.5d": "Dyskretne powiadomienie przy 70% i 90% (sam wybierasz), gdy limit się resetuje i gdy zapisany reset limitu ma wkrótce wygasnąć niewykorzystany. Nic więcej, nigdy.",
   "feat.7t": "Cały tydzień na jednym wykresie",

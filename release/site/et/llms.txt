@@ -15,7 +15,7 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 - **Litsents**: MIT, avatud lähtekood GitHubis
 - **Autor**: Gábor Vidovics, Ungari – sõltumatu, Anthropicuga mitte seotud
 
-- Versioon: 2.8.1
+- Versioon: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Varsti saadaval
 - https://claudeusagemonitor.com/et/
@@ -25,7 +25,7 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 - **Näed seda tulemas**: Roheline, kollane, punane. Paneel muudab värvi ammu enne, kui limiit otsa saab – koos pöördloendusega lähtestuseni ja hinnanguga, millal jõuaksid 100%-ni.
 - **Kulutad liiga kiiresti?**: Tempo näidik ütleb, kas su nädalalimiit sulab kiiremini, kui nädal möödub – ja prognoosib, kuhu välja jõuad.
 - **Kõik su seadmed, üks arv**: Logi sisse oma brauseri kaudu – nagu teeb Claude Code – ja näed ka oma telefoni, brauseri ja kõigi teiste arvutite kasutust.
-- **Mudelipõhised limiidid**: Fable, Opus, Sonnet, Claude Code, kasutuskrediit – iga limiit, millest server teatab, ning selle nädala jaotus mudelite vahel.
+- **Mudelipõhised limiidid**: Fable, Opus, Sonnet, Claude Code, kasutuskrediit, salvestatud limiidi lähtestused – iga limiit, millest server teatab, pluss selle nädala jaotus mudelite kaupa ja soovi korral toodete kaupa (Claude Code, vestlused, Cowork) kõigis sinu seadmetes.
 - **Ainult olulised hoiatused**: Vaikne teavitus 70% ja 90% juures (sina valid), kui su limiit lähtestub ja kui salvestatud limiidi lähtestus on kasutamata aegumas. Mitte midagi muud, mitte kunagi.
 - **See ei nuhi. Punkt.**: Telemeetriat, analüütikat ega meie juures kontot pole. See suhtleb ainult Anthropicuga ja ainult sinu enda arvude pärast. Sinu sisselogimistoken jääb krüptituna sinu arvutisse – Windows DPAPI või macOS-i võtmehoidja.
 - **Kogu nädal ühel graafikul**: Tee vidinal topeltklõps: mõlemad limiidid ühel ajateljel – 6 tundi, 24 tundi või 7 päeva – koos nädala tipu, päevase keskmise ja nädala lõpu prognoosiga, mis muudab värvi enne, kui limiit ületatakse.

@@ -5,6 +5,12 @@ CODE = "et"
 NAME = "Eesti"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "KÕIK SEADMED · SEE NÄDAL TOOTE KAUPA",
+    "detail.product.chat": "Vestlused",
+    "detail.product.other": "Muu",
+    "detail.product.group": "toote kaupa",
+    "set.show_products": "Selle nädala jaotus toote kaupa (Claude Code, vestlused, Cowork) – kõik seadmed, serverist",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Salvestatud limiidi lähtestused",
     "detail.surface.cowork": "Rutiinid (Cowork)",

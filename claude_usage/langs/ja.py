@@ -10,6 +10,12 @@ CODE = "ja"
 NAME = "日本語"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "すべてのデバイス · 今週の製品別内訳",
+    "detail.product.chat": "チャット",
+    "detail.product.other": "その他",
+    "detail.product.group": "製品別",
+    "set.show_products": "今週の製品別内訳（Claude Code、チャット、Cowork）– すべてのデバイス、サーバーの数値",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "保存済みの上限リセット",
     "detail.surface.cowork": "ルーチン（Cowork）",

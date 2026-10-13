@@ -52,6 +52,8 @@ is passing.
   for later, the panel shows how many you have and when they expire, and reminds you when a limit
   is full and before a reset expires unused. You redeem it on claude.ai; the program never does.
 - **The limit that applies right now** is marked with a small ▸ before its name.
+- **This week by product** (claude.ai source, opt-in) — how the week's usage splits between Claude
+  Code, chats, Cowork and the rest, across all your devices, as its own small group under the gauges.
 - **34 languages** — the entire interface (panel, menu, tray, settings, history, sign-in and the
   message-to-the-developer window), auto-detected from the system language.
 - **Starts with Windows** via a proper Scheduled Task (more reliable than a Run registry key),

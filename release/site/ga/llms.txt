@@ -15,7 +15,7 @@ Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear 
 - **Ceadúnas**: MIT, foinse oscailte ar GitHub
 - **Údar**: Gábor Vidovics, an Ungáir – neamhspleách, gan aon bhaint le hAnthropic
 
-- Leagan: 2.8.1
+- Leagan: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ag teacht go luath
 - https://claudeusagemonitor.com/ga/
@@ -25,7 +25,7 @@ Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear 
 - **Feic chugat é**: Glas, buí, dearg. Athraíonn dath an phainéil i bhfad sula mbíonn an teorainn ídithe – le comhaireamh síos go dtí an t-athshocrú agus meastachán ar cathain a bhainfeá 100% amach.
 - **An bhfuil tú á hídiú róthapa?**: Insíonn an táscaire luais duit an bhfuil do theorainn seachtaine ag leá níos tapúla ná mar atá an tseachtain ag imeacht – agus tuarann sé cá mbeidh tú ag an deireadh.
 - **Do ghléasanna go léir, uimhir amháin**: Sínigh isteach trí do bhrabhsálaí féin – mar a dhéanann Claude Code – agus feic an úsáid ó do ghuthán, ó do bhrabhsálaí agus ó gach ríomhaire eile freisin.
-- **Teorainneacha de réir samhla**: Fable, Opus, Sonnet, Claude Code, creidmheasanna úsáide – gach teorainn a thuairiscíonn an freastalaí, móide roinnt na seachtaine seo idir na samhlacha.
+- **Teorainneacha de réir samhla**: Fable, Opus, Sonnet, Claude Code, creidmheasanna úsáide, athshocruithe teorann sábháilte – gach teorainn a thuairiscíonn an freastalaí, móide roinnt na seachtaine seo de réir samhla agus, ar iarratas, de réir táirge (Claude Code, comhráite, Cowork) ar do ghléasanna go léir.
 - **Foláirimh a bhfuil tábhacht leo**: Fógra ciúin ag 70% agus 90% (tusa a roghnaíonn), nuair a athshocraítear do theorainn, agus nuair atá athshocrú teorann sábháilte ar tí dul in éag gan úsáid. Rud ar bith eile, riamh.
 - **Ní spiaireann sé. Sin sin.**: Gan teileiméadracht, gan anailísíocht, gan chuntas linne. Ní labhraíonn sé ach le hAnthropic, agus sin ar mhaithe le d'uimhreacha féin amháin. Fanann do chomhartha síniú isteach criptithe ar do ríomhaire – Windows DPAPI nó Keychain macOS.
 - **An tseachtain ar fad ar chairt amháin**: Déchliceáil ar an ngiuirléid: an dá theorainn ar amlíne amháin – 6 huaire, 24 huaire nó 7 lá – le buaic na seachtaine, an meán laethúil agus réamhaisnéis go deireadh na seachtaine a athraíonn dath sula dtéann tú thar fóir.

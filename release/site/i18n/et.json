@@ -118,7 +118,7 @@
   "feat.3t": "Kõik su seadmed, üks arv",
   "feat.3d": "Logi sisse oma brauseri kaudu – nagu teeb Claude Code – ja näed ka oma telefoni, brauseri ja kõigi teiste arvutite kasutust.",
   "feat.4t": "Mudelipõhised limiidid",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kasutuskrediit – iga limiit, millest server teatab, ning selle nädala jaotus mudelite vahel.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kasutuskrediit, salvestatud limiidi lähtestused – iga limiit, millest server teatab, pluss selle nädala jaotus mudelite kaupa ja soovi korral toodete kaupa (Claude Code, vestlused, Cowork) kõigis sinu seadmetes.",
   "feat.5t": "Ainult olulised hoiatused",
   "feat.5d": "Vaikne teavitus 70% ja 90% juures (sina valid), kui su limiit lähtestub ja kui salvestatud limiidi lähtestus on kasutamata aegumas. Mitte midagi muud, mitte kunagi.",
   "feat.7t": "Kogu nädal ühel graafikul",

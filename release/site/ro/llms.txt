@@ -15,7 +15,7 @@ O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în 
 - **Licență**: MIT, open source pe GitHub
 - **Autor**: Gábor Vidovics, Ungaria – independent, fără legătură cu Anthropic
 
-- Versiunea: 2.8.1
+- Versiunea: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: În curând
 - https://claudeusagemonitor.com/ro/
@@ -25,7 +25,7 @@ O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în 
 - **Vezi din timp ce urmează**: Verde, galben, roșu. Panoul își schimbă culoarea cu mult înainte să rămâi fără limită – cu numărătoare inversă până la resetare și o estimare a momentului în care ai ajunge la 100%.
 - **Consumi prea repede?**: Indicatorul de ritm îți spune dacă limita săptămânală se topește mai repede decât trece săptămâna – și estimează unde vei ajunge.
 - **Toate dispozitivele, o singură cifră**: Conectează-te din propriul browser – la fel ca în Claude Code – și vezi și utilizarea de pe telefon, din browser și de pe orice alt computer.
-- **Limite per model**: Fable, Opus, Sonnet, Claude Code, credite de utilizare – fiecare limită raportată de server, plus împărțirea pe modele din săptămâna aceasta.
+- **Limite per model**: Fable, Opus, Sonnet, Claude Code, credite de utilizare, resetări de limită salvate – fiecare limită raportată de server, plus împărțirea săptămânii pe modele și, la cerere, pe produse (Claude Code, conversații, Cowork) pe toate dispozitivele tale.
 - **Alerte care contează**: O notificare discretă la 70% și 90% (tu alegi), când limita ta se resetează și când o resetare de limită salvată e pe cale să expire nefolosită. Nimic altceva, niciodată.
 - **Nu spionează. Punct.**: Fără telemetrie, fără analiză, fără cont la noi. Comunică doar cu Anthropic și doar pentru propriile tale cifre. Tokenul tău de conectare rămâne criptat pe computerul tău – prin Windows DPAPI sau în Portcheiul din macOS.
 - **Toată săptămâna într-un singur grafic**: Dublu clic pe widget: ambele limite pe aceeași axă a timpului – 6 ore, 24 de ore sau 7 zile – cu vârful săptămânal, media zilnică și o estimare pentru sfârșitul săptămânii care își schimbă culoarea înainte să depășești limita.

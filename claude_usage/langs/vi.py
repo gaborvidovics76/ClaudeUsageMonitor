@@ -5,6 +5,12 @@ CODE = "vi"
 NAME = "Tiếng Việt"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "MỌI THIẾT BỊ · TUẦN NÀY THEO SẢN PHẨM",
+    "detail.product.chat": "Trò chuyện",
+    "detail.product.other": "Khác",
+    "detail.product.group": "theo sản phẩm",
+    "set.show_products": "Phân bổ tuần này theo sản phẩm (Claude Code, trò chuyện, Cowork) – mọi thiết bị, từ máy chủ",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Lượt đặt lại giới hạn đã lưu",
     "detail.surface.cowork": "Quy trình (Cowork)",

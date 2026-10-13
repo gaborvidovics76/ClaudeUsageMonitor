@@ -5,6 +5,12 @@ CODE = "bg"
 NAME = "Български"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "ВСИЧКИ УСТРОЙСТВА · ТАЗИ СЕДМИЦА ПО ПРОДУКТИ",
+    "detail.product.chat": "Чатове",
+    "detail.product.other": "Други",
+    "detail.product.group": "по продукти",
+    "set.show_products": "Разпределение на седмицата по продукти (Claude Code, чатове, Cowork) – всички устройства, от сървъра",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Запазени нулирания на лимита",
     "detail.surface.cowork": "Рутини (Cowork)",

@@ -5,6 +5,12 @@ CODE = "pt-BR"
 NAME = "Português (Brasil)"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "TODOS OS DISPOSITIVOS · ESTA SEMANA POR PRODUTO",
+    "detail.product.chat": "Conversas",
+    "detail.product.other": "Outros",
+    "detail.product.group": "por produto",
+    "set.show_products": "Divisão da semana por produto (Claude Code, conversas, Cowork) – todos os seus dispositivos, do servidor",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Redefinições de limite guardadas",
     "detail.surface.cowork": "Rotinas (Cowork)",

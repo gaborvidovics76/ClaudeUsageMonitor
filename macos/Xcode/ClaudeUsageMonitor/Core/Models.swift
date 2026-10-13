@@ -56,6 +56,22 @@ struct DetailRow {
     }
 }
 
+/// One row of the server's weekly breakdown: which product (Claude Code, chats, Cowork, other) took
+/// what share of this week's usage - every device of the account together.
+struct ProductShare {
+    var key: String         // claude_code | chat | cowork | other | ...
+    var label: String       // the server's display name (English)
+    var percent: Double = 0 // share of the week, 0-100
+
+    var displayLabel: String {
+        switch key {
+        case "chat": return tr("detail.product.chat")
+        case "other": return tr("detail.product.other")
+        default: return label.isEmpty ? key.replacingOccurrences(of: "_", with: " ").capitalized : label
+        }
+    }
+}
+
 /// Saved limit resets: a reset Anthropic hands out that the user may keep and redeem whenever they
 /// choose (on claude.ai, Settings > Usage). The app never redeems one.
 struct ResetGrants {
@@ -122,6 +138,7 @@ struct Metrics {
     var modelName = ""
     var resets: ResetGrants? = nil  // saved limit resets (claude.ai source only)
     var active = ""                 // the gauge whose limit applies right now: fh | sd | mo | ""
+    var products: [ProductShare] = []   // this week by product (claude.ai source only)
 
     var hasModel: Bool { !modelName.isEmpty }
 

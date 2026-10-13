@@ -317,7 +317,7 @@ final class MonitorController {
         let toggles: [(String, ReferenceWritableKeyPath<Settings, Bool>)] = [
             ("show_plan_badge", \.showPlanBadge), ("show_plan_name", \.showPlanName), ("show_model_list", \.showModelList),
             ("show_surfaces", \.showSurfaces), ("show_extra_usage", \.showExtraUsage), ("show_resets", \.showResets),
-            ("show_local_models", \.showLocalModels),
+            ("show_products", \.showProducts), ("show_local_models", \.showLocalModels),
         ]
         for (key, path) in toggles {
             details.add(tr("set." + key), checked: s[keyPath: path], enabled: inAPI || key == "show_local_models") {
@@ -525,7 +525,9 @@ final class MonitorController {
 
     private func settingsDetailRows() -> [(String, String)] {
         var rows = metrics.rows.map { ($0.id, $0.displayLabel) }
+        if let rs = metrics.resets, rs.count > 0 { rows.append(("resets", tr("detail.resets"))) }
         if metrics.extra != nil { rows.append(("extra", tr("detail.extra"))) }
+        rows += metrics.products.filter { $0.percent >= 0.5 }.map { ("product:" + $0.key, "\($0.displayLabel)  (\(tr("detail.product.group")))") }
         rows += panelView.localModels.map { ("local:" + $0.name, "\($0.name)  (Claude Code)") }
         return rows
     }

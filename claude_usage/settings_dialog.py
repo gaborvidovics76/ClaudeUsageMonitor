@@ -249,7 +249,7 @@ class SettingsDialog(QDialog):
         hint.setWordWrap(True)
         form.addRow(hint)
         for key in ("show_plan_badge", "show_plan_name", "show_model_list", "show_surfaces",
-                    "show_extra_usage", "show_resets"):
+                    "show_extra_usage", "show_resets", "show_products"):
             form.addRow("", self._check(key, tr("set." + key)))
         form.addRow("", self._check("show_local_models", tr("set.show_local_models")))
         local_hint = QLabel(tr("set.local_models_hint"))

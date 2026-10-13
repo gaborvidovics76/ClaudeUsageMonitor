@@ -77,6 +77,7 @@ DEFAULTS: Dict[str, Any] = {
     "show_surfaces": True,           # per-surface windows and kinds we do not know yet
     "show_extra_usage": True,        # pay-as-you-go credit
     "show_resets": True,             # saved limit resets (the row only appears when there is one)
+    "show_products": False,          # this week's split by product (server, every device) - opt-in
     "show_local_models": True,       # this week's split between the models, from Claude Code's local logs
     "local_models_path": "",         # "" = find Claude Code's log folder automatically
     "detail_hidden": [],             # ids of single rows the user unticked

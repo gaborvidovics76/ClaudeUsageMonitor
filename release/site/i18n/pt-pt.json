@@ -118,7 +118,7 @@
   "feat.3t": "Todos os teus dispositivos, um só número",
   "feat.3d": "Inicia sessão através do teu próprio browser – tal como o Claude Code – e vê também a utilização do telemóvel, do browser e de todos os teus outros computadores.",
   "feat.4t": "Limites por modelo",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, créditos de utilização – todos os limites que o servidor comunica, mais a divisão desta semana entre modelos.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, créditos de utilização, reposições de limite guardadas – cada limite que o servidor reporta, mais a divisão da semana por modelo e, a pedido, por produto (Claude Code, conversas, Cowork) em todos os teus dispositivos.",
   "feat.5t": "Alertas que contam",
   "feat.5d": "Uma notificação discreta aos 70% e 90% (tu escolhes), quando o teu limite é reposto e quando uma reposição de limite guardada está prestes a expirar sem ser usada. Nada mais, nunca.",
   "feat.7t": "A semana inteira num só gráfico",

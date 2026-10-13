@@ -18,7 +18,7 @@ from . import __version__
 from .backups import BackupChecker
 from .localmodels import LocalModelUsage
 from .updater import Updater, run_cli_update
-from .datasource import Metrics, UsageReader, detail_label, fmt_age, fmt_delta
+from .datasource import Metrics, UsageReader, detail_label, fmt_age, fmt_delta, product_label
 from .i18n import (
     available_languages,
     current_language,
@@ -735,8 +735,12 @@ class MonitorApp:
             return
         orgs = self.local_reader.organizations() or self.api_reader.organizations()
         rows = [(r.id, detail_label(r)) for r in self.metrics.rows]
+        if self.metrics.resets is not None and self.metrics.resets.count > 0:
+            rows.append(("resets", tr("detail.resets")))
         if self.metrics.extra is not None:
             rows.append(("extra", tr("detail.extra")))
+        rows += [("product:" + p.key, f"{product_label(p)}  ({tr('detail.product.group')})")
+                 for p in self.metrics.products if p.percent >= 0.5]
         rows += [("local:" + sh.name, f"{sh.name}  (Claude Code)") for sh in self.widget.local_models]
         self.dialog = SettingsDialog(self.settings, orgs, rows=rows)
         self.dialog.changed.connect(self.apply_settings)

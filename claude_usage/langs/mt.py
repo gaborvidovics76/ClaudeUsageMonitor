@@ -5,6 +5,12 @@ CODE = "mt"
 NAME = "Malti"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "L-APPARATI KOLLHA · DIN IL-ĠIMGĦA SKONT IL-PRODOTT",
+    "detail.product.chat": "Konverżazzjonijiet",
+    "detail.product.other": "Oħrajn",
+    "detail.product.group": "skont il-prodott",
+    "set.show_products": "Qsim ta' din il-ġimgħa skont il-prodott (Claude Code, chats, Cowork) – l-apparati kollha, mis-server",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Risettjar tal-limitu salvat",
     "detail.surface.cowork": "Rutini (Cowork)",

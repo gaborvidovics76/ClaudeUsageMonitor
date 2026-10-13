@@ -5,6 +5,12 @@ CODE = "sk"
 NAME = "Slovenčina"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "VŠETKY ZARIADENIA · TENTO TÝŽDEŇ PODĽA PRODUKTU",
+    "detail.product.chat": "Chaty",
+    "detail.product.other": "Ostatné",
+    "detail.product.group": "podľa produktu",
+    "set.show_products": "Rozdelenie týždňa podľa produktu (Claude Code, chaty, Cowork) – všetky zariadenia, zo servera",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Uložené resety limitu",
     "detail.surface.cowork": "Rutiny (Cowork)",

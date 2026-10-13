@@ -5,6 +5,12 @@ CODE = "ga"
 NAME = "Gaeilge"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "GACH GLÉAS · AN TSEACHTAIN SEO DE RÉIR TÁIRGE",
+    "detail.product.chat": "Comhráite",
+    "detail.product.other": "Eile",
+    "detail.product.group": "de réir táirge",
+    "set.show_products": "Roinnt na seachtaine seo de réir táirge (Claude Code, comhráite, Cowork) – gach gléas, ón bhfreastalaí",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Athshocruithe teorann sábháilte",
     "detail.surface.cowork": "Gnáthaimh (Cowork)",

@@ -118,7 +118,7 @@
   "feat.3t": "Visas ierīces, viens skaitlis",
   "feat.3d": "Pierakstieties savā pārlūkprogrammā – tāpat kā Claude Code – un redziet arī lietojumu tālrunī, pārlūkprogrammā un visos citos datoros.",
   "feat.4t": "Modeļu limiti",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, lietojuma kredīti – katrs limits, ko norāda serveris, un šīs nedēļas sadalījums starp modeļiem.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, lietojuma kredīti, saglabātās limita atiestatīšanas – katrs limits, par ko ziņo serveris, plus šīs nedēļas sadalījums pa modeļiem un pēc pieprasījuma pa produktiem (Claude Code, sarunas, Cowork) visās jūsu ierīcēs.",
   "feat.5t": "Brīdinājumi, kam ir nozīme",
   "feat.5d": "Kluss paziņojums pie 70 % un 90 % (jūs izvēlaties), kad jūsu limits atiestatās un kad saglabāta limita atiestatīšana drīz beigsies neizmantota. Nekas cits, nekad.",
   "feat.7t": "Visa nedēļa vienā diagrammā",

@@ -137,6 +137,7 @@ final class Settings: ObservableObject {
     @Stored("show_surfaces", true) var showSurfaces: Bool
     @Stored("show_extra_usage", true) var showExtraUsage: Bool
     @Stored("show_resets", true) var showResets: Bool               // saved limit resets (only when there is one)
+    @Stored("show_products", false) var showProducts: Bool          // this week's split by product (server, every device) - opt-in
     @Stored("show_local_models", true) var showLocalModels: Bool
     @Stored("detail_hidden", [String]()) var detailHidden: [String]
     @Stored("show_burn", true) var showBurn: Bool

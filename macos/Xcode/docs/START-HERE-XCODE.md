@@ -23,7 +23,7 @@ broken build is visible without a Mac.
 
 ## Versions
 
-- `MARKETING_VERSION` = the Windows version (`claude_usage/__init__.py`, now 2.8.1) – the maintainer sets it.
+- `MARKETING_VERSION` = the Windows version (`claude_usage/__init__.py`, now 2.9.0) – the maintainer sets it.
 - `CURRENT_PROJECT_VERSION` = build number, +1 for every App Store upload – you set it (General → Build).
 
 ## The claude.ai sign-in switch

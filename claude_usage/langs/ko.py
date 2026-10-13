@@ -11,6 +11,12 @@ CODE = "ko"
 NAME = "한국어"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "모든 기기 · 이번 주 제품별 비중",
+    "detail.product.chat": "채팅",
+    "detail.product.other": "기타",
+    "detail.product.group": "제품별",
+    "set.show_products": "이번 주 제품별 비중(Claude Code, 채팅, Cowork) – 모든 기기, 서버 기준",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "저장된 한도 초기화",
     "detail.surface.cowork": "루틴(Cowork)",

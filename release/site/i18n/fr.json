@@ -118,7 +118,7 @@
   "feat.3t": "Tous vos appareils, un seul chiffre",
   "feat.3d": "Connectez-vous via votre propre navigateur – comme le fait Claude Code – et voyez aussi l'utilisation de votre téléphone, de votre navigateur et de tous vos autres ordinateurs.",
   "feat.4t": "Limites par modèle",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, crédits d'utilisation – toutes les limites communiquées par le serveur, plus la répartition de la semaine entre les modèles.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, crédits d'utilisation, réinitialisations de limite en réserve – chaque limite que le serveur signale, plus la répartition de la semaine par modèle et, à la demande, par produit (Claude Code, discussions, Cowork) sur tous vos appareils.",
   "feat.5t": "Des alertes qui comptent",
   "feat.5d": "Une notification discrète à 70 % et 90 % (à votre choix), quand votre limite se réinitialise, et quand une réinitialisation de limite en réserve est sur le point d'expirer sans avoir servi. Rien d'autre, jamais.",
   "feat.7t": "Toute votre semaine sur un seul graphique",

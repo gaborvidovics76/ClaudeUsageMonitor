@@ -188,6 +188,8 @@ OneDrive csak online elérhető fájljait nem nyitja meg.
   limit-visszaállítást, a panel mutatja, hány van és mikor jár le. Beváltani a claude.ai-on
   tudod; a program soha nem váltja be helyetted.
 - **Ami most korlátoz**: egy kis ▸ jel a mérő neve előtt mutatja, melyik limit fog éppen.
+- **E heti megoszlás termékenként** (claude.ai forrás, kérésre): hogyan oszlik meg a heti használat
+  a Claude Code, a csevegések, a Cowork és a többi között, az összes eszközödön, külön kis csoportban.
 - **Adatforrás**: profil (ha több fiókod van), frissítési gyakoriság, egyedi adatfájl.
 - **Rendszer**: automatikus indítás, beállítások mappa, alapértelmezések visszaállítása.
 

@@ -1,158 +1,194 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.8.1",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.1.zip",
-    "sha256":  "669342cc45238d19bb2ba66433d3c606b966bbb71055dca99cdd787996867360",
-    "bytes":  49159234,
+    "version":  "2.9.0",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.0.zip",
+    "sha256":  "6a2fb6719f2f1f6fe134497735005201cf3a2f2c5ab4bd59a081561069d4a708",
+    "bytes":  49167109,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-13T10:28:50Z",
+    "last_updated":  "2026-10-13T10:57:51Z",
     "notes":  {
                   "en":  [
-                             "The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code\u0027s version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.",
-                             "Why so soon after 2.8.0? Because we checked it live right after the release and found the one thing still in the way – and we would rather fix it today than leave you with a feature that only works on paper. For you."
+                             "New, on request: this week by product. The server now tells how your weekly usage splits between Claude Code, chats, Cowork and the rest – across all your devices together. It appears as its own small group under the gauges, with the same neutral bars as the per-model split. Off by default: switch it on under Settings › Details, so nothing changes for you unless you ask.",
+                             "The saved limit reset now has its own tick in the row list of Settings › Details, like every other row.",
+                             "Why a new version? Because Anthropic keeps adding to the usage data, and we keep reading it – so you always see everything there is. For you."
                          ],
                   "hu":  [
-                             "Az elmentett visszaállítás mostantól tényleg megjelenik. Az Anthropic csak friss Claude Code-kliensnek adja ki, ezért a program mostantól az aktuális verzióval azonosítja magát – és a gépeden telepített Claude Code verziójával, ha az újabb. Ha van visszaállításod, ettől a verziótól a panel mutatja, a lejáratával együtt.",
-                             "Miért ilyen gyorsan a 2.8.0 után? Mert a kiadás után azonnal élesben ellenőriztük, és megtaláltuk az egyetlen dolgot, ami még útban volt – és inkább ma javítjuk, mint hogy egy csak papíron működő funkciót hagyjunk nálatok. Értetek."
+                             "Új, kérésre: e heti megoszlás termékenként. A szerver mostantól elárulja, hogyan oszlik meg a heti használatod a Claude Code, a csevegések, a Cowork és a többi között – az összes eszközödön együtt. Külön kis csoportként jelenik meg a mérők alatt, ugyanolyan semleges sávokkal, mint a modellenkénti megoszlás. Alapból ki van kapcsolva: a Beállítások › Részletek alatt kapcsolható be, így kérés nélkül semmi sem változik.",
+                             "Az elmentett visszaállításnak is saját pipája van a Beállítások › Részletek sorlistájában, mint minden más sornak.",
+                             "Miért új verzió? Mert az Anthropic folyamatosan bővíti a használati adatokat, mi pedig folyamatosan olvassuk – hogy mindig mindent láss, ami csak van. Értetek."
                          ],
                   "de":  [
-                             "Die gespeicherte Limit-Zurücksetzung erscheint jetzt wirklich. Anthropic gibt sie nur an einen aktuellen Claude-Code-Client heraus, deshalb meldet sich das Programm jetzt mit der aktuellen Version – und mit der Version deines installierten Claude Code, wenn die neuer ist. Hast du eine Zurücksetzung, zeigt das Panel sie ab dieser Version an, samt Ablaufdatum.",
-                             "Warum so kurz nach 2.8.0? Weil wir es direkt nach der Veröffentlichung live geprüft und die eine Sache gefunden haben, die noch im Weg stand – und wir beheben sie lieber heute, als dir eine Funktion zu lassen, die nur auf dem Papier funktioniert. Für dich."
+                             "Neu, auf Wunsch: diese Woche nach Produkt. Der Server verrät jetzt, wie sich deine Wochennutzung auf Claude Code, Unterhaltungen, Cowork und den Rest verteilt – über alle deine Geräte zusammen. Es erscheint als eigene kleine Gruppe unter den Anzeigen, mit denselben neutralen Balken wie die Aufteilung nach Modell. Standardmäßig aus: unter Einstellungen › Details einschalten, damit sich ohne deinen Wunsch nichts ändert.",
+                             "Die gespeicherte Limit-Zurücksetzung hat jetzt ein eigenes Häkchen in der Zeilenliste unter Einstellungen › Details, wie jede andere Zeile.",
+                             "Warum eine neue Version? Weil Anthropic die Nutzungsdaten laufend erweitert und wir sie laufend lesen – damit du immer alles siehst, was es gibt. Für dich."
                          ],
                   "fr":  [
-                             "La réinitialisation de limite en réserve apparaît désormais vraiment. Anthropic ne la fournit qu\u0027à un client Claude Code à jour, c\u0027est pourquoi le programme s\u0027identifie maintenant avec la version actuelle – et avec la version de votre Claude Code installé si elle est plus récente. Si vous avez une réinitialisation, le panneau l\u0027affiche à partir de cette version, avec sa date d\u0027expiration.",
-                             "Pourquoi si vite après la 2.8.0 ? Parce que nous l\u0027avons vérifié en conditions réelles juste après la sortie et trouvé la seule chose qui bloquait encore – et nous préférons corriger aujourd\u0027hui plutôt que de vous laisser une fonction qui ne marche que sur le papier. Pour vous."
+                             "Nouveau, à la demande : cette semaine par produit. Le serveur indique désormais comment votre utilisation hebdomadaire se répartit entre Claude Code, les discussions, Cowork et le reste – sur tous vos appareils réunis. Cela apparaît comme un petit groupe à part sous les jauges, avec les mêmes barres neutres que la répartition par modèle. Désactivé par défaut : activez-le dans Paramètres › Détails, ainsi rien ne change sans votre demande.",
+                             "La réinitialisation de limite en réserve a maintenant sa propre case dans la liste des lignes de Paramètres › Détails, comme toute autre ligne.",
+                             "Pourquoi une nouvelle version ? Parce qu\u0027Anthropic enrichit sans cesse les données d\u0027utilisation et que nous les lisons sans cesse – pour que vous voyiez toujours tout ce qui existe. Pour vous."
                          ],
                   "es":  [
-                             "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
-                             "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
+                             "Nuevo, a petición: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio bajo los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado por defecto: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+                             "El reinicio de límite guardado tiene ahora su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+                             "¿Por qué una nueva versión? Porque Anthropic sigue ampliando los datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Por ti."
                          ],
                   "it":  [
-                             "Il reset del limite salvato ora compare davvero. Anthropic lo fornisce solo a un client Claude Code aggiornato, perciò il programma ora si presenta con la versione attuale – e con la versione del tuo Claude Code installato quando è più recente. Se hai un reset, da questa versione il pannello lo mostra, insieme alla scadenza.",
-                             "Perché così presto dopo la 2.8.0? Perché l\u0027abbiamo verificato dal vivo subito dopo il rilascio e abbiamo trovato l\u0027unica cosa che ancora intralciava – e preferiamo sistemarla oggi piuttosto che lasciarti una funzione che funziona solo sulla carta. Per te."
+                             "Novità, su richiesta: questa settimana per prodotto. Il server ora dice come si ripartisce il tuo uso settimanale tra Claude Code, conversazioni, Cowork e il resto – su tutti i tuoi dispositivi insieme. Compare come un piccolo gruppo a sé sotto gli indicatori, con le stesse barre neutre della ripartizione per modello. Disattivato di default: attivalo in Impostazioni › Dettagli, così nulla cambia se non lo chiedi.",
+                             "Il reset del limite salvato ha ora la sua casella nell\u0027elenco delle righe di Impostazioni › Dettagli, come ogni altra riga.",
+                             "Perché una nuova versione? Perché Anthropic continua ad ampliare i dati di utilizzo e noi continuiamo a leggerli – così vedi sempre tutto quello che c\u0027è. Per te."
                          ],
                   "pt":  [
-                             "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
-                             "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
+                             "Novo, a pedido: esta semana por produto. O servidor passa a dizer como a tua utilização semanal se divide entre Claude Code, conversas, Cowork e o resto – em todos os teus dispositivos juntos. Aparece como um pequeno grupo próprio por baixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por defeito: liga-o em Definições › Detalhes, para que nada mude sem o pedires.",
+                             "A reposição de limite guardada tem agora a sua própria caixa na lista de linhas de Definições › Detalhes, como qualquer outra linha.",
+                             "Porquê uma nova versão? Porque a Anthropic continua a acrescentar aos dados de utilização e nós continuamos a lê-los – para veres sempre tudo o que existe. Por ti."
                          ],
                   "pl":  [
-                             "Zapisany reset limitu teraz naprawdę się pokazuje. Anthropic udostępnia go tylko aktualnemu klientowi Claude Code, dlatego program przedstawia się teraz bieżącą wersją – a wersją zainstalowanego u Ciebie Claude Code, gdy jest nowsza. Jeśli masz reset, od tej wersji panel go pokazuje, razem z datą wygaśnięcia.",
-                             "Dlaczego tak szybko po 2.8.0? Bo sprawdziliśmy to na żywo zaraz po wydaniu i znaleźliśmy jedyną rzecz, która jeszcze przeszkadzała – i wolimy naprawić ją dziś, niż zostawić Ci funkcję działającą tylko na papierze. Dla Ciebie."
+                             "Nowość, na życzenie: ten tydzień według produktu. Serwer podaje teraz, jak Twoje tygodniowe użycie dzieli się między Claude Code, czaty, Cowork i resztę – na wszystkich Twoich urządzeniach razem. Pojawia się jako osobna mała grupa pod wskaźnikami, z tymi samymi neutralnymi paskami co podział na modele. Domyślnie wyłączone: włącz w Ustawienia › Szczegóły, więc bez Twojej prośby nic się nie zmienia.",
+                             "Zapisany reset limitu ma teraz własne pole w liście wierszy w Ustawienia › Szczegóły, jak każdy inny wiersz.",
+                             "Dlaczego nowa wersja? Bo Anthropic wciąż rozbudowuje dane o użyciu, a my wciąż je czytamy – żebyś zawsze widział wszystko, co jest. Dla Ciebie."
                          ],
                   "nl":  [
-                             "De bewaarde limietreset verschijnt nu echt. Anthropic geeft hem alleen aan een actuele Claude Code-client, dus het programma meldt zich nu met de actuele versie – en met de versie van je geïnstalleerde Claude Code als die nieuwer is. Heb je een reset, dan toont het paneel hem vanaf deze versie, met de vervaldatum.",
-                             "Waarom zo snel na 2.8.0? Omdat we het direct na de release live hebben gecontroleerd en het ene ding vonden dat nog in de weg zat – en we lossen dat liever vandaag op dan je een functie te laten die alleen op papier werkt. Voor jou."
+                             "Nieuw, op verzoek: deze week per product. De server vertelt nu hoe je weekgebruik is verdeeld over Claude Code, gesprekken, Cowork en de rest – over al je apparaten samen. Het verschijnt als een eigen groepje onder de meters, met dezelfde neutrale balken als de verdeling per model. Standaard uit: zet het aan onder Instellingen › Details, zodat er niets verandert tenzij je erom vraagt.",
+                             "De bewaarde limietreset heeft nu een eigen vinkje in de rijenlijst van Instellingen › Details, net als elke andere rij.",
+                             "Waarom een nieuwe versie? Omdat Anthropic de gebruiksgegevens blijft uitbreiden en wij ze blijven lezen – zodat je altijd alles ziet wat er is. Voor jou."
                          ],
                   "ru":  [
-                             "Сохранённый сброс лимита теперь действительно отображается. Anthropic выдаёт его только актуальному клиенту Claude Code, поэтому программа теперь представляется текущей версией – а версией установленного у вас Claude Code, если она новее. Если сброс у вас есть, с этой версии панель показывает его вместе со сроком действия.",
-                             "Почему так скоро после 2.8.0? Потому что мы проверили это вживую сразу после выпуска и нашли единственное, что ещё мешало – и предпочитаем исправить сегодня, а не оставлять вам функцию, которая работает только на бумаге. Для вас."
+                             "Новое, по запросу: эта неделя по продуктам. Сервер теперь сообщает, как ваше недельное использование делится между Claude Code, чатами, Cowork и остальным – по всем вашим устройствам вместе. Это отдельная небольшая группа под индикаторами, с теми же нейтральными полосками, что и распределение по моделям. По умолчанию выключено: включите в Настройки › Детали, чтобы без вашего желания ничего не менялось.",
+                             "У сохранённого сброса лимита теперь есть собственный флажок в списке строк в Настройки › Детали, как у любой другой строки.",
+                             "Почему новая версия? Потому что Anthropic продолжает расширять данные об использовании, а мы продолжаем их читать – чтобы вы всегда видели всё, что есть. Для вас."
                          ],
                   "cs":  [
-                             "Uložený reset limitu se teď opravdu zobrazí. Anthropic ho vydává jen aktuálnímu klientovi Claude Code, proto se program nyní hlásí aktuální verzí – a verzí vašeho nainstalovaného Claude Code, když je novější. Pokud reset máte, od této verze ho panel ukáže i s datem vypršení.",
-                             "Proč tak brzy po 2.8.0? Protože jsme to hned po vydání ověřili naživo a našli jedinou věc, která ještě stála v cestě – a raději ji opravíme dnes, než abychom vám nechali funkci, která funguje jen na papíře. Pro vás."
+                             "Novinka na přání: tento týden podle produktu. Server teď prozradí, jak se vaše týdenní využití dělí mezi Claude Code, chaty, Cowork a ostatní – na všech vašich zařízeních dohromady. Zobrazí se jako vlastní malá skupina pod ukazateli, se stejnými neutrálními pruhy jako rozdělení podle modelů. Ve výchozím stavu vypnuto: zapněte v Nastavení › Podrobnosti, takže bez vašeho přání se nic nemění.",
+                             "Uložený reset limitu má teď vlastní zaškrtávací políčko v seznamu řádků v Nastavení › Podrobnosti, jako každý jiný řádek.",
+                             "Proč nová verze? Protože Anthropic data o využití stále rozšiřuje a my je stále čteme – abyste vždy viděli všechno, co existuje. Pro vás."
                          ],
                   "tr":  [
-                             "Kayıtlı limit sıfırlama artık gerçekten görünüyor. Anthropic bunu yalnızca güncel bir Claude Code istemcisine veriyor; bu yüzden program artık kendini güncel sürümle tanıtıyor – yüklü Claude Code\u0027un daha yeniyse onun sürümüyle. Bir sıfırlaman varsa panel bu sürümden itibaren son kullanma tarihiyle birlikte gösteriyor.",
-                             "Neden 2.8.0\u0027dan bu kadar kısa süre sonra? Çünkü yayından hemen sonra canlı olarak kontrol ettik ve hâlâ engel olan tek şeyi bulduk – sana yalnızca kâğıt üstünde çalışan bir özellik bırakmaktansa bugün düzeltmeyi yeğleriz. Senin için."
+                             "Yeni, istek üzerine: bu hafta ürüne göre. Sunucu artık haftalık kullanımının Claude Code, sohbetler, Cowork ve diğerleri arasında nasıl dağıldığını söylüyor – tüm cihazlarında birlikte. Göstergelerin altında kendi küçük grubu olarak, modele göre dağılımla aynı nötr çubuklarla görünüyor. Varsayılan olarak kapalı: Ayarlar › Ayrıntılar altından aç; böylece sen istemeden hiçbir şey değişmez.",
+                             "Kayıtlı limit sıfırlamanın artık Ayarlar › Ayrıntılar satır listesinde, diğer her satır gibi kendi onay kutusu var.",
+                             "Neden yeni sürüm? Çünkü Anthropic kullanım verilerini genişletmeye devam ediyor, biz de okumaya devam ediyoruz – böylece var olan her şeyi her zaman görürsün. Senin için."
                          ],
                   "pt-PT":  [
-                                "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
-                                "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
+                                "Novo, a pedido: esta semana por produto. O servidor passa a dizer como a tua utilização semanal se divide entre Claude Code, conversas, Cowork e o resto – em todos os teus dispositivos juntos. Aparece como um pequeno grupo próprio por baixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por defeito: liga-o em Definições › Detalhes, para que nada mude sem o pedires.",
+                                "A reposição de limite guardada tem agora a sua própria caixa na lista de linhas de Definições › Detalhes, como qualquer outra linha.",
+                                "Porquê uma nova versão? Porque a Anthropic continua a acrescentar aos dados de utilização e nós continuamos a lê-los – para veres sempre tudo o que existe. Por ti."
                             ],
                   "pt-BR":  [
-                                "A redefinição de limite guardada agora aparece de verdade. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa agora se identifica com a versão atual – e com a versão do seu Claude Code instalado quando ela for mais nova. Se você tiver uma redefinição, a partir desta versão o painel a mostra, junto com a data de expiração.",
-                                "Por que tão cedo depois da 2.8.0? Porque verificamos ao vivo logo após o lançamento e encontramos a única coisa que ainda atrapalhava – e preferimos corrigir hoje a deixar você com um recurso que só funciona no papel. Para você."
+                                "Novo, a pedido: esta semana por produto. O servidor agora conta como seu uso semanal se divide entre Claude Code, conversas, Cowork e o restante – em todos os seus dispositivos juntos. Aparece como um pequeno grupo próprio abaixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por padrão: ative em Configurações › Detalhes, assim nada muda sem você pedir.",
+                                "A redefinição de limite guardada agora tem sua própria caixa na lista de linhas de Configurações › Detalhes, como qualquer outra linha.",
+                                "Por que uma nova versão? Porque a Anthropic continua ampliando os dados de uso e nós continuamos lendo – para que você sempre veja tudo o que existe. Para você."
                             ],
                   "es-ES":  [
-                                "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
-                                "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
+                                "Nuevo, a petición: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio bajo los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado por defecto: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+                                "El reinicio de límite guardado tiene ahora su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+                                "¿Por qué una nueva versión? Porque Anthropic sigue ampliando los datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Por ti."
                             ],
                   "es-419":  [
-                                 "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su vencimiento.",
-                                 "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que todavía estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona en el papel. Para ti."
+                                 "Nuevo, a pedido: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio debajo de los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado de forma predeterminada: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+                                 "El reinicio de límite guardado ahora tiene su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+                                 "¿Por qué una nueva versión? Porque Anthropic sigue agregando datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Para ti."
                              ],
                   "ja":  [
-                             "保存済みの上限リセットが、今度こそ表示されます。Anthropic はこれを最新の Claude Code クライアントにしか渡さないため、アプリは現在のバージョンで自分を名乗るようになりました。インストール済みの Claude Code の方が新しければ、そのバージョンを使います。リセットをお持ちなら、このバージョンからパネルに期限とともに表示されます。",
-                             "なぜ 2.8.0 のすぐ後に？ リリース直後に実際の環境で確認し、まだ邪魔をしていたただ一つの点を見つけたからです。紙の上でしか動かない機能を残すより、今日直すことを選びました。あなたのために。"
+                             "ご要望にお応えして新登場：今週の製品別内訳。サーバーが、今週の使用量が Claude Code・チャット・Cowork・その他にどう分かれているかを、すべてのデバイスを合わせて教えてくれるようになりました。メーターの下に独立した小さなグループとして、モデル別内訳と同じ落ち着いた色のバーで表示されます。初期状態ではオフです。「設定 › 詳細」でオンにできるので、お望みでない限り何も変わりません。",
+                             "保存済みの上限リセットにも、「設定 › 詳細」の行一覧で他の行と同じように専用のチェックが付きました。",
+                             "なぜ新バージョンなのか？ Anthropic が使用状況データを増やし続け、私たちはそれを読み続けているからです。あるものはすべて、いつでも見えるように。あなたのために。"
                          ],
                   "ko":  [
-                             "저장된 한도 초기화가 이제 정말로 표시돼요. Anthropic은 이를 최신 Claude Code 클라이언트에만 제공하기 때문에, 앱이 이제 최신 버전으로 자신을 알려요. 설치된 Claude Code가 더 새 버전이면 그 버전을 사용해요. 초기화가 있다면 이 버전부터 패널에 만료일과 함께 표시돼요.",
-                             "왜 2.8.0 직후에 또 나왔냐고요? 출시 직후 실제 환경에서 확인해 아직 걸림돌이던 단 하나를 찾았기 때문이에요. 서류상으로만 작동하는 기능을 남겨두기보다 오늘 고치는 쪽을 택했어요. 여러분을 위해서."
+                             "요청에 따라 새로 추가: 이번 주 제품별 비중. 이제 서버가 이번 주 사용량이 Claude Code, 채팅, Cowork, 기타에 어떻게 나뉘는지 모든 기기를 합쳐 알려줘요. 게이지 아래에 별도의 작은 그룹으로, 모델별 비중과 같은 중립색 막대로 표시돼요. 기본은 꺼짐이에요. 설정 › 세부 정보에서 켤 수 있으니, 원하지 않으면 아무것도 바뀌지 않아요.",
+                             "저장된 한도 초기화도 이제 설정 › 세부 정보의 행 목록에서 다른 행처럼 자체 체크박스를 가져요.",
+                             "왜 새 버전일까요? Anthropic이 사용량 데이터를 계속 늘리고, 우리도 계속 읽기 때문이에요. 있는 건 언제나 전부 보이도록. 여러분을 위해서."
                          ],
                   "zh-CN":  [
-                                "已保存的额度重置现在真的会显示了。Anthropic 只把它提供给最新的 Claude Code 客户端，因此程序现在以当前版本表明身份——如果你安装的 Claude Code 更新，则使用它的版本。如果你有重置，从这个版本起面板会连同到期时间一起显示。",
-                                "为什么在 2.8.0 之后这么快又发版？因为发布后我们立刻在真实环境中做了检查，找到了唯一还挡着路的问题——我们宁愿今天修好，也不愿留给你一个只在纸面上可用的功能。为了你。"
+                                "应要求新增：本周按产品划分。服务器现在会告诉你本周用量在 Claude Code、对话、Cowork 和其他之间如何分配——汇总你的所有设备。它以独立的小分组显示在仪表下方，使用与按模型划分相同的中性色条。默认关闭：在“设置 › 详情”中开启，不主动要求就不会有任何变化。",
+                                "已保存的额度重置现在在“设置 › 详情”的行列表中也有自己的勾选项，和其他行一样。",
+                                "为什么发布新版本？因为 Anthropic 不断丰富用量数据，我们也不断读取——让你总能看到所有存在的信息。为了你。"
                             ],
                   "zh-TW":  [
-                                "已儲存的額度重設現在真的會顯示了。Anthropic 只把它提供給最新的 Claude Code 用戶端，因此程式現在以目前版本表明身分——如果你安裝的 Claude Code 更新，則使用它的版本。如果你有重設，從這個版本起面板會連同到期時間一起顯示。",
-                                "為什麼在 2.8.0 之後這麼快又發版？因為發布後我們立刻在真實環境中檢查，找到了唯一還擋著路的問題——我們寧願今天修好，也不願留給你一個只在紙上可用的功能。為了你。"
+                                "應要求新增：本週依產品劃分。伺服器現在會告訴你本週用量在 Claude Code、對話、Cowork 和其他之間如何分配——彙總你的所有裝置。它以獨立的小群組顯示在儀表下方，使用與依模型劃分相同的中性色條。預設關閉：在「設定 › 詳細資料」中開啟，不主動要求就不會有任何變化。",
+                                "已儲存的額度重設現在在「設定 › 詳細資料」的列清單中也有自己的勾選項，和其他列一樣。",
+                                "為什麼推出新版本？因為 Anthropic 不斷擴充用量資料，我們也不斷讀取——讓你總能看到所有存在的資訊。為了你。"
                             ],
                   "id":  [
-                             "Reset batas tersimpan kini benar-benar muncul. Anthropic hanya memberikannya kepada klien Claude Code terbaru, jadi program kini memperkenalkan diri dengan versi terbaru – dan dengan versi Claude Code yang terpasang jika lebih baru. Jika Anda punya reset, mulai versi ini panel menampilkannya beserta masa berlakunya.",
-                             "Mengapa begitu cepat setelah 2.8.0? Karena kami mengeceknya langsung setelah rilis dan menemukan satu hal yang masih menghalangi – dan kami lebih memilih memperbaikinya hari ini daripada meninggalkan fitur yang hanya berfungsi di atas kertas. Untuk Anda."
+                             "Baru, atas permintaan: minggu ini per produk. Server kini memberi tahu bagaimana penggunaan mingguan Anda terbagi antara Claude Code, obrolan, Cowork, dan sisanya – di semua perangkat Anda sekaligus. Tampil sebagai grup kecil tersendiri di bawah pengukur, dengan bilah netral yang sama seperti pembagian per model. Nonaktif secara bawaan: aktifkan di Pengaturan › Detail, jadi tidak ada yang berubah kecuali Anda memintanya.",
+                             "Reset batas tersimpan kini punya kotak centangnya sendiri di daftar baris Pengaturan › Detail, seperti baris lainnya.",
+                             "Mengapa versi baru? Karena Anthropic terus menambah data penggunaan, dan kami terus membacanya – supaya Anda selalu melihat semua yang ada. Untuk Anda."
                          ],
                   "vi":  [
-                             "Lượt đặt lại giới hạn đã lưu giờ thực sự hiển thị. Anthropic chỉ cấp nó cho ứng dụng Claude Code phiên bản mới, nên chương trình giờ tự nhận diện bằng phiên bản hiện tại – và bằng phiên bản Claude Code bạn đã cài nếu mới hơn. Nếu bạn có lượt đặt lại, từ phiên bản này bảng điều khiển sẽ hiển thị cùng hạn dùng.",
-                             "Vì sao lại sớm thế sau 2.8.0? Vì ngay sau khi phát hành chúng tôi đã kiểm tra thực tế và tìm ra điều duy nhất còn cản trở – và chúng tôi thà sửa hôm nay còn hơn để lại cho bạn một tính năng chỉ chạy trên giấy. Vì bạn."
+                             "Mới, theo yêu cầu: tuần này theo sản phẩm. Máy chủ giờ cho biết mức sử dụng tuần của bạn được phân bổ ra sao giữa Claude Code, trò chuyện, Cowork và phần còn lại – trên tất cả thiết bị của bạn cộng lại. Nó hiện thành một nhóm nhỏ riêng dưới các đồng hồ, với những thanh màu trung tính như phần phân bổ theo mô hình. Mặc định tắt: bật trong Cài đặt › Chi tiết, nên không có gì thay đổi trừ khi bạn yêu cầu.",
+                             "Lượt đặt lại giới hạn đã lưu giờ có ô đánh dấu riêng trong danh sách dòng ở Cài đặt › Chi tiết, như mọi dòng khác.",
+                             "Vì sao có phiên bản mới? Vì Anthropic không ngừng bổ sung dữ liệu sử dụng, và chúng tôi không ngừng đọc chúng – để bạn luôn thấy mọi thứ đang có. Vì bạn."
                          ],
                   "ro":  [
-                             "Resetarea de limită salvată apare acum cu adevărat. Anthropic o oferă doar unui client Claude Code actual, așa că programul se prezintă acum cu versiunea curentă – și cu versiunea Claude Code instalată la tine, dacă e mai nouă. Dacă ai o resetare, de la această versiune panoul o arată, împreună cu data expirării.",
-                             "De ce atât de repede după 2.8.0? Pentru că am verificat-o live imediat după lansare și am găsit singurul lucru care încă stătea în cale – și preferăm să-l reparăm azi decât să-ți lăsăm o funcție care merge doar pe hârtie. Pentru tine."
+                             "Nou, la cerere: săptămâna aceasta pe produse. Serverul arată acum împărțirea utilizării tale săptămânale între Claude Code, conversații, Cowork și restul – pe toate dispozitivele tale împreună. Apare ca un mic grup propriu sub indicatoare, cu aceleași bare neutre ca împărțirea pe modele. Dezactivat implicit: pornește-l din Setări › Detalii, ca nimic să nu se schimbe fără să ceri.",
+                             "Resetarea de limită salvată are acum propria bifă în lista de rânduri din Setări › Detalii, ca orice alt rând.",
+                             "De ce o versiune nouă? Pentru că Anthropic adaugă mereu la datele de utilizare, iar noi le citim mereu – ca să vezi mereu tot ce există. Pentru tine."
                          ],
                   "el":  [
-                             "Η αποθηκευμένη επαναφορά ορίου εμφανίζεται πλέον πραγματικά. Η Anthropic τη δίνει μόνο σε ενημερωμένο πρόγραμμα-πελάτη Claude Code, γι\u0027 αυτό το πρόγραμμα συστήνεται τώρα με την τρέχουσα έκδοση – και με την έκδοση του εγκατεστημένου σας Claude Code όταν είναι νεότερη. Αν έχετε επαναφορά, από αυτή την έκδοση ο πίνακας τη δείχνει, μαζί με τη λήξη της.",
-                             "Γιατί τόσο σύντομα μετά την 2.8.0; Επειδή την ελέγξαμε ζωντανά αμέσως μετά την κυκλοφορία και βρήκαμε το ένα πράγμα που ακόμη εμπόδιζε – και προτιμούμε να το διορθώσουμε σήμερα παρά να σας αφήσουμε μια λειτουργία που δουλεύει μόνο στα χαρτιά. Για εσάς."
+                             "Νέο, κατόπιν αιτήματος: αυτή η εβδομάδα ανά προϊόν. Ο διακομιστής λέει πλέον πώς μοιράζεται η εβδομαδιαία χρήση σας ανάμεσα σε Claude Code, συνομιλίες, Cowork και τα υπόλοιπα – σε όλες τις συσκευές σας μαζί. Εμφανίζεται ως ξεχωριστή μικρή ομάδα κάτω από τους μετρητές, με τις ίδιες ουδέτερες μπάρες όπως η κατανομή ανά μοντέλο. Απενεργοποιημένο από προεπιλογή: ενεργοποιήστε το στο Ρυθμίσεις › Λεπτομέρειες, ώστε τίποτα να μην αλλάξει αν δεν το ζητήσετε.",
+                             "Η αποθηκευμένη επαναφορά ορίου έχει πλέον δικό της πλαίσιο επιλογής στη λίστα γραμμών του Ρυθμίσεις › Λεπτομέρειες, όπως κάθε άλλη γραμμή.",
+                             "Γιατί νέα έκδοση; Επειδή η Anthropic συνεχίζει να εμπλουτίζει τα δεδομένα χρήσης και εμείς συνεχίζουμε να τα διαβάζουμε – ώστε να βλέπετε πάντα ό,τι υπάρχει. Για εσάς."
                          ],
                   "bg":  [
-                             "Запазеното нулиране на лимита вече наистина се показва. Anthropic го дава само на актуален клиент на Claude Code, затова програмата вече се представя с актуалната версия – и с версията на инсталирания при теб Claude Code, когато тя е по-нова. Ако имаш нулиране, от тази версия панелът го показва заедно със срока му.",
-                             "Защо толкова скоро след 2.8.0? Защото го проверихме на живо веднага след издаването и открихме единственото нещо, което още пречеше – и предпочитаме да го поправим днес, вместо да ти оставим функция, която работи само на хартия. За теб."
+                             "Ново, по желание: тази седмица по продукти. Сървърът вече казва как седмичното ти използване се разпределя между Claude Code, чатове, Cowork и останалото – на всичките ти устройства заедно. Показва се като отделна малка група под индикаторите, със същите неутрални ленти като разпределението по модели. По подразбиране е изключено: включи го от Настройки › Подробности, така че без твое желание нищо не се променя.",
+                             "Запазеното нулиране на лимита вече има собствена отметка в списъка с редове в Настройки › Подробности, като всеки друг ред.",
+                             "Защо нова версия? Защото Anthropic непрекъснато разширява данните за използване, а ние непрекъснато ги четем – за да виждаш винаги всичко, което има. За теб."
                          ],
                   "sk":  [
-                             "Uložený reset limitu sa teraz naozaj zobrazí. Anthropic ho vydáva len aktuálnemu klientovi Claude Code, preto sa program teraz hlási aktuálnou verziou – a verziou tvojho nainštalovaného Claude Code, keď je novšia. Ak reset máš, od tejto verzie ho panel ukáže aj s dátumom vypršania.",
-                             "Prečo tak skoro po 2.8.0? Lebo sme to hneď po vydaní overili naživo a našli jedinú vec, ktorá ešte stála v ceste – a radšej ju opravíme dnes, než by sme ti nechali funkciu, ktorá funguje len na papieri. Pre teba."
+                             "Novinka na želanie: tento týždeň podľa produktu. Server teraz prezradí, ako sa tvoje týždenné využitie delí medzi Claude Code, chaty, Cowork a ostatné – na všetkých tvojich zariadeniach dohromady. Zobrazí sa ako vlastná malá skupina pod ukazovateľmi, s rovnakými neutrálnymi pruhmi ako rozdelenie podľa modelov. Predvolene vypnuté: zapni v Nastavenia › Podrobnosti, takže bez tvojho želania sa nič nemení.",
+                             "Uložený reset limitu má teraz vlastné políčko v zozname riadkov v Nastavenia › Podrobnosti, ako každý iný riadok.",
+                             "Prečo nová verzia? Lebo Anthropic údaje o využití stále rozširuje a my ich stále čítame – aby si vždy videl všetko, čo existuje. Pre teba."
                          ],
                   "hr":  [
-                             "Spremljeno resetiranje ograničenja sada se doista prikazuje. Anthropic ga daje samo aktualnom klijentu Claude Codea, pa se program sada predstavlja aktualnom verzijom – i verzijom vašeg instaliranog Claude Codea kad je novija. Ako imate resetiranje, od ove ga verzije ploča prikazuje, zajedno s istekom.",
-                             "Zašto tako brzo nakon 2.8.0? Jer smo to provjerili uživo odmah nakon izdanja i pronašli jedinu stvar koja je još smetala – i radije to popravljamo danas nego da vam ostavimo funkciju koja radi samo na papiru. Za vas."
+                             "Novo, na zahtjev: ovaj tjedan po proizvodu. Poslužitelj sada govori kako se vaša tjedna potrošnja dijeli između Claude Codea, razgovora, Coworka i ostalog – na svim vašim uređajima zajedno. Prikazuje se kao vlastita mala skupina ispod mjerača, s istim neutralnim trakama kao podjela po modelima. Zadano isključeno: uključite ga u Postavke › Pojedinosti, pa se bez vašeg zahtjeva ništa ne mijenja.",
+                             "Spremljeno resetiranje ograničenja sada ima vlastitu kvačicu na popisu redaka u Postavke › Pojedinosti, kao i svaki drugi redak.",
+                             "Zašto nova verzija? Jer Anthropic stalno proširuje podatke o potrošnji, a mi ih stalno čitamo – da uvijek vidite sve što postoji. Za vas."
                          ],
                   "sv":  [
-                             "Den sparade gränsåterställningen visas nu på riktigt. Anthropic lämnar ut den bara till en aktuell Claude Code-klient, så programmet identifierar sig nu med den aktuella versionen – och med versionen av din installerade Claude Code när den är nyare. Har du en återställning visar panelen den från och med den här versionen, tillsammans med utgångsdatumet.",
-                             "Varför så snart efter 2.8.0? För att vi kontrollerade det live direkt efter släppet och hittade det enda som fortfarande stod i vägen – och vi fixar det hellre i dag än lämnar dig med en funktion som bara fungerar på papperet. För dig."
+                             "Nytt, på begäran: denna vecka per produkt. Servern berättar nu hur din veckoanvändning fördelas mellan Claude Code, chattar, Cowork och resten – över alla dina enheter tillsammans. Det visas som en egen liten grupp under mätarna, med samma neutrala staplar som fördelningen per modell. Av som standard: slå på det under Inställningar › Detaljer, så ändras inget om du inte ber om det.",
+                             "Den sparade gränsåterställningen har nu en egen kryssruta i radlistan under Inställningar › Detaljer, som alla andra rader.",
+                             "Varför en ny version? För att Anthropic hela tiden utökar användningsdata och vi hela tiden läser dem – så att du alltid ser allt som finns. För dig."
                          ],
                   "fi":  [
-                             "Tallennettu rajan nollaus näkyy nyt oikeasti. Anthropic antaa sen vain ajantasaiselle Claude Code -asiakkaalle, joten ohjelma esittäytyy nyt nykyisellä versiolla – ja asennetun Claude Coden versiolla, kun se on uudempi. Jos sinulla on nollaus, paneeli näyttää sen tästä versiosta alkaen vanhenemispäivineen.",
-                             "Miksi näin pian 2.8.0:n jälkeen? Koska tarkistimme sen heti julkaisun jälkeen oikeassa käytössä ja löysimme sen yhden asian, joka oli vielä tiellä – ja korjaamme sen mieluummin tänään kuin jätämme sinulle toiminnon, joka toimii vain paperilla. Sinua varten."
+                             "Uutta, pyynnöstä: tämä viikko tuotteittain. Palvelin kertoo nyt, miten viikkokäyttösi jakautuu Claude Coden, keskustelujen, Coworkin ja muiden kesken – kaikilla laitteillasi yhteensä. Se näkyy omana pienenä ryhmänään mittarien alla, samoilla neutraaleilla palkeilla kuin mallikohtainen jakauma. Oletuksena pois päältä: kytke päälle kohdassa Asetukset › Tiedot, joten mikään ei muutu ellet pyydä.",
+                             "Tallennetulla rajan nollauksella on nyt oma valintaruutunsa Asetukset › Tiedot -rivilistassa, kuten kaikilla muillakin riveillä.",
+                             "Miksi uusi versio? Koska Anthropic lisää käyttötietoihin jatkuvasti uutta ja me luemme sitä jatkuvasti – jotta näet aina kaiken, mitä on. Sinua varten."
                          ],
                   "da":  [
-                             "Den gemte grænsenulstilling vises nu rigtigt. Anthropic giver den kun til en aktuel Claude Code-klient, så programmet identificerer sig nu med den aktuelle version – og med versionen af din installerede Claude Code, når den er nyere. Har du en nulstilling, viser panelet den fra denne version, sammen med udløbsdatoen.",
-                             "Hvorfor så hurtigt efter 2.8.0? Fordi vi tjekkede det live lige efter udgivelsen og fandt den ene ting, der stadig stod i vejen – og vi retter den hellere i dag end at efterlade dig med en funktion, der kun virker på papiret. For dig."
+                             "Nyt, på forespørgsel: denne uge pr. produkt. Serveren fortæller nu, hvordan dit ugentlige forbrug fordeler sig mellem Claude Code, chats, Cowork og resten – på tværs af alle dine enheder. Det vises som sin egen lille gruppe under målerne, med de samme neutrale søjler som fordelingen pr. model. Slået fra som standard: slå det til under Indstillinger › Detaljer, så intet ændrer sig, medmindre du beder om det.",
+                             "Den gemte grænsenulstilling har nu sit eget flueben på rækkelisten under Indstillinger › Detaljer, ligesom alle andre rækker.",
+                             "Hvorfor en ny version? Fordi Anthropic bliver ved med at udvide forbrugsdataene, og vi bliver ved med at læse dem – så du altid ser alt, hvad der er. For dig."
                          ],
                   "lt":  [
-                             "Išsaugotas limito atstatymas dabar tikrai rodomas. Anthropic jį suteikia tik naujausiam Claude Code klientui, todėl programa dabar prisistato dabartine versija – o jūsų įdiegto Claude Code versija, kai ji naujesnė. Jei turite atstatymą, nuo šios versijos skydelis jį rodo kartu su galiojimo pabaiga.",
-                             "Kodėl taip greitai po 2.8.0? Nes iškart po išleidimo patikrinome tai realiomis sąlygomis ir radome vienintelį dalyką, kuris dar trukdė – ir verčiau tai sutvarkome šiandien, nei paliekame jums funkciją, veikiančią tik popieriuje. Dėl jūsų."
+                             "Nauja, pagal pageidavimą: ši savaitė pagal produktą. Serveris dabar pasako, kaip jūsų savaitės naudojimas pasiskirsto tarp Claude Code, pokalbių, Cowork ir kitų – visuose jūsų įrenginiuose kartu. Rodoma kaip atskira maža grupė po matuokliais, su tokiomis pat neutraliomis juostomis kaip pasiskirstymas pagal modelius. Pagal numatytuosius nustatymus išjungta: įjunkite Nustatymai › Išsami informacija, tad be jūsų prašymo niekas nesikeičia.",
+                             "Išsaugotas limito atstatymas dabar turi savo žymimąjį langelį Nustatymai › Išsami informacija eilučių sąraše, kaip ir kiekviena kita eilutė.",
+                             "Kodėl nauja versija? Nes Anthropic nuolat plečia naudojimo duomenis, o mes nuolat juos skaitome – kad visada matytumėte viską, kas yra. Dėl jūsų."
                          ],
                   "sl":  [
-                             "Shranjena ponastavitev omejitve se zdaj res prikaže. Anthropic jo izda le posodobljenemu odjemalcu Claude Code, zato se program zdaj predstavi s trenutno različico – in z različico vašega nameščenega Claude Codea, kadar je novejša. Če ponastavitev imate, jo plošča od te različice naprej prikaže skupaj s potekom.",
-                             "Zakaj tako kmalu po 2.8.0? Ker smo to takoj po izdaji preverili v živo in našli edino stvar, ki je še bila na poti – in raje to popravimo danes, kot da vam pustimo funkcijo, ki deluje le na papirju. Za vas."
+                             "Novo, na željo: ta teden po izdelkih. Strežnik zdaj pove, kako se vaša tedenska poraba deli med Claude Code, klepete, Cowork in ostalo – na vseh vaših napravah skupaj. Prikaže se kot lastna majhna skupina pod merilniki, z enakimi nevtralnimi stolpci kot razdelitev po modelih. Privzeto izklopljeno: vklopite ga v Nastavitve › Podrobnosti, tako da se brez vaše želje nič ne spremeni.",
+                             "Shranjena ponastavitev omejitve ima zdaj svojo kljukico na seznamu vrstic v Nastavitve › Podrobnosti, kot vsaka druga vrstica.",
+                             "Zakaj nova različica? Ker Anthropic nenehno širi podatke o porabi, mi pa jih nenehno beremo – da vedno vidite vse, kar obstaja. Za vas."
                          ],
                   "lv":  [
-                             "Saglabātā limita atiestatīšana tagad tiešām parādās. Anthropic to izsniedz tikai aktuālam Claude Code klientam, tāpēc programma tagad piesakās ar pašreizējo versiju – un ar jūsu instalētā Claude Code versiju, ja tā ir jaunāka. Ja jums ir atiestatīšana, no šīs versijas panelis to rāda kopā ar derīguma beigām.",
-                             "Kāpēc tik drīz pēc 2.8.0? Jo uzreiz pēc izlaišanas to pārbaudījām reālos apstākļos un atradām vienīgo, kas vēl traucēja – un labāk to salabojam šodien, nekā atstājam jums funkciju, kas darbojas tikai uz papīra. Jums."
+                             "Jauns, pēc pieprasījuma: šī nedēļa pa produktiem. Serveris tagad pastāsta, kā jūsu nedēļas lietojums sadalās starp Claude Code, sarunām, Cowork un pārējo – visās jūsu ierīcēs kopā. Tas parādās kā atsevišķa maza grupa zem mērītājiem ar tādām pašām neitrālām joslām kā sadalījums pa modeļiem. Pēc noklusējuma izslēgts: ieslēdziet sadaļā Iestatījumi › Detaļas, lai bez jūsu lūguma nekas nemainītos.",
+                             "Saglabātajai limita atiestatīšanai tagad ir sava izvēles rūtiņa Iestatījumi › Detaļas rindu sarakstā, tāpat kā katrai citai rindai.",
+                             "Kāpēc jauna versija? Jo Anthropic nepārtraukti papildina lietojuma datus, un mēs nepārtraukti tos lasām – lai jūs vienmēr redzētu visu, kas ir. Jums."
                          ],
                   "et":  [
-                             "Salvestatud limiidi lähtestus kuvatakse nüüd päriselt. Anthropic annab selle ainult ajakohasele Claude Code\u0027i kliendile, seega tutvustab programm end nüüd praeguse versiooniga – ja sinu paigaldatud Claude Code\u0027i versiooniga, kui see on uuem. Kui sul on lähtestus, näitab paneel seda alates sellest versioonist koos aegumisajaga.",
-                             "Miks nii ruttu pärast 2.8.0? Sest kontrollisime seda kohe pärast väljalaset päris kasutuses ja leidsime selle ühe asja, mis veel ees seisis – ja parandame selle pigem täna, kui jätame sulle funktsiooni, mis töötab ainult paberil. Sinu jaoks."
+                             "Uus, soovi korral: see nädal toote kaupa. Server ütleb nüüd, kuidas sinu nädala kasutus jaguneb Claude Code\u0027i, vestluste, Coworki ja ülejäänu vahel – kõigis sinu seadmetes kokku. See kuvatakse mõõdikute all omaette väikese rühmana, samade neutraalsete tulpadega nagu mudelite kaupa jaotus. Vaikimisi väljas: lülita sisse jaotises Seaded › Üksikasjad, nii et ilma sinu soovita ei muutu midagi.",
+                             "Salvestatud limiidi lähtestusel on nüüd Seaded › Üksikasjad ridade loendis oma märkeruut, nagu igal teisel real.",
+                             "Miks uus versioon? Sest Anthropic täiendab kasutusandmeid pidevalt ja meie loeme neid pidevalt – et näeksid alati kõike, mis olemas on. Sinu jaoks."
                          ],
                   "mt":  [
-                             "Ir-risettjar tal-limitu salvat issa jidher tassew. Anthropic tagħtih biss lil klijent aġġornat ta\u0027 Claude Code, għalhekk il-programm issa jippreżenta ruħu bil-verżjoni attwali – u bil-verżjoni tal-Claude Code installat tiegħek meta tkun aktar ġdida. Jekk għandek risettjar, minn din il-verżjoni l-pannell jurih, flimkien mal-iskadenza.",
-                             "Għaliex daqshekk malajr wara l-2.8.0? Għax iċċekkjajnieh live eżatt wara r-rilaxx u sibna l-unika ħaġa li kienet għadha fit-triq – u nippreferu nirranġawha llum milli nħallulek funzjoni li taħdem biss fuq il-karta. Għalik."
+                             "Ġdid, fuq talba: din il-ġimgħa skont il-prodott. Is-server issa jgħid kif l-użu tiegħek ta\u0027 kull ġimgħa jinqasam bejn Claude Code, chats, Cowork u l-bqija – fuq l-apparati kollha tiegħek flimkien. Jidher bħala grupp żgħir għalih taħt l-indikaturi, bl-istess barri newtrali bħall-qsim skont il-mudell. Mitfi awtomatikament: ixegħlu taħt Issettjar › Dettalji, biex xejn ma jinbidel jekk ma titlobx int.",
+                             "Ir-risettjar tal-limitu salvat issa għandu l-kaxxa tiegħu fil-lista tar-ringieli ta\u0027 Issettjar › Dettalji, bħal kull ringiela oħra.",
+                             "Għaliex verżjoni ġdida? Għax Anthropic tkompli żżid mad-data tal-użu, u aħna nkomplu naqrawha – biex dejjem tara kulma hemm. Għalik."
                          ],
                   "ga":  [
-                             "Taispeánann an t-athshocrú teorann sábháilte anois i ndáiríre. Ní thugann Anthropic é ach do chliant Claude Code reatha, mar sin cuireann an ríomhchlár é féin in aithne anois leis an leagan reatha – agus le leagan do Claude Code suiteáilte nuair is nuaí é sin. Má tá athshocrú agat, taispeánann an painéal é ón leagan seo ar aghaidh, mar aon lena dháta éaga.",
-                             "Cén fáth chomh luath sin tar éis 2.8.0? Mar gur sheiceálamar beo é díreach tar éis an eisiúna agus gur aimsíomar an t-aon rud a bhí fós sa bhealach – agus b\u0027fhearr linn é a dheisiú inniu ná gné a fhágáil agat nach n-oibríonn ach ar pháipéar. Duitse."
+                             "Nua, ar iarratas: an tseachtain seo de réir táirge. Insíonn an freastalaí anois conas a roinntear d\u0027úsáid sheachtainiúil idir Claude Code, comhráite, Cowork agus an chuid eile – ar do ghléasanna go léir le chéile. Taispeántar é mar ghrúpa beag dá chuid féin faoi na tomhsairí, leis na barraí neodracha céanna leis an roinnt de réir samhla. Múchta de réir réamhshocraithe: cas air é faoi Socruithe › Sonraí, ionas nach n-athraíonn aon rud mura n-iarrann tú é.",
+                             "Tá a thic féin ag an athshocrú teorann sábháilte anois i liosta na rónna faoi Socruithe › Sonraí, díreach cosúil le gach ró eile.",
+                             "Cén fáth leagan nua? Mar go gcoinníonn Anthropic ag cur leis na sonraí úsáide, agus coinnímidne á léamh – ionas go bhfeiceann tú i gcónaí gach a bhfuil ann. Duitse."
                          ]
               }
 }

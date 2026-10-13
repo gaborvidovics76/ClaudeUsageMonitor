@@ -117,7 +117,7 @@
   "feat.3t": "Alla dina enheter, en siffra",
   "feat.3d": "Logga in via din egen webbläsare – precis som Claude Code gör – och se användningen även från mobilen, webbläsaren och alla dina andra datorer.",
   "feat.4t": "Gränser per modell",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, användningskrediter – alla gränser som servern rapporterar, plus veckans fördelning mellan modellerna.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, användningskrediter, sparade gränsåterställningar – varje gräns servern rapporterar, plus veckans fördelning per modell och, på begäran, per produkt (Claude Code, chattar, Cowork) över alla dina enheter.",
   "feat.5t": "Varningar som spelar roll",
   "feat.5d": "En diskret avisering vid 70 % och 90 % (du väljer), när din gräns återställs och när en sparad gränsåterställning är på väg att gå ut oanvänd. Inget annat, någonsin.",
   "feat.7t": "Hela veckan i ett diagram",

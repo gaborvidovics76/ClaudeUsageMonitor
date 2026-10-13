@@ -117,7 +117,7 @@
   "feat.3t": "Alle dine enheder, ét tal",
   "feat.3d": "Log på via din egen browser – ligesom Claude Code gør – og se også forbruget fra din telefon, browseren og alle dine andre computere.",
   "feat.4t": "Grænser pr. model",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, forbrugskreditter – alle de grænser, serveren rapporterer, plus ugens fordeling mellem modellerne.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, forbrugskreditter, gemte grænsenulstillinger – hver grænse, serveren rapporterer, plus ugens fordeling pr. model og, på forespørgsel, pr. produkt (Claude Code, chats, Cowork) på tværs af alle dine enheder.",
   "feat.5t": "Advarsler, der betyder noget",
   "feat.5d": "En stille notifikation ved 70% og 90% (du vælger), når din grænse nulstilles, og når en gemt grænsenulstilling er ved at udløbe ubrugt. Intet andet, nogensinde.",
   "feat.7t": "Hele ugen i ét diagram",

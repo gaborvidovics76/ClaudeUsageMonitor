@@ -2,6 +2,19 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.0] - 2026-10-13
+
+- New, on request: this week by product. The server now tells how your weekly usage splits between Claude Code, chats, Cowork and the rest – across all your devices together. It appears as its own small group under the gauges, with the same neutral bars as the per-model split. Off by default: switch it on under Settings › Details, so nothing changes for you unless you ask.
+- The saved limit reset now has its own tick in the row list of Settings › Details, like every other row.
+- Why a new version? Because Anthropic keeps adding to the usage data, and we keep reading it – so you always see everything there is. For you.
+
+*Magyarul:*
+
+- Új, kérésre: e heti megoszlás termékenként. A szerver mostantól elárulja, hogyan oszlik meg a heti használatod a Claude Code, a csevegések, a Cowork és a többi között – az összes eszközödön együtt. Külön kis csoportként jelenik meg a mérők alatt, ugyanolyan semleges sávokkal, mint a modellenkénti megoszlás. Alapból ki van kapcsolva: a Beállítások › Részletek alatt kapcsolható be, így kérés nélkül semmi sem változik.
+- Az elmentett visszaállításnak is saját pipája van a Beállítások › Részletek sorlistájában, mint minden más sornak.
+- Miért új verzió? Mert az Anthropic folyamatosan bővíti a használati adatokat, mi pedig folyamatosan olvassuk – hogy mindig mindent láss, ami csak van. Értetek.
+
+
 ## [2.8.1] - 2026-10-13
 
 - The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code's version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.

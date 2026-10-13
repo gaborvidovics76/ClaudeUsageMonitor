@@ -113,9 +113,29 @@ assert oauth._parse_version("claude 2.1.296 (Claude Code)") == (2, 1, 296)
 assert oauth._parse_version("garbage") is None
 print("6b) client identity %s (installed: %s): ok" % (ua, oauth.installed_cli_version() or "-"))
 
+# ---------------------------------------------------------------- 6c) this week by product (2.9.0)
+from claude_usage.datasource import product_label  # noqa: E402
+
+bd = {"seven_day_breakdown": {"as_of": iso(0), "window_started_at": iso(-86400 * 3), "rows": [
+    {"key": "claude_code", "display_name": "Claude Code", "percent": 68},
+    {"key": "chat", "display_name": "Chats", "percent": 6},
+    {"key": "cowork", "display_name": "Cowork", "percent": 26},
+    {"key": "other", "display_name": "Other", "percent": 0},
+]}}
+prods = P._pick_products(bd)
+assert [(p.key, p.percent) for p in prods] == [("claude_code", 68.0), ("chat", 6.0), ("cowork", 26.0)], prods
+assert product_label(prods[0]) == "Claude Code" and product_label(prods[1]) == "Chats"
+i18n.set_language("hu")
+assert product_label(prods[1]) == "Csevegések"
+i18n.set_language("en")
+assert P._pick_products({}) == [] and P._pick_products({"seven_day_breakdown": None}) == []
+assert P._pick_products({"seven_day_breakdown": {"rows": [{"percent": "x"}, "junk", {"key": "", "display_name": ""}]}}) == []
+print("6c) this week by product: ok")
+
 # ---------------------------------------------------------------- 7) every new text exists in every language
 for key in ("detail.resets", "detail.surface.cowork", "set.show_resets", "set.notify_resets",
-            "notify.reset_available", "notify.reset_expiring"):
+            "notify.reset_available", "notify.reset_expiring", "detail.products_header", "detail.product.chat",
+            "detail.product.other", "detail.product.group", "set.show_products"):
     for code in i18n.LANG_NAMES:
         text = i18n.lookup(key, code)
         assert text and text != key, (key, code)

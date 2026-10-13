@@ -5,6 +5,12 @@ CODE = "sv"
 NAME = "Svenska"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "ALLA ENHETER · DENNA VECKA PER PRODUKT",
+    "detail.product.chat": "Chattar",
+    "detail.product.other": "Övrigt",
+    "detail.product.group": "per produkt",
+    "set.show_products": "Veckans fördelning per produkt (Claude Code, chattar, Cowork) – alla enheter, från servern",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Sparade gränsåterställningar",
     "detail.surface.cowork": "Rutiner (Cowork)",

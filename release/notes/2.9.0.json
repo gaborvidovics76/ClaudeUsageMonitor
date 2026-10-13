@@ -1,0 +1,182 @@
+{
+  "en": [
+    "New, on request: this week by product. The server now tells how your weekly usage splits between Claude Code, chats, Cowork and the rest – across all your devices together. It appears as its own small group under the gauges, with the same neutral bars as the per-model split. Off by default: switch it on under Settings › Details, so nothing changes for you unless you ask.",
+    "The saved limit reset now has its own tick in the row list of Settings › Details, like every other row.",
+    "Why a new version? Because Anthropic keeps adding to the usage data, and we keep reading it – so you always see everything there is. For you."
+  ],
+  "hu": [
+    "Új, kérésre: e heti megoszlás termékenként. A szerver mostantól elárulja, hogyan oszlik meg a heti használatod a Claude Code, a csevegések, a Cowork és a többi között – az összes eszközödön együtt. Külön kis csoportként jelenik meg a mérők alatt, ugyanolyan semleges sávokkal, mint a modellenkénti megoszlás. Alapból ki van kapcsolva: a Beállítások › Részletek alatt kapcsolható be, így kérés nélkül semmi sem változik.",
+    "Az elmentett visszaállításnak is saját pipája van a Beállítások › Részletek sorlistájában, mint minden más sornak.",
+    "Miért új verzió? Mert az Anthropic folyamatosan bővíti a használati adatokat, mi pedig folyamatosan olvassuk – hogy mindig mindent láss, ami csak van. Értetek."
+  ],
+  "de": [
+    "Neu, auf Wunsch: diese Woche nach Produkt. Der Server verrät jetzt, wie sich deine Wochennutzung auf Claude Code, Unterhaltungen, Cowork und den Rest verteilt – über alle deine Geräte zusammen. Es erscheint als eigene kleine Gruppe unter den Anzeigen, mit denselben neutralen Balken wie die Aufteilung nach Modell. Standardmäßig aus: unter Einstellungen › Details einschalten, damit sich ohne deinen Wunsch nichts ändert.",
+    "Die gespeicherte Limit-Zurücksetzung hat jetzt ein eigenes Häkchen in der Zeilenliste unter Einstellungen › Details, wie jede andere Zeile.",
+    "Warum eine neue Version? Weil Anthropic die Nutzungsdaten laufend erweitert und wir sie laufend lesen – damit du immer alles siehst, was es gibt. Für dich."
+  ],
+  "fr": [
+    "Nouveau, à la demande : cette semaine par produit. Le serveur indique désormais comment votre utilisation hebdomadaire se répartit entre Claude Code, les discussions, Cowork et le reste – sur tous vos appareils réunis. Cela apparaît comme un petit groupe à part sous les jauges, avec les mêmes barres neutres que la répartition par modèle. Désactivé par défaut : activez-le dans Paramètres › Détails, ainsi rien ne change sans votre demande.",
+    "La réinitialisation de limite en réserve a maintenant sa propre case dans la liste des lignes de Paramètres › Détails, comme toute autre ligne.",
+    "Pourquoi une nouvelle version ? Parce qu'Anthropic enrichit sans cesse les données d'utilisation et que nous les lisons sans cesse – pour que vous voyiez toujours tout ce qui existe. Pour vous."
+  ],
+  "es": [
+    "Nuevo, a petición: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio bajo los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado por defecto: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+    "El reinicio de límite guardado tiene ahora su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+    "¿Por qué una nueva versión? Porque Anthropic sigue ampliando los datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Por ti."
+  ],
+  "it": [
+    "Novità, su richiesta: questa settimana per prodotto. Il server ora dice come si ripartisce il tuo uso settimanale tra Claude Code, conversazioni, Cowork e il resto – su tutti i tuoi dispositivi insieme. Compare come un piccolo gruppo a sé sotto gli indicatori, con le stesse barre neutre della ripartizione per modello. Disattivato di default: attivalo in Impostazioni › Dettagli, così nulla cambia se non lo chiedi.",
+    "Il reset del limite salvato ha ora la sua casella nell'elenco delle righe di Impostazioni › Dettagli, come ogni altra riga.",
+    "Perché una nuova versione? Perché Anthropic continua ad ampliare i dati di utilizzo e noi continuiamo a leggerli – così vedi sempre tutto quello che c'è. Per te."
+  ],
+  "pt": [
+    "Novo, a pedido: esta semana por produto. O servidor passa a dizer como a tua utilização semanal se divide entre Claude Code, conversas, Cowork e o resto – em todos os teus dispositivos juntos. Aparece como um pequeno grupo próprio por baixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por defeito: liga-o em Definições › Detalhes, para que nada mude sem o pedires.",
+    "A reposição de limite guardada tem agora a sua própria caixa na lista de linhas de Definições › Detalhes, como qualquer outra linha.",
+    "Porquê uma nova versão? Porque a Anthropic continua a acrescentar aos dados de utilização e nós continuamos a lê-los – para veres sempre tudo o que existe. Por ti."
+  ],
+  "pl": [
+    "Nowość, na życzenie: ten tydzień według produktu. Serwer podaje teraz, jak Twoje tygodniowe użycie dzieli się między Claude Code, czaty, Cowork i resztę – na wszystkich Twoich urządzeniach razem. Pojawia się jako osobna mała grupa pod wskaźnikami, z tymi samymi neutralnymi paskami co podział na modele. Domyślnie wyłączone: włącz w Ustawienia › Szczegóły, więc bez Twojej prośby nic się nie zmienia.",
+    "Zapisany reset limitu ma teraz własne pole w liście wierszy w Ustawienia › Szczegóły, jak każdy inny wiersz.",
+    "Dlaczego nowa wersja? Bo Anthropic wciąż rozbudowuje dane o użyciu, a my wciąż je czytamy – żebyś zawsze widział wszystko, co jest. Dla Ciebie."
+  ],
+  "nl": [
+    "Nieuw, op verzoek: deze week per product. De server vertelt nu hoe je weekgebruik is verdeeld over Claude Code, gesprekken, Cowork en de rest – over al je apparaten samen. Het verschijnt als een eigen groepje onder de meters, met dezelfde neutrale balken als de verdeling per model. Standaard uit: zet het aan onder Instellingen › Details, zodat er niets verandert tenzij je erom vraagt.",
+    "De bewaarde limietreset heeft nu een eigen vinkje in de rijenlijst van Instellingen › Details, net als elke andere rij.",
+    "Waarom een nieuwe versie? Omdat Anthropic de gebruiksgegevens blijft uitbreiden en wij ze blijven lezen – zodat je altijd alles ziet wat er is. Voor jou."
+  ],
+  "ru": [
+    "Новое, по запросу: эта неделя по продуктам. Сервер теперь сообщает, как ваше недельное использование делится между Claude Code, чатами, Cowork и остальным – по всем вашим устройствам вместе. Это отдельная небольшая группа под индикаторами, с теми же нейтральными полосками, что и распределение по моделям. По умолчанию выключено: включите в Настройки › Детали, чтобы без вашего желания ничего не менялось.",
+    "У сохранённого сброса лимита теперь есть собственный флажок в списке строк в Настройки › Детали, как у любой другой строки.",
+    "Почему новая версия? Потому что Anthropic продолжает расширять данные об использовании, а мы продолжаем их читать – чтобы вы всегда видели всё, что есть. Для вас."
+  ],
+  "cs": [
+    "Novinka na přání: tento týden podle produktu. Server teď prozradí, jak se vaše týdenní využití dělí mezi Claude Code, chaty, Cowork a ostatní – na všech vašich zařízeních dohromady. Zobrazí se jako vlastní malá skupina pod ukazateli, se stejnými neutrálními pruhy jako rozdělení podle modelů. Ve výchozím stavu vypnuto: zapněte v Nastavení › Podrobnosti, takže bez vašeho přání se nic nemění.",
+    "Uložený reset limitu má teď vlastní zaškrtávací políčko v seznamu řádků v Nastavení › Podrobnosti, jako každý jiný řádek.",
+    "Proč nová verze? Protože Anthropic data o využití stále rozšiřuje a my je stále čteme – abyste vždy viděli všechno, co existuje. Pro vás."
+  ],
+  "tr": [
+    "Yeni, istek üzerine: bu hafta ürüne göre. Sunucu artık haftalık kullanımının Claude Code, sohbetler, Cowork ve diğerleri arasında nasıl dağıldığını söylüyor – tüm cihazlarında birlikte. Göstergelerin altında kendi küçük grubu olarak, modele göre dağılımla aynı nötr çubuklarla görünüyor. Varsayılan olarak kapalı: Ayarlar › Ayrıntılar altından aç; böylece sen istemeden hiçbir şey değişmez.",
+    "Kayıtlı limit sıfırlamanın artık Ayarlar › Ayrıntılar satır listesinde, diğer her satır gibi kendi onay kutusu var.",
+    "Neden yeni sürüm? Çünkü Anthropic kullanım verilerini genişletmeye devam ediyor, biz de okumaya devam ediyoruz – böylece var olan her şeyi her zaman görürsün. Senin için."
+  ],
+  "pt-PT": [
+    "Novo, a pedido: esta semana por produto. O servidor passa a dizer como a tua utilização semanal se divide entre Claude Code, conversas, Cowork e o resto – em todos os teus dispositivos juntos. Aparece como um pequeno grupo próprio por baixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por defeito: liga-o em Definições › Detalhes, para que nada mude sem o pedires.",
+    "A reposição de limite guardada tem agora a sua própria caixa na lista de linhas de Definições › Detalhes, como qualquer outra linha.",
+    "Porquê uma nova versão? Porque a Anthropic continua a acrescentar aos dados de utilização e nós continuamos a lê-los – para veres sempre tudo o que existe. Por ti."
+  ],
+  "pt-BR": [
+    "Novo, a pedido: esta semana por produto. O servidor agora conta como seu uso semanal se divide entre Claude Code, conversas, Cowork e o restante – em todos os seus dispositivos juntos. Aparece como um pequeno grupo próprio abaixo dos indicadores, com as mesmas barras neutras da divisão por modelo. Desligado por padrão: ative em Configurações › Detalhes, assim nada muda sem você pedir.",
+    "A redefinição de limite guardada agora tem sua própria caixa na lista de linhas de Configurações › Detalhes, como qualquer outra linha.",
+    "Por que uma nova versão? Porque a Anthropic continua ampliando os dados de uso e nós continuamos lendo – para que você sempre veja tudo o que existe. Para você."
+  ],
+  "es-ES": [
+    "Nuevo, a petición: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio bajo los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado por defecto: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+    "El reinicio de límite guardado tiene ahora su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+    "¿Por qué una nueva versión? Porque Anthropic sigue ampliando los datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Por ti."
+  ],
+  "es-419": [
+    "Nuevo, a pedido: esta semana por producto. El servidor ahora cuenta cómo se reparte tu uso semanal entre Claude Code, las conversaciones, Cowork y el resto – en todos tus dispositivos juntos. Aparece como un pequeño grupo propio debajo de los indicadores, con las mismas barras neutras que el reparto por modelo. Desactivado de forma predeterminada: actívalo en Configuración › Detalles, así nada cambia si no lo pides.",
+    "El reinicio de límite guardado ahora tiene su propia casilla en la lista de filas de Configuración › Detalles, como cualquier otra fila.",
+    "¿Por qué una nueva versión? Porque Anthropic sigue agregando datos de uso y nosotros seguimos leyéndolos – para que siempre veas todo lo que hay. Para ti."
+  ],
+  "ja": [
+    "ご要望にお応えして新登場：今週の製品別内訳。サーバーが、今週の使用量が Claude Code・チャット・Cowork・その他にどう分かれているかを、すべてのデバイスを合わせて教えてくれるようになりました。メーターの下に独立した小さなグループとして、モデル別内訳と同じ落ち着いた色のバーで表示されます。初期状態ではオフです。「設定 › 詳細」でオンにできるので、お望みでない限り何も変わりません。",
+    "保存済みの上限リセットにも、「設定 › 詳細」の行一覧で他の行と同じように専用のチェックが付きました。",
+    "なぜ新バージョンなのか？ Anthropic が使用状況データを増やし続け、私たちはそれを読み続けているからです。あるものはすべて、いつでも見えるように。あなたのために。"
+  ],
+  "ko": [
+    "요청에 따라 새로 추가: 이번 주 제품별 비중. 이제 서버가 이번 주 사용량이 Claude Code, 채팅, Cowork, 기타에 어떻게 나뉘는지 모든 기기를 합쳐 알려줘요. 게이지 아래에 별도의 작은 그룹으로, 모델별 비중과 같은 중립색 막대로 표시돼요. 기본은 꺼짐이에요. 설정 › 세부 정보에서 켤 수 있으니, 원하지 않으면 아무것도 바뀌지 않아요.",
+    "저장된 한도 초기화도 이제 설정 › 세부 정보의 행 목록에서 다른 행처럼 자체 체크박스를 가져요.",
+    "왜 새 버전일까요? Anthropic이 사용량 데이터를 계속 늘리고, 우리도 계속 읽기 때문이에요. 있는 건 언제나 전부 보이도록. 여러분을 위해서."
+  ],
+  "zh-CN": [
+    "应要求新增：本周按产品划分。服务器现在会告诉你本周用量在 Claude Code、对话、Cowork 和其他之间如何分配——汇总你的所有设备。它以独立的小分组显示在仪表下方，使用与按模型划分相同的中性色条。默认关闭：在“设置 › 详情”中开启，不主动要求就不会有任何变化。",
+    "已保存的额度重置现在在“设置 › 详情”的行列表中也有自己的勾选项，和其他行一样。",
+    "为什么发布新版本？因为 Anthropic 不断丰富用量数据，我们也不断读取——让你总能看到所有存在的信息。为了你。"
+  ],
+  "zh-TW": [
+    "應要求新增：本週依產品劃分。伺服器現在會告訴你本週用量在 Claude Code、對話、Cowork 和其他之間如何分配——彙總你的所有裝置。它以獨立的小群組顯示在儀表下方，使用與依模型劃分相同的中性色條。預設關閉：在「設定 › 詳細資料」中開啟，不主動要求就不會有任何變化。",
+    "已儲存的額度重設現在在「設定 › 詳細資料」的列清單中也有自己的勾選項，和其他列一樣。",
+    "為什麼推出新版本？因為 Anthropic 不斷擴充用量資料，我們也不斷讀取——讓你總能看到所有存在的資訊。為了你。"
+  ],
+  "id": [
+    "Baru, atas permintaan: minggu ini per produk. Server kini memberi tahu bagaimana penggunaan mingguan Anda terbagi antara Claude Code, obrolan, Cowork, dan sisanya – di semua perangkat Anda sekaligus. Tampil sebagai grup kecil tersendiri di bawah pengukur, dengan bilah netral yang sama seperti pembagian per model. Nonaktif secara bawaan: aktifkan di Pengaturan › Detail, jadi tidak ada yang berubah kecuali Anda memintanya.",
+    "Reset batas tersimpan kini punya kotak centangnya sendiri di daftar baris Pengaturan › Detail, seperti baris lainnya.",
+    "Mengapa versi baru? Karena Anthropic terus menambah data penggunaan, dan kami terus membacanya – supaya Anda selalu melihat semua yang ada. Untuk Anda."
+  ],
+  "vi": [
+    "Mới, theo yêu cầu: tuần này theo sản phẩm. Máy chủ giờ cho biết mức sử dụng tuần của bạn được phân bổ ra sao giữa Claude Code, trò chuyện, Cowork và phần còn lại – trên tất cả thiết bị của bạn cộng lại. Nó hiện thành một nhóm nhỏ riêng dưới các đồng hồ, với những thanh màu trung tính như phần phân bổ theo mô hình. Mặc định tắt: bật trong Cài đặt › Chi tiết, nên không có gì thay đổi trừ khi bạn yêu cầu.",
+    "Lượt đặt lại giới hạn đã lưu giờ có ô đánh dấu riêng trong danh sách dòng ở Cài đặt › Chi tiết, như mọi dòng khác.",
+    "Vì sao có phiên bản mới? Vì Anthropic không ngừng bổ sung dữ liệu sử dụng, và chúng tôi không ngừng đọc chúng – để bạn luôn thấy mọi thứ đang có. Vì bạn."
+  ],
+  "ro": [
+    "Nou, la cerere: săptămâna aceasta pe produse. Serverul arată acum împărțirea utilizării tale săptămânale între Claude Code, conversații, Cowork și restul – pe toate dispozitivele tale împreună. Apare ca un mic grup propriu sub indicatoare, cu aceleași bare neutre ca împărțirea pe modele. Dezactivat implicit: pornește-l din Setări › Detalii, ca nimic să nu se schimbe fără să ceri.",
+    "Resetarea de limită salvată are acum propria bifă în lista de rânduri din Setări › Detalii, ca orice alt rând.",
+    "De ce o versiune nouă? Pentru că Anthropic adaugă mereu la datele de utilizare, iar noi le citim mereu – ca să vezi mereu tot ce există. Pentru tine."
+  ],
+  "el": [
+    "Νέο, κατόπιν αιτήματος: αυτή η εβδομάδα ανά προϊόν. Ο διακομιστής λέει πλέον πώς μοιράζεται η εβδομαδιαία χρήση σας ανάμεσα σε Claude Code, συνομιλίες, Cowork και τα υπόλοιπα – σε όλες τις συσκευές σας μαζί. Εμφανίζεται ως ξεχωριστή μικρή ομάδα κάτω από τους μετρητές, με τις ίδιες ουδέτερες μπάρες όπως η κατανομή ανά μοντέλο. Απενεργοποιημένο από προεπιλογή: ενεργοποιήστε το στο Ρυθμίσεις › Λεπτομέρειες, ώστε τίποτα να μην αλλάξει αν δεν το ζητήσετε.",
+    "Η αποθηκευμένη επαναφορά ορίου έχει πλέον δικό της πλαίσιο επιλογής στη λίστα γραμμών του Ρυθμίσεις › Λεπτομέρειες, όπως κάθε άλλη γραμμή.",
+    "Γιατί νέα έκδοση; Επειδή η Anthropic συνεχίζει να εμπλουτίζει τα δεδομένα χρήσης και εμείς συνεχίζουμε να τα διαβάζουμε – ώστε να βλέπετε πάντα ό,τι υπάρχει. Για εσάς."
+  ],
+  "bg": [
+    "Ново, по желание: тази седмица по продукти. Сървърът вече казва как седмичното ти използване се разпределя между Claude Code, чатове, Cowork и останалото – на всичките ти устройства заедно. Показва се като отделна малка група под индикаторите, със същите неутрални ленти като разпределението по модели. По подразбиране е изключено: включи го от Настройки › Подробности, така че без твое желание нищо не се променя.",
+    "Запазеното нулиране на лимита вече има собствена отметка в списъка с редове в Настройки › Подробности, като всеки друг ред.",
+    "Защо нова версия? Защото Anthropic непрекъснато разширява данните за използване, а ние непрекъснато ги четем – за да виждаш винаги всичко, което има. За теб."
+  ],
+  "sk": [
+    "Novinka na želanie: tento týždeň podľa produktu. Server teraz prezradí, ako sa tvoje týždenné využitie delí medzi Claude Code, chaty, Cowork a ostatné – na všetkých tvojich zariadeniach dohromady. Zobrazí sa ako vlastná malá skupina pod ukazovateľmi, s rovnakými neutrálnymi pruhmi ako rozdelenie podľa modelov. Predvolene vypnuté: zapni v Nastavenia › Podrobnosti, takže bez tvojho želania sa nič nemení.",
+    "Uložený reset limitu má teraz vlastné políčko v zozname riadkov v Nastavenia › Podrobnosti, ako každý iný riadok.",
+    "Prečo nová verzia? Lebo Anthropic údaje o využití stále rozširuje a my ich stále čítame – aby si vždy videl všetko, čo existuje. Pre teba."
+  ],
+  "hr": [
+    "Novo, na zahtjev: ovaj tjedan po proizvodu. Poslužitelj sada govori kako se vaša tjedna potrošnja dijeli između Claude Codea, razgovora, Coworka i ostalog – na svim vašim uređajima zajedno. Prikazuje se kao vlastita mala skupina ispod mjerača, s istim neutralnim trakama kao podjela po modelima. Zadano isključeno: uključite ga u Postavke › Pojedinosti, pa se bez vašeg zahtjeva ništa ne mijenja.",
+    "Spremljeno resetiranje ograničenja sada ima vlastitu kvačicu na popisu redaka u Postavke › Pojedinosti, kao i svaki drugi redak.",
+    "Zašto nova verzija? Jer Anthropic stalno proširuje podatke o potrošnji, a mi ih stalno čitamo – da uvijek vidite sve što postoji. Za vas."
+  ],
+  "sv": [
+    "Nytt, på begäran: denna vecka per produkt. Servern berättar nu hur din veckoanvändning fördelas mellan Claude Code, chattar, Cowork och resten – över alla dina enheter tillsammans. Det visas som en egen liten grupp under mätarna, med samma neutrala staplar som fördelningen per modell. Av som standard: slå på det under Inställningar › Detaljer, så ändras inget om du inte ber om det.",
+    "Den sparade gränsåterställningen har nu en egen kryssruta i radlistan under Inställningar › Detaljer, som alla andra rader.",
+    "Varför en ny version? För att Anthropic hela tiden utökar användningsdata och vi hela tiden läser dem – så att du alltid ser allt som finns. För dig."
+  ],
+  "fi": [
+    "Uutta, pyynnöstä: tämä viikko tuotteittain. Palvelin kertoo nyt, miten viikkokäyttösi jakautuu Claude Coden, keskustelujen, Coworkin ja muiden kesken – kaikilla laitteillasi yhteensä. Se näkyy omana pienenä ryhmänään mittarien alla, samoilla neutraaleilla palkeilla kuin mallikohtainen jakauma. Oletuksena pois päältä: kytke päälle kohdassa Asetukset › Tiedot, joten mikään ei muutu ellet pyydä.",
+    "Tallennetulla rajan nollauksella on nyt oma valintaruutunsa Asetukset › Tiedot -rivilistassa, kuten kaikilla muillakin riveillä.",
+    "Miksi uusi versio? Koska Anthropic lisää käyttötietoihin jatkuvasti uutta ja me luemme sitä jatkuvasti – jotta näet aina kaiken, mitä on. Sinua varten."
+  ],
+  "da": [
+    "Nyt, på forespørgsel: denne uge pr. produkt. Serveren fortæller nu, hvordan dit ugentlige forbrug fordeler sig mellem Claude Code, chats, Cowork og resten – på tværs af alle dine enheder. Det vises som sin egen lille gruppe under målerne, med de samme neutrale søjler som fordelingen pr. model. Slået fra som standard: slå det til under Indstillinger › Detaljer, så intet ændrer sig, medmindre du beder om det.",
+    "Den gemte grænsenulstilling har nu sit eget flueben på rækkelisten under Indstillinger › Detaljer, ligesom alle andre rækker.",
+    "Hvorfor en ny version? Fordi Anthropic bliver ved med at udvide forbrugsdataene, og vi bliver ved med at læse dem – så du altid ser alt, hvad der er. For dig."
+  ],
+  "lt": [
+    "Nauja, pagal pageidavimą: ši savaitė pagal produktą. Serveris dabar pasako, kaip jūsų savaitės naudojimas pasiskirsto tarp Claude Code, pokalbių, Cowork ir kitų – visuose jūsų įrenginiuose kartu. Rodoma kaip atskira maža grupė po matuokliais, su tokiomis pat neutraliomis juostomis kaip pasiskirstymas pagal modelius. Pagal numatytuosius nustatymus išjungta: įjunkite Nustatymai › Išsami informacija, tad be jūsų prašymo niekas nesikeičia.",
+    "Išsaugotas limito atstatymas dabar turi savo žymimąjį langelį Nustatymai › Išsami informacija eilučių sąraše, kaip ir kiekviena kita eilutė.",
+    "Kodėl nauja versija? Nes Anthropic nuolat plečia naudojimo duomenis, o mes nuolat juos skaitome – kad visada matytumėte viską, kas yra. Dėl jūsų."
+  ],
+  "sl": [
+    "Novo, na željo: ta teden po izdelkih. Strežnik zdaj pove, kako se vaša tedenska poraba deli med Claude Code, klepete, Cowork in ostalo – na vseh vaših napravah skupaj. Prikaže se kot lastna majhna skupina pod merilniki, z enakimi nevtralnimi stolpci kot razdelitev po modelih. Privzeto izklopljeno: vklopite ga v Nastavitve › Podrobnosti, tako da se brez vaše želje nič ne spremeni.",
+    "Shranjena ponastavitev omejitve ima zdaj svojo kljukico na seznamu vrstic v Nastavitve › Podrobnosti, kot vsaka druga vrstica.",
+    "Zakaj nova različica? Ker Anthropic nenehno širi podatke o porabi, mi pa jih nenehno beremo – da vedno vidite vse, kar obstaja. Za vas."
+  ],
+  "lv": [
+    "Jauns, pēc pieprasījuma: šī nedēļa pa produktiem. Serveris tagad pastāsta, kā jūsu nedēļas lietojums sadalās starp Claude Code, sarunām, Cowork un pārējo – visās jūsu ierīcēs kopā. Tas parādās kā atsevišķa maza grupa zem mērītājiem ar tādām pašām neitrālām joslām kā sadalījums pa modeļiem. Pēc noklusējuma izslēgts: ieslēdziet sadaļā Iestatījumi › Detaļas, lai bez jūsu lūguma nekas nemainītos.",
+    "Saglabātajai limita atiestatīšanai tagad ir sava izvēles rūtiņa Iestatījumi › Detaļas rindu sarakstā, tāpat kā katrai citai rindai.",
+    "Kāpēc jauna versija? Jo Anthropic nepārtraukti papildina lietojuma datus, un mēs nepārtraukti tos lasām – lai jūs vienmēr redzētu visu, kas ir. Jums."
+  ],
+  "et": [
+    "Uus, soovi korral: see nädal toote kaupa. Server ütleb nüüd, kuidas sinu nädala kasutus jaguneb Claude Code'i, vestluste, Coworki ja ülejäänu vahel – kõigis sinu seadmetes kokku. See kuvatakse mõõdikute all omaette väikese rühmana, samade neutraalsete tulpadega nagu mudelite kaupa jaotus. Vaikimisi väljas: lülita sisse jaotises Seaded › Üksikasjad, nii et ilma sinu soovita ei muutu midagi.",
+    "Salvestatud limiidi lähtestusel on nüüd Seaded › Üksikasjad ridade loendis oma märkeruut, nagu igal teisel real.",
+    "Miks uus versioon? Sest Anthropic täiendab kasutusandmeid pidevalt ja meie loeme neid pidevalt – et näeksid alati kõike, mis olemas on. Sinu jaoks."
+  ],
+  "mt": [
+    "Ġdid, fuq talba: din il-ġimgħa skont il-prodott. Is-server issa jgħid kif l-użu tiegħek ta' kull ġimgħa jinqasam bejn Claude Code, chats, Cowork u l-bqija – fuq l-apparati kollha tiegħek flimkien. Jidher bħala grupp żgħir għalih taħt l-indikaturi, bl-istess barri newtrali bħall-qsim skont il-mudell. Mitfi awtomatikament: ixegħlu taħt Issettjar › Dettalji, biex xejn ma jinbidel jekk ma titlobx int.",
+    "Ir-risettjar tal-limitu salvat issa għandu l-kaxxa tiegħu fil-lista tar-ringieli ta' Issettjar › Dettalji, bħal kull ringiela oħra.",
+    "Għaliex verżjoni ġdida? Għax Anthropic tkompli żżid mad-data tal-użu, u aħna nkomplu naqrawha – biex dejjem tara kulma hemm. Għalik."
+  ],
+  "ga": [
+    "Nua, ar iarratas: an tseachtain seo de réir táirge. Insíonn an freastalaí anois conas a roinntear d'úsáid sheachtainiúil idir Claude Code, comhráite, Cowork agus an chuid eile – ar do ghléasanna go léir le chéile. Taispeántar é mar ghrúpa beag dá chuid féin faoi na tomhsairí, leis na barraí neodracha céanna leis an roinnt de réir samhla. Múchta de réir réamhshocraithe: cas air é faoi Socruithe › Sonraí, ionas nach n-athraíonn aon rud mura n-iarrann tú é.",
+    "Tá a thic féin ag an athshocrú teorann sábháilte anois i liosta na rónna faoi Socruithe › Sonraí, díreach cosúil le gach ró eile.",
+    "Cén fáth leagan nua? Mar go gcoinníonn Anthropic ag cur leis na sonraí úsáide, agus coinnímidne á léamh – ionas go bhfeiceann tú i gcónaí gach a bhfuil ann. Duitse."
+  ]
+}

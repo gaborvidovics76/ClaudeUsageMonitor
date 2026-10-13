@@ -5,6 +5,12 @@ CODE = "fi"
 NAME = "Suomi"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "KAIKKI LAITTEET · TÄMÄ VIIKKO TUOTTEITTAIN",
+    "detail.product.chat": "Keskustelut",
+    "detail.product.other": "Muut",
+    "detail.product.group": "tuotteittain",
+    "set.show_products": "Viikon jakauma tuotteittain (Claude Code, keskustelut, Cowork) – kaikki laitteet, palvelimelta",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Tallennetut rajan nollaukset",
     "detail.surface.cowork": "Rutiinit (Cowork)",

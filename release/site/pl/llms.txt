@@ -15,7 +15,7 @@ Jedna aplikacja na Windows i na Maca. Obejmuje wszystko, co liczy się do twojeg
 - **Licencja**: MIT, open source na GitHubie
 - **Autor**: Gábor Vidovics, Węgry – niezależny twórca, niepowiązany z Anthropic
 
-- Wersja: 2.8.1
+- Wersja: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Już wkrótce
 - https://claudeusagemonitor.com/pl/
@@ -25,7 +25,7 @@ Jedna aplikacja na Windows i na Maca. Obejmuje wszystko, co liczy się do twojeg
 - **Widzisz, co nadchodzi**: Zielony, żółty, czerwony. Panel zmienia kolor na długo przed tym, zanim limit się skończy – z odliczaniem do resetu i prognozą, kiedy dobijesz do 100%.
 - **Zużywasz za szybko?**: Wskaźnik tempa pokazuje, czy twój tygodniowy limit topnieje szybciej, niż mija tydzień – i prognozuje, na czym skończysz.
 - **Wszystkie urządzenia, jedna liczba**: Zaloguj się we własnej przeglądarce – tak jak robi to Claude Code – i zobacz zużycie także z telefonu, przeglądarki i każdego innego komputera.
-- **Limity dla poszczególnych modeli**: Fable, Opus, Sonnet, Claude Code, kredyty użycia – każdy limit, który zgłasza serwer, plus podział tego tygodnia między modele.
+- **Limity dla poszczególnych modeli**: Fable, Opus, Sonnet, Claude Code, kredyty użycia, zapisane resety limitu – każdy limit raportowany przez serwer, plus podział tygodnia na modele i, na życzenie, na produkty (Claude Code, czaty, Cowork) na wszystkich Twoich urządzeniach.
 - **Tylko ważne alerty**: Dyskretne powiadomienie przy 70% i 90% (sam wybierasz), gdy limit się resetuje i gdy zapisany reset limitu ma wkrótce wygasnąć niewykorzystany. Nic więcej, nigdy.
 - **Nie szpieguje. Kropka.**: Bez telemetrii, bez analityki, bez konta u nas. Aplikacja łączy się tylko z Anthropic i tylko po twoje własne liczby. Token logowania zostaje zaszyfrowany na twoim komputerze – Windows DPAPI albo Pęk kluczy w macOS.
 - **Cały tydzień na jednym wykresie**: Kliknij dwukrotnie widżet: oba limity na jednej osi czasu – 6 godzin, 24 godziny lub 7 dni – ze szczytem tygodnia, średnią dzienną i prognozą na koniec tygodnia, która zmienia kolor, zanim przekroczysz limit.

@@ -15,7 +15,7 @@ Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan – claud
 - **Licencia**: MIT, código abierto en GitHub
 - **Autor**: Gábor Vidovics, Hungría – independiente, sin vínculo con Anthropic
 
-- Versión: 2.8.1
+- Versión: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Próximamente
 - https://claudeusagemonitor.com/es/
@@ -25,7 +25,7 @@ Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan – claud
 - **Lo ves venir**: Verde, amarillo, rojo. El panel cambia de color mucho antes de que alcances tu límite – con cuenta atrás hasta el reinicio y una estimación de cuándo llegarías al 100%.
 - **¿Estás gastando demasiado rápido?**: El indicador de ritmo te dice si estás consumiendo tu límite semanal más rápido de lo que avanza la semana – y proyecta dónde vas a terminar.
 - **Todos tus dispositivos, una sola cifra**: Inicia sesión desde tu propio navegador – igual que Claude Code – y verás también el uso de tu teléfono, tu navegador y todos tus demás ordenadores.
-- **Límites por modelo**: Fable, Opus, Sonnet, Claude Code, créditos de uso – todos los límites que informa el servidor, más el reparto de esta semana entre modelos.
+- **Límites por modelo**: Fable, Opus, Sonnet, Claude Code, créditos de uso, reinicios de límite guardados – cada límite que informa el servidor, más el reparto de la semana por modelo y, a petición, por producto (Claude Code, chats, Cowork) en todos tus dispositivos.
 - **Avisos que importan**: Una notificación discreta al 70% y al 90% (tú eliges), cuando tu límite se reinicia y cuando un reinicio de límite guardado está a punto de caducar sin usar. Nada más, nunca.
 - **No espía. Punto.**: Sin telemetría, sin analíticas, sin cuenta con nosotros. Solo habla con Anthropic, y solo para obtener tus propias cifras. Tu token de sesión se queda cifrado en tu ordenador – con Windows DPAPI o en el Llavero de macOS.
 - **Toda tu semana en un solo gráfico**: Doble clic en el widget: los dos límites en una misma línea de tiempo – 6 horas, 24 horas o 7 días – con el pico semanal, la media diaria y una proyección al final de la semana que cambia de color antes de que te pases.

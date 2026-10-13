@@ -117,7 +117,7 @@
   "feat.3t": "Toate dispozitivele, o singură cifră",
   "feat.3d": "Conectează-te din propriul browser – la fel ca în Claude Code – și vezi și utilizarea de pe telefon, din browser și de pe orice alt computer.",
   "feat.4t": "Limite per model",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, credite de utilizare – fiecare limită raportată de server, plus împărțirea pe modele din săptămâna aceasta.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, credite de utilizare, resetări de limită salvate – fiecare limită raportată de server, plus împărțirea săptămânii pe modele și, la cerere, pe produse (Claude Code, conversații, Cowork) pe toate dispozitivele tale.",
   "feat.5t": "Alerte care contează",
   "feat.5d": "O notificare discretă la 70% și 90% (tu alegi), când limita ta se resetează și când o resetare de limită salvată e pe cale să expire nefolosită. Nimic altceva, niciodată.",
   "feat.7t": "Toată săptămâna într-un singur grafic",

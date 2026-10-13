@@ -5,6 +5,12 @@ CODE = "ro"
 NAME = "Română"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "TOATE DISPOZITIVELE · SĂPTĂMÂNA ACEASTA PE PRODUSE",
+    "detail.product.chat": "Conversații",
+    "detail.product.other": "Altele",
+    "detail.product.group": "pe produse",
+    "set.show_products": "Împărțirea săptămânii pe produse (Claude Code, conversații, Cowork) – toate dispozitivele, de la server",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Resetări de limită salvate",
     "detail.surface.cowork": "Rutine (Cowork)",

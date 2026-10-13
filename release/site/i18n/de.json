@@ -118,7 +118,7 @@
   "feat.3t": "Alle Geräte, eine Zahl",
   "feat.3d": "Melde dich über deinen eigenen Browser an – genau wie bei Claude Code – und sieh auch, was du auf dem Handy, im Browser und auf jedem anderen Computer verbrauchst.",
   "feat.4t": "Limits pro Modell",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, Nutzungsguthaben – jedes Limit, das der Server meldet, plus die Aufteilung dieser Woche nach Modellen.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, Nutzungsguthaben, gespeicherte Limit-Zurücksetzungen – jedes Limit, das der Server meldet, plus die Aufteilung dieser Woche nach Modell und, auf Wunsch, nach Produkt (Claude Code, Chats, Cowork) über alle deine Geräte.",
   "feat.5t": "Hinweise, die zählen",
   "feat.5d": "Eine dezente Benachrichtigung bei 70% und 90% (die Werte bestimmst du), wenn dein Limit zurückgesetzt wird und wenn eine gespeicherte Limit-Zurücksetzung ungenutzt zu verfallen droht. Sonst nichts. Niemals.",
   "feat.7t": "Die ganze Woche in einem Diagramm",

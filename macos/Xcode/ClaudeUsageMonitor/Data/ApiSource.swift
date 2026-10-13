@@ -418,6 +418,23 @@ final class ApiSource: UsageSource {
         return ResetGrants(count: count, total: total, expiresAt: expires, eligible: eligible)
     }
 
+    /// This week's usage split by product (`seven_day_breakdown`): every device of the account.
+    /// Rows with a 0 % share are left out; an absent or malformed block gives [].
+    static func pickProducts(_ raw: [String: Any]) -> [ProductShare] {
+        guard let block = raw["seven_day_breakdown"] as? [String: Any], let rows = block["rows"] as? [[String: Any]] else { return [] }
+        var out: [ProductShare] = []
+        for row in rows {
+            guard isNumber(row["percent"]) else { continue }
+            let pct = percent(row["percent"])
+            if pct <= 0 { continue }
+            let key = (row["key"] as? String ?? "").trimmingCharacters(in: .whitespaces)
+            let label = (row["display_name"] as? String ?? "").trimmingCharacters(in: .whitespaces)
+            if key.isEmpty && label.isEmpty { continue }
+            out.append(ProductShare(key: key.isEmpty ? label.lowercased() : key, label: label, percent: pct))
+        }
+        return out
+    }
+
     /// Which gauge's limit applies right now (the server marks it with `is_active`):
     /// "fh" (5-hour), "sd" (weekly), "mo" (the model gauge) or "" when it does not say.
     static func pickActive(_ raw: [String: Any], modelName: String) -> String {
@@ -555,6 +572,7 @@ final class ApiSource: UsageSource {
         m.rows = ApiSource.pickRows(raw)
         m.extra = ApiSource.pickExtra(raw)
         m.resets = ApiSource.pickResets(raw)
+        m.products = ApiSource.pickProducts(raw)
 
         let (moVal, moReset, moName) = ApiSource.pickModel(raw, filter: modelFilter)
         m.active = ApiSource.pickActive(raw, modelName: moName)

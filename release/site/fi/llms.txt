@@ -15,7 +15,7 @@ Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan
 - **Lisenssi**: MIT, avoin lähdekoodi GitHubissa
 - **Tekijä**: Gábor Vidovics, Unkari – itsenäinen kehittäjä, ei yhteydessä Anthropiciin
 
-- Versio: 2.8.1
+- Versio: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Tulossa pian
 - https://claudeusagemonitor.com/fi/
@@ -25,7 +25,7 @@ Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan
 - **Näet sen tulevan**: Vihreä, keltainen, punainen. Paneeli vaihtaa väriä hyvissä ajoin ennen kuin raja tulee vastaan – ja näyttää ajan nollaukseen sekä arvion siitä, milloin 100 % täyttyisi.
 - **Kulutatko liian nopeasti?**: Tahtimittari kertoo, sulaako viikkorajasi nopeammin kuin viikko kuluu – ja ennustaa, mihin päädyt.
 - **Kaikki laitteesi, yksi luku**: Kirjaudu omassa selaimessasi – kuten Claude Code tekee – ja näet myös puhelimesi, selaimesi ja kaikkien muiden tietokoneidesi käytön.
-- **Mallikohtaiset rajat**: Fable, Opus, Sonnet, Claude Code, käyttökrediitit – jokainen palvelimen ilmoittama raja sekä tämän viikon jakauma mallien kesken.
+- **Mallikohtaiset rajat**: Fable, Opus, Sonnet, Claude Code, käyttökrediitit, tallennetut rajan nollaukset – jokainen palvelimen ilmoittama raja, sekä viikon jakauma malleittain ja pyynnöstä tuotteittain (Claude Code, keskustelut, Cowork) kaikilla laitteillasi.
 - **Vain olennaiset hälytykset**: Hiljainen ilmoitus 70 %:n ja 90 %:n kohdalla (valitset itse), kun rajasi nollautuu ja kun tallennettu rajan nollaus on vanhenemassa käyttämättä. Ei mitään muuta, koskaan.
 - **Se ei vakoile. Piste.**: Ei telemetriaa, ei analytiikkaa, ei tiliä meillä. Se keskustelee vain Anthropicin kanssa ja vain sinun omista luvuistasi. Kirjautumistunnuksesi pysyy salattuna tietokoneellasi – Windows DPAPI tai macOS:n Avainnippu.
 - **Koko viikko yhdessä kaaviossa**: Kaksoisnapsauta paneelia: molemmat rajat samalla aikajanalla – 6 tuntia, 24 tuntia tai 7 päivää – viikon huipun, päivittäisen keskiarvon ja viikon loppuun ulottuvan ennusteen kera. Ennuste vaihtaa väriä ennen kuin raja ylittyy.

@@ -15,7 +15,7 @@ Eén app voor Windows én Mac. Hij telt alles mee wat onder je abonnement valt �
 - **Licentie**: MIT, open source op GitHub
 - **Maker**: Gábor Vidovics, Hongarije – onafhankelijk, niet verbonden aan Anthropic
 
-- Versie: 2.8.1
+- Versie: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Binnenkort
 - https://claudeusagemonitor.com/nl/
@@ -25,7 +25,7 @@ Eén app voor Windows én Mac. Hij telt alles mee wat onder je abonnement valt �
 - **Zie het aankomen**: Groen, geel, rood. Het paneel verandert van kleur lang voordat je je gebruikslimiet bereikt – met een aftelklok tot de reset en een schatting van wanneer je de 100% zou raken.
 - **Ga je er te hard doorheen?**: De tempometer vertelt je of je weeklimiet sneller wegsmelt dan de week voorbijgaat – en voorspelt waar je uitkomt.
 - **Al je apparaten, één getal**: Log in via je eigen browser – net als bij Claude Code – en zie ook het verbruik van je telefoon, je browser en elke andere computer.
-- **Limieten per model**: Fable, Opus, Sonnet, Claude Code, gebruikstegoed – elke limiet die de server doorgeeft, plus de verdeling van deze week over de modellen.
+- **Limieten per model**: Fable, Opus, Sonnet, Claude Code, gebruikstegoed, bewaarde limietresets – elke limiet die de server meldt, plus de verdeling van deze week per model en, op verzoek, per product (Claude Code, chats, Cowork) over al je apparaten.
 - **Meldingen die ertoe doen**: Een stille melding bij 70% en 90% (jij kiest), als je limiet wordt gereset en als een bewaarde limietreset ongebruikt dreigt te verlopen. Verder niets, nooit.
 - **Het spioneert niet. Punt.**: Geen telemetrie, geen analytics, geen account bij ons. De app praat alleen met Anthropic, en alleen voor je eigen cijfers. Je inlogtoken blijft versleuteld op je eigen computer – met Windows DPAPI of in de macOS-sleutelhanger.
 - **Je hele week in één grafiek**: Dubbelklik op de widget: beide limieten op één tijdlijn – 6 uur, 24 uur of 7 dagen – met weekpiek, daggemiddelde en een prognose voor het einde van de week die van kleur verandert voordat je over de limiet gaat.

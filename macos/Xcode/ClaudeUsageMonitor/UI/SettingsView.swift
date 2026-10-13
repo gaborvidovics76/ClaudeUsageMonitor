@@ -192,6 +192,7 @@ private struct DetailsTab: View {
                 Check(label: tr("set.show_surfaces"), on: $s.showSurfaces)
                 Check(label: tr("set.show_extra_usage"), on: $s.showExtraUsage)
                 Check(label: tr("set.show_resets"), on: $s.showResets)
+                Check(label: tr("set.show_products"), on: $s.showProducts)
                 Check(label: tr("set.show_local_models"), on: $s.showLocalModels)
                 HStack { Spacer().frame(width: 150); HintText(tr("set.local_models_hint")) }
                 Row(tr("set.local_models_path")) {

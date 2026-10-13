@@ -15,7 +15,7 @@ Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được t�
 - **Giấy phép**: MIT, mã nguồn mở trên GitHub
 - **Tác giả**: Gábor Vidovics, Hungary – độc lập, không liên kết với Anthropic
 
-- Phiên bản: 2.8.1
+- Phiên bản: 2.9.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Sắp ra mắt
 - https://claudeusagemonitor.com/vi/
@@ -25,7 +25,7 @@ Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được t�
 - **Thấy trước khi đến**: Xanh, vàng, đỏ. Bảng đổi màu từ rất lâu trước khi bạn cạn hạn mức – kèm đếm ngược đến lúc đặt lại và ước tính khi nào bạn chạm 100%.
 - **Bạn có đang dùng quá nhanh?**: Chỉ báo nhịp cho biết giới hạn tuần của bạn có đang vơi nhanh hơn tốc độ trôi của tuần hay không – và dự báo bạn sẽ kết thúc tuần ở mức nào.
 - **Mọi thiết bị, một con số**: Đăng nhập qua chính trình duyệt của bạn – như Claude Code vẫn làm – và xem cả mức sử dụng từ điện thoại, trình duyệt và mọi máy tính khác.
-- **Giới hạn theo mô hình**: Fable, Opus, Sonnet, Claude Code, tín dụng sử dụng – mọi giới hạn máy chủ báo về, cộng thêm phân chia giữa các mô hình trong tuần này.
+- **Giới hạn theo mô hình**: Fable, Opus, Sonnet, Claude Code, tín dụng sử dụng, lượt đặt lại giới hạn đã lưu – mọi giới hạn máy chủ báo cáo, cộng thêm phân bổ tuần này theo mô hình và, nếu bạn muốn, theo sản phẩm (Claude Code, trò chuyện, Cowork) trên tất cả thiết bị của bạn.
 - **Cảnh báo đúng lúc**: Một thông báo nhẹ nhàng ở mức 70% và 90% (bạn tự chọn), khi giới hạn của bạn được đặt lại, và khi một lượt đặt lại giới hạn đã lưu sắp hết hạn mà chưa dùng. Không gì khác, không bao giờ.
 - **Không theo dõi bạn. Chấm hết.**: Không thu thập dữ liệu từ xa, không phân tích, không cần tài khoản với chúng tôi. Ứng dụng chỉ liên lạc với Anthropic, và chỉ để lấy số liệu của chính bạn. Token đăng nhập của bạn luôn được mã hóa trên máy tính của bạn – bằng Windows DPAPI hoặc Keychain của macOS.
 - **Cả tuần trên một biểu đồ**: Nhấp đúp vào tiện ích: cả hai giới hạn trên cùng một dòng thời gian – 6 giờ, 24 giờ hoặc 7 ngày – kèm đỉnh tuần, trung bình mỗi ngày và dự báo cuối tuần đổi màu trước khi bạn vượt ngưỡng.

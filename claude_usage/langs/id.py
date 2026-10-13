@@ -5,6 +5,12 @@ CODE = "id"
 NAME = "Bahasa Indonesia"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "SEMUA PERANGKAT · MINGGU INI PER PRODUK",
+    "detail.product.chat": "Obrolan",
+    "detail.product.other": "Lainnya",
+    "detail.product.group": "per produk",
+    "set.show_products": "Pembagian minggu ini per produk (Claude Code, obrolan, Cowork) – semua perangkat, dari server",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Reset batas tersimpan",
     "detail.surface.cowork": "Rutinitas (Cowork)",

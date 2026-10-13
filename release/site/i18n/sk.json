@@ -117,7 +117,7 @@
   "feat.3t": "Všetky zariadenia, jedno číslo",
   "feat.3d": "Prihlás sa cez vlastný prehliadač – tak ako Claude Code – a uvidíš aj využitie z telefónu, prehliadača a všetkých ostatných počítačov.",
   "feat.4t": "Limity podľa modelov",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredity na využitie – každý limit, ktorý server hlási, plus rozdelenie tohto týždňa medzi modely.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kredity za využitie, uložené resety limitu – každý limit, ktorý server hlási, plus rozdelenie týždňa podľa modelov a na želanie podľa produktov (Claude Code, chaty, Cowork) na všetkých tvojich zariadeniach.",
   "feat.5t": "Upozornenia, na ktorých záleží",
   "feat.5d": "Tiché upozornenie pri 70 % a 90 % (nastavíš si sám), keď sa limit resetuje a keď má uložený reset limitu čoskoro nevyužitý vypršať. Nič iné, nikdy.",
   "feat.7t": "Celý týždeň v jednom grafe",

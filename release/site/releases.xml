@@ -5,8 +5,16 @@
   <subtitle>Free desktop widget for Claude usage limits (Windows and macOS): new versions and what changed.</subtitle>
   <link rel="self" href="https://claudeusagemonitor.com/releases.xml"/>
   <link rel="alternate" href="https://claudeusagemonitor.com/"/>
-  <updated>2026-10-13T10:28:50Z</updated>
+  <updated>2026-10-13T10:57:51Z</updated>
   <author><name>Vidovics Gábor</name><uri>https://claudeusagemonitor.com/</uri></author>
+  <entry>
+    <id>https://claudeusagemonitor.com/#release-2.9.0</id>
+    <title>Claude Usage Monitor 2.9.0</title>
+    <updated>2026-10-13T10:57:51Z</updated>
+    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
+    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.0.zip" length="49167109"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;New, on request: this week by product. The server now tells how your weekly usage splits between Claude Code, chats, Cowork and the rest – across all your devices together. It appears as its own small group under the gauges, with the same neutral bars as the per-model split. Off by default: switch it on under Settings › Details, so nothing changes for you unless you ask.&lt;/li&gt;&lt;li&gt;The saved limit reset now has its own tick in the row list of Settings › Details, like every other row.&lt;/li&gt;&lt;li&gt;Why a new version? Because Anthropic keeps adding to the usage data, and we keep reading it – so you always see everything there is. For you.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://claudeusagemonitor.com/#release-2.8.1</id>
     <title>Claude Usage Monitor 2.8.1</title>

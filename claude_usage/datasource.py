@@ -86,6 +86,25 @@ class ExtraUsage:
 
 
 @dataclass
+class ProductShare:
+    """One row of the server's weekly breakdown: which product (Claude Code, chats, Cowork, other)
+    took what share of this week's usage - every device of the account together."""
+    key: str                            # claude_code | chat | cowork | other | ...
+    label: str                          # the server's display name (English)
+    percent: float = 0.0                # share of the week, 0-100
+
+
+def product_label(share: "ProductShare") -> str:
+    from .i18n import tr
+
+    if share.key == "chat":
+        return tr("detail.product.chat")
+    if share.key == "other":
+        return tr("detail.product.other")
+    return share.label or share.key.replace("_", " ").title()
+
+
+@dataclass
 class ResetGrants:
     """Saved limit resets: a reset Anthropic hands out that the user may keep and redeem
     whenever they choose (on claude.ai, Settings > Usage). The program never redeems one."""
@@ -146,6 +165,7 @@ class Metrics:
     model_name: str = ""
     resets: Optional[ResetGrants] = None    # saved limit resets (claude.ai source only)
     active: str = ""                        # the gauge whose limit applies right now: fh | sd | mo | ""
+    products: List[ProductShare] = field(default_factory=list)   # this week by product (claude.ai source only)
 
     @property
     def has_model(self) -> bool:

@@ -5,6 +5,12 @@ CODE = "da"
 NAME = "Dansk"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "ALLE ENHEDER · DENNE UGE PR. PRODUKT",
+    "detail.product.chat": "Samtaler",
+    "detail.product.other": "Andet",
+    "detail.product.group": "pr. produkt",
+    "set.show_products": "Ugens fordeling pr. produkt (Claude Code, chats, Cowork) – alle enheder, fra serveren",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Gemte grænsenulstillinger",
     "detail.surface.cowork": "Rutiner (Cowork)",

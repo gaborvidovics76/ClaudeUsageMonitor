@@ -5,6 +5,12 @@ CODE = "lt"
 NAME = "Lietuvių"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "VISI ĮRENGINIAI · ŠI SAVAITĖ PAGAL PRODUKTĄ",
+    "detail.product.chat": "Pokalbiai",
+    "detail.product.other": "Kita",
+    "detail.product.group": "pagal produktą",
+    "set.show_products": "Šios savaitės pasiskirstymas pagal produktą (Claude Code, pokalbiai, Cowork) – visi įrenginiai, iš serverio",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Išsaugoti limito atstatymai",
     "detail.surface.cowork": "Rutinos (Cowork)",

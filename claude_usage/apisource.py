@@ -16,7 +16,7 @@ from typing import Callable, List, Optional, Tuple
 
 from . import oauth
 from .i18n import tr
-from .datasource import (FIVE_HOURS_MS, WEEK_MS, DetailRow, ExtraUsage, Metrics, ProfileInfo,
+from .datasource import (FIVE_HOURS_MS, WEEK_MS, DetailRow, ExtraUsage, Metrics, ProductShare, ProfileInfo,
                          ResetGrants, Sample)
 
 
@@ -610,6 +610,26 @@ class ApiReader:
         return ResetGrants(count=count, total=total, expires_at=expires, eligible=eligible)
 
     @staticmethod
+    def _pick_products(raw: dict) -> List[ProductShare]:
+        """This week's usage split by product (`seven_day_breakdown`): every device of the account.
+        Rows with a 0 % share are left out; an absent or malformed block gives []."""
+        block = raw.get("seven_day_breakdown") if isinstance(raw, dict) else None
+        rows = block.get("rows") if isinstance(block, dict) else None
+        out: List[ProductShare] = []
+        for row in rows if isinstance(rows, list) else []:
+            if not isinstance(row, dict):
+                continue
+            pct = row.get("percent")
+            if not isinstance(pct, (int, float)) or pct <= 0:
+                continue
+            key = str(row.get("key") or "").strip()
+            label = str(row.get("display_name") or "").strip()
+            if not key and not label:
+                continue
+            out.append(ProductShare(key=key or label.lower(), label=label, percent=float(pct)))
+        return out
+
+    @staticmethod
     def _pick_active(raw: dict, model_name: str) -> str:
         """Which gauge's limit applies right now (the server marks it with `is_active`):
         "fh" (5-hour), "sd" (weekly), "mo" (the model gauge) or "" when it does not say."""
@@ -803,6 +823,7 @@ class ApiReader:
         m.rows = self._pick_rows(raw)
         m.extra = self._pick_extra(raw)
         m.resets = self._pick_resets(raw)
+        m.products = self._pick_products(raw)
 
         # model-scoped weekly limit (e.g. Fable) - only when the server reports it
         mo_val, mo_reset, mo_name = self._pick_model(raw, self.model_filter)

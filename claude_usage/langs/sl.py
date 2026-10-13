@@ -5,6 +5,12 @@ CODE = "sl"
 NAME = "Slovenščina"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "VSE NAPRAVE · TA TEDEN PO IZDELKIH",
+    "detail.product.chat": "Klepeti",
+    "detail.product.other": "Drugo",
+    "detail.product.group": "po izdelkih",
+    "set.show_products": "Razdelitev tedna po izdelkih (Claude Code, klepeti, Cowork) – vse naprave, s strežnika",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Shranjene ponastavitve omejitve",
     "detail.surface.cowork": "Rutine (Cowork)",

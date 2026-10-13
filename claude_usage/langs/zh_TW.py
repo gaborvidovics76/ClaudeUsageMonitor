@@ -9,6 +9,12 @@ CODE = "zh-TW"
 NAME = "繁體中文"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "所有裝置 · 本週依產品",
+    "detail.product.chat": "對話",
+    "detail.product.other": "其他",
+    "detail.product.group": "依產品",
+    "set.show_products": "本週依產品劃分（Claude Code、對話、Cowork）——所有裝置，來自伺服器",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "已儲存的額度重設",
     "detail.surface.cowork": "例行工作（Cowork）",

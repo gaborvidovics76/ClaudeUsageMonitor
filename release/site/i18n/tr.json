@@ -117,7 +117,7 @@
   "feat.3t": "Tüm cihazların, tek rakam",
   "feat.3d": "Kendi tarayıcından giriş yap – tıpkı Claude Code gibi – ve telefonundaki, tarayıcındaki ve diğer tüm bilgisayarlarındaki kullanımı da gör.",
   "feat.4t": "Model bazında limitler",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kullanım kredileri – sunucunun bildirdiği her limit, üstüne bu haftanın modellere göre dağılımı.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, kullanım kredileri, kayıtlı limit sıfırlamaları – sunucunun bildirdiği her limit, artı bu haftanın modele göre ve istek üzerine ürüne göre (Claude Code, sohbetler, Cowork) dağılımı, tüm cihazlarında.",
   "feat.5t": "Sadece önemli uyarılar",
   "feat.5d": "%70 ve %90'da (sen seçersin), limitin sıfırlandığında ve kayıtlı bir limit sıfırlama kullanılmadan dolmak üzereyken sessiz bir bildirim. Başka hiçbir şey, asla.",
   "feat.7t": "Bütün haftan tek grafikte",

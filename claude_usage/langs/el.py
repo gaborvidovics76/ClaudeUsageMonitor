@@ -5,6 +5,12 @@ CODE = "el"
 NAME = "Ελληνικά"
 
 STRINGS = {
+    # --- 2.9.0: this week by product --------------------------------------------------------
+    "detail.products_header": "ΟΛΕΣ ΟΙ ΣΥΣΚΕΥΕΣ · ΑΥΤΗ Η ΕΒΔΟΜΑΔΑ ΑΝΑ ΠΡΟΪΟΝ",
+    "detail.product.chat": "Συνομιλίες",
+    "detail.product.other": "Άλλα",
+    "detail.product.group": "ανά προϊόν",
+    "set.show_products": "Κατανομή της εβδομάδας ανά προϊόν (Claude Code, συνομιλίες, Cowork) – όλες οι συσκευές, από τον διακομιστή",
     # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
     "detail.resets": "Αποθηκευμένες επαναφορές ορίου",
     "detail.surface.cowork": "Ρουτίνες (Cowork)",

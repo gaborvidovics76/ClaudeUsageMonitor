@@ -118,7 +118,7 @@
   "feat.3t": "Minden eszközöd, egyetlen szám",
   "feat.3d": "Jelentkezz be a saját böngésződben – ugyanúgy, ahogy a Claude Code-nál –, és a telefonod, a böngésződ és az összes többi géped fogyasztását is látod.",
   "feat.4t": "Modellenkénti limitek",
-  "feat.4d": "Fable, Opus, Sonnet, Claude Code, használati kredit – minden limit, amit a szerver közöl, és az is, hogyan oszlik meg a heti fogyasztásod a modellek között.",
+  "feat.4d": "Fable, Opus, Sonnet, Claude Code, használati kredit, elmentett limit-visszaállítás – minden limit, amit a szerver jelent, plusz e heti megoszlás modellenként és, kérésre, termékenként (Claude Code, csevegés, Cowork) az összes eszközödön.",
   "feat.5t": "Csak a fontos értesítések",
   "feat.5d": "Halk értesítés 70%-nál és 90%-nál (te állítod be), amikor a limited visszaáll, és amikor egy elmentett limit-visszaállítás beváltatlanul lejárna. Semmi más, soha.",
   "feat.7t": "Az egész heted egy grafikonon",
