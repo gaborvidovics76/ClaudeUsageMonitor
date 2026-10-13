@@ -1,0 +1,6 @@
+01-panel.png	5-Stunden- und Wochenlimit, Limit je Modell, Countdown bis zum Reset und Verbrauchsrate – auf einen Blick, immer im Vordergrund
+02-rings.png	Ring-Layout: dieselben drei Limits als kompakte Anzeigen
+03-compact.png	Schmale Leiste für einen vollen Desktop
+04-history.png	Verlauf: beide Limits über 6 Stunden, 24 Stunden oder 7 Tage, mit Spitze, Durchschnitt und Wochenprognose
+05-settings.png	Jedes Detail lässt sich ein- und ausschalten – gespeicherte Zurücksetzungen, Guthaben, Woche nach Produkt
+06-themes.png	Sechs Designs, drei Layouts, eigene Akzentfarbe

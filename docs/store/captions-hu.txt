@@ -1,0 +1,6 @@
+01-panel.png	5 órás és heti keret, modellenkénti limit, visszaszámlálás és fogyási ütem – egy pillantásra, mindig felül
+02-rings.png	Gyűrűs elrendezés: ugyanaz a három keret tömör órákként
+03-compact.png	Vékony sáv zsúfolt asztalra
+04-history.png	Előzmények: mindkét keret 6 órás, 24 órás vagy 7 napos nézetben, csúccsal, átlaggal és hét végi előrejelzéssel
+05-settings.png	Minden részlet ki-be kapcsolható – elmentett visszaállítás, használati kredit, e heti termékbontás
+06-themes.png	Hat téma, három elrendezés, saját kiemelőszín

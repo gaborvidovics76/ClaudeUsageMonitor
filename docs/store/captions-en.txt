@@ -1,0 +1,6 @@
+01-panel.png	5-hour and weekly limits, the per-model limit, reset countdown and burn rate – at a glance, always on top
+02-rings.png	Ring layout: the same three limits as compact dials
+03-compact.png	Compact bar for a crowded desktop
+04-history.png	History: both limits over 6 hours, 24 hours or 7 days, with peak, average and end-of-week projection
+05-settings.png	Every detail can be switched on or off – saved limit resets, usage credits, this week by product
+06-themes.png	Six themes and three layouts; custom accent colour
