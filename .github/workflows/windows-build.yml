@@ -79,6 +79,8 @@ jobs:
           "${{ steps.ver.outputs.version }}`n" | Set-Content "$stage\app\ClaudeUsageMonitor\VERSION" -NoNewline
           [IO.File]::WriteAllText("$stage\app\ClaudeUsageMonitor\Uninstall.bat", "@echo off`r`npowershell -NoProfile -ExecutionPolicy Bypass -File `"%~dp0Uninstall.ps1`"`r`n", [Text.Encoding]::ASCII)
           Get-ChildItem $stage -Recurse -File | Measure-Object | ForEach-Object { "staged files: $($_.Count)" }
+          # robocopy answers 1 on a successful copy; the pwsh step would otherwise fail on that exit code
+          exit 0
 
       - name: Upload the unsigned package
         id: upload
