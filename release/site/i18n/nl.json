@@ -320,5 +320,9 @@
   "bk.feat": "Back-uplampjes – zie of er een back-up is van je Claude-werk",
   "img.bk_panel": "Claude Usage Monitor-paneel met drie groene back-uplampjes: OneDrive, Nextcloud en Obsidian, elk een minuut geleden geback-upt",
   "img.bk_details": "Back-updetailvenster van Claude Usage Monitor: status Actueel, de geback-upte snapshot van de Obsidian-vault, Claude Code, Claude Desktop, een extra map en de agentlogs met aantallen bestanden en groottes, geen fouten, en de geplande taak",
-  "lang.hint": "Deze pagina is ook beschikbaar in het Nederlands"
+  "lang.hint": "Deze pagina is ook beschikbaar in het Nederlands",
+  "cs.h": "Beleid voor codeondertekening",
+  "cs.p1": "Windows-releases worden gebouwd door een openbare GitHub Actions-workflow vanuit de broncoderepository van het project en vanuit die build ter ondertekening aangeboden. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Team: Vidovics Gábor – auteur, reviewer en goedkeurder van elk ondertekeningsverzoek. Het programma stuurt alleen gegevens naar de servers van Anthropic (je eigen gebruikscijfers) en naar claudeusagemonitor.com (updatecontrole; het berichtformulier alleen als je het verstuurt). Details in het Privacybeleid.",
+  "cs.status": "Status: aanvraag bij SignPath Foundation in behandeling. Tot de goedkeuring zijn releases ondertekend met het eigen certificaat van de auteur, of niet ondertekend."
 }

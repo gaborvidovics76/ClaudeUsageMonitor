@@ -320,5 +320,9 @@
   "img.bk_details": "Claude Usage Monitor yedek ayrıntı penceresi: Güncel durumu, yedeklenmiş Obsidian kasası anlık görüntüsü, Claude Code, Claude Desktop, bir ek klasör ve dosya sayıları ile boyutlarıyla agent günlükleri, hata yok, ve zamanlanmış görev",
   "lang.hint": "Bu sayfa Türkçe olarak da mevcut",
   "dl.soon": "Çok yakında",
-  "dls.btn_mac_soon": "macOS sürümü – çok yakında"
+  "dls.btn_mac_soon": "macOS sürümü – çok yakında",
+  "cs.h": "Kod imzalama politikası",
+  "cs.p1": "Windows sürümleri, projenin kaynak deposundan herkese açık bir GitHub Actions iş akışıyla derlenir ve imzaya bu derlemeden gönderilir. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Ekip: Vidovics Gábor – her imzalama isteğinin yazarı, gözden geçireni ve onaylayanı. Program yalnızca Anthropic sunucularına (kendi kullanım verilerin) ve claudeusagemonitor.com'a (güncelleme denetimi; mesaj formu yalnızca gönderdiğinde) veri yollar. Ayrıntılar Gizlilik Politikası'nda.",
+  "cs.status": "Durum: SignPath Foundation başvurusu beklemede. Onaylanana kadar sürümler yazarın kendi sertifikasıyla imzalanır ya da imzasızdır."
 }

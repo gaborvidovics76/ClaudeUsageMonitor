@@ -320,5 +320,9 @@
   "bk.feat": "Varunduslambid – näe, kas su Claude'i töö on varundatud",
   "img.bk_panel": "Claude Usage Monitori paneel kolme rohelise varunduslambiga: OneDrive, Nextcloud ja Obsidian, igaüks varundatud minut tagasi",
   "img.bk_details": "Claude Usage Monitori varunduse üksikasjade aken: olek Värske, varundatud Obsidiani hoidla hetktõmmis, Claude Code, Claude Desktop, lisakaust ja agentide logid koos failide arvu ja mahuga, vigu pole, ning ajastatud toiming",
-  "lang.hint": "See leht on saadaval ka eesti keeles"
+  "lang.hint": "See leht on saadaval ka eesti keeles",
+  "cs.h": "Koodi allkirjastamise põhimõtted",
+  "cs.p1": "Windowsi väljalasked ehitab avalik GitHub Actionsi töövoog projekti lähtekoodihoidlast ja allkirjastamiseks esitatakse need just sellest ehitusest. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Meeskond: Vidovics Gábor – autor, ülevaataja ja iga allkirjastamistaotluse kinnitaja. Programm saadab andmeid ainult Anthropicu serveritesse (sinu enda kasutusnäitajad) ja aadressile claudeusagemonitor.com (uuenduste kontroll; sõnumivorm ainult siis, kui selle saadad). Täpsemalt privaatsuspoliitikas.",
+  "cs.status": "Olek: taotlus SignPath Foundationile on menetluses. Kuni heakskiiduni on väljalasked allkirjastatud autori enda sertifikaadiga või allkirjastamata."
 }

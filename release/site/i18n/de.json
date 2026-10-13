@@ -320,5 +320,9 @@
   "bk.feat": "Sicherungslampen – sieh, ob deine Claude-Arbeit gesichert ist",
   "img.bk_panel": "Claude Usage Monitor Panel mit drei grünen Sicherungslampen: OneDrive, Nextcloud und Obsidian, jeweils vor einer Minute gesichert",
   "img.bk_details": "Sicherungs-Detailfenster von Claude Usage Monitor: Status Aktuell, der gesicherte Snapshot des Obsidian-Vaults, Claude Code, Claude Desktop, ein zusätzlicher Ordner und die Agentenprotokolle mit Dateianzahl und Größe, keine Fehler, und die geplante Aufgabe",
-  "lang.hint": "Diese Seite gibt es auch auf Deutsch"
+  "lang.hint": "Diese Seite gibt es auch auf Deutsch",
+  "cs.h": "Code-Signing-Richtlinie",
+  "cs.p1": "Windows-Releases werden von einem öffentlichen GitHub-Actions-Workflow aus dem Quell-Repository des Projekts gebaut und aus diesem Build zur Signierung eingereicht. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Team: Vidovics Gábor – Autor, Prüfer und Freigeber jeder Signieranfrage. Das Programm sendet Daten nur an die Server von Anthropic (deine eigenen Nutzungszahlen) und an claudeusagemonitor.com (Update-Prüfung; das Nachrichtenformular nur, wenn du es abschickst). Details in der Datenschutzerklärung.",
+  "cs.status": "Status: Antrag bei der SignPath Foundation anhängig. Bis zur Genehmigung sind die Releases mit dem eigenen Zertifikat des Autors signiert oder unsigniert."
 }

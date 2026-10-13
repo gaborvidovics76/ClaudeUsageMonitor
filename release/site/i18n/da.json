@@ -320,5 +320,9 @@
   "img.bk_details": "Claude Usage Monitors detaljevindue for backup: status Frisk, det sikkerhedskopierede øjebliksbillede af Obsidian-vaulten, Claude Code, Claude Desktop, en ekstra mappe og agentlogs med antal filer og størrelser, ingen fejl samt den planlagte opgave",
   "lang.hint": "Denne side findes også på dansk",
   "dl.soon": "Kommer snart",
-  "dls.btn_mac_soon": "macOS-version – kommer snart"
+  "dls.btn_mac_soon": "macOS-version – kommer snart",
+  "cs.h": "Politik for kodesignering",
+  "cs.p1": "Windows-udgivelser bygges af et offentligt GitHub Actions-workflow fra projektets kildekodelager og sendes til signering fra netop det build. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Team: Vidovics Gábor – forfatter, reviewer og godkender af hver signeringsanmodning. Programmet sender kun data til Anthropics servere (dine egne forbrugstal) og til claudeusagemonitor.com (opdateringstjek; beskedformularen kun når du sender den). Detaljer i privatlivspolitikken.",
+  "cs.status": "Status: ansøgning til SignPath Foundation afventer. Indtil den godkendes, signeres udgivelser med forfatterens eget certifikat eller er usignerede."
 }

@@ -320,5 +320,9 @@
   "bk.feat": "Indicadores de backup – veja se o seu trabalho no Claude tem backup",
   "img.bk_panel": "Painel do Claude Usage Monitor com três indicadores de backup verdes: OneDrive, Nextcloud e Obsidian, cada um com backup feito há um minuto",
   "img.bk_details": "Janela de detalhes de backup do Claude Usage Monitor: estado Atualizado, o snapshot do vault do Obsidian no backup, Claude Code, Claude Desktop, uma pasta extra e os logs dos agentes com número de arquivos e tamanhos, nenhum erro, e a tarefa agendada",
-  "lang.hint": "Esta página também está disponível em português"
+  "lang.hint": "Esta página também está disponível em português",
+  "cs.h": "Política de assinatura de código",
+  "cs.p1": "As versões para Windows são compiladas por um fluxo público do GitHub Actions a partir do repositório do projeto e enviadas para assinatura a partir dessa compilação. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Equipe: Vidovics Gábor – autor, revisor e aprovador de cada pedido de assinatura. O programa envia dados apenas aos servidores da Anthropic (seus próprios números de uso) e a claudeusagemonitor.com (verificação de atualizações; o formulário de mensagem só quando você o envia). Detalhes na Política de Privacidade.",
+  "cs.status": "Status: pedido à SignPath Foundation pendente. Até a aprovação, as versões são assinadas com o certificado do próprio autor ou publicadas sem assinatura."
 }

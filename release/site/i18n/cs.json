@@ -320,5 +320,9 @@
   "bk.feat": "Kontrolky záloh – uvidíš, jestli je tvoje práce s Claude zálohovaná",
   "img.bk_panel": "Panel Claude Usage Monitor se třemi zelenými kontrolkami záloh: OneDrive, Nextcloud a Obsidian, každá zálohovaná před minutou",
   "img.bk_details": "Okno podrobností záloh Claude Usage Monitor: stav Aktuální, zálohovaný snímek trezoru Obsidianu, Claude Code, Claude Desktop, další složka a protokoly agentů s počty souborů a velikostmi, žádné chyby a naplánovaná úloha",
-  "lang.hint": "Tato stránka je k dispozici i v češtině"
+  "lang.hint": "Tato stránka je k dispozici i v češtině",
+  "cs.h": "Zásady podepisování kódu",
+  "cs.p1": "Vydání pro Windows sestavuje veřejný pracovní postup GitHub Actions ze zdrojového repozitáře projektu a z tohoto sestavení se odesílají k podpisu. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tým: Vidovics Gábor – autor, kontrolor a schvalovatel každé žádosti o podpis. Program posílá data jen na servery Anthropic (vaše vlastní údaje o využití) a na claudeusagemonitor.com (kontrola aktualizací; formulář zprávy jen když ho odešlete). Podrobnosti v Zásadách ochrany soukromí.",
+  "cs.status": "Stav: žádost u SignPath Foundation čeká na vyřízení. Do schválení jsou vydání podepsána vlastním certifikátem autora, nebo nepodepsána."
 }

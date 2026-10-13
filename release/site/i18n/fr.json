@@ -320,5 +320,9 @@
   "bk.feat": "Voyants de sauvegarde – voyez si votre travail Claude est sauvegardé",
   "img.bk_panel": "Panneau de Claude Usage Monitor avec trois voyants de sauvegarde verts : OneDrive, Nextcloud et Obsidian, chacun sauvegardé il y a une minute",
   "img.bk_details": "Fenêtre de détails des sauvegardes de Claude Usage Monitor : état À jour, l'instantané sauvegardé du coffre Obsidian, Claude Code, Claude Desktop, un dossier supplémentaire et les journaux des agents avec nombre de fichiers et tailles, aucune erreur, et la tâche planifiée",
-  "lang.hint": "Cette page existe aussi en français"
+  "lang.hint": "Cette page existe aussi en français",
+  "cs.h": "Politique de signature de code",
+  "cs.p1": "Les versions Windows sont construites par un workflow GitHub Actions public à partir du dépôt source du projet et soumises à la signature depuis cette construction. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Équipe : Vidovics Gábor – auteur, relecteur et approbateur de chaque demande de signature. Le programme n'envoie des données qu'aux serveurs d'Anthropic (vos propres chiffres d'utilisation) et à claudeusagemonitor.com (vérification des mises à jour ; le formulaire de message seulement si vous l'envoyez). Détails dans la politique de confidentialité.",
+  "cs.status": "Statut : demande auprès de la SignPath Foundation en cours. Jusqu'à son approbation, les versions sont signées avec le certificat personnel de l'auteur, ou non signées."
 }

@@ -320,5 +320,9 @@
   "bk.feat": "Dwal tal-backup – ara jekk ix-xogħol tiegħek ma' Claude għandux backup",
   "img.bk_panel": "Pannell ta' Claude Usage Monitor bi tliet dwal ħodor tal-backup: OneDrive, Nextcloud u Obsidian, kull wieħed b'backup ta' minuta ilu",
   "img.bk_details": "It-tieqa tad-dettalji tal-backup ta' Claude Usage Monitor: stat Riċenti, is-snapshot tal-vault ta' Obsidian fil-backup, Claude Code, Claude Desktop, folder extra u l-logs tal-aġenti bl-għadd ta' fajls u d-daqs, l-ebda żball, u l-kompitu skedat",
-  "lang.hint": "Din il-paġna hija disponibbli wkoll bil-Malti"
+  "lang.hint": "Din il-paġna hija disponibbli wkoll bil-Malti",
+  "cs.h": "Politika tal-iffirmar tal-kodiċi",
+  "cs.p1": "Ir-rilaxxi għal Windows jinbnew minn fluss tax-xogħol pubbliku ta' GitHub Actions mir-repożitorju tas-sors tal-proġett u jintbagħtu għall-iffirmar minn dak il-bini. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tim: Vidovics Gábor – awtur, reviżur u approvatur ta' kull talba għall-iffirmar. Il-programm jibgħat data biss lis-servers ta' Anthropic (iċ-ċifri tal-użu tiegħek stess) u lil claudeusagemonitor.com (kontroll tal-aġġornamenti; il-formola tal-messaġġi biss meta tibgħatha int). Dettalji fil-Politika tal-Privatezza.",
+  "cs.status": "Status: l-applikazzjoni lil SignPath Foundation għadha pendenti. Sakemm tiġi approvata, ir-rilaxxi jkunu ffirmati biċ-ċertifikat tal-awtur stess, jew mhux iffirmati."
 }

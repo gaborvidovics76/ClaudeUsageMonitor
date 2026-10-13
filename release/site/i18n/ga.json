@@ -320,5 +320,9 @@
   "bk.feat": "Lampaí cúltaca – feic an bhfuil cúltaca d'obair Claude ann",
   "img.bk_panel": "Painéal Claude Usage Monitor le trí lampa cúltaca glasa: OneDrive, Nextcloud agus Obsidian, cúltaca de gach ceann acu nóiméad ó shin",
   "img.bk_details": "Fuinneog mhionsonraí cúltaca Claude Usage Monitor: stádas Úr, léargas cúltaca an taisceadáin Obsidian, Claude Code, Claude Desktop, fillteán breise agus logchomhaid na ngníomhairí le líon na gcomhad agus a méid, gan earráidí, agus an tasc sceidealta",
-  "lang.hint": "Tá an leathanach seo ar fáil i nGaeilge freisin"
+  "lang.hint": "Tá an leathanach seo ar fáil i nGaeilge freisin",
+  "cs.h": "Polasaí sínithe cóid",
+  "cs.p1": "Tógtar eisiúintí Windows le sreabhadh oibre poiblí GitHub Actions ó stór foinse an tionscadail agus cuirtear isteach iad lena síniú ón tógáil sin. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Foireann: Vidovics Gábor – údar, athbhreithneoir agus ceadaitheoir gach iarratais sínithe. Ní sheolann an ríomhchlár sonraí ach chuig freastalaithe Anthropic (d'fhigiúirí úsáide féin) agus chuig claudeusagemonitor.com (seiceáil nuashonruithe; an fhoirm teachtaireachta ach amháin nuair a sheolann tú í). Sonraí sa Pholasaí Príobháideachais.",
+  "cs.status": "Stádas: iarratas chuig SignPath Foundation ar feitheamh. Go dtí go gceadaítear é, sínítear na heisiúintí le teastas an údair féin, nó fágtar gan síniú iad."
 }

@@ -320,5 +320,9 @@
   "img.bk_details": "Fereastra de detalii backup din Claude Usage Monitor: starea Recent, instantaneul salvat al seifului Obsidian, Claude Code, Claude Desktop, un folder suplimentar și jurnalele agenților, cu numărul și dimensiunea fișierelor, fără erori, și activitatea planificată",
   "lang.hint": "Această pagină este disponibilă și în limba română",
   "dl.soon": "În curând",
-  "dls.btn_mac_soon": "Versiunea pentru macOS – în curând"
+  "dls.btn_mac_soon": "Versiunea pentru macOS – în curând",
+  "cs.h": "Politica de semnare a codului",
+  "cs.p1": "Versiunile pentru Windows sunt construite de un flux public GitHub Actions din depozitul sursă al proiectului și trimise la semnare din acea construcție. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Echipa: Vidovics Gábor – autor, revizor și aprobator al fiecărei cereri de semnare. Programul trimite date doar către serverele Anthropic (propriile tale cifre de utilizare) și către claudeusagemonitor.com (verificarea actualizărilor; formularul de mesaj doar când îl trimiți). Detalii în Politica de confidențialitate.",
+  "cs.status": "Stare: cererea către SignPath Foundation este în așteptare. Până la aprobare, versiunile sunt semnate cu certificatul propriu al autorului sau nesemnate."
 }

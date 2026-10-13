@@ -320,5 +320,9 @@
   "bk.feat": "備份燈號：看看你的 Claude 工作是否已備份",
   "img.bk_panel": "Claude Usage Monitor 面板上的三顆綠色備份燈號：OneDrive、Nextcloud 和 Obsidian，皆於一分鐘前完成備份",
   "img.bk_details": "Claude Usage Monitor 備份詳細資料視窗：狀態為最新，列出已備份的 Obsidian 儲存庫快照、Claude Code、Claude Desktop、一個額外資料夾和代理程式記錄，並附檔案數量與大小，沒有錯誤，也顯示排程工作",
-  "lang.hint": "本頁也提供繁體中文版"
+  "lang.hint": "本頁也提供繁體中文版",
+  "cs.h": "程式碼簽署政策",
+  "cs.p1": "Windows 版本由公開的 GitHub Actions 工作流程從專案原始碼儲存庫建置，並從該建置提交簽署。 Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "團隊：Vidovics Gábor——作者，也是每個簽署請求的審核者與核准者。程式只向 Anthropic 的伺服器（你自己的用量數據）和 claudeusagemonitor.com（更新檢查；留言表單僅在你送出時）傳送資料。詳見隱私權政策。",
+  "cs.status": "狀態：SignPath Foundation 申請審核中。在核准之前，版本使用作者自己的憑證簽署，或不簽署。"
 }

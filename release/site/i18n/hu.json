@@ -320,5 +320,9 @@
   "bk.feat": "Mentési lámpák – lásd, el van-e mentve a Claude-os munkád",
   "img.bk_panel": "A Claude Usage Monitor panelje három zöld mentési lámpával: OneDrive, Nextcloud és Obsidian, mindegyik mentése egy perce készült",
   "img.bk_details": "A Claude Usage Monitor mentési részletező ablaka: Friss állapot, az elmentett Obsidian-vault pillanatképe, a Claude Code, a Claude Desktop, egy további mappa és az agent-naplók fájlszámmal és mérettel, hibák nélkül, valamint az ütemezett feladat",
-  "lang.hint": "Ez az oldal magyarul is elérhető"
+  "lang.hint": "Ez az oldal magyarul is elérhető",
+  "cs.h": "Kódaláírási szabályzat",
+  "cs.p1": "A Windows-kiadásokat egy nyilvános GitHub Actions-folyamat építi a projekt forráskódjából, és abból a buildből kerülnek aláírásra. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Csapat: Vidovics Gábor – szerző, ellenőrző és minden aláírási kérés jóváhagyója. A program csak az Anthropic szervereinek (a saját használati adataid) és a claudeusagemonitor.com-nak (frissítés-ellenőrzés; az üzenetküldő űrlap csak ha elküldöd) küld adatot. Részletek az adatvédelmi tájékoztatóban.",
+  "cs.status": "Állapot: a SignPath Foundation-kérelem elbírálás alatt. Amíg nem fogadják el, a kiadások a szerző saját tanúsítványával vannak aláírva, vagy aláíratlanok."
 }

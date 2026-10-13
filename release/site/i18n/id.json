@@ -320,5 +320,9 @@
   "bk.feat": "Lampu cadangan – lihat apakah pekerjaan Claude Anda sudah dicadangkan",
   "img.bk_panel": "Panel Claude Usage Monitor dengan tiga lampu cadangan hijau: OneDrive, Nextcloud, dan Obsidian, masing-masing dicadangkan satu menit yang lalu",
   "img.bk_details": "Jendela detail cadangan Claude Usage Monitor: status Segar, snapshot vault Obsidian yang dicadangkan, Claude Code, Claude Desktop, folder tambahan, dan log agen beserta jumlah file dan ukurannya, tanpa kesalahan, serta tugas terjadwal",
-  "lang.hint": "Halaman ini juga tersedia dalam bahasa Indonesia"
+  "lang.hint": "Halaman ini juga tersedia dalam bahasa Indonesia",
+  "cs.h": "Kebijakan penandatanganan kode",
+  "cs.p1": "Rilis Windows dibangun oleh alur kerja GitHub Actions publik dari repositori sumber proyek dan diajukan untuk ditandatangani dari build tersebut. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tim: Vidovics Gábor – penulis, peninjau, dan penyetuju setiap permintaan penandatanganan. Program hanya mengirim data ke server Anthropic (angka penggunaan Anda sendiri) dan ke claudeusagemonitor.com (pemeriksaan pembaruan; formulir pesan hanya saat Anda mengirimnya). Rincian di Kebijakan Privasi.",
+  "cs.status": "Status: permohonan ke SignPath Foundation sedang ditinjau. Sampai disetujui, rilis ditandatangani dengan sertifikat milik penulis sendiri, atau tanpa tanda tangan."
 }

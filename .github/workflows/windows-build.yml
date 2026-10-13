@@ -1,0 +1,114 @@
+# Builds the Windows program on GitHub's own runner, from this repository only (build.ps1 = the same
+# PyInstaller build the maintainer runs), and keeps the result as a workflow artifact.
+#
+# Why: code signing by SignPath Foundation (free for open source) signs only artifacts that were built in a
+# public, verifiable CI workflow - this one. The "sign" job submits the artifact to SignPath; it runs only
+# once the project is accepted and the SIGNPATH_* secrets exist. Until then it is skipped, and the build
+# still proves that the published program comes from this source.
+#
+# Runs on every push that touches the program, on version tags (v2.9.0), and by hand.
+name: Windows build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+    paths:
+      - "claude_usage/**"
+      - "main.py"
+      - "build.ps1"
+      - "installer/**"
+      - "requirements.txt"
+      - ".github/workflows/windows-build.yml"
+  pull_request:
+    paths:
+      - "claude_usage/**"
+      - "main.py"
+      - "build.ps1"
+      - "installer/**"
+      - "requirements.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
+      version: ${{ steps.ver.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller
+
+      - name: Version
+        id: ver
+        shell: pwsh
+        run: |
+          $v = (Select-String -Path claude_usage\__init__.py -Pattern '__version__\s*=\s*"([^"]+)"').Matches[0].Groups[1].Value
+          "version=$v" >> $env:GITHUB_OUTPUT
+          "Version: $v"
+
+      - name: Build (build.ps1 - icon, PyInstaller onedir, integrity check)
+        shell: pwsh
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
+
+      - name: Stage the installable package (same layout as release.ps1)
+        shell: pwsh
+        run: |
+          $stage = "build\package"
+          New-Item -ItemType Directory -Force -Path "$stage\app\ClaudeUsageMonitor", "$stage\installer" | Out-Null
+          robocopy dist\ClaudeUsageMonitor "$stage\app\ClaudeUsageMonitor" /E /NFL /NDL /NJH /NJS /NP | Out-Null
+          if ($LASTEXITCODE -ge 8) { throw "robocopy failed" }
+          Copy-Item installer\Install.ps1, installer\Uninstall.ps1 "$stage\installer"
+          Copy-Item installer\INSTALL.bat, installer\TELEPITES.bat, installer\README.txt, installer\OLVASS-EL.txt $stage
+          Copy-Item LICENSE "$stage\LICENSE.txt"
+          Copy-Item installer\Uninstall.ps1 "$stage\app\ClaudeUsageMonitor"
+          "${{ steps.ver.outputs.version }}`n" | Set-Content "$stage\VERSION" -NoNewline
+          "${{ steps.ver.outputs.version }}`n" | Set-Content "$stage\app\ClaudeUsageMonitor\VERSION" -NoNewline
+          [IO.File]::WriteAllText("$stage\app\ClaudeUsageMonitor\Uninstall.bat", "@echo off`r`npowershell -NoProfile -ExecutionPolicy Bypass -File `"%~dp0Uninstall.ps1`"`r`n", [Text.Encoding]::ASCII)
+          Get-ChildItem $stage -Recurse -File | Measure-Object | ForEach-Object { "staged files: $($_.Count)" }
+
+      - name: Upload the unsigned package
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClaudeUsageMonitor-windows-${{ steps.ver.outputs.version }}-unsigned
+          path: build/package
+          if-no-files-found: error
+
+  sign:
+    # SignPath Foundation: submits the artifact of the job above for signing. Active only once the project
+    # is accepted and the secrets are set (Settings > Secrets and variables > Actions):
+    #   SIGNPATH_API_TOKEN, SIGNPATH_ORGANIZATION_ID  - from SignPath after acceptance
+    # The project slug / signing policy slug below are the ones SignPath assigns; adjust them then.
+    needs: build
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && vars.SIGNPATH_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit the signing request to SignPath
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ secrets.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: ClaudeUsageMonitor
+          signing-policy-slug: release-signing
+          github-artifact-id: ${{ needs.build.outputs.artifact-id }}
+          wait-for-completion: true
+          output-artifact-directory: signed
+      - name: Upload the signed package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClaudeUsageMonitor-windows-${{ needs.build.outputs.version }}-signed
+          path: signed

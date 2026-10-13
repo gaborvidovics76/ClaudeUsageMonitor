@@ -320,5 +320,9 @@
   "bk.feat": "Dublējumu indikatori – redziet, vai jūsu Claude darbs ir dublēts",
   "img.bk_panel": "Claude Usage Monitor panelis ar trim zaļiem dublējumu indikatoriem: OneDrive, Nextcloud un Obsidian, katrs dublēts pirms minūtes",
   "img.bk_details": "Claude Usage Monitor dublējumu detaļu logs: statuss „Svaigs”, dublētais Obsidian glabātavas momentuzņēmums, Claude Code, Claude Desktop, papildu mape un aģentu žurnāli ar failu skaitu un apjomu, bez kļūdām, un plānotais uzdevums",
-  "lang.hint": "Šī lapa ir pieejama arī latviešu valodā"
+  "lang.hint": "Šī lapa ir pieejama arī latviešu valodā",
+  "cs.h": "Koda parakstīšanas politika",
+  "cs.p1": "Windows laidieni tiek būvēti ar publisku GitHub Actions darbplūsmu no projekta avota repozitorija un parakstīšanai iesniegti tieši no šī būvējuma. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Komanda: Vidovics Gábor – autors, pārskatītājs un katra parakstīšanas pieprasījuma apstiprinātājs. Programma sūta datus tikai uz Anthropic serveriem (jūsu pašu lietojuma skaitļi) un uz claudeusagemonitor.com (atjauninājumu pārbaude; ziņojuma veidlapa tikai tad, kad to nosūtāt). Sīkāk Privātuma politikā.",
+  "cs.status": "Statuss: pieteikums SignPath Foundation tiek izskatīts. Līdz apstiprināšanai laidieni ir parakstīti ar autora paša sertifikātu vai nav parakstīti."
 }

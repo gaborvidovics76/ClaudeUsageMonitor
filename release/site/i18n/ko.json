@@ -320,5 +320,9 @@
   "bk.feat": "백업 표시등 – Claude 작업이 백업됐는지 한눈에",
   "img.bk_panel": "OneDrive, Nextcloud, Obsidian 백업 표시등 세 개가 모두 녹색인 Claude Usage Monitor 패널, 각각 1분 전에 백업됨",
   "img.bk_details": "Claude Usage Monitor 백업 세부 정보 창: 상태 최신, 백업된 Obsidian 보관소 스냅샷, Claude Code, Claude Desktop, 추가 폴더, 에이전트 로그의 파일 수와 크기, 오류 없음, 예약된 작업",
-  "lang.hint": "이 페이지는 한국어로도 볼 수 있어요"
+  "lang.hint": "이 페이지는 한국어로도 볼 수 있어요",
+  "cs.h": "코드 서명 정책",
+  "cs.p1": "Windows 릴리스는 프로젝트 소스 저장소에서 공개 GitHub Actions 워크플로로 빌드되며, 그 빌드에서 서명을 요청합니다. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "팀: Vidovics Gábor – 작성자이자 모든 서명 요청의 검토자·승인자. 프로그램은 Anthropic 서버(본인의 사용량 수치)와 claudeusagemonitor.com(업데이트 확인; 메시지 양식은 직접 보낼 때만)에만 데이터를 보내요. 자세한 내용은 개인정보 처리방침에 있어요.",
+  "cs.status": "상태: SignPath Foundation 신청 심사 중. 승인되기 전까지 릴리스는 작성자 본인의 인증서로 서명되거나 서명되지 않아요."
 }

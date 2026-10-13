@@ -320,5 +320,9 @@
   "bk.feat": "Atsarginių kopijų lemputės – matykite, ar jūsų darbas su Claude turi atsarginę kopiją",
   "img.bk_panel": "Claude Usage Monitor skydelis su trimis žaliomis atsarginių kopijų lemputėmis: OneDrive, Nextcloud ir Obsidian, kiekviena kopija padaryta prieš minutę",
   "img.bk_details": "Claude Usage Monitor atsarginių kopijų išsamios informacijos langas: būsena „Aktuali“, nukopijuota Obsidian saugyklos momentinė kopija, Claude Code, Claude Desktop, papildomas aplankas ir agentų žurnalai su failų skaičiumi ir dydžiu, be klaidų, ir suplanuota užduotis",
-  "lang.hint": "Šį puslapį galima skaityti ir lietuviškai"
+  "lang.hint": "Šį puslapį galima skaityti ir lietuviškai",
+  "cs.h": "Kodo pasirašymo politika",
+  "cs.p1": "Windows leidimai sukuriami viešu GitHub Actions procesu iš projekto šaltinio saugyklos ir pasirašyti pateikiami būtent iš tos versijos. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Komanda: Vidovics Gábor – autorius, peržiūrėtojas ir kiekvienos pasirašymo užklausos tvirtintojas. Programa siunčia duomenis tik į Anthropic serverius (jūsų pačių naudojimo rodikliai) ir į claudeusagemonitor.com (atnaujinimų tikrinimas; žinutės forma – tik kai ją išsiunčiate). Daugiau privatumo politikoje.",
+  "cs.status": "Būsena: paraiška SignPath Foundation nagrinėjama. Kol ji nepatvirtinta, leidimai pasirašomi paties autoriaus sertifikatu arba nepasirašomi."
 }

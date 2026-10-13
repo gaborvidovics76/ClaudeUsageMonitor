@@ -320,5 +320,9 @@
   "bk.feat": "Indicadores de copia – comprueba si tu trabajo con Claude está a salvo",
   "img.bk_panel": "Panel de Claude Usage Monitor con tres indicadores de copia en verde: OneDrive, Nextcloud y Obsidian, cada uno copiado hace un minuto",
   "img.bk_details": "Ventana de detalles de copias de Claude Usage Monitor: estado Al día, la instantánea guardada de la bóveda de Obsidian, Claude Code, Claude Desktop, una carpeta adicional y los registros de los agentes con número de archivos y tamaños, sin errores, y la tarea programada",
-  "lang.hint": "Esta página también está disponible en español"
+  "lang.hint": "Esta página también está disponible en español",
+  "cs.h": "Política de firma de código",
+  "cs.p1": "Las versiones para Windows se compilan con un flujo público de GitHub Actions a partir del repositorio del proyecto y se envían a firmar desde esa compilación. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Equipo: Vidovics Gábor – autor, revisor y aprobador de cada solicitud de firma. El programa solo envía datos a los servidores de Anthropic (tus propias cifras de uso) y a claudeusagemonitor.com (comprobación de actualizaciones; el formulario de mensaje solo si lo envías). Detalles en la Política de privacidad.",
+  "cs.status": "Estado: solicitud a SignPath Foundation pendiente. Hasta su aprobación, las versiones se firman con el certificado propio del autor o se publican sin firmar."
 }

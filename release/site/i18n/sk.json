@@ -320,5 +320,9 @@
   "img.bk_details": "Okno podrobností záloh Claude Usage Monitor: stav Aktuálna, zálohovaná snímka trezora Obsidian, Claude Code, Claude Desktop, ďalší priečinok a záznamy agentov s počtami súborov a veľkosťami, bez chýb, a naplánovaná úloha",
   "lang.hint": "Táto stránka je dostupná aj po slovensky",
   "dl.soon": "Už čoskoro",
-  "dls.btn_mac_soon": "Verzia pre macOS – už čoskoro"
+  "dls.btn_mac_soon": "Verzia pre macOS – už čoskoro",
+  "cs.h": "Zásady podpisovania kódu",
+  "cs.p1": "Vydania pre Windows zostavuje verejný pracovný postup GitHub Actions zo zdrojového repozitára projektu a z tohto zostavenia sa odosielajú na podpis. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tím: Vidovics Gábor – autor, kontrolór a schvaľovateľ každej žiadosti o podpis. Program posiela údaje len na servery Anthropic (tvoje vlastné údaje o využití) a na claudeusagemonitor.com (kontrola aktualizácií; formulár správy len keď ho odošleš). Podrobnosti v Zásadách ochrany súkromia.",
+  "cs.status": "Stav: žiadosť u SignPath Foundation čaká na vybavenie. Do schválenia sú vydania podpísané vlastným certifikátom autora, alebo nepodpísané."
 }

@@ -320,5 +320,9 @@
   "bk.feat": "Đèn báo sao lưu – xem công việc Claude của bạn đã được sao lưu chưa",
   "img.bk_panel": "Bảng Claude Usage Monitor với ba đèn báo sao lưu màu xanh: OneDrive, Nextcloud và Obsidian, mỗi mục được sao lưu một phút trước",
   "img.bk_details": "Cửa sổ chi tiết sao lưu của Claude Usage Monitor: trạng thái Mới, ảnh chụp nhanh kho Obsidian đã sao lưu, Claude Code, Claude Desktop, một thư mục bổ sung và nhật ký agent kèm số tệp và dung lượng, không có lỗi, cùng tác vụ đã lên lịch",
-  "lang.hint": "Trang này cũng có bằng tiếng Việt"
+  "lang.hint": "Trang này cũng có bằng tiếng Việt",
+  "cs.h": "Chính sách ký mã",
+  "cs.p1": "Các bản phát hành Windows được xây dựng bằng quy trình GitHub Actions công khai từ kho mã nguồn của dự án và được gửi ký từ chính bản dựng đó. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Nhóm: Vidovics Gábor – tác giả, người xem xét và phê duyệt mọi yêu cầu ký. Chương trình chỉ gửi dữ liệu đến máy chủ của Anthropic (số liệu sử dụng của chính bạn) và claudeusagemonitor.com (kiểm tra cập nhật; biểu mẫu tin nhắn chỉ khi bạn gửi). Chi tiết trong Chính sách quyền riêng tư.",
+  "cs.status": "Trạng thái: đơn gửi SignPath Foundation đang chờ xét. Cho đến khi được duyệt, các bản phát hành được ký bằng chứng chỉ riêng của tác giả hoặc không ký."
 }

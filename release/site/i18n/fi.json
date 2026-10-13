@@ -320,5 +320,9 @@
   "img.bk_details": "Claude Usage Monitorin varmuuskopioiden tietoikkuna: tila Tuore, varmuuskopioitu Obsidian-holvin tilannevedos, Claude Code, Claude Desktop, lisäkansio ja agenttien lokit tiedostomäärineen ja kokoineen, ei virheitä, sekä ajoitettu tehtävä",
   "lang.hint": "Tämä sivu on saatavilla myös suomeksi",
   "dl.soon": "Tulossa pian",
-  "dls.btn_mac_soon": "macOS-versio – tulossa pian"
+  "dls.btn_mac_soon": "macOS-versio – tulossa pian",
+  "cs.h": "Koodin allekirjoituskäytäntö",
+  "cs.p1": "Windows-julkaisut rakentaa julkinen GitHub Actions -työnkulku projektin lähdekoodivarastosta, ja ne lähetetään allekirjoitettavaksi siitä koontiversiosta. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tiimi: Vidovics Gábor – tekijä, tarkastaja ja jokaisen allekirjoituspyynnön hyväksyjä. Ohjelma lähettää tietoja vain Anthropicin palvelimille (omat käyttölukusi) ja osoitteeseen claudeusagemonitor.com (päivitystarkistus; viestilomake vain kun lähetät sen). Tarkemmin tietosuojakäytännössä.",
+  "cs.status": "Tila: hakemus SignPath Foundationille odottaa käsittelyä. Hyväksyntään asti julkaisut allekirjoitetaan tekijän omalla varmenteella tai jätetään allekirjoittamatta."
 }

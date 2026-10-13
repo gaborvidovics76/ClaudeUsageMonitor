@@ -320,5 +320,9 @@
   "bk.feat": "Spie di backup – vedi se il tuo lavoro con Claude è al sicuro",
   "img.bk_panel": "Pannello di Claude Usage Monitor con tre spie di backup verdi: OneDrive, Nextcloud e Obsidian, ciascuno salvato un minuto fa",
   "img.bk_details": "Finestra dei dettagli dei backup di Claude Usage Monitor: stato Aggiornato, lo snapshot salvato del vault di Obsidian, Claude Code, Claude Desktop, una cartella aggiuntiva e i log degli agenti con numero di file e dimensioni, nessun errore, e l'attività pianificata",
-  "lang.hint": "Questa pagina è disponibile anche in italiano"
+  "lang.hint": "Questa pagina è disponibile anche in italiano",
+  "cs.h": "Politica di firma del codice",
+  "cs.p1": "Le versioni per Windows sono compilate da un flusso pubblico di GitHub Actions a partire dal repository del progetto e inviate alla firma da quella compilazione. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Team: Vidovics Gábor – autore, revisore e approvatore di ogni richiesta di firma. Il programma invia dati solo ai server di Anthropic (le tue cifre di utilizzo) e a claudeusagemonitor.com (controllo aggiornamenti; il modulo messaggi solo se lo invii). Dettagli nell'Informativa sulla privacy.",
+  "cs.status": "Stato: richiesta a SignPath Foundation in attesa. Fino all'approvazione, le versioni sono firmate con il certificato personale dell'autore oppure non firmate."
 }

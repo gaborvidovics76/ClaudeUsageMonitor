@@ -283,6 +283,10 @@ Signing names the publisher and lets SmartScreen reputation accumulate across re
 remove the "Windows protected your PC" prompt on its own – that fades as downloads of signed
 releases build up.
 
+The project's [code signing policy](CODE_SIGNING_POLICY.md) describes what is signed, who approves
+it and where the builds come from (`.github/workflows/windows-build.yml` builds the Windows package
+on GitHub's runners). An application for free signing by SignPath Foundation is pending.
+
 ## Contributing
 
 Issues and pull requests are welcome — new translations especially, they take about 20

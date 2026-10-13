@@ -320,5 +320,9 @@
   "bk.feat": "バックアップランプ：Claude での作業がバックアップされているかをひと目で確認",
   "img.bk_panel": "3つの緑のバックアップランプ（OneDrive、Nextcloud、Obsidian。いずれも1分前にバックアップ済み）を表示した Claude Usage Monitor のパネル",
   "img.bk_details": "Claude Usage Monitor のバックアップ詳細ウィンドウ：状態は「最新」。バックアップ済みの Obsidian 保管庫のスナップショット、Claude Code、Claude Desktop、追加フォルダー、エージェントのログをファイル数とサイズ付きで表示し、エラーはなく、スケジュールされたタスクも表示",
-  "lang.hint": "このページは日本語でもご覧いただけます"
+  "lang.hint": "このページは日本語でもご覧いただけます",
+  "cs.h": "コード署名ポリシー",
+  "cs.p1": "Windows 版はプロジェクトのソースリポジトリから公開 GitHub Actions ワークフローでビルドされ、そのビルドから署名に提出されます。 Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "チーム：Vidovics Gábor – 作者であり、すべての署名リクエストのレビューと承認を行います。本プログラムが送信するデータは、Anthropic のサーバー（あなた自身の使用状況）と claudeusagemonitor.com（更新確認。メッセージフォームは送信時のみ）だけです。詳細はプライバシーポリシーをご覧ください。",
+  "cs.status": "状況：SignPath Foundation への申請は審査中です。承認されるまで、リリースは作者自身の証明書で署名されるか、未署名です。"
 }

@@ -320,5 +320,9 @@
   "img.bk_details": "Prozor pojedinosti o sigurnosnim kopijama u aplikaciji Claude Usage Monitor: stanje Svježa, kopirana snimka Obsidian trezora, Claude Code, Claude Desktop, dodatna mapa i zapisnici agenata s brojem datoteka i veličinama, bez pogrešaka, te zakazani zadatak",
   "lang.hint": "Ova je stranica dostupna i na hrvatskom",
   "dl.soon": "Uskoro dostupno",
-  "dls.btn_mac_soon": "Verzija za macOS – uskoro"
+  "dls.btn_mac_soon": "Verzija za macOS – uskoro",
+  "cs.h": "Pravila potpisivanja koda",
+  "cs.p1": "Izdanja za Windows gradi javni GitHub Actions tijek rada iz izvornog repozitorija projekta i iz te se gradnje šalju na potpisivanje. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Tim: Vidovics Gábor – autor, recenzent i odobravatelj svakog zahtjeva za potpis. Program šalje podatke samo poslužiteljima Anthropica (vaši vlastiti podaci o potrošnji) i na claudeusagemonitor.com (provjera ažuriranja; obrazac za poruke samo kad ga pošaljete). Pojedinosti u Pravilima privatnosti.",
+  "cs.status": "Status: zahtjev SignPath Foundationu u obradi. Do odobrenja izdanja su potpisana vlastitim certifikatom autora ili nepotpisana."
 }

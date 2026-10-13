@@ -320,5 +320,9 @@
   "bk.feat": "Luzes das cópias de segurança – vê se o teu trabalho com o Claude está guardado",
   "img.bk_panel": "Painel do Claude Usage Monitor com três luzes de cópia de segurança verdes: OneDrive, Nextcloud e Obsidian, cada uma com cópia feita há um minuto",
   "img.bk_details": "Janela de detalhes das cópias de segurança do Claude Usage Monitor: estado Recente, o instantâneo guardado do cofre do Obsidian, Claude Code, Claude Desktop, uma pasta extra e os registos dos agentes com número de ficheiros e tamanhos, sem erros, e a tarefa agendada",
-  "lang.hint": "Esta página também está disponível em português europeu"
+  "lang.hint": "Esta página também está disponível em português europeu",
+  "cs.h": "Política de assinatura de código",
+  "cs.p1": "As versões para Windows são compiladas por um fluxo público do GitHub Actions a partir do repositório do projeto e enviadas para assinatura a partir dessa compilação. Free code signing provided by SignPath.io, certificate by SignPath Foundation.",
+  "cs.p2": "Equipa: Vidovics Gábor – autor, revisor e aprovador de cada pedido de assinatura. O programa envia dados apenas aos servidores da Anthropic (os teus números de utilização) e a claudeusagemonitor.com (verificação de atualizações; o formulário de mensagem só quando o envias). Detalhes na Política de Privacidade.",
+  "cs.status": "Estado: pedido à SignPath Foundation pendente. Até à aprovação, as versões são assinadas com o certificado do próprio autor ou publicadas sem assinatura."
 }
