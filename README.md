@@ -269,6 +269,20 @@ and completeness. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - OAuth tokens are encrypted with Windows DPAPI and never leave your machine.
 - There is no telemetry, no analytics, and no third-party service of any kind.
 
+## Code signing
+
+Releases from 2.9.1 on are Authenticode-signed with a Certum *Open Source Developer* certificate
+(the private key lives on a cryptoCertum smart card). `release.ps1` signs the program exe and the
+installer scripts with SHA-256 and an RFC 3161 time stamp (`tools/sign_release.ps1`), and refuses to
+package anything whose signature does not verify. The certificate's thumbprint comes from the
+git-ignored `release.local.psd1`; without it the script makes an unsigned release and says so.
+`tools/get_signtool.ps1` fetches Microsoft's `signtool.exe` without installing the whole Windows SDK;
+without it the signer falls back to PowerShell's `Set-AuthenticodeSignature`.
+
+Signing names the publisher and lets SmartScreen reputation accumulate across releases; it does not
+remove the "Windows protected your PC" prompt on its own – that fades as downloads of signed
+releases build up.
+
 ## Contributing
 
 Issues and pull requests are welcome — new translations especially, they take about 20

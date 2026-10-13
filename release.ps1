@@ -5,6 +5,8 @@
 .DESCRIPTION
   1. writes the version into claude_usage\__init__.py,
   2. builds the exe (build.ps1),
+  2b. code-signs the exe (and later the installer scripts) with the Certum card - tools\sign_release.ps1;
+      skipped with a yellow note when release.local.psd1 has no SignThumbprint, or with -NoSign,
   3. assembles the installable package (program + installer + read-me),
   4. zips it (forward-slash entries) into release\site\versions\,
   5. updates manifest.json / versions.json / CHANGELOG.md (SHA-256 included),
@@ -21,6 +23,10 @@
           # manifest and accept a package only from the manifest's own host -> keep that channel fed.
           LegacyBaseUrl      = 'https://dinorr.hu/claude-usage-monitor/'
           LegacyRcloneTarget = 'oldremote:httpdocs/claude-usage-monitor'
+          # code signing (Certum "Open Source Developer" certificate on the cryptoCertum card); empty = unsigned
+          SignThumbprint     = '0123ABCD...'                                   # Cert:\CurrentUser\My thumbprint
+          SignTimestamp      = 'http://time.certum.pl'                          # RFC 3161 time stamp
+          SignInternal       = $false                                           # also sign unsigned DLL/PYD files under _internal
       }
 
 .EXAMPLE
@@ -32,7 +38,8 @@ param(
     [string]$NotesFile = "",
     [string]$BaseUrl = "https://claudeusagemonitor.com/",
     [switch]$SkipBuild,
-    [switch]$Upload
+    [switch]$Upload,
+    [switch]$NoSign
 )
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
@@ -82,6 +89,37 @@ if (-not $SkipBuild) {
 $dist = Join-Path $PSScriptRoot "dist\$AppId"
 if (-not (Test-Path (Join-Path $dist "$AppId.exe"))) { throw "dist\$AppId\$AppId.exe is missing - build first." }
 
+# ---------------------------------------------------------------- 2b. code signing (Certum card)
+# Signs in place: the exe in dist\ now, the installer scripts after staging. tools\sign_release.ps1 leaves a file
+# alone when it already carries a valid signature from the same certificate, so -SkipBuild re-runs are safe.
+$signCfgPath = Join-Path $PSScriptRoot "release.local.psd1"
+$signCfg = if (Test-Path $signCfgPath) { Import-PowerShellDataFile $signCfgPath } else { @{} }
+$signTp = [string]$signCfg.SignThumbprint
+$signOn = (-not $NoSign) -and $signTp -ne ""
+function Sign-Files([string[]]$paths) {
+    if (-not $signOn) { return }
+    $a = @("-Thumbprint", $signTp, "-Path", ($paths -join ";"))      # one ';'-joined token: survives powershell.exe -File
+    if ($signCfg.SignTimestamp) { $a += @("-TimestampUrl", [string]$signCfg.SignTimestamp) }
+    $prev = $ErrorActionPreference; $ErrorActionPreference = "Continue"
+    try { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "tools\sign_release.ps1") @a 2>&1 | ForEach-Object { Write-Host "  $_" } }
+    finally { $ErrorActionPreference = $prev }
+    if ($LASTEXITCODE -ne 0) { throw "code signing failed - nothing was packaged (fix it, or use -NoSign for an unsigned release)" }
+}
+if ($signOn) {
+    $toSign = @((Join-Path $dist "$AppId.exe"))
+    if ($signCfg.SignInternal) {
+        $toSign += Get-ChildItem (Join-Path $dist "_internal") -Recurse -File -Include *.dll, *.pyd |
+            Where-Object { (Get-AuthenticodeSignature $_.FullName).Status -ne "Valid" } | ForEach-Object { $_.FullName }
+    }
+    Sign-Files $toSign
+    $what = "code-signed: $AppId.exe"; if ($signCfg.SignInternal) { $what += " + unsigned files under _internal" }
+    Info $what
+} elseif ($NoSign) {
+    Write-Host "  UNSIGNED release (-NoSign)" -ForegroundColor Yellow
+} else {
+    Write-Host "  UNSIGNED release - no SignThumbprint in release.local.psd1 (see the header of this script)" -ForegroundColor Yellow
+}
+
 # ---------------------------------------------------------------- 3. package
 if (Test-Path $Stage) { Remove-Item $Stage -Recurse -Force }
 $appOut = Join-Path $Stage "app\$AppId"
@@ -100,6 +138,17 @@ Write-Utf8 (Join-Path $appOut "VERSION") "$Version`n"
 [IO.File]::WriteAllText((Join-Path $appOut "Uninstall.bat"),
     "@echo off`r`npowershell -NoProfile -ExecutionPolicy Bypass -File ""%~dp0Uninstall.ps1""`r`n", [Text.Encoding]::ASCII)
 Info "package staged"
+if ($signOn) {
+    # the installer scripts travel unsigned in the repository; the staged copies get the signature
+    Sign-Files @((Join-Path $Stage "installer\Install.ps1"), (Join-Path $Stage "installer\Uninstall.ps1"), (Join-Path $appOut "Uninstall.ps1"))
+    $prev = $ErrorActionPreference; $ErrorActionPreference = "Continue"
+    $v = @("-Thumbprint", $signTp, "-Verify", "-Path", (@((Join-Path $appOut "$AppId.exe"), (Join-Path $Stage "installer\Install.ps1"),
+           (Join-Path $Stage "installer\Uninstall.ps1"), (Join-Path $appOut "Uninstall.ps1")) -join ";"))
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot "tools\sign_release.ps1") @v 2>&1 | ForEach-Object { Write-Host "  $_" }
+    $ErrorActionPreference = $prev
+    if ($LASTEXITCODE -ne 0) { throw "signature verification of the staged package failed" }
+    Info "signatures verified in the staged package"
+}
 
 # ---------------------------------------------------------------- 4. zip (forward slashes)
 Add-Type -AssemblyName System.IO.Compression | Out-Null
