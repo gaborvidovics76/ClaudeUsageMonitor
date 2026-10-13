@@ -61,7 +61,9 @@ if ([int64]$head.Headers["Content-Length"] -ne $bytes.Length) { throw "LIVE zip 
 # right after the upload the proxy cache can still answer 404 for a second or two - retry a few times
 $dl = $null
 for ($try = 1; $try -le 5 -and -not $dl; $try++) {
-    try { $dl = Invoke-WebRequest -Uri ($BaseUrl + "versions/$zipName?" + [guid]::NewGuid().ToString("N")) -UseBasicParsing -TimeoutSec 300 }
+    # NOTE: "${zipName}?" - in PowerShell "$zipName?" would be a variable NAMED "zipName?" (empty), and the
+    # request would go to /versions/<guid> -> 404. That was the "could not be downloaded" of 2.8.0 / 2.8.1.
+    try { $dl = Invoke-WebRequest -Uri ($BaseUrl + "versions/${zipName}?" + [guid]::NewGuid().ToString("N")) -UseBasicParsing -TimeoutSec 300 }
     catch { Write-Host "  zip download attempt $try failed: $($_.Exception.Message.Split("`n")[0])" -ForegroundColor Yellow; Start-Sleep -Seconds 5 }
 }
 if (-not $dl) { throw "LIVE zip could not be downloaded after 5 attempts" }
