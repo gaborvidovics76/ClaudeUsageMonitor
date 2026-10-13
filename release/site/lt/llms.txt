@@ -15,7 +15,7 @@ Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiu
 - **Licencija**: MIT, atvirasis kodas GitHub
 - **Autorius**: Gábor Vidovics, Vengrija – nepriklausomas kūrėjas, nesusijęs su Anthropic
 
-- Versija: 2.7.1
+- Versija: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Jau netrukus
 - https://claudeusagemonitor.com/lt/
@@ -26,7 +26,7 @@ Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiu
 - **Ar nenaudojate per greitai?**: Tempo rodiklis parodo, ar jūsų savaitės limitas tirpsta greičiau, nei bėga savaitė, – ir prognozuoja, kur atsidursite.
 - **Visi įrenginiai, vienas skaičius**: Prisijunkite savo naršyklėje – kaip tai daro Claude Code – ir matykite naudojimą telefone, naršyklėje bei visuose kituose kompiuteriuose.
 - **Modelių limitai**: Fable, Opus, Sonnet, Claude Code, naudojimo kreditai – kiekvienas serverio pateikiamas limitas ir šios savaitės pasiskirstymas tarp modelių.
-- **Įspėjimai, kurie svarbūs**: Tylus pranešimas ties 70 % ir 90 % (ribas renkatės patys) ir kai limitas atsinaujina. Daugiau nieko – niekada.
+- **Įspėjimai, kurie svarbūs**: Tylus pranešimas ties 70 % ir 90 % (pasirenkate patys), kai jūsų limitas atstatomas ir kai išsaugotas limito atstatymas netrukus baigs galioti nepanaudotas. Nieko daugiau, niekada.
 - **Jis nešnipinėja. Taškas.**: Jokios telemetrijos, jokios analitikos, pas mus paskyros kurti nereikia. Jis bendrauja tik su Anthropic ir tik dėl jūsų pačių skaičių. Jūsų prisijungimo žetonas lieka užšifruotas jūsų kompiuteryje – Windows DPAPI arba macOS Keychain.
 - **Visa savaitė viename grafike**: Dukart spustelėkite valdiklį: abu limitai vienoje laiko juostoje – 6 valandos, 24 valandos ar 7 dienos – su savaitės maksimumu, dienos vidurkiu ir savaitės pabaigos prognoze, kuri pakeičia spalvą dar prieš jums viršijant limitą.
 

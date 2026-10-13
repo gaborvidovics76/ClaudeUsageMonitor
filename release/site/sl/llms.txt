@@ -15,7 +15,7 @@ En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.
 - **Licenca**: MIT, odprta koda na GitHubu
 - **Avtor**: Gábor Vidovics, Madžarska – neodvisen, ni povezan z družbo Anthropic
 
-- Različica: 2.7.1
+- Različica: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kmalu na voljo
 - https://claudeusagemonitor.com/sl/
@@ -26,7 +26,7 @@ En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.
 - **Porabljate prehitro?**: Kazalnik tempa vam pove, ali se tedenska omejitev topi hitreje, kot mineva teden – in napove, kje boste pristali.
 - **Vse naprave, ena številka**: Prijavite se v svojem brskalniku – tako kot Claude Code – in videli boste tudi porabo s telefona, brskalnika in vseh drugih računalnikov.
 - **Omejitve po modelih**: Fable, Opus, Sonnet, Claude Code, dobroimetje za porabo – vsaka omejitev, ki jo sporoči strežnik, in povrhu še porazdelitev med modeli v tem tednu.
-- **Opozorila, ki štejejo**: Diskretno obvestilo pri 70 % in 90 % (izberete sami) ter ob ponastavitvi omejitve. Nič drugega, nikoli.
+- **Opozorila, ki štejejo**: Tiho obvestilo pri 70 % in 90 % (izberete sami), ko se vaša omejitev ponastavi in ko bo shranjena ponastavitev omejitve kmalu neizkoriščena potekla. Nič drugega, nikoli.
 - **Ne vohuni. Pika.**: Brez telemetrije, brez analitike, brez računa pri nas. Komunicira samo z družbo Anthropic in samo zaradi vaših številk. Vaš žeton za prijavo ostane šifriran v vašem računalniku – Windows DPAPI ali obesek za ključe v macOS (Keychain).
 - **Ves teden na enem grafu**: Dvokliknite pripomoček: obe omejitvi na eni časovnici – 6 ur, 24 ur ali 7 dni – s tedenskim vrhom, dnevnim povprečjem in napovedjo za konec tedna, ki spremeni barvo, preden omejitev prekoračite.
 

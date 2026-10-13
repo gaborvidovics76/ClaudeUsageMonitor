@@ -15,7 +15,7 @@ Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: clau
 - **Lisans**: MIT, GitHub'da açık kaynak
 - **Geliştirici**: Gábor Vidovics, Macaristan – bağımsız, Anthropic ile bağlantısı yok
 
-- Sürüm: 2.7.1
+- Sürüm: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Çok yakında
 - https://claudeusagemonitor.com/tr/
@@ -26,7 +26,7 @@ Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: clau
 - **Fazla mı hızlı harcıyorsun?**: Tempo göstergesi, haftalık limitinin haftanın kendisinden hızlı eriyip erimediğini söyler – ve haftanın sonunda nerede olacağını öngörür.
 - **Tüm cihazların, tek rakam**: Kendi tarayıcından giriş yap – tıpkı Claude Code gibi – ve telefonundaki, tarayıcındaki ve diğer tüm bilgisayarlarındaki kullanımı da gör.
 - **Model bazında limitler**: Fable, Opus, Sonnet, Claude Code, kullanım kredileri – sunucunun bildirdiği her limit, üstüne bu haftanın modellere göre dağılımı.
-- **Sadece önemli uyarılar**: %70 ve %90'da (eşikleri sen seçersin) ve limitin sıfırlandığında sessiz bir bildirim. Başka hiçbir şey yok. Asla.
+- **Sadece önemli uyarılar**: %70 ve %90'da (sen seçersin), limitin sıfırlandığında ve kayıtlı bir limit sıfırlama kullanılmadan dolmak üzereyken sessiz bir bildirim. Başka hiçbir şey, asla.
 - **Gözetlemez. Nokta.**: Telemetri yok, analitik yok, bizde hesap açmak yok. Yalnızca Anthropic ile, yalnızca senin rakamların için konuşur. Giriş token'ın bilgisayarında şifreli olarak kalır – Windows DPAPI veya macOS Anahtar Zinciri ile.
 - **Bütün haftan tek grafikte**: Widget'a çift tıkla: iki limit tek zaman çizelgesinde – 6 saat, 24 saat veya 7 gün – haftalık zirve, günlük ortalama ve sen limiti aşmadan önce renk değiştiren hafta bitimi tahminiyle.
 

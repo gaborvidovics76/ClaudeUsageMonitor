@@ -15,7 +15,7 @@ Una sola app per Windows e per Mac. Copre tutto ciò che conta per il tuo piano 
 - **Licenza**: MIT, open source su GitHub
 - **Autore**: Gábor Vidovics, Ungheria – sviluppatore indipendente, non affiliato ad Anthropic
 
-- Versione: 2.7.1
+- Versione: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Presto disponibile
 - https://claudeusagemonitor.com/it/
@@ -26,7 +26,7 @@ Una sola app per Windows e per Mac. Copre tutto ciò che conta per il tuo piano 
 - **Stai consumando troppo in fretta?**: L'indicatore di ritmo ti dice se il limite settimanale si esaurisce più in fretta di quanto passi la settimana – e calcola dove andrai a finire.
 - **Tutti i tuoi dispositivi, un solo numero**: Accedi dal tuo browser – proprio come fa Claude Code – e vedi anche l'utilizzo da telefono, browser e da ogni altro computer.
 - **Limiti per modello**: Fable, Opus, Sonnet, Claude Code, crediti di utilizzo – ogni limite comunicato dal server, più la ripartizione della settimana tra i modelli.
-- **Solo gli avvisi che contano**: Una notifica discreta al 70% e al 90% (le soglie le scegli tu) e quando il limite si ripristina. Nient'altro, mai.
+- **Solo gli avvisi che contano**: Una notifica discreta al 70% e al 90% (decidi tu), quando il tuo limite si ripristina e quando un reset del limite salvato sta per scadere inutilizzato. Nient'altro, mai.
 - **Non ti spia. Punto.**: Niente telemetria, niente analytics, nessun account da noi. Comunica solo con Anthropic, solo per i tuoi numeri. Il tuo token di accesso resta cifrato sul tuo computer – Windows DPAPI o il Portachiavi di macOS.
 - **Tutta la settimana in un solo grafico**: Doppio clic sul widget: entrambi i limiti su un'unica linea del tempo – 6 ore, 24 ore o 7 giorni – con picco settimanale, media giornaliera e una proiezione di fine settimana che cambia colore prima che tu sfori.
 

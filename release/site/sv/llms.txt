@@ -15,7 +15,7 @@ En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnem
 - **Licens**: MIT, öppen källkod på GitHub
 - **Utvecklare**: Gábor Vidovics, Ungern – oberoende, inte knuten till Anthropic
 
-- Version: 2.7.1
+- Version: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kommer snart
 - https://claudeusagemonitor.com/sv/
@@ -26,7 +26,7 @@ En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnem
 - **Går det för fort?**: Taktindikatorn visar om din veckogräns smälter snabbare än veckan går – och räknar ut var du kommer att hamna.
 - **Alla dina enheter, en siffra**: Logga in via din egen webbläsare – precis som Claude Code gör – och se användningen även från mobilen, webbläsaren och alla dina andra datorer.
 - **Gränser per modell**: Fable, Opus, Sonnet, Claude Code, användningskrediter – alla gränser som servern rapporterar, plus veckans fördelning mellan modellerna.
-- **Varningar som spelar roll**: En diskret avisering vid 70 % och 90 % (du väljer själv) och när gränsen nollställs. Inget annat, någonsin.
+- **Varningar som spelar roll**: En diskret avisering vid 70 % och 90 % (du väljer), när din gräns återställs och när en sparad gränsåterställning är på väg att gå ut oanvänd. Inget annat, någonsin.
 - **Den spionerar inte. Punkt.**: Ingen telemetri, ingen analys, inget konto hos oss. Den pratar bara med Anthropic, och bara om dina egna siffror. Din inloggningstoken förblir krypterad på datorn – med Windows DPAPI eller i macOS-nyckelringen.
 - **Hela veckan i ett diagram**: Dubbelklicka på widgeten: båda gränserna på en tidslinje – 6 timmar, 24 timmar eller 7 dagar – med veckans topp, dagligt genomsnitt och en prognos för veckans slut som byter färg innan du går över.
 

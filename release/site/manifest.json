@@ -3,12 +3,12 @@
     "slug":  "claude-usage-monitor",
     "version":  "2.8.0",
     "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.0.zip",
-    "sha256":  "b91bb741d645c2d7594106b26862168bc5682bea785177c109f3a06b2f27112b",
+    "sha256":  "1b09d4f80e85fb5c764cf2daebd9450db250c8d6a0c53143b909542ea9ac40b7",
     "bytes":  49158593,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-13T09:29:25Z",
+    "last_updated":  "2026-10-13T09:51:38Z",
     "notes":  {
                   "en":  [
                              "Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.",

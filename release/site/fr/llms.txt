@@ -15,7 +15,7 @@ Une seule application pour Windows et pour Mac. Elle couvre tout ce qui compte d
 - **Licence**: MIT, open source sur GitHub
 - **Auteur**: Gábor Vidovics, Hongrie – indépendant, sans lien avec Anthropic
 
-- Version: 2.7.1
+- Version: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Bientôt disponible
 - https://claudeusagemonitor.com/fr/
@@ -26,7 +26,7 @@ Une seule application pour Windows et pour Mac. Elle couvre tout ce qui compte d
 - **Vous consommez trop vite ?**: L'indicateur de rythme vous dit si votre limite hebdomadaire fond plus vite que la semaine n'avance – et projette où vous finirez.
 - **Tous vos appareils, un seul chiffre**: Connectez-vous via votre propre navigateur – comme le fait Claude Code – et voyez aussi l'utilisation de votre téléphone, de votre navigateur et de tous vos autres ordinateurs.
 - **Limites par modèle**: Fable, Opus, Sonnet, Claude Code, crédits d'utilisation – toutes les limites communiquées par le serveur, plus la répartition de la semaine entre les modèles.
-- **Des alertes qui comptent**: Une notification discrète à 70 % et à 90 % (c'est vous qui choisissez), et à la réinitialisation de votre limite. Rien d'autre, jamais.
+- **Des alertes qui comptent**: Une notification discrète à 70 % et 90 % (à votre choix), quand votre limite se réinitialise, et quand une réinitialisation de limite en réserve est sur le point d'expirer sans avoir servi. Rien d'autre, jamais.
 - **Il n'espionne pas. Point.**: Pas de télémétrie, pas d'outil d'analyse, pas de compte chez nous. Il ne communique qu'avec Anthropic, uniquement pour vos propres chiffres. Votre jeton de connexion reste chiffré sur votre ordinateur – Windows DPAPI ou le Trousseau de macOS.
 - **Toute votre semaine sur un seul graphique**: Double-cliquez sur le widget : les deux limites sur une même frise – 6 heures, 24 heures ou 7 jours – avec le pic hebdomadaire, la moyenne quotidienne et une projection de fin de semaine qui change de couleur avant que vous ne dépassiez la limite.
 

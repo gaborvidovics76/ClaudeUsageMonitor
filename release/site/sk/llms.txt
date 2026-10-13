@@ -15,7 +15,7 @@ Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tv
 - **Licencia**: MIT, otvorený zdrojový kód na GitHube
 - **Autor**: Gábor Vidovics, Maďarsko – nezávislý vývojár, bez prepojenia so spoločnosťou Anthropic
 
-- Verzia: 2.7.1
+- Verzia: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Už čoskoro
 - https://claudeusagemonitor.com/sk/
@@ -26,7 +26,7 @@ Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tv
 - **Nečerpáš príliš rýchlo?**: Ukazovateľ tempa ti povie, či sa tvoj týždenný limit míňa rýchlejšie, než ubieha týždeň – a odhadne, kde skončíš.
 - **Všetky zariadenia, jedno číslo**: Prihlás sa cez vlastný prehliadač – tak ako Claude Code – a uvidíš aj využitie z telefónu, prehliadača a všetkých ostatných počítačov.
 - **Limity podľa modelov**: Fable, Opus, Sonnet, Claude Code, kredity na využitie – každý limit, ktorý server hlási, plus rozdelenie tohto týždňa medzi modely.
-- **Upozornenia, na ktorých záleží**: Tiché oznámenie pri 7 % a 9 % (hranice si nastavíš sám) a keď sa limit resetuje. Nič iné, nikdy.
+- **Upozornenia, na ktorých záleží**: Tiché upozornenie pri 70 % a 90 % (nastavíš si sám), keď sa limit resetuje a keď má uložený reset limitu čoskoro nevyužitý vypršať. Nič iné, nikdy.
 - **Nešpehuje. Bodka.**: Žiadna telemetria, žiadna analytika, žiadny účet u nás. Komunikuje len so spoločnosťou Anthropic a len kvôli tvojim vlastným číslam. Tvoj prihlasovací token zostáva zašifrovaný v tvojom počítači – cez Windows DPAPI alebo v Kľúčenke macOS.
 - **Celý týždeň v jednom grafe**: Dvakrát klikni na widget: oba limity na jednej časovej osi – 6 hodín, 24 hodín alebo 7 dní – s týždenným maximom, denným priemerom a odhadom na koniec týždňa, ktorý zmení farbu skôr, než limit prekročíš.
 

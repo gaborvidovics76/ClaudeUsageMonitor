@@ -15,7 +15,7 @@ Jedna aplikacija i za Windows i za Mac. Obuhvaća sve što se računa u vaš pak
 - **Licenca**: MIT, otvoreni kôd na GitHubu
 - **Autor**: Gábor Vidovics, Mađarska – neovisan, nije povezan s tvrtkom Anthropic
 
-- Verzija: 2.7.1
+- Verzija: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Uskoro dostupno
 - https://claudeusagemonitor.com/hr/
@@ -26,7 +26,7 @@ Jedna aplikacija i za Windows i za Mac. Obuhvaća sve što se računa u vaš pak
 - **Trošite li prebrzo?**: Pokazatelj tempa govori vam topi li se tjedno ograničenje brže nego što tjedan prolazi – i procjenjuje gdje ćete završiti.
 - **Svi uređaji, jedna brojka**: Prijavite se u vlastitom pregledniku – kao što to radi Claude Code – i vidjet ćete potrošnju i s mobitela, preglednika i svakog drugog računala.
 - **Ograničenja po modelu**: Fable, Opus, Sonnet, Claude Code, krediti za potrošnju – svako ograničenje koje poslužitelj javlja, plus ovotjedna raspodjela po modelima.
-- **Upozorenja koja su važna**: Nenametljiva obavijest na 70 % i 90 % (sami birate) i kad se ograničenje resetira. Ništa drugo, nikada.
+- **Upozorenja koja su važna**: Tiha obavijest pri 70% i 90% (vi birate), kad se vaše ograničenje resetira i kad spremljeno resetiranje ograničenja uskoro istječe neiskorišteno. Ništa drugo, nikada.
 - **Ne špijunira. Točka.**: Bez telemetrije, bez analitike, bez računa kod nas. Komunicira samo s tvrtkom Anthropic i samo radi vaših brojki. Vaš token za prijavu ostaje šifriran na vašem računalu – Windows DPAPI ili privjesak ključeva u macOS-u (Keychain).
 - **Cijeli tjedan na jednom grafikonu**: Dvokliknite widget: oba ograničenja na jednoj vremenskoj crti – 6 sati, 24 sata ili 7 dana – s tjednim maksimumom, dnevnim prosjekom i projekcijom do kraja tjedna koja mijenja boju prije nego što prekoračite ograničenje.
 

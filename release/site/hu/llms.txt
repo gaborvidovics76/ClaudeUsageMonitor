@@ -15,7 +15,7 @@ Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csoma
 - **Licenc**: MIT, nyílt forráskód a GitHubon
 - **Szerző**: Vidovics Gábor, Magyarország – független fejlesztő, nem áll kapcsolatban az Anthropickal
 
-- Verzió:: 2.7.1
+- Verzió:: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Hamarosan
 - https://claudeusagemonitor.com/hu/
@@ -26,7 +26,7 @@ Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csoma
 - **Túl gyorsan fogyasztasz?**: A tempójelző megmutatja, ha a heti limited gyorsabban olvad, mint ahogy a hét telik – és előre jelzi, hová futsz ki a hét végére.
 - **Minden eszközöd, egyetlen szám**: Jelentkezz be a saját böngésződben – ugyanúgy, ahogy a Claude Code-nál –, és a telefonod, a böngésződ és az összes többi géped fogyasztását is látod.
 - **Modellenkénti limitek**: Fable, Opus, Sonnet, Claude Code, használati kredit – minden limit, amit a szerver közöl, és az is, hogyan oszlik meg a heti fogyasztásod a modellek között.
-- **Csak a fontos értesítések**: Halk értesítés 70%-nál és 90%-nál (te állítod be), és akkor, amikor a limited visszaáll. Semmi más, soha.
+- **Csak a fontos értesítések**: Halk értesítés 70%-nál és 90%-nál (te állítod be), amikor a limited visszaáll, és amikor egy elmentett limit-visszaállítás beváltatlanul lejárna. Semmi más, soha.
 - **Nem kémkedik. Pont.**: Nincs telemetria, nincs analitika, nálunk nincs fiókod. Csak az Anthropickal kommunikál, és csak a saját számaidért. A bejelentkezési tokened titkosítva marad a gépeden – Windowson a DPAPI, macOS-en a Kulcskarika őrzi.
 - **Az egész heted egy grafikonon**: Dupla kattintás a widgetre: mindkét limit egy idővonalon – 6 óra, 24 óra vagy 7 nap –, heti csúccsal, napi átlaggal és hét végi előrejelzéssel, ami még időben színt vált, mielőtt túlfutnál.
 

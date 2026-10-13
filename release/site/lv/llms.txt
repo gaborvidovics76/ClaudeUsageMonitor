@@ -15,7 +15,7 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 - **Licence**: MIT, atvērtais pirmkods GitHub
 - **Autors**: Gábor Vidovics, Ungārija – neatkarīgs izstrādātājs, nav saistīts ar Anthropic
 
-- Versija: 2.7.1
+- Versija: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Drīzumā
 - https://claudeusagemonitor.com/lv/
@@ -26,7 +26,7 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 - **Vai tērējat pārāk ātri?**: Tempa rādītājs pasaka, vai jūsu nedēļas limits kūst ātrāk, nekā paiet nedēļa, – un prognozē, kur nonāksiet.
 - **Visas ierīces, viens skaitlis**: Pierakstieties savā pārlūkprogrammā – tāpat kā Claude Code – un redziet arī lietojumu tālrunī, pārlūkprogrammā un visos citos datoros.
 - **Modeļu limiti**: Fable, Opus, Sonnet, Claude Code, lietojuma kredīti – katrs limits, ko norāda serveris, un šīs nedēļas sadalījums starp modeļiem.
-- **Brīdinājumi, kam ir nozīme**: Kluss paziņojums pie 70 % un 90 % (sliekšņus izvēlaties jūs) un tad, kad limits tiek atiestatīts. Nekas cits – nekad.
+- **Brīdinājumi, kam ir nozīme**: Kluss paziņojums pie 70 % un 90 % (jūs izvēlaties), kad jūsu limits atiestatās un kad saglabāta limita atiestatīšana drīz beigsies neizmantota. Nekas cits, nekad.
 - **Tas neizspiego. Punkts.**: Bez telemetrijas, bez analītikas, pie mums konts nav jāveido. Tas sazinās tikai ar Anthropic un tikai par jūsu pašu skaitļiem. Jūsu pierakstīšanās marķieris glabājas šifrēts jūsu datorā – Windows DPAPI vai macOS Keychain.
 - **Visa nedēļa vienā diagrammā**: Veiciet dubultklikšķi uz logrīka: abi limiti uz vienas laika ass – 6 stundas, 24 stundas vai 7 dienas – ar nedēļas maksimumu, vidējo patēriņu dienā un prognozi nedēļas beigām, kas nomaina krāsu, pirms limits ir pārsniegts.
 

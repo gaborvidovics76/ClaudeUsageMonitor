@@ -15,7 +15,7 @@ App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd g
 - **Liċenzja**: MIT, sors miftuħ fuq GitHub
 - **Awtur**: Gábor Vidovics, l-Ungerija – indipendenti, mhux affiljat ma' Anthropic
 
-- Verżjoni: 2.7.1
+- Verżjoni: 2.8.0
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ġej dalwaqt
 - https://claudeusagemonitor.com/mt/
@@ -26,7 +26,7 @@ App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd g
 - **Qed tikkonsma wisq malajr?**: L-indikatur tar-ritmu jgħidlek jekk il-limitu tal-ġimgħa qed jinħela aktar malajr milli qed tgħaddi l-ġimgħa – u jipprojetta fejn se tispiċċa.
 - **L-apparati kollha tiegħek, numru wieħed**: Idħol mill-browser tiegħek stess – bħalma jagħmel Claude Code – u ara l-użu mill-mowbajl, mill-browser u minn kull kompjuter ieħor ukoll.
 - **Limiti għal kull mudell**: Fable, Opus, Sonnet, Claude Code, krediti tal-użu – kull limitu li jirrapporta s-server, flimkien mal-qsim ta' din il-ġimgħa bejn il-mudelli.
-- **Allerti li jgħoddu**: Notifika kwieta f'70% u 90% (tagħżel int), u meta l-limitu tiegħek jerġa' jibda. Xejn iżjed, qatt.
+- **Allerti li jgħoddu**: Notifika kwieta f'70% u 90% (int tagħżel), meta l-limitu tiegħek jerġa' jibda, u meta risettjar tal-limitu salvat ikun wasal biex jiskadi mingħajr ma jintuża. Xejn iżjed, qatt.
 - **Ma jispijax. Punt.**: L-ebda telemetrija, l-ebda analitika, l-ebda kont magħna. Ikellem lil Anthropic biss, u biss għan-numri tiegħek. It-token tal-login tiegħek jibqa' kriptat fuq il-kompjuter tiegħek – Windows DPAPI jew il-Keychain ta' macOS.
 - **Il-ġimgħa kollha f'grafika waħda**: Agħmel klikk doppju fuq il-widget: iż-żewġ limiti fuq linja taż-żmien waħda – 6 sigħat, 24 siegħa jew 7 ijiem – bil-quċċata tal-ġimgħa, il-medja ta' kuljum u projezzjoni sa tmiem il-ġimgħa li tibdel il-kulur qabel ma taqbeż il-limitu.
 
