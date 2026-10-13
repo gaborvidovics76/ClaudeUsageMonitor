@@ -2,6 +2,17 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.1] - 2026-10-13
+
+- A friendlier empty state. When there is no Claude Desktop usage log on the computer yet, or you are not signed in, the panel no longer just says "not found": it tells you what to do next – start Claude Desktop, or right-click the panel and sign in with your claude.ai account. In all 34 languages, on Windows and macOS.
+- Why a new version? Because the first minute with the program should be as clear as the rest – for you, and for everyone who installs it from the Microsoft Store.
+
+*Magyarul:*
+
+- Barátságosabb üres állapot. Ha a gépen még nincs Claude Desktop használati napló, vagy nem vagy bejelentkezve, a panel már nem csak annyit mond, hogy „nem található”: elmondja, mi a következő lépés – indítsd el a Claude Desktopot, vagy jobb gombbal a panelen jelentkezz be a claude.ai fiókoddal. Mind a 34 nyelven, Windowson és macOS-en.
+- Miért új verzió? Mert a programmal töltött első percnek is ugyanolyan világosnak kell lennie, mint a többinek – neked, és mindenkinek, aki a Microsoft Store-ból telepíti.
+
+
 ## [2.9.0] - 2026-10-13
 
 - New, on request: this week by product. The server now tells how your weekly usage splits between Claude Code, chats, Cowork and the rest – across all your devices together. It appears as its own small group under the gauges, with the same neutral bars as the per-model split. Off by default: switch it on under Settings › Details, so nothing changes for you unless you ask.
