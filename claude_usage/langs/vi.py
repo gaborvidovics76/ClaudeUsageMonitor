@@ -5,6 +5,13 @@ CODE = "vi"
 NAME = "Tiếng Việt"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Lượt đặt lại giới hạn đã lưu",
+    "detail.surface.cowork": "Quy trình (Cowork)",
+    "set.show_resets": "Lượt đặt lại giới hạn đã lưu (chỉ khi bạn có)",
+    "set.notify_resets": "Nhắc tôi về lượt đặt lại đã lưu (khi một giới hạn đã đầy, và trước khi hết hạn)",
+    "notify.reset_available": "{} đã đầy. Bạn có một lượt đặt lại giới hạn đã lưu – hãy dùng tại claude.ai › Cài đặt › Mức sử dụng.",
+    "notify.reset_expiring": "Lượt đặt lại giới hạn đã lưu của bạn sẽ hết hạn sau {}. Hãy dùng tại claude.ai › Cài đặt › Mức sử dụng, nếu không sẽ mất.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}n",
     "backup.age_h": "{}g",

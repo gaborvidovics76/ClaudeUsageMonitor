@@ -5,6 +5,13 @@ CODE = "ro"
 NAME = "Română"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Resetări de limită salvate",
+    "detail.surface.cowork": "Rutine (Cowork)",
+    "set.show_resets": "Resetări de limită salvate (doar când ai una)",
+    "set.notify_resets": "Amintește-mi de o resetare salvată (când o limită e plină și înainte să expire)",
+    "notify.reset_available": "{}: limită atinsă. Ai o resetare de limită salvată – folosește-o pe claude.ai › Setări › Utilizare.",
+    "notify.reset_expiring": "Resetarea de limită salvată expiră în {}. Folosește-o pe claude.ai › Setări › Utilizare, altfel se pierde.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}z",
     "backup.age_h": "{}h",

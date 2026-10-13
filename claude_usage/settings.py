@@ -76,6 +76,7 @@ DEFAULTS: Dict[str, Any] = {
     "show_model_list": True,         # weekly windows of the other models
     "show_surfaces": True,           # per-surface windows and kinds we do not know yet
     "show_extra_usage": True,        # pay-as-you-go credit
+    "show_resets": True,             # saved limit resets (the row only appears when there is one)
     "show_local_models": True,       # this week's split between the models, from Claude Code's local logs
     "local_models_path": "",         # "" = find Claude Code's log folder automatically
     "detail_hidden": [],             # ids of single rows the user unticked
@@ -108,6 +109,8 @@ DEFAULTS: Dict[str, Any] = {
     "notify_enabled": True,
     "notify_on_reset": True,
     "notify_stale": True,
+    "notify_resets": True,           # a saved limit reset: when a limit is full, and before it expires
+    "resets_warned": 0,              # expiry (epoch ms) the expiry reminder was already shown for
 
     # --- system
     "autostart": False,

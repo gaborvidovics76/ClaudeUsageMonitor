@@ -1,158 +1,230 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.7.1",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.7.1.zip",
-    "sha256":  "1a4d92890906f8f76b68ec584d16342b0eeee6ff07c23359efa1ba60203bd974",
-    "bytes":  49145323,
+    "version":  "2.8.0",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.0.zip",
+    "sha256":  "b91bb741d645c2d7594106b26862168bc5682bea785177c109f3a06b2f27112b",
+    "bytes":  49158593,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-07T05:31:15Z",
+    "last_updated":  "2026-10-13T09:29:25Z",
     "notes":  {
                   "en":  [
-                             "Better visibility in the \"Message to the developer\" window: the star rating now shows clearly visible, larger stars, and the required consent checkbox sits in a highlighted box – if you try to send without ticking it, the box turns red. Clicking the text next to it also ticks it.",
-                             "Every checkbox in the program (Settings, message window) is now clearly visible on the dark background: a light frame, and an orange box with a white tick when it is on."
+                             "Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.",
+                             "A small ▸ marks the gauge whose limit applies right now – at a glance you see which one is holding you back.",
+                             "The Routines (Cowork) window has a proper name instead of the server\u0027s code name.",
+                             "Why a new version? Because we keep pace with what Anthropic adds to your usage data – so you always see everything there is. For you."
                          ],
                   "hu":  [
-                             "Jobban látható „Üzenet a fejlesztőnek” ablak: a csillagos értékelés jól látható, nagyobb csillagokat kapott, a kötelező hozzájáruló jelölőnégyzet pedig kiemelt keretben van – ha bejelölés nélkül próbálod elküldeni, a keret pirosra vált. A mellette lévő szövegre kattintva is bejelölhető.",
-                             "A program összes jelölőnégyzete (Beállítások, üzenetablak) jól látható lett a sötét háttéren: világos keret, bekapcsolva pedig narancssárga négyzet fehér pipával."
+                             "Elmentett visszaállítás: ha az Anthropic ad egy későbbre eltehető limit-visszaállítást, a panel mostantól mutatja – hány van és mikor jár le –, és szól, ha betelt egy keret, illetve ha a visszaállítás beváltatlanul lejárna. Beváltani a claude.ai › Beállítások › Használat oldalon tudod; a program soha nem váltja be helyetted.",
+                             "Egy kis ▸ jelöli azt a mérőt, amelyik limit éppen fog – egy pillantásra látod, mi tart vissza.",
+                             "A Rutinok (Cowork) ablak rendes nevet kapott a szerver kódneve helyett.",
+                             "Miért új verzió? Mert lépést tartunk azzal, amit az Anthropic a használati adatokhoz hozzátesz – hogy mindig mindent láss, ami csak van. Értetek."
                          ],
                   "de":  [
-                             "Bessere Sichtbarkeit im Fenster „Nachricht an den Entwickler“: Die Sternebewertung zeigt jetzt größere, gut sichtbare Sterne, und das erforderliche Einwilligungs-Kontrollkästchen steht in einem hervorgehobenen Rahmen – wenn du ohne Häkchen senden willst, wird der Rahmen rot. Ein Klick auf den Text daneben setzt das Häkchen ebenfalls.",
-                             "Alle Kontrollkästchen im Programm (Einstellungen, Nachrichtenfenster) sind jetzt auf dem dunklen Hintergrund gut zu erkennen: ein heller Rahmen und, wenn aktiviert, ein orangefarbenes Kästchen mit weißem Häkchen."
+                             "Gespeicherte Limit-Zurücksetzung: Wenn Anthropic dir eine Zurücksetzung gibt, die du für später aufheben darfst, zeigt das Panel sie jetzt an – wie viele du hast und wann sie verfällt – und erinnert dich, wenn ein Limit voll ist und wenn die Zurücksetzung ungenutzt zu verfallen droht. Einlösen tust du sie unter claude.ai › Einstellungen › Nutzung; das Programm löst sie nie für dich ein.",
+                             "Ein kleines ▸ markiert die Anzeige, deren Limit gerade gilt – auf einen Blick siehst du, was dich bremst.",
+                             "Das Fenster „Routinen (Cowork)“ hat jetzt einen richtigen Namen statt des Codenamens des Servers.",
+                             "Warum eine neue Version? Weil wir Schritt halten mit dem, was Anthropic den Nutzungsdaten hinzufügt – damit du immer alles siehst, was es gibt. Für dich."
                          ],
                   "fr":  [
-                             "Meilleure visibilité dans la fenêtre « Message au développeur » : la note affiche désormais des étoiles plus grandes et bien visibles, et la case de consentement obligatoire se trouve dans un cadre mis en évidence – si vous essayez d\u0027envoyer sans la cocher, le cadre devient rouge. Un clic sur le texte à côté coche aussi la case.",
-                             "Toutes les cases à cocher du programme (Paramètres, fenêtre de message) sont désormais bien visibles sur le fond sombre : un cadre clair et, une fois cochées, une case orange avec une coche blanche."
+                             "Réinitialisation de limite en réserve : quand Anthropic vous offre une réinitialisation à garder pour plus tard, le panneau l\u0027affiche désormais – combien vous en avez et quand elle expire – et vous prévient quand une limite est pleine et quand la réinitialisation risque d\u0027expirer sans avoir servi. Vous l\u0027utilisez sur claude.ai › Paramètres › Utilisation ; le programme ne l\u0027utilise jamais à votre place.",
+                             "Un petit ▸ marque la jauge dont la limite s\u0027applique en ce moment – d\u0027un coup d\u0027œil vous voyez ce qui vous retient.",
+                             "La fenêtre Routines (Cowork) porte un vrai nom au lieu du nom de code du serveur.",
+                             "Pourquoi une nouvelle version ? Parce que nous suivons ce qu\u0027Anthropic ajoute à vos données d\u0027utilisation – pour que vous voyiez toujours tout ce qui existe. Pour vous."
                          ],
                   "es":  [
-                             "Mejor visibilidad en la ventana «Mensaje al desarrollador»: la valoración muestra ahora estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se vuelve rojo. También puedes marcarla haciendo clic en el texto que tiene al lado.",
-                             "Todas las casillas del programa (Configuración, ventana de mensaje) se ven ahora con claridad sobre el fondo oscuro: un marco claro y, cuando están activadas, un cuadro naranja con una marca blanca."
+                             "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para más tarde, el panel ahora lo muestra – cuántos tienes y cuándo caduca – y te avisa cuando un límite se llena y cuando el reinicio está a punto de caducar sin usar. Lo canjeas en claude.ai › Configuración › Uso; el programa nunca lo canjea por ti.",
+                             "Un pequeño ▸ marca el indicador cuyo límite se aplica ahora mismo – de un vistazo ves qué te está frenando.",
+                             "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
+                             "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic añade a tus datos de uso – para que siempre veas todo lo que hay. Por ti."
                          ],
                   "it":  [
-                             "Migliore visibilità nella finestra «Messaggio allo sviluppatore»: la valutazione ora mostra stelle più grandi e ben visibili, e la casella obbligatoria del consenso si trova in un riquadro evidenziato – se provi a inviare senza spuntarla, il riquadro diventa rosso. Puoi spuntarla anche facendo clic sul testo accanto.",
-                             "Tutte le caselle di controllo del programma (Impostazioni, finestra dei messaggi) ora si vedono bene sullo sfondo scuro: un bordo chiaro e, quando sono attive, un riquadro arancione con un segno di spunta bianco."
+                             "Reset del limite salvato: quando Anthropic ti concede un reset da conservare per dopo, il pannello ora lo mostra – quanti ne hai e quando scade – e ti avvisa quando un limite è pieno e quando il reset sta per scadere inutilizzato. Lo riscatti su claude.ai › Impostazioni › Utilizzo; il programma non lo riscatta mai al posto tuo.",
+                             "Un piccolo ▸ segna l\u0027indicatore il cui limite è in vigore adesso – a colpo d\u0027occhio vedi cosa ti sta frenando.",
+                             "La finestra Routine (Cowork) ha un nome vero invece del nome in codice del server.",
+                             "Perché una nuova versione? Perché teniamo il passo con ciò che Anthropic aggiunge ai tuoi dati di utilizzo – così vedi sempre tutto quello che c\u0027è. Per te."
                          ],
                   "pt":  [
-                             "Melhor visibilidade na janela «Mensagem ao programador»: a avaliação mostra agora estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica numa moldura destacada – se tentares enviar sem a assinalar, a moldura fica vermelha. Também a podes assinalar clicando no texto ao lado.",
-                             "Todas as caixas de verificação do programa (Definições, janela de mensagem) estão agora bem visíveis no fundo escuro: uma moldura clara e, quando ativadas, uma caixa laranja com um visto branco."
+                             "Reposição de limite guardada: quando a Anthropic te dá uma reposição que podes guardar para mais tarde, o painel passa a mostrá-la – quantas tens e quando expira – e avisa-te quando um limite está cheio e quando a reposição está prestes a expirar sem ser usada. Resgata-la em claude.ai › Definições › Utilização; o programa nunca a resgata por ti.",
+                             "Um pequeno ▸ marca o indicador cujo limite se aplica neste momento – num relance vês o que te está a travar.",
+                             "A janela Rotinas (Cowork) tem um nome a sério em vez do nome de código do servidor.",
+                             "Porquê uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos teus dados de utilização – para veres sempre tudo o que existe. Por ti."
                          ],
                   "pl":  [
-                             "Lepiej widoczne okno „Wiadomość do autora”: ocena pokazuje teraz większe, wyraźne gwiazdki, a wymagane pole zgody znajduje się w wyróżnionej ramce – jeśli spróbujesz wysłać wiadomość bez jego zaznaczenia, ramka zmieni kolor na czerwony. Pole można też zaznaczyć, klikając tekst obok niego.",
-                             "Wszystkie pola wyboru w programie (Ustawienia, okno wiadomości) są teraz dobrze widoczne na ciemnym tle: jasna ramka, a po zaznaczeniu pomarańczowy kwadrat z białym znacznikiem."
+                             "Zapisany reset limitu: gdy Anthropic da Ci reset, który możesz zachować na później, panel teraz go pokazuje – ile ich masz i kiedy wygasa – i przypomina, gdy limit jest pełny oraz gdy reset ma wkrótce wygasnąć niewykorzystany. Wykorzystujesz go na claude.ai › Ustawienia › Użycie; program nigdy nie zrobi tego za Ciebie.",
+                             "Mały znak ▸ oznacza wskaźnik, którego limit obowiązuje w tej chwili – na pierwszy rzut oka widzisz, co Cię hamuje.",
+                             "Okno Rutyny (Cowork) ma prawdziwą nazwę zamiast nazwy kodowej serwera.",
+                             "Dlaczego nowa wersja? Bo nadążamy za tym, co Anthropic dodaje do Twoich danych o użyciu – żebyś zawsze widział wszystko, co jest. Dla Ciebie."
                          ],
                   "nl":  [
-                             "Beter zichtbaar venster “Bericht aan de ontwikkelaar”: de beoordeling toont nu grotere, goed zichtbare sterren, en het verplichte toestemmingsvakje staat in een gemarkeerd kader – als je probeert te verzenden zonder het aan te vinken, wordt het kader rood. Je kunt het ook aanvinken door op de tekst ernaast te klikken.",
-                             "Alle selectievakjes in het programma (Instellingen, berichtvenster) zijn nu goed zichtbaar op de donkere achtergrond: een lichte rand en, als ze aanstaan, een oranje vakje met een wit vinkje."
+                             "Bewaarde limietreset: als Anthropic je een reset geeft die je voor later mag bewaren, toont het paneel die nu – hoeveel je er hebt en wanneer hij verloopt – en herinnert het je als een limiet vol is en als de reset ongebruikt dreigt te verlopen. Je verzilvert hem op claude.ai › Instellingen › Gebruik; het programma doet dat nooit voor je.",
+                             "Een kleine ▸ markeert de meter waarvan de limiet nu geldt – in één oogopslag zie je wat je tegenhoudt.",
+                             "Het venster Routines (Cowork) heeft een echte naam in plaats van de codenaam van de server.",
+                             "Waarom een nieuwe versie? Omdat we bijhouden wat Anthropic aan je gebruiksgegevens toevoegt – zodat je altijd alles ziet wat er is. Voor jou."
                          ],
                   "ru":  [
-                             "Окно «Сообщение разработчику» стало нагляднее: в оценке теперь крупные, хорошо заметные звёзды, а обязательный флажок согласия выделен рамкой – если попытаться отправить сообщение, не отметив его, рамка станет красной. Флажок можно отметить и нажатием на текст рядом с ним.",
-                             "Все флажки в программе (Настройки, окно сообщения) теперь хорошо видны на тёмном фоне: светлая рамка, а во включённом состоянии – оранжевый квадрат с белой галочкой."
+                             "Сохранённый сброс лимита: когда Anthropic даёт вам сброс, который можно оставить на потом, панель теперь показывает его – сколько у вас есть и когда он истекает – и напоминает, когда лимит исчерпан и когда сброс вот-вот истечёт неиспользованным. Активируете его вы на claude.ai › Настройки › Использование; программа никогда не делает этого за вас.",
+                             "Маленький значок ▸ отмечает индикатор, чей лимит действует прямо сейчас – с первого взгляда видно, что вас сдерживает.",
+                             "Окно «Рутины (Cowork)» получило нормальное имя вместо кодового имени сервера.",
+                             "Почему новая версия? Потому что мы идём в ногу с тем, что Anthropic добавляет в данные об использовании – чтобы вы всегда видели всё, что есть. Для вас."
                          ],
                   "cs":  [
-                             "Lepší viditelnost v okně „Zpráva pro vývojáře“: hodnocení teď zobrazuje větší, dobře viditelné hvězdičky a povinné zaškrtávací políčko souhlasu je ve zvýrazněném rámečku – pokud se pokusíte zprávu odeslat bez jeho zaškrtnutí, rámeček zčervená. Políčko zaškrtnete i kliknutím na text vedle něj.",
-                             "Všechna zaškrtávací políčka v programu (Nastavení, okno zprávy) jsou teď na tmavém pozadí dobře vidět: světlý rámeček a po zapnutí oranžový čtvereček s bílým zaškrtnutím."
+                             "Uložený reset limitu: když vám Anthropic dá reset, který si můžete nechat na později, panel ho teď zobrazí – kolik jich máte a kdy vyprší – a připomene vám, když je limit plný a když má reset brzy nevyužitý vypršet. Uplatníte ho na claude.ai › Nastavení › Využití; program ho za vás nikdy neuplatní.",
+                             "Malá značka ▸ označuje ukazatel, jehož limit právě platí – na první pohled vidíte, co vás brzdí.",
+                             "Okno Rutiny (Cowork) má pořádný název místo kódového jména serveru.",
+                             "Proč nová verze? Protože držíme krok s tím, co Anthropic přidává k vašim datům o využití – abyste vždy viděli všechno, co existuje. Pro vás."
                          ],
                   "tr":  [
-                             "“Geliştiriciye mesaj” penceresi artık daha iyi görünüyor: yıldızlı puanlama daha büyük ve net görünen yıldızlar gösteriyor, zorunlu onay kutusu ise vurgulanmış bir çerçevenin içinde – işaretlemeden göndermeye çalışırsan çerçeve kırmızıya döner. Yanındaki metne tıklayarak da işaretleyebilirsin.",
-                             "Programdaki tüm onay kutuları (Ayarlar, mesaj penceresi) artık koyu arka planda net görünüyor: açık renkli bir çerçeve, işaretliyken de beyaz onay işaretli turuncu bir kutu."
+                             "Kayıtlı limit sıfırlama: Anthropic sana sonraya saklayabileceğin bir sıfırlama verdiğinde panel artık bunu gösteriyor – kaç tane var ve ne zaman doluyor – ve bir limit dolduğunda ya da sıfırlama kullanılmadan dolmak üzereyken hatırlatıyor. claude.ai › Ayarlar › Kullanım sayfasında kullanırsın; program senin yerine asla kullanmaz.",
+                             "Küçük bir ▸ işareti şu anda geçerli olan limitin göstergesini belirtiyor – seni neyin tuttuğunu bir bakışta görürsün.",
+                             "Rutinler (Cowork) penceresi sunucunun kod adı yerine gerçek bir ad aldı.",
+                             "Neden yeni sürüm? Çünkü Anthropic\u0027in kullanım verilerine eklediklerine ayak uyduruyoruz – böylece var olan her şeyi her zaman görürsün. Senin için."
                          ],
                   "pt-PT":  [
-                                "Melhor visibilidade na janela «Mensagem ao programador»: a avaliação mostra agora estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica numa moldura destacada – se tentares enviar sem a assinalar, a moldura fica vermelha. Também a podes assinalar clicando no texto ao lado.",
-                                "Todas as caixas de verificação do programa (Definições, janela de mensagem) estão agora bem visíveis no fundo escuro: uma moldura clara e, quando ativadas, uma caixa laranja com um visto branco."
+                                "Reposição de limite guardada: quando a Anthropic te dá uma reposição que podes guardar para mais tarde, o painel passa a mostrá-la – quantas tens e quando expira – e avisa-te quando um limite está cheio e quando a reposição está prestes a expirar sem ser usada. Resgata-la em claude.ai › Definições › Utilização; o programa nunca a resgata por ti.",
+                                "Um pequeno ▸ marca o indicador cujo limite se aplica neste momento – num relance vês o que te está a travar.",
+                                "A janela Rotinas (Cowork) tem um nome a sério em vez do nome de código do servidor.",
+                                "Porquê uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos teus dados de utilização – para veres sempre tudo o que existe. Por ti."
                             ],
                   "pt-BR":  [
-                                "Melhor visibilidade na janela “Mensagem para o desenvolvedor”: a avaliação agora mostra estrelas maiores e bem visíveis, e a caixa de consentimento obrigatória fica em um quadro destacado – se você tentar enviar sem marcá-la, o quadro fica vermelho. Clicar no texto ao lado também marca a caixa.",
-                                "Todas as caixas de seleção do programa (Configurações, janela de mensagem) agora aparecem com clareza no fundo escuro: uma borda clara e, quando ativadas, uma caixa laranja com uma marca de seleção branca."
+                                "Redefinição de limite guardada: quando a Anthropic dá a você uma redefinição que pode ser guardada para depois, o painel agora a mostra – quantas você tem e quando expira – e avisa quando um limite está cheio e quando a redefinição está prestes a expirar sem uso. Você a resgata em claude.ai › Configurações › Uso; o programa nunca a resgata por você.",
+                                "Um pequeno ▸ marca o indicador cujo limite vale agora – de relance você vê o que está te segurando.",
+                                "A janela Rotinas (Cowork) tem um nome de verdade em vez do nome de código do servidor.",
+                                "Por que uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos seus dados de uso – para que você sempre veja tudo o que existe. Para você."
                             ],
                   "es-ES":  [
-                                "Mejor visibilidad en la ventana «Mensaje al desarrollador»: la valoración muestra ahora estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se vuelve rojo. También puedes marcarla haciendo clic en el texto que tiene al lado.",
-                                "Todas las casillas del programa (Configuración, ventana de mensaje) se ven ahora con claridad sobre el fondo oscuro: un marco claro y, cuando están activadas, un cuadro naranja con una marca blanca."
+                                "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para más tarde, el panel ahora lo muestra – cuántos tienes y cuándo caduca – y te avisa cuando un límite se llena y cuando el reinicio está a punto de caducar sin usar. Lo canjeas en claude.ai › Configuración › Uso; el programa nunca lo canjea por ti.",
+                                "Un pequeño ▸ marca el indicador cuyo límite se aplica ahora mismo – de un vistazo ves qué te está frenando.",
+                                "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
+                                "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic añade a tus datos de uso – para que siempre veas todo lo que hay. Por ti."
                             ],
                   "es-419":  [
-                                 "Mejor visibilidad en la ventana “Mensaje al desarrollador”: la calificación ahora muestra estrellas más grandes y bien visibles, y la casilla de consentimiento obligatoria está dentro de un recuadro destacado; si intentas enviar sin marcarla, el recuadro se pone rojo. También puedes marcarla haciendo clic en el texto de al lado.",
-                                 "Todas las casillas del programa (Configuración, ventana de mensaje) ahora se ven claramente sobre el fondo oscuro: un borde claro y, cuando están activadas, un cuadro naranja con una marca de verificación blanca."
+                                 "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para después, el panel ahora lo muestra – cuántos tienes y cuándo vence – y te avisa cuando un límite se llena y cuando el reinicio está por vencer sin usarse. Lo usas en claude.ai › Configuración › Uso; el programa nunca lo usa por ti.",
+                                 "Un pequeño ▸ marca el indicador cuyo límite aplica ahora mismo – de un vistazo ves qué te está frenando.",
+                                 "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
+                                 "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic agrega a tus datos de uso – para que siempre veas todo lo que hay. Para ti."
                              ],
                   "ja":  [
-                             "「開発者へのメッセージ」ウィンドウが見やすくなりました。星の評価は大きくはっきりした星で表示され、必須の同意チェックボックスは強調された枠で囲まれています。チェックを入れずに送信しようとすると、枠が赤くなります。横のテキストをクリックしてもチェックを入れられます。",
-                             "プログラム内のすべてのチェックボックス（「設定」、メッセージウィンドウ）が暗い背景でもはっきり見えるようになりました。枠は明るい色になり、オンのときは白いチェックマーク付きのオレンジ色のボックスになります。"
+                             "保存済みの上限リセット：Anthropic から後で使えるリセットをもらったとき、パネルにその数と期限が表示されるようになりました。上限に達したとき、またリセットが未使用のまま期限切れになりそうなときにもお知らせします。使うのは claude.ai › 設定 › 使用状況 から。アプリが勝手に使うことはありません。",
+                             "いま効いている上限のメーターに小さな ▸ が付きます。何に止められているか、ひと目でわかります。",
+                             "「ルーチン（Cowork）」ウィンドウは、サーバーのコードネームではなくちゃんとした名前で表示されます。",
+                             "なぜ新バージョンなのか？ Anthropic が使用状況データに加えたものに私たちも追いついているからです。あるものはすべて、いつでも見えるように。あなたのために。"
                          ],
                   "ko":  [
-                             "“개발자에게 메시지” 창이 더 잘 보이게 바뀌었어요. 별점 평가는 더 크고 또렷한 별로 표시되고, 필수 동의 체크박스는 강조된 상자 안에 있어요. 체크하지 않고 보내려고 하면 상자가 빨간색으로 바뀌어요. 옆의 텍스트를 클릭해도 체크할 수 있어요.",
-                             "프로그램의 모든 체크박스(설정, 메시지 창)가 이제 어두운 배경에서도 잘 보여요. 테두리는 밝은색이고, 켜져 있으면 흰색 체크 표시가 있는 주황색 상자로 표시돼요."
+                             "저장된 한도 초기화: Anthropic이 나중에 쓸 수 있는 초기화를 주면 이제 패널에 표시돼요. 몇 개가 있고 언제 만료되는지 보여주고, 한도가 가득 찼을 때와 초기화가 쓰이지 않은 채 만료되기 직전에 알려줘요. 사용은 claude.ai › 설정 › 사용량에서 직접 하세요. 앱이 대신 사용하는 일은 없어요.",
+                             "지금 적용 중인 한도의 게이지 앞에 작은 ▸ 표시가 붙어요. 무엇이 나를 막고 있는지 한눈에 보여요.",
+                             "루틴(Cowork) 창이 서버의 코드명 대신 제대로 된 이름으로 표시돼요.",
+                             "왜 새 버전일까요? Anthropic이 사용량 데이터에 추가하는 것을 우리도 따라가기 때문이에요. 있는 건 언제나 전부 보이도록. 여러분을 위해서."
                          ],
                   "zh-CN":  [
-                                "“给开发者留言”窗口更加醒目：星级评分现在显示为更大、更清晰的星星；必填的同意复选框位于突出显示的边框内——如果未勾选就尝试发送，边框会变成红色。点击旁边的文字也可以勾选。",
-                                "程序中的所有复选框（设置、留言窗口）现在在深色背景上都清晰可见：浅色边框，勾选时显示为带白色对勾的橙色方框。"
+                                "已保存的额度重置：当 Anthropic 给你一次可以留到以后使用的额度重置时，面板现在会显示出来——你有几次、何时到期——并在额度用尽时以及重置即将未使用而到期时提醒你。兑换请到 claude.ai › 设置 › 用量；程序绝不会替你兑换。",
+                                "一个小小的 ▸ 标记出当前生效的那个额度——一眼就能看出是什么在限制你。",
+                                "“例程（Cowork）”窗口有了正式名称，不再显示服务器的代号。",
+                                "为什么发布新版本？因为我们紧跟 Anthropic 在用量数据中新增的内容——让你总能看到所有存在的信息。为了你。"
                             ],
                   "zh-TW":  [
-                                "「傳訊息給開發者」視窗更加清楚易讀：星級評分現在以更大、更醒目的星星顯示；必填的同意核取方塊位於醒目的外框中——如果未勾選就嘗試傳送，外框會變成紅色。按一下旁邊的文字也能勾選。",
-                                "程式中的所有核取方塊（設定、訊息視窗）現在在深色背景上都清晰可見：淺色外框，勾選時則顯示為帶有白色勾號的橘色方塊。"
+                                "已儲存的額度重設：當 Anthropic 給你一次可以留到之後使用的額度重設時，面板現在會顯示出來——你有幾次、何時到期——並在額度用盡時，以及重設即將未使用而到期時提醒你。兌換請到 claude.ai › 設定 › 用量；程式絕不會替你兌換。",
+                                "一個小小的 ▸ 標示出目前生效的那個額度——一眼就能看出是什麼在限制你。",
+                                "「例行工作（Cowork）」視窗有了正式名稱，不再顯示伺服器的代號。",
+                                "為什麼推出新版本？因為我們緊跟 Anthropic 在用量資料中新增的內容——讓你總能看到所有存在的資訊。為了你。"
                             ],
                   "id":  [
-                             "Jendela “Pesan untuk pengembang” kini lebih jelas: penilaian bintang sekarang menampilkan bintang yang lebih besar dan mudah terlihat, dan kotak centang persetujuan yang wajib berada di dalam bingkai yang disorot – jika Anda mencoba mengirim tanpa mencentangnya, bingkai berubah menjadi merah. Mengeklik teks di sebelahnya juga akan mencentangnya.",
-                             "Semua kotak centang di program (Pengaturan, jendela pesan) kini terlihat jelas di latar belakang gelap: bingkai terang, dan saat aktif berupa kotak oranye dengan tanda centang putih."
+                             "Reset batas tersimpan: saat Anthropic memberi Anda reset yang boleh disimpan untuk nanti, panel kini menampilkannya – berapa banyak yang Anda punya dan kapan kedaluwarsa – dan mengingatkan saat sebuah batas penuh serta saat reset hampir kedaluwarsa tanpa dipakai. Anda menukarkannya di claude.ai › Pengaturan › Penggunaan; program tidak pernah menukarkannya untuk Anda.",
+                             "Tanda ▸ kecil menandai pengukur yang batasnya berlaku saat ini – sekilas Anda tahu apa yang menahan Anda.",
+                             "Jendela Rutinitas (Cowork) kini punya nama yang semestinya, bukan nama kode server.",
+                             "Mengapa versi baru? Karena kami mengikuti apa yang Anthropic tambahkan ke data penggunaan Anda – supaya Anda selalu melihat semua yang ada. Untuk Anda."
                          ],
                   "vi":  [
-                             "Cửa sổ “Tin nhắn cho nhà phát triển” dễ nhìn hơn: phần đánh giá giờ hiển thị các ngôi sao lớn và rõ hơn, còn ô đánh dấu đồng ý bắt buộc nằm trong một khung được làm nổi bật – nếu bạn gửi mà chưa đánh dấu, khung sẽ chuyển sang màu đỏ. Bấm vào dòng chữ bên cạnh cũng đánh dấu được ô này.",
-                             "Mọi ô đánh dấu trong chương trình (Cài đặt, cửa sổ tin nhắn) giờ đều hiện rõ trên nền tối: khung màu sáng, và khi bật là ô màu cam với dấu tích trắng."
+                             "Lượt đặt lại giới hạn đã lưu: khi Anthropic trao cho bạn một lượt đặt lại có thể để dành dùng sau, bảng điều khiển giờ sẽ hiển thị nó – bạn có bao nhiêu lượt và khi nào hết hạn – và nhắc bạn khi một giới hạn đã đầy cũng như khi lượt đặt lại sắp hết hạn mà chưa dùng. Bạn dùng nó tại claude.ai › Cài đặt › Mức sử dụng; chương trình không bao giờ dùng thay bạn.",
+                             "Một dấu ▸ nhỏ đánh dấu đồng hồ có giới hạn đang có hiệu lực – nhìn qua là biết điều gì đang giữ chân bạn.",
+                             "Cửa sổ Quy trình (Cowork) có tên đàng hoàng thay cho tên mã của máy chủ.",
+                             "Vì sao có phiên bản mới? Vì chúng tôi theo kịp những gì Anthropic bổ sung vào dữ liệu sử dụng của bạn – để bạn luôn thấy mọi thứ đang có. Vì bạn."
                          ],
                   "ro":  [
-                             "Fereastra „Mesaj către dezvoltator” se vede mai bine: evaluarea afișează acum stele mai mari și bine vizibile, iar caseta obligatorie de consimțământ stă într-un chenar evidențiat – dacă încerci să trimiți fără s-o bifezi, chenarul devine roșu. O poți bifa și dând clic pe textul de lângă ea.",
-                             "Toate casetele de bifat din program (Setări, fereastra de mesaj) se văd acum clar pe fundalul întunecat: un chenar deschis la culoare, iar când sunt bifate, un pătrat portocaliu cu o bifă albă."
+                             "Resetare de limită salvată: când Anthropic îți dă o resetare pe care o poți păstra pentru mai târziu, panoul o arată acum – câte ai și când expiră – și îți amintește când o limită e plină și când resetarea e pe cale să expire nefolosită. O folosești pe claude.ai › Setări › Utilizare; programul nu o folosește niciodată în locul tău.",
+                             "Un mic ▸ marchează indicatorul a cărui limită se aplică chiar acum – dintr-o privire vezi ce te ține pe loc.",
+                             "Fereastra Rutine (Cowork) are un nume adevărat în locul numelui de cod al serverului.",
+                             "De ce o versiune nouă? Pentru că ținem pasul cu ce adaugă Anthropic la datele tale de utilizare – ca să vezi mereu tot ce există. Pentru tine."
                          ],
                   "el":  [
-                             "Καλύτερη ορατότητα στο παράθυρο «Μήνυμα προς τον προγραμματιστή»: η αξιολόγηση δείχνει πλέον μεγαλύτερα, ευδιάκριτα αστέρια, και το υποχρεωτικό πλαίσιο ελέγχου συγκατάθεσης βρίσκεται μέσα σε τονισμένο περίγραμμα – αν προσπαθήσετε να στείλετε χωρίς να το επιλέξετε, το περίγραμμα γίνεται κόκκινο. Μπορείτε να το επιλέξετε και κάνοντας κλικ στο κείμενο δίπλα του.",
-                             "Όλα τα πλαίσια ελέγχου του προγράμματος (Ρυθμίσεις, παράθυρο μηνύματος) διακρίνονται πλέον καθαρά στο σκούρο φόντο: ανοιχτόχρωμο περίγραμμα και, όταν είναι ενεργά, πορτοκαλί τετράγωνο με λευκό σημάδι επιλογής."
+                             "Αποθηκευμένη επαναφορά ορίου: όταν η Anthropic σας δίνει μια επαναφορά που μπορείτε να κρατήσετε για αργότερα, ο πίνακας τη δείχνει πλέον – πόσες έχετε και πότε λήγει – και σας υπενθυμίζει όταν ένα όριο γεμίσει και όταν η επαναφορά πρόκειται να λήξει αχρησιμοποίητη. Την εξαργυρώνετε στο claude.ai › Ρυθμίσεις › Χρήση· το πρόγραμμα δεν την εξαργυρώνει ποτέ για εσάς.",
+                             "Ένα μικρό ▸ σημειώνει τον μετρητή του οποίου το όριο ισχύει αυτή τη στιγμή – με μια ματιά βλέπετε τι σας κρατάει πίσω.",
+                             "Το παράθυρο Ρουτίνες (Cowork) έχει κανονικό όνομα αντί για την κωδική ονομασία του διακομιστή.",
+                             "Γιατί νέα έκδοση; Επειδή ακολουθούμε όσα προσθέτει η Anthropic στα δεδομένα χρήσης σας – ώστε να βλέπετε πάντα ό,τι υπάρχει. Για εσάς."
                          ],
                   "bg":  [
-                             "По-добра видимост в прозореца „Съобщение до разработчика“: оценката вече показва по-големи, ясно видими звезди, а задължителното поле за съгласие е в открояваща се рамка – ако опиташ да изпратиш, без да го отметнеш, рамката става червена. Можеш да го отметнеш и с щракване върху текста до него.",
-                             "Всички полета за отметка в програмата (Настройки, прозорец за съобщение) вече се виждат ясно на тъмния фон: светла рамка, а когато са включени – оранжево квадратче с бяла отметка."
+                             "Запазено нулиране на лимита: когато Anthropic ти даде нулиране, което можеш да запазиш за по-късно, панелът вече го показва – колко имаш и кога изтича – и напомня, когато лимитът е изчерпан и когато нулирането скоро ще изтече неизползвано. Използваш го в claude.ai › Настройки › Използване; програмата никога не го използва вместо теб.",
+                             "Малък знак ▸ отбелязва индикатора, чийто лимит важи в момента – с един поглед виждаш какво те спира.",
+                             "Прозорецът Рутини (Cowork) има истинско име вместо кодовото име на сървъра.",
+                             "Защо нова версия? Защото следваме това, което Anthropic добавя към данните ти за използване – за да виждаш винаги всичко, което има. За теб."
                          ],
                   "sk":  [
-                             "Lepšia viditeľnosť v okne „Správa vývojárovi“: hodnotenie teraz zobrazuje väčšie, dobre viditeľné hviezdičky a povinné začiarkavacie políčko súhlasu je vo zvýraznenom rámčeku – ak sa pokúsiš správu odoslať bez jeho začiarknutia, rámček sčervenie. Políčko začiarkneš aj kliknutím na text vedľa neho.",
-                             "Všetky začiarkavacie políčka v programe (Nastavenia, okno správy) sú teraz na tmavom pozadí dobre viditeľné: svetlý rámček a po zapnutí oranžový štvorček s bielou fajkou."
+                             "Uložený reset limitu: keď ti Anthropic dá reset, ktorý si môžeš nechať na neskôr, panel ho teraz zobrazí – koľko ich máš a kedy vyprší – a pripomenie ti, keď je limit plný a keď má reset čoskoro nevyužitý vypršať. Uplatníš ho na claude.ai › Nastavenia › Využitie; program ho za teba nikdy neuplatní.",
+                             "Malá značka ▸ označuje ukazovateľ, ktorého limit práve platí – na prvý pohľad vidíš, čo ťa brzdí.",
+                             "Okno Rutiny (Cowork) má poriadny názov namiesto kódového mena servera.",
+                             "Prečo nová verzia? Lebo držíme krok s tým, čo Anthropic pridáva k tvojim údajom o využití – aby si vždy videl všetko, čo existuje. Pre teba."
                          ],
                   "hr":  [
-                             "Bolja vidljivost u prozoru „Poruka programeru”: ocjena sada prikazuje veće, jasno vidljive zvjezdice, a obvezni potvrdni okvir za privolu nalazi se u istaknutom polju – ako pokušate poslati poruku bez označavanja, polje postaje crveno. Možete ga označiti i klikom na tekst pokraj njega.",
-                             "Svi potvrdni okviri u programu (Postavke, prozor za poruke) sada su jasno vidljivi na tamnoj pozadini: svijetli rub, a kad su uključeni, narančasti kvadratić s bijelom kvačicom."
+                             "Spremljeno resetiranje ograničenja: kad vam Anthropic da resetiranje koje smijete sačuvati za kasnije, ploča ga sada prikazuje – koliko ih imate i kada istječe – i podsjeća vas kad je ograničenje puno i kad resetiranje uskoro istječe neiskorišteno. Iskorištavate ga na claude.ai › Postavke › Potrošnja; program ga nikada ne iskorištava umjesto vas.",
+                             "Mali znak ▸ označava mjerač čije ograničenje trenutačno vrijedi – na prvi pogled vidite što vas koči.",
+                             "Prozor Rutine (Cowork) ima pravo ime umjesto kodnog imena poslužitelja.",
+                             "Zašto nova verzija? Jer pratimo ono što Anthropic dodaje vašim podacima o potrošnji – da uvijek vidite sve što postoji. Za vas."
                          ],
                   "sv":  [
-                             "Fönstret ”Meddelande till utvecklaren” syns bättre: betyget visas nu med större, tydliga stjärnor, och den obligatoriska kryssrutan för samtycke ligger i en markerad ram – om du försöker skicka utan att kryssa i den blir ramen röd. Du kan också kryssa i den genom att klicka på texten bredvid.",
-                             "Alla kryssrutor i programmet (Inställningar, meddelandefönstret) syns nu tydligt mot den mörka bakgrunden: en ljus ram och, när de är ikryssade, en orange ruta med en vit bock."
+                             "Sparad gränsåterställning: när Anthropic ger dig en återställning som du får spara till senare visar panelen den nu – hur många du har och när den går ut – och påminner dig när en gräns är full och när återställningen är på väg att gå ut oanvänd. Du löser in den på claude.ai › Inställningar › Användning; programmet löser aldrig in den åt dig.",
+                             "Ett litet ▸ markerar den mätare vars gräns gäller just nu – med en blick ser du vad som håller dig tillbaka.",
+                             "Fönstret Rutiner (Cowork) har ett riktigt namn i stället för serverns kodnamn.",
+                             "Varför en ny version? För att vi håller jämna steg med det Anthropic lägger till i dina användningsdata – så att du alltid ser allt som finns. För dig."
                          ],
                   "fi":  [
-                             "”Viesti kehittäjälle” -ikkuna näkyy paremmin: arviossa on nyt isommat, selvästi näkyvät tähdet, ja pakollinen suostumuksen valintaruutu on korostetussa kehyksessä – jos yrität lähettää valitsematta sitä, kehys muuttuu punaiseksi. Ruudun voi valita myös napsauttamalla sen vieressä olevaa tekstiä.",
-                             "Kaikki ohjelman valintaruudut (Asetukset, viesti-ikkuna) näkyvät nyt selvästi tummaa taustaa vasten: vaalea kehys ja valittuna oranssi ruutu, jossa on valkoinen valintamerkki."
+                             "Tallennettu rajan nollaus: kun Anthropic antaa sinulle nollauksen, jonka saat säästää myöhemmäksi, paneeli näyttää sen nyt – montako sinulla on ja milloin se vanhenee – ja muistuttaa, kun raja on täynnä ja kun nollaus on vanhenemassa käyttämättä. Lunastat sen osoitteessa claude.ai › Asetukset › Käyttö; ohjelma ei koskaan lunasta sitä puolestasi.",
+                             "Pieni ▸ merkitsee mittarin, jonka raja on juuri nyt voimassa – yhdellä silmäyksellä näet, mikä sinua jarruttaa.",
+                             "Rutiinit (Cowork) -ikkunalla on kunnon nimi palvelimen koodinimen sijaan.",
+                             "Miksi uusi versio? Koska pysymme mukana siinä, mitä Anthropic lisää käyttötietoihisi – jotta näet aina kaiken, mitä on. Sinua varten."
                          ],
                   "da":  [
-                             "Bedre synlighed i vinduet “Besked til udvikleren”: bedømmelsen viser nu større, tydelige stjerner, og det obligatoriske afkrydsningsfelt til samtykke står i en fremhævet ramme – hvis du prøver at sende uden at sætte kryds, bliver rammen rød. Du kan også sætte krydset ved at klikke på teksten ved siden af.",
-                             "Alle afkrydsningsfelter i programmet (Indstillinger, beskedvinduet) ses nu tydeligt på den mørke baggrund: en lys ramme og, når de er slået til, en orange boks med et hvidt flueben."
+                             "Gemt grænsenulstilling: når Anthropic giver dig en nulstilling, du må gemme til senere, viser panelet den nu – hvor mange du har, og hvornår den udløber – og minder dig om det, når en grænse er fuld, og når nulstillingen er ved at udløbe ubrugt. Du indløser den på claude.ai › Indstillinger › Forbrug; programmet indløser den aldrig for dig.",
+                             "Et lille ▸ markerer den måler, hvis grænse gælder lige nu – med ét blik ser du, hvad der holder dig tilbage.",
+                             "Vinduet Rutiner (Cowork) har et rigtigt navn i stedet for serverens kodenavn.",
+                             "Hvorfor en ny version? Fordi vi følger med i det, Anthropic føjer til dine forbrugsdata – så du altid ser alt, hvad der er. For dig."
                          ],
                   "lt":  [
-                             "Geriau matomas langas „Žinutė kūrėjui“: įvertinime dabar rodomos didesnės, aiškiai matomos žvaigždutės, o privalomas sutikimo žymimasis langelis yra paryškintame rėmelyje – jei bandysite siųsti jo nepažymėję, rėmelis taps raudonas. Langelį galima pažymėti ir spustelėjus šalia esantį tekstą.",
-                             "Visi programos žymimieji langeliai (Parametrai, žinutės langas) dabar gerai matomi tamsiame fone: šviesus rėmelis, o įjungus – oranžinis langelis su balta varnele."
+                             "Išsaugotas limito atstatymas: kai Anthropic suteikia atstatymą, kurį galite pasilikti vėlesniam laikui, skydelis dabar jį rodo – kiek jų turite ir kada baigia galioti – ir primena, kai limitas išnaudotas ir kai atstatymas netrukus baigs galioti nepanaudotas. Panaudojate jį claude.ai › Nustatymai › Naudojimas; programa niekada jo nepanaudoja už jus.",
+                             "Mažas ▸ ženklas pažymi matuoklį, kurio limitas galioja šiuo metu – iš pirmo žvilgsnio matote, kas jus stabdo.",
+                             "Langas Rutinos (Cowork) turi tikrą pavadinimą vietoj serverio kodinio vardo.",
+                             "Kodėl nauja versija? Nes neatsiliekame nuo to, ką Anthropic prideda prie jūsų naudojimo duomenų – kad visada matytumėte viską, kas yra. Dėl jūsų."
                          ],
                   "sl":  [
-                             "Boljša vidnost v oknu „Sporočilo razvijalcu“: ocena zdaj prikazuje večje, dobro vidne zvezdice, obvezno potrditveno polje za privolitev pa je v poudarjenem okvirju – če poskusite poslati sporočilo, ne da bi polje označili, okvir postane rdeč. Polje lahko označite tudi s klikom na besedilo poleg njega.",
-                             "Vsa potrditvena polja v programu (Nastavitve, okno za sporočila) so zdaj dobro vidna na temnem ozadju: svetel okvir, ko so vklopljena, pa oranžen kvadratek z belo kljukico."
+                             "Shranjena ponastavitev omejitve: ko vam Anthropic da ponastavitev, ki jo smete shraniti za pozneje, jo plošča zdaj prikaže – koliko jih imate in kdaj poteče – ter vas opomni, ko je omejitev polna in ko bo ponastavitev kmalu neizkoriščena potekla. Unovčite jo na claude.ai › Nastavitve › Poraba; program je nikoli ne unovči namesto vas.",
+                             "Majhen ▸ označuje merilnik, katerega omejitev velja prav zdaj – na prvi pogled vidite, kaj vas zadržuje.",
+                             "Okno Rutine (Cowork) ima pravo ime namesto kodnega imena strežnika.",
+                             "Zakaj nova različica? Ker sledimo temu, kar Anthropic dodaja vašim podatkom o porabi – da vedno vidite vse, kar obstaja. Za vas."
                          ],
                   "lv":  [
-                             "Labāk saskatāms logs „Ziņa izstrādātājam”: vērtējumā tagad redzamas lielākas, labi saskatāmas zvaigznes, un obligātā piekrišanas izvēles rūtiņa atrodas izceltā rāmī – ja mēģināsiet sūtīt, to neatzīmējot, rāmis kļūs sarkans. Rūtiņu var atzīmēt, arī noklikšķinot uz blakus esošā teksta.",
-                             "Visas programmas izvēles rūtiņas (Iestatījumi, ziņas logs) tagad ir labi redzamas uz tumšā fona: gaišs rāmis, bet ieslēgtā stāvoklī – oranžs lodziņš ar baltu ķeksīti."
+                             "Saglabāta limita atiestatīšana: kad Anthropic jums piešķir atiestatīšanu, ko drīkstat paturēt vēlākam laikam, panelis to tagad rāda – cik jums ir un kad tā beidzas – un atgādina, kad limits ir pilns un kad atiestatīšana drīz beigsies neizmantota. Izmantojat to vietnē claude.ai › Iestatījumi › Lietojums; programma to nekad neizmanto jūsu vietā.",
+                             "Maza ▸ zīme atzīmē mērītāju, kura limits ir spēkā tieši tagad – ar vienu skatienu redzat, kas jūs kavē.",
+                             "Logam Rutīnas (Cowork) ir īsts nosaukums servera kodētā nosaukuma vietā.",
+                             "Kāpēc jauna versija? Jo mēs sekojam tam, ko Anthropic pievieno jūsu lietojuma datiem – lai jūs vienmēr redzētu visu, kas ir. Jums."
                          ],
                   "et":  [
-                             "Aken „Sõnum arendajale“ on paremini nähtav: hinnangus on nüüd suuremad ja selgelt nähtavad tärnid ning kohustuslik nõusoleku märkeruut on esiletõstetud raamis – kui proovid saata ilma seda märkimata, muutub raam punaseks. Märkeruudu saab märkida ka selle kõrval olevale tekstile klõpsates.",
-                             "Kõik programmi märkeruudud (Sätted, sõnumiaken) on nüüd tumedal taustal selgelt nähtavad: hele raam ning sisselülitatuna oranž ruut valge linnukesega."
+                             "Salvestatud limiidi lähtestus: kui Anthropic annab sulle lähtestuse, mille võid hilisemaks alles hoida, näitab paneel seda nüüd – mitu sul on ja millal see aegub – ning tuletab meelde, kui limiit on täis ja kui lähtestus on kasutamata aegumas. Kasutad seda lehel claude.ai › Seaded › Kasutus; programm ei kasuta seda kunagi sinu eest.",
+                             "Väike ▸ märgib mõõdikut, mille limiit praegu kehtib – ühe pilguga näed, mis sind tagasi hoiab.",
+                             "Aknal Rutiinid (Cowork) on päris nimi serveri koodnime asemel.",
+                             "Miks uus versioon? Sest me käime kaasas sellega, mida Anthropic sinu kasutusandmetele lisab – et näeksid alati kõike, mis olemas on. Sinu jaoks."
                          ],
                   "mt":  [
-                             "Viżibbiltà aħjar fit-tieqa “Messaġġ lill-iżviluppatur”: il-valutazzjoni issa turi stilel akbar li jidhru sew, u l-kaxxa obbligatorja tal-kunsens tinsab f\u0027qafas enfasizzat – jekk tipprova tibgħat mingħajr ma timmarkaha, il-qafas isir aħmar. Tista\u0027 timmarkaha wkoll billi tikklikkja fuq it-test ħdejha.",
-                             "Il-kaxxi tal-għażla kollha fil-programm (Issettjar, tieqa tal-messaġġ) issa jidhru ċar fuq l-isfond skur: qafas ta\u0027 kulur ċar, u meta jkunu mixgħula, kaxxa oranġjo b\u0027marka bajda."
+                             "Risettjar tal-limitu salvat: meta Anthropic tagħtik risettjar li tista\u0027 żżomm għal aktar tard, il-pannell issa jurih – kemm għandek u meta jiskadi – u jfakkrek meta limitu jkun mimli u meta r-risettjar ikun wasal biex jiskadi mingħajr ma jintuża. Tużah fuq claude.ai › Issettjar › Użu; il-programm qatt ma jużah għalik.",
+                             "Sinjal żgħir ▸ jimmarka l-indikatur li l-limitu tiegħu japplika bħalissa – b\u0027daqqa t\u0027għajn tara x\u0027qed iżommok lura.",
+                             "It-tieqa Rutini (Cowork) għandha isem proprju minflok l-isem kodiċi tas-server.",
+                             "Għaliex verżjoni ġdida? Għax inżommu l-pass ma\u0027 dak li Anthropic iżżid mad-data tal-użu tiegħek – biex dejjem tara kulma hemm. Għalik."
                          ],
                   "ga":  [
-                             "Tá an fhuinneog “Teachtaireacht chuig an bhforbróir” níos soiléire anois: taispeánann an rátáil réaltaí níos mó atá furasta a fheiceáil, agus tá an ticbhosca toilithe éigeantach i bhfráma aibhsithe – má dhéanann tú iarracht seoladh gan tic a chur ann, éiríonn an fráma dearg. Má chliceálann tú ar an téacs in aice leis, cuirtear tic ann freisin.",
-                             "Tá gach ticbhosca sa ríomhchlár (Socruithe, fuinneog na teachtaireachta) le feiceáil go soiléir ar an gcúlra dorcha anois: fráma geal, agus nuair a bhíonn sé ar siúl, bosca oráiste le tic bán."
+                             "Athshocrú teorann sábháilte: nuair a thugann Anthropic athshocrú duit is féidir leat a choinneáil le haghaidh níos déanaí, taispeánann an painéal anois é – cé mhéad atá agat agus cathain a éagfaidh sé – agus cuireann sé i gcuimhne duit nuair a bhíonn teorainn lán agus nuair atá an t-athshocrú ar tí dul in éag gan úsáid. Úsáideann tú é ar claude.ai › Socruithe › Úsáid; ní úsáideann an ríomhchlár riamh é ar do shon.",
+                             "Marcálann ▸ beag an tomhsaire a bhfuil a theorainn i bhfeidhm faoi láthair – feiceann tú d\u0027aon amharc cad atá do do choinneáil siar.",
+                             "Tá ainm ceart ar an bhfuinneog Gnáthaimh (Cowork) in ionad chódainm an fhreastalaí.",
+                             "Cén fáth leagan nua? Mar go gcoinnímid suas leis an méid a chuireann Anthropic le do shonraí úsáide – ionas go bhfeiceann tú i gcónaí gach a bhfuil ann. Duitse."
                          ]
               }
 }

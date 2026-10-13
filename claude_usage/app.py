@@ -412,6 +412,8 @@ class MonitorApp:
         gauges = [("fh", tr("panel.five_hour"), m.five_hour), ("sd", tr("panel.weekly"), m.weekly)]
         if m.has_model:
             gauges.append(("mo", tr("panel.model", m.model_name.upper()), m.model))
+        rs = m.resets
+        has_reset = s["notify_resets"] and rs is not None and rs.count > 0
         for key, label, gauge in gauges:
             prev = self._last.get(key)
             self._last[key] = gauge.value
@@ -426,6 +428,16 @@ class MonitorApp:
                         break
             if s["notify_on_reset"] and prev > 15 and gauge.value <= 1:
                 self.notify(label, tr("notify.reset_done", label))
+            if has_reset and prev < 99.5 <= gauge.value:
+                # the limit is full - and there is a saved reset the user may redeem right now
+                self.notify(label, tr("notify.reset_available", label))
+
+        # a saved reset that is about to expire unused: one reminder per grant, 3 days ahead
+        if has_reset and rs.expires_in_ms is not None and rs.expires_in_ms <= 3 * 86_400_000 \
+                and int(s["resets_warned"] or 0) != int(rs.expires_at or 0):
+            s["resets_warned"] = int(rs.expires_at or 0)
+            s.save()
+            self.notify(tr("detail.resets"), tr("notify.reset_expiring", fmt_delta(rs.expires_in_ms)))
 
         if s["notify_stale"]:
             if m.stale and not self._stale_notified:

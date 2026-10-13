@@ -248,6 +248,8 @@ final class MonitorController {
         guard m.ok else { return }
         var gauges: [(String, String, Gauge)] = [("fh", tr("panel.five_hour"), m.fiveHour), ("sd", tr("panel.weekly"), m.weekly)]
         if m.hasModel { gauges.append(("mo", tr("panel.model", m.modelName.uppercased()), m.model)) }
+        let rs = m.resets
+        let hasReset = s.notifyResets && (rs?.count ?? 0) > 0
         for (key, label, gauge) in gauges {
             let prev = last[key]
             last[key] = gauge.value
@@ -262,6 +264,16 @@ final class MonitorController {
             if s.notifyOnReset && prev > 15 && gauge.value <= 1 {
                 Notifier.shared.notify(label, tr("notify.reset_done", label))
             }
+            if hasReset && prev < 99.5 && gauge.value >= 99.5 {
+                // the limit is full - and there is a saved reset the user may redeem right now
+                Notifier.shared.notify(label, tr("notify.reset_available", label))
+            }
+        }
+        // a saved reset that is about to expire unused: one reminder per grant, 3 days ahead
+        if hasReset, let rs = rs, let left = rs.expiresInMs, left <= 3 * 86_400_000,
+           let at = rs.expiresAt, s.resetsWarned != Double(at) {
+            s.resetsWarned = Double(at)
+            Notifier.shared.notify(tr("detail.resets"), tr("notify.reset_expiring", fmtDelta(left)))
         }
         if s.notifyStale {
             if m.stale && !staleNotified {
@@ -304,7 +316,8 @@ final class MonitorController {
         let details = menu.submenu(tr("menu.details"))
         let toggles: [(String, ReferenceWritableKeyPath<Settings, Bool>)] = [
             ("show_plan_badge", \.showPlanBadge), ("show_plan_name", \.showPlanName), ("show_model_list", \.showModelList),
-            ("show_surfaces", \.showSurfaces), ("show_extra_usage", \.showExtraUsage), ("show_local_models", \.showLocalModels),
+            ("show_surfaces", \.showSurfaces), ("show_extra_usage", \.showExtraUsage), ("show_resets", \.showResets),
+            ("show_local_models", \.showLocalModels),
         ]
         for (key, path) in toggles {
             details.add(tr("set." + key), checked: s[keyPath: path], enabled: inAPI || key == "show_local_models") {

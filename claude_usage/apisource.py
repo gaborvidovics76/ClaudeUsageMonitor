@@ -17,7 +17,7 @@ from typing import Callable, List, Optional, Tuple
 from . import oauth
 from .i18n import tr
 from .datasource import (FIVE_HOURS_MS, WEEK_MS, DetailRow, ExtraUsage, Metrics, ProfileInfo,
-                         Sample)
+                         ResetGrants, Sample)
 
 
 # Polling cadence. The usage endpoint rate-limits: at one request per minute every
@@ -44,8 +44,19 @@ LEGACY_ROWS = (
     ("seven_day_opus", "model:Opus", "model", "Opus"),
     ("seven_day_sonnet", "model:Sonnet", "model", "Sonnet"),
     ("seven_day_oauth_apps", "surface:oauth_apps", "surface", "@oauth_apps"),
+    ("seven_day_cowork", "kind:seven_day_cowork", "other", "@cowork"),
+    ("seven_day_routines", "kind:seven_day_routines", "other", "@cowork"),
     ("cinder_cove", "kind:cinder_cove", "other", "Cinder Cove"),
 )
+# the saved limit resets travel under a server code name
+RESETS_KEY = "cedar_ember"
+# a window kind that contains one of these words is the Routines (Cowork) window
+COWORK_WORDS = ("cowork", "routine")
+
+
+def _cowork_kind(kind: str) -> bool:
+    k = (kind or "").lower()
+    return any(w in k for w in COWORK_WORDS)
 
 
 def _dbg(msg: str) -> None:
@@ -372,10 +383,19 @@ class ApiReader:
                         for lim in (raw.get("limits") or []):
                             if isinstance(lim, dict):
                                 sc = lim.get("scope") or {}
-                                _dbg("limit kind=%s group=%s model=%s percent=%s" % (
+                                _dbg("limit kind=%s group=%s model=%s percent=%s active=%s" % (
                                     lim.get("kind"), lim.get("group"),
                                     (sc.get("model") or {}).get("display_name"),
-                                    lim.get("percent")))
+                                    lim.get("percent"), lim.get("is_active")))
+                        try:
+                            rs = self._pick_resets(raw)
+                            if rs is None:
+                                _dbg("saved resets: no block in the answer")
+                            else:
+                                _dbg("saved resets: count=%d total=%d eligible=%s expires_at=%s" % (
+                                    rs.count, rs.total, rs.eligible, rs.expires_at))
+                        except Exception:  # noqa: BLE001 - diagnostics only
+                            pass
                 elif status in (401, 403):
                     self._error = tr("err.session_expired_nl")
                     _dbg(f"{status} auth hiba")
@@ -484,6 +504,8 @@ class ApiReader:
                 add(DetailRow(f"surface:{surface}", "surface", str(surface), pct, reset))
             elif kind in ("seven_day", "weekly_all") or group == "weekly_all":
                 continue                        # the overall weekly window has its own gauge
+            elif _cowork_kind(kind):
+                add(DetailRow(f"kind:{kind}", "other", "@cowork", pct, reset))
             else:
                 label = kind.replace("_", " ").strip().title() or group
                 add(DetailRow(f"kind:{kind or group}", "other", label, pct, reset))
@@ -528,8 +550,81 @@ class ApiReader:
                 continue                        # placeholder of a window that is not in use
             if repeats(float(util), reset):
                 continue                        # the same window under a second name
-            add(DetailRow(f"kind:{key}", "other", key.replace("_", " ").title(), float(util), reset))
+            label = "@cowork" if _cowork_kind(key) else key.replace("_", " ").title()
+            add(DetailRow(f"kind:{key}", "other", label, float(util), reset))
         return rows
+
+    @staticmethod
+    def _pick_resets(raw: dict) -> Optional[ResetGrants]:
+        """The saved limit resets. The block is not documented, so this reads it leniently:
+        a grant is any object with `resets_left`; a grant counts when it is not paused, has started
+        and has not expired. Returns None when the server sent no such block at all."""
+        block = raw.get(RESETS_KEY) if isinstance(raw, dict) else None
+        if block is None:
+            return None
+        now = int(time.time() * 1000)
+
+        def grants_of(obj) -> list:
+            if isinstance(obj, list):
+                found = []
+                for it in obj:
+                    found.extend(grants_of(it))
+                return found
+            if not isinstance(obj, dict):
+                return []
+            if "resets_left" in obj:
+                return [obj]
+            found = []
+            for val in obj.values():
+                if isinstance(val, (list, dict)):
+                    found.extend(grants_of(val))
+            return found
+
+        eligible = True
+        if isinstance(block, dict) and isinstance(block.get("eligible"), bool):
+            eligible = block["eligible"]
+        count = total = 0
+        expires: Optional[int] = None
+        for g in grants_of(block):
+            left, whole = g.get("resets_left"), g.get("resets_total")
+            if not isinstance(left, (int, float)):
+                continue
+            if g.get("paused") is True:
+                continue
+            start, end = _parse_iso_ms(g.get("starts_at")), _parse_iso_ms(g.get("ends_at"))
+            if start is not None and start > now:
+                continue
+            if end is not None and end <= now:
+                continue
+            left = max(0, int(left))
+            count += left
+            total += max(left, int(whole)) if isinstance(whole, (int, float)) else left
+            if left > 0 and end is not None and (expires is None or end < expires):
+                expires = end
+        if not eligible:
+            count = 0
+        return ResetGrants(count=count, total=total, expires_at=expires, eligible=eligible)
+
+    @staticmethod
+    def _pick_active(raw: dict, model_name: str) -> str:
+        """Which gauge's limit applies right now (the server marks it with `is_active`):
+        "fh" (5-hour), "sd" (weekly), "mo" (the model gauge) or "" when it does not say."""
+        limits = raw.get("limits") if isinstance(raw, dict) else None
+        if not isinstance(limits, list):
+            return ""
+        for lim in limits:
+            if not isinstance(lim, dict) or lim.get("is_active") is not True:
+                continue
+            kind, group = str(lim.get("kind", "")), str(lim.get("group", ""))
+            scope = lim.get("scope") if isinstance(lim.get("scope"), dict) else {}
+            model = (scope.get("model") or {}).get("display_name") if isinstance(scope.get("model"), dict) else None
+            if kind == "five_hour" or group == "session" or kind == "session":
+                return "fh"
+            if model:
+                return "mo" if model_name and str(model).lower() == model_name.lower() else ""
+            if kind in ("seven_day", "weekly_all") or group in ("weekly_all", "weekly"):
+                return "sd"
+        return ""
 
     @staticmethod
     def _pick_extra(raw: dict) -> Optional[ExtraUsage]:
@@ -703,9 +798,11 @@ class ApiReader:
 
         m.rows = self._pick_rows(raw)
         m.extra = self._pick_extra(raw)
+        m.resets = self._pick_resets(raw)
 
         # model-scoped weekly limit (e.g. Fable) - only when the server reports it
         mo_val, mo_reset, mo_name = self._pick_model(raw, self.model_filter)
+        m.active = self._pick_active(raw, mo_name)
         if mo_name:
             mg = m.model
             m.model_name = mo_name

@@ -39,6 +39,7 @@ NO_TRANSLATE = {
     "keychain", "smartscreen", "fable 5.1", "claude usage monitor", "usage monitor", "monitor", "backup kit",
     "claude backup kit", "e-mail", "email", "wi-fi", "cpu", "ram", "ui", "cli", "exe", "zip", "log", "app",
     "python", "pyside6", "qt", "ctrl", "alt", "shift", "esc", "tab", "x", "min", "hu", "en", "de", "nimbus quill",
+    "cowork",
 }
 SYMBOL_ONLY = re.compile(r"^[\s\d%{}:.,;/\-–—+×·•…()\[\]!?°\"'’‘“”«»|_*#&=<>→←↑↓✓✗⚠🔒]*$")
 CJK_RANGE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]")

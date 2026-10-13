@@ -2,6 +2,21 @@
 
 <!-- newer-versions-here -->
 
+## [2.8.0] - 2026-10-13
+
+- Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.
+- A small ▸ marks the gauge whose limit applies right now – at a glance you see which one is holding you back.
+- The Routines (Cowork) window has a proper name instead of the server's code name.
+- Why a new version? Because we keep pace with what Anthropic adds to your usage data – so you always see everything there is. For you.
+
+*Magyarul:*
+
+- Elmentett visszaállítás: ha az Anthropic ad egy későbbre eltehető limit-visszaállítást, a panel mostantól mutatja – hány van és mikor jár le –, és szól, ha betelt egy keret, illetve ha a visszaállítás beváltatlanul lejárna. Beváltani a claude.ai › Beállítások › Használat oldalon tudod; a program soha nem váltja be helyetted.
+- Egy kis ▸ jelöli azt a mérőt, amelyik limit éppen fog – egy pillantásra látod, mi tart vissza.
+- A Rutinok (Cowork) ablak rendes nevet kapott a szerver kódneve helyett.
+- Miért új verzió? Mert lépést tartunk azzal, amit az Anthropic a használati adatokhoz hozzátesz – hogy mindig mindent láss, ami csak van. Értetek.
+
+
 ## [2.7.1] - 2026-10-07
 
 - Better visibility in the "Message to the developer" window: the star rating now shows clearly visible, larger stars, and the required consent checkbox sits in a highlighted box – if you try to send without ticking it, the box turns red. Clicking the text next to it also ticks it.

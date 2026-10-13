@@ -837,6 +837,424 @@
         }
       }
     },
+    "detail.resets": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запазени нулирания на лимита"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložené resety limitu"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemte grænsenulstillinger"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespeicherte Limit-Zurücksetzungen"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Αποθηκευμένες επαναφορές ορίου"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved limit resets"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicios de límite guardados"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicios de límite guardados"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvestatud limiidi lähtestused"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallennetut rajan nollaukset"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réinitialisations de limite en réserve"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Athshocruithe teorann sábháilte"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spremljena resetiranja ograničenja"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elmentett visszaállítás"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset batas tersimpan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset del limite salvati"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存済みの上限リセット"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장된 한도 초기화"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Išsaugoti limito atstatymai"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saglabātās limita atiestatīšanas"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Risettjar tal-limitu salvat"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewaarde limietresets"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisane resety limitu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redefinições de limite guardadas"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reposições de limite guardadas"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resetări de limită salvate"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранённые сбросы лимита"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložené resety limitu"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shranjene ponastavitve omejitve"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparade gränsåterställningar"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı limit sıfırlamaları"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lượt đặt lại giới hạn đã lưu"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存的额度重置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已儲存的額度重設"
+          }
+        }
+      }
+    },
+    "detail.surface.cowork": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рутини (Cowork)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiny (Cowork)"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiner (Cowork)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routinen (Cowork)"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ρουτίνες (Cowork)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routines (Cowork)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinas (Cowork)"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinas (Cowork)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiinid (Cowork)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiinit (Cowork)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routines (Cowork)"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gnáthaimh (Cowork)"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutine (Cowork)"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinok (Cowork)"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinitas (Cowork)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routine (Cowork)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ルーチン（Cowork）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "루틴(Cowork)"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinos (Cowork)"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutīnas (Cowork)"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutini (Cowork)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routines (Cowork)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutyny (Cowork)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rotinas (Cowork)"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rotinas (Cowork)"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutine (Cowork)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рутины (Cowork)"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiny (Cowork)"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutine (Cowork)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutiner (Cowork)"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rutinler (Cowork)"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quy trình (Cowork)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例程（Cowork）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例行工作（Cowork）"
+          }
+        }
+      }
+    },
     "detail.surface.oauth_apps": {
       "extractionState": "manual",
       "localizations": {
@@ -26958,6 +27376,215 @@
         }
       }
     },
+    "notify.reset_available": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: лимитът е изчерпан. Имаш запазено нулиране на лимита – използвай го в claude.ai › Настройки › Използване."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limit vyčerpán. Máte uložený reset limitu – uplatněte ho na claude.ai › Nastavení › Využití."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} er fuld. Du har en gemt grænsenulstilling – indløs den på claude.ai › Indstillinger › Forbrug."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} ist voll. Du hast eine gespeicherte Limit-Zurücksetzung – einlösen unter claude.ai › Einstellungen › Nutzung."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: το όριο εξαντλήθηκε. Έχετε μια αποθηκευμένη επαναφορά ορίου – εξαργυρώστε την στο claude.ai › Ρυθμίσεις › Χρήση."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} is full. You have a saved limit reset – redeem it on claude.ai › Settings › Usage."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: límite alcanzado. Tienes un reinicio de límite guardado – canjéalo en claude.ai › Configuración › Uso."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: límite alcanzado. Tienes un reinicio de límite guardado; úsalo en claude.ai › Configuración › Uso."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} on täis. Sul on salvestatud limiidi lähtestus – kasuta seda lehel claude.ai › Seaded › Kasutus."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} on täynnä. Sinulla on tallennettu rajan nollaus – lunasta se osoitteessa claude.ai › Asetukset › Käyttö."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} : limite atteinte. Vous avez une réinitialisation en réserve – utilisez-la sur claude.ai › Paramètres › Utilisation."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: tá an teorainn lán. Tá athshocrú teorann sábháilte agat – úsáid é ar claude.ai › Socruithe › Úsáid."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: ograničenje je iscrpljeno. Imate spremljeno resetiranje ograničenja – iskoristite ga na claude.ai › Postavke › Potrošnja."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: betelt. Van egy elmentett visszaállításod – a claude.ai › Beállítások › Használat oldalon váltható be."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} sudah penuh. Anda punya reset batas tersimpan – tukarkan di claude.ai › Pengaturan › Penggunaan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limite raggiunto. Hai un reset del limite salvato – riscattalo su claude.ai › Impostazioni › Utilizzo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}が上限に達しました。保存済みの上限リセットがあります。claude.ai › 設定 › 使用状況 で使えます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} 한도가 가득 찼어요. 저장된 한도 초기화가 있어요. claude.ai › 설정 › 사용량에서 사용하세요."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limitas išnaudotas. Turite išsaugotą limito atstatymą – panaudokite jį claude.ai › Nustatymai › Naudojimas."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limits ir izsmelts. Jums ir saglabāta limita atiestatīšana – izmantojiet to vietnē claude.ai › Iestatījumi › Lietojums."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} mimli. Għandek risettjar tal-limitu salvat – użah fuq claude.ai › Issettjar › Użu."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} is vol. Je hebt een bewaarde limietreset – verzilver hem op claude.ai › Instellingen › Gebruik."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limit wyczerpany. Masz zapisany reset limitu – wykorzystaj go na claude.ai › Ustawienia › Użycie."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limite atingido. Você tem uma redefinição de limite guardada – resgate-a em claude.ai › Configurações › Uso."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limite atingido. Tens uma reposição de limite guardada – resgata-a em claude.ai › Definições › Utilização."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limită atinsă. Ai o resetare de limită salvată – folosește-o pe claude.ai › Setări › Utilizare."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: лимит исчерпан. У вас есть сохранённый сброс лимита – активируйте его на claude.ai › Настройки › Использование."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: limit vyčerpaný. Máš uložený reset limitu – uplatni ho na claude.ai › Nastavenia › Využitie."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{}: omejitev je izčrpana. Imate shranjeno ponastavitev omejitve – unovčite jo na claude.ai › Nastavitve › Poraba."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} är full. Du har en sparad gränsåterställning – lös in den på claude.ai › Inställningar › Användning."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} doldu. Kayıtlı bir limit sıfırlaman var – claude.ai › Ayarlar › Kullanım sayfasında kullan."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} đã đầy. Bạn có một lượt đặt lại giới hạn đã lưu – hãy dùng tại claude.ai › Cài đặt › Mức sử dụng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} 已用尽。你有一次已保存的额度重置——可在 claude.ai › 设置 › 用量 中兑换。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "{} 已用盡。你有一次已儲存的額度重設——可在 claude.ai › 設定 › 用量 中兌換。"
+          }
+        }
+      }
+    },
     "notify.reset_done": {
       "extractionState": "manual",
       "localizations": {
@@ -27163,6 +27790,215 @@
           "stringUnit": {
             "state": "translated",
             "value": "{}：已重設，新的週期開始了。"
+          }
+        }
+      }
+    },
+    "notify.reset_expiring": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запазеното ти нулиране на лимита изтича след {}. Използвай го в claude.ai › Настройки › Използване, иначе се губи."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Váš uložený reset limitu vyprší za {}. Uplatněte ho na claude.ai › Nastavení › Využití, jinak propadne."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din gemte grænsenulstilling udløber om {}. Indløs den på claude.ai › Indstillinger › Forbrug, ellers går den tabt."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine gespeicherte Limit-Zurücksetzung verfällt in {}. Löse sie unter claude.ai › Einstellungen › Nutzung ein, sonst geht sie verloren."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η αποθηκευμένη επαναφορά ορίου λήγει σε {}. Εξαργυρώστε την στο claude.ai › Ρυθμίσεις › Χρήση, αλλιώς χάνεται."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your saved limit reset expires in {}. Redeem it on claude.ai › Settings › Usage, or it is lost."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu reinicio de límite guardado caduca en {}. Canjéalo en claude.ai › Configuración › Uso o se perderá."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu reinicio de límite guardado vence en {}. Úsalo en claude.ai › Configuración › Uso o se perderá."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sinu salvestatud limiidi lähtestus aegub {} pärast. Kasuta seda lehel claude.ai › Seaded › Kasutus, muidu läheb see kaotsi."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallennettu rajan nollauksesi vanhenee {} kuluttua. Lunasta se osoitteessa claude.ai › Asetukset › Käyttö, muuten se menetetään."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre réinitialisation de limite en réserve expire dans {}. Utilisez-la sur claude.ai › Paramètres › Utilisation, sinon elle sera perdue."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éagfaidh d'athshocrú teorann sábháilte i gceann {}. Úsáid é ar claude.ai › Socruithe › Úsáid, nó caillfear é."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaše spremljeno resetiranje ograničenja istječe za {}. Iskoristite ga na claude.ai › Postavke › Potrošnja, inače propada."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az elmentett visszaállításod {} múlva lejár. Váltsd be a claude.ai › Beállítások › Használat oldalon, különben elvész."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset batas tersimpan Anda kedaluwarsa dalam {}. Tukarkan di claude.ai › Pengaturan › Penggunaan, atau akan hangus."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il tuo reset del limite salvato scade tra {}. Riscattalo su claude.ai › Impostazioni › Utilizzo, altrimenti andrà perso."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存済みの上限リセットは{}後に期限切れになります。claude.ai › 設定 › 使用状況 で使わないと失効します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장된 한도 초기화가 {} 후 만료돼요. claude.ai › 설정 › 사용량에서 사용하지 않으면 사라져요."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jūsų išsaugotas limito atstatymas baigs galioti po {}. Panaudokite jį claude.ai › Nustatymai › Naudojimas, kitaip jis prapuls."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jūsu saglabātā limita atiestatīšana beidzas pēc {}. Izmantojiet to vietnē claude.ai › Iestatījumi › Lietojums, citādi tā zūd."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ir-risettjar tal-limitu salvat tiegħek jiskadi fi żmien {}. Użah fuq claude.ai › Issettjar › Użu, inkella jintilef."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je bewaarde limietreset verloopt over {}. Verzilver hem op claude.ai › Instellingen › Gebruik, anders gaat hij verloren."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twój zapisany reset limitu wygasa za {}. Wykorzystaj go na claude.ai › Ustawienia › Użycie, inaczej przepadnie."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua redefinição de limite guardada expira em {}. Resgate-a em claude.ai › Configurações › Uso, ou ela será perdida."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A tua reposição de limite guardada expira em {}. Resgata-a em claude.ai › Definições › Utilização, senão perde-se."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resetarea de limită salvată expiră în {}. Folosește-o pe claude.ai › Setări › Utilizare, altfel se pierde."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш сохранённый сброс лимита истекает через {}. Активируйте его на claude.ai › Настройки › Использование, иначе он пропадёт."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tvoj uložený reset limitu vyprší o {}. Uplatni ho na claude.ai › Nastavenia › Využitie, inak prepadne."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaša shranjena ponastavitev omejitve poteče čez {}. Unovčite jo na claude.ai › Nastavitve › Poraba, sicer propade."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din sparade gränsåterställning går ut om {}. Lös in den på claude.ai › Inställningar › Användning, annars går den förlorad."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı limit sıfırlamanın süresi {} içinde doluyor. claude.ai › Ayarlar › Kullanım sayfasında kullan, yoksa kaybolur."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lượt đặt lại giới hạn đã lưu của bạn sẽ hết hạn sau {}. Hãy dùng tại claude.ai › Cài đặt › Mức sử dụng, nếu không sẽ mất."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已保存的额度重置将在 {} 后到期。请在 claude.ai › 设置 › 用量 中兑换，否则将失效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你已儲存的額度重設將在 {} 後到期。請在 claude.ai › 設定 › 用量 中兌換，否則將失效。"
           }
         }
       }
@@ -36448,6 +37284,215 @@
         }
       }
     },
+    "set.notify_resets": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напомняй за запазено нулиране (когато лимитът е изчерпан и преди да изтече)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Připomenout uložený reset (když je limit plný a než vyprší)"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mind mig om en gemt nulstilling (når en grænse er fuld, og før den udløber)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An eine gespeicherte Zurücksetzung erinnern (wenn ein Limit voll ist und bevor sie verfällt)"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Υπενθύμιση για αποθηκευμένη επαναφορά (όταν ένα όριο γεμίσει και πριν λήξει)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remind me of a saved limit reset (when a limit is full, and before it expires)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recordarme un reinicio guardado (cuando un límite se llena y antes de que caduque)"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recordarme un reinicio guardado (cuando un límite se llena y antes de que venza)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuleta mulle salvestatud lähtestust meelde (kui limiit on täis ja enne selle aegumist)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muistuta tallennetusta nollauksesta (kun raja on täynnä ja ennen kuin se vanhenee)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Me rappeler une réinitialisation en réserve (quand une limite est pleine, et avant qu'elle n'expire)"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuir i gcuimhne dom athshocrú sábháilte (nuair a bhíonn teorainn lán, agus sula n-éagann sé)"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podsjeti me na spremljeno resetiranje (kad je ograničenje puno i prije nego istekne)"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emlékeztessen az elmentett visszaállításra (ha betelt egy limit, és mielőtt lejár)"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingatkan saya tentang reset tersimpan (saat batas penuh, dan sebelum kedaluwarsa)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ricordami un reset salvato (quando un limite è pieno e prima che scada)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存済みのリセットを知らせる（上限に達したとき、期限切れの前）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장된 초기화 알림(한도가 가득 찼을 때, 만료 전)"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Priminti apie išsaugotą atstatymą (kai limitas išnaudotas ir prieš jam baigiant galioti)"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atgādināt par saglabāto atiestatīšanu (kad limits ir pilns un pirms tā beidzas)"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fakkarni dwar risettjar salvat (meta limitu jkun mimli, u qabel ma jiskadi)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herinner me aan een bewaarde reset (als een limiet vol is, en voordat hij verloopt)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przypominaj o zapisanym resecie (gdy limit jest pełny i zanim wygaśnie)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lembrar de uma redefinição guardada (quando um limite estiver cheio e antes de expirar)"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lembrar-me de uma reposição guardada (quando um limite está cheio e antes de expirar)"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amintește-mi de o resetare salvată (când o limită e plină și înainte să expire)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напоминать о сохранённом сбросе (когда лимит исчерпан и перед истечением срока)"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pripomenúť uložený reset (keď je limit plný a skôr, než vyprší)"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opomni me na shranjeno ponastavitev (ko je omejitev polna in preden poteče)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Påminn mig om en sparad återställning (när en gräns är full och innan den går ut)"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı sıfırlamayı hatırlat (bir limit dolduğunda ve süresi dolmadan önce)"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nhắc tôi về lượt đặt lại đã lưu (khi một giới hạn đã đầy, và trước khi hết hạn)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提醒我使用已保存的重置（额度用尽时，以及到期前）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提醒我使用已儲存的重設（額度用盡時，以及到期前）"
+          }
+        }
+      }
+    },
     "set.notify_stale": {
       "extractionState": "manual",
       "localizations": {
@@ -41549,6 +42594,215 @@
           "stringUnit": {
             "state": "translated",
             "value": "重設倒數計時"
+          }
+        }
+      }
+    },
+    "set.show_resets": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запазени нулирания на лимита (само когато имаш такова)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložené resety limitu (jen když nějaký máte)"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemte grænsenulstillinger (kun når du har en)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gespeicherte Limit-Zurücksetzungen (nur wenn du eine hast)"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Αποθηκευμένες επαναφορές ορίου (μόνο όταν έχετε κάποια)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved limit resets (only when you have one)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicios de límite guardados (solo si tienes alguno)"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicios de límite guardados (solo si tienes uno)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvestatud limiidi lähtestused (ainult siis, kui sul on mõni)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallennetut rajan nollaukset (vain kun sinulla on sellainen)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réinitialisations de limite en réserve (seulement si vous en avez une)"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Athshocruithe teorann sábháilte (ach amháin nuair atá ceann agat)"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spremljena resetiranja ograničenja (samo kad ga imate)"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elmentett limit-visszaállítás (csak ha van ilyened)"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset batas tersimpan (hanya jika Anda memilikinya)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset del limite salvati (solo se ne hai uno)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存済みの上限リセット（ある場合のみ）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장된 한도 초기화(있을 때만 표시)"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Išsaugoti limito atstatymai (tik kai tokį turite)"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saglabātās limita atiestatīšanas (tikai tad, ja tāda ir)"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Risettjar tal-limitu salvat (biss meta jkollok wieħed)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewaarde limietresets (alleen als je er een hebt)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisane resety limitu (tylko gdy jakiś masz)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redefinições de limite guardadas (só quando você tiver uma)"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reposições de limite guardadas (só quando tiveres uma)"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resetări de limită salvate (doar când ai una)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранённые сбросы лимита (только если они есть)"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložené resety limitu (len keď nejaký máš)"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shranjene ponastavitve omejitve (samo kadar jo imate)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparade gränsåterställningar (bara när du har någon)"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı limit sıfırlamaları (yalnızca varsa)"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lượt đặt lại giới hạn đã lưu (chỉ khi bạn có)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存的额度重置（仅在有时显示）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已儲存的額度重設（僅在有時顯示）"
           }
         }
       }

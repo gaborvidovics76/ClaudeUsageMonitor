@@ -136,6 +136,7 @@ final class Settings: ObservableObject {
     @Stored("show_model_list", true) var showModelList: Bool
     @Stored("show_surfaces", true) var showSurfaces: Bool
     @Stored("show_extra_usage", true) var showExtraUsage: Bool
+    @Stored("show_resets", true) var showResets: Bool               // saved limit resets (only when there is one)
     @Stored("show_local_models", true) var showLocalModels: Bool
     @Stored("detail_hidden", [String]()) var detailHidden: [String]
     @Stored("show_burn", true) var showBurn: Bool
@@ -150,6 +151,8 @@ final class Settings: ObservableObject {
     @Stored("notify_enabled", true) var notifyEnabled: Bool
     @Stored("notify_on_reset", true) var notifyOnReset: Bool
     @Stored("notify_stale", true) var notifyStale: Bool
+    @Stored("notify_resets", true) var notifyResets: Bool           // a saved limit reset: when a limit is full, and before it expires
+    @Stored("resets_warned", 0.0) var resetsWarned: Double          // expiry (epoch ms) the expiry reminder was already shown for
 
     // --- system
     @Stored("first_run_done", false) var firstRunDone: Bool

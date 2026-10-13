@@ -11,6 +11,13 @@ CODE = "ko"
 NAME = "한국어"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "저장된 한도 초기화",
+    "detail.surface.cowork": "루틴(Cowork)",
+    "set.show_resets": "저장된 한도 초기화(있을 때만 표시)",
+    "set.notify_resets": "저장된 초기화 알림(한도가 가득 찼을 때, 만료 전)",
+    "notify.reset_available": "{} 한도가 가득 찼어요. 저장된 한도 초기화가 있어요. claude.ai › 설정 › 사용량에서 사용하세요.",
+    "notify.reset_expiring": "저장된 한도 초기화가 {} 후 만료돼요. claude.ai › 설정 › 사용량에서 사용하지 않으면 사라져요.",
     # --- backup status bar / details window ----------------------------------------------
     "backup.age_d": "{}일",
     "backup.age_h": "{}시간",

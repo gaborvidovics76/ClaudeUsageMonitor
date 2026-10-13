@@ -5,6 +5,13 @@ CODE = "id"
 NAME = "Bahasa Indonesia"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Reset batas tersimpan",
+    "detail.surface.cowork": "Rutinitas (Cowork)",
+    "set.show_resets": "Reset batas tersimpan (hanya jika Anda memilikinya)",
+    "set.notify_resets": "Ingatkan saya tentang reset tersimpan (saat batas penuh, dan sebelum kedaluwarsa)",
+    "notify.reset_available": "{} sudah penuh. Anda punya reset batas tersimpan – tukarkan di claude.ai › Pengaturan › Penggunaan.",
+    "notify.reset_expiring": "Reset batas tersimpan Anda kedaluwarsa dalam {}. Tukarkan di claude.ai › Pengaturan › Penggunaan, atau akan hangus.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}h",
     "backup.age_h": "{}j",

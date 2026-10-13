@@ -128,6 +128,11 @@ final class PanelView: NSView {
             } else if !s.showSurfaces { continue }
             out.append(PanelRow(id: row.id, label: row.displayLabel, value: row.value, right: "\(pct0(row.value))%", resetMs: row.resetInMs))
         }
+        if let rs = m.resets, rs.count > 0, s.showResets, !s.isHidden("resets") {
+            // a saved limit reset: how many can be redeemed, and (in the reset column) when the first
+            // one expires. No bar - it is not a percentage.
+            out.append(PanelRow(id: "resets", label: tr("detail.resets"), value: nil, right: "\(rs.count)", resetMs: rs.expiresInMs))
+        }
         if let ex = m.extra, s.showExtraUsage, !s.isHidden("extra") {
             if ex.enabled {
                 let limit = ex.monthlyLimit.map { num($0, 2) } ?? tr("detail.unlimited")
@@ -523,11 +528,17 @@ final class PanelView: NSView {
 
     // MARK: layouts
 
+    /// A small ▸ before the name of the gauge whose limit applies right now (the server says which).
+    /// Only a glyph in the label: the layout, sizes and colours stay as they were.
+    private func markActive(_ gid: String, _ label: String) -> String {
+        (!gid.isEmpty && gid == metrics.active) ? "\u{25b8} " + label : label
+    }
+
     private func paintPostit(_ r: CGRect) {
         let k = self.k
         var y = paintHeader(r)
-        for (_, label, g, hourly, sc) in gaugeItems() {
-            y = paintBlock(CGRect(x: r.minX, y: y, width: r.width, height: 60 * k * sc), label, g, hourly, sc)
+        for (gid, label, g, hourly, sc) in gaugeItems() {
+            y = paintBlock(CGRect(x: r.minX, y: y, width: r.width, height: 60 * k * sc), markActive(gid, label), g, hourly, sc)
         }
         y = paintRows(CGRect(x: r.minX, y: y, width: r.width, height: 0))
         if settings.showSpark {
@@ -675,9 +686,9 @@ final class PanelView: NSView {
         let total = items.reduce(0) { $0 + $1.4 }
         let rowH = 96 * k * max(1, items.map { $0.4 }.max() ?? 1)
         var x = r.minX
-        for (_, label, g, _, sc) in items {
+        for (gid, label, g, _, sc) in items {
             let w = r.width * sc / total
-            paintRing(CGRect(x: x, y: y, width: w, height: rowH), label, g, sc)
+            paintRing(CGRect(x: x, y: y, width: w, height: rowH), markActive(gid, label), g, sc)
             x += w
         }
         var y2 = paintRows(CGRect(x: r.minX, y: y + rowH + 1 * k, width: r.width, height: 0))
@@ -730,6 +741,7 @@ final class PanelView: NSView {
         for (gid, label0, g, _, sc) in items {
             var label = label0
             if gid == "mo" { label = String(label.prefix(6)) }
+            label = markActive(gid, label)
             let kk = k * sc
             let seg = avail * sc / total
             let labelStyle = TextStyle(qt: 6.8 * kk, .semibold, pal.dim, kern: 0.8 * kk)

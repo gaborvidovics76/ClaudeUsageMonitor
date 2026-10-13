@@ -5,6 +5,13 @@ CODE = "sl"
 NAME = "Slovenščina"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Shranjene ponastavitve omejitve",
+    "detail.surface.cowork": "Rutine (Cowork)",
+    "set.show_resets": "Shranjene ponastavitve omejitve (samo kadar jo imate)",
+    "set.notify_resets": "Opomni me na shranjeno ponastavitev (ko je omejitev polna in preden poteče)",
+    "notify.reset_available": "{}: omejitev je izčrpana. Imate shranjeno ponastavitev omejitve – unovčite jo na claude.ai › Nastavitve › Poraba.",
+    "notify.reset_expiring": "Vaša shranjena ponastavitev omejitve poteče čez {}. Unovčite jo na claude.ai › Nastavitve › Poraba, sicer propade.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{} d",
     "backup.age_h": "{} h",

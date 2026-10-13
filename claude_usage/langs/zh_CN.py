@@ -5,6 +5,13 @@ CODE = "zh-CN"
 NAME = "简体中文"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "已保存的额度重置",
+    "detail.surface.cowork": "例程（Cowork）",
+    "set.show_resets": "已保存的额度重置（仅在有时显示）",
+    "set.notify_resets": "提醒我使用已保存的重置（额度用尽时，以及到期前）",
+    "notify.reset_available": "{} 已用尽。你有一次已保存的额度重置——可在 claude.ai › 设置 › 用量 中兑换。",
+    "notify.reset_expiring": "你已保存的额度重置将在 {} 后到期。请在 claude.ai › 设置 › 用量 中兑换，否则将失效。",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}天",
     "backup.age_h": "{}小时",

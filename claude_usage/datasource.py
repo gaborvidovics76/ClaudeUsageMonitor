@@ -86,6 +86,22 @@ class ExtraUsage:
 
 
 @dataclass
+class ResetGrants:
+    """Saved limit resets: a reset Anthropic hands out that the user may keep and redeem
+    whenever they choose (on claude.ai, Settings > Usage). The program never redeems one."""
+    count: int = 0                      # resets that can still be redeemed
+    total: int = 0                      # resets handed out altogether (in the still-valid grants)
+    expires_at: Optional[int] = None    # epoch ms: the earliest expiry among the redeemable ones
+    eligible: bool = True
+
+    @property
+    def expires_in_ms(self) -> Optional[int]:
+        if self.expires_at is None:
+            return None
+        return max(0, self.expires_at - int(time.time() * 1000))
+
+
+@dataclass
 class ProfileInfo:
     """What the profile endpoint says about the plan. Never logged, never sent anywhere."""
     plan: str = ""                      # pro | max | team | enterprise | "" (unknown)
@@ -128,6 +144,8 @@ class Metrics:
     extra: Optional[ExtraUsage] = None
     profile: Optional[ProfileInfo] = None
     model_name: str = ""
+    resets: Optional[ResetGrants] = None    # saved limit resets (claude.ai source only)
+    active: str = ""                        # the gauge whose limit applies right now: fh | sd | mo | ""
 
     @property
     def has_model(self) -> bool:
@@ -151,6 +169,8 @@ def detail_label(row: "DetailRow") -> str:
 
     if row.label == "@oauth_apps":
         return tr("detail.surface.oauth_apps")
+    if row.label == "@cowork":
+        return tr("detail.surface.cowork")
     return row.label
 
 

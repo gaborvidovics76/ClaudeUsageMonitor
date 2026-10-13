@@ -182,7 +182,12 @@ OneDrive csak online elérhető fájljait nem nyitja meg.
 - **Tartalom**: melyik keret, figyelt modell, a modell-mérő mérete, a mérők sorrendje,
   trendgörbe, ütem, visszaszámlálás, frissesség; a tálcaikon melyik értéket mutassa.
 - **Riasztások**: figyelmeztető és vészküszöb (alap 70% / 90%), értesítés küszöbátlépéskor,
-  keret-resetkor és elavult adat esetén.
+  keret-resetkor és elavult adat esetén; emlékeztető az elmentett limit-visszaállításra
+  (ha betelt egy keret, és mielőtt beváltatlanul lejárna).
+- **Elmentett visszaállítás** (claude.ai forrás): ha az Anthropic ad egy későbbre eltehető
+  limit-visszaállítást, a panel mutatja, hány van és mikor jár le. Beváltani a claude.ai-on
+  tudod; a program soha nem váltja be helyetted.
+- **Ami most korlátoz**: egy kis ▸ jel a mérő neve előtt mutatja, melyik limit fog éppen.
 - **Adatforrás**: profil (ha több fiókod van), frissítési gyakoriság, egyedi adatfájl.
 - **Rendszer**: automatikus indítás, beállítások mappa, alapértelmezések visszaállítása.
 

@@ -5,6 +5,13 @@ CODE = "fi"
 NAME = "Suomi"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Tallennetut rajan nollaukset",
+    "detail.surface.cowork": "Rutiinit (Cowork)",
+    "set.show_resets": "Tallennetut rajan nollaukset (vain kun sinulla on sellainen)",
+    "set.notify_resets": "Muistuta tallennetusta nollauksesta (kun raja on täynnä ja ennen kuin se vanhenee)",
+    "notify.reset_available": "{} on täynnä. Sinulla on tallennettu rajan nollaus – lunasta se osoitteessa claude.ai › Asetukset › Käyttö.",
+    "notify.reset_expiring": "Tallennettu rajan nollauksesi vanhenee {} kuluttua. Lunasta se osoitteessa claude.ai › Asetukset › Käyttö, muuten se menetetään.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}pv",
     "backup.age_h": "{}h",

@@ -5,6 +5,13 @@ CODE = "sk"
 NAME = "Slovenčina"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Uložené resety limitu",
+    "detail.surface.cowork": "Rutiny (Cowork)",
+    "set.show_resets": "Uložené resety limitu (len keď nejaký máš)",
+    "set.notify_resets": "Pripomenúť uložený reset (keď je limit plný a skôr, než vyprší)",
+    "notify.reset_available": "{}: limit vyčerpaný. Máš uložený reset limitu – uplatni ho na claude.ai › Nastavenia › Využitie.",
+    "notify.reset_expiring": "Tvoj uložený reset limitu vyprší o {}. Uplatni ho na claude.ai › Nastavenia › Využitie, inak prepadne.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",

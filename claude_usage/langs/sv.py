@@ -5,6 +5,13 @@ CODE = "sv"
 NAME = "Svenska"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Sparade gränsåterställningar",
+    "detail.surface.cowork": "Rutiner (Cowork)",
+    "set.show_resets": "Sparade gränsåterställningar (bara när du har någon)",
+    "set.notify_resets": "Påminn mig om en sparad återställning (när en gräns är full och innan den går ut)",
+    "notify.reset_available": "{} är full. Du har en sparad gränsåterställning – lös in den på claude.ai › Inställningar › Användning.",
+    "notify.reset_expiring": "Din sparade gränsåterställning går ut om {}. Lös in den på claude.ai › Inställningar › Användning, annars går den förlorad.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",

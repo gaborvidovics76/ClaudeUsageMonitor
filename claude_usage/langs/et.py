@@ -5,6 +5,13 @@ CODE = "et"
 NAME = "Eesti"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Salvestatud limiidi lähtestused",
+    "detail.surface.cowork": "Rutiinid (Cowork)",
+    "set.show_resets": "Salvestatud limiidi lähtestused (ainult siis, kui sul on mõni)",
+    "set.notify_resets": "Tuleta mulle salvestatud lähtestust meelde (kui limiit on täis ja enne selle aegumist)",
+    "notify.reset_available": "{} on täis. Sul on salvestatud limiidi lähtestus – kasuta seda lehel claude.ai › Seaded › Kasutus.",
+    "notify.reset_expiring": "Sinu salvestatud limiidi lähtestus aegub {} pärast. Kasuta seda lehel claude.ai › Seaded › Kasutus, muidu läheb see kaotsi.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}p",
     "backup.age_h": "{}h",

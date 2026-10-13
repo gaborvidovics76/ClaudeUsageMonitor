@@ -107,7 +107,7 @@ Ha a név foglalt, az ASC szól. Alternatíva: „Claude Usage Monitor – Panel
 - Age Rating: töltsd ki a (2026-os, új) kérdőívet – mindenre „None/No” → **4+**.
 - License Agreement: Apple Standard EULA (hagyd).
 
-**Version Information (1.0 / 2.7.1)**
+**Version Information (1.0 / 2.8.0)**
 - Promotional Text (opcionális): egy mondat, amit review nélkül cserélhetsz.
 - Description: a weboldal angol szövegéből (<https://claudeusagemonitor.com/>) – **KÉRDEZD GÁBORT**,
   ő adja a végleges szöveget. Írd bele: *independent tool, not affiliated with Anthropic*.
@@ -117,7 +117,7 @@ Ha a név foglalt, az ASC szól. Alternatíva: „Claude Usage Monitor – Panel
 - Marketing URL: `https://claudeusagemonitor.com/`
 - Privacy Policy URL (**App Privacy** szekcióban): `https://claudeusagemonitor.com/#privacy`
 - Copyright: `2026 Vidovics Gábor`
-- Version: `2.7.1` (= MARKETING_VERSION), Build: a feltöltött build.
+- Version: `2.8.0` (= MARKETING_VERSION), Build: a feltöltött build.
 - **App Review Information:**
   - Contact: a te neved, telefonod nemzetközi formátumban (+36…), e-mail címed.
   - Sign-in required: **No** (nincs kötelező bejelentkezés – a demó és a helyi napló fiók nélkül megy).

@@ -249,7 +249,7 @@ class SettingsDialog(QDialog):
         hint.setWordWrap(True)
         form.addRow(hint)
         for key in ("show_plan_badge", "show_plan_name", "show_model_list", "show_surfaces",
-                    "show_extra_usage"):
+                    "show_extra_usage", "show_resets"):
             form.addRow("", self._check(key, tr("set." + key)))
         form.addRow("", self._check("show_local_models", tr("set.show_local_models")))
         local_hint = QLabel(tr("set.local_models_hint"))
@@ -331,6 +331,7 @@ class SettingsDialog(QDialog):
         form.addRow("", self._check("notify_enabled", tr("set.notify_enabled")))
         form.addRow("", self._check("notify_on_reset", tr("set.notify_reset")))
         form.addRow("", self._check("notify_stale", tr("set.notify_stale")))
+        form.addRow("", self._check("notify_resets", tr("set.notify_resets")))
 
         hint = QLabel(tr("set.color_hint"))
         hint.setObjectName("hint")

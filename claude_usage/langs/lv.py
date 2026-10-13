@@ -5,6 +5,13 @@ CODE = "lv"
 NAME = "Latviešu"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Saglabātās limita atiestatīšanas",
+    "detail.surface.cowork": "Rutīnas (Cowork)",
+    "set.show_resets": "Saglabātās limita atiestatīšanas (tikai tad, ja tāda ir)",
+    "set.notify_resets": "Atgādināt par saglabāto atiestatīšanu (kad limits ir pilns un pirms tā beidzas)",
+    "notify.reset_available": "{}: limits ir izsmelts. Jums ir saglabāta limita atiestatīšana – izmantojiet to vietnē claude.ai › Iestatījumi › Lietojums.",
+    "notify.reset_expiring": "Jūsu saglabātā limita atiestatīšana beidzas pēc {}. Izmantojiet to vietnē claude.ai › Iestatījumi › Lietojums, citādi tā zūd.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{} d",
     "backup.age_h": "{} h",

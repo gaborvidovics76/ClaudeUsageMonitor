@@ -5,6 +5,13 @@ CODE = "pt-BR"
 NAME = "Português (Brasil)"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Redefinições de limite guardadas",
+    "detail.surface.cowork": "Rotinas (Cowork)",
+    "set.show_resets": "Redefinições de limite guardadas (só quando você tiver uma)",
+    "set.notify_resets": "Lembrar de uma redefinição guardada (quando um limite estiver cheio e antes de expirar)",
+    "notify.reset_available": "{}: limite atingido. Você tem uma redefinição de limite guardada – resgate-a em claude.ai › Configurações › Uso.",
+    "notify.reset_expiring": "Sua redefinição de limite guardada expira em {}. Resgate-a em claude.ai › Configurações › Uso, ou ela será perdida.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",

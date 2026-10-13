@@ -5,6 +5,13 @@ CODE = "mt"
 NAME = "Malti"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Risettjar tal-limitu salvat",
+    "detail.surface.cowork": "Rutini (Cowork)",
+    "set.show_resets": "Risettjar tal-limitu salvat (biss meta jkollok wieħed)",
+    "set.notify_resets": "Fakkarni dwar risettjar salvat (meta limitu jkun mimli, u qabel ma jiskadi)",
+    "notify.reset_available": "{} mimli. Għandek risettjar tal-limitu salvat – użah fuq claude.ai › Issettjar › Użu.",
+    "notify.reset_expiring": "Ir-risettjar tal-limitu salvat tiegħek jiskadi fi żmien {}. Użah fuq claude.ai › Issettjar › Użu, inkella jintilef.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}j",
     "backup.age_h": "{}h",

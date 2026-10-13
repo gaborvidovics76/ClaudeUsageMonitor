@@ -46,8 +46,28 @@ struct DetailRow {
         return max(0, r - nowMs())
     }
 
-    /// Display name of the row (the connected-apps surface has a translated name).
-    var displayLabel: String { label == "@oauth_apps" ? tr("detail.surface.oauth_apps") : label }
+    /// Display name of the row (the connected-apps surface and the Routines window have translated names).
+    var displayLabel: String {
+        switch label {
+        case "@oauth_apps": return tr("detail.surface.oauth_apps")
+        case "@cowork": return tr("detail.surface.cowork")
+        default: return label
+        }
+    }
+}
+
+/// Saved limit resets: a reset Anthropic hands out that the user may keep and redeem whenever they
+/// choose (on claude.ai, Settings > Usage). The app never redeems one.
+struct ResetGrants {
+    var count = 0                   // resets that can still be redeemed
+    var total = 0                   // resets handed out altogether (in the still-valid grants)
+    var expiresAt: Int64? = nil     // epoch ms: the earliest expiry among the redeemable ones
+    var eligible = true
+
+    var expiresInMs: Int64? {
+        guard let e = expiresAt else { return nil }
+        return max(0, e - nowMs())
+    }
 }
 
 /// Pay-as-you-go usage on top of the plan ("usage credits").
@@ -100,6 +120,8 @@ struct Metrics {
     var extra: ExtraUsage? = nil
     var profile: ProfileInfo? = nil
     var modelName = ""
+    var resets: ResetGrants? = nil  // saved limit resets (claude.ai source only)
+    var active = ""                 // the gauge whose limit applies right now: fh | sd | mo | ""
 
     var hasModel: Bool { !modelName.isEmpty }
 

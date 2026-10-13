@@ -37,6 +37,7 @@ SCOPE = "org:create_api_key user:profile user:inference"
 
 PROFILE_URL = "https://api.anthropic.com/api/oauth/profile"
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
+USAGE_RESETS_QUERY = "?cedar_ember=1"   # also asks for the saved limit resets (what Claude Code sends)
 BETA_HEADER = "oauth-2025-04-20"
 
 # The token endpoint is behind Cloudflare, which blocks Python's default
@@ -185,11 +186,23 @@ def fetch_profile(access_token: str) -> Tuple[Optional[dict], int]:
         return None, 0
 
 
-def fetch_usage(access_token: str) -> Tuple[Optional[dict], int, str, Optional[float]]:
+def fetch_usage(access_token: str, with_resets: bool = True) -> Tuple[Optional[dict], int, str, Optional[float]]:
     """(json, http_status, error, retry_after_seconds).
-    On 401 the caller should refresh and retry; on 429 it should back off."""
+    On 401 the caller should refresh and retry; on 429 it should back off.
+
+    `with_resets` adds the query Claude Code itself sends (`?cedar_ember=1`): the answer then also
+    carries the saved limit resets. A server that does not know the parameter answers 400/403 -
+    then the plain request is made, exactly as before."""
+    url = USAGE_URL + (USAGE_RESETS_QUERY if with_resets else "")
+    result = _get_usage(url, access_token)
+    if with_resets and result[1] in (400, 403):
+        return _get_usage(USAGE_URL, access_token)
+    return result
+
+
+def _get_usage(url: str, access_token: str) -> Tuple[Optional[dict], int, str, Optional[float]]:
     req = urllib.request.Request(
-        USAGE_URL,
+        url,
         method="GET",
         headers=_client_headers({
             "Authorization": f"Bearer {access_token}",

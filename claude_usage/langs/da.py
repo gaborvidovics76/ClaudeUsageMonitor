@@ -5,6 +5,13 @@ CODE = "da"
 NAME = "Dansk"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Gemte grænsenulstillinger",
+    "detail.surface.cowork": "Rutiner (Cowork)",
+    "set.show_resets": "Gemte grænsenulstillinger (kun når du har en)",
+    "set.notify_resets": "Mind mig om en gemt nulstilling (når en grænse er fuld, og før den udløber)",
+    "notify.reset_available": "{} er fuld. Du har en gemt grænsenulstilling – indløs den på claude.ai › Indstillinger › Forbrug.",
+    "notify.reset_expiring": "Din gemte grænsenulstilling udløber om {}. Indløs den på claude.ai › Indstillinger › Forbrug, ellers går den tabt.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}t",

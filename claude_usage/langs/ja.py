@@ -10,6 +10,13 @@ CODE = "ja"
 NAME = "日本語"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "保存済みの上限リセット",
+    "detail.surface.cowork": "ルーチン（Cowork）",
+    "set.show_resets": "保存済みの上限リセット（ある場合のみ）",
+    "set.notify_resets": "保存済みのリセットを知らせる（上限に達したとき、期限切れの前）",
+    "notify.reset_available": "{}が上限に達しました。保存済みの上限リセットがあります。claude.ai › 設定 › 使用状況 で使えます。",
+    "notify.reset_expiring": "保存済みの上限リセットは{}後に期限切れになります。claude.ai › 設定 › 使用状況 で使わないと失効します。",
     # --- backup status bar / details window ----------------------------------------------
     "backup.age_d": "{}日",
     "backup.age_h": "{}時間",

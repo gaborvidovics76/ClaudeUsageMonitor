@@ -5,6 +5,13 @@ CODE = "ga"
 NAME = "Gaeilge"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Athshocruithe teorann sábháilte",
+    "detail.surface.cowork": "Gnáthaimh (Cowork)",
+    "set.show_resets": "Athshocruithe teorann sábháilte (ach amháin nuair atá ceann agat)",
+    "set.notify_resets": "Cuir i gcuimhne dom athshocrú sábháilte (nuair a bhíonn teorainn lán, agus sula n-éagann sé)",
+    "notify.reset_available": "{}: tá an teorainn lán. Tá athshocrú teorann sábháilte agat – úsáid é ar claude.ai › Socruithe › Úsáid.",
+    "notify.reset_expiring": "Éagfaidh d'athshocrú teorann sábháilte i gceann {}. Úsáid é ar claude.ai › Socruithe › Úsáid, nó caillfear é.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}l",
     "backup.age_h": "{}u",

@@ -48,6 +48,10 @@ is passing.
   adjustable size and opacity, edge snapping, click-through "decoration only" mode.
 - **Alerts** — configurable warning and critical thresholds (70% / 90% by default), plus
   notifications on quota reset and stale data.
+- **Saved limit resets** (claude.ai source) — when Anthropic hands you a limit reset you may keep
+  for later, the panel shows how many you have and when they expire, and reminds you when a limit
+  is full and before a reset expires unused. You redeem it on claude.ai; the program never does.
+- **The limit that applies right now** is marked with a small ▸ before its name.
 - **34 languages** — the entire interface (panel, menu, tray, settings, history, sign-in and the
   message-to-the-developer window), auto-detected from the system language.
 - **Starts with Windows** via a proper Scheduled Task (more reliable than a Run registry key),

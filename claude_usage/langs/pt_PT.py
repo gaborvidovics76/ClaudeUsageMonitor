@@ -10,6 +10,13 @@ CODE = "pt-PT"
 NAME = "Português (Portugal)"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Reposições de limite guardadas",
+    "detail.surface.cowork": "Rotinas (Cowork)",
+    "set.show_resets": "Reposições de limite guardadas (só quando tiveres uma)",
+    "set.notify_resets": "Lembrar-me de uma reposição guardada (quando um limite está cheio e antes de expirar)",
+    "notify.reset_available": "{}: limite atingido. Tens uma reposição de limite guardada – resgata-a em claude.ai › Definições › Utilização.",
+    "notify.reset_expiring": "A tua reposição de limite guardada expira em {}. Resgata-a em claude.ai › Definições › Utilização, senão perde-se.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",

@@ -9,6 +9,13 @@ CODE = "es-419"
 NAME = "Español (Latinoamérica)"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Reinicios de límite guardados",
+    "detail.surface.cowork": "Rutinas (Cowork)",
+    "set.show_resets": "Reinicios de límite guardados (solo si tienes uno)",
+    "set.notify_resets": "Recordarme un reinicio guardado (cuando un límite se llena y antes de que venza)",
+    "notify.reset_available": "{}: límite alcanzado. Tienes un reinicio de límite guardado; úsalo en claude.ai › Configuración › Uso.",
+    "notify.reset_expiring": "Tu reinicio de límite guardado vence en {}. Úsalo en claude.ai › Configuración › Uso o se perderá.",
     # --- backup status bar / details window --------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",

@@ -22,8 +22,18 @@ final class ApiSource: UsageSource {
         ("seven_day_opus", "model:Opus", "model", "Opus"),
         ("seven_day_sonnet", "model:Sonnet", "model", "Sonnet"),
         ("seven_day_oauth_apps", "surface:oauth_apps", "surface", "@oauth_apps"),
+        ("seven_day_cowork", "kind:seven_day_cowork", "other", "@cowork"),
+        ("seven_day_routines", "kind:seven_day_routines", "other", "@cowork"),
         ("cinder_cove", "kind:cinder_cove", "other", "Cinder Cove"),
     ]
+    /// the saved limit resets travel under a server code name
+    static let resetsKey = "cedar_ember"
+
+    /// A window kind that contains one of these words is the Routines (Cowork) window.
+    static func isCoworkKind(_ kind: String) -> Bool {
+        let k = kind.lowercased()
+        return k.contains("cowork") || k.contains("routine")
+    }
     static let historyMax = 4000
     static let historySaveEvery = 60.0
 
@@ -265,7 +275,12 @@ final class ApiSource: UsageSource {
         for lim in (raw["limits"] as? [[String: Any]]) ?? [] {
             let sc = lim["scope"] as? [String: Any] ?? [:]
             let model = (sc["model"] as? [String: Any])?["display_name"] ?? "-"
-            Log.api("limit kind=\(lim["kind"] ?? "-") group=\(lim["group"] ?? "-") model=\(model) percent=\(lim["percent"] ?? "-")")
+            Log.api("limit kind=\(lim["kind"] ?? "-") group=\(lim["group"] ?? "-") model=\(model) percent=\(lim["percent"] ?? "-") active=\(lim["is_active"] ?? "-")")
+        }
+        if let rs = ApiSource.pickResets(raw) {
+            Log.api("saved resets: count=\(rs.count) total=\(rs.total) eligible=\(rs.eligible) expires_at=\(rs.expiresAt.map { String($0) } ?? "-")")
+        } else {
+            Log.api("saved resets: no block in the answer")
         }
     }
 
@@ -329,6 +344,8 @@ final class ApiSource: UsageSource {
                 add(DetailRow(id: "surface:\(s)", category: "surface", label: s, value: pct, resetAt: reset))
             } else if kind == "seven_day" || kind == "weekly_all" || group == "weekly_all" {
                 continue
+            } else if isCoworkKind(kind) {
+                add(DetailRow(id: "kind:\(kind)", category: "other", label: "@cowork", value: pct, resetAt: reset))
             } else {
                 var label = kind.replacingOccurrences(of: "_", with: " ").trimmingCharacters(in: .whitespaces).capitalized
                 if label.isEmpty { label = group }
@@ -364,9 +381,57 @@ final class ApiSource: UsageSource {
             let reset = parseIsoMs(win["resets_at"])
             if util <= 0 && reset == nil { continue }
             if repeats(util, reset) { continue }
-            add(DetailRow(id: "kind:\(key)", category: "other", label: key.replacingOccurrences(of: "_", with: " ").capitalized, value: util, resetAt: reset))
+            let label = isCoworkKind(key) ? "@cowork" : key.replacingOccurrences(of: "_", with: " ").capitalized
+            add(DetailRow(id: "kind:\(key)", category: "other", label: label, value: util, resetAt: reset))
         }
         return rows
+    }
+
+    /// The saved limit resets. The block is not documented, so this reads it leniently: a grant is
+    /// any object with `resets_left`; it counts when it is not paused, has started and has not
+    /// expired. nil when the server sent no such block at all.
+    static func pickResets(_ raw: [String: Any]) -> ResetGrants? {
+        guard let block = raw[resetsKey], !(block is NSNull) else { return nil }
+        let now = nowMs()
+        func grants(_ obj: Any) -> [[String: Any]] {
+            if let list = obj as? [Any] { return list.flatMap { grants($0) } }
+            guard let dict = obj as? [String: Any] else { return [] }
+            if dict["resets_left"] != nil { return [dict] }
+            return dict.values.flatMap { grants($0) }
+        }
+        var eligible = true
+        if let d = block as? [String: Any], let e = d["eligible"] as? Bool { eligible = e }
+        var count = 0, total = 0
+        var expires: Int64? = nil
+        for g in grants(block) {
+            guard isNumber(g["resets_left"]) else { continue }
+            if (g["paused"] as? Bool) == true { continue }
+            let start = parseIsoMs(g["starts_at"]), end = parseIsoMs(g["ends_at"])
+            if let s = start, s > now { continue }
+            if let e = end, e <= now { continue }
+            let left = max(0, Int(percent(g["resets_left"])))
+            count += left
+            total += isNumber(g["resets_total"]) ? max(left, Int(percent(g["resets_total"]))) : left
+            if left > 0, let e = end, expires == nil || e < expires! { expires = e }
+        }
+        if !eligible { count = 0 }
+        return ResetGrants(count: count, total: total, expiresAt: expires, eligible: eligible)
+    }
+
+    /// Which gauge's limit applies right now (the server marks it with `is_active`):
+    /// "fh" (5-hour), "sd" (weekly), "mo" (the model gauge) or "" when it does not say.
+    static func pickActive(_ raw: [String: Any], modelName: String) -> String {
+        guard let limits = raw["limits"] as? [[String: Any]] else { return "" }
+        for lim in limits where (lim["is_active"] as? Bool) == true {
+            let kind = lim["kind"] as? String ?? "", group = lim["group"] as? String ?? ""
+            let model = ((lim["scope"] as? [String: Any])?["model"] as? [String: Any])?["display_name"] as? String
+            if kind == "five_hour" || group == "session" || kind == "session" { return "fh" }
+            if let m = model, !m.isEmpty {
+                return (!modelName.isEmpty && m.lowercased() == modelName.lowercased()) ? "mo" : ""
+            }
+            if kind == "seven_day" || kind == "weekly_all" || group == "weekly_all" || group == "weekly" { return "sd" }
+        }
+        return ""
     }
 
     static func pickExtra(_ raw: [String: Any]) -> ExtraUsage? {
@@ -489,8 +554,10 @@ final class ApiSource: UsageSource {
 
         m.rows = ApiSource.pickRows(raw)
         m.extra = ApiSource.pickExtra(raw)
+        m.resets = ApiSource.pickResets(raw)
 
         let (moVal, moReset, moName) = ApiSource.pickModel(raw, filter: modelFilter)
+        m.active = ApiSource.pickActive(raw, modelName: moName)
         if !moName.isEmpty {
             var mg = Gauge()
             m.modelName = moName

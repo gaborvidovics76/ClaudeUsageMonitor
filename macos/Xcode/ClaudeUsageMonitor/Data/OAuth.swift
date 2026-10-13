@@ -35,6 +35,7 @@ enum OAuth {
     static let scope = "org:create_api_key user:profile user:inference"
     static let profileURL = "https://api.anthropic.com/api/oauth/profile"
     static let usageURL = "https://api.anthropic.com/api/oauth/usage"
+    static let usageResetsQuery = "?cedar_ember=1"   // also asks for the saved limit resets (what Claude Code sends)
     static let betaHeader = "oauth-2025-04-20"
     // The token endpoint is behind Cloudflare, which blocks generic clients and rate-limits
     // browser user agents. The Windows app sends the headers of the official command-line client
@@ -145,9 +146,17 @@ enum OAuth {
         return (r.status == 200 ? r.json : nil, r.status)
     }
 
-    /// (json, http status, error, retry-after seconds).
-    static func fetchUsage(_ token: String) -> ([String: Any]?, Int, String, Double?) {
-        let r = HTTP.request(usageURL, headers: authHeaders(token), timeout: 12)
+    /// (json, http status, error, retry-after seconds). `withResets` adds the query Claude Code itself
+    /// sends (`?cedar_ember=1`): the answer then also carries the saved limit resets. A server that does
+    /// not know the parameter answers 400/403 - then the plain request is made, exactly as before.
+    static func fetchUsage(_ token: String, withResets: Bool = true) -> ([String: Any]?, Int, String, Double?) {
+        let r = getUsage(usageURL + (withResets ? usageResetsQuery : ""), token)
+        if withResets && (r.1 == 400 || r.1 == 403) { return getUsage(usageURL, token) }
+        return r
+    }
+
+    private static func getUsage(_ url: String, _ token: String) -> ([String: Any]?, Int, String, Double?) {
+        let r = HTTP.request(url, headers: authHeaders(token), timeout: 12)
         if r.status == 0 { return (nil, 0, tr("err.network", r.error), nil) }
         if r.status == 200 {
             guard let obj = r.json else { return (nil, 0, tr("err.bad_usage_resp"), nil) }

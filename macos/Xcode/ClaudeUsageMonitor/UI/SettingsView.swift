@@ -191,6 +191,7 @@ private struct DetailsTab: View {
                 Check(label: tr("set.show_model_list"), on: $s.showModelList)
                 Check(label: tr("set.show_surfaces"), on: $s.showSurfaces)
                 Check(label: tr("set.show_extra_usage"), on: $s.showExtraUsage)
+                Check(label: tr("set.show_resets"), on: $s.showResets)
                 Check(label: tr("set.show_local_models"), on: $s.showLocalModels)
                 HStack { Spacer().frame(width: 150); HintText(tr("set.local_models_hint")) }
                 Row(tr("set.local_models_path")) {
@@ -229,6 +230,7 @@ private struct AlertsTab: View {
             Check(label: tr("set.notify_enabled"), on: $s.notifyEnabled)
             Check(label: tr("set.notify_reset"), on: $s.notifyOnReset)
             Check(label: tr("set.notify_stale"), on: $s.notifyStale)
+            Check(label: tr("set.notify_resets"), on: $s.notifyResets)
             HStack { Spacer().frame(width: 150); HintText(tr("set.color_hint")) }
             Spacer()
         }.padding(14)

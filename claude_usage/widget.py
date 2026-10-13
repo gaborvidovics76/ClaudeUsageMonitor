@@ -227,6 +227,11 @@ class UsageWidget(QWidget):
             elif not s["show_surfaces"]:
                 continue
             out.append((row.id, detail_label(row), row.value, f"{row.value:.0f}%", row.reset_in_ms))
+        rs = m.resets
+        if rs is not None and rs.count > 0 and s["show_resets"] and "resets" not in hidden:
+            # a saved limit reset: how many can be redeemed, and (in the reset column) when the
+            # first one expires. No bar - it is not a percentage.
+            out.append(("resets", tr("detail.resets"), None, str(rs.count), rs.expires_in_ms))
         ex = m.extra
         if ex is not None and s["show_extra_usage"] and "extra" not in hidden:
             if ex.enabled:
@@ -880,11 +885,17 @@ class UsageWidget(QWidget):
                 cx = x + size * (0.32 + 0.18 * i)
                 p.drawEllipse(QRectF(cx - size * 0.05, body.center().y() - size * 0.05, size * 0.1, size * 0.1))
 
+    def _mark_active(self, gid: str, label: str) -> str:
+        """A small ▸ before the name of the gauge whose limit applies right now (the server says
+        which). Only a glyph in the label: the layout, sizes and colours stay as they were."""
+        return ("▸ " + label) if gid and gid == self.metrics.active else label
+
     def _paint_postit(self, p: QPainter, r: QRectF) -> None:
         k = self.k
         y = self._paint_header(p, r)
-        for _gid, label, g, hourly, sc in self._gauge_items():
-            y = self._paint_block(p, QRectF(r.left(), y, r.width(), 60 * k * sc), label, g, hourly, sc)
+        for gid, label, g, hourly, sc in self._gauge_items():
+            y = self._paint_block(p, QRectF(r.left(), y, r.width(), 60 * k * sc),
+                                  self._mark_active(gid, label), g, hourly, sc)
         y = self._paint_rows(p, QRectF(r.left(), y, r.width(), 0))
         if self.s["show_spark"]:
             g = self.metrics.weekly if self.s["show_weekly"] else self.metrics.five_hour
@@ -994,9 +1005,9 @@ class UsageWidget(QWidget):
         total = sum(it[4] for it in items)
         row_h = 96 * k * max(1.0, max(it[4] for it in items))
         x = r.left()
-        for _gid, label, g, _hourly, sc in items:
+        for gid, label, g, _hourly, sc in items:
             w = r.width() * sc / total          # slot width proportional to the gauge size
-            self._paint_ring(p, QRectF(x, y, w, row_h), label, g, sc)
+            self._paint_ring(p, QRectF(x, y, w, row_h), self._mark_active(gid, label), g, sc)
             x += w
         y2 = self._paint_rows(p, QRectF(r.left(), y + row_h + 1 * k, r.width(), 0))
         if self.s["show_spark"]:
@@ -1057,6 +1068,7 @@ class UsageWidget(QWidget):
         for gid, label, g, _hourly, sc in items:
             if gid == "mo":
                 label = label[:6]
+            label = self._mark_active(gid, label)
             kk = k * sc                          # per-gauge size factor
             seg = avail * sc / total             # segment width proportional to the gauge size
             label_font = _font(6.8 * kk, QFont.Weight.DemiBold, 0.8 * kk)

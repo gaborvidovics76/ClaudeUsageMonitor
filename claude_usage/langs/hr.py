@@ -5,6 +5,13 @@ CODE = "hr"
 NAME = "Hrvatski"
 
 STRINGS = {
+    # --- 2.8.0: saved limit resets, Routines (Cowork) window ---------------------------------
+    "detail.resets": "Spremljena resetiranja ograničenja",
+    "detail.surface.cowork": "Rutine (Cowork)",
+    "set.show_resets": "Spremljena resetiranja ograničenja (samo kad ga imate)",
+    "set.notify_resets": "Podsjeti me na spremljeno resetiranje (kad je ograničenje puno i prije nego istekne)",
+    "notify.reset_available": "{}: ograničenje je iscrpljeno. Imate spremljeno resetiranje ograničenja – iskoristite ga na claude.ai › Postavke › Potrošnja.",
+    "notify.reset_expiring": "Vaše spremljeno resetiranje ograničenja istječe za {}. Iskoristite ga na claude.ai › Postavke › Potrošnja, inače propada.",
     # --- backup status bar / details window ------------------------------------------------
     "backup.age_d": "{}d",
     "backup.age_h": "{}h",
