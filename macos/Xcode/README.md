@@ -48,7 +48,7 @@ Részletesen, az App Store Connect beadással együtt: [docs/APP-STORE-BEADAS.md
 ## Verziószám
 
 - `MARKETING_VERSION` (= `CFBundleShortVersionString`) a Windows-verzióval **azonos** legyen
-  (`claude_usage/__init__.py`). Jelenleg 2.8.0. Ezt Gábor állítja.
+  (`claude_usage/__init__.py`). Jelenleg 2.8.1. Ezt Gábor állítja.
 - `CURRENT_PROJECT_VERSION` (= `CFBundleVersion`, build-szám) **minden App Store-feltöltésnél nő**
   (1, 2, 3…). Ezt a kolléga állítja az Xcode-ban (General → Build) vagy a `project.pbxproj`-ban.
 

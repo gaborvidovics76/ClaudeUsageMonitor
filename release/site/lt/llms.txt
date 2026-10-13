@@ -15,7 +15,7 @@ Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiu
 - **Licencija**: MIT, atvirasis kodas GitHub
 - **Autorius**: Gábor Vidovics, Vengrija – nepriklausomas kūrėjas, nesusijęs su Anthropic
 
-- Versija: 2.8.0
+- Versija: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Jau netrukus
 - https://claudeusagemonitor.com/lt/

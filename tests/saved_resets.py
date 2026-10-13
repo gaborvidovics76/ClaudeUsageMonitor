@@ -102,6 +102,17 @@ finally:
     oauth._get_usage = orig
 print("6) cedar_ember query with plain fallback: ok")
 
+# ---------------------------------------------------------------- 6b) the client identity: a current Claude Code version
+import re  # noqa: E402
+
+ua = oauth.client_ua()
+assert re.fullmatch(r"claude-cli/\d+\.\d+\.\d+ \(external, cli\)", ua), ua
+assert oauth._parse_version(oauth.cli_version()) >= oauth._parse_version(oauth.CLI_VERSION_FLOOR)
+assert oauth._client_headers()["User-Agent"] == ua
+assert oauth._parse_version("claude 2.1.296 (Claude Code)") == (2, 1, 296)
+assert oauth._parse_version("garbage") is None
+print("6b) client identity %s (installed: %s): ok" % (ua, oauth.installed_cli_version() or "-"))
+
 # ---------------------------------------------------------------- 7) every new text exists in every language
 for key in ("detail.resets", "detail.surface.cowork", "set.show_resets", "set.notify_resets",
             "notify.reset_available", "notify.reset_expiring"):

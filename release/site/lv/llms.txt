@@ -15,7 +15,7 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 - **Licence**: MIT, atvērtais pirmkods GitHub
 - **Autors**: Gábor Vidovics, Ungārija – neatkarīgs izstrādātājs, nav saistīts ar Anthropic
 
-- Versija: 2.8.0
+- Versija: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Drīzumā
 - https://claudeusagemonitor.com/lv/

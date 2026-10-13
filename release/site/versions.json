@@ -1,12 +1,19 @@
 {
     "slug":  "claude-usage-monitor",
-    "latest":  "2.8.0",
+    "latest":  "2.8.1",
     "versions":  [
+                     {
+                         "version":  "2.8.1",
+                         "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.1.zip",
+                         "sha256":  "669342cc45238d19bb2ba66433d3c606b966bbb71055dca99cdd787996867360",
+                         "released":  "2026-10-13T10:28:50Z",
+                         "bytes":  49159234
+                     },
                      {
                          "version":  "2.8.0",
                          "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.0.zip",
-                         "sha256":  "1b09d4f80e85fb5c764cf2daebd9450db250c8d6a0c53143b909542ea9ac40b7",
-                         "released":  "2026-10-13T09:51:38Z",
+                         "sha256":  "9de4cbd3b8a7ef9d96bfafaa1349aa1e8b678ba3bcddc25fee1f71a4df1cd2e6",
+                         "released":  "2026-10-13T10:06:14Z",
                          "bytes":  49158593
                      },
                      {

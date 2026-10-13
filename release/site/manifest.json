@@ -1,230 +1,158 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.8.0",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.0.zip",
-    "sha256":  "1b09d4f80e85fb5c764cf2daebd9450db250c8d6a0c53143b909542ea9ac40b7",
-    "bytes":  49158593,
+    "version":  "2.8.1",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.1.zip",
+    "sha256":  "669342cc45238d19bb2ba66433d3c606b966bbb71055dca99cdd787996867360",
+    "bytes":  49159234,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-13T09:51:38Z",
+    "last_updated":  "2026-10-13T10:28:50Z",
     "notes":  {
                   "en":  [
-                             "Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.",
-                             "A small ▸ marks the gauge whose limit applies right now – at a glance you see which one is holding you back.",
-                             "The Routines (Cowork) window has a proper name instead of the server\u0027s code name.",
-                             "Why a new version? Because we keep pace with what Anthropic adds to your usage data – so you always see everything there is. For you."
+                             "The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code\u0027s version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.",
+                             "Why so soon after 2.8.0? Because we checked it live right after the release and found the one thing still in the way – and we would rather fix it today than leave you with a feature that only works on paper. For you."
                          ],
                   "hu":  [
-                             "Elmentett visszaállítás: ha az Anthropic ad egy későbbre eltehető limit-visszaállítást, a panel mostantól mutatja – hány van és mikor jár le –, és szól, ha betelt egy keret, illetve ha a visszaállítás beváltatlanul lejárna. Beváltani a claude.ai › Beállítások › Használat oldalon tudod; a program soha nem váltja be helyetted.",
-                             "Egy kis ▸ jelöli azt a mérőt, amelyik limit éppen fog – egy pillantásra látod, mi tart vissza.",
-                             "A Rutinok (Cowork) ablak rendes nevet kapott a szerver kódneve helyett.",
-                             "Miért új verzió? Mert lépést tartunk azzal, amit az Anthropic a használati adatokhoz hozzátesz – hogy mindig mindent láss, ami csak van. Értetek."
+                             "Az elmentett visszaállítás mostantól tényleg megjelenik. Az Anthropic csak friss Claude Code-kliensnek adja ki, ezért a program mostantól az aktuális verzióval azonosítja magát – és a gépeden telepített Claude Code verziójával, ha az újabb. Ha van visszaállításod, ettől a verziótól a panel mutatja, a lejáratával együtt.",
+                             "Miért ilyen gyorsan a 2.8.0 után? Mert a kiadás után azonnal élesben ellenőriztük, és megtaláltuk az egyetlen dolgot, ami még útban volt – és inkább ma javítjuk, mint hogy egy csak papíron működő funkciót hagyjunk nálatok. Értetek."
                          ],
                   "de":  [
-                             "Gespeicherte Limit-Zurücksetzung: Wenn Anthropic dir eine Zurücksetzung gibt, die du für später aufheben darfst, zeigt das Panel sie jetzt an – wie viele du hast und wann sie verfällt – und erinnert dich, wenn ein Limit voll ist und wenn die Zurücksetzung ungenutzt zu verfallen droht. Einlösen tust du sie unter claude.ai › Einstellungen › Nutzung; das Programm löst sie nie für dich ein.",
-                             "Ein kleines ▸ markiert die Anzeige, deren Limit gerade gilt – auf einen Blick siehst du, was dich bremst.",
-                             "Das Fenster „Routinen (Cowork)“ hat jetzt einen richtigen Namen statt des Codenamens des Servers.",
-                             "Warum eine neue Version? Weil wir Schritt halten mit dem, was Anthropic den Nutzungsdaten hinzufügt – damit du immer alles siehst, was es gibt. Für dich."
+                             "Die gespeicherte Limit-Zurücksetzung erscheint jetzt wirklich. Anthropic gibt sie nur an einen aktuellen Claude-Code-Client heraus, deshalb meldet sich das Programm jetzt mit der aktuellen Version – und mit der Version deines installierten Claude Code, wenn die neuer ist. Hast du eine Zurücksetzung, zeigt das Panel sie ab dieser Version an, samt Ablaufdatum.",
+                             "Warum so kurz nach 2.8.0? Weil wir es direkt nach der Veröffentlichung live geprüft und die eine Sache gefunden haben, die noch im Weg stand – und wir beheben sie lieber heute, als dir eine Funktion zu lassen, die nur auf dem Papier funktioniert. Für dich."
                          ],
                   "fr":  [
-                             "Réinitialisation de limite en réserve : quand Anthropic vous offre une réinitialisation à garder pour plus tard, le panneau l\u0027affiche désormais – combien vous en avez et quand elle expire – et vous prévient quand une limite est pleine et quand la réinitialisation risque d\u0027expirer sans avoir servi. Vous l\u0027utilisez sur claude.ai › Paramètres › Utilisation ; le programme ne l\u0027utilise jamais à votre place.",
-                             "Un petit ▸ marque la jauge dont la limite s\u0027applique en ce moment – d\u0027un coup d\u0027œil vous voyez ce qui vous retient.",
-                             "La fenêtre Routines (Cowork) porte un vrai nom au lieu du nom de code du serveur.",
-                             "Pourquoi une nouvelle version ? Parce que nous suivons ce qu\u0027Anthropic ajoute à vos données d\u0027utilisation – pour que vous voyiez toujours tout ce qui existe. Pour vous."
+                             "La réinitialisation de limite en réserve apparaît désormais vraiment. Anthropic ne la fournit qu\u0027à un client Claude Code à jour, c\u0027est pourquoi le programme s\u0027identifie maintenant avec la version actuelle – et avec la version de votre Claude Code installé si elle est plus récente. Si vous avez une réinitialisation, le panneau l\u0027affiche à partir de cette version, avec sa date d\u0027expiration.",
+                             "Pourquoi si vite après la 2.8.0 ? Parce que nous l\u0027avons vérifié en conditions réelles juste après la sortie et trouvé la seule chose qui bloquait encore – et nous préférons corriger aujourd\u0027hui plutôt que de vous laisser une fonction qui ne marche que sur le papier. Pour vous."
                          ],
                   "es":  [
-                             "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para más tarde, el panel ahora lo muestra – cuántos tienes y cuándo caduca – y te avisa cuando un límite se llena y cuando el reinicio está a punto de caducar sin usar. Lo canjeas en claude.ai › Configuración › Uso; el programa nunca lo canjea por ti.",
-                             "Un pequeño ▸ marca el indicador cuyo límite se aplica ahora mismo – de un vistazo ves qué te está frenando.",
-                             "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
-                             "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic añade a tus datos de uso – para que siempre veas todo lo que hay. Por ti."
+                             "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
+                             "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
                          ],
                   "it":  [
-                             "Reset del limite salvato: quando Anthropic ti concede un reset da conservare per dopo, il pannello ora lo mostra – quanti ne hai e quando scade – e ti avvisa quando un limite è pieno e quando il reset sta per scadere inutilizzato. Lo riscatti su claude.ai › Impostazioni › Utilizzo; il programma non lo riscatta mai al posto tuo.",
-                             "Un piccolo ▸ segna l\u0027indicatore il cui limite è in vigore adesso – a colpo d\u0027occhio vedi cosa ti sta frenando.",
-                             "La finestra Routine (Cowork) ha un nome vero invece del nome in codice del server.",
-                             "Perché una nuova versione? Perché teniamo il passo con ciò che Anthropic aggiunge ai tuoi dati di utilizzo – così vedi sempre tutto quello che c\u0027è. Per te."
+                             "Il reset del limite salvato ora compare davvero. Anthropic lo fornisce solo a un client Claude Code aggiornato, perciò il programma ora si presenta con la versione attuale – e con la versione del tuo Claude Code installato quando è più recente. Se hai un reset, da questa versione il pannello lo mostra, insieme alla scadenza.",
+                             "Perché così presto dopo la 2.8.0? Perché l\u0027abbiamo verificato dal vivo subito dopo il rilascio e abbiamo trovato l\u0027unica cosa che ancora intralciava – e preferiamo sistemarla oggi piuttosto che lasciarti una funzione che funziona solo sulla carta. Per te."
                          ],
                   "pt":  [
-                             "Reposição de limite guardada: quando a Anthropic te dá uma reposição que podes guardar para mais tarde, o painel passa a mostrá-la – quantas tens e quando expira – e avisa-te quando um limite está cheio e quando a reposição está prestes a expirar sem ser usada. Resgata-la em claude.ai › Definições › Utilização; o programa nunca a resgata por ti.",
-                             "Um pequeno ▸ marca o indicador cujo limite se aplica neste momento – num relance vês o que te está a travar.",
-                             "A janela Rotinas (Cowork) tem um nome a sério em vez do nome de código do servidor.",
-                             "Porquê uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos teus dados de utilização – para veres sempre tudo o que existe. Por ti."
+                             "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
+                             "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
                          ],
                   "pl":  [
-                             "Zapisany reset limitu: gdy Anthropic da Ci reset, który możesz zachować na później, panel teraz go pokazuje – ile ich masz i kiedy wygasa – i przypomina, gdy limit jest pełny oraz gdy reset ma wkrótce wygasnąć niewykorzystany. Wykorzystujesz go na claude.ai › Ustawienia › Użycie; program nigdy nie zrobi tego za Ciebie.",
-                             "Mały znak ▸ oznacza wskaźnik, którego limit obowiązuje w tej chwili – na pierwszy rzut oka widzisz, co Cię hamuje.",
-                             "Okno Rutyny (Cowork) ma prawdziwą nazwę zamiast nazwy kodowej serwera.",
-                             "Dlaczego nowa wersja? Bo nadążamy za tym, co Anthropic dodaje do Twoich danych o użyciu – żebyś zawsze widział wszystko, co jest. Dla Ciebie."
+                             "Zapisany reset limitu teraz naprawdę się pokazuje. Anthropic udostępnia go tylko aktualnemu klientowi Claude Code, dlatego program przedstawia się teraz bieżącą wersją – a wersją zainstalowanego u Ciebie Claude Code, gdy jest nowsza. Jeśli masz reset, od tej wersji panel go pokazuje, razem z datą wygaśnięcia.",
+                             "Dlaczego tak szybko po 2.8.0? Bo sprawdziliśmy to na żywo zaraz po wydaniu i znaleźliśmy jedyną rzecz, która jeszcze przeszkadzała – i wolimy naprawić ją dziś, niż zostawić Ci funkcję działającą tylko na papierze. Dla Ciebie."
                          ],
                   "nl":  [
-                             "Bewaarde limietreset: als Anthropic je een reset geeft die je voor later mag bewaren, toont het paneel die nu – hoeveel je er hebt en wanneer hij verloopt – en herinnert het je als een limiet vol is en als de reset ongebruikt dreigt te verlopen. Je verzilvert hem op claude.ai › Instellingen › Gebruik; het programma doet dat nooit voor je.",
-                             "Een kleine ▸ markeert de meter waarvan de limiet nu geldt – in één oogopslag zie je wat je tegenhoudt.",
-                             "Het venster Routines (Cowork) heeft een echte naam in plaats van de codenaam van de server.",
-                             "Waarom een nieuwe versie? Omdat we bijhouden wat Anthropic aan je gebruiksgegevens toevoegt – zodat je altijd alles ziet wat er is. Voor jou."
+                             "De bewaarde limietreset verschijnt nu echt. Anthropic geeft hem alleen aan een actuele Claude Code-client, dus het programma meldt zich nu met de actuele versie – en met de versie van je geïnstalleerde Claude Code als die nieuwer is. Heb je een reset, dan toont het paneel hem vanaf deze versie, met de vervaldatum.",
+                             "Waarom zo snel na 2.8.0? Omdat we het direct na de release live hebben gecontroleerd en het ene ding vonden dat nog in de weg zat – en we lossen dat liever vandaag op dan je een functie te laten die alleen op papier werkt. Voor jou."
                          ],
                   "ru":  [
-                             "Сохранённый сброс лимита: когда Anthropic даёт вам сброс, который можно оставить на потом, панель теперь показывает его – сколько у вас есть и когда он истекает – и напоминает, когда лимит исчерпан и когда сброс вот-вот истечёт неиспользованным. Активируете его вы на claude.ai › Настройки › Использование; программа никогда не делает этого за вас.",
-                             "Маленький значок ▸ отмечает индикатор, чей лимит действует прямо сейчас – с первого взгляда видно, что вас сдерживает.",
-                             "Окно «Рутины (Cowork)» получило нормальное имя вместо кодового имени сервера.",
-                             "Почему новая версия? Потому что мы идём в ногу с тем, что Anthropic добавляет в данные об использовании – чтобы вы всегда видели всё, что есть. Для вас."
+                             "Сохранённый сброс лимита теперь действительно отображается. Anthropic выдаёт его только актуальному клиенту Claude Code, поэтому программа теперь представляется текущей версией – а версией установленного у вас Claude Code, если она новее. Если сброс у вас есть, с этой версии панель показывает его вместе со сроком действия.",
+                             "Почему так скоро после 2.8.0? Потому что мы проверили это вживую сразу после выпуска и нашли единственное, что ещё мешало – и предпочитаем исправить сегодня, а не оставлять вам функцию, которая работает только на бумаге. Для вас."
                          ],
                   "cs":  [
-                             "Uložený reset limitu: když vám Anthropic dá reset, který si můžete nechat na později, panel ho teď zobrazí – kolik jich máte a kdy vyprší – a připomene vám, když je limit plný a když má reset brzy nevyužitý vypršet. Uplatníte ho na claude.ai › Nastavení › Využití; program ho za vás nikdy neuplatní.",
-                             "Malá značka ▸ označuje ukazatel, jehož limit právě platí – na první pohled vidíte, co vás brzdí.",
-                             "Okno Rutiny (Cowork) má pořádný název místo kódového jména serveru.",
-                             "Proč nová verze? Protože držíme krok s tím, co Anthropic přidává k vašim datům o využití – abyste vždy viděli všechno, co existuje. Pro vás."
+                             "Uložený reset limitu se teď opravdu zobrazí. Anthropic ho vydává jen aktuálnímu klientovi Claude Code, proto se program nyní hlásí aktuální verzí – a verzí vašeho nainstalovaného Claude Code, když je novější. Pokud reset máte, od této verze ho panel ukáže i s datem vypršení.",
+                             "Proč tak brzy po 2.8.0? Protože jsme to hned po vydání ověřili naživo a našli jedinou věc, která ještě stála v cestě – a raději ji opravíme dnes, než abychom vám nechali funkci, která funguje jen na papíře. Pro vás."
                          ],
                   "tr":  [
-                             "Kayıtlı limit sıfırlama: Anthropic sana sonraya saklayabileceğin bir sıfırlama verdiğinde panel artık bunu gösteriyor – kaç tane var ve ne zaman doluyor – ve bir limit dolduğunda ya da sıfırlama kullanılmadan dolmak üzereyken hatırlatıyor. claude.ai › Ayarlar › Kullanım sayfasında kullanırsın; program senin yerine asla kullanmaz.",
-                             "Küçük bir ▸ işareti şu anda geçerli olan limitin göstergesini belirtiyor – seni neyin tuttuğunu bir bakışta görürsün.",
-                             "Rutinler (Cowork) penceresi sunucunun kod adı yerine gerçek bir ad aldı.",
-                             "Neden yeni sürüm? Çünkü Anthropic\u0027in kullanım verilerine eklediklerine ayak uyduruyoruz – böylece var olan her şeyi her zaman görürsün. Senin için."
+                             "Kayıtlı limit sıfırlama artık gerçekten görünüyor. Anthropic bunu yalnızca güncel bir Claude Code istemcisine veriyor; bu yüzden program artık kendini güncel sürümle tanıtıyor – yüklü Claude Code\u0027un daha yeniyse onun sürümüyle. Bir sıfırlaman varsa panel bu sürümden itibaren son kullanma tarihiyle birlikte gösteriyor.",
+                             "Neden 2.8.0\u0027dan bu kadar kısa süre sonra? Çünkü yayından hemen sonra canlı olarak kontrol ettik ve hâlâ engel olan tek şeyi bulduk – sana yalnızca kâğıt üstünde çalışan bir özellik bırakmaktansa bugün düzeltmeyi yeğleriz. Senin için."
                          ],
                   "pt-PT":  [
-                                "Reposição de limite guardada: quando a Anthropic te dá uma reposição que podes guardar para mais tarde, o painel passa a mostrá-la – quantas tens e quando expira – e avisa-te quando um limite está cheio e quando a reposição está prestes a expirar sem ser usada. Resgata-la em claude.ai › Definições › Utilização; o programa nunca a resgata por ti.",
-                                "Um pequeno ▸ marca o indicador cujo limite se aplica neste momento – num relance vês o que te está a travar.",
-                                "A janela Rotinas (Cowork) tem um nome a sério em vez do nome de código do servidor.",
-                                "Porquê uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos teus dados de utilização – para veres sempre tudo o que existe. Por ti."
+                                "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
+                                "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
                             ],
                   "pt-BR":  [
-                                "Redefinição de limite guardada: quando a Anthropic dá a você uma redefinição que pode ser guardada para depois, o painel agora a mostra – quantas você tem e quando expira – e avisa quando um limite está cheio e quando a redefinição está prestes a expirar sem uso. Você a resgata em claude.ai › Configurações › Uso; o programa nunca a resgata por você.",
-                                "Um pequeno ▸ marca o indicador cujo limite vale agora – de relance você vê o que está te segurando.",
-                                "A janela Rotinas (Cowork) tem um nome de verdade em vez do nome de código do servidor.",
-                                "Por que uma nova versão? Porque acompanhamos o que a Anthropic acrescenta aos seus dados de uso – para que você sempre veja tudo o que existe. Para você."
+                                "A redefinição de limite guardada agora aparece de verdade. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa agora se identifica com a versão atual – e com a versão do seu Claude Code instalado quando ela for mais nova. Se você tiver uma redefinição, a partir desta versão o painel a mostra, junto com a data de expiração.",
+                                "Por que tão cedo depois da 2.8.0? Porque verificamos ao vivo logo após o lançamento e encontramos a única coisa que ainda atrapalhava – e preferimos corrigir hoje a deixar você com um recurso que só funciona no papel. Para você."
                             ],
                   "es-ES":  [
-                                "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para más tarde, el panel ahora lo muestra – cuántos tienes y cuándo caduca – y te avisa cuando un límite se llena y cuando el reinicio está a punto de caducar sin usar. Lo canjeas en claude.ai › Configuración › Uso; el programa nunca lo canjea por ti.",
-                                "Un pequeño ▸ marca el indicador cuyo límite se aplica ahora mismo – de un vistazo ves qué te está frenando.",
-                                "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
-                                "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic añade a tus datos de uso – para que siempre veas todo lo que hay. Por ti."
+                                "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
+                                "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
                             ],
                   "es-419":  [
-                                 "Reinicio de límite guardado: cuando Anthropic te da un reinicio que puedes guardar para después, el panel ahora lo muestra – cuántos tienes y cuándo vence – y te avisa cuando un límite se llena y cuando el reinicio está por vencer sin usarse. Lo usas en claude.ai › Configuración › Uso; el programa nunca lo usa por ti.",
-                                 "Un pequeño ▸ marca el indicador cuyo límite aplica ahora mismo – de un vistazo ves qué te está frenando.",
-                                 "La ventana Rutinas (Cowork) tiene un nombre propio en lugar del nombre en clave del servidor.",
-                                 "¿Por qué una nueva versión? Porque seguimos el ritmo de lo que Anthropic agrega a tus datos de uso – para que siempre veas todo lo que hay. Para ti."
+                                 "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su vencimiento.",
+                                 "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que todavía estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona en el papel. Para ti."
                              ],
                   "ja":  [
-                             "保存済みの上限リセット：Anthropic から後で使えるリセットをもらったとき、パネルにその数と期限が表示されるようになりました。上限に達したとき、またリセットが未使用のまま期限切れになりそうなときにもお知らせします。使うのは claude.ai › 設定 › 使用状況 から。アプリが勝手に使うことはありません。",
-                             "いま効いている上限のメーターに小さな ▸ が付きます。何に止められているか、ひと目でわかります。",
-                             "「ルーチン（Cowork）」ウィンドウは、サーバーのコードネームではなくちゃんとした名前で表示されます。",
-                             "なぜ新バージョンなのか？ Anthropic が使用状況データに加えたものに私たちも追いついているからです。あるものはすべて、いつでも見えるように。あなたのために。"
+                             "保存済みの上限リセットが、今度こそ表示されます。Anthropic はこれを最新の Claude Code クライアントにしか渡さないため、アプリは現在のバージョンで自分を名乗るようになりました。インストール済みの Claude Code の方が新しければ、そのバージョンを使います。リセットをお持ちなら、このバージョンからパネルに期限とともに表示されます。",
+                             "なぜ 2.8.0 のすぐ後に？ リリース直後に実際の環境で確認し、まだ邪魔をしていたただ一つの点を見つけたからです。紙の上でしか動かない機能を残すより、今日直すことを選びました。あなたのために。"
                          ],
                   "ko":  [
-                             "저장된 한도 초기화: Anthropic이 나중에 쓸 수 있는 초기화를 주면 이제 패널에 표시돼요. 몇 개가 있고 언제 만료되는지 보여주고, 한도가 가득 찼을 때와 초기화가 쓰이지 않은 채 만료되기 직전에 알려줘요. 사용은 claude.ai › 설정 › 사용량에서 직접 하세요. 앱이 대신 사용하는 일은 없어요.",
-                             "지금 적용 중인 한도의 게이지 앞에 작은 ▸ 표시가 붙어요. 무엇이 나를 막고 있는지 한눈에 보여요.",
-                             "루틴(Cowork) 창이 서버의 코드명 대신 제대로 된 이름으로 표시돼요.",
-                             "왜 새 버전일까요? Anthropic이 사용량 데이터에 추가하는 것을 우리도 따라가기 때문이에요. 있는 건 언제나 전부 보이도록. 여러분을 위해서."
+                             "저장된 한도 초기화가 이제 정말로 표시돼요. Anthropic은 이를 최신 Claude Code 클라이언트에만 제공하기 때문에, 앱이 이제 최신 버전으로 자신을 알려요. 설치된 Claude Code가 더 새 버전이면 그 버전을 사용해요. 초기화가 있다면 이 버전부터 패널에 만료일과 함께 표시돼요.",
+                             "왜 2.8.0 직후에 또 나왔냐고요? 출시 직후 실제 환경에서 확인해 아직 걸림돌이던 단 하나를 찾았기 때문이에요. 서류상으로만 작동하는 기능을 남겨두기보다 오늘 고치는 쪽을 택했어요. 여러분을 위해서."
                          ],
                   "zh-CN":  [
-                                "已保存的额度重置：当 Anthropic 给你一次可以留到以后使用的额度重置时，面板现在会显示出来——你有几次、何时到期——并在额度用尽时以及重置即将未使用而到期时提醒你。兑换请到 claude.ai › 设置 › 用量；程序绝不会替你兑换。",
-                                "一个小小的 ▸ 标记出当前生效的那个额度——一眼就能看出是什么在限制你。",
-                                "“例程（Cowork）”窗口有了正式名称，不再显示服务器的代号。",
-                                "为什么发布新版本？因为我们紧跟 Anthropic 在用量数据中新增的内容——让你总能看到所有存在的信息。为了你。"
+                                "已保存的额度重置现在真的会显示了。Anthropic 只把它提供给最新的 Claude Code 客户端，因此程序现在以当前版本表明身份——如果你安装的 Claude Code 更新，则使用它的版本。如果你有重置，从这个版本起面板会连同到期时间一起显示。",
+                                "为什么在 2.8.0 之后这么快又发版？因为发布后我们立刻在真实环境中做了检查，找到了唯一还挡着路的问题——我们宁愿今天修好，也不愿留给你一个只在纸面上可用的功能。为了你。"
                             ],
                   "zh-TW":  [
-                                "已儲存的額度重設：當 Anthropic 給你一次可以留到之後使用的額度重設時，面板現在會顯示出來——你有幾次、何時到期——並在額度用盡時，以及重設即將未使用而到期時提醒你。兌換請到 claude.ai › 設定 › 用量；程式絕不會替你兌換。",
-                                "一個小小的 ▸ 標示出目前生效的那個額度——一眼就能看出是什麼在限制你。",
-                                "「例行工作（Cowork）」視窗有了正式名稱，不再顯示伺服器的代號。",
-                                "為什麼推出新版本？因為我們緊跟 Anthropic 在用量資料中新增的內容——讓你總能看到所有存在的資訊。為了你。"
+                                "已儲存的額度重設現在真的會顯示了。Anthropic 只把它提供給最新的 Claude Code 用戶端，因此程式現在以目前版本表明身分——如果你安裝的 Claude Code 更新，則使用它的版本。如果你有重設，從這個版本起面板會連同到期時間一起顯示。",
+                                "為什麼在 2.8.0 之後這麼快又發版？因為發布後我們立刻在真實環境中檢查，找到了唯一還擋著路的問題——我們寧願今天修好，也不願留給你一個只在紙上可用的功能。為了你。"
                             ],
                   "id":  [
-                             "Reset batas tersimpan: saat Anthropic memberi Anda reset yang boleh disimpan untuk nanti, panel kini menampilkannya – berapa banyak yang Anda punya dan kapan kedaluwarsa – dan mengingatkan saat sebuah batas penuh serta saat reset hampir kedaluwarsa tanpa dipakai. Anda menukarkannya di claude.ai › Pengaturan › Penggunaan; program tidak pernah menukarkannya untuk Anda.",
-                             "Tanda ▸ kecil menandai pengukur yang batasnya berlaku saat ini – sekilas Anda tahu apa yang menahan Anda.",
-                             "Jendela Rutinitas (Cowork) kini punya nama yang semestinya, bukan nama kode server.",
-                             "Mengapa versi baru? Karena kami mengikuti apa yang Anthropic tambahkan ke data penggunaan Anda – supaya Anda selalu melihat semua yang ada. Untuk Anda."
+                             "Reset batas tersimpan kini benar-benar muncul. Anthropic hanya memberikannya kepada klien Claude Code terbaru, jadi program kini memperkenalkan diri dengan versi terbaru – dan dengan versi Claude Code yang terpasang jika lebih baru. Jika Anda punya reset, mulai versi ini panel menampilkannya beserta masa berlakunya.",
+                             "Mengapa begitu cepat setelah 2.8.0? Karena kami mengeceknya langsung setelah rilis dan menemukan satu hal yang masih menghalangi – dan kami lebih memilih memperbaikinya hari ini daripada meninggalkan fitur yang hanya berfungsi di atas kertas. Untuk Anda."
                          ],
                   "vi":  [
-                             "Lượt đặt lại giới hạn đã lưu: khi Anthropic trao cho bạn một lượt đặt lại có thể để dành dùng sau, bảng điều khiển giờ sẽ hiển thị nó – bạn có bao nhiêu lượt và khi nào hết hạn – và nhắc bạn khi một giới hạn đã đầy cũng như khi lượt đặt lại sắp hết hạn mà chưa dùng. Bạn dùng nó tại claude.ai › Cài đặt › Mức sử dụng; chương trình không bao giờ dùng thay bạn.",
-                             "Một dấu ▸ nhỏ đánh dấu đồng hồ có giới hạn đang có hiệu lực – nhìn qua là biết điều gì đang giữ chân bạn.",
-                             "Cửa sổ Quy trình (Cowork) có tên đàng hoàng thay cho tên mã của máy chủ.",
-                             "Vì sao có phiên bản mới? Vì chúng tôi theo kịp những gì Anthropic bổ sung vào dữ liệu sử dụng của bạn – để bạn luôn thấy mọi thứ đang có. Vì bạn."
+                             "Lượt đặt lại giới hạn đã lưu giờ thực sự hiển thị. Anthropic chỉ cấp nó cho ứng dụng Claude Code phiên bản mới, nên chương trình giờ tự nhận diện bằng phiên bản hiện tại – và bằng phiên bản Claude Code bạn đã cài nếu mới hơn. Nếu bạn có lượt đặt lại, từ phiên bản này bảng điều khiển sẽ hiển thị cùng hạn dùng.",
+                             "Vì sao lại sớm thế sau 2.8.0? Vì ngay sau khi phát hành chúng tôi đã kiểm tra thực tế và tìm ra điều duy nhất còn cản trở – và chúng tôi thà sửa hôm nay còn hơn để lại cho bạn một tính năng chỉ chạy trên giấy. Vì bạn."
                          ],
                   "ro":  [
-                             "Resetare de limită salvată: când Anthropic îți dă o resetare pe care o poți păstra pentru mai târziu, panoul o arată acum – câte ai și când expiră – și îți amintește când o limită e plină și când resetarea e pe cale să expire nefolosită. O folosești pe claude.ai › Setări › Utilizare; programul nu o folosește niciodată în locul tău.",
-                             "Un mic ▸ marchează indicatorul a cărui limită se aplică chiar acum – dintr-o privire vezi ce te ține pe loc.",
-                             "Fereastra Rutine (Cowork) are un nume adevărat în locul numelui de cod al serverului.",
-                             "De ce o versiune nouă? Pentru că ținem pasul cu ce adaugă Anthropic la datele tale de utilizare – ca să vezi mereu tot ce există. Pentru tine."
+                             "Resetarea de limită salvată apare acum cu adevărat. Anthropic o oferă doar unui client Claude Code actual, așa că programul se prezintă acum cu versiunea curentă – și cu versiunea Claude Code instalată la tine, dacă e mai nouă. Dacă ai o resetare, de la această versiune panoul o arată, împreună cu data expirării.",
+                             "De ce atât de repede după 2.8.0? Pentru că am verificat-o live imediat după lansare și am găsit singurul lucru care încă stătea în cale – și preferăm să-l reparăm azi decât să-ți lăsăm o funcție care merge doar pe hârtie. Pentru tine."
                          ],
                   "el":  [
-                             "Αποθηκευμένη επαναφορά ορίου: όταν η Anthropic σας δίνει μια επαναφορά που μπορείτε να κρατήσετε για αργότερα, ο πίνακας τη δείχνει πλέον – πόσες έχετε και πότε λήγει – και σας υπενθυμίζει όταν ένα όριο γεμίσει και όταν η επαναφορά πρόκειται να λήξει αχρησιμοποίητη. Την εξαργυρώνετε στο claude.ai › Ρυθμίσεις › Χρήση· το πρόγραμμα δεν την εξαργυρώνει ποτέ για εσάς.",
-                             "Ένα μικρό ▸ σημειώνει τον μετρητή του οποίου το όριο ισχύει αυτή τη στιγμή – με μια ματιά βλέπετε τι σας κρατάει πίσω.",
-                             "Το παράθυρο Ρουτίνες (Cowork) έχει κανονικό όνομα αντί για την κωδική ονομασία του διακομιστή.",
-                             "Γιατί νέα έκδοση; Επειδή ακολουθούμε όσα προσθέτει η Anthropic στα δεδομένα χρήσης σας – ώστε να βλέπετε πάντα ό,τι υπάρχει. Για εσάς."
+                             "Η αποθηκευμένη επαναφορά ορίου εμφανίζεται πλέον πραγματικά. Η Anthropic τη δίνει μόνο σε ενημερωμένο πρόγραμμα-πελάτη Claude Code, γι\u0027 αυτό το πρόγραμμα συστήνεται τώρα με την τρέχουσα έκδοση – και με την έκδοση του εγκατεστημένου σας Claude Code όταν είναι νεότερη. Αν έχετε επαναφορά, από αυτή την έκδοση ο πίνακας τη δείχνει, μαζί με τη λήξη της.",
+                             "Γιατί τόσο σύντομα μετά την 2.8.0; Επειδή την ελέγξαμε ζωντανά αμέσως μετά την κυκλοφορία και βρήκαμε το ένα πράγμα που ακόμη εμπόδιζε – και προτιμούμε να το διορθώσουμε σήμερα παρά να σας αφήσουμε μια λειτουργία που δουλεύει μόνο στα χαρτιά. Για εσάς."
                          ],
                   "bg":  [
-                             "Запазено нулиране на лимита: когато Anthropic ти даде нулиране, което можеш да запазиш за по-късно, панелът вече го показва – колко имаш и кога изтича – и напомня, когато лимитът е изчерпан и когато нулирането скоро ще изтече неизползвано. Използваш го в claude.ai › Настройки › Използване; програмата никога не го използва вместо теб.",
-                             "Малък знак ▸ отбелязва индикатора, чийто лимит важи в момента – с един поглед виждаш какво те спира.",
-                             "Прозорецът Рутини (Cowork) има истинско име вместо кодовото име на сървъра.",
-                             "Защо нова версия? Защото следваме това, което Anthropic добавя към данните ти за използване – за да виждаш винаги всичко, което има. За теб."
+                             "Запазеното нулиране на лимита вече наистина се показва. Anthropic го дава само на актуален клиент на Claude Code, затова програмата вече се представя с актуалната версия – и с версията на инсталирания при теб Claude Code, когато тя е по-нова. Ако имаш нулиране, от тази версия панелът го показва заедно със срока му.",
+                             "Защо толкова скоро след 2.8.0? Защото го проверихме на живо веднага след издаването и открихме единственото нещо, което още пречеше – и предпочитаме да го поправим днес, вместо да ти оставим функция, която работи само на хартия. За теб."
                          ],
                   "sk":  [
-                             "Uložený reset limitu: keď ti Anthropic dá reset, ktorý si môžeš nechať na neskôr, panel ho teraz zobrazí – koľko ich máš a kedy vyprší – a pripomenie ti, keď je limit plný a keď má reset čoskoro nevyužitý vypršať. Uplatníš ho na claude.ai › Nastavenia › Využitie; program ho za teba nikdy neuplatní.",
-                             "Malá značka ▸ označuje ukazovateľ, ktorého limit práve platí – na prvý pohľad vidíš, čo ťa brzdí.",
-                             "Okno Rutiny (Cowork) má poriadny názov namiesto kódového mena servera.",
-                             "Prečo nová verzia? Lebo držíme krok s tým, čo Anthropic pridáva k tvojim údajom o využití – aby si vždy videl všetko, čo existuje. Pre teba."
+                             "Uložený reset limitu sa teraz naozaj zobrazí. Anthropic ho vydáva len aktuálnemu klientovi Claude Code, preto sa program teraz hlási aktuálnou verziou – a verziou tvojho nainštalovaného Claude Code, keď je novšia. Ak reset máš, od tejto verzie ho panel ukáže aj s dátumom vypršania.",
+                             "Prečo tak skoro po 2.8.0? Lebo sme to hneď po vydaní overili naživo a našli jedinú vec, ktorá ešte stála v ceste – a radšej ju opravíme dnes, než by sme ti nechali funkciu, ktorá funguje len na papieri. Pre teba."
                          ],
                   "hr":  [
-                             "Spremljeno resetiranje ograničenja: kad vam Anthropic da resetiranje koje smijete sačuvati za kasnije, ploča ga sada prikazuje – koliko ih imate i kada istječe – i podsjeća vas kad je ograničenje puno i kad resetiranje uskoro istječe neiskorišteno. Iskorištavate ga na claude.ai › Postavke › Potrošnja; program ga nikada ne iskorištava umjesto vas.",
-                             "Mali znak ▸ označava mjerač čije ograničenje trenutačno vrijedi – na prvi pogled vidite što vas koči.",
-                             "Prozor Rutine (Cowork) ima pravo ime umjesto kodnog imena poslužitelja.",
-                             "Zašto nova verzija? Jer pratimo ono što Anthropic dodaje vašim podacima o potrošnji – da uvijek vidite sve što postoji. Za vas."
+                             "Spremljeno resetiranje ograničenja sada se doista prikazuje. Anthropic ga daje samo aktualnom klijentu Claude Codea, pa se program sada predstavlja aktualnom verzijom – i verzijom vašeg instaliranog Claude Codea kad je novija. Ako imate resetiranje, od ove ga verzije ploča prikazuje, zajedno s istekom.",
+                             "Zašto tako brzo nakon 2.8.0? Jer smo to provjerili uživo odmah nakon izdanja i pronašli jedinu stvar koja je još smetala – i radije to popravljamo danas nego da vam ostavimo funkciju koja radi samo na papiru. Za vas."
                          ],
                   "sv":  [
-                             "Sparad gränsåterställning: när Anthropic ger dig en återställning som du får spara till senare visar panelen den nu – hur många du har och när den går ut – och påminner dig när en gräns är full och när återställningen är på väg att gå ut oanvänd. Du löser in den på claude.ai › Inställningar › Användning; programmet löser aldrig in den åt dig.",
-                             "Ett litet ▸ markerar den mätare vars gräns gäller just nu – med en blick ser du vad som håller dig tillbaka.",
-                             "Fönstret Rutiner (Cowork) har ett riktigt namn i stället för serverns kodnamn.",
-                             "Varför en ny version? För att vi håller jämna steg med det Anthropic lägger till i dina användningsdata – så att du alltid ser allt som finns. För dig."
+                             "Den sparade gränsåterställningen visas nu på riktigt. Anthropic lämnar ut den bara till en aktuell Claude Code-klient, så programmet identifierar sig nu med den aktuella versionen – och med versionen av din installerade Claude Code när den är nyare. Har du en återställning visar panelen den från och med den här versionen, tillsammans med utgångsdatumet.",
+                             "Varför så snart efter 2.8.0? För att vi kontrollerade det live direkt efter släppet och hittade det enda som fortfarande stod i vägen – och vi fixar det hellre i dag än lämnar dig med en funktion som bara fungerar på papperet. För dig."
                          ],
                   "fi":  [
-                             "Tallennettu rajan nollaus: kun Anthropic antaa sinulle nollauksen, jonka saat säästää myöhemmäksi, paneeli näyttää sen nyt – montako sinulla on ja milloin se vanhenee – ja muistuttaa, kun raja on täynnä ja kun nollaus on vanhenemassa käyttämättä. Lunastat sen osoitteessa claude.ai › Asetukset › Käyttö; ohjelma ei koskaan lunasta sitä puolestasi.",
-                             "Pieni ▸ merkitsee mittarin, jonka raja on juuri nyt voimassa – yhdellä silmäyksellä näet, mikä sinua jarruttaa.",
-                             "Rutiinit (Cowork) -ikkunalla on kunnon nimi palvelimen koodinimen sijaan.",
-                             "Miksi uusi versio? Koska pysymme mukana siinä, mitä Anthropic lisää käyttötietoihisi – jotta näet aina kaiken, mitä on. Sinua varten."
+                             "Tallennettu rajan nollaus näkyy nyt oikeasti. Anthropic antaa sen vain ajantasaiselle Claude Code -asiakkaalle, joten ohjelma esittäytyy nyt nykyisellä versiolla – ja asennetun Claude Coden versiolla, kun se on uudempi. Jos sinulla on nollaus, paneeli näyttää sen tästä versiosta alkaen vanhenemispäivineen.",
+                             "Miksi näin pian 2.8.0:n jälkeen? Koska tarkistimme sen heti julkaisun jälkeen oikeassa käytössä ja löysimme sen yhden asian, joka oli vielä tiellä – ja korjaamme sen mieluummin tänään kuin jätämme sinulle toiminnon, joka toimii vain paperilla. Sinua varten."
                          ],
                   "da":  [
-                             "Gemt grænsenulstilling: når Anthropic giver dig en nulstilling, du må gemme til senere, viser panelet den nu – hvor mange du har, og hvornår den udløber – og minder dig om det, når en grænse er fuld, og når nulstillingen er ved at udløbe ubrugt. Du indløser den på claude.ai › Indstillinger › Forbrug; programmet indløser den aldrig for dig.",
-                             "Et lille ▸ markerer den måler, hvis grænse gælder lige nu – med ét blik ser du, hvad der holder dig tilbage.",
-                             "Vinduet Rutiner (Cowork) har et rigtigt navn i stedet for serverens kodenavn.",
-                             "Hvorfor en ny version? Fordi vi følger med i det, Anthropic føjer til dine forbrugsdata – så du altid ser alt, hvad der er. For dig."
+                             "Den gemte grænsenulstilling vises nu rigtigt. Anthropic giver den kun til en aktuel Claude Code-klient, så programmet identificerer sig nu med den aktuelle version – og med versionen af din installerede Claude Code, når den er nyere. Har du en nulstilling, viser panelet den fra denne version, sammen med udløbsdatoen.",
+                             "Hvorfor så hurtigt efter 2.8.0? Fordi vi tjekkede det live lige efter udgivelsen og fandt den ene ting, der stadig stod i vejen – og vi retter den hellere i dag end at efterlade dig med en funktion, der kun virker på papiret. For dig."
                          ],
                   "lt":  [
-                             "Išsaugotas limito atstatymas: kai Anthropic suteikia atstatymą, kurį galite pasilikti vėlesniam laikui, skydelis dabar jį rodo – kiek jų turite ir kada baigia galioti – ir primena, kai limitas išnaudotas ir kai atstatymas netrukus baigs galioti nepanaudotas. Panaudojate jį claude.ai › Nustatymai › Naudojimas; programa niekada jo nepanaudoja už jus.",
-                             "Mažas ▸ ženklas pažymi matuoklį, kurio limitas galioja šiuo metu – iš pirmo žvilgsnio matote, kas jus stabdo.",
-                             "Langas Rutinos (Cowork) turi tikrą pavadinimą vietoj serverio kodinio vardo.",
-                             "Kodėl nauja versija? Nes neatsiliekame nuo to, ką Anthropic prideda prie jūsų naudojimo duomenų – kad visada matytumėte viską, kas yra. Dėl jūsų."
+                             "Išsaugotas limito atstatymas dabar tikrai rodomas. Anthropic jį suteikia tik naujausiam Claude Code klientui, todėl programa dabar prisistato dabartine versija – o jūsų įdiegto Claude Code versija, kai ji naujesnė. Jei turite atstatymą, nuo šios versijos skydelis jį rodo kartu su galiojimo pabaiga.",
+                             "Kodėl taip greitai po 2.8.0? Nes iškart po išleidimo patikrinome tai realiomis sąlygomis ir radome vienintelį dalyką, kuris dar trukdė – ir verčiau tai sutvarkome šiandien, nei paliekame jums funkciją, veikiančią tik popieriuje. Dėl jūsų."
                          ],
                   "sl":  [
-                             "Shranjena ponastavitev omejitve: ko vam Anthropic da ponastavitev, ki jo smete shraniti za pozneje, jo plošča zdaj prikaže – koliko jih imate in kdaj poteče – ter vas opomni, ko je omejitev polna in ko bo ponastavitev kmalu neizkoriščena potekla. Unovčite jo na claude.ai › Nastavitve › Poraba; program je nikoli ne unovči namesto vas.",
-                             "Majhen ▸ označuje merilnik, katerega omejitev velja prav zdaj – na prvi pogled vidite, kaj vas zadržuje.",
-                             "Okno Rutine (Cowork) ima pravo ime namesto kodnega imena strežnika.",
-                             "Zakaj nova različica? Ker sledimo temu, kar Anthropic dodaja vašim podatkom o porabi – da vedno vidite vse, kar obstaja. Za vas."
+                             "Shranjena ponastavitev omejitve se zdaj res prikaže. Anthropic jo izda le posodobljenemu odjemalcu Claude Code, zato se program zdaj predstavi s trenutno različico – in z različico vašega nameščenega Claude Codea, kadar je novejša. Če ponastavitev imate, jo plošča od te različice naprej prikaže skupaj s potekom.",
+                             "Zakaj tako kmalu po 2.8.0? Ker smo to takoj po izdaji preverili v živo in našli edino stvar, ki je še bila na poti – in raje to popravimo danes, kot da vam pustimo funkcijo, ki deluje le na papirju. Za vas."
                          ],
                   "lv":  [
-                             "Saglabāta limita atiestatīšana: kad Anthropic jums piešķir atiestatīšanu, ko drīkstat paturēt vēlākam laikam, panelis to tagad rāda – cik jums ir un kad tā beidzas – un atgādina, kad limits ir pilns un kad atiestatīšana drīz beigsies neizmantota. Izmantojat to vietnē claude.ai › Iestatījumi › Lietojums; programma to nekad neizmanto jūsu vietā.",
-                             "Maza ▸ zīme atzīmē mērītāju, kura limits ir spēkā tieši tagad – ar vienu skatienu redzat, kas jūs kavē.",
-                             "Logam Rutīnas (Cowork) ir īsts nosaukums servera kodētā nosaukuma vietā.",
-                             "Kāpēc jauna versija? Jo mēs sekojam tam, ko Anthropic pievieno jūsu lietojuma datiem – lai jūs vienmēr redzētu visu, kas ir. Jums."
+                             "Saglabātā limita atiestatīšana tagad tiešām parādās. Anthropic to izsniedz tikai aktuālam Claude Code klientam, tāpēc programma tagad piesakās ar pašreizējo versiju – un ar jūsu instalētā Claude Code versiju, ja tā ir jaunāka. Ja jums ir atiestatīšana, no šīs versijas panelis to rāda kopā ar derīguma beigām.",
+                             "Kāpēc tik drīz pēc 2.8.0? Jo uzreiz pēc izlaišanas to pārbaudījām reālos apstākļos un atradām vienīgo, kas vēl traucēja – un labāk to salabojam šodien, nekā atstājam jums funkciju, kas darbojas tikai uz papīra. Jums."
                          ],
                   "et":  [
-                             "Salvestatud limiidi lähtestus: kui Anthropic annab sulle lähtestuse, mille võid hilisemaks alles hoida, näitab paneel seda nüüd – mitu sul on ja millal see aegub – ning tuletab meelde, kui limiit on täis ja kui lähtestus on kasutamata aegumas. Kasutad seda lehel claude.ai › Seaded › Kasutus; programm ei kasuta seda kunagi sinu eest.",
-                             "Väike ▸ märgib mõõdikut, mille limiit praegu kehtib – ühe pilguga näed, mis sind tagasi hoiab.",
-                             "Aknal Rutiinid (Cowork) on päris nimi serveri koodnime asemel.",
-                             "Miks uus versioon? Sest me käime kaasas sellega, mida Anthropic sinu kasutusandmetele lisab – et näeksid alati kõike, mis olemas on. Sinu jaoks."
+                             "Salvestatud limiidi lähtestus kuvatakse nüüd päriselt. Anthropic annab selle ainult ajakohasele Claude Code\u0027i kliendile, seega tutvustab programm end nüüd praeguse versiooniga – ja sinu paigaldatud Claude Code\u0027i versiooniga, kui see on uuem. Kui sul on lähtestus, näitab paneel seda alates sellest versioonist koos aegumisajaga.",
+                             "Miks nii ruttu pärast 2.8.0? Sest kontrollisime seda kohe pärast väljalaset päris kasutuses ja leidsime selle ühe asja, mis veel ees seisis – ja parandame selle pigem täna, kui jätame sulle funktsiooni, mis töötab ainult paberil. Sinu jaoks."
                          ],
                   "mt":  [
-                             "Risettjar tal-limitu salvat: meta Anthropic tagħtik risettjar li tista\u0027 żżomm għal aktar tard, il-pannell issa jurih – kemm għandek u meta jiskadi – u jfakkrek meta limitu jkun mimli u meta r-risettjar ikun wasal biex jiskadi mingħajr ma jintuża. Tużah fuq claude.ai › Issettjar › Użu; il-programm qatt ma jużah għalik.",
-                             "Sinjal żgħir ▸ jimmarka l-indikatur li l-limitu tiegħu japplika bħalissa – b\u0027daqqa t\u0027għajn tara x\u0027qed iżommok lura.",
-                             "It-tieqa Rutini (Cowork) għandha isem proprju minflok l-isem kodiċi tas-server.",
-                             "Għaliex verżjoni ġdida? Għax inżommu l-pass ma\u0027 dak li Anthropic iżżid mad-data tal-użu tiegħek – biex dejjem tara kulma hemm. Għalik."
+                             "Ir-risettjar tal-limitu salvat issa jidher tassew. Anthropic tagħtih biss lil klijent aġġornat ta\u0027 Claude Code, għalhekk il-programm issa jippreżenta ruħu bil-verżjoni attwali – u bil-verżjoni tal-Claude Code installat tiegħek meta tkun aktar ġdida. Jekk għandek risettjar, minn din il-verżjoni l-pannell jurih, flimkien mal-iskadenza.",
+                             "Għaliex daqshekk malajr wara l-2.8.0? Għax iċċekkjajnieh live eżatt wara r-rilaxx u sibna l-unika ħaġa li kienet għadha fit-triq – u nippreferu nirranġawha llum milli nħallulek funzjoni li taħdem biss fuq il-karta. Għalik."
                          ],
                   "ga":  [
-                             "Athshocrú teorann sábháilte: nuair a thugann Anthropic athshocrú duit is féidir leat a choinneáil le haghaidh níos déanaí, taispeánann an painéal anois é – cé mhéad atá agat agus cathain a éagfaidh sé – agus cuireann sé i gcuimhne duit nuair a bhíonn teorainn lán agus nuair atá an t-athshocrú ar tí dul in éag gan úsáid. Úsáideann tú é ar claude.ai › Socruithe › Úsáid; ní úsáideann an ríomhchlár riamh é ar do shon.",
-                             "Marcálann ▸ beag an tomhsaire a bhfuil a theorainn i bhfeidhm faoi láthair – feiceann tú d\u0027aon amharc cad atá do do choinneáil siar.",
-                             "Tá ainm ceart ar an bhfuinneog Gnáthaimh (Cowork) in ionad chódainm an fhreastalaí.",
-                             "Cén fáth leagan nua? Mar go gcoinnímid suas leis an méid a chuireann Anthropic le do shonraí úsáide – ionas go bhfeiceann tú i gcónaí gach a bhfuil ann. Duitse."
+                             "Taispeánann an t-athshocrú teorann sábháilte anois i ndáiríre. Ní thugann Anthropic é ach do chliant Claude Code reatha, mar sin cuireann an ríomhchlár é féin in aithne anois leis an leagan reatha – agus le leagan do Claude Code suiteáilte nuair is nuaí é sin. Má tá athshocrú agat, taispeánann an painéal é ón leagan seo ar aghaidh, mar aon lena dháta éaga.",
+                             "Cén fáth chomh luath sin tar éis 2.8.0? Mar gur sheiceálamar beo é díreach tar éis an eisiúna agus gur aimsíomar an t-aon rud a bhí fós sa bhealach – agus b\u0027fhearr linn é a dheisiú inniu ná gné a fhágáil agat nach n-oibríonn ach ar pháipéar. Duitse."
                          ]
               }
 }

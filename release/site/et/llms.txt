@@ -15,7 +15,7 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 - **Litsents**: MIT, avatud lähtekood GitHubis
 - **Autor**: Gábor Vidovics, Ungari – sõltumatu, Anthropicuga mitte seotud
 
-- Versioon: 2.8.0
+- Versioon: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Varsti saadaval
 - https://claudeusagemonitor.com/et/

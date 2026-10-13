@@ -2,6 +2,17 @@
 
 <!-- newer-versions-here -->
 
+## [2.8.1] - 2026-10-13
+
+- The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code's version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.
+- Why so soon after 2.8.0? Because we checked it live right after the release and found the one thing still in the way – and we would rather fix it today than leave you with a feature that only works on paper. For you.
+
+*Magyarul:*
+
+- Az elmentett visszaállítás mostantól tényleg megjelenik. Az Anthropic csak friss Claude Code-kliensnek adja ki, ezért a program mostantól az aktuális verzióval azonosítja magát – és a gépeden telepített Claude Code verziójával, ha az újabb. Ha van visszaállításod, ettől a verziótól a panel mutatja, a lejáratával együtt.
+- Miért ilyen gyorsan a 2.8.0 után? Mert a kiadás után azonnal élesben ellenőriztük, és megtaláltuk az egyetlen dolgot, ami még útban volt – és inkább ma javítjuk, mint hogy egy csak papíron működő funkciót hagyjunk nálatok. Értetek.
+
+
 ## [2.8.0] - 2026-10-13
 
 - Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.

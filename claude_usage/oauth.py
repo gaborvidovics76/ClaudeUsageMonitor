@@ -18,7 +18,11 @@ import base64
 import hashlib
 import json
 import os
+import re
 import secrets
+import shutil
+import subprocess
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -44,12 +48,58 @@ BETA_HEADER = "oauth-2025-04-20"
 # User-Agent with "Error 1010" and heavily rate-limits a browser UA. So we use
 # EXACTLY the real Claude Code headers - this makes the request indistinguishable
 # from the official client (passes Cloudflare and gets normal limits).
-CLI_UA = "claude-cli/2.1.229 (external)"
+#
+# The VERSION in it matters too: the server hands the saved limit resets (cedar_ember) only to a
+# current client - with an old version the block comes back "ineligible: cli_version". So the app
+# identifies itself with the Claude Code version installed on this machine (`claude --version`,
+# asked once, never blocking the panel) and never with less than the floor below.
+# Bump the floor with every release - it is what users without Claude Code get.
+CLI_VERSION_FLOOR = "2.1.296"
+_cli_version: Optional[str] = None
+_cli_lock = threading.Lock()
+
+
+def _parse_version(text: str) -> Optional[Tuple[int, ...]]:
+    m = re.search(r"(\d+)\.(\d+)\.(\d+)", text or "")
+    return tuple(int(x) for x in m.groups()) if m else None
+
+
+def installed_cli_version() -> str:
+    """The Claude Code version installed on this machine ("" when there is none or it does not answer)."""
+    exe = shutil.which("claude")
+    if not exe:
+        return ""
+    cmd = [exe, "--version"]
+    if exe.lower().endswith((".cmd", ".bat")):
+        cmd = ["cmd", "/c", exe, "--version"]
+    flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    try:
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=5, creationflags=flags, check=False)
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    ver = _parse_version(out.stdout) or _parse_version(out.stderr)
+    return ".".join(str(x) for x in ver) if ver else ""
+
+
+def cli_version() -> str:
+    """max(installed Claude Code version, CLI_VERSION_FLOOR) - computed once, cached."""
+    global _cli_version
+    with _cli_lock:
+        if _cli_version is None:
+            found = installed_cli_version()
+            floor = _parse_version(CLI_VERSION_FLOOR)
+            got = _parse_version(found)
+            _cli_version = found if (got and floor and got > floor) else CLI_VERSION_FLOOR
+        return _cli_version
+
+
+def client_ua() -> str:
+    return f"claude-cli/{cli_version()} (external, cli)"
 
 
 def _client_headers(extra: Optional[dict] = None) -> dict:
     h = {
-        "User-Agent": CLI_UA,
+        "User-Agent": client_ua(),
         "x-app": "cli",
         "Accept": "application/json",
         "Content-Type": "application/json",

@@ -388,7 +388,11 @@ class ApiReader:
                                     (sc.get("model") or {}).get("display_name"),
                                     lim.get("percent"), lim.get("is_active")))
                         try:
+                            _dbg(f"client identity: {oauth.client_ua()}")
                             rs = self._pick_resets(raw)
+                            block = raw.get(RESETS_KEY)
+                            if isinstance(block, dict) and block.get("eligible") is False:
+                                _dbg(f"saved resets: not eligible, reason={block.get('ineligible_reason')}")
                             if rs is None:
                                 _dbg("saved resets: no block in the answer")
                             else:

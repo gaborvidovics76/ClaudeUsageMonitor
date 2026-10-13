@@ -15,7 +15,7 @@ Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được t�
 - **Giấy phép**: MIT, mã nguồn mở trên GitHub
 - **Tác giả**: Gábor Vidovics, Hungary – độc lập, không liên kết với Anthropic
 
-- Phiên bản: 2.8.0
+- Phiên bản: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Sắp ra mắt
 - https://claudeusagemonitor.com/vi/

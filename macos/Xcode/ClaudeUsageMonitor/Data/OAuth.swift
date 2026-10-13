@@ -40,7 +40,10 @@ enum OAuth {
     // The token endpoint is behind Cloudflare, which blocks generic clients and rate-limits
     // browser user agents. The Windows app sends the headers of the official command-line client
     // for exactly this reason; this port keeps them so that both builds behave the same.
-    static let userAgent = "claude-cli/2.1.229 (external)"
+    // The VERSION matters: the server hands the saved limit resets (cedar_ember) only to a current client
+    // (an old one gets "ineligible: cli_version"). Keep it at a current Claude Code version with every
+    // release - the sandboxed app cannot ask the installed `claude --version` the way the Windows app does.
+    static let userAgent = "claude-cli/2.1.296 (external, cli)"
 
     static func headers(_ extra: [String: String] = [:]) -> [String: String] {
         var h = ["User-Agent": userAgent, "x-app": "cli", "Accept": "application/json", "Content-Type": "application/json"]

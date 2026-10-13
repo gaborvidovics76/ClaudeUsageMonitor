@@ -15,7 +15,7 @@
 - **Άδεια**: MIT, ανοιχτός κώδικας στο GitHub
 - **Δημιουργός**: Gábor Vidovics, Ουγγαρία – ανεξάρτητος, χωρίς σχέση με την Anthropic
 
-- Έκδοση: 2.8.0
+- Έκδοση: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Έρχεται σύντομα
 - https://claudeusagemonitor.com/el/

@@ -1,0 +1,146 @@
+{
+  "en": [
+    "The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code's version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.",
+    "Why so soon after 2.8.0? Because we checked it live right after the release and found the one thing still in the way – and we would rather fix it today than leave you with a feature that only works on paper. For you."
+  ],
+  "hu": [
+    "Az elmentett visszaállítás mostantól tényleg megjelenik. Az Anthropic csak friss Claude Code-kliensnek adja ki, ezért a program mostantól az aktuális verzióval azonosítja magát – és a gépeden telepített Claude Code verziójával, ha az újabb. Ha van visszaállításod, ettől a verziótól a panel mutatja, a lejáratával együtt.",
+    "Miért ilyen gyorsan a 2.8.0 után? Mert a kiadás után azonnal élesben ellenőriztük, és megtaláltuk az egyetlen dolgot, ami még útban volt – és inkább ma javítjuk, mint hogy egy csak papíron működő funkciót hagyjunk nálatok. Értetek."
+  ],
+  "de": [
+    "Die gespeicherte Limit-Zurücksetzung erscheint jetzt wirklich. Anthropic gibt sie nur an einen aktuellen Claude-Code-Client heraus, deshalb meldet sich das Programm jetzt mit der aktuellen Version – und mit der Version deines installierten Claude Code, wenn die neuer ist. Hast du eine Zurücksetzung, zeigt das Panel sie ab dieser Version an, samt Ablaufdatum.",
+    "Warum so kurz nach 2.8.0? Weil wir es direkt nach der Veröffentlichung live geprüft und die eine Sache gefunden haben, die noch im Weg stand – und wir beheben sie lieber heute, als dir eine Funktion zu lassen, die nur auf dem Papier funktioniert. Für dich."
+  ],
+  "fr": [
+    "La réinitialisation de limite en réserve apparaît désormais vraiment. Anthropic ne la fournit qu'à un client Claude Code à jour, c'est pourquoi le programme s'identifie maintenant avec la version actuelle – et avec la version de votre Claude Code installé si elle est plus récente. Si vous avez une réinitialisation, le panneau l'affiche à partir de cette version, avec sa date d'expiration.",
+    "Pourquoi si vite après la 2.8.0 ? Parce que nous l'avons vérifié en conditions réelles juste après la sortie et trouvé la seule chose qui bloquait encore – et nous préférons corriger aujourd'hui plutôt que de vous laisser une fonction qui ne marche que sur le papier. Pour vous."
+  ],
+  "es": [
+    "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
+    "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
+  ],
+  "it": [
+    "Il reset del limite salvato ora compare davvero. Anthropic lo fornisce solo a un client Claude Code aggiornato, perciò il programma ora si presenta con la versione attuale – e con la versione del tuo Claude Code installato quando è più recente. Se hai un reset, da questa versione il pannello lo mostra, insieme alla scadenza.",
+    "Perché così presto dopo la 2.8.0? Perché l'abbiamo verificato dal vivo subito dopo il rilascio e abbiamo trovato l'unica cosa che ancora intralciava – e preferiamo sistemarla oggi piuttosto che lasciarti una funzione che funziona solo sulla carta. Per te."
+  ],
+  "pt": [
+    "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
+    "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
+  ],
+  "pl": [
+    "Zapisany reset limitu teraz naprawdę się pokazuje. Anthropic udostępnia go tylko aktualnemu klientowi Claude Code, dlatego program przedstawia się teraz bieżącą wersją – a wersją zainstalowanego u Ciebie Claude Code, gdy jest nowsza. Jeśli masz reset, od tej wersji panel go pokazuje, razem z datą wygaśnięcia.",
+    "Dlaczego tak szybko po 2.8.0? Bo sprawdziliśmy to na żywo zaraz po wydaniu i znaleźliśmy jedyną rzecz, która jeszcze przeszkadzała – i wolimy naprawić ją dziś, niż zostawić Ci funkcję działającą tylko na papierze. Dla Ciebie."
+  ],
+  "nl": [
+    "De bewaarde limietreset verschijnt nu echt. Anthropic geeft hem alleen aan een actuele Claude Code-client, dus het programma meldt zich nu met de actuele versie – en met de versie van je geïnstalleerde Claude Code als die nieuwer is. Heb je een reset, dan toont het paneel hem vanaf deze versie, met de vervaldatum.",
+    "Waarom zo snel na 2.8.0? Omdat we het direct na de release live hebben gecontroleerd en het ene ding vonden dat nog in de weg zat – en we lossen dat liever vandaag op dan je een functie te laten die alleen op papier werkt. Voor jou."
+  ],
+  "ru": [
+    "Сохранённый сброс лимита теперь действительно отображается. Anthropic выдаёт его только актуальному клиенту Claude Code, поэтому программа теперь представляется текущей версией – а версией установленного у вас Claude Code, если она новее. Если сброс у вас есть, с этой версии панель показывает его вместе со сроком действия.",
+    "Почему так скоро после 2.8.0? Потому что мы проверили это вживую сразу после выпуска и нашли единственное, что ещё мешало – и предпочитаем исправить сегодня, а не оставлять вам функцию, которая работает только на бумаге. Для вас."
+  ],
+  "cs": [
+    "Uložený reset limitu se teď opravdu zobrazí. Anthropic ho vydává jen aktuálnímu klientovi Claude Code, proto se program nyní hlásí aktuální verzí – a verzí vašeho nainstalovaného Claude Code, když je novější. Pokud reset máte, od této verze ho panel ukáže i s datem vypršení.",
+    "Proč tak brzy po 2.8.0? Protože jsme to hned po vydání ověřili naživo a našli jedinou věc, která ještě stála v cestě – a raději ji opravíme dnes, než abychom vám nechali funkci, která funguje jen na papíře. Pro vás."
+  ],
+  "tr": [
+    "Kayıtlı limit sıfırlama artık gerçekten görünüyor. Anthropic bunu yalnızca güncel bir Claude Code istemcisine veriyor; bu yüzden program artık kendini güncel sürümle tanıtıyor – yüklü Claude Code'un daha yeniyse onun sürümüyle. Bir sıfırlaman varsa panel bu sürümden itibaren son kullanma tarihiyle birlikte gösteriyor.",
+    "Neden 2.8.0'dan bu kadar kısa süre sonra? Çünkü yayından hemen sonra canlı olarak kontrol ettik ve hâlâ engel olan tek şeyi bulduk – sana yalnızca kâğıt üstünde çalışan bir özellik bırakmaktansa bugün düzeltmeyi yeğleriz. Senin için."
+  ],
+  "pt-PT": [
+    "A reposição de limite guardada agora aparece mesmo. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa passa a identificar-se com a versão atual – e com a versão do teu Claude Code instalado quando esta for mais recente. Se tiveres uma reposição, a partir desta versão o painel mostra-a, com a data de expiração.",
+    "Porquê tão cedo depois da 2.8.0? Porque a verificámos ao vivo logo após o lançamento e encontrámos a única coisa que ainda atrapalhava – e preferimos corrigi-la hoje a deixar-te uma função que só funciona no papel. Por ti."
+  ],
+  "pt-BR": [
+    "A redefinição de limite guardada agora aparece de verdade. A Anthropic só a entrega a um cliente Claude Code atual, por isso o programa agora se identifica com a versão atual – e com a versão do seu Claude Code instalado quando ela for mais nova. Se você tiver uma redefinição, a partir desta versão o painel a mostra, junto com a data de expiração.",
+    "Por que tão cedo depois da 2.8.0? Porque verificamos ao vivo logo após o lançamento e encontramos a única coisa que ainda atrapalhava – e preferimos corrigir hoje a deixar você com um recurso que só funciona no papel. Para você."
+  ],
+  "es-ES": [
+    "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su caducidad.",
+    "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que aún estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona sobre el papel. Por ti."
+  ],
+  "es-419": [
+    "El reinicio de límite guardado ahora sí aparece. Anthropic solo lo entrega a un cliente de Claude Code actual, así que el programa ahora se identifica con la versión actual – y con la versión de tu Claude Code instalado cuando es más reciente. Si tienes un reinicio, el panel lo muestra a partir de esta versión, junto con su vencimiento.",
+    "¿Por qué tan pronto después de la 2.8.0? Porque lo comprobamos en vivo justo después del lanzamiento y encontramos lo único que todavía estorbaba – y preferimos arreglarlo hoy antes que dejarte una función que solo funciona en el papel. Para ti."
+  ],
+  "ja": [
+    "保存済みの上限リセットが、今度こそ表示されます。Anthropic はこれを最新の Claude Code クライアントにしか渡さないため、アプリは現在のバージョンで自分を名乗るようになりました。インストール済みの Claude Code の方が新しければ、そのバージョンを使います。リセットをお持ちなら、このバージョンからパネルに期限とともに表示されます。",
+    "なぜ 2.8.0 のすぐ後に？ リリース直後に実際の環境で確認し、まだ邪魔をしていたただ一つの点を見つけたからです。紙の上でしか動かない機能を残すより、今日直すことを選びました。あなたのために。"
+  ],
+  "ko": [
+    "저장된 한도 초기화가 이제 정말로 표시돼요. Anthropic은 이를 최신 Claude Code 클라이언트에만 제공하기 때문에, 앱이 이제 최신 버전으로 자신을 알려요. 설치된 Claude Code가 더 새 버전이면 그 버전을 사용해요. 초기화가 있다면 이 버전부터 패널에 만료일과 함께 표시돼요.",
+    "왜 2.8.0 직후에 또 나왔냐고요? 출시 직후 실제 환경에서 확인해 아직 걸림돌이던 단 하나를 찾았기 때문이에요. 서류상으로만 작동하는 기능을 남겨두기보다 오늘 고치는 쪽을 택했어요. 여러분을 위해서."
+  ],
+  "zh-CN": [
+    "已保存的额度重置现在真的会显示了。Anthropic 只把它提供给最新的 Claude Code 客户端，因此程序现在以当前版本表明身份——如果你安装的 Claude Code 更新，则使用它的版本。如果你有重置，从这个版本起面板会连同到期时间一起显示。",
+    "为什么在 2.8.0 之后这么快又发版？因为发布后我们立刻在真实环境中做了检查，找到了唯一还挡着路的问题——我们宁愿今天修好，也不愿留给你一个只在纸面上可用的功能。为了你。"
+  ],
+  "zh-TW": [
+    "已儲存的額度重設現在真的會顯示了。Anthropic 只把它提供給最新的 Claude Code 用戶端，因此程式現在以目前版本表明身分——如果你安裝的 Claude Code 更新，則使用它的版本。如果你有重設，從這個版本起面板會連同到期時間一起顯示。",
+    "為什麼在 2.8.0 之後這麼快又發版？因為發布後我們立刻在真實環境中檢查，找到了唯一還擋著路的問題——我們寧願今天修好，也不願留給你一個只在紙上可用的功能。為了你。"
+  ],
+  "id": [
+    "Reset batas tersimpan kini benar-benar muncul. Anthropic hanya memberikannya kepada klien Claude Code terbaru, jadi program kini memperkenalkan diri dengan versi terbaru – dan dengan versi Claude Code yang terpasang jika lebih baru. Jika Anda punya reset, mulai versi ini panel menampilkannya beserta masa berlakunya.",
+    "Mengapa begitu cepat setelah 2.8.0? Karena kami mengeceknya langsung setelah rilis dan menemukan satu hal yang masih menghalangi – dan kami lebih memilih memperbaikinya hari ini daripada meninggalkan fitur yang hanya berfungsi di atas kertas. Untuk Anda."
+  ],
+  "vi": [
+    "Lượt đặt lại giới hạn đã lưu giờ thực sự hiển thị. Anthropic chỉ cấp nó cho ứng dụng Claude Code phiên bản mới, nên chương trình giờ tự nhận diện bằng phiên bản hiện tại – và bằng phiên bản Claude Code bạn đã cài nếu mới hơn. Nếu bạn có lượt đặt lại, từ phiên bản này bảng điều khiển sẽ hiển thị cùng hạn dùng.",
+    "Vì sao lại sớm thế sau 2.8.0? Vì ngay sau khi phát hành chúng tôi đã kiểm tra thực tế và tìm ra điều duy nhất còn cản trở – và chúng tôi thà sửa hôm nay còn hơn để lại cho bạn một tính năng chỉ chạy trên giấy. Vì bạn."
+  ],
+  "ro": [
+    "Resetarea de limită salvată apare acum cu adevărat. Anthropic o oferă doar unui client Claude Code actual, așa că programul se prezintă acum cu versiunea curentă – și cu versiunea Claude Code instalată la tine, dacă e mai nouă. Dacă ai o resetare, de la această versiune panoul o arată, împreună cu data expirării.",
+    "De ce atât de repede după 2.8.0? Pentru că am verificat-o live imediat după lansare și am găsit singurul lucru care încă stătea în cale – și preferăm să-l reparăm azi decât să-ți lăsăm o funcție care merge doar pe hârtie. Pentru tine."
+  ],
+  "el": [
+    "Η αποθηκευμένη επαναφορά ορίου εμφανίζεται πλέον πραγματικά. Η Anthropic τη δίνει μόνο σε ενημερωμένο πρόγραμμα-πελάτη Claude Code, γι' αυτό το πρόγραμμα συστήνεται τώρα με την τρέχουσα έκδοση – και με την έκδοση του εγκατεστημένου σας Claude Code όταν είναι νεότερη. Αν έχετε επαναφορά, από αυτή την έκδοση ο πίνακας τη δείχνει, μαζί με τη λήξη της.",
+    "Γιατί τόσο σύντομα μετά την 2.8.0; Επειδή την ελέγξαμε ζωντανά αμέσως μετά την κυκλοφορία και βρήκαμε το ένα πράγμα που ακόμη εμπόδιζε – και προτιμούμε να το διορθώσουμε σήμερα παρά να σας αφήσουμε μια λειτουργία που δουλεύει μόνο στα χαρτιά. Για εσάς."
+  ],
+  "bg": [
+    "Запазеното нулиране на лимита вече наистина се показва. Anthropic го дава само на актуален клиент на Claude Code, затова програмата вече се представя с актуалната версия – и с версията на инсталирания при теб Claude Code, когато тя е по-нова. Ако имаш нулиране, от тази версия панелът го показва заедно със срока му.",
+    "Защо толкова скоро след 2.8.0? Защото го проверихме на живо веднага след издаването и открихме единственото нещо, което още пречеше – и предпочитаме да го поправим днес, вместо да ти оставим функция, която работи само на хартия. За теб."
+  ],
+  "sk": [
+    "Uložený reset limitu sa teraz naozaj zobrazí. Anthropic ho vydáva len aktuálnemu klientovi Claude Code, preto sa program teraz hlási aktuálnou verziou – a verziou tvojho nainštalovaného Claude Code, keď je novšia. Ak reset máš, od tejto verzie ho panel ukáže aj s dátumom vypršania.",
+    "Prečo tak skoro po 2.8.0? Lebo sme to hneď po vydaní overili naživo a našli jedinú vec, ktorá ešte stála v ceste – a radšej ju opravíme dnes, než by sme ti nechali funkciu, ktorá funguje len na papieri. Pre teba."
+  ],
+  "hr": [
+    "Spremljeno resetiranje ograničenja sada se doista prikazuje. Anthropic ga daje samo aktualnom klijentu Claude Codea, pa se program sada predstavlja aktualnom verzijom – i verzijom vašeg instaliranog Claude Codea kad je novija. Ako imate resetiranje, od ove ga verzije ploča prikazuje, zajedno s istekom.",
+    "Zašto tako brzo nakon 2.8.0? Jer smo to provjerili uživo odmah nakon izdanja i pronašli jedinu stvar koja je još smetala – i radije to popravljamo danas nego da vam ostavimo funkciju koja radi samo na papiru. Za vas."
+  ],
+  "sv": [
+    "Den sparade gränsåterställningen visas nu på riktigt. Anthropic lämnar ut den bara till en aktuell Claude Code-klient, så programmet identifierar sig nu med den aktuella versionen – och med versionen av din installerade Claude Code när den är nyare. Har du en återställning visar panelen den från och med den här versionen, tillsammans med utgångsdatumet.",
+    "Varför så snart efter 2.8.0? För att vi kontrollerade det live direkt efter släppet och hittade det enda som fortfarande stod i vägen – och vi fixar det hellre i dag än lämnar dig med en funktion som bara fungerar på papperet. För dig."
+  ],
+  "fi": [
+    "Tallennettu rajan nollaus näkyy nyt oikeasti. Anthropic antaa sen vain ajantasaiselle Claude Code -asiakkaalle, joten ohjelma esittäytyy nyt nykyisellä versiolla – ja asennetun Claude Coden versiolla, kun se on uudempi. Jos sinulla on nollaus, paneeli näyttää sen tästä versiosta alkaen vanhenemispäivineen.",
+    "Miksi näin pian 2.8.0:n jälkeen? Koska tarkistimme sen heti julkaisun jälkeen oikeassa käytössä ja löysimme sen yhden asian, joka oli vielä tiellä – ja korjaamme sen mieluummin tänään kuin jätämme sinulle toiminnon, joka toimii vain paperilla. Sinua varten."
+  ],
+  "da": [
+    "Den gemte grænsenulstilling vises nu rigtigt. Anthropic giver den kun til en aktuel Claude Code-klient, så programmet identificerer sig nu med den aktuelle version – og med versionen af din installerede Claude Code, når den er nyere. Har du en nulstilling, viser panelet den fra denne version, sammen med udløbsdatoen.",
+    "Hvorfor så hurtigt efter 2.8.0? Fordi vi tjekkede det live lige efter udgivelsen og fandt den ene ting, der stadig stod i vejen – og vi retter den hellere i dag end at efterlade dig med en funktion, der kun virker på papiret. For dig."
+  ],
+  "lt": [
+    "Išsaugotas limito atstatymas dabar tikrai rodomas. Anthropic jį suteikia tik naujausiam Claude Code klientui, todėl programa dabar prisistato dabartine versija – o jūsų įdiegto Claude Code versija, kai ji naujesnė. Jei turite atstatymą, nuo šios versijos skydelis jį rodo kartu su galiojimo pabaiga.",
+    "Kodėl taip greitai po 2.8.0? Nes iškart po išleidimo patikrinome tai realiomis sąlygomis ir radome vienintelį dalyką, kuris dar trukdė – ir verčiau tai sutvarkome šiandien, nei paliekame jums funkciją, veikiančią tik popieriuje. Dėl jūsų."
+  ],
+  "sl": [
+    "Shranjena ponastavitev omejitve se zdaj res prikaže. Anthropic jo izda le posodobljenemu odjemalcu Claude Code, zato se program zdaj predstavi s trenutno različico – in z različico vašega nameščenega Claude Codea, kadar je novejša. Če ponastavitev imate, jo plošča od te različice naprej prikaže skupaj s potekom.",
+    "Zakaj tako kmalu po 2.8.0? Ker smo to takoj po izdaji preverili v živo in našli edino stvar, ki je še bila na poti – in raje to popravimo danes, kot da vam pustimo funkcijo, ki deluje le na papirju. Za vas."
+  ],
+  "lv": [
+    "Saglabātā limita atiestatīšana tagad tiešām parādās. Anthropic to izsniedz tikai aktuālam Claude Code klientam, tāpēc programma tagad piesakās ar pašreizējo versiju – un ar jūsu instalētā Claude Code versiju, ja tā ir jaunāka. Ja jums ir atiestatīšana, no šīs versijas panelis to rāda kopā ar derīguma beigām.",
+    "Kāpēc tik drīz pēc 2.8.0? Jo uzreiz pēc izlaišanas to pārbaudījām reālos apstākļos un atradām vienīgo, kas vēl traucēja – un labāk to salabojam šodien, nekā atstājam jums funkciju, kas darbojas tikai uz papīra. Jums."
+  ],
+  "et": [
+    "Salvestatud limiidi lähtestus kuvatakse nüüd päriselt. Anthropic annab selle ainult ajakohasele Claude Code'i kliendile, seega tutvustab programm end nüüd praeguse versiooniga – ja sinu paigaldatud Claude Code'i versiooniga, kui see on uuem. Kui sul on lähtestus, näitab paneel seda alates sellest versioonist koos aegumisajaga.",
+    "Miks nii ruttu pärast 2.8.0? Sest kontrollisime seda kohe pärast väljalaset päris kasutuses ja leidsime selle ühe asja, mis veel ees seisis – ja parandame selle pigem täna, kui jätame sulle funktsiooni, mis töötab ainult paberil. Sinu jaoks."
+  ],
+  "mt": [
+    "Ir-risettjar tal-limitu salvat issa jidher tassew. Anthropic tagħtih biss lil klijent aġġornat ta' Claude Code, għalhekk il-programm issa jippreżenta ruħu bil-verżjoni attwali – u bil-verżjoni tal-Claude Code installat tiegħek meta tkun aktar ġdida. Jekk għandek risettjar, minn din il-verżjoni l-pannell jurih, flimkien mal-iskadenza.",
+    "Għaliex daqshekk malajr wara l-2.8.0? Għax iċċekkjajnieh live eżatt wara r-rilaxx u sibna l-unika ħaġa li kienet għadha fit-triq – u nippreferu nirranġawha llum milli nħallulek funzjoni li taħdem biss fuq il-karta. Għalik."
+  ],
+  "ga": [
+    "Taispeánann an t-athshocrú teorann sábháilte anois i ndáiríre. Ní thugann Anthropic é ach do chliant Claude Code reatha, mar sin cuireann an ríomhchlár é féin in aithne anois leis an leagan reatha – agus le leagan do Claude Code suiteáilte nuair is nuaí é sin. Má tá athshocrú agat, taispeánann an painéal é ón leagan seo ar aghaidh, mar aon lena dháta éaga.",
+    "Cén fáth chomh luath sin tar éis 2.8.0? Mar gur sheiceálamar beo é díreach tar éis an eisiúna agus gur aimsíomar an t-aon rud a bhí fós sa bhealach – agus b'fhearr linn é a dheisiú inniu ná gné a fhágáil agat nach n-oibríonn ach ar pháipéar. Duitse."
+  ]
+}

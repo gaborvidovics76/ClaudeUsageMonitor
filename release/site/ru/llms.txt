@@ -15,7 +15,7 @@ Claude Usage Monitor – это бесплатный виджет с откры�
 - **Лицензия**: MIT, открытый исходный код на GitHub
 - **Автор**: Gábor Vidovics, Венгрия – независимый разработчик, не связан с Anthropic
 
-- Версия: 2.8.0
+- Версия: 2.8.1
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Совсем скоро
 - https://claudeusagemonitor.com/ru/

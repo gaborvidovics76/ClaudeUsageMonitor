@@ -5,12 +5,20 @@
   <subtitle>Free desktop widget for Claude usage limits (Windows and macOS): new versions and what changed.</subtitle>
   <link rel="self" href="https://claudeusagemonitor.com/releases.xml"/>
   <link rel="alternate" href="https://claudeusagemonitor.com/"/>
-  <updated>2026-10-13T09:51:38Z</updated>
+  <updated>2026-10-13T10:28:50Z</updated>
   <author><name>Vidovics Gábor</name><uri>https://claudeusagemonitor.com/</uri></author>
+  <entry>
+    <id>https://claudeusagemonitor.com/#release-2.8.1</id>
+    <title>Claude Usage Monitor 2.8.1</title>
+    <updated>2026-10-13T10:28:50Z</updated>
+    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
+    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.1.zip" length="49159234"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;The saved limit reset now really shows up. Anthropic hands it only to a current Claude Code client, so the program now identifies itself with the current version – and with your installed Claude Code&amp;#x27;s version when that is newer. If you have a reset, the panel shows it from this version on, together with its expiry.&lt;/li&gt;&lt;li&gt;Why so soon after 2.8.0? Because we checked it live right after the release and found the one thing still in the way – and we would rather fix it today than leave you with a feature that only works on paper. For you.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://claudeusagemonitor.com/#release-2.8.0</id>
     <title>Claude Usage Monitor 2.8.0</title>
-    <updated>2026-10-13T09:51:38Z</updated>
+    <updated>2026-10-13T10:06:14Z</updated>
     <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
     <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.8.0.zip" length="49158593"/>
     <content type="html">&lt;ul&gt;&lt;li&gt;Saved limit reset: when Anthropic hands you a limit reset you may keep for later, the panel now shows it – how many you have and when it expires – and reminds you when a limit is full and when the reset is about to expire unused. You redeem it on claude.ai › Settings › Usage; the program never redeems it for you.&lt;/li&gt;&lt;li&gt;A small ▸ marks the gauge whose limit applies right now – at a glance you see which one is holding you back.&lt;/li&gt;&lt;li&gt;The Routines (Cowork) window has a proper name instead of the server&amp;#x27;s code name.&lt;/li&gt;&lt;li&gt;Why a new version? Because we keep pace with what Anthropic adds to your usage data – so you always see everything there is. For you.&lt;/li&gt;&lt;/ul&gt;</content>
