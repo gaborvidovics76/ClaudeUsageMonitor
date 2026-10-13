@@ -58,7 +58,13 @@ $live = Invoke-RestMethod -Uri ($BaseUrl + "manifest.json?" + $bust) -TimeoutSec
 if ($live.version -ne $Version -or $live.sha256 -ne $local.sha256) { throw "LIVE manifest mismatch: $($live.version) / $($live.sha256)" }
 $head = Invoke-WebRequest -Uri ($BaseUrl + "versions/$zipName") -Method Head -UseBasicParsing -TimeoutSec 60
 if ([int64]$head.Headers["Content-Length"] -ne $bytes.Length) { throw "LIVE zip size mismatch: $($head.Headers['Content-Length'])" }
-$dl = Invoke-WebRequest -Uri ($BaseUrl + "versions/$zipName?" + $bust) -UseBasicParsing -TimeoutSec 300
+# right after the upload the proxy cache can still answer 404 for a second or two - retry a few times
+$dl = $null
+for ($try = 1; $try -le 5 -and -not $dl; $try++) {
+    try { $dl = Invoke-WebRequest -Uri ($BaseUrl + "versions/$zipName?" + [guid]::NewGuid().ToString("N")) -UseBasicParsing -TimeoutSec 300 }
+    catch { Write-Host "  zip download attempt $try failed: $($_.Exception.Message.Split("`n")[0])" -ForegroundColor Yellow; Start-Sleep -Seconds 5 }
+}
+if (-not $dl) { throw "LIVE zip could not be downloaded after 5 attempts" }
 $liveSha = Sha $dl.Content
 if ($liveSha -ne $total) { throw "LIVE zip sha256 mismatch: $liveSha" }
 $page = Invoke-WebRequest -Uri $BaseUrl -UseBasicParsing -TimeoutSec 30
