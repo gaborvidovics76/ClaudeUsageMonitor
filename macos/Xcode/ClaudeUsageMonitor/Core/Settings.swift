@@ -42,7 +42,7 @@ struct Stored<Value> {
 }
 
 enum AppInfo {
-    static let name = "Claude Usage Monitor"
+    static let name = "Usage Monitor for Claude AI"   // = APP_DISPLAY_NAME = the App Store name
     static var version: String {
         (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "0.0.0"
     }
