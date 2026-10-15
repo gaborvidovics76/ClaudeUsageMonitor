@@ -18,19 +18,21 @@ final class DemoSource: UsageSource {
         let step: Int64 = 15 * 60 * 1000
         var fh = 0.0, sd = 0.0, mo = 0.0
         var seed: UInt64 = 0x9E3779B97F4A7C15
+        let tz = Int64(TimeZone.current.secondsFromGMT())
         func rnd() -> Double {              // deterministic, so the demo looks the same every time
             seed = seed &* 6364136223846793005 &+ 1442695040888963407
             return Double((seed >> 33) % 1000) / 1000
         }
         while t <= now {
-            let hourOfDay = Double((t / 1000) % 86400) / 3600
+            let hourOfDay = Double((t / 1000 + tz) % 86400) / 3600     // local time, so the day looks right
             let working = hourOfDay > 8 && hourOfDay < 22
             let sessionPos = Double((t - startMs) % fiveHoursMs) / Double(fiveHoursMs)
             if sessionPos < 0.03 { fh = 0 }
             if working {
-                fh = min(100, fh + 2.2 + rnd() * 6)
-                sd = min(100, sd + 0.25 + rnd() * 0.5)
-                mo = min(100, mo + 0.4 + rnd() * 0.6)
+                // kept below the limits, so the panel shows a typical week instead of everything at 100 %
+                fh = min(100, fh + 0.8 + rnd() * 2.5)
+                sd = min(100, sd + 0.08 + rnd() * 0.15)
+                mo = min(100, mo + 0.12 + rnd() * 0.2)
             }
             rows.append(Sample(t: t, org: "demo", fh: fh, sd: sd, mo: mo))
             t += step
