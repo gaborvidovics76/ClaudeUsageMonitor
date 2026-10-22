@@ -26,6 +26,7 @@ final class WindowHost<Content: View> {
             if resizable { mask.insert(.resizable) }
             let w = NSWindow(contentRect: NSRect(origin: .zero, size: size), styleMask: mask, backing: .buffered, defer: false)
             w.title = title
+            w.titleVisibility = .visible
             w.isReleasedWhenClosed = false
             w.contentViewController = NSHostingController(rootView: make())
             w.setContentSize(size)
