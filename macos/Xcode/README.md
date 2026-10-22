@@ -22,7 +22,7 @@ mappában – az a weboldalról letölthető, **nem** App Store-os változat. A 
 | `ClaudeUsageMonitor.xcodeproj` | az Xcode-projekt (Xcode 16+; szinkronizált mappa, nem kell fájlokat kézzel hozzáadni) |
 | `ClaudeUsageMonitor/App/` | belépési pont (`AppDelegate`), vezérlő (`MonitorController`: időzítők, menü, értesítések, ablakok) |
 | `ClaudeUsageMonitor/Core/` | fordítás (`Localization`), beállítások (`Settings` – UserDefaults), adatmodell, témák, napló |
-| `ClaudeUsageMonitor/Data/` | adatforrások: Claude Desktop napló (`LocalLogReader`), claude.ai (`OAuth`, `ApiSource`), Claude Code naplók (`LocalModelUsage`), demó (`DemoSource`), Keychain, sandbox-könyvjelzők, üzenetküldés |
+| `ClaudeUsageMonitor/Data/` | adatforrások: Claude Desktop napló (`LocalLogReader`), claude.ai (`OAuth`, `LoopbackServer` – a bejelentkezés localhost-visszahívása, `ApiSource`), Claude Code naplók (`LocalModelUsage`), demó (`DemoSource`), Keychain, sandbox-könyvjelzők, üzenetküldés |
 | `ClaudeUsageMonitor/UI/` | a lebegő panel (`PanelView`, `PanelWindow`), menüsor-ikon, Beállítások / Előzmények / Bejelentkezés / Súgó / Üzenet ablakok |
 | `ClaudeUsageMonitor/Resources/Localizable.xcstrings` | **generált** – a 34 nyelv (lásd lent) |
 | `ClaudeUsageMonitor/Resources/Assets.xcassets` | app-ikon (generált), accent szín |
@@ -56,6 +56,9 @@ Részletesen, az App Store Connect beadással együtt: [docs/APP-STORE-BEADAS.md
 
 A claude.ai-forrás (OAuth a Claude Code nyilvános kliensével) **fordítási feltétel** mögött van:
 `CLAUDE_SIGN_IN` – Build Settings → *Active Compilation Conditions*. Alapból **be van kapcsolva**.
+A bejelentkező lap a rendszer saját lapján nyílik (`ASWebAuthenticationSession`, `UI/SignInView.swift`),
+a kódot az app localhost-visszahívással kapja meg (`Data/LoopbackServer.swift`, ehhez kell a
+`com.apple.security.network.server` entitlement); tartalék a kód kézi beillesztése.
 Ha az Apple vagy az Anthropic kifogásolja (lásd [docs/MEGFELELES.md](docs/MEGFELELES.md) 1. pont), a
 feltétel törlésével egy „store-biztos” változat készül, amely csak a helyi naplót és a demóadatokat
 kínálja – a kód többi része változatlan.

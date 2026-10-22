@@ -69,7 +69,15 @@ Források: <https://www.anthropic.com/legal/trademark-guidelines> ·
 ## 3. ✅ App Sandbox és fájlhozzáférés (2.4.5(i))
 
 - A sandbox a Mac App Store-ban **kötelező**. Entitlements: `app-sandbox`, `network.client`,
-  `files.user-selected.read-only`. Más nincs.
+  `network.server`, `files.user-selected.read-only`. Más nincs.
+- `network.server` (2026-10, az első elutasítás után): az App Review a claude.ai-bejelentkezést csak
+  `ASWebAuthenticationSession`-nel fogadja el (Guideline 4 – az alapértelmezett böngészőbe küldeni a
+  felhasználót nem elfogadott). A rendszer bejelentkező lapja a kódot a `http://localhost:<port>/callback`
+  címre küldi vissza (a Claude Code nyilvános kliense erre van regisztrálva, a CLI maga az 54545-ös
+  portot használja); ezt az app saját, `Network.framework`-ös figyelője fogadja (`Data/LoopbackServer.swift`),
+  amely csak a loopback-interfészre kötődik, csak a bejelentkező lap nyitva léte alatt él, és egyetlen
+  kérést szolgál ki. A sandbox e jogosultság nélkül nem enged figyelő socketet nyitni. Ha a port nem
+  nyitható, az app az Anthropic kódmutató oldalára esik vissza (kézi beillesztés, mint Windowson).
 - A Claude Desktop naplója (`~/Library/Application Support/Claude/plan-usage-history.json`) és a
   Claude Code mappája (`~/.claude`) a sandboxon kívül van. Az Apple „temporary exception”
   entitlementjeit (home-relative-path) a bírálat **nem fogadja el** (Apple DTS: „very dim view”;

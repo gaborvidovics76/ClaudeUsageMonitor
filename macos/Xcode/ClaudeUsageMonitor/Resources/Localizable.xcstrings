@@ -2927,420 +2927,1256 @@
         }
       }
     },
-    "dlg.err_badcode": {
+    "dlg.done_body_mac": {
       "extractionState": "manual",
       "localizations": {
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Кодът не беше приет.\n\n{}\n\nПровери дали е поставен целият код или опитай отново да влезеш през браузъра (всеки път с нов код)."
+            "value": "Можеш да затвориш тази страница и да се върнеш в приложението."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kód nebyl přijat.\n\n{}\n\nZkontrolujte, zda jste vložili celý kód, nebo zkuste přihlášení v prohlížeči znovu (vždy čerstvý kód)."
+            "value": "Tuto stránku můžete zavřít a vrátit se do aplikace."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koden blev ikke accepteret.\n\n{}\n\nTjek, at du har indsat hele koden, eller prøv at logge på i browseren igen (altid med en ny kode)."
+            "value": "Du kan lukke denne side og vende tilbage til appen."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Der Code wurde nicht akzeptiert.\n\n{}\n\nPrüfe, ob du den ganzen Code eingefügt hast, oder versuche die Browser-Anmeldung erneut (immer ein frischer Code)."
+            "value": "Du kannst diese Seite schließen und zur App zurückkehren."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ο κωδικός δεν έγινε δεκτός.\n\n{}\n\nΒεβαιωθείτε ότι επικολλήσατε ολόκληρο τον κωδικό ή δοκιμάστε ξανά την είσοδο μέσω του προγράμματος περιήγησης (πάντα με νέο κωδικό)."
+            "value": "Μπορείτε να κλείσετε αυτή τη σελίδα και να επιστρέψετε στην εφαρμογή."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The code was not accepted.\n\n{}\n\nCheck that you pasted the whole code, or try the browser sign-in again (always a fresh code)."
+            "value": "You can close this page and return to the app."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El código no se ha aceptado.\n\n{}\n\nComprueba que has pegado el código completo o vuelve a iniciar sesión en el navegador (siempre con un código nuevo)."
+            "value": "Puedes cerrar esta página y volver a la app."
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "El código no fue aceptado.\n\n{}\n\nRevisa que hayas pegado el código completo o vuelve a iniciar sesión en el navegador (siempre con un código nuevo)."
+            "value": "Puedes cerrar esta página y volver a la app."
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koodi ei aktsepteeritud.\n\n{}\n\nKontrolli, kas kleepisid kogu koodi, või proovi brauseris uuesti sisse logida (iga kord on vaja uut koodi)."
+            "value": "Võid selle lehe sulgeda ja rakendusse naasta."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koodia ei hyväksytty.\n\n{}\n\nVarmista, että liitit koko koodin, tai kirjaudu uudelleen selaimessa (tarvitset aina uuden koodin)."
+            "value": "Voit sulkea tämän sivun ja palata sovellukseen."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le code n'a pas été accepté.\n\n{}\n\nVérifie que tu as collé le code entier, ou relance la connexion navigateur (toujours un code frais)."
+            "value": "Tu peux fermer cette page et revenir à l'app."
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "Níor glacadh leis an gcód.\n\n{}\n\nDeimhnigh gur ghreamaigh tú an cód ar fad, nó bain triail eile as an síniú isteach sa bhrabhsálaí (cód úr gach uair)."
+            "value": "Is féidir leat an leathanach seo a dhúnadh agus filleadh ar an aip."
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kôd nije prihvaćen.\n\n{}\n\nProvjerite jeste li zalijepili cijeli kôd ili se ponovno prijavite u pregledniku (svaki put je potreban novi kôd)."
+            "value": "Možete zatvoriti ovu stranicu i vratiti se u aplikaciju."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A kód nem fogadható el.\n\n{}\n\nEllenőrizd, hogy a teljes kódot másoltad-e be, vagy próbáld újra a böngészős bejelentkezést (mindig friss kód kell)."
+            "value": "Ezt az oldalt bezárhatod, és visszatérhetsz az apphoz."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kode tidak diterima.\n\n{}\n\nPastikan Anda menempelkan seluruh kode, atau coba masuk lagi lewat browser (selalu dengan kode baru)."
+            "value": "Anda bisa menutup halaman ini dan kembali ke aplikasi."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il codice non è stato accettato.\n\n{}\n\nVerifica di aver incollato tutto il codice, oppure riprova l'accesso dal browser (sempre un codice nuovo)."
+            "value": "Puoi chiudere questa pagina e tornare all'app."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "コードが受け付けられませんでした。\n\n{}\n\nコードをすべて貼り付けたか確認するか、ブラウザーでもう一度サインインしてください（その都度、新しいコードが発行されます）。"
+            "value": "このページを閉じて、アプリに戻ってください。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "코드가 승인되지 않았어요.\n\n{}\n\n코드 전체를 붙여넣었는지 확인하거나, 브라우저 로그인을 다시 시도해 보세요(항상 새 코드가 필요해요)."
+            "value": "이 페이지를 닫고 앱으로 돌아가세요."
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kodas nepriimtas.\n\n{}\n\nPatikrinkite, ar įklijavote visą kodą, arba dar kartą prisijunkite per naršyklę (kodas kaskart naujas)."
+            "value": "Galite uždaryti šį puslapį ir grįžti į programą."
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kods netika pieņemts.\n\n{}\n\nPārbaudiet, vai ielīmējāt visu kodu, vai arī vēlreiz pierakstieties pārlūkprogrammā (katru reizi ir vajadzīgs jauns kods)."
+            "value": "Varat aizvērt šo lapu un atgriezties lietotnē."
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il-kodiċi ma ġiex aċċettat.\n\n{}\n\nIċċekkja li waħħalt il-kodiċi kollu, jew erġa' pprova l-login mill-browser (dejjem b'kodiċi ġdid)."
+            "value": "Tista' tagħlaq din il-paġna u tmur lura għall-app."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "De code werd niet geaccepteerd.\n\n{}\n\nControleer of je de hele code hebt geplakt, of probeer de browser-aanmelding opnieuw (altijd een verse code)."
+            "value": "Je kunt deze pagina sluiten en teruggaan naar de app."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kod nie został zaakceptowany.\n\n{}\n\nSprawdź, czy wkleiłeś cały kod, lub spróbuj logowania w przeglądarce ponownie (zawsze świeży kod)."
+            "value": "Możesz zamknąć tę stronę i wrócić do aplikacji."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O código não foi aceito.\n\n{}\n\nVerifique se você colou o código inteiro ou tente fazer login de novo pelo navegador (sempre com um código novo)."
+            "value": "Você pode fechar esta página e voltar ao app."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "O código não foi aceite.\n\n{}\n\nVerifica se colaste o código completo ou repete o início de sessão no browser (é sempre preciso um código novo)."
+            "value": "Podes fechar esta página e voltar à app."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Codul nu a fost acceptat.\n\n{}\n\nVerifică dacă ai lipit codul complet sau încearcă din nou conectarea din browser (de fiecare dată cu un cod nou)."
+            "value": "Poți închide această pagină și reveni la aplicație."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Код не принят.\n\n{}\n\nПроверьте, что вставили код целиком, или повторите вход через браузер (всегда свежий код)."
+            "value": "Эту страницу можно закрыть и вернуться в приложение."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kód nebol prijatý.\n\n{}\n\nSkontroluj, či je vložený celý kód, alebo sa skús znova prihlásiť v prehliadači (vždy s novým kódom)."
+            "value": "Túto stránku môžeš zavrieť a vrátiť sa do aplikácie."
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koda ni bila sprejeta.\n\n{}\n\nPreverite, ali ste prilepili celotno kodo, ali pa se znova prijavite v brskalniku (vsakič z novo kodo)."
+            "value": "To stran lahko zaprete in se vrnete v aplikacijo."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koden godkändes inte.\n\n{}\n\nKontrollera att du klistrade in hela koden, eller logga in via webbläsaren igen (du får alltid en ny kod)."
+            "value": "Du kan stänga den här sidan och gå tillbaka till appen."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kod kabul edilmedi.\n\n{}\n\nKodun tamamını yapıştırdığından emin ol ya da tarayıcı girişini tekrar dene (her zaman taze kod)."
+            "value": "Bu sayfayı kapatıp uygulamaya dönebilirsin."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mã không được chấp nhận.\n\n{}\n\nHãy kiểm tra xem bạn đã dán toàn bộ mã chưa, hoặc thử đăng nhập lại qua trình duyệt (luôn dùng mã mới)."
+            "value": "Bạn có thể đóng trang này và quay lại ứng dụng."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "代码未被接受。\n\n{}\n\n请检查是否粘贴了完整的代码，或重新在浏览器中登录（每次都会生成新代码）。"
+            "value": "你可以关闭此页面并返回应用。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "授權碼驗證失敗。\n\n{}\n\n請確認已貼上完整的授權碼，或重新在瀏覽器中登入（每次都會取得新的授權碼）。"
+            "value": "你可以關閉此頁面並回到應用程式。"
           }
         }
       }
     },
-    "dlg.err_ratelimit": {
+    "dlg.done_title_mac": {
       "extractionState": "manual",
       "localizations": {
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Твърде много опити за влизане за кратко време.\n\nСървърът временно ограничава достъпа ти. Затвори този прозорец, изчакай 10–15 минути (без да опитваш междувременно) и след това започни ЕДНО ново влизане през браузъра с нов код."
+            "value": "Влизането е успешно"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Příliš mnoho pokusů o přihlášení v krátké době.\n\nServer vás dočasně omezuje. Zavřete toto okno, počkejte 10–15 minut (mezitím to nezkoušejte) a pak spusťte JEDNO nové přihlášení v prohlížeči s čerstvým kódem."
+            "value": "Přihlášeno"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "For mange loginforsøg på kort tid.\n\nServeren begrænser dig midlertidigt. Luk dette vindue, vent 10–15 minutter (uden at prøve imens), og start derefter ÉT nyt login i browseren med en ny kode."
+            "value": "Logget på"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zu viele Anmeldeversuche in kurzer Zeit.\n\nDer Server begrenzt dich vorübergehend. Schließe dieses Fenster, warte 10–15 Minuten (versuche es zwischendurch nicht), und starte dann EINE neue Browser-Anmeldung mit einem frischen Code."
+            "value": "Angemeldet"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Πάρα πολλές προσπάθειες εισόδου σε σύντομο χρόνο.\n\nΟ διακομιστής σάς περιορίζει προσωρινά. Κλείστε αυτό το παράθυρο, περιμένετε 10–15 λεπτά (χωρίς να δοκιμάσετε στο μεταξύ) και έπειτα ξεκινήστε ΜΙΑ νέα είσοδο μέσω του προγράμματος περιήγησης με νέο κωδικό."
+            "value": "Συνδεθήκατε"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Too many sign-in attempts in a short time.\n\nThe server is limiting you temporarily. Close this window, wait 10–15 minutes (don't try in the meantime), then start ONE new browser sign-in with a fresh code."
+            "value": "Signed in"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Demasiados intentos de inicio de sesión en poco tiempo.\n\nEl servidor ha bloqueado los intentos temporalmente. Cierra esta ventana, espera entre 10 y 15 minutos (no lo intentes mientras tanto) y luego vuelve a iniciar sesión en el navegador UNA sola vez, con un código nuevo."
+            "value": "Sesión iniciada"
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Demasiados intentos de inicio de sesión en poco tiempo.\n\nEl servidor te está limitando temporalmente. Cierra esta ventana, espera de 10 a 15 minutos (no lo intentes mientras tanto) y luego vuelve a iniciar sesión en el navegador UNA sola vez, con un código nuevo."
+            "value": "Sesión iniciada"
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Liiga palju sisselogimiskatseid lühikese aja jooksul.\n\nServer piirab sind ajutiselt. Sule see aken, oota 10–15 minutit (vahepeal ära proovi) ja proovi siis brauseris värske koodiga ÜKS kord uuesti sisse logida."
+            "value": "Sisse logitud"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Liian monta kirjautumisyritystä lyhyessä ajassa.\n\nPalvelin rajoittaa yrityksiäsi tilapäisesti. Sulje tämä ikkuna, odota 10–15 minuuttia (älä yritä sillä välin) ja aloita sitten YKSI uusi kirjautuminen selaimessa uudella koodilla."
+            "value": "Kirjauduttu sisään"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trop de tentatives de connexion en peu de temps.\n\nLe serveur te limite temporairement. Ferme cette fenêtre, attends 10–15 minutes (n'essaie pas entre-temps), puis lance UNE seule nouvelle connexion navigateur avec un code frais."
+            "value": "Connecté"
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "An iomarca iarrachtaí síniú isteach in achar gearr.\n\nTá an freastalaí ag cur sriain ort go sealadach. Dún an fhuinneog seo, fan 10–15 nóiméad (ná bain triail as idir an dá linn), ansin tosaigh AON síniú isteach nua amháin sa bhrabhsálaí le cód úr."
+            "value": "Sínithe isteach"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Previše pokušaja prijave u kratkom vremenu.\n\nPoslužitelj vam je privremeno ograničio pristup.Zatvorite ovaj prozor, pričekajte 10–15 minuta (u međuvremenu ne pokušavajte), a zatim pokrenite JEDNU novu prijavu u pregledniku s novim kôdom."
+            "value": "Prijavljeni ste"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Túl sok bejelentkezési próbálkozás rövid idő alatt.\n\nA szerver átmenetileg korlátoz. Zárd be ezt az ablakot, várj 10–15 percet (ne próbálkozz közben), majd indíts EGYETLEN új böngészős bejelentkezést friss kóddal."
+            "value": "Bejelentkezve"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Terlalu banyak upaya masuk dalam waktu singkat.\n\nServer membatasi Anda untuk sementara. Tutup jendela ini, tunggu 10–15 menit (jangan mencoba lagi selama menunggu), lalu mulai SATU proses masuk baru lewat browser dengan kode baru."
+            "value": "Berhasil masuk"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Troppi tentativi di accesso in poco tempo.\n\nIl server ti limita temporaneamente. Chiudi questa finestra, attendi 10–15 minuti (non riprovare nel frattempo), poi avvia UN solo nuovo accesso dal browser con un codice nuovo."
+            "value": "Accesso effettuato"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "短時間でのサインインの試行回数が多すぎます。\n\nサーバーが一時的にアクセスを制限しています。このウィンドウを閉じて10～15分待ち（その間は再試行しないでください）、新しいコードでブラウザーからのサインインを1回だけ行ってください。"
+            "value": "サインインしました"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "짧은 시간에 로그인 시도가 너무 많았어요.\n\n서버가 일시적으로 제한하고 있어요. 이 창을 닫고 10–15분 기다린 뒤(그동안은 시도하지 마세요) 새 코드로 브라우저 로그인을 한 번만 다시 시작하세요."
+            "value": "로그인됨"
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per trumpą laiką per daug bandymų prisijungti.\n\nServeris laikinai apribojo prisijungimą. Uždarykite šį langą, palaukite 10–15 minučių (tuo metu nebandykite), tada pradėkite VIENĄ naują prisijungimą per naršyklę su nauju kodu."
+            "value": "Prisijungta"
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pārāk daudz pierakstīšanās mēģinājumu īsā laikā.\n\nServeris uz laiku ierobežo jūsu piekļuvi. Aizveriet šo logu, pagaidiet 10–15 minūtes (pa to laiku nemēģiniet) un pēc tam sāciet VIENU jaunu pierakstīšanos pārlūkprogrammā ar jaunu kodu."
+            "value": "Pierakstīšanās izdevās"
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wisq tentattivi ta' login fi ftit ħin.\n\nIs-server qed jillimitak b'mod temporanju. Agħlaq din it-tieqa, stenna 10–15-il minuta (tippruvax sadanittant), imbagħad ibda login ġdid WIEĦED biss mill-browser b'kodiċi ġdid."
+            "value": "Dħalt"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Te veel aanmeldpogingen in korte tijd.\n\nDe server beperkt je tijdelijk. Sluit dit venster, wacht 10–15 minuten (probeer ondertussen niet), en start dan ÉÉN nieuwe browser-aanmelding met een verse code."
+            "value": "Aangemeld"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zbyt wiele prób logowania w krótkim czasie.\n\nSerwer tymczasowo Cię ogranicza. Zamknij to okno, odczekaj 10–15 minut (nie próbuj w tym czasie), a potem uruchom JEDNO nowe logowanie w przeglądarce ze świeżym kodem."
+            "value": "Zalogowano"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muitas tentativas de login em pouco tempo.\n\nO servidor está limitando você temporariamente. Feche esta janela, aguarde 10–15 minutos (sem tentar nesse meio-tempo) e só então faça UM novo login pelo navegador, com um código novo."
+            "value": "Login concluído"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Demasiadas tentativas de início de sessão em pouco tempo.\n\nO servidor está a limitar-te temporariamente. Fecha esta janela, espera 10–15 minutos (sem tentar entretanto) e depois inicia sessão no browser UMA só vez, com um código novo."
+            "value": "Sessão iniciada"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prea multe încercări de conectare într-un timp scurt.\n\nServerul te limitează temporar. Închide această fereastră, așteaptă 10–15 minute (nu încerca între timp), apoi pornește O SINGURĂ conectare nouă din browser, cu un cod nou."
+            "value": "Conectat"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Слишком много попыток входа за короткое время.\n\nСервер временно ограничивает вас. Закройте это окно, подождите 10–15 минут (не пытайтесь в это время), затем выполните ОДИН новый вход через браузер со свежим кодом."
+            "value": "Вход выполнен"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Príliš veľa pokusov o prihlásenie v krátkom čase.\n\nServer ťa dočasne obmedzuje. Zavri toto okno, počkaj 10–15 minút (medzitým to neskúšaj) a potom spusti JEDNO nové prihlásenie v prehliadači s novým kódom."
+            "value": "Prihlásené"
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Preveč poskusov prijave v kratkem času.\n\nStrežnik vas začasno omejuje. Zaprite to okno, počakajte 10–15 minut (vmes ne poskušajte), nato pa začnite ENO novo prijavo v brskalniku z novo kodo."
+            "value": "Prijavljeni ste"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "För många inloggningsförsök på kort tid.\n\nServern begränsar dig tillfälligt. Stäng det här fönstret, vänta 10–15 minuter (försök inte under tiden) och starta sedan EN ny inloggning i webbläsaren med en ny kod."
+            "value": "Inloggad"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kısa sürede çok fazla giriş denemesi.\n\nSunucu geçici olarak sınırlıyor. Bu pencereyi kapat, 10–15 dakika bekle (bu sırada deneme), sonra taze bir kodla TEK bir yeni tarayıcı girişi başlat."
+            "value": "Giriş yapıldı"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quá nhiều lần thử đăng nhập trong thời gian ngắn.\n\nMáy chủ đang tạm thời giới hạn bạn. Hãy đóng cửa sổ này, chờ 10–15 phút (đừng thử trong lúc đó), rồi bắt đầu MỘT lần đăng nhập mới qua trình duyệt với mã mới."
+            "value": "Đã đăng nhập"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "短时间内登录尝试次数过多。\n\n服务器已暂时限制你的请求。请关闭此窗口，等待 10–15 分钟（期间不要再尝试），然后只发起一次新的浏览器登录，并使用新代码。"
+            "value": "已登录"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "短時間內登入嘗試次數過多。\n\n伺服器暫時限制了你的請求。請關閉此視窗，等待 10～15 分鐘（期間不要再嘗試），然後只在瀏覽器中重新登入一次，並使用新的授權碼。"
+            "value": "已登入"
+          }
+        }
+      }
+    },
+    "dlg.err_badcode_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кодът не беше приет.\n\n{}\n\nПровери дали си поставил целия код или започни влизането отново (винаги с нов код)."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kód nebyl přijat.\n\n{}\n\nZkontrolujte, zda jste vložili celý kód, nebo spusťte přihlášení znovu (vždy čerstvý kód)."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koden blev ikke accepteret.\n\n{}\n\nTjek, at du indsatte hele koden, eller start login igen (altid en ny kode)."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Code wurde nicht akzeptiert.\n\n{}\n\nPrüfe, ob du den ganzen Code eingefügt hast, oder starte die Anmeldung erneut (immer ein frischer Code)."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ο κωδικός δεν έγινε δεκτός.\n\n{}\n\nΒεβαιωθείτε ότι επικολλήσατε ολόκληρο τον κωδικό ή ξεκινήστε ξανά τη σύνδεση (πάντα με νέο κωδικό)."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The code was not accepted.\n\n{}\n\nCheck that you pasted the whole code, or start the sign-in again (always a fresh code)."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El código no fue aceptado.\n\n{}\n\nComprueba que has pegado el código completo, o vuelve a iniciar sesión (siempre un código nuevo)."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El código no fue aceptado.\n\n{}\n\nComprueba que pegaste el código completo, o vuelve a iniciar sesión (siempre un código nuevo)."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koodi ei võetud vastu.\n\n{}\n\nKontrolli, kas kleepisid kogu koodi, või alusta sisselogimist uuesti (alati uue koodiga)."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koodia ei hyväksytty.\n\n{}\n\nTarkista, että liitit koko koodin, tai aloita kirjautuminen uudelleen (aina uusi koodi)."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le code n'a pas été accepté.\n\n{}\n\nVérifie que tu as collé le code entier, ou relance la connexion (toujours un code frais)."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Níor glacadh leis an gcód.\n\n{}\n\nSeiceáil gur ghreamaigh tú an cód iomlán, nó tosaigh an síniú isteach arís (cód úr i gcónaí)."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kôd nije prihvaćen.\n\n{}\n\nProvjerite jeste li zalijepili cijeli kôd ili ponovno pokrenite prijavu (uvijek novi kôd)."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A kód nem fogadható el.\n\n{}\n\nEllenőrizd, hogy a teljes kódot másoltad-e be, vagy indítsd újra a bejelentkezést (mindig friss kód kell)."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kode tidak diterima.\n\n{}\n\nPastikan Anda menempelkan seluruh kode, atau mulai lagi proses masuk (selalu dengan kode baru)."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il codice non è stato accettato.\n\n{}\n\nVerifica di aver incollato tutto il codice, oppure riavvia l'accesso (sempre un codice nuovo)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コードが受け付けられませんでした。\n\n{}\n\nコードをすべて貼り付けたか確認するか、サインインをやり直してください（その都度、新しいコードが発行されます）。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "코드가 받아들여지지 않았어요.\n\n{}\n\n코드를 전부 붙여넣었는지 확인하거나 로그인을 다시 시작하세요(항상 새 코드)."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kodas nepriimtas.\n\n{}\n\nPatikrinkite, ar įklijavote visą kodą, arba pradėkite prisijungimą iš naujo (visada naujas kodas)."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kods netika pieņemts.\n\n{}\n\nPārbaudiet, vai ielīmējāt visu kodu, vai sāciet pierakstīšanos no jauna (vienmēr ar jaunu kodu)."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il-kodiċi ma ġiex aċċettat.\n\n{}\n\nIċċekkja li waħħalt il-kodiċi kollu, jew erġa' ibda l-login (dejjem kodiċi ġdid)."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De code werd niet geaccepteerd.\n\n{}\n\nControleer of je de hele code hebt geplakt, of start de aanmelding opnieuw (altijd een verse code)."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod nie został zaakceptowany.\n\n{}\n\nSprawdź, czy wkleiłeś cały kod, lub uruchom logowanie ponownie (zawsze świeży kod)."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O código não foi aceito.\n\n{}\n\nVerifique se você colou o código completo ou inicie o login de novo (sempre um código novo)."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O código não foi aceite.\n\n{}\n\nVerifica se colaste o código completo, ou inicia a sessão de novo (sempre um código novo)."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Codul nu a fost acceptat.\n\n{}\n\nVerifică dacă ai lipit codul complet sau pornește din nou conectarea (de fiecare dată cu un cod nou)."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Код не принят.\n\n{}\n\nПроверьте, что вставили код целиком, или начните вход заново (всегда свежий код)."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kód nebol prijatý.\n\n{}\n\nSkontroluj, či si prilepil celý kód, alebo spusti prihlásenie znova (vždy nový kód)."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koda ni bila sprejeta.\n\n{}\n\nPreverite, ali ste prilepili celotno kodo, ali znova zaženite prijavo (vedno nova koda)."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koden godkändes inte.\n\n{}\n\nKontrollera att du klistrade in hela koden, eller starta inloggningen igen (alltid en ny kod)."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod kabul edilmedi.\n\n{}\n\nKodun tamamını yapıştırdığından emin ol ya da girişi yeniden başlat (her zaman taze kod)."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mã không được chấp nhận.\n\n{}\n\nHãy kiểm tra xem bạn đã dán đủ mã chưa, hoặc bắt đầu đăng nhập lại (luôn là mã mới)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代码未被接受。\n\n{}\n\n请检查是否粘贴了完整的代码，或重新开始登录（每次都是新代码）。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "授權碼未被接受。\n\n{}\n\n請確認已貼上完整的授權碼，或重新開始登入（每次都會是新的授權碼）。"
+          }
+        }
+      }
+    },
+    "dlg.err_ratelimit_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Твърде много опити за влизане за кратко време.\n\nСървърът временно те ограничава. Затвори този прозорец, изчакай 10–15 минути (не опитвай междувременно) и след това започни ЕДИН нов опит за влизане."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Příliš mnoho pokusů o přihlášení v krátké době.\n\nServer vás dočasně omezuje. Zavřete toto okno, počkejte 10–15 minut (mezitím to nezkoušejte) a pak spusťte JEDNO nové přihlášení."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For mange loginforsøg på kort tid.\n\nServeren begrænser dig midlertidigt. Luk dette vindue, vent 10–15 minutter (prøv ikke imens), og start derefter ÉT nyt login."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu viele Anmeldeversuche in kurzer Zeit.\n\nDer Server begrenzt dich vorübergehend. Schließe dieses Fenster, warte 10–15 Minuten (versuche es zwischendurch nicht), und starte dann EINE neue Anmeldung."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Πάρα πολλές προσπάθειες σύνδεσης σε σύντομο χρονικό διάστημα.\n\nΟ διακομιστής σας περιορίζει προσωρινά. Κλείστε αυτό το παράθυρο, περιμένετε 10–15 λεπτά (μην δοκιμάσετε στο μεταξύ) και έπειτα ξεκινήστε ΜΙΑ νέα σύνδεση."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Too many sign-in attempts in a short time.\n\nThe server is limiting you temporarily. Close this window, wait 10–15 minutes (don't try in the meantime), then start ONE new sign-in."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demasiados intentos de inicio de sesión en poco tiempo.\n\nEl servidor te limita temporalmente. Cierra esta ventana, espera 10–15 minutos (no lo intentes mientras tanto) y luego inicia UN solo inicio de sesión nuevo."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demasiados intentos de inicio de sesión en poco tiempo.\n\nEl servidor te limita temporalmente. Cierra esta ventana, espera 10–15 minutos (no lo intentes mientras tanto) y luego inicia UN solo inicio de sesión nuevo."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liiga palju sisselogimiskatseid lühikese aja jooksul.\n\nServer piirab sind ajutiselt. Sulge see aken, oota 10–15 minutit (vahepeal ära proovi) ja alusta siis ÜKS uus sisselogimine."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liian monta kirjautumisyritystä lyhyessä ajassa.\n\nPalvelin rajoittaa sinua tilapäisesti. Sulje tämä ikkuna, odota 10–15 minuuttia (älä yritä sillä välin) ja aloita sitten YKSI uusi kirjautuminen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trop de tentatives de connexion en peu de temps.\n\nLe serveur te limite temporairement. Ferme cette fenêtre, attends 10–15 minutes (n'essaie pas entre-temps), puis lance UNE seule nouvelle connexion."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An iomarca iarrachtaí sínithe isteach in achar gearr.\n\nTá an freastalaí do do theorannú go sealadach. Dún an fhuinneog seo, fan 10–15 nóiméad (ná déan iarracht idir an dá linn), agus ansin tosaigh AON síniú isteach nua amháin."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previše pokušaja prijave u kratkom vremenu.\n\nPoslužitelj vas privremeno ograničava. Zatvorite ovaj prozor, pričekajte 10–15 minuta (ne pokušavajte u međuvremenu), a zatim pokrenite JEDNU novu prijavu."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Túl sok bejelentkezési próbálkozás rövid idő alatt.\n\nA szerver átmenetileg korlátoz. Zárd be ezt az ablakot, várj 10–15 percet (ne próbálkozz közben), majd indíts EGYETLEN új bejelentkezést."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terlalu banyak percobaan masuk dalam waktu singkat.\n\nServer membatasi Anda untuk sementara. Tutup jendela ini, tunggu 10–15 menit (jangan mencoba sementara itu), lalu mulai SATU proses masuk baru."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Troppi tentativi di accesso in poco tempo.\n\nIl server ti limita temporaneamente. Chiudi questa finestra, attendi 10–15 minuti (non riprovare nel frattempo), poi avvia UN solo nuovo accesso."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短時間でのサインインの試行回数が多すぎます。\n\nサーバーが一時的にアクセスを制限しています。このウィンドウを閉じて10～15分待ち（その間は再試行しないでください）、新しいサインインを1回だけ行ってください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "짧은 시간에 로그인 시도가 너무 많아요.\n\n서버가 일시적으로 제한하고 있어요. 이 창을 닫고 10–15분 기다린 뒤(그동안 시도하지 마세요) 새 로그인을 한 번만 시작하세요."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Per daug prisijungimo bandymų per trumpą laiką.\n\nServeris jus laikinai riboja. Uždarykite šį langą, palaukite 10–15 min. (tuo metu nebandykite), tada pradėkite VIENĄ naują prisijungimą."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pārāk daudz pierakstīšanās mēģinājumu īsā laikā.\n\nServeris jūs īslaicīgi ierobežo. Aizveriet šo logu, pagaidiet 10–15 minūtes (pa to laiku nemēģiniet) un pēc tam sāciet VIENU jaunu pierakstīšanos."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wisq tentattivi ta' login f'ħin qasir.\n\nIs-server qed jillimitak temporanjament. Agħlaq din it-tieqa, stenna 10–15-il minuta (tippruvax sadanittant), imbagħad ibda login ġdid WIEĦED biss."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te veel aanmeldpogingen in korte tijd.\n\nDe server beperkt je tijdelijk. Sluit dit venster, wacht 10–15 minuten (probeer ondertussen niet), en start dan ÉÉN nieuwe aanmelding."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zbyt wiele prób logowania w krótkim czasie.\n\nSerwer tymczasowo Cię ogranicza. Zamknij to okno, odczekaj 10–15 minut (nie próbuj w tym czasie), a potem uruchom JEDNO nowe logowanie."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muitas tentativas de login em pouco tempo.\n\nO servidor está limitando você temporariamente. Feche esta janela, aguarde 10–15 minutos (não tente nesse meio-tempo) e depois inicie UM único novo login."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demasiadas tentativas de início de sessão em pouco tempo.\n\nO servidor limita-te temporariamente. Fecha esta janela, espera 10–15 minutos (não tentes entretanto) e inicia UM único novo início de sessão."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prea multe încercări de conectare într-un timp scurt.\n\nServerul te limitează temporar. Închide această fereastră, așteaptă 10–15 minute (nu încerca între timp), apoi pornește O SINGURĂ conectare nouă."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Слишком много попыток входа за короткое время.\n\nСервер временно ограничивает вас. Закройте это окно, подождите 10–15 минут (не пытайтесь в это время), затем выполните ОДИН новый вход."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Príliš veľa pokusov o prihlásenie v krátkom čase.\n\nServer ťa dočasne obmedzuje. Zavri toto okno, počkaj 10–15 minút (medzitým to neskúšaj) a potom spusti JEDNO nové prihlásenie."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preveč poskusov prijave v kratkem času.\n\nStrežnik vas začasno omejuje. Zaprite to okno, počakajte 10–15 minut (vmes ne poskušajte) in nato zaženite ENO novo prijavo."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "För många inloggningsförsök på kort tid.\n\nServern begränsar dig tillfälligt. Stäng det här fönstret, vänta 10–15 minuter (försök inte under tiden) och starta sedan EN ny inloggning."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kısa sürede çok fazla giriş denemesi.\n\nSunucu geçici olarak sınırlıyor. Bu pencereyi kapat, 10–15 dakika bekle (bu sırada deneme), sonra TEK bir yeni giriş başlat."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quá nhiều lần thử đăng nhập trong thời gian ngắn.\n\nMáy chủ đang tạm thời giới hạn bạn. Hãy đóng cửa sổ này, đợi 10–15 phút (đừng thử trong lúc đó), rồi bắt đầu MỘT lần đăng nhập mới."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短时间内登录尝试次数过多。\n\n服务器暂时限制了你。请关闭此窗口，等待 10–15 分钟（期间不要尝试），然后只开始一次新的登录。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短時間內登入嘗試次數過多。\n\n伺服器暫時限制了你。請關閉此視窗，等待 10–15 分鐘（期間請勿嘗試），然後只開始一次新的登入。"
+          }
+        }
+      }
+    },
+    "dlg.err_sheet_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прозорецът за вход не можа да се отвори.\n\n{}"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlašovací okno se nepodařilo otevřít.\n\n{}"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loginvinduet kunne ikke åbnes.\n\n{}"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Anmeldefenster konnte nicht geöffnet werden.\n\n{}"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Δεν ήταν δυνατό το άνοιγμα του παραθύρου σύνδεσης.\n\n{}"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The sign-in window could not be opened.\n\n{}"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo abrir la ventana de inicio de sesión.\n\n{}"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo abrir la ventana de inicio de sesión.\n\n{}"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sisselogimisakent ei õnnestunud avada.\n\n{}"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjautumisikkunaa ei voitu avata.\n\n{}"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La fenêtre de connexion n'a pas pu s'ouvrir.\n\n{}"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Níorbh fhéidir fuinneog an tsínithe isteach a oscailt.\n\n{}"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prozor za prijavu nije se mogao otvoriti.\n\n{}"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A bejelentkező ablakot nem sikerült megnyitni.\n\n{}"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jendela masuk tidak dapat dibuka.\n\n{}"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile aprire la finestra di accesso.\n\n{}"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サインインウィンドウを開けませんでした。\n\n{}"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로그인 창을 열 수 없어요.\n\n{}"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nepavyko atidaryti prisijungimo lango.\n\n{}"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neizdevās atvērt pierakstīšanās logu.\n\n{}"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It-tieqa tal-login ma setgħetx tinfetaħ.\n\n{}"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het aanmeldvenster kon niet worden geopend.\n\n{}"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się otworzyć okna logowania.\n\n{}"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível abrir a janela de login.\n\n{}"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível abrir a janela de início de sessão.\n\n{}"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fereastra de conectare nu a putut fi deschisă.\n\n{}"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось открыть окно входа.\n\n{}"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prihlasovacie okno sa nepodarilo otvoriť.\n\n{}"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Okna za prijavo ni bilo mogoče odpreti.\n\n{}"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inloggningsfönstret kunde inte öppnas.\n\n{}"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giriş penceresi açılamadı.\n\n{}"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không mở được cửa sổ đăng nhập.\n\n{}"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法打开登录窗口。\n\n{}"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法開啟登入視窗。\n\n{}"
+          }
+        }
+      }
+    },
+    "dlg.err_state_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отговорът не принадлежеше на този опит за вход."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odpověď nepatřila k tomuto pokusu o přihlášení."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Svaret hørte ikke til dette loginforsøg."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Antwort gehörte nicht zu diesem Anmeldeversuch."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η απάντηση δεν αντιστοιχούσε σε αυτή την προσπάθεια σύνδεσης."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The answer did not belong to this sign-in attempt."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La respuesta no correspondía a este intento de inicio de sesión."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La respuesta no correspondía a este intento de inicio de sesión."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vastus ei kuulunud selle sisselogimiskatse juurde."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vastaus ei kuulunut tähän kirjautumisyritykseen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La réponse ne correspondait pas à cette tentative de connexion."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Níor bhain an freagra leis an iarracht sínithe isteach seo."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odgovor nije pripadao ovom pokušaju prijave."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A válasz nem ehhez a bejelentkezési próbálkozáshoz tartozott."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jawaban itu bukan milik percobaan masuk ini."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La risposta non apparteneva a questo tentativo di accesso."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "応答がこのサインイン試行のものではありませんでした。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "응답이 이번 로그인 시도의 것이 아니에요."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atsakymas nepriklausė šiam prisijungimo bandymui."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atbilde nepiederēja šim pierakstīšanās mēģinājumam."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It-tweġiba ma kinitx ta' dan it-tentattiv ta' login."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het antwoord hoorde niet bij deze aanmeldpoging."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odpowiedź nie należała do tej próby logowania."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A resposta não pertencia a esta tentativa de login."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A resposta não pertencia a esta tentativa de início de sessão."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Răspunsul nu aparținea acestei încercări de conectare."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ответ не относился к этой попытке входа."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odpoveď nepatrila k tomuto pokusu o prihlásenie."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odgovor ni pripadal temu poskusu prijave."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Svaret hörde inte till det här inloggningsförsöket."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yanıt bu giriş denemesine ait değildi."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phản hồi không thuộc lần đăng nhập này."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该响应不属于本次登录尝试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此回應不屬於這次的登入嘗試。"
           }
         }
       }
@@ -3554,211 +4390,420 @@
         }
       }
     },
-    "dlg.intro": {
+    "dlg.hint_auto_mac": {
       "extractionState": "manual",
       "localizations": {
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Влез в акаунта си в claude.ai от собствения си браузър (там вече работят запазените ти пароли и ключове за достъп)."
+            "value": "Влез в прозореца, който ще се отвори, и разреши достъпа. Накрая той се затваря сам и приложението е влязло."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Přihlaste se ke svému účtu claude.ai ve svém prohlížeči (uložená hesla a passkeye tam už fungují)."
+            "value": "Přihlaste se v otevřeném panelu a povolte přístup. Na konci se sám zavře a aplikace bude přihlášená."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Log på din claude.ai-konto i din egen browser (dine gemte adgangskoder og adgangsnøgler virker allerede der)."
+            "value": "Log på i vinduet, der åbnes, og godkend adgangen. Til sidst lukker det af sig selv, og appen er logget på."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Melde dich in deinem Browser bei claude.ai an (deine gespeicherten Passwörter und Passkeys funktionieren dort bereits)."
+            "value": "Melde dich im geöffneten Dialog an und erlaube den Zugriff. Am Ende schließt er sich von selbst, und die App ist angemeldet."
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Συνδεθείτε στον λογαριασμό σας στο claude.ai από το δικό σας πρόγραμμα περιήγησης (οι αποθηκευμένοι κωδικοί πρόσβασης και τα κλειδιά πρόσβασης λειτουργούν ήδη εκεί)."
+            "value": "Συνδεθείτε στο παράθυρο που ανοίγει και εγκρίνετε την πρόσβαση. Στο τέλος κλείνει μόνο του και η εφαρμογή είναι συνδεδεμένη."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sign in to your claude.ai account in your own browser (your saved passwords and passkeys already work there)."
+            "value": "Sign in on the sheet that opens and approve access. At the end it closes by itself and the app is signed in."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inicia sesión en tu cuenta de claude.ai desde tu propio navegador (allí ya funcionan tus contraseñas y claves de acceso guardadas)."
+            "value": "Inicia sesión en la hoja que se abre y autoriza el acceso. Al final se cierra sola y la app queda con la sesión iniciada."
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inicia sesión en tu cuenta de claude.ai en tu propio navegador (ahí ya funcionan tus contraseñas y llaves de acceso guardadas)."
+            "value": "Inicia sesión en la hoja que se abre y autoriza el acceso. Al final se cierra sola y la app queda con la sesión iniciada."
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logi oma brauseris claude.ai kontole sisse (sinu salvestatud paroolid ja pääsuvõtmed töötavad seal juba)."
+            "value": "Logi avanevas aknas sisse ja kinnita juurdepääs. Lõpus sulgub see ise ja rakendus on sisse logitud."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kirjaudu claude.ai-tiliisi omassa selaimessasi (tallennetut salasanasi ja pääsyavaimesi toimivat siellä jo)."
+            "value": "Kirjaudu sisään avautuvassa ikkunassa ja hyväksy käyttöoikeus. Lopuksi ikkuna sulkeutuu itsestään ja sovellus on kirjautunut sisään."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Connecte-toi à ton compte claude.ai dans ton navigateur (tes mots de passe et passkeys enregistrés y fonctionnent déjà)."
+            "value": "Connecte-toi dans la feuille qui s'ouvre et autorise l'accès. À la fin, elle se ferme d'elle-même et l'app est connectée."
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sínigh isteach i do chuntas claude.ai i do bhrabhsálaí féin (oibríonn do phasfhocail agus d'eochracha rochtana sábháilte ansin cheana féin)."
+            "value": "Sínigh isteach san fhuinneog a osclóidh, agus ceadaigh rochtain. Ag an deireadh dúnann sí í féin agus tá an aip sínithe isteach."
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prijavite se na svoj račun claude.ai u vlastitom pregledniku (u njemu su vam već dostupne spremljene lozinke i pristupni ključevi)."
+            "value": "Prijavite se u prozoru koji se otvori i odobrite pristup. Na kraju se zatvara sam, a aplikacija je prijavljena."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bejelentkezés a claude.ai-fiókodba a saját böngésződben (ott a jelszavaid és passkey-d már működnek)."
+            "value": "A megnyíló lapon lépj be és engedélyezd a hozzáférést. A végén a lap magától bezárul, és az app be van jelentkezve."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Masuk ke akun claude.ai Anda di browser sendiri (kata sandi dan kunci sandi yang tersimpan di sana langsung bisa dipakai)."
+            "value": "Masuk di lembar yang terbuka dan setujui aksesnya. Di akhir, lembar itu menutup sendiri dan aplikasi sudah masuk."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Accedi al tuo account claude.ai nel tuo browser (le password e le passkey salvate funzionano già lì)."
+            "value": "Accedi nel foglio che si apre e autorizza l'accesso. Alla fine si chiude da solo e l'app risulta connessa."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "お使いのブラウザーで claude.ai アカウントにサインインします（保存済みのパスワードやパスキーがそのまま使えます）。"
+            "value": "開いたシートでサインインし、アクセスを許可してください。完了するとシートは自動的に閉じ、アプリはサインイン済みになります。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "내 브라우저에서 claude.ai 계정에 로그인하세요(저장된 비밀번호와 패스키를 그대로 쓸 수 있어요)."
+            "value": "열리는 시트에서 로그인하고 접근을 허용하세요. 끝나면 시트가 저절로 닫히고 앱이 로그인돼요."
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prisijunkite prie claude.ai paskyros savo naršyklėje (ten jau veikia jūsų išsaugoti slaptažodžiai ir prieigos raktai)."
+            "value": "Atsidariusiame lange prisijunkite ir suteikite prieigą. Pabaigoje jis užsidaro pats, o programa būna prisijungusi."
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pierakstieties savā claude.ai kontā, izmantojot savu pārlūkprogrammu (tajā jau darbojas jūsu saglabātās paroles un piekļuves atslēgas)."
+            "value": "Atvērtajā logā pierakstieties un atļaujiet piekļuvi. Beigās tas aizveras pats, un lietotne ir pierakstījusies."
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Idħol fil-kont tiegħek ta' claude.ai fil-browser tiegħek stess (il-passwords u l-passkeys salvati tiegħek diġà jaħdmu hemm)."
+            "value": "Idħol fil-folja li tinfetaħ u approva l-aċċess. Fl-aħħar tingħalaq waħedha u l-app tkun daħlet."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Meld je aan bij je claude.ai-account in je eigen browser (je opgeslagen wachtwoorden en passkeys werken daar al)."
+            "value": "Meld je aan in het venster dat opent en keur toegang goed. Aan het eind sluit het vanzelf en is de app aangemeld."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zaloguj się do konta claude.ai w swojej przeglądarce (zapisane hasła i passkeye już tam działają)."
+            "value": "Zaloguj się w otwartym arkuszu i zatwierdź dostęp. Na końcu zamknie się sam, a aplikacja będzie zalogowana."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Entre na sua conta do claude.ai no seu próprio navegador (suas senhas e chaves de acesso salvas já funcionam lá)."
+            "value": "Faça login na folha que abrir e autorize o acesso. No final, ela se fecha sozinha e o app fica conectado."
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inicia sessão na tua conta do claude.ai no teu próprio browser (as palavras-passe e as chaves de acesso guardadas já funcionam lá)."
+            "value": "Inicia sessão na folha que se abre e autoriza o acesso. No fim, fecha-se sozinha e a app fica com sessão iniciada."
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Conectează-te la contul tău claude.ai în browserul tău (parolele și cheile de acces salvate funcționează deja acolo)."
+            "value": "Conectează-te în fereastra care se deschide și aprobă accesul. La final se închide singură, iar aplicația este conectată."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Войдите в свою учётную запись claude.ai в своём браузере (сохранённые пароли и passkey там уже работают)."
+            "value": "Войдите в открывшемся окне и разрешите доступ. В конце оно закроется само, и приложение будет авторизовано."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prihlás sa do svojho účtu claude.ai vo vlastnom prehliadači (uložené heslá a prístupové kľúče tam už fungujú)."
+            "value": "V paneli, ktorý sa otvorí, sa prihlás a schváľ prístup. Na konci sa sám zavrie a aplikácia je prihlásená."
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prijavite se v račun claude.ai v svojem brskalniku (tam že delujejo vaša shranjena gesla in ključi za dostop)."
+            "value": "V oknu, ki se odpre, se prijavite in odobrite dostop. Na koncu se samo zapre in aplikacija je prijavljena."
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Logga in på ditt claude.ai-konto i din egen webbläsare (där fungerar redan dina sparade lösenord och lösennycklar)."
+            "value": "Logga in i fönstret som öppnas och godkänn åtkomsten. Till sist stängs det av sig självt och appen är inloggad."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "claude.ai hesabına kendi tarayıcında giriş yap (kayıtlı şifrelerin ve passkey'lerin orada zaten çalışır)."
+            "value": "Açılan panelde giriş yap ve erişimi onayla. Sonunda panel kendiliğinden kapanır ve uygulama giriş yapmış olur."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Đăng nhập vào tài khoản claude.ai ngay trong trình duyệt của bạn (mật khẩu và khóa truy cập đã lưu ở đó vẫn dùng được)."
+            "value": "Đăng nhập trong bảng vừa mở và cho phép truy cập. Khi xong, bảng tự đóng và ứng dụng đã đăng nhập."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在你自己的浏览器中登录 claude.ai 账户（已保存的密码和通行密钥可直接使用）。"
+            "value": "在打开的面板中登录并授权访问。完成后面板会自动关闭，应用即已登录。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在你自己的瀏覽器中登入 claude.ai 帳戶（那裡已可使用你儲存的密碼與密碼金鑰）。"
+            "value": "在開啟的面板中登入並允許存取。完成後面板會自動關閉，應用程式即已登入。"
+          }
+        }
+      }
+    },
+    "dlg.intro_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Влез в акаунта си в claude.ai. Страницата за вход се отваря в собствения прозорец на това приложение, в системния прозорец за вход; запазените ти пароли и ключове за достъп вече работят там."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlaste se ke svému účtu claude.ai. Přihlašovací stránka se otevře ve vlastním okně této aplikace, v systémovém přihlašovacím panelu; uložená hesla a passkeye tam už fungují."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log på din claude.ai-konto. Loginsiden åbnes i denne apps eget vindue, i systemets loginvindue; dine gemte adgangskoder og adgangsnøgler virker allerede der."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Melde dich bei deinem claude.ai-Konto an. Die Anmeldeseite öffnet sich im eigenen Fenster dieser App, im Anmeldedialog des Systems; deine gespeicherten Passwörter und Passkeys funktionieren dort bereits."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Συνδεθείτε στον λογαριασμό σας στο claude.ai. Η σελίδα σύνδεσης ανοίγει στο παράθυρο αυτής της εφαρμογής, στο παράθυρο σύνδεσης του συστήματος· οι αποθηκευμένοι κωδικοί πρόσβασης και τα κλειδιά πρόσβασης λειτουργούν ήδη εκεί."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in to your claude.ai account. The sign-in page opens in this app's own window, in the system's sign-in sheet; your saved passwords and passkeys already work there."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicia sesión en tu cuenta de claude.ai. La página de inicio de sesión se abre en la propia ventana de esta app, en la hoja de inicio de sesión del sistema; tus contraseñas y claves de acceso guardadas ya funcionan allí."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicia sesión en tu cuenta de claude.ai. La página de inicio de sesión se abre en la propia ventana de esta app, en la hoja de inicio de sesión del sistema; tus contraseñas y llaves de acceso guardadas ya funcionan ahí."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logi oma claude.ai kontole sisse. Sisselogimisleht avaneb selle rakenduse enda aknas, süsteemi sisselogimisaknas; sinu salvestatud paroolid ja pääsuvõtmed töötavad seal juba."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjaudu claude.ai-tiliisi. Kirjautumissivu avautuu tämän sovelluksen omassa ikkunassa, järjestelmän kirjautumisikkunassa; tallennetut salasanasi ja pääsyavaimesi toimivat siellä jo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecte-toi à ton compte claude.ai. La page de connexion s'ouvre dans la fenêtre de cette app, dans la feuille de connexion du système ; tes mots de passe et passkeys enregistrés y fonctionnent déjà."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sínigh isteach i do chuntas claude.ai. Osclaítear an leathanach sínithe isteach i bhfuinneog an aip seo féin, i bhfuinneog sínithe isteach an chórais; oibríonn do phasfhocail agus d'eochracha rochtana sábháilte ansin cheana féin."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prijavite se na svoj račun claude.ai. Stranica za prijavu otvara se u vlastitom prozoru ove aplikacije, u sustavnom prozoru za prijavu; spremljene lozinke i pristupni ključevi već su vam dostupni ondje."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jelentkezz be a claude.ai-fiókodba. A bejelentkező oldal az app saját ablakában, a rendszer bejelentkező lapján nyílik meg; a mentett jelszavaid és passkey-d ott már működnek."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masuk ke akun claude.ai Anda. Halaman masuk terbuka di jendela aplikasi ini sendiri, dalam lembar masuk milik sistem; kata sandi dan kunci sandi yang tersimpan langsung bisa dipakai di sana."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accedi al tuo account claude.ai. La pagina di accesso si apre nella finestra di questa app, nel foglio di accesso del sistema; le password e le passkey salvate funzionano già lì."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "claude.ai アカウントにサインインします。サインインページはこのアプリ自身のウィンドウ内に、システムのサインインシートとして開きます（保存済みのパスワードやパスキーがそのまま使えます）。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "claude.ai 계정에 로그인하세요. 로그인 페이지는 이 앱의 창 안에, 시스템 로그인 시트로 열려요(저장된 비밀번호와 패스키를 그대로 쓸 수 있어요)."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prisijunkite prie savo claude.ai paskyros. Prisijungimo puslapis atsidaro šios programos lange, sistemos prisijungimo lange; ten jau veikia jūsų išsaugoti slaptažodžiai ir prieigos raktai."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pierakstieties savā claude.ai kontā. Pierakstīšanās lapa atveras šīs lietotnes logā, sistēmas pierakstīšanās logā; tajā jau darbojas jūsu saglabātās paroles un piekļuves atslēgas."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idħol fil-kont tiegħek ta' claude.ai. Il-paġna tal-login tinfetaħ fit-tieqa ta' din l-app stess, fil-folja tal-login tas-sistema; il-passwords u l-passkeys salvati tiegħek diġà jaħdmu hemm."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meld je aan bij je claude.ai-account. De aanmeldpagina opent in het eigen venster van deze app, in het aanmeldvenster van het systeem; je opgeslagen wachtwoorden en passkeys werken daar al."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaloguj się do konta claude.ai. Strona logowania otwiera się we własnym oknie tej aplikacji, w systemowym arkuszu logowania; zapisane hasła i passkeye już tam działają."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entre na sua conta do claude.ai. A página de login abre na própria janela deste app, na folha de login do sistema; suas senhas e chaves de acesso salvas já funcionam lá."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicia sessão na tua conta do claude.ai. A página de início de sessão abre na própria janela desta app, na folha de início de sessão do sistema; as palavras-passe e as chaves de acesso guardadas já funcionam lá."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectează-te la contul tău claude.ai. Pagina de conectare se deschide în fereastra acestei aplicații, în fereastra de conectare a sistemului; parolele și cheile de acces salvate funcționează deja acolo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Войдите в свою учётную запись claude.ai. Страница входа открывается в окне этого приложения, в системном окне входа; сохранённые пароли и passkey там уже работают."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prihlás sa do svojho účtu claude.ai. Prihlasovacia stránka sa otvorí vo vlastnom okne tejto aplikácie, v systémovom prihlasovacom paneli; uložené heslá a prístupové kľúče tam už fungujú."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prijavite se v račun claude.ai. Stran za prijavo se odpre v lastnem oknu te aplikacije, v sistemskem oknu za prijavo; tam že delujejo vaša shranjena gesla in ključi za dostop."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logga in på ditt claude.ai-konto. Inloggningssidan öppnas i appens eget fönster, i systemets inloggningsfönster; dina sparade lösenord och lösennycklar fungerar redan där."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "claude.ai hesabına giriş yap. Giriş sayfası bu uygulamanın kendi penceresinde, sistemin giriş panelinde açılır; kayıtlı şifrelerin ve passkey'lerin orada zaten çalışır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đăng nhập vào tài khoản claude.ai của bạn. Trang đăng nhập mở ngay trong cửa sổ của ứng dụng này, trong bảng đăng nhập của hệ thống; mật khẩu và khóa truy cập đã lưu vẫn dùng được ở đó."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录你的 claude.ai 账户。登录页面会在本应用自己的窗口中、以系统登录面板的形式打开（已保存的密码和通行密钥可直接使用）。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登入你的 claude.ai 帳戶。登入頁面會在本應用程式自己的視窗中、以系統登入面板的形式開啟（已可使用你儲存的密碼與密碼金鑰）。"
           }
         }
       }
@@ -3972,211 +5017,420 @@
         }
       }
     },
-    "dlg.open_browser": {
+    "dlg.manual_mac": {
       "extractionState": "manual",
       "localizations": {
         "bg": {
           "stringUnit": {
             "state": "translated",
-            "value": "Влизане през браузъра"
+            "value": "Вместо това влез с код…"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Otevřít přihlášení v prohlížeči"
+            "value": "Přihlásit se raději kódem…"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Åbn login i browseren"
+            "value": "Log på med en kode i stedet…"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Anmeldung im Browser öffnen"
+            "value": "Stattdessen mit einem Code anmelden…"
           }
         },
         "el": {
           "stringUnit": {
             "state": "translated",
-            "value": "Είσοδος μέσω του προγράμματος περιήγησης"
+            "value": "Σύνδεση με κωδικό αντ' αυτού…"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Open sign-in in your browser"
+            "value": "Sign in with a code instead…"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abrir el inicio de sesión en el navegador"
+            "value": "Iniciar sesión con un código en su lugar…"
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abrir el inicio de sesión en el navegador"
+            "value": "Iniciar sesión con un código en su lugar…"
           }
         },
         "et": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ava sisselogimisleht brauseris"
+            "value": "Logi selle asemel sisse koodiga…"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avaa kirjautuminen selaimessa"
+            "value": "Kirjaudu sen sijaan koodilla…"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ouvrir la connexion dans le navigateur"
+            "value": "Se connecter avec un code à la place…"
           }
         },
         "ga": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oscail an síniú isteach i do bhrabhsálaí"
+            "value": "Sínigh isteach le cód ina ionad sin…"
           }
         },
         "hr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Otvori prijavu u pregledniku"
+            "value": "Umjesto toga prijavite se kodom…"
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bejelentkezés megnyitása a böngészőben"
+            "value": "Bejelentkezés inkább kóddal…"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Buka halaman masuk di browser"
+            "value": "Masuk dengan kode saja…"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apri l'accesso nel browser"
+            "value": "Accedi con un codice invece…"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ブラウザーでサインインページを開く"
+            "value": "代わりにコードでサインイン…"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "브라우저에서 로그인 열기"
+            "value": "대신 코드로 로그인…"
           }
         },
         "lt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prisijungti per naršyklę"
+            "value": "Vietoj to prisijungti kodu…"
           }
         },
         "lv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Atvērt pierakstīšanos pārlūkprogrammā"
+            "value": "Tā vietā pierakstīties ar kodu…"
           }
         },
         "mt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Iftaħ il-login fil-browser"
+            "value": "Minflok, idħol b'kodiċi…"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aanmelden openen in browser"
+            "value": "In plaats daarvan aanmelden met een code…"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Otwórz logowanie w przeglądarce"
+            "value": "Zaloguj się kodem zamiast tego…"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abrir o login no navegador"
+            "value": "Entrar com um código em vez disso…"
           }
         },
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abrir o início de sessão no browser"
+            "value": "Iniciar sessão com um código em vez disso…"
           }
         },
         "ro": {
           "stringUnit": {
             "state": "translated",
-            "value": "Deschide conectarea în browser"
+            "value": "Conectează-te cu un cod în schimb…"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Открыть вход в браузере"
+            "value": "Войти с помощью кода…"
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Otvoriť prihlásenie v prehliadači"
+            "value": "Radšej sa prihlásiť kódom…"
           }
         },
         "sl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Odpri prijavo v brskalniku"
+            "value": "Namesto tega se prijavite s kodo…"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Öppna inloggningen i webbläsaren"
+            "value": "Logga in med en kod i stället…"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Girişi tarayıcıda aç"
+            "value": "Bunun yerine kodla giriş yap…"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mở trang đăng nhập trong trình duyệt"
+            "value": "Thay vào đó, đăng nhập bằng mã…"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在浏览器中打开登录页面"
+            "value": "改用代码登录…"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在瀏覽器中開啟登入頁面"
+            "value": "改用授權碼登入…"
+          }
+        }
+      }
+    },
+    "dlg.open_signin_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Влизане…"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlásit se…"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log på…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anmelden…"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Σύνδεση…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar sesión…"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar sesión…"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logi sisse…"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjaudu sisään…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se connecter…"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sínigh isteach…"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prijava…"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bejelentkezés…"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masuk…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accedi…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サインイン…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로그인…"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prisijungti…"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pierakstīties…"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idħol…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aanmelden…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaloguj się…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrar…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar sessão…"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectare…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Войти…"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prihlásiť sa…"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prijava…"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logga in…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giriş yap…"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đăng nhập…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登入…"
           }
         }
       }
@@ -4386,6 +5640,215 @@
           "stringUnit": {
             "state": "translated",
             "value": "將收到的授權碼貼在這裡："
+          }
+        }
+      }
+    },
+    "dlg.paste_label_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Само ако е нужно: ако страницата е показала код, вместо да се затвори, постави го тук:"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jen v případě potřeby: pokud stránka místo zavření zobrazila kód, vložte ho sem:"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kun hvis nødvendigt: hvis siden viste en kode i stedet for at lukke, så indsæt den her:"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur bei Bedarf: Hat die Seite statt sich zu schließen einen Code angezeigt, füge ihn hier ein:"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Μόνο αν χρειαστεί: αν η σελίδα εμφάνισε έναν κωδικό αντί να κλείσει, επικολλήστε τον εδώ:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only if needed: if the page showed a code instead of closing, paste it here:"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo si hace falta: si la página mostró un código en vez de cerrarse, pégalo aquí:"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo si hace falta: si la página mostró un código en vez de cerrarse, pégalo aquí:"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainult vajadusel: kui leht näitas sulgumise asemel koodi, kleebi see siia:"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vain tarvittaessa: jos sivu näytti koodin sulkeutumisen sijaan, liitä se tähän:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seulement si nécessaire : si la page a affiché un code au lieu de se fermer, colle-le ici :"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Má tá gá leis amháin: má thaispeáin an leathanach cód in ionad dúnadh, greamaigh anseo é:"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Samo ako je potrebno: ako je stranica umjesto zatvaranja prikazala kôd, zalijepite ga ovdje:"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Csak ha kell: ha az oldal bezárás helyett egy kódot mutatott, másold be ide:"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hanya jika perlu: jika halaman menampilkan kode alih-alih menutup, tempelkan di sini:"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo se serve: se la pagina ha mostrato un codice invece di chiudersi, incollalo qui:"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必要な場合のみ：ページが閉じずにコードを表示したときは、ここに貼り付けてください："
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "필요할 때만: 페이지가 닫히지 않고 코드를 보여 줬다면 여기에 붙여넣으세요:"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tik jei reikia: jei puslapis vietoj užsidarymo parodė kodą, įklijuokite jį čia:"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tikai ja nepieciešams: ja lapa aizvēršanās vietā parādīja kodu, ielīmējiet to šeit:"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biss jekk hemm bżonn: jekk il-paġna wriet kodiċi minflok ma ngħalqet, waħħlu hawn:"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alleen indien nodig: als de pagina een code toonde in plaats van te sluiten, plak die dan hier:"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tylko w razie potrzeby: jeśli strona zamiast się zamknąć pokazała kod, wklej go tutaj:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só se precisar: se a página mostrou um código em vez de fechar, cole-o aqui:"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só se for preciso: se a página mostrou um código em vez de se fechar, cola-o aqui:"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doar dacă e nevoie: dacă pagina a afișat un cod în loc să se închidă, lipește-l aici:"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Только при необходимости: если страница показала код вместо того, чтобы закрыться, вставьте его сюда:"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Len ak treba: ak stránka namiesto zatvorenia zobrazila kód, prilep ho sem:"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Samo po potrebi: če je stran namesto zapiranja prikazala kodo, jo prilepite sem:"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bara vid behov: om sidan visade en kod i stället för att stängas, klistra in den här:"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yalnızca gerekirse: sayfa kapanmak yerine bir kod gösterdiyse buraya yapıştır:"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chỉ khi cần: nếu trang hiển thị một mã thay vì đóng lại, hãy dán mã vào đây:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅在需要时：如果页面没有关闭而是显示了一个代码，请把它粘贴到这里："
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "僅在需要時：如果頁面沒有關閉而是顯示了一組授權碼，請貼在這裡："
           }
         }
       }
@@ -5431,6 +6894,215 @@
           "stringUnit": {
             "state": "translated",
             "value": "發生未知的錯誤。"
+          }
+        }
+      }
+    },
+    "dlg.waiting_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изчакване на влизането…"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čekání na přihlášení…"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Venter på login…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warten auf die Anmeldung…"
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Αναμονή για τη σύνδεση…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for the sign-in…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esperando el inicio de sesión…"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esperando el inicio de sesión…"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sisselogimise ootel…"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odotetaan kirjautumista…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente de la connexion…"
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ag fanacht leis an síniú isteach…"
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čekanje na prijavu…"
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Várakozás a bejelentkezésre…"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menunggu proses masuk…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In attesa dell'accesso…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サインインを待っています…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로그인을 기다리는 중…"
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laukiama prisijungimo…"
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gaida pierakstīšanos…"
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qed nistennew il-login…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wachten op de aanmelding…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oczekiwanie na logowanie…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aguardando o login…"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A aguardar o início de sessão…"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se așteaptă conectarea…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ожидание входа…"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čaká sa na prihlásenie…"
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Čakanje na prijavo…"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Väntar på inloggningen…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giriş bekleniyor…"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đang chờ đăng nhập…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待登录…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待登入…"
           }
         }
       }

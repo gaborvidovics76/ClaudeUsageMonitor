@@ -37,8 +37,11 @@ open macos/Xcode/ClaudeUsageMonitor.xcodeproj
    **KÉRDEZD GÁBORT** – ne találj ki másikat egyedül, mert a Keychain-elem és a beállítások ehhez
    kötődnek.
 4. Capabilities-ben ezeknek már ott kell lenniük (az entitlements-fájlból jönnek): **App Sandbox**
-   (Outgoing Connections (Client) ✓, User Selected File: Read Only ✓), **Hardened Runtime**.
-   Ne adj hozzá mást.
+   (Outgoing Connections (Client) ✓, **Incoming Connections (Server) ✓**, User Selected File: Read Only ✓),
+   **Hardened Runtime**. Ne adj hozzá mást. Az *Incoming Connections (Server)* a claude.ai-bejelentkezéshez
+   kell: a rendszer bejelentkező lapja a kódot a `http://localhost:<port>/callback` címre küldi vissza, amit
+   az app saját, csak a loopback-interfészen figyelő szervere fogad (`Data/LoopbackServer.swift`); a sandbox
+   e jogosultság nélkül nem enged figyelő socketet nyitni (részletek: `MEGFELELES.md` 3. pont).
 5. Ha az Xcode „Update to recommended settings” figyelmeztetést ad: elfogadhatod, nem árt.
 
 ## 3. Fordítás és kipróbálás
@@ -51,9 +54,12 @@ open macos/Xcode/ClaudeUsageMonitor.xcodeproj
      *Grant access…* → a Megnyitás panel a `~/Library/Application Support/Claude/` mappában nyílik →
      válaszd a `plan-usage-history.json` fájlt. (Ehhez a Claude asztali app legyen telepítve és
      fusson, különben nincs fájl.)
-  2. **claude.ai (all devices)** – bejelentkezés a saját böngésződben, kód beillesztése (mint
-     Windowson). Csak akkor látszik, ha a `CLAUDE_SIGN_IN` fordítási feltétel be van kapcsolva
-     (alapból be van).
+  2. **claude.ai (all devices)** – bejelentkezés a **rendszer bejelentkező lapján**
+     (`ASWebAuthenticationSession`, az App Review ezt követeli meg a Guideline 4 alapján; külső
+     böngésző nem nyílik meg). A kódot az app automatikusan megkapja (localhost-visszahívás), a
+     lap magától bezárul. Tartalék (mint Windowson): a kód beillesztése kézzel – a „Bejelentkezés
+     inkább kóddal…” linkkel, vagy automatikusan, ha nem nyitható loopback-port. Csak akkor
+     látszik, ha a `CLAUDE_SIGN_IN` fordítási feltétel be van kapcsolva (alapból be van).
   3. **Demo data** – generált mintaadatok, fiók és Claude app nélkül. **Ezt látja az Apple
      ellenőre** (lásd 6. pont, App Review notes).
 - Naplók: `~/Library/Containers/hu.dinorr.claudeusagemonitor/Data/Library/Application Support/ClaudeUsageMonitor/`
@@ -74,7 +80,8 @@ Menj végig ezen, és ami nem jó, azt írd meg (képernyőképpel):
 - [ ] Beállítások minden füle megnyílik, a kapcsolók azonnal hatnak a panelre
 - [ ] *Grant access…* → a kiválasztás után a panel adatot mutat, és **újraindítás után is** (könyvjelző)
 - [ ] Demóadatok: panel, részletlista, plan-jelvény, előzmények mind látszanak
-- [ ] claude.ai bejelentkezés: a böngésző megnyílik, a kód beillesztése után a panel szerveradatot mutat; újraindítás után is be van jelentkezve (Keychain – első alkalommal a rendszer rákérdezhet)
+- [ ] claude.ai bejelentkezés: a bejelentkező lap az app ablakára illesztve nyílik meg (**külső böngésző – Safari/Chrome – egyszer sem**), a végén magától bezárul, a panel szerveradatot mutat; újraindítás után is be van jelentkezve (Keychain – első alkalommal a rendszer rákérdezhet)
+- [ ] claude.ai bejelentkezés: a lap bezárása (Cancel) **nem** ad hibaüzenetet, az ablak visszaáll; kijelentkezés → újra bejelentkezés működik; a „Bejelentkezés inkább kóddal…” tartalék úton a kód beillesztése is működik
 - [ ] értesítés: Beállítások → Alerts küszöb állítása lefelé (pl. 1 %) után jön banner; az első alkalommal a rendszer engedélyt kér
 - [ ] *Start at login* bekapcsolása → System Settings → General → Login Items-ben megjelenik; ki/be-jelentkezés után tényleg elindul
 - [ ] nyelvváltás a menüből (pl. Magyar, 日本語): panel, menü, ablakok átváltanak; CJK betűk rendben
@@ -135,8 +142,11 @@ Ha a név foglalt, az ASC szól. Alternatíva: „Claude Usage Monitor – Panel
 
     The other two sources are optional: (1) reading the local usage log of the Claude desktop app, which
     the user selects once in an Open panel (sandbox, security-scoped bookmark); (2) the user's own
-    claude.ai sign-in in their browser. No demo account can be provided for a Claude subscription, as it
-    is a third-party service tied to a personal account; the demo mode is provided instead.
+    claude.ai sign-in through ASWebAuthenticationSession (the system sign-in sheet; the app never sends
+    the user to the default browser). The app does not offer account creation or registration - users
+    sign in to their existing account only - so account deletion (5.1.1(v)) does not apply. No demo
+    account can be provided for a Claude subscription, as it is a third-party service tied to a personal
+    account; the demo mode is provided instead.
 
     Launch at login is OFF by default and only registered (SMAppService) when the user turns it on.
     Notifications are requested only when the first alert is due. No analytics, no tracking, no ads,
