@@ -83,9 +83,13 @@ enum OAuth {
         b64url(Data(SHA256.hash(data: Data(verifier.utf8))))
     }
 
-    /// (authorize URL, state). `redirectURI` is where the sign-in page sends the code at the end.
-    static func buildAuthorize(verifier: String, challenge: String, redirectURI: String = manualRedirectURI) -> (URL, String) {
-        let state = b64url(randomBytes(24))
+    /// A fresh random `state` for one authorize round trip.
+    static func newState() -> String { b64url(randomBytes(24)) }
+
+    /// (authorize URL, state). `redirectURI` is where the sign-in page sends the code at the end; `state`
+    /// defaults to a fresh one (pass it when something else, like the loopback listener, must know it first).
+    static func buildAuthorize(verifier: String, challenge: String, redirectURI: String = manualRedirectURI,
+                               state: String = newState()) -> (URL, String) {
         var comps = URLComponents(string: authorizeURL)!
         comps.queryItems = [
             URLQueryItem(name: "code", value: "true"),

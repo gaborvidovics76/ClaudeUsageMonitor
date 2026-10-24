@@ -21,11 +21,11 @@ enum Keychain {
     private enum Store: CaseIterable { case dataProtection, login }
 
     private static func query(_ store: Store) -> [String: Any] {
-        var q: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                kSecAttrService as String: service,
-                                kSecAttrAccount as String: account]
-        if store == .dataProtection { q[kSecUseDataProtectionKeychain as String] = true }
-        return q
+        // explicit in both cases: a query targets exactly one of the two stores (TN3137)
+        [kSecClass as String: kSecClassGenericPassword,
+         kSecAttrService as String: service,
+         kSecAttrAccount as String: account,
+         kSecUseDataProtectionKeychain as String: store == .dataProtection]
     }
 
     private static func save(_ data: Data, to store: Store) -> OSStatus {
@@ -49,7 +49,7 @@ enum Keychain {
             Log.api("keychain: data-protection keychain unavailable (-34018, no provisioning profile), using the login keychain")
             status = save(data, to: .login)
         } else if status == errSecSuccess {
-            // one copy only: a token a local build left in the login keychain must not shadow this one
+            // housekeeping: a copy a local (unprofiled) build left in the login keychain is stale now
             SecItemDelete(query(.login) as CFDictionary)
         }
         if status != errSecSuccess { Log.api("keychain save failed: \(status)") }

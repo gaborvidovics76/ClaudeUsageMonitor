@@ -2,9 +2,11 @@
 //
 // Network.framework only, no third-party code. Bound to the loopback interface (127.0.0.1, and ::1
 // when it is free, because the sign-in sheet may resolve "localhost" to either), so nothing from
-// another machine can reach it. It answers exactly one request - the redirect that carries the
-// `code` and `state` - with a small "done" page, then closes. The listener lives only while the
-// sign-in sheet is open. In the App Sandbox a listening socket needs the
+// another machine can reach it. It accepts one redirect - the /callback request whose `state` is the
+// one this sign-in attempt issued - answers it with a small "done" page and closes; anything else
+// (another path, a /callback with a foreign or missing state) gets an error page and the listener
+// stays open, so a stray local request cannot cancel the sign-in. The listener lives while the
+// sign-in window is open. In the App Sandbox a listening socket needs the
 // com.apple.security.network.server entitlement (see ClaudeUsageMonitor.entitlements).
 
 import Foundation
@@ -28,10 +30,13 @@ final class LoopbackServer {
     private var onCallback: ((Callback) -> Void)?
     private let pageTitle: String
     private let pageBody: String
+    private let expectedState: String
     private(set) var port: UInt16 = 0
 
+    /// `expectedState`: the `state` of this sign-in attempt - only a redirect carrying it is accepted.
     /// `pageTitle` / `pageBody`: the texts of the page shown in place of the redirect (localized by the caller).
-    init(pageTitle: String, pageBody: String) {
+    init(expectedState: String, pageTitle: String, pageBody: String) {
+        self.expectedState = expectedState
         self.pageTitle = pageTitle
         self.pageBody = pageBody
     }
@@ -167,6 +172,12 @@ final class LoopbackServer {
         let items = comps.queryItems ?? []
         func q(_ name: String) -> String? { items.first { $0.name == name }?.value }
         var cb = Callback(code: q("code"), state: q("state"), error: nil)
+        guard !delivered, cb.state == expectedState else {
+            // not this sign-in's redirect (a stray local request, a reload): refuse it and keep listening
+            send(conn, status: "400 Bad Request",
+                 html: page(title: "400", body: "This request does not belong to the current sign-in."))
+            return
+        }
         if let err = q("error") {
             cb.error = [err, q("error_description")].compactMap { $0 }.joined(separator: ": ")
         } else if (cb.code ?? "").isEmpty {
@@ -176,7 +187,6 @@ final class LoopbackServer {
         // one callback only - later connections (favicon, a reload) are refused
         listeners.forEach { $0.cancel() }
         listeners.removeAll()
-        guard !delivered else { return }
         delivered = true
         let handler = onCallback
         DispatchQueue.main.async { handler?(cb) }

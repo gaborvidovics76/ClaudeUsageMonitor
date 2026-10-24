@@ -29,6 +29,7 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
     private(set) var redirectURI = OAuth.manualRedirectURI
     private var session: ASWebAuthenticationSession?
     private var server: LoopbackServer?
+    private var closed = false
     /// The sign-in window: anchor of the sheet (set by the controller once the window exists).
     weak var window: NSWindow?
     var onSuccess: ((OAuthTokens) -> Void)?
@@ -48,11 +49,11 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
 
     deinit { server?.stop() }
 
-    /// Fresh PKCE verifier - every sign-in attempt starts with a new one (and a new state, see openSession).
+    /// Fresh PKCE verifier and state - every sign-in attempt starts with new ones.
     private func newAttempt() {
         let (v, _) = OAuth.newPKCE()
         verifier = v
-        state = ""
+        state = OAuth.newState()
     }
 
     // MARK: - the sheet
@@ -67,7 +68,7 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
             openSession(redirectURI: OAuth.manualRedirectURI)
             return
         }
-        let server = LoopbackServer(pageTitle: tr("dlg.done_title_mac"), pageBody: tr("dlg.done_body_mac"))
+        let server = LoopbackServer(expectedState: state, pageTitle: tr("dlg.done_title_mac"), pageBody: tr("dlg.done_body_mac"))
         self.server = server
         server.start(preferredPort: OAuth.loopbackPort, onCallback: { [weak self] cb in
             self?.loopbackCallback(cb)
@@ -95,8 +96,7 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
     private func openSession(redirectURI: String) {
         self.redirectURI = redirectURI
         let challenge = OAuth.challenge(for: verifier)
-        let (url, st) = OAuth.buildAuthorize(verifier: verifier, challenge: challenge, redirectURI: redirectURI)
-        state = st
+        let url = OAuth.buildAuthorize(verifier: verifier, challenge: challenge, redirectURI: redirectURI, state: state).0
         let handler: (URL?, Error?) -> Void = { [weak self] callbackURL, error in
             DispatchQueue.main.async { self?.sessionFinished(callbackURL, error) }
         }
@@ -121,8 +121,9 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
 
     /// Completion of the sheet. Closing it (Cancel, or the app's own cancel after the redirect) is not an error.
     private func sessionFinished(_ callbackURL: URL?, _ error: Error?) {
+        if session == nil { return }       // the app itself cancelled it (loopback result, close()) - already handled
         session = nil
-        if phase == .checking { return }   // the loopback already delivered the code; the app closed the sheet
+        if phase == .checking { return }
         if let url = callbackURL {          // not expected (custom scheme), but handle it like a pasted URL
             pasted = url.absoluteString
             phase = .idle
@@ -140,7 +141,9 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
     /// The loopback listener received the redirect.
     private func loopbackCallback(_ cb: LoopbackServer.Callback) {
         guard phase == .waiting else { return }
-        session?.cancel()                   // closes the sheet; its completion arrives as canceledLogin and is ignored
+        // closes the sheet; its completion (canceledLogin) arrives later on the main queue and finds
+        // `session == nil`, `phase` already set - sessionFinished then changes nothing visible
+        session?.cancel()
         session = nil
         stopServer()
         if let err = cb.error {
@@ -148,7 +151,7 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
             errorText = tr("dlg.err_badcode_mac", err)
             return
         }
-        guard let code = cb.code, cb.state == state else {
+        guard let code = cb.code, cb.state == state else {   // the server already filtered on state; belt and braces
             phase = .idle
             errorText = tr("dlg.err_badcode_mac", tr("dlg.err_state_mac"))
             return
@@ -202,11 +205,20 @@ final class SignInModel: NSObject, ObservableObject, ASWebAuthenticationPresenta
         }
     }
 
-    /// Cancel / window closed: everything is torn down, nothing is reported.
-    func close() {
+    /// The window went away some other way (title bar, "close all windows"): tear everything down,
+    /// report nothing. Idempotent.
+    func windowDidClose() {
+        guard !closed else { return }
+        closed = true
         session?.cancel()
         session = nil
         stopServer()
+    }
+
+    /// Cancel button: tear down, then let the controller close the window.
+    func close() {
+        guard !closed else { return }
+        windowDidClose()
         onClose?()
     }
 
