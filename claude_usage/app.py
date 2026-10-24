@@ -173,7 +173,12 @@ class MonitorApp:
 
         # source selection: "api" only if there is a valid sign-in
         use_api = s["source"] == "api" and self.api_reader.has_tokens()
-        self.reader = self.api_reader if use_api else self.local_reader
+        reader = self.api_reader if use_api else self.local_reader
+        if reader is not self.reader:
+            # other source, other figures: comparing them with the old ones fired false threshold /
+            # "limit reset" notifications right after a switch, sign-in or logout
+            self._last.clear()
+        self.reader = reader
         self.api_reader.model_filter = (s["model_filter"] or "Fable").strip()
 
         # We refresh the display often (age counter, picking up a completed query).
@@ -663,9 +668,6 @@ class MonitorApp:
         if self.help_dialog is not None:
             self.help_dialog.close()
             self.help_dialog = None
-        if self.help_dialog is not None:
-            self.help_dialog.close()
-            self.help_dialog = None
         self.widget.set_backup(self.backup.status, self.widget.backup_expected)
 
     def _set_source(self, source: str) -> None:
@@ -689,8 +691,9 @@ class MonitorApp:
         return False
 
     def _on_tokens_captured(self, tokens: dict) -> None:
-        secretstore.save_tokens(tokens)
+        # set_tokens first: from here a fetch of the previous sign-in can no longer save its tokens
         self.api_reader.set_tokens(tokens)
+        secretstore.save_tokens(tokens)
         self.settings["source"] = "api"
         self.settings.save()
         self.apply_settings()
@@ -700,8 +703,9 @@ class MonitorApp:
         secretstore.save_tokens(tokens)
 
     def logout(self) -> None:
-        secretstore.clear_secret()
+        # set_tokens first, then delete: a fetch that is refreshing right now cannot write the token back
         self.api_reader.set_tokens({})
+        secretstore.clear_secret()
         self.settings["source"] = "local"
         self.settings.save()
         self.apply_settings()
