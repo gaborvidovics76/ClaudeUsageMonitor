@@ -456,11 +456,13 @@ final class MonitorController {
             Notifier.shared.notify(AppInfo.name, tr("notify.login_ok"))
         }
         model.onClose = { [weak self] in self?.signInWindow?.close(); self?.signInWindow = nil }
-        let host = WindowHost(title: "\(AppInfo.name) \u{2013} \(tr("dlg.login_title"))", size: NSSize(width: 480, height: 360), resizable: false) {
+        let host = WindowHost(title: "\(AppInfo.name) \u{2013} \(tr("dlg.login_title"))", size: NSSize(width: 480, height: 400), resizable: false) {
             SignInView(model: model)
         }
+        host.onClose = { model.windowDidClose() }   // title-bar close too: cancel the sheet, stop the listener
         signInWindow = host
         host.show()
+        model.window = host.window   // the system sign-in sheet is attached to this window
         #endif
     }
 

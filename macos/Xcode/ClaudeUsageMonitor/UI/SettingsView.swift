@@ -1,4 +1,6 @@
 // Settings window (port of claude_usage/settings_dialog.py), as a SwiftUI form in tabs.
+// The tabs are a segmented control above the page, not a TabView: on macOS 26 the TabView moved
+// its six tabs into the window's toolbar behind a ">>" overflow button and hid the window title.
 
 import AppKit
 import SwiftUI
@@ -24,14 +26,27 @@ struct SettingsView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            TabView(selection: $tab) {
-                AppearanceTab(s: s).tabItem { Text(tr("set.tab_appearance")) }.tag(0)
-                ContentTab(s: s).tabItem { Text(tr("set.tab_content")) }.tag(1)
-                DetailsTab(s: s, actions: actions).tabItem { Text(tr("set.tab_details")) }.tag(2)
-                AlertsTab(s: s).tabItem { Text(tr("set.tab_alerts")) }.tag(3)
-                DataTab(s: s, actions: actions).tabItem { Text(tr("set.tab_data")) }.tag(4)
-                SystemTab(s: s, actions: actions).tabItem { Text(tr("set.tab_system")) }.tag(5)
+            Picker("", selection: $tab) {
+                Text(tr("set.tab_appearance")).tag(0)
+                Text(tr("set.tab_content")).tag(1)
+                Text(tr("set.tab_details")).tag(2)
+                Text(tr("set.tab_alerts")).tag(3)
+                Text(tr("set.tab_data")).tag(4)
+                Text(tr("set.tab_system")).tag(5)
             }
+            .pickerStyle(.segmented)
+            .labelsHidden()
+            Group {
+                switch tab {
+                case 0: AppearanceTab(s: s)
+                case 1: ContentTab(s: s)
+                case 2: DetailsTab(s: s, actions: actions)
+                case 3: AlertsTab(s: s)
+                case 4: DataTab(s: s, actions: actions)
+                default: SystemTab(s: s, actions: actions)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .padding(14)
         .frame(minWidth: 520, minHeight: 440)

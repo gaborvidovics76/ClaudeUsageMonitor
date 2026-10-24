@@ -6,6 +6,9 @@ import SwiftUI
 
 final class WindowHost<Content: View> {
     private(set) var window: NSWindow?
+    /// Called once when the window closes, whichever way (title bar, `close()`, the app closing all windows).
+    var onClose: (() -> Void)?
+    private var closeObserver: NSObjectProtocol?
     private let title: String
     private let size: NSSize
     private let resizable: Bool
@@ -26,11 +29,18 @@ final class WindowHost<Content: View> {
             if resizable { mask.insert(.resizable) }
             let w = NSWindow(contentRect: NSRect(origin: .zero, size: size), styleMask: mask, backing: .buffered, defer: false)
             w.title = title
+            w.titleVisibility = .visible
             w.isReleasedWhenClosed = false
             w.contentViewController = NSHostingController(rootView: make())
             w.setContentSize(size)
             w.center()
             window = w
+            closeObserver = NotificationCenter.default.addObserver(forName: NSWindow.willCloseNotification, object: w, queue: .main) { [weak self] _ in
+                guard let self = self else { return }
+                if let o = self.closeObserver { NotificationCenter.default.removeObserver(o) }
+                self.closeObserver = nil
+                self.onClose?()
+            }
         }
         NSApp.activate(ignoringOtherApps: true)
         window?.makeKeyAndOrderFront(nil)
@@ -39,6 +49,10 @@ final class WindowHost<Content: View> {
     func close() {
         window?.close()
         window = nil
+    }
+
+    deinit {
+        if let o = closeObserver { NotificationCenter.default.removeObserver(o) }
     }
 }
 

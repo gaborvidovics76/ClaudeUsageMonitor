@@ -8,6 +8,14 @@
 	<!-- Outgoing HTTPS: claude.ai usage (when signed in) and the "message to the developer" form. -->
 	<key>com.apple.security.network.client</key>
 	<true/>
+	<!-- Incoming connections, loopback only. App Review requires the claude.ai sign-in to run in the
+	     system's own sign-in sheet (ASWebAuthenticationSession, Guideline 4); at the end that sheet
+	     sends the authorisation code to http://localhost:<port>/callback, which the app's own listener
+	     on 127.0.0.1 receives (Data/LoopbackServer.swift). Without this entitlement the sandbox refuses
+	     the listening socket. The listener exists only while the sign-in sheet is open, is bound to the
+	     loopback interface (nothing from another machine can reach it) and answers one request. -->
+	<key>com.apple.security.network.server</key>
+	<true/>
 	<!-- Read-only access to the files the user chooses in the Open panel (Claude Desktop's usage log,
 	     Claude Code's folder); kept across launches with security-scoped bookmarks. -->
 	<key>com.apple.security.files.user-selected.read-only</key>

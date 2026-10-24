@@ -1,8 +1,11 @@
-// claude.ai sign-in through the system browser (PKCE, manual code) - port of claude_usage/oauth.py.
+// claude.ai sign-in (PKCE) - port of claude_usage/oauth.py.
 //
-//   1. the app opens the sign-in page in the user's own browser,
-//   2. at the end of sign-in the page shows a code,
-//   3. the user pastes it into the app, which exchanges it for a token.
+//   1. the app opens the sign-in page in the system's own sign-in sheet (ASWebAuthenticationSession,
+//      UI/SignInView.swift - App Review does not accept the default browser, Guideline 4),
+//   2. at the end of sign-in the page redirects to http://localhost:<port>/callback, which the app's
+//      own loopback listener receives (Data/LoopbackServer.swift) - no code to copy;
+//   3. fallback, exactly as on Windows: Anthropic's page shows the code and the user pastes it.
+//   4. the app exchanges the code for a token and keeps it in the Keychain.
 //
 // With the token the app queries https://api.anthropic.com/api/oauth/usage for the server-side
 // usage (all devices, exact reset times).
@@ -31,7 +34,14 @@ enum OAuth {
     static let clientID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
     static let authorizeURL = "https://claude.ai/oauth/authorize"
     static let tokenURL = "https://platform.claude.com/v1/oauth/token"
-    static let redirectURI = "https://platform.claude.com/oauth/code/callback"
+    /// Manual flow: Anthropic's own page shows the code and the user pastes it (the Windows app, and the
+    /// fallback here when the loopback listener cannot be opened).
+    static let manualRedirectURI = "https://platform.claude.com/oauth/code/callback"
+    /// Loopback flow: the public Claude Code client is registered for http://localhost:<port>/callback.
+    /// The CLI itself listens on 54545 (a fixed port, see its public re-implementations); the server
+    /// accepts other ports too, so when 54545 is taken the app falls back to a random free port.
+    static let loopbackPort: UInt16 = 54545
+    static func loopbackRedirectURI(port: UInt16) -> String { "http://localhost:\(port)/callback" }
     static let scope = "org:create_api_key user:profile user:inference"
     static let profileURL = "https://api.anthropic.com/api/oauth/profile"
     static let usageURL = "https://api.anthropic.com/api/oauth/usage"
@@ -65,13 +75,21 @@ enum OAuth {
     /// (code_verifier, code_challenge) S256 pair.
     static func newPKCE() -> (String, String) {
         let verifier = b64url(randomBytes(32))
-        let digest = SHA256.hash(data: Data(verifier.utf8))
-        return (verifier, b64url(Data(digest)))
+        return (verifier, challenge(for: verifier))
     }
 
-    /// (authorize URL, state).
-    static func buildAuthorize(verifier: String, challenge: String) -> (URL, String) {
-        let state = b64url(randomBytes(24))
+    /// The S256 code_challenge of a verifier.
+    static func challenge(for verifier: String) -> String {
+        b64url(Data(SHA256.hash(data: Data(verifier.utf8))))
+    }
+
+    /// A fresh random `state` for one authorize round trip.
+    static func newState() -> String { b64url(randomBytes(24)) }
+
+    /// (authorize URL, state). `redirectURI` is where the sign-in page sends the code at the end; `state`
+    /// defaults to a fresh one (pass it when something else, like the loopback listener, must know it first).
+    static func buildAuthorize(verifier: String, challenge: String, redirectURI: String = manualRedirectURI,
+                               state: String = newState()) -> (URL, String) {
         var comps = URLComponents(string: authorizeURL)!
         comps.queryItems = [
             URLQueryItem(name: "code", value: "true"),
@@ -104,9 +122,10 @@ enum OAuth {
                            expiresAt: expiresAt)
     }
 
-    /// Exchanges the pasted code for a token. The pasted text has the form `code#state`
-    /// (or the whole callback URL - the dialog unpacks that before calling).
-    static func exchange(code pasted: String, verifier: String, state: String) -> (OAuthTokens?, String) {
+    /// Exchanges the code for a token. The text has the form `code#state` (or the whole callback URL - the
+    /// dialog unpacks that before calling). `redirectURI` must be the one the authorize URL was built with.
+    static func exchange(code pasted: String, verifier: String, state: String,
+                         redirectURI: String = manualRedirectURI) -> (OAuthTokens?, String) {
         let text = pasted.trimmingCharacters(in: .whitespacesAndNewlines)
         if text.isEmpty { return (nil, tr("err.no_code")) }
         var code = text
