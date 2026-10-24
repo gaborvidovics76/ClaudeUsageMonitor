@@ -1,158 +1,158 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.1",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.1.zip",
-    "sha256":  "60ee152e890157880c6804d96d851806dace71e1835a7849b2deff2459a6a784",
-    "bytes":  49172496,
+    "version":  "2.9.2",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.2.zip",
+    "sha256":  "3316784c1cdf64647aa2b93b81a3798b7f3a5deec18899983c6ee0ea88ef2b6d",
+    "bytes":  49174231,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-13T18:35:58Z",
+    "last_updated":  "2026-10-24T18:10:03Z",
     "notes":  {
                   "en":  [
-                             "A friendlier empty state. When there is no Claude Desktop usage log on the computer yet, or you are not signed in, the panel no longer just says \"not found\": it tells you what to do next – start Claude Desktop, or right-click the panel and sign in with your claude.ai account. In all 34 languages, on Windows and macOS.",
-                             "Why a new version? Because the first minute with the program should be as clear as the rest – for you, and for everyone who installs it from the Microsoft Store."
+                             "Fix: without a Claude Desktop usage log, the program stopped at start-up in local mode instead of telling you what to do next. It now starts and shows the hint, as intended.",
+                             "Also fixed: signing out while a refresh is running really signs you out; switching the data source no longer triggers false limit notifications; the model gauge\u0027s rate is no longer distorted after a restart; start at sign-in and the Start menu entry also work when the user name or the folder contains \u0027 or \u0026."
                          ],
                   "hu":  [
-                             "Barátságosabb üres állapot. Ha a gépen még nincs Claude Desktop használati napló, vagy nem vagy bejelentkezve, a panel már nem csak annyit mond, hogy „nem található”: elmondja, mi a következő lépés – indítsd el a Claude Desktopot, vagy jobb gombbal a panelen jelentkezz be a claude.ai fiókoddal. Mind a 34 nyelven, Windowson és macOS-en.",
-                             "Miért új verzió? Mert a programmal töltött első percnek is ugyanolyan világosnak kell lennie, mint a többinek – neked, és mindenkinek, aki a Microsoft Store-ból telepíti."
+                             "Javítás: Claude Desktop használati napló nélkül a program helyi módban indításkor leállt, ahelyett hogy elmondta volna a következő lépést. Most elindul, és a tervezett tippet mutatja.",
+                             "Még javítva: a frissítés közbeni kijelentkezés tényleg kijelentkeztet; az adatforrás váltása nem küld téves limit-értesítést; a modell-mérő üteme újraindítás után nem torzul; az automatikus indítás és a Start menü bejegyzés akkor is működik, ha a felhasználónévben vagy a mappa nevében \u0027 vagy \u0026 van."
                          ],
                   "de":  [
-                             "Ein freundlicherer Leerzustand. Wenn auf dem Rechner noch kein Claude-Desktop-Nutzungsprotokoll liegt oder du nicht angemeldet bist, sagt das Panel nicht mehr nur „nicht gefunden“: Es sagt dir, was als Nächstes zu tun ist – Claude Desktop starten oder per Rechtsklick auf das Panel mit deinem claude.ai-Konto anmelden. In allen 34 Sprachen, unter Windows und macOS.",
-                             "Warum eine neue Version? Weil die erste Minute mit dem Programm genauso klar sein soll wie der Rest – für dich und für alle, die es aus dem Microsoft Store installieren."
+                             "Korrektur: Ohne Claude-Desktop-Nutzungsprotokoll hat sich das Programm im lokalen Modus beim Start beendet, statt dir den nächsten Schritt zu nennen. Jetzt startet es und zeigt den Hinweis wie vorgesehen.",
+                             "Außerdem behoben: Abmelden während einer Aktualisierung meldet dich wirklich ab; der Wechsel der Datenquelle löst keine falschen Limit-Benachrichtigungen mehr aus; die Rate der Modellanzeige wird nach einem Neustart nicht mehr verfälscht; Autostart und Startmenü-Eintrag funktionieren auch, wenn Benutzername oder Ordner \u0027 oder \u0026 enthalten."
                          ],
                   "fr":  [
-                             "Un état vide plus accueillant. Quand il n\u0027y a pas encore de journal d\u0027usage de Claude Desktop sur l\u0027ordinateur, ou que tu n\u0027es pas connecté, le panneau ne dit plus seulement « introuvable » : il indique la suite – lancer Claude Desktop, ou faire un clic droit sur le panneau et se connecter avec ton compte claude.ai. Dans les 34 langues, sous Windows et macOS.",
-                             "Pourquoi une nouvelle version ? Parce que la première minute avec le programme doit être aussi claire que le reste – pour toi, et pour tous ceux qui l\u0027installent depuis le Microsoft Store."
+                             "Correctif : sans journal d\u0027utilisation de Claude Desktop, le programme s\u0027arrêtait au démarrage en mode local au lieu de vous indiquer la marche à suivre. Il démarre désormais et affiche l\u0027indication prévue.",
+                             "Également corrigé : se déconnecter pendant une actualisation vous déconnecte vraiment ; changer de source de données ne déclenche plus de fausses alertes de limite ; le rythme de la jauge du modèle n\u0027est plus faussé après un redémarrage ; le lancement à l\u0027ouverture de session et le raccourci du menu Démarrer fonctionnent aussi si le nom d\u0027utilisateur ou le dossier contient \u0027 ou \u0026."
                          ],
                   "es":  [
-                             "Un estado vacío más amable. Cuando aún no hay registro de uso de Claude Desktop en el equipo, o no has iniciado sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
-                             "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+                             "Corrección: sin registro de uso de Claude Desktop, el programa se cerraba al iniciarse en modo local en lugar de indicarte el siguiente paso. Ahora se inicia y muestra la indicación prevista.",
+                             "También corregido: cerrar sesión durante una actualización cierra la sesión de verdad; cambiar la fuente de datos ya no provoca avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona tras reiniciar; el inicio automático y el acceso del menú Inicio funcionan aunque el nombre de usuario o la carpeta contengan \u0027 o \u0026."
                          ],
                   "it":  [
-                             "Uno stato vuoto più amichevole. Quando sul computer non c\u0027è ancora un registro d\u0027uso di Claude Desktop, o non hai effettuato l\u0027accesso, il pannello non dice più solo «non trovato»: ti dice cosa fare – avviare Claude Desktop, oppure fare clic destro sul pannello e accedere con il tuo account claude.ai. In tutte le 34 lingue, su Windows e macOS.",
-                             "Perché una nuova versione? Perché il primo minuto con il programma deve essere chiaro quanto il resto – per te e per chi lo installa dal Microsoft Store."
+                             "Correzione: senza il registro di utilizzo di Claude Desktop, in modalità locale il programma si chiudeva all\u0027avvio invece di indicarti il passo successivo. Ora si avvia e mostra il suggerimento previsto.",
+                             "Corretti anche: disconnettersi durante un aggiornamento ti disconnette davvero; cambiare origine dei dati non genera più falsi avvisi di limite; il ritmo dell\u0027indicatore del modello non viene più falsato dopo un riavvio; l\u0027avvio automatico e la voce del menu Start funzionano anche se il nome utente o la cartella contengono \u0027 o \u0026."
                          ],
                   "pt":  [
-                             "Um estado vazio mais simpático. Quando ainda não há registo de uso do Claude Desktop no computador, ou não tens sessão iniciada, o painel já não diz apenas «não encontrado»: diz-te o que fazer a seguir – abrir o Claude Desktop, ou clicar com o botão direito no painel e iniciar sessão com a tua conta claude.ai. Nas 34 línguas, no Windows e no macOS.",
-                             "Porquê uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro como o resto – para ti e para todos os que o instalam a partir da Microsoft Store."
+                             "Correção: sem o registro de uso do Claude Desktop, o programa fechava ao iniciar no modo local em vez de mostrar o próximo passo. Agora ele inicia e mostra a dica, como previsto.",
+                             "Também corrigido: sair da conta durante uma atualização realmente encerra a sessão; trocar a fonte de dados não gera mais alertas de limite falsos; o ritmo do medidor do modelo não fica mais distorcido após reiniciar; a inicialização automática e o atalho no menu Iniciar funcionam mesmo que o nome de usuário ou a pasta contenha \u0027 ou \u0026."
                          ],
                   "pl":  [
-                             "Przyjaźniejszy stan pusty. Gdy na komputerze nie ma jeszcze dziennika użycia Claude Desktop albo nie jesteś zalogowany, panel nie mówi już tylko „nie znaleziono”: podpowiada, co zrobić dalej – uruchomić Claude Desktop albo kliknąć panel prawym przyciskiem i zalogować się kontem claude.ai. We wszystkich 34 językach, w Windows i macOS.",
-                             "Dlaczego nowa wersja? Bo pierwsza minuta z programem ma być tak samo jasna jak reszta – dla Ciebie i dla każdego, kto instaluje go ze sklepu Microsoft Store."
+                             "Poprawka: bez dziennika użycia Claude Desktop program w trybie lokalnym zamykał się przy starcie, zamiast podpowiedzieć kolejny krok. Teraz uruchamia się i pokazuje przewidzianą wskazówkę.",
+                             "Poprawiono też: wylogowanie w trakcie odświeżania naprawdę wylogowuje; zmiana źródła danych nie wywołuje już fałszywych powiadomień o limicie; tempo wskaźnika modelu nie jest już zniekształcone po ponownym uruchomieniu; autostart i skrót w menu Start działają także wtedy, gdy nazwa użytkownika lub folderu zawiera \u0027 lub \u0026."
                          ],
                   "nl":  [
-                             "Een vriendelijkere lege toestand. Als er op de computer nog geen gebruikslogboek van Claude Desktop is, of je niet bent aangemeld, zegt het paneel niet langer alleen „niet gevonden”: het vertelt wat je nu kunt doen – Claude Desktop starten, of met rechts op het paneel klikken en je aanmelden met je claude.ai-account. In alle 34 talen, op Windows en macOS.",
-                             "Waarom een nieuwe versie? Omdat de eerste minuut met het programma net zo duidelijk moet zijn als de rest – voor jou, en voor iedereen die het uit de Microsoft Store installeert."
+                             "Oplossing: zonder gebruikslogboek van Claude Desktop stopte het programma in de lokale modus bij het opstarten, in plaats van je te vertellen wat je moet doen. Nu start het en toont het de bedoelde tip.",
+                             "Ook opgelost: afmelden tijdens een verversing meldt je echt af; wisselen van gegevensbron geeft geen valse limietmeldingen meer; het tempo van de modelmeter raakt na een herstart niet meer vertekend; automatisch starten en de snelkoppeling in het Startmenu werken ook als de gebruikersnaam of map \u0027 of \u0026 bevat."
                          ],
                   "ru":  [
-                             "Более дружелюбное пустое состояние. Если на компьютере ещё нет журнала использования Claude Desktop или вы не вошли в учётную запись, панель больше не пишет просто «не найден»: она подсказывает следующий шаг – запустить Claude Desktop или щёлкнуть панель правой кнопкой и войти с учётной записью claude.ai. На всех 34 языках, в Windows и macOS.",
-                             "Почему новая версия? Потому что первая минута с программой должна быть такой же понятной, как и всё остальное – для вас и для всех, кто устанавливает её из Microsoft Store."
+                             "Исправление: без журнала использования Claude Desktop программа в локальном режиме закрывалась при запуске, вместо того чтобы подсказать следующий шаг. Теперь она запускается и показывает подсказку, как задумано.",
+                             "Также исправлено: выход из аккаунта во время обновления действительно завершает сеанс; смена источника данных больше не вызывает ложных уведомлений о лимите; темп индикатора модели больше не искажается после перезапуска; автозапуск и ярлык в меню «Пуск» работают, даже если имя пользователя или папка содержат \u0027 или \u0026."
                          ],
                   "cs":  [
-                             "Přívětivější prázdný stav. Když na počítači ještě není záznam využití Claude Desktop nebo nejste přihlášeni, panel už neříká jen „nenalezeno“: řekne, co dál – spustit Claude Desktop, nebo kliknout na panel pravým tlačítkem a přihlásit se účtem claude.ai. Ve všech 34 jazycích, na Windows i macOS.",
-                             "Proč nová verze? Protože první minuta s programem má být stejně jasná jako ty ostatní – pro vás i pro všechny, kdo ho instalují z Microsoft Store."
+                             "Oprava: bez protokolu využití Claude Desktop se program v místním režimu při spuštění ukončil, místo aby ti řekl, co dál. Teď se spustí a zobrazí plánovanou nápovědu.",
+                             "Dále opraveno: odhlášení během obnovování tě opravdu odhlásí; přepnutí zdroje dat už nevyvolává falešná upozornění na limit; tempo ukazatele modelu se po restartu už nezkresluje; automatické spuštění a zástupce v nabídce Start fungují i tehdy, když uživatelské jméno nebo složka obsahuje \u0027 nebo \u0026."
                          ],
                   "tr":  [
-                             "Daha dost canlısı bir boş durum. Bilgisayarda henüz Claude Desktop kullanım günlüğü yoksa ya da giriş yapmadıysan panel artık sadece „bulunamadı” demiyor: sonraki adımı söylüyor – Claude Desktop\u0027ı başlat ya da panele sağ tıklayıp claude.ai hesabınla giriş yap. 34 dilin hepsinde, Windows ve macOS\u0027te.",
-                             "Neden yeni sürüm? Çünkü programla geçen ilk dakika da gerisi kadar açık olmalı – senin için ve Microsoft Store\u0027dan yükleyen herkes için."
+                             "Düzeltme: Claude Desktop kullanım günlüğü yokken program yerel modda, bir sonraki adımı söylemek yerine açılışta kapanıyordu. Artık açılıyor ve planlanan ipucunu gösteriyor.",
+                             "Ayrıca düzeltildi: yenileme sürerken oturumu kapatmak oturumu gerçekten kapatıyor; veri kaynağını değiştirmek artık yanlış limit bildirimlerine yol açmıyor; model göstergesinin hızı yeniden başlatmadan sonra bozulmuyor; oturum açılışında başlatma ve Başlat menüsü kısayolu, kullanıcı adı veya klasör \u0027 ya da \u0026 içerse de çalışıyor."
                          ],
                   "pt-PT":  [
-                                "Um estado vazio mais simpático. Quando ainda não há registo de utilização do Claude Desktop no computador, ou não tens sessão iniciada, o painel já não diz apenas «não encontrado»: diz-te o que fazer a seguir – abrir o Claude Desktop, ou clicar com o botão direito no painel e iniciar sessão com a tua conta claude.ai. Nas 34 línguas, no Windows e no macOS.",
-                                "Porquê uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro como o resto – para ti e para todos os que o instalam a partir da Microsoft Store."
+                                "Correção: sem o registo de utilização do Claude Desktop, o programa fechava ao arrancar no modo local em vez de indicar o passo seguinte. Agora arranca e mostra a sugestão prevista.",
+                                "Também corrigido: terminar sessão durante uma atualização termina mesmo a sessão; mudar a origem dos dados já não gera falsos alertas de limite; o ritmo do indicador do modelo já não fica distorcido após reiniciar; o arranque automático e o atalho do menu Iniciar funcionam mesmo que o nome de utilizador ou a pasta contenha \u0027 ou \u0026."
                             ],
                   "pt-BR":  [
-                                "Um estado vazio mais amigável. Quando ainda não há registro de uso do Claude Desktop no computador, ou você não está conectado, o painel não diz mais apenas «não encontrado»: ele mostra o próximo passo – abrir o Claude Desktop, ou clicar com o botão direito no painel e entrar com sua conta claude.ai. Em todos os 34 idiomas, no Windows e no macOS.",
-                                "Por que uma nova versão? Porque o primeiro minuto com o programa deve ser tão claro quanto o resto – para você e para todos que o instalam pela Microsoft Store."
+                                "Correção: sem o registro de uso do Claude Desktop, o programa fechava ao iniciar no modo local em vez de mostrar o próximo passo. Agora ele inicia e mostra a dica, como previsto.",
+                                "Também corrigido: sair da conta durante uma atualização realmente encerra a sessão; trocar a fonte de dados não gera mais alertas de limite falsos; o ritmo do medidor do modelo não fica mais distorcido após reiniciar; a inicialização automática e o atalho no menu Iniciar funcionam mesmo que o nome de usuário ou a pasta contenha \u0027 ou \u0026."
                             ],
                   "es-ES":  [
-                                "Un estado vacío más amable. Cuando aún no hay registro de uso de Claude Desktop en el ordenador, o no has iniciado sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
-                                "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+                                "Corrección: sin registro de uso de Claude Desktop, el programa se cerraba al iniciarse en modo local en lugar de indicarte el siguiente paso. Ahora se inicia y muestra la indicación prevista.",
+                                "También corregido: cerrar sesión durante una actualización cierra la sesión de verdad; cambiar la fuente de datos ya no provoca avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona tras reiniciar; el inicio automático y el acceso del menú Inicio funcionan aunque el nombre de usuario o la carpeta contengan \u0027 o \u0026."
                             ],
                   "es-419":  [
-                                 "Un estado vacío más amable. Cuando todavía no hay registro de uso de Claude Desktop en la computadora, o no iniciaste sesión, el panel ya no dice solo «no encontrado»: te indica el siguiente paso – abrir Claude Desktop, o hacer clic derecho en el panel e iniciar sesión con tu cuenta de claude.ai. En los 34 idiomas, en Windows y macOS.",
-                                 "¿Por qué una nueva versión? Porque el primer minuto con el programa debe ser tan claro como el resto – para ti y para todos los que lo instalan desde la Microsoft Store."
+                                 "Corrección: sin el registro de uso de Claude Desktop, el programa se cerraba al iniciar en modo local en vez de indicarte el siguiente paso. Ahora inicia y muestra la indicación prevista.",
+                                 "También se corrigió: cerrar sesión durante una actualización realmente cierra la sesión; cambiar la fuente de datos ya no genera avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona después de reiniciar; el inicio automático y el acceso directo del menú Inicio funcionan aunque el nombre de usuario o la carpeta tengan \u0027 o \u0026."
                              ],
                   "ja":  [
-                             "より親切な空の状態。パソコンにまだ Claude Desktop の使用量ログがないとき、またはサインインしていないとき、パネルは「見つかりません」とだけ表示するのをやめました。次に何をすればよいかを示します – Claude Desktop を起動するか、パネルを右クリックして claude.ai アカウントでサインインします。34 言語すべてで、Windows と macOS で。",
-                             "なぜ新しいバージョンなのか？ プログラムとの最初の 1 分も、それ以降と同じように分かりやすくあるべきだからです – あなたのために、そして Microsoft Store からインストールするすべての人のために。"
+                             "修正: Claude Desktop の使用ログがない場合、ローカルモードでは次の手順を案内する代わりに起動時に終了していました。今は起動して、予定どおりヒントを表示します。",
+                             "そのほかの修正: 更新中にサインアウトしても確実にサインアウトされます。データソースを切り替えても誤った上限通知が出なくなりました。再起動後にモデルゲージのペースが乱れなくなりました。ユーザー名やフォルダーに \u0027 や \u0026 が含まれていても、自動起動とスタートメニューのショートカットが動作します。"
                          ],
                   "ko":  [
-                             "더 친절한 빈 상태. 컴퓨터에 아직 Claude Desktop 사용량 로그가 없거나 로그인하지 않았을 때, 패널은 더 이상 「찾을 수 없음」만 보여주지 않습니다. 다음에 할 일을 알려줍니다 – Claude Desktop을 실행하거나, 패널에서 오른쪽 클릭하여 claude.ai 계정으로 로그인하세요. 34개 언어 모두, Windows와 macOS에서.",
-                             "왜 새 버전일까요? 프로그램과의 첫 1분도 나머지와 똑같이 명확해야 하기 때문입니다 – 여러분을 위해, 그리고 Microsoft Store에서 설치하는 모든 분을 위해."
+                             "수정: Claude Desktop 사용 기록이 없으면 로컬 모드에서 다음 단계를 안내하는 대신 시작할 때 프로그램이 종료되었습니다. 이제 정상적으로 시작하고 의도한 안내를 표시합니다.",
+                             "추가 수정: 새로 고침 중에 로그아웃해도 확실히 로그아웃됩니다. 데이터 원본을 바꿔도 잘못된 한도 알림이 더 이상 뜨지 않습니다. 다시 시작한 뒤 모델 게이지의 속도가 왜곡되지 않습니다. 사용자 이름이나 폴더에 \u0027 또는 \u0026가 있어도 자동 시작과 시작 메뉴 바로 가기가 작동합니다."
                          ],
                   "zh-CN":  [
-                                "更友好的空状态。当电脑上还没有 Claude Desktop 用量日志，或你尚未登录时，面板不再只显示“未找到”，而是告诉你下一步怎么做 – 启动 Claude Desktop，或右键点击面板并用你的 claude.ai 账户登录。全部 34 种语言，Windows 和 macOS 均适用。",
-                                "为什么发布新版本？因为使用程序的第一分钟也应该和之后一样清楚 – 为了你，也为了每一位从 Microsoft Store 安装它的人。"
+                                "修复：没有 Claude Desktop 使用日志时，程序在本地模式下启动即退出，而不是提示下一步该做什么。现在它会正常启动并按设计显示提示。",
+                                "其他修复：刷新进行中退出登录会真正退出；切换数据源不再触发错误的限额通知；重启后模型仪表的速率不再失真；用户名或文件夹包含 \u0027 或 \u0026 时，开机自启和开始菜单快捷方式也能正常工作。"
                             ],
                   "zh-TW":  [
-                                "更友善的空白狀態。當電腦上還沒有 Claude Desktop 用量記錄，或你尚未登入時，面板不再只顯示「找不到」，而是告訴你下一步該怎麼做 – 啟動 Claude Desktop，或在面板上按右鍵並用你的 claude.ai 帳戶登入。全部 34 種語言，Windows 與 macOS 皆適用。",
-                                "為什麼要發布新版本？因為使用程式的第一分鐘也應該和之後一樣清楚 – 為了你，也為了每一位從 Microsoft Store 安裝它的人。"
+                                "修正：沒有 Claude Desktop 使用記錄時，程式在本機模式下一啟動就結束，而不是告訴你下一步該怎麼做。現在會正常啟動並依設計顯示提示。",
+                                "其他修正：重新整理進行中登出會確實登出；切換資料來源不再觸發錯誤的限額通知；重新啟動後模型量表的速率不再失真；使用者名稱或資料夾包含 \u0027 或 \u0026 時，開機自動啟動與開始功能表捷徑也能正常運作。"
                             ],
                   "id":  [
-                             "Keadaan kosong yang lebih ramah. Saat belum ada log penggunaan Claude Desktop di komputer, atau Anda belum masuk, panel tidak lagi hanya berkata „tidak ditemukan”: ia memberi tahu langkah berikutnya – jalankan Claude Desktop, atau klik kanan panel dan masuk dengan akun claude.ai Anda. Dalam semua 34 bahasa, di Windows dan macOS.",
-                             "Mengapa versi baru? Karena menit pertama bersama program harus sejelas sisanya – untuk Anda, dan untuk semua orang yang memasangnya dari Microsoft Store."
+                             "Perbaikan: tanpa log penggunaan Claude Desktop, program dalam mode lokal berhenti saat dimulai alih-alih memberi tahu langkah berikutnya. Sekarang program berjalan dan menampilkan petunjuk sesuai rencana.",
+                             "Juga diperbaiki: keluar dari akun saat penyegaran berjalan benar-benar mengeluarkan Anda; mengganti sumber data tidak lagi memicu notifikasi batas palsu; laju pengukur model tidak lagi terdistorsi setelah dimulai ulang; mulai otomatis dan pintasan menu Start tetap berfungsi meski nama pengguna atau folder mengandung \u0027 atau \u0026."
                          ],
                   "vi":  [
-                             "Trạng thái trống thân thiện hơn. Khi máy tính chưa có nhật ký mức sử dụng của Claude Desktop, hoặc bạn chưa đăng nhập, bảng không còn chỉ nói „không tìm thấy”: nó cho bạn biết bước tiếp theo – mở Claude Desktop, hoặc nhấp chuột phải vào bảng và đăng nhập bằng tài khoản claude.ai của bạn. Trong tất cả 34 ngôn ngữ, trên Windows và macOS.",
-                             "Vì sao có phiên bản mới? Vì phút đầu tiên với chương trình cũng phải rõ ràng như phần còn lại – cho bạn, và cho mọi người cài đặt nó từ Microsoft Store."
+                             "Sửa lỗi: khi không có nhật ký sử dụng Claude Desktop, chương trình ở chế độ cục bộ bị thoát lúc khởi động thay vì cho bạn biết bước tiếp theo. Giờ chương trình khởi động và hiển thị gợi ý như dự định.",
+                             "Cũng đã sửa: đăng xuất trong lúc đang làm mới sẽ thực sự đăng xuất; đổi nguồn dữ liệu không còn gây thông báo giới hạn sai; tốc độ của đồng hồ mô hình không còn bị sai lệch sau khi khởi động lại; tự khởi động và lối tắt trong menu Start vẫn hoạt động khi tên người dùng hoặc thư mục có \u0027 hoặc \u0026."
                          ],
                   "ro":  [
-                             "O stare goală mai prietenoasă. Când pe computer nu există încă un jurnal de utilizare Claude Desktop, sau nu ești conectat, panoul nu mai spune doar „nu a fost găsit”: îți spune ce urmează – pornește Claude Desktop, sau dă clic dreapta pe panou și conectează-te cu contul tău claude.ai. În toate cele 34 de limbi, pe Windows și macOS.",
-                             "De ce o versiune nouă? Pentru că primul minut cu programul trebuie să fie la fel de clar ca restul – pentru tine și pentru toți cei care îl instalează din Microsoft Store."
+                             "Remediere: fără jurnalul de utilizare Claude Desktop, programul se închidea la pornire în modul local, în loc să-ți spună ce ai de făcut. Acum pornește și afișează indicația prevăzută.",
+                             "Remediate de asemenea: deconectarea în timpul unei actualizări te deconectează cu adevărat; schimbarea sursei de date nu mai declanșează notificări false de limită; ritmul indicatorului modelului nu mai este distorsionat după repornire; pornirea automată și scurtătura din meniul Start funcționează și când numele de utilizator sau folderul conține \u0027 sau \u0026."
                          ],
                   "el":  [
-                             "Μια πιο φιλική κενή κατάσταση. Όταν δεν υπάρχει ακόμη αρχείο καταγραφής χρήσης του Claude Desktop στον υπολογιστή, ή δεν έχετε συνδεθεί, το πλαίσιο δεν λέει πια μόνο «δεν βρέθηκε»: σας λέει τι να κάνετε στη συνέχεια – εκκινήστε το Claude Desktop ή κάντε δεξί κλικ στο πλαίσιο και συνδεθείτε με τον λογαριασμό σας στο claude.ai. Και στις 34 γλώσσες, σε Windows και macOS.",
-                             "Γιατί νέα έκδοση; Επειδή το πρώτο λεπτό με το πρόγραμμα πρέπει να είναι εξίσου σαφές με τα υπόλοιπα – για εσάς και για όλους όσοι το εγκαθιστούν από το Microsoft Store."
+                             "Διόρθωση: χωρίς αρχείο καταγραφής χρήσης του Claude Desktop, το πρόγραμμα σε τοπική λειτουργία τερματιζόταν κατά την εκκίνηση αντί να σου πει το επόμενο βήμα. Τώρα ξεκινά και δείχνει την προβλεπόμενη υπόδειξη.",
+                             "Επίσης διορθώθηκαν: η αποσύνδεση κατά τη διάρκεια ανανέωσης σε αποσυνδέει πραγματικά· η αλλαγή πηγής δεδομένων δεν προκαλεί πια ψευδείς ειδοποιήσεις ορίου· ο ρυθμός του δείκτη μοντέλου δεν αλλοιώνεται πια μετά από επανεκκίνηση· η αυτόματη εκκίνηση και η συντόμευση στο μενού Έναρξη λειτουργούν ακόμη κι αν το όνομα χρήστη ή ο φάκελος περιέχει \u0027 ή \u0026."
                          ],
                   "bg":  [
-                             "По-дружелюбно празно състояние. Когато на компютъра още няма дневник на използването на Claude Desktop или не сте влезли, панелът вече не казва само „не е намерен“: казва ви какво да направите – стартирайте Claude Desktop или щракнете с десния бутон върху панела и влезте с акаунта си в claude.ai. На всичките 34 езика, в Windows и macOS.",
-                             "Защо нова версия? Защото първата минута с програмата трябва да е също толкова ясна, колкото и останалото – за вас и за всички, които я инсталират от Microsoft Store."
+                             "Поправка: без дневник за използване на Claude Desktop програмата в локален режим се затваряше при стартиране, вместо да ти подскаже следващата стъпка. Сега тя стартира и показва предвидената подсказка.",
+                             "Също поправено: излизането от профила по време на опресняване наистина те изписва; смяната на източника на данни вече не предизвиква фалшиви известия за лимит; темпото на индикатора на модела вече не се изкривява след рестарт; автоматичното стартиране и прекият път в менюто „Старт“ работят и когато потребителското име или папката съдържат \u0027 или \u0026."
                          ],
                   "sk":  [
-                             "Prívetivejší prázdny stav. Keď na počítači ešte nie je záznam využitia Claude Desktop alebo nie ste prihlásení, panel už nehovorí len „nenájdené“: povie, čo ďalej – spustiť Claude Desktop, alebo kliknúť na panel pravým tlačidlom a prihlásiť sa účtom claude.ai. Vo všetkých 34 jazykoch, na Windows aj macOS.",
-                             "Prečo nová verzia? Pretože prvá minúta s programom má byť rovnako jasná ako tie ostatné – pre vás aj pre všetkých, ktorí ho inštalujú z Microsoft Store."
+                             "Oprava: bez denníka používania Claude Desktop sa program v lokálnom režime pri spustení ukončil, namiesto aby ti povedal, čo ďalej. Teraz sa spustí a zobrazí plánovanú nápovedu.",
+                             "Ďalej opravené: odhlásenie počas obnovovania ťa naozaj odhlási; prepnutie zdroja údajov už nespúšťa falošné upozornenia na limit; tempo ukazovateľa modelu sa po reštarte už neskresľuje; automatické spustenie a odkaz v ponuke Štart fungujú aj vtedy, keď používateľské meno alebo priečinok obsahuje \u0027 alebo \u0026."
                          ],
                   "hr":  [
-                             "Prijaznije prazno stanje. Kad na računalu još nema zapisnika korištenja Claude Desktopa ili niste prijavljeni, ploča više ne kaže samo „nije pronađeno“: kaže vam što dalje – pokrenite Claude Desktop ili desnim klikom na ploču prijavite se svojim claude.ai računom. Na sva 34 jezika, na Windowsu i macOS-u.",
-                             "Zašto nova verzija? Jer prva minuta s programom treba biti jednako jasna kao i ostatak – za vas i za sve koji ga instaliraju iz Microsoft Storea."
+                             "Ispravak: bez zapisnika korištenja Claude Desktopa program se u lokalnom načinu rada zatvarao pri pokretanju umjesto da ti kaže sljedeći korak. Sada se pokreće i prikazuje predviđeni savjet.",
+                             "Također ispravljeno: odjava tijekom osvježavanja zaista te odjavljuje; promjena izvora podataka više ne izaziva lažne obavijesti o ograničenju; tempo pokazivača modela više se ne iskrivljuje nakon ponovnog pokretanja; automatsko pokretanje i prečac u izborniku Start rade i kad korisničko ime ili mapa sadrže \u0027 ili \u0026."
                          ],
                   "sv":  [
-                             "Ett vänligare tomt läge. När det ännu inte finns någon användningslogg från Claude Desktop på datorn, eller du inte är inloggad, säger panelen inte längre bara ”hittades inte”: den talar om nästa steg – starta Claude Desktop eller högerklicka på panelen och logga in med ditt claude.ai-konto. På alla 34 språk, i Windows och macOS.",
-                             "Varför en ny version? För att den första minuten med programmet ska vara lika tydlig som resten – för dig och för alla som installerar det från Microsoft Store."
+                             "Rättning: utan användningslogg från Claude Desktop avslutades programmet vid start i lokalt läge i stället för att berätta vad du ska göra härnäst. Nu startar det och visar tipset som tänkt.",
+                             "Även rättat: att logga ut medan en uppdatering pågår loggar verkligen ut dig; byte av datakälla ger inte längre falska gränsaviseringar; modellmätarens takt förvrängs inte längre efter en omstart; autostart och genvägen i Start-menyn fungerar även när användarnamnet eller mappen innehåller \u0027 eller \u0026."
                          ],
                   "fi":  [
-                             "Ystävällisempi tyhjä tila. Kun tietokoneella ei vielä ole Claude Desktopin käyttölokia tai et ole kirjautunut, paneeli ei enää sano pelkästään ”ei löydy”: se kertoo, mitä tehdä seuraavaksi – käynnistä Claude Desktop tai napsauta paneelia hiiren oikealla painikkeella ja kirjaudu claude.ai-tililläsi. Kaikilla 34 kielellä, Windowsissa ja macOS:ssä.",
-                             "Miksi uusi versio? Koska ensimmäisen minuutin ohjelman kanssa pitää olla yhtä selkeä kuin muidenkin – sinulle ja kaikille, jotka asentavat sen Microsoft Storesta."
+                             "Korjaus: ilman Claude Desktopin käyttölokia ohjelma sulkeutui paikallisessa tilassa käynnistyksen yhteydessä sen sijaan, että olisi kertonut seuraavan askeleen. Nyt se käynnistyy ja näyttää suunnitellun vihjeen.",
+                             "Korjattu myös: uloskirjautuminen päivityksen aikana kirjaa sinut todella ulos; tietolähteen vaihtaminen ei enää aiheuta vääriä rajailmoituksia; mallimittarin tahti ei enää vääristy uudelleenkäynnistyksen jälkeen; automaattinen käynnistys ja Käynnistä-valikon pikakuvake toimivat, vaikka käyttäjänimessä tai kansiossa olisi \u0027 tai \u0026."
                          ],
                   "da":  [
-                             "En venligere tom tilstand. Når der endnu ikke er en Claude Desktop-forbrugslog på computeren, eller du ikke er logget ind, siger panelet ikke længere bare „ikke fundet“: det fortæller, hvad du skal gøre – start Claude Desktop, eller højreklik på panelet og log ind med din claude.ai-konto. På alle 34 sprog, på Windows og macOS.",
-                             "Hvorfor en ny version? Fordi det første minut med programmet skal være lige så klart som resten – for dig og for alle, der installerer det fra Microsoft Store."
+                             "Rettelse: uden brugslog fra Claude Desktop lukkede programmet ved start i lokal tilstand i stedet for at fortælle dig, hvad du skal gøre. Nu starter det og viser tippet som tiltænkt.",
+                             "Også rettet: at logge ud mens en opdatering kører, logger dig virkelig ud; skift af datakilde udløser ikke længere falske grænsemeddelelser; modelmålerens tempo forvrænges ikke længere efter en genstart; autostart og genvejen i menuen Start virker også, når brugernavnet eller mappen indeholder \u0027 eller \u0026."
                          ],
                   "lt":  [
-                             "Draugiškesnė tuščia būsena. Kai kompiuteryje dar nėra Claude Desktop naudojimo žurnalo arba nesate prisijungę, skydelis nebesako tik „nerasta“: jis pasako, ką daryti toliau – paleisti Claude Desktop arba dešiniuoju pelės mygtuku spustelėti skydelį ir prisijungti su claude.ai paskyra. Visomis 34 kalbomis, „Windows“ ir „macOS“.",
-                             "Kodėl nauja versija? Nes pirmoji minutė su programa turi būti tokia pat aiški kaip ir visa kita – jums ir visiems, kurie ją diegia iš „Microsoft Store“."
+                             "Pataisa: be Claude Desktop naudojimo žurnalo programa vietiniame režime užsidarydavo paleidžiant, užuot pasakiusi, ką daryti toliau. Dabar ji pasileidžia ir rodo numatytą patarimą.",
+                             "Taip pat pataisyta: atsijungimas vykstant atnaujinimui tikrai jus atjungia; duomenų šaltinio keitimas nebesukelia klaidingų limito pranešimų; modelio matuoklio tempas po paleidimo iš naujo nebeiškraipomas; automatinis paleidimas ir nuoroda meniu Pradžia veikia net jei naudotojo vardas ar aplankas turi \u0027 arba \u0026."
                          ],
                   "sl":  [
-                             "Prijaznejše prazno stanje. Ko na računalniku še ni dnevnika uporabe Claude Desktop ali niste prijavljeni, plošča ne pravi več samo „ni najdeno“: pove vam, kaj storiti – zaženite Claude Desktop ali z desnim klikom na ploščo prijavite se s svojim računom claude.ai. V vseh 34 jezikih, v sistemih Windows in macOS.",
-                             "Zakaj nova različica? Ker mora biti prva minuta s programom enako jasna kot vse ostalo – za vas in za vse, ki ga namestijo iz trgovine Microsoft Store."
+                             "Popravek: brez dnevnika uporabe Claude Desktop se je program v lokalnem načinu ob zagonu zaprl, namesto da bi ti povedal naslednji korak. Zdaj se zažene in prikaže predvideni namig.",
+                             "Popravljeno tudi: odjava med osveževanjem te res odjavi; zamenjava vira podatkov ne sproža več lažnih obvestil o omejitvi; tempo merilnika modela se po ponovnem zagonu ne izkrivlja več; samodejni zagon in bližnjica v meniju Start delujeta tudi, ko uporabniško ime ali mapa vsebuje \u0027 ali \u0026."
                          ],
                   "lv":  [
-                             "Draudzīgāks tukšais stāvoklis. Kad datorā vēl nav Claude Desktop lietojuma žurnāla vai neesat pierakstījies, panelis vairs nesaka tikai „nav atrasts“: tas pasaka, ko darīt tālāk – palaist Claude Desktop vai ar labo klikšķi uz paneļa pierakstīties ar savu claude.ai kontu. Visās 34 valodās, Windows un macOS.",
-                             "Kāpēc jauna versija? Jo pirmajai minūtei ar programmu jābūt tikpat skaidrai kā pārējām – jums un visiem, kas to instalē no Microsoft Store."
+                             "Labojums: bez Claude Desktop lietojuma žurnāla programma lokālajā režīmā startējot aizvērās, nevis pateica, kas jādara tālāk. Tagad tā startē un parāda paredzēto padomu.",
+                             "Laboti arī: izrakstīšanās atsvaidzināšanas laikā tiešām jūs izraksta; datu avota maiņa vairs neizraisa nepatiesus limita paziņojumus; modeļa rādītāja temps pēc restartēšanas vairs netiek izkropļots; automātiskā palaišana un saīsne izvēlnē Sākt darbojas arī tad, ja lietotājvārdā vai mapē ir \u0027 vai \u0026."
                          ],
                   "et":  [
-                             "Sõbralikum tühi olek. Kui arvutis pole veel Claude Desktopi kasutuslogi või sa pole sisse logitud, ei ütle paneel enam ainult „ei leitud“: ta ütleb, mida edasi teha – käivita Claude Desktop või tee paneelil paremklõps ja logi sisse oma claude.ai kontoga. Kõigis 34 keeles, Windowsis ja macOS-is.",
-                             "Miks uus versioon? Sest esimene minut programmiga peab olema sama selge kui ülejäänud – sinu jaoks ja kõigi jaoks, kes selle Microsoft Store\u0027ist paigaldavad."
+                             "Parandus: ilma Claude Desktopi kasutuslogita sulgus programm kohalikus režiimis käivitamisel, selle asemel et öelda, mida edasi teha. Nüüd see käivitub ja näitab ettenähtud vihjet.",
+                             "Parandatud ka: väljalogimine värskendamise ajal logib sind päriselt välja; andmeallika vahetamine ei põhjusta enam valesid limiiditeateid; mudelinäidiku tempo ei moonutu pärast taaskäivitust enam; automaatne käivitus ja Start-menüü otsetee töötavad ka siis, kui kasutajanimes või kaustas on \u0027 või \u0026."
                          ],
                   "mt":  [
-                             "Stat vojt aktar ħanin. Meta fuq il-kompjuter għadu m\u0027hemmx reġistru tal-użu ta\u0027 Claude Desktop, jew m\u0027intix imdaħħal, il-pannell ma jgħidx biss „ma nstabx“: jgħidlek x\u0027għandek tagħmel – ibda Claude Desktop, jew ikklikkja bil-lemin fuq il-pannell u idħol bil-kont claude.ai tiegħek. Fl-34 lingwa kollha, fuq Windows u macOS.",
-                             "Għaliex verżjoni ġdida? Għax l-ewwel minuta mal-programm għandha tkun ċara daqs il-bqija – għalik, u għal kull min jinstallah mill-Microsoft Store."
+                             "Korrezzjoni: mingħajr ir-reġistru tal-użu ta\u0027 Claude Desktop, il-programm fil-modalità lokali kien jieqaf mal-bidu minflok jgħidlek x\u0027għandek tagħmel wara. Issa jibda u juri l-ħjiel kif suppost.",
+                             "Ikkoreġuti wkoll: meta toħroġ mill-kont waqt aġġornament, toħroġ tassew; il-bidla tas-sors tad-data ma tqanqalx aktar notifiki foloz dwar il-limitu; ir-ritmu tal-indikatur tal-mudell ma jibqax mgħawweġ wara li terġa\u0027 tibda; il-bidu awtomatiku u l-iskorċatura fil-menu Start jaħdmu anke meta l-isem tal-utent jew il-folder ikun fih \u0027 jew \u0026."
                          ],
                   "ga":  [
-                             "Staid fholamh níos cairdiúla. Nuair nach bhfuil loga úsáide Claude Desktop ar an ríomhaire fós, nó nuair nach bhfuil tú sínithe isteach, ní deir an painéal „níor aimsíodh“ amháin a thuilleadh: insíonn sé duit cad atá le déanamh – tosaigh Claude Desktop, nó deaschliceáil ar an bpainéal agus sínigh isteach le do chuntas claude.ai. Sna 34 theanga ar fad, ar Windows agus macOS.",
-                             "Cén fáth leagan nua? Mar ba chóir don chéad nóiméad leis an gclár a bheith chomh soiléir leis an gcuid eile – duitse, agus do gach duine a shuiteálann é ón Microsoft Store."
+                             "Ceartúchán: gan loga úsáide Claude Desktop, stopadh an clár sa mhód áitiúil ag an tosú in ionad a insint duit cad ba cheart a dhéanamh ina dhiaidh sin. Tosaíonn sé anois agus taispeánann sé an leid mar a bhí beartaithe.",
+                             "Ceartaithe freisin: má shíníonn tú amach le linn athnuachana, síneofar amach thú i ndáiríre; ní spreagann athrú na foinse sonraí fógraí bréagacha teorann a thuilleadh; ní shaobhtar ráta mhéadar an mhúnla a thuilleadh tar éis atosaithe; oibríonn an tosú uathoibríoch agus aicearra an roghchláir Tosaigh fiú má tá \u0027 nó \u0026 in ainm an úsáideora nó an fhillteáin."
                          ]
               }
 }

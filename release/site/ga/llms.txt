@@ -15,7 +15,7 @@ Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear 
 - **Ceadúnas**: MIT, foinse oscailte ar GitHub
 - **Údar**: Gábor Vidovics, an Ungáir – neamhspleách, gan aon bhaint le hAnthropic
 
-- Leagan: 2.9.0
+- Leagan: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ag teacht go luath
 - https://claudeusagemonitor.com/ga/

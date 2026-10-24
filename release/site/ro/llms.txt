@@ -15,7 +15,7 @@ O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în 
 - **Licență**: MIT, open source pe GitHub
 - **Autor**: Gábor Vidovics, Ungaria – independent, fără legătură cu Anthropic
 
-- Versiunea: 2.9.0
+- Versiunea: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: În curând
 - https://claudeusagemonitor.com/ro/

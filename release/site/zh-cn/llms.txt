@@ -15,7 +15,7 @@ Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Wind
 - **许可证**: MIT，在 GitHub 上开源
 - **作者**: Vidovics Gábor，匈牙利——独立开发者，与 Anthropic 无关联
 
-- 版本: 2.9.0
+- 版本: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 即将推出
 - https://claudeusagemonitor.com/zh-cn/

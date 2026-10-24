@@ -2,6 +2,17 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.2] - 2026-10-24
+
+- Fix: without a Claude Desktop usage log, the program stopped at start-up in local mode instead of telling you what to do next. It now starts and shows the hint, as intended.
+- Also fixed: signing out while a refresh is running really signs you out; switching the data source no longer triggers false limit notifications; the model gauge's rate is no longer distorted after a restart; start at sign-in and the Start menu entry also work when the user name or the folder contains ' or &.
+
+*Magyarul:*
+
+- Javítás: Claude Desktop használati napló nélkül a program helyi módban indításkor leállt, ahelyett hogy elmondta volna a következő lépést. Most elindul, és a tervezett tippet mutatja.
+- Még javítva: a frissítés közbeni kijelentkezés tényleg kijelentkeztet; az adatforrás váltása nem küld téves limit-értesítést; a modell-mérő üteme újraindítás után nem torzul; az automatikus indítás és a Start menü bejegyzés akkor is működik, ha a felhasználónévben vagy a mappa nevében ' vagy & van.
+
+
 ## [2.9.1] - 2026-10-13
 
 - A friendlier empty state. When there is no Claude Desktop usage log on the computer yet, or you are not signed in, the panel no longer just says "not found": it tells you what to do next – start Claude Desktop, or right-click the panel and sign in with your claude.ai account. In all 34 languages, on Windows and macOS.

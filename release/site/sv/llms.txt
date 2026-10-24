@@ -15,7 +15,7 @@ En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnem
 - **Licens**: MIT, öppen källkod på GitHub
 - **Utvecklare**: Gábor Vidovics, Ungern – oberoende, inte knuten till Anthropic
 
-- Version: 2.9.0
+- Version: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kommer snart
 - https://claudeusagemonitor.com/sv/

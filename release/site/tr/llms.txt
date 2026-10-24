@@ -15,7 +15,7 @@ Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: clau
 - **Lisans**: MIT, GitHub'da açık kaynak
 - **Geliştirici**: Gábor Vidovics, Macaristan – bağımsız, Anthropic ile bağlantısı yok
 
-- Sürüm: 2.9.0
+- Sürüm: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Çok yakında
 - https://claudeusagemonitor.com/tr/

@@ -15,7 +15,7 @@ Jedna aplikacja na Windows i na Maca. Obejmuje wszystko, co liczy się do twojeg
 - **Licencja**: MIT, open source na GitHubie
 - **Autor**: Gábor Vidovics, Węgry – niezależny twórca, niepowiązany z Anthropic
 
-- Wersja: 2.9.0
+- Wersja: 2.9.2
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Już wkrótce
 - https://claudeusagemonitor.com/pl/
