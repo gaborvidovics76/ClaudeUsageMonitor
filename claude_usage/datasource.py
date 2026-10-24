@@ -15,6 +15,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
+from .i18n import tr
+
 FIVE_HOURS_MS = 5 * 3600 * 1000
 WEEK_MS = 7 * 24 * 3600 * 1000
 
@@ -32,6 +34,7 @@ class Sample:
     fh: float
     sd: float
     mo: float = 0.0                     # model-scoped weekly (e.g. Fable), API mode only
+    mo_known: bool = True               # False: no model figure (filled in from the Claude Desktop log)
 
 
 @dataclass

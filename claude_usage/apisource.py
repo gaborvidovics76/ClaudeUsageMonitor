@@ -100,7 +100,8 @@ def _load_history() -> List[Sample]:
         with open(_history_path(), "r", encoding="utf-8") as fh:
             raw = json.load(fh)
         cutoff = int(time.time() * 1000) - WEEK_MS
-        rows = [Sample(t=int(r[0]), org="", fh=float(r[1]), sd=float(r[2]), mo=float(r[3]))
+        rows = [Sample(t=int(r[0]), org="", fh=float(r[1]), sd=float(r[2]),
+                       mo=float(r[3]) if r[3] is not None else 0.0, mo_known=r[3] is not None)
                 for r in raw.get("samples", []) if int(r[0]) >= cutoff]
     except (OSError, ValueError, TypeError, IndexError, AttributeError):
         return []
@@ -122,8 +123,11 @@ def _backfill_from_desktop(series: List[Sample]) -> List[Sample]:
         if len({str(r.get("org", "")) for r in raw}) != 1:
             return series
         cutoff = int(time.time() * 1000) - WEEK_MS
+        # Claude Desktop logs no model-scoped figure: mo_known=False keeps these samples out of the
+        # model gauge's burn rate, ETA and sparkline (a 0 there would read as a sudden jump)
         extra = [Sample(t=int(r["t"]), org="", fh=float((r.get("u") or {}).get("fh", 0) or 0),
-                        sd=float((r.get("u") or {}).get("sd", 0) or 0)) for r in raw if int(r["t"]) >= cutoff]
+                        sd=float((r.get("u") or {}).get("sd", 0) or 0), mo_known=False)
+                 for r in raw if int(r["t"]) >= cutoff]
     except (OSError, ValueError, TypeError, KeyError, AttributeError):
         return series
     have = sorted(s.t for s in series)
@@ -152,7 +156,8 @@ def _save_history(series: List[Sample]) -> None:
     tmp = path + ".tmp"
     try:
         with open(tmp, "w", encoding="utf-8") as fh:
-            json.dump({"v": 1, "samples": [[s.t, s.fh, s.sd, s.mo] for s in series]}, fh, separators=(",", ":"))
+            json.dump({"v": 1, "samples": [[s.t, s.fh, s.sd, s.mo if s.mo_known else None] for s in series]},
+                      fh, separators=(",", ":"))
         os.replace(tmp, path)
     except OSError as e:
         _dbg(f"history save failed: {e}")
@@ -197,11 +202,15 @@ class ApiReader:
         self._profile: Optional[ProfileInfo] = None
         self._profile_next = 0.0      # when to ask the profile endpoint again
         self._needs_login = False     # the refresh token is finished: only a new sign-in helps
+        # bumped by set_tokens(): a fetch started for an earlier sign-in (or before a logout) must not
+        # write its tokens, data or errors back afterwards
+        self._gen = 0
 
     # ------------------------------------------------------------------ token
 
     def set_tokens(self, tokens: dict) -> None:
         with self._lock:
+            self._gen += 1
             self._tokens = tokens or {}
             self._raw = None
             self._error = ""
@@ -213,6 +222,8 @@ class ApiReader:
             self._interval = BASE_INTERVAL
             self._profile = None      # another account may have signed in
             self._profile_next = 0.0
+            if self._inflight and self._tokens.get("access_token"):
+                self._force_pending = True    # the running fetch belongs to the old sign-in: ask again after it
 
     def has_tokens(self) -> bool:
         with self._lock:
@@ -249,7 +260,18 @@ class ApiReader:
         with self._lock:
             return self._last_status == 429
 
-    def _valid_access_token(self) -> Tuple[str, str]:
+    def _store_refreshed(self, new: dict, gen: int) -> bool:
+        """Keeps (and saves) the tokens a refresh returned - unless a logout or another sign-in happened
+        since this fetch started. The save runs under the lock, so it can never land after set_tokens()."""
+        with self._lock:
+            if gen != self._gen:
+                return False
+            self._tokens = new
+            if self._on_tokens_changed:
+                self._on_tokens_changed(new)
+            return True
+
+    def _valid_access_token(self, gen: int) -> Tuple[str, str]:
         """Returns a valid access token (refreshing if needed). (token, error)."""
         with self._lock:
             tokens = dict(self._tokens)
@@ -261,16 +283,15 @@ class ApiReader:
         if need_refresh and tokens.get("refresh_token"):
             new, err = oauth.refresh(tokens["refresh_token"])
             if new and new.get("access_token"):
-                with self._lock:
-                    self._tokens = new
-                if self._on_tokens_changed:
-                    self._on_tokens_changed(new)
+                if not self._store_refreshed(new, gen):
+                    return "", ""                 # signed out / signed in again meanwhile: drop it
                 return new["access_token"], ""
             if oauth.is_dead_grant(err):
                 # the sign-in is finished - stop asking the server and tell the user plainly.
                 # The raw answer stays in api.log; the panel never shows HTTP/JSON.
                 with self._lock:
-                    self._needs_login = True
+                    if gen == self._gen:
+                        self._needs_login = True
                 _dbg(f"sign-in finished, no more attempts until a new login: {err}")
                 return "", tr("err.signin_needed")
             if access and not (isinstance(exp, (int, float)) and exp <= time.time()):
@@ -307,20 +328,23 @@ class ApiReader:
             self._retry_at = None
             self._inflight = True
             self._last_fetch = now
-        threading.Thread(target=self._worker, daemon=True).start()
+            gen = self._gen
+        threading.Thread(target=self._worker, args=(gen,), daemon=True).start()
 
     def force_refresh(self) -> None:
         """Immediate network query (called by "Refresh now")."""
         self.refresh_async(force=True)
 
-    def _worker(self) -> None:
+    def _worker(self, gen: int) -> None:
         # CRITICAL: whatever happens, _inflight is reset at the end - otherwise the
         # flag stays true and no new query ever starts again.
+        to_save: Optional[List[Sample]] = None
         try:
-            access, err = self._valid_access_token()
+            access, err = self._valid_access_token(gen)
             if not access:
                 with self._lock:
-                    self._error = err
+                    if gen == self._gen:
+                        self._error = err
                 _dbg(f"nincs access token: {err}")
                 return
 
@@ -331,13 +355,13 @@ class ApiReader:
                 _dbg("401 -> token refresh and retry")
                 new, rerr = oauth.refresh(refresh_token)
                 if new and new.get("access_token"):
-                    with self._lock:
-                        self._tokens = new
-                    if self._on_tokens_changed:
-                        self._on_tokens_changed(new)
+                    if not self._store_refreshed(new, gen):
+                        return                    # signed out / signed in again meanwhile
                     raw, status, ferr, retry_after = oauth.fetch_usage(new["access_token"])
                 elif oauth.is_dead_grant(rerr):
                     with self._lock:
+                        if gen != self._gen:
+                            return
                         self._needs_login = True
                         self._error = tr("err.signin_needed")
                     _dbg(f"sign-in finished after 401: {rerr}")
@@ -347,6 +371,8 @@ class ApiReader:
 
             now = int(time.time() * 1000)
             with self._lock:
+                if gen != self._gen:
+                    return                        # this answer belongs to an earlier sign-in
                 self._last_status = status
                 if raw is not None and status == 200:
                     self._raw = raw
@@ -354,7 +380,7 @@ class ApiReader:
                     self._error = ""
                     self._retries_left = 0
                     self._interval = max(BASE_INTERVAL, self._interval * 0.75)
-                    self._append_series(raw, now)
+                    to_save = self._append_series(raw, now)
                     _dbg("OK 200")
                     if not self._limits_logged:
                         # once per run: which limits the server reports (no secrets)
@@ -422,12 +448,15 @@ class ApiReader:
                     else:
                         _dbg(f"status={status} -> giving up until the next poll "
                              f"(interval {self._interval:.0f}s) {str(ferr)[:80]!r}")
+            if to_save is not None:
+                _save_history(to_save)            # disk I/O outside the lock: read() never waits on it
             if status == 200:
-                self._maybe_fetch_profile()
+                self._maybe_fetch_profile(gen)
         except Exception as e:  # noqa: BLE001 - the thread must never die silently
             import traceback
             with self._lock:
-                self._error = tr("err.unexpected", e)
+                if gen == self._gen:
+                    self._error = tr("err.unexpected", e)
             _dbg("EXCEPTION:\n" + traceback.format_exc())
         finally:
             with self._lock:
@@ -437,7 +466,7 @@ class ApiReader:
             if again:
                 self.refresh_async(force=True)
 
-    def _maybe_fetch_profile(self) -> None:
+    def _maybe_fetch_profile(self, gen: int) -> None:
         """Plan badge data. A separate, rare request - failure only means no badge."""
         now = time.time()
         with self._lock:
@@ -465,6 +494,8 @@ class ApiReader:
             created_at=str(acc.get("created_at") or ""),
         )
         with self._lock:
+            if gen != self._gen:
+                return
             self._profile = info
             self._profile_next = now + PROFILE_EVERY_S
         # the plan is not a secret, the person is: never log name or e-mail
@@ -734,21 +765,31 @@ class ApiReader:
                 first = entry
         return first if first is not None else (0.0, None, "")
 
-    def _append_series(self, raw: dict, now: int) -> None:
+    def _append_series(self, raw: dict, now: int) -> Optional[List[Sample]]:
+        """Called under the lock. Returns a copy of the series when it is due to be saved (the caller
+        writes it after releasing the lock), else None."""
         (fh, _), (sd, _) = self._pick(raw)
         mo, _, _ = self._pick_model(raw, self.model_filter)
         if self._series and now - self._series[-1].t < 1000:
-            return
+            return None
         self._series.append(Sample(t=now, org="", fh=fh, sd=sd, mo=mo))
         cutoff = now - WEEK_MS
         self._series = [s for s in self._series if s.t >= cutoff][-HISTORY_MAX:]
         if time.time() - self._saved_at >= HISTORY_SAVE_EVERY_S:
             self._saved_at = time.time()
-            _save_history(self._series)
+            return list(self._series)
+        return None
+
+    @staticmethod
+    def _known(series: List[Sample], attr: str) -> List[Sample]:
+        """The samples with a real value for `attr` (backfilled ones have no model figure)."""
+        return [s for s in series if s.mo_known] if attr == "mo" else series
 
     def _spark(self, attr: str, span_ms: int, points: int) -> List[float]:
         now = int(time.time() * 1000)
-        vals = [getattr(s, attr) for s in self._series if s.t >= now - span_ms]
+        with self._lock:
+            series = list(self._series)
+        vals = [getattr(s, attr) for s in self._known(series, attr) if s.t >= now - span_ms]
         if len(vals) <= points:
             return vals
         step = len(vals) / points
@@ -756,7 +797,7 @@ class ApiReader:
 
     @staticmethod
     def _burn(series: List[Sample], attr: str, now_ms: int, window_ms: int) -> float:
-        pts = [(s.t, getattr(s, attr)) for s in series if s.t >= now_ms - window_ms]
+        pts = [(s.t, getattr(s, attr)) for s in ApiReader._known(series, attr) if s.t >= now_ms - window_ms]
         if len(pts) < 2:
             return 0.0
         dt_h = (pts[-1][0] - pts[0][0]) / 3_600_000.0

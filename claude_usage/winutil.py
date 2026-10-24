@@ -113,6 +113,11 @@ def start_menu_exists() -> bool:
     return os.path.exists(start_menu_path())
 
 
+def _ps_quote(text: str) -> str:
+    """A PowerShell single-quoted string literal: ' is doubled (C:\\Users\\O'Brien would end the string)."""
+    return "'" + str(text).replace("'", "''") + "'"
+
+
 def create_start_menu_shortcut() -> bool:
     """Shortcut into the Start menu (via WScript.Shell COM, using PowerShell)."""
     target = exe_path()
@@ -120,10 +125,10 @@ def create_start_menu_shortcut() -> bool:
     workdir = os.path.dirname(target)
     ps = (
         "$w = New-Object -ComObject WScript.Shell; "
-        f"$s = $w.CreateShortcut('{lnk}'); "
-        f"$s.TargetPath = '{target}'; "
-        f"$s.WorkingDirectory = '{workdir}'; "
-        f"$s.IconLocation = '{target},0'; "
+        f"$s = $w.CreateShortcut({_ps_quote(lnk)}); "
+        f"$s.TargetPath = {_ps_quote(target)}; "
+        f"$s.WorkingDirectory = {_ps_quote(workdir)}; "
+        f"$s.IconLocation = {_ps_quote(target + ',0')}; "
         "$s.Description = 'Claude Usage Monitor'; "
         "$s.Save()"
     )
@@ -158,8 +163,11 @@ def task_command() -> Optional[str]:
         return None
     import re
 
+    from xml.sax.saxutils import unescape
+
     m = re.search(r"<Command>(.*?)</Command>", res.stdout, re.S)
-    return m.group(1).strip() if m else ""
+    # unescaped, so it compares equal to exe_path() even when the path holds & < >
+    return unescape(m.group(1).strip(), {"&quot;": '"', "&apos;": "'"}) if m else ""
 
 
 def set_task_autostart(enabled: bool) -> bool:
@@ -176,13 +184,17 @@ def set_task_autostart(enabled: bool) -> bool:
         # <Arguments> the Task Scheduler would not know what to run, so the Run key stays.
         return False
 
+    from xml.sax.saxutils import escape
+
     user = os.environ.get("USERNAME", "")
     domain = os.environ.get("USERDOMAIN", "")
+    # escaped: a "&" in the folder or user name (C:\Users\Tom & Jerry) made the XML invalid, schtasks
+    # refused it and the start-up silently fell back to the less reliable Run key
     xml = TASK_XML.format(
         name=TASK_NAME,
-        user=f"{domain}\\{user}" if domain else user,
-        command=command,
-        workdir=os.path.dirname(command),
+        user=escape(f"{domain}\\{user}" if domain else user),
+        command=escape(command),
+        workdir=escape(os.path.dirname(command)),
     )
     path = os.path.join(tempfile.gettempdir(), "um_task.xml")
     with open(path, "w", encoding="utf-16") as fh:
