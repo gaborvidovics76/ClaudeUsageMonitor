@@ -85,7 +85,13 @@ Források: <https://www.anthropic.com/legal/trademark-guidelines> ·
   fájlt/mappát az NSOpenPanelben, az app **security-scoped bookmark**-ként megjegyzi, és minden
   olvasás `startAccessingSecurityScopedResource` / `stop…` között történik (`Data/Bookmarks.swift`).
 - Keychain: SecItem a data-protection keychainnel (`kSecUseDataProtectionKeychain`), saját
-  hozzáférési csoport – külön entitlement nem kell (TN3137).
+  hozzáférési csoport – külön entitlement nem kell (TN3137), **de** macOS-en ehhez a
+  `com.apple.application-identifier` kell, amit csak a provisioning profile tesz az appba (App Store /
+  TestFlight build). Helyi Xcode-buildben nincs profil → `errSecMissingEntitlement` (-34018); ilyenkor
+  az app a login keychainbe ment (fájl-alapú, sandboxolt app a saját elemét entitlement nélkül
+  tárolhatja ott). Olvasásnál mindkét helyen néz, kijelentkezésnél mindkettőt törli
+  (`Data/Keychain.swift`). TestFlighton ellenőrizendő, hogy a profilos buildben a data-protection
+  ág működik.
 - Hardened Runtime: az App Store-hoz nem kötelező (csak a notarizáláshoz), de be van kapcsolva, nem
   zavar.
 

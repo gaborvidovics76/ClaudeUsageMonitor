@@ -81,6 +81,7 @@ Menj végig ezen, és ami nem jó, azt írd meg (képernyőképpel):
 - [ ] *Grant access…* → a kiválasztás után a panel adatot mutat, és **újraindítás után is** (könyvjelző)
 - [ ] Demóadatok: panel, részletlista, plan-jelvény, előzmények mind látszanak
 - [ ] claude.ai bejelentkezés: a bejelentkező lap az app ablakára illesztve nyílik meg (**külső böngésző – Safari/Chrome – egyszer sem**), a végén magától bezárul, a panel szerveradatot mutat; újraindítás után is be van jelentkezve (Keychain – első alkalommal a rendszer rákérdezhet)
+- [ ] Keychain: Debug és Release helyi buildben bejelentkezés → kilépés → indítás → be van jelentkezve, az `api.log`-ban nincs `-34018` hibás mentés (helyi build: login keychain; profilos TestFlight-build: data-protection keychain – ott is ellenőrizni); kijelentkezés után a token tényleg törlődik
 - [ ] claude.ai bejelentkezés: a lap bezárása (Cancel) **nem** ad hibaüzenetet, az ablak visszaáll; kijelentkezés → újra bejelentkezés működik; a „Bejelentkezés inkább kóddal…” tartalék úton a kód beillesztése is működik
 - [ ] értesítés: Beállítások → Alerts küszöb állítása lefelé (pl. 1 %) után jön banner; az első alkalommal a rendszer engedélyt kér
 - [ ] *Start at login* bekapcsolása → System Settings → General → Login Items-ben megjelenik; ki/be-jelentkezés után tényleg elindul
