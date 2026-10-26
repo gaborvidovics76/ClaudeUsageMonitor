@@ -2,7 +2,7 @@
   "_comment": "MSIX package identity, from Partner Center > Usage Monitor for Claude AI > Product management > Product identity (2026-10-26). name = Package/Identity/Name, publisher = Package/Identity/Publisher, publisher_display_name = Package/Properties/PublisherDisplayName, display_name = the reserved app name (keep it equal to STORE_NAME in claude_usage/store.py - tests/store_mode.py checks it).",
   "name": "30km.huKft.UsageMonitorforClaudeAI",
   "publisher": "CN=B0B6BD6A-73A1-43D2-A270-B8D70B599DEA",
-  "publisher_display_name": "30km.hu Kft",
+  "publisher_display_name": "30km.hu Kft.",
   "display_name": "Usage Monitor for Claude AI",
   "short_name": "Usage Monitor",
   "description": "Always-on-top panel that shows how much of your own Claude subscription is used: the 5-hour and weekly limits, per-model limits, reset times, pace and notifications. Free, open source, no telemetry. Unofficial tool, not affiliated with or endorsed by Anthropic. Claude is a trademark of Anthropic, PBC.",

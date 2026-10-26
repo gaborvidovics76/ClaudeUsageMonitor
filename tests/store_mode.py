@@ -84,7 +84,10 @@ with open(os.path.join(ROOT, "packaging", "msix", "identity.json"), encoding="ut
     _id = json.load(fh)
 assert _id["display_name"] == _store.STORE_NAME, (_id["display_name"], _store.STORE_NAME)
 assert _id["publisher"].startswith("CN=") and len(_id["publisher"]) == 39, "Partner Center publisher CN=<GUID> expected"
-print("2b) identity.json display_name = the Store name in the program; real Partner Center publisher: ok")
+# Partner Center compares it character by character ("30km.hu Kft" without the full stop was rejected)
+assert _id["publisher_display_name"] == "30km.hu Kft.", _id["publisher_display_name"]
+print("2b) identity.json display_name = the Store name in the program; real Partner Center publisher and its")
+print("    display name exactly as in Partner Center: ok")
 
 env = dict(os.environ, CLAUDE_USAGE_MONITOR_PACKAGED="1")
 code = subprocess.run([sys.executable, os.path.join(ROOT, "main.py"), "--enable-autostart"], env=env, timeout=60).returncode
