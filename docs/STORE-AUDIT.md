@@ -14,8 +14,8 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 | Verzió négyrészes, a 4. rész 0 | ✅ | `Version="2.9.0.0"` – a `make_msix.ps1` a `__version__`-ból képzi, a 4. részt mindig 0-ra |
 | Architektúra megadva | ✅ | `ProcessorArchitecture="x64"`; a PyInstaller-build x64 |
 | `TargetDeviceFamily` Windows.Desktop, támogatott Min/MaxVersionTested | ✅ | Min 10.0.17763.0 (Windows 10 1809, a Qt 6 minimuma), MaxVersionTested 10.0.26100.0 |
-| Az Identity (Name, Publisher) megegyezik a Partner Center „Product identity” értékeivel | ❌ | **Jelenleg helyőrző.** A `packaging\msix\identity.json` három értékét a Partner Centerből kell bemásolni, utána újracsomagolni. A Store a helyőrzős csomagot elutasítja. |
-| `PublisherDisplayName` = a Partner Center kiadói neve | ❌ | ugyanott |
+| Az Identity (Name, Publisher) megegyezik a Partner Center „Product identity” értékeivel | ✅ | **2026-10-26 óta kitöltve** (2.9.3.0): `30km.huKft.UsageMonitorforClaudeAI` / `CN=B0B6BD6A-73A1-43D2-A270-B8D70B599DEA`; a lefoglalt név „Usage Monitor for Claude AI”. |
+| `PublisherDisplayName` = a Partner Center kiadói neve | ✅ | „30km.hu Kft” |
 | Blokktérkép SHA-256 | ✅ | `makeappx pack /h SHA256`, az `AppxBlockMap.xml` a kicsomagolt ellenőrzésben megvan |
 | Csomagméret ≤ 25 GB | ✅ | 48,9 MB |
 | Fájlnevek ANSI | ✅ | ellenőrizve: a 169 programfájl és a 28 kép neve mind ASCII |
@@ -51,7 +51,7 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 | 10.6 képességek a funkcióhoz kötve | ✅ | `runFullTrust` indoklás kész (3. szakasz) |
 | 10.8 pénzügyi tranzakció | ✅ | nincs vásárlás, nincs adománykérés az appban |
 | 10.13 játék-szabályok | – | nem játék; kategória: *Productivity* (vagy *Developer tools*) |
-| 10.14 fióktípus | ✅ | egyéni fejlesztő → **Individual** fiók elég; ha cégnévvel (pl. Wednesday Agency) publikálnál, Company fiók kell |
+| 10.14 fióktípus | ✅ | a kiadó a **30km.hu Kft** (Company fiók). ⚠️ Az app adatkezelési tájékoztatója és a weboldal `legal` oldala jelenleg Vidovics Gábort nevezi meg adatkezelőként (magánszemély) – ezt a kiadóhoz kell igazítani, ha a Kft. az adatkezelő. |
 | 11.x tartalom (PEGI 12 alatt, nem sértő, nem illegális) | ✅ | semleges, szakmai tartalom; IARC-kérdőívben minden „nem” |
 | Listázás képei (11. és a képkövetelmények) | ✅ | lásd 5. szakasz |
 
@@ -60,8 +60,9 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 **Notes for certification** (angol; a tesztelőnek szól):
 
 ```
-Claude Usage Monitor is a utility for subscribers of Anthropic's Claude (Pro/Max/Team). It shows the
-subscription's usage limits in an always-on-top panel and a tray icon.
+Usage Monitor for Claude AI is a utility for subscribers of Anthropic's Claude (Pro/Max/Team). It shows the
+subscription's usage limits in an always-on-top panel and a tray icon. (On the developer's website the same
+open-source program is called "Claude Usage Monitor"; inside this package it uses the Store name everywhere.)
 
 Testing without a Claude account: the app starts in "local log" mode and reads the usage history that the
 Claude Desktop application writes on this PC. Without Claude Desktop installed the panel shows, by design,
@@ -117,7 +118,7 @@ Free and open source (MIT).
      + a tanúsítvány a „Megbízható személyek” tárba
    - ```powershell
      & "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\appcert.exe" reset
-     & "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\appcert.exe" test -appxpackagepath .\release\msix\ClaudeUsageMonitor_2.9.0.0_x64.msix -reportoutputpath .\release\msix\wack-report.xml
+     & "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\appcert.exe" test -appxpackagepath .\release\msix\wack-test.msix -reportoutputpath .\release\msix\wack-report.xml
      ```
    - A jelentésben minden tesztnek PASS; a „Binary analyzer” CFG-figyelmeztetése elfogadható.
 4. **Beküldés**: csomag feltöltése (aláíratlan jó), a 3. szakasz szövegei, a képek (5. szakasz), IARC-kérdőív,
