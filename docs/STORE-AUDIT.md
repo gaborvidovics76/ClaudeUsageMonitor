@@ -46,12 +46,12 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 | 10.2.3 nincs kártevő, nem telepít más szoftvert | ✅ | – |
 | 10.2.4 külső szoftvertől függés | ✅ | a Claude Desktop/Claude Code **opcionális** (helyi napló-mód); a claude.ai-mód önálló. Ezt a leírásban mondd ki. |
 | 10.2.9 MSIX vs. EXE/MSI | ✅ | MSIX – a Store írja alá, CDN-ről telepít |
-| **10.5.1 adatvédelmi tájékoztató URL kötelező (Win32/Desktop Bridge terméknél mindig)** | ✅ | `https://claudeusagemonitor.com/legal/en.html` – önálló oldal, HTTP 200, „Privacy Policy” cím. (A `/#privacy` horgony JavaScripttel nyit ablakot – a Partner Centerbe az önálló URL-t írd.) Tartalmilag: milyen adat, hova megy, meddig, milyen jogok – ezt a tájékoztatónak tartalmaznia kell; nézd át, hogy a Store-verzió két végpontja (Anthropic API, claudeusagemonitor.com) szerepel-e benne. |
+| **10.5.1 adatvédelmi tájékoztató URL kötelező (Win32/Desktop Bridge terméknél mindig)** | ✅ | `https://claudeusagemonitor.com/legal/store-en.html` (magyarul: `store-hu.html`, ez az irányadó) – önálló, JavaScript nélküli oldal a Store-változatról: adatkezelő a 30 km.hu Kft., mi marad a gépen, mi megy az Anthropichoz, az űrlap adatai, jogok, NAIH. A weboldal saját `legal/en.html` oldala a weboldalra és a ZIP-es változatra vonatkozik. |
 | 10.5.2 személyes adat továbbítása csak opt-in-nel | ✅ | az üzenetküldő űrlap csak kötelező hozzájárulással küld (2.7.0 óta) |
 | 10.6 képességek a funkcióhoz kötve | ✅ | `runFullTrust` indoklás kész (3. szakasz) |
 | 10.8 pénzügyi tranzakció | ✅ | nincs vásárlás, nincs adománykérés az appban |
 | 10.13 játék-szabályok | – | nem játék; kategória: *Productivity* (vagy *Developer tools*) |
-| 10.14 fióktípus | ✅ | a kiadó a **30km.hu Kft** (Company fiók). ⚠️ Az app adatkezelési tájékoztatója és a weboldal `legal` oldala jelenleg Vidovics Gábort nevezi meg adatkezelőként (magánszemély) – ezt a kiadóhoz kell igazítani, ha a Kft. az adatkezelő. |
+| 10.14 fióktípus | ✅ | a kiadó a **30 km.hu Kft.** (Company fiók), és a Store-változatban ő az adatkezelő is (2026-10-26): az app űrlapjának tájékoztatója (`fb.privacy_controller_store`, 34 nyelv) és a `legal/store-hu.html` / `store-en.html` oldal nevezi meg; a weboldal és a ZIP-es változat adatkezelője változatlan. |
 | 11.x tartalom (PEGI 12 alatt, nem sértő, nem illegális) | ✅ | semleges, szakmai tartalom; IARC-kérdőívben minden „nem” |
 | Listázás képei (11. és a képkövetelmények) | ✅ | lásd 5. szakasz |
 
@@ -83,7 +83,7 @@ installed, to send its own version to the usage API) and, only when the user's o
 PC (a backup_profile.json exists), a read-only PowerShell query of those scheduled tasks. Nothing is downloaded or executed from the network.
 
 Unofficial community tool, not affiliated with Anthropic. "Claude" is a trademark of Anthropic, PBC.
-Privacy policy: https://claudeusagemonitor.com/legal/en.html   Source code (MIT):
+Privacy policy: https://claudeusagemonitor.com/legal/store-en.html   Source code (MIT):
 https://github.com/gaborvidovics76/ClaudeUsageMonitor
 ```
 
@@ -109,7 +109,7 @@ Free and open source (MIT).
 
 **Keresőkifejezések (max 7):** `claude`, `usage`, `limits`, `monitor`, `anthropic`, `quota`, `tray`
 
-**Adatvédelmi URL:** `https://claudeusagemonitor.com/legal/en.html` · **Támogatás:** `https://claudeusagemonitor.com/#feedback`
+**Adatvédelmi URL:** `https://claudeusagemonitor.com/legal/store-en.html` · **Támogatás:** `https://claudeusagemonitor.com/#feedback`
 · **Weboldal:** `https://claudeusagemonitor.com/`
 
 ## 4. Amit csak te tudsz megtenni (sorrendben)
@@ -158,7 +158,7 @@ Nem kell: 2:3 poszter és 1:1 dobozkép (csak játékokhoz), Xbox-képek, előze
    bejelentkezés a jobb gombos menüből); a „Notes for certification” szöveg ugyanezt írja le.
 4. **WACK kihagyása** → a Store ugyanazt futtatja; a bináris ellenőrzést itt előre elvégeztem (tiszta), de a telepítési
    és indítási teszt csak a te gépeden megy.
-5. **Adatvédelmi URL** → az önálló `legal/en.html` oldalt add meg, ne a `#privacy` horgonyt.
+5. **Adatvédelmi URL** → az önálló `legal/store-en.html` oldalt add meg (a magyar: `legal/store-hu.html`), ne a `#privacy` horgonyt.
 6. **Nyelvenkénti listázás** → ha 34 nyelvre nyitsz listázást, mindegyikhez képek és leírás kell; kezdd angollal (és
    magyarral), a többit később.
 7. **Verziószám** → minden újrabeküldéshez magasabb verzió kell (a `__version__` léptetése után a csomag 4. része marad 0).

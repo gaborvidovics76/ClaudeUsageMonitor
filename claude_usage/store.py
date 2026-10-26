@@ -15,6 +15,16 @@ from typing import Optional
 BRAND = "Claude Usage Monitor"                  # the website / ZIP install
 STORE_NAME = "Usage Monitor for Claude AI"      # = packaging\msix\identity.json "display_name" (Partner Center)
 
+# The Microsoft Store version is published by a company, and that company is the data controller of what the app
+# sends (the optional "Message to the developer" form). The website / ZIP install keeps its own controller.
+STORE_CONTROLLER = {
+    "name": "30 km.hu Kft.",
+    "seat": "2462 Martonvásár, Fehérvári út 73.",  # registered seat (address)
+    "reg": "07-09-029835",                      # company registration number (cégjegyzékszám)
+    "email": "info@30km.hu",                    # contact e-mail for data protection requests
+}
+STORE_PRIVACY_URL = "https://claudeusagemonitor.com/legal/store-{lang}.html"   # en and hu exist
+
 _PACKAGED: Optional[bool] = None
 _FAMILY: Optional[str] = None
 
@@ -60,3 +70,13 @@ def rebrand(text: str) -> str:
     if text and BRAND in text and is_packaged():
         return text.replace(BRAND, STORE_NAME)
     return text
+
+
+def privacy_url(lang: str) -> str:
+    """The privacy policy of the Store version: Hungarian for Hungarian, English for every other language."""
+    return STORE_PRIVACY_URL.format(lang="hu" if (lang or "").lower().startswith("hu") else "en")
+
+
+def controller_paragraph(template: str, lang: str) -> str:
+    """The first paragraph of the in-app privacy notice for the Store version (fb.privacy_controller_store)."""
+    return template.format(url=privacy_url(lang), **STORE_CONTROLLER)

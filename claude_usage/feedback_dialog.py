@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from . import __version__, feedback
+from . import __version__, feedback, store
 from .i18n import current_language, language_name, tr
 from .settings_dialog import DIALOG_QSS
 
@@ -243,7 +243,11 @@ class FeedbackDialog(QDialog):
         self.privacy.setObjectName("privacy")
         self.privacy.setOpenExternalLinks(True)
         self.privacy.document().setDefaultStyleSheet(f"a {{ color: {LINK}; text-decoration: none; }} p {{ margin: 0 0 7px 0; }}")
-        paras = [html.escape(x) for x in tr("fb.privacy_text").split("\n\n")]
+        paras = tr("fb.privacy_text").split("\n\n")
+        if store.is_packaged():
+            # Microsoft Store version: its publisher, the company, is the controller (the first paragraph names it)
+            paras[0] = store.controller_paragraph(tr("fb.privacy_controller_store"), current_language())
+        paras = [html.escape(x) for x in paras]
         # the URL ends at the first character a URL of this site cannot contain (works for CJK text too)
         paras = [re.sub(r"(https://[A-Za-z0-9.\-/#?=&_%]+[A-Za-z0-9/#])", r'<a href="\1">\1</a>', x) for x in paras]
         self.privacy.setHtml("".join(f"<p>{x}</p>" for x in paras))

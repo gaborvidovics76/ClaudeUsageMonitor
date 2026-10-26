@@ -48,7 +48,10 @@ def os_name() -> str:
                     rel = "11"
             except (IndexError, ValueError):
                 pass
-            return f"Windows {rel} ({ver})"
+            from .store import is_packaged
+
+            # the Store version has another data controller (its publisher) - the stored message must show which
+            return f"Windows {rel} ({ver})" + (" · Microsoft Store" if is_packaged() else "")
         return f"{platform.system()} {platform.release()}"
     except Exception:  # noqa: BLE001 - never let a metadata lookup break the form
         return sys.platform
