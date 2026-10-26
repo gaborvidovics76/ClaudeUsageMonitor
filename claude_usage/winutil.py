@@ -423,41 +423,10 @@ def open_path(path: str) -> None:
 # itself switches the start-at-sign-in on and off (Settings > Apps > Startup). The functions below let the
 # rest of the program tell the two installs apart; the ZIP install behaves exactly as before.
 
-_PACKAGED: Optional[bool] = None
-_FAMILY: Optional[str] = None
 STARTUP_SETTINGS_URI = "ms-settings:startupapps"
 
-
-def package_family_name() -> str:
-    """The MSIX package family name when running from a package, else ""."""
-    global _FAMILY
-    if _FAMILY is not None:
-        return _FAMILY
-    _FAMILY = ""
-    if sys.platform.startswith("win"):
-        try:
-            import ctypes
-            from ctypes import wintypes
-
-            fn = ctypes.windll.kernel32.GetCurrentPackageFamilyName
-            length = wintypes.UINT(0)
-            rc = fn(ctypes.byref(length), None)
-            if rc != 15700 and length.value:          # 15700 = APPMODEL_ERROR_NO_PACKAGE
-                buf = ctypes.create_unicode_buffer(length.value)
-                if fn(ctypes.byref(length), buf) == 0:
-                    _FAMILY = buf.value
-        except (AttributeError, OSError):
-            pass
-    return _FAMILY
-
-
-def is_packaged() -> bool:
-    """True when running from the Microsoft Store (MSIX) package. CLAUDE_USAGE_MONITOR_PACKAGED=1 forces it
-    on for testing the packaged behaviour from a normal install."""
-    global _PACKAGED
-    if _PACKAGED is None:
-        _PACKAGED = os.environ.get("CLAUDE_USAGE_MONITOR_PACKAGED") == "1" or bool(package_family_name())
-    return _PACKAGED
+# package detection lives in store.py (no Qt there, so settings.py / i18n.py can use it at import time)
+from .store import is_packaged, package_family_name  # noqa: E402,F401
 
 
 def open_startup_settings() -> None:

@@ -34,6 +34,9 @@ print("STORE_HINT", any(t == i18n.tr("set.autostart_store") for t in labels))
 print("UPDATE_CHECKBOX", any(t == i18n.tr("set.update_check") for t in checks))
 print("UPDATE_BUTTON", any(t == i18n.tr("menu.check_update") for t in buttons))
 print("STORE_LABEL", any("Microsoft Store" in t for t in labels))
+from claude_usage import settings as _settings, store
+print("TITLE_STORE_NAME", _settings.APP_TITLE == store.STORE_NAME)
+print("TEXT_STORE_NAME", store.STORE_NAME in i18n.tr("set.backup_disclaimer") and store.BRAND not in i18n.tr("set.backup_disclaimer"))
 print("VISIBLE_PATH_UNCHANGED", winutil.visible_path(os.environ.get("APPDATA", "C:\\x")) == os.environ.get("APPDATA", "C:\\x"))
 """ % ROOT
 
@@ -52,14 +55,25 @@ def run(packaged: bool) -> dict:
 zipmode = run(False)
 assert zipmode == {"PACKAGED": False, "AUTOSTART_CHECKBOX": True, "AUTOSTART_BUTTON": False, "STORE_HINT": False,
                    "UPDATE_CHECKBOX": True, "UPDATE_BUTTON": True, "STORE_LABEL": False,
-                   "VISIBLE_PATH_UNCHANGED": True}, zipmode
+                   "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
 print("1) ZIP install: autostart checkbox + update controls, as before: ok")
 
 store = run(True)
 assert store == {"PACKAGED": True, "AUTOSTART_CHECKBOX": False, "AUTOSTART_BUTTON": True, "STORE_HINT": True,
                  "UPDATE_CHECKBOX": False, "UPDATE_BUTTON": False, "STORE_LABEL": True,
-                 "VISIBLE_PATH_UNCHANGED": True}, store
-print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version: ok")
+                 "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "VISIBLE_PATH_UNCHANGED": True}, store
+print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version,")
+print("   the reserved Store name in the title and in the texts (ZIP keeps its own name): ok")
+
+import json  # noqa: E402
+
+from claude_usage import store as _store  # noqa: E402
+
+with open(os.path.join(ROOT, "packaging", "msix", "identity.json"), encoding="utf-8") as fh:
+    _id = json.load(fh)
+assert _id["display_name"] == _store.STORE_NAME, (_id["display_name"], _store.STORE_NAME)
+assert _id["publisher"].startswith("CN=") and len(_id["publisher"]) == 39, "Partner Center publisher CN=<GUID> expected"
+print("2b) identity.json display_name = the Store name in the program; real Partner Center publisher: ok")
 
 env = dict(os.environ, CLAUDE_USAGE_MONITOR_PACKAGED="1")
 code = subprocess.run([sys.executable, os.path.join(ROOT, "main.py"), "--enable-autostart"], env=env, timeout=60).returncode

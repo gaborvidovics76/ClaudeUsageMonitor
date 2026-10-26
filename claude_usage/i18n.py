@@ -13,6 +13,8 @@ import locale
 import sys
 from typing import Dict, List, Optional
 
+from .store import rebrand
+
 # The available languages - shown in their own name. English first, then the rest by their own name.
 # The ten "core" languages are translated inline in the i18n*.py modules; every other language
 # (and the extra keys of the core ones) lives in claude_usage/langs/<code>.py.
@@ -172,7 +174,7 @@ def lookup(key: str, lang: Optional[str] = None) -> str:
 
 
 def tr(key: str, *args) -> str:
-    text = lookup(key)
+    text = rebrand(lookup(key))
     if args:
         try:
             return text.format(*args)
