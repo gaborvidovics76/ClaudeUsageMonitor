@@ -77,6 +77,11 @@ to MSIX. It needs full trust for: an always-on-top frameless panel and a tray ic
 Claude Code log files under the user profile, and calling Anthropic's usage API with the user's own sign-in.
 No telemetry, no analytics, no third-party SDKs. The Store build has no self-updater.
 
+WACK "Blocked executables" (optional test): the flagged strings are inside the bundled Python 3.12 and Qt 6
+runtime DLLs. The app itself starts only two programs: "claude --version" (Anthropic's Claude Code, when it is
+installed, to send its own version to the usage API) and, only when the user's own backup scripts are set up on the
+PC (a backup_profile.json exists), a read-only PowerShell query of those scheduled tasks. Nothing is downloaded or executed from the network.
+
 Unofficial community tool, not affiliated with Anthropic. "Claude" is a trademark of Anthropic, PBC.
 Privacy policy: https://claudeusagemonitor.com/legal/en.html   Source code (MIT):
 https://github.com/gaborvidovics76/ClaudeUsageMonitor

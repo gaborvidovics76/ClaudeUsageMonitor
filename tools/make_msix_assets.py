@@ -61,11 +61,12 @@ def main(folder: str) -> int:
         save(canvas(round(150 * f), round(150 * f), 0.66), folder, f"Square150x150Logo.scale-{s}.png")
         save(canvas(round(310 * f), round(150 * f), 0.66), folder, f"Wide310x150Logo.scale-{s}.png")
         save(canvas(round(50 * f), round(50 * f), 1.0), folder, f"StoreLogo.scale-{s}.png"); n += 3
-    # unqualified fallbacks (used when no resources.pri is present)
-    save(canvas(88, 88, 0.92), folder, "Square44x44Logo.png")
-    save(canvas(300, 300, 0.66), folder, "Square150x150Logo.png")
-    save(canvas(620, 300, 0.66), folder, "Wide310x150Logo.png")
-    save(canvas(100, 100, 1.0), folder, "StoreLogo.png"); n += 4
+    # unqualified fallbacks (used when no resources.pri is present) - at exactly the size the manifest names:
+    # the Windows App Certification Kit ("App resources" test) rejects any other size for these files
+    save(canvas(44, 44, 0.92), folder, "Square44x44Logo.png")
+    save(canvas(150, 150, 0.66), folder, "Square150x150Logo.png")
+    save(canvas(310, 150, 0.66), folder, "Wide310x150Logo.png")
+    save(canvas(50, 50, 1.0), folder, "StoreLogo.png"); n += 4
     print(f"{n} images -> {folder}")
     return 0
 
