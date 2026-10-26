@@ -15,7 +15,7 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 | Architektúra megadva | ✅ | `ProcessorArchitecture="x64"`; a PyInstaller-build x64 |
 | `TargetDeviceFamily` Windows.Desktop, támogatott Min/MaxVersionTested | ✅ | Min 10.0.17763.0 (Windows 10 1809, a Qt 6 minimuma), MaxVersionTested 10.0.26100.0 |
 | Az Identity (Name, Publisher) megegyezik a Partner Center „Product identity” értékeivel | ✅ | **2026-10-26 óta kitöltve** (2.9.3.0): `30km.huKft.UsageMonitorforClaudeAI` / `CN=B0B6BD6A-73A1-43D2-A270-B8D70B599DEA`; a lefoglalt név „Usage Monitor for Claude AI”. |
-| `PublisherDisplayName` = a Partner Center kiadói neve | ✅ | „30km.hu Kft” |
+| `PublisherDisplayName` = a Partner Center kiadói neve | ✅ | „30km.hu Kft.” (ponttal – a Partner Center karakterre egyezteti) |
 | Blokktérkép SHA-256 | ✅ | `makeappx pack /h SHA256`, az `AppxBlockMap.xml` a kicsomagolt ellenőrzésben megvan |
 | Csomagméret ≤ 25 GB | ✅ | 48,9 MB |
 | Fájlnevek ANSI | ✅ | ellenőrizve: a 169 programfájl és a 28 kép neve mind ASCII |
