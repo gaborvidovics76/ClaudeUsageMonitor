@@ -60,7 +60,7 @@ csomagol SHA-256 blokktérképpel, majd kicsomagolva ellenőrzi.
    > runFullTrust is required for a desktop app: it shows an always-on-top panel and a tray icon, reads the
    > user's own Claude Code log files in their profile folder, and calls the Anthropic usage API with the
    > user's own sign-in.
-6. **Adatvédelmi tájékoztató URL** (internetelérés miatt kötelező): `https://claudeusagemonitor.com/legal/en.html`
+6. **Adatvédelmi tájékoztató URL** (internetelérés miatt kötelező): `https://claudeusagemonitor.com/legal/store-en.html`
    (az önálló oldal, nem a `#privacy` horgony – a Partner Center a címet lekéri)
 7. **Korhatár-besorolás** (IARC kérdőív), kategória: *Productivity* vagy *Developer tools*, nyelvenkénti
    leírás és képernyőképek: a kész, szabályoknak megfelelő képek a `docs\store\` mappában (`tools\make_store_shots.py`

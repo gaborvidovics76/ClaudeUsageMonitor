@@ -41,6 +41,9 @@ from claude_usage import help_dialog
 _guide = help_dialog._guide_html()
 print("GUIDE_UPDATES", "SHA-256" in _guide)
 print("GUIDE_FEEDBACK_NOTE", "claudeusagemonitor.com" in _guide and i18n.tr("help.privacy_feedback")[:20] in _guide.replace("&quot;", '"'))
+from claude_usage.feedback_dialog import FeedbackDialog
+_priv = FeedbackDialog().privacy.toPlainText()
+print("PRIVACY_STORE_CONTROLLER", store.STORE_CONTROLLER["reg"] in _priv and "legal/store-en.html" in _priv)
 print("VISIBLE_PATH_UNCHANGED", winutil.visible_path(os.environ.get("APPDATA", "C:\\x")) == os.environ.get("APPDATA", "C:\\x"))
 """ % ROOT
 
@@ -60,17 +63,18 @@ zipmode = run(False)
 assert zipmode == {"PACKAGED": False, "AUTOSTART_CHECKBOX": True, "AUTOSTART_BUTTON": False, "STORE_HINT": False,
                    "UPDATE_CHECKBOX": True, "UPDATE_BUTTON": True, "STORE_LABEL": False,
                    "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "GUIDE_UPDATES": True,
-                   "GUIDE_FEEDBACK_NOTE": True, "VISIBLE_PATH_UNCHANGED": True}, zipmode
+                   "GUIDE_FEEDBACK_NOTE": True, "PRIVACY_STORE_CONTROLLER": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
 print("1) ZIP install: autostart checkbox + update controls, as before: ok")
 
 store = run(True)
 assert store == {"PACKAGED": True, "AUTOSTART_CHECKBOX": False, "AUTOSTART_BUTTON": True, "STORE_HINT": True,
                  "UPDATE_CHECKBOX": False, "UPDATE_BUTTON": False, "STORE_LABEL": True,
                  "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "GUIDE_UPDATES": False,
-                 "GUIDE_FEEDBACK_NOTE": True, "VISIBLE_PATH_UNCHANGED": True}, store
+                 "GUIDE_FEEDBACK_NOTE": True, "PRIVACY_STORE_CONTROLLER": True, "VISIBLE_PATH_UNCHANGED": True}, store
 print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version,")
 print("   the reserved Store name in the title and in the texts (ZIP keeps its own name),")
-print("   no self-update section in the help guide; the feedback form is named in its privacy part: ok")
+print("   no self-update section in the help guide; the feedback form is named in its privacy part,")
+print("   and the privacy notice names the Store publisher as controller (ZIP keeps its own): ok")
 
 import json  # noqa: E402
 
@@ -106,4 +110,12 @@ for lang in i18n.LANG_NAMES:
     note = i18n.lookup("help.privacy_feedback", lang)
     assert note != "help.privacy_feedback" and "{feedback}" in note and "claudeusagemonitor.com" in note, lang
 print("5) help guide: same 9 sections in every language, the feedback note in all of them: ok")
+
+assert all(str(v).strip() for v in _store.STORE_CONTROLLER.values()), _store.STORE_CONTROLLER
+for lang in i18n.LANG_NAMES:
+    assert len(i18n.lookup("fb.privacy_text", lang).split("\n\n")) == 7, lang          # paragraph 0 = controller
+    para = _store.controller_paragraph(i18n.lookup("fb.privacy_controller_store", lang), lang)
+    assert _store.STORE_CONTROLLER["reg"] in para and "/legal/store-" in para, lang
+assert _store.privacy_url("hu").endswith("store-hu.html") and _store.privacy_url("de").endswith("store-en.html")
+print("6) Store controller filled in, its notice in all %d languages: ok" % len(i18n.LANG_NAMES))
 print("ALL STORE-MODE TESTS OK")
