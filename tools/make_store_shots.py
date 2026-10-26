@@ -218,7 +218,11 @@ def shoot(code: str, out_root: str) -> list:
     tabs = dlg.findChild(QTabWidget)
     if tabs:
         tabs.setCurrentIndex(2)             # Details
-    dlg.resize(520, 470)
+    # never the real folder of the machine that renders the shots (it shows the user name)
+    if getattr(dlg, "lbl_lmfound", None) is not None:
+        dlg.lbl_lmfound.setText(i18n.tr("set.backup_found", "C:\\Users\\you\\.claude\\projects"))
+    # wide enough for the longest languages (French, German): no cut-off tab or check box label
+    dlg.resize(1000, 520)
     shot(5, "settings", [grab(dlg)], _cap(code, 5))
     dlg.close()
 
