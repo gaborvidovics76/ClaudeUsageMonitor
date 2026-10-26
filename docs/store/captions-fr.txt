@@ -1,6 +1,6 @@
-01-panel.png	5-hour and weekly limits, the per-model limit, reset countdown and burn rate – at a glance, always on top
-02-rings.png	Ring layout: the same three limits as compact dials
-03-compact.png	Compact bar for a crowded desktop
-04-history.png	History: both limits over 6 hours, 24 hours or 7 days, with peak, average and end-of-week projection
-05-settings.png	Every detail can be switched on or off – saved limit resets, usage credits, this week by product
-06-themes.png	Six themes and three layouts; custom accent colour
+01-panel.png	Limites de 5 heures et hebdomadaire, limite par modèle, compte à rebours et rythme de consommation – d'un coup d'œil, toujours au premier plan
+02-rings.png	Disposition en anneaux : les trois mêmes limites en cadrans compacts
+03-compact.png	Barre fine pour un bureau encombré
+04-history.png	Historique : les deux limites sur 6 heures, 24 heures ou 7 jours, avec pic, moyenne et projection de fin de semaine
+05-settings.png	Chaque détail s'active ou se désactive – réinitialisations en réserve, crédits d'utilisation, semaine par produit
+06-themes.png	Six thèmes, trois dispositions, couleur d'accent personnalisée

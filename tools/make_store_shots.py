@@ -255,6 +255,12 @@ CAPTIONS = {
            "Verlauf: beide Limits über 6 Stunden, 24 Stunden oder 7 Tage, mit Spitze, Durchschnitt und Wochenprognose",
            "Jedes Detail lässt sich ein- und ausschalten – gespeicherte Zurücksetzungen, Guthaben, Woche nach Produkt",
            "Sechs Designs, drei Layouts, eigene Akzentfarbe"],
+    "fr": ["Limites de 5 heures et hebdomadaire, limite par modèle, compte à rebours et rythme de consommation – d'un coup d'œil, toujours au premier plan",
+           "Disposition en anneaux : les trois mêmes limites en cadrans compacts",
+           "Barre fine pour un bureau encombré",
+           "Historique : les deux limites sur 6 heures, 24 heures ou 7 jours, avec pic, moyenne et projection de fin de semaine",
+           "Chaque détail s'active ou se désactive – réinitialisations en réserve, crédits d'utilisation, semaine par produit",
+           "Six thèmes, trois dispositions, couleur d'accent personnalisée"],
 }
 
 
@@ -287,6 +293,48 @@ def store_logos(out_root: str) -> None:
     p.drawPixmap(QRectF((W - side) / 2, (H - side) / 2, side, side), logo, QRectF(logo.rect()))
     p.end()
     hero.save(os.path.join(out_root, "SuperHero-1920x1080.png"), "PNG")
+
+    # smaller app tile icons Partner Center offers next to the 300x300 one
+    for size in (150, 71):
+        small = tile.scaled(size, size, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
+        small.save(os.path.join(out_root, f"AppTileIcon-{size}x{size}.png"), "PNG")
+
+    # 9:16 poster art (the main logo on Windows 10/11) and 1:1 box art: logo + the Store name, nothing else
+    from claude_usage.store import STORE_NAME
+    from PySide6.QtGui import QFont
+
+    def titled(w: int, h: int, out_name: str) -> None:
+        pm = QPixmap(w, h)
+        g = QLinearGradient(0, 0, w, h)
+        g.setColorAt(0.0, QColor("#232733"))
+        g.setColorAt(1.0, QColor("#141720"))
+        p = QPainter(pm)
+        p.fillRect(pm.rect(), g)
+        p.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform, True)
+        p.setRenderHint(QPainter.RenderHint.Antialiasing, True)
+        k = 1.0 if h > w else 0.78             # square: smaller rings and logo, so two title lines fit
+        cx, cy = w / 2, h * (0.40 if h > w else 0.36)
+        for r, a in ((0.36, 22), (0.28, 30), (0.20, 40)):
+            p.setPen(Qt.PenStyle.NoPen)
+            p.setBrush(QColor(217, 119, 87, a))
+            p.drawEllipse(QPointF(cx, cy), w * r * k, w * r * k)
+        side = w * 0.26 * k
+        logo = app_pixmap(800)
+        p.drawPixmap(QRectF(cx - side / 2, cy - side / 2, side, side), logo, QRectF(logo.rect()))
+        font = QFont("Segoe UI Variable Display")
+        font.setWeight(QFont.Weight.DemiBold)
+        font.setPixelSize(int(w * (0.075 if h > w else 0.064)))
+        p.setFont(font)
+        p.setPen(QColor("#F0F3FA"))
+        top = cy + w * 0.40 * k
+        p.drawText(QRectF(w * 0.08, top, w * 0.84, h - top - h * 0.04),
+                   int(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop | Qt.TextFlag.TextWordWrap),
+                   STORE_NAME if h > w else STORE_NAME.replace(" for ", "\nfor "))   # no lone last word
+        p.end()
+        pm.save(os.path.join(out_root, out_name), "PNG")
+
+    titled(1440, 2160, "PosterArt-1440x2160.png")
+    titled(2160, 2160, "BoxArt-2160x2160.png")
     print(f"logos -> {out_root}")
 
 
