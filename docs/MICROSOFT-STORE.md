@@ -7,6 +7,8 @@ A Windows-program két úton jut el a felhasználókhoz:
 | Weboldal (marad, további utasításig) | `ClaudeUsageMonitor-Setup-X.Y.Z.zip` | a program saját frissítője | `release.ps1 -Version X.Y.Z [-Upload]` |
 | Microsoft Store | `ClaudeUsageMonitor_X.Y.Z.0_x64.msix` | a Store | `release.ps1 -Version X.Y.Z -Msix` vagy `tools\make_msix.ps1` |
 
+**Store ID: `9MV20XBFCXTZ`** – termékoldal: <https://apps.microsoft.com/detail/9MV20XBFCXTZ> (`store.STORE_ID` / `STORE_URL`; a súgó Szerző lapja és a weboldal letöltési kártyája erre mutat). Első beküldés: 2.9.3.0, 2026-10-26.
+
 Mindkettő **ugyanabból a PyInstaller-buildből** készül. Az MSIX-et a weboldalra nem töltjük fel; a
 `release\msix\` mappa és a `*.msix` git-ignorált.
 

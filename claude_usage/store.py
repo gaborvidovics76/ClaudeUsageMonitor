@@ -14,6 +14,8 @@ from typing import Optional
 
 BRAND = "Claude Usage Monitor"                  # the website / ZIP install
 STORE_NAME = "Usage Monitor for Claude AI"      # = packaging\msix\identity.json "display_name" (Partner Center)
+STORE_ID = "9MV20XBFCXTZ"                       # Partner Center > Product identity > Store ID
+STORE_URL = f"https://apps.microsoft.com/detail/{STORE_ID}"
 
 # The Microsoft Store version is published by a company, and that company is the data controller of what the app
 # sends (the optional "Message to the developer" form). The website / ZIP install keeps its own controller.
