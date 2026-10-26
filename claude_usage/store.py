@@ -21,7 +21,7 @@ STORE_CONTROLLER = {
     "name": "30 km.hu Kft.",
     "seat": "2462 Martonvásár, Fehérvári út 73.",  # registered seat (address)
     "reg": "07-09-029835",                      # company registration number (cégjegyzékszám)
-    "email": "info@30km.hu",                    # contact e-mail for data protection requests
+    "email": "adatkezeles@30km.hu",             # contact e-mail for data protection requests
 }
 STORE_PRIVACY_URL = "https://claudeusagemonitor.com/legal/store-{lang}.html"   # en and hu exist
 
