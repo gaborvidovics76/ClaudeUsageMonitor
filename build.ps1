@@ -30,6 +30,7 @@ python -m PyInstaller --noconfirm --clean `
     --collect-submodules claude_usage.langs `
     --name ClaudeUsageMonitor `
     --icon app.ico `
+    --manifest packaging\app.manifest `
     --exclude-module PySide6.QtWebEngineCore `
     --exclude-module PySide6.QtWebEngineWidgets `
     --exclude-module PySide6.QtWebEngineQuick `
