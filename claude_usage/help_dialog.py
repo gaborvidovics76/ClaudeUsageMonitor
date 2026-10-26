@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import re
 from typing import Optional
 
 from PySide6.QtCore import Qt, QUrl
@@ -61,6 +62,27 @@ def _link(url: str, text: str) -> str:
     return f'<a href="{html.escape(url)}" style="color:#8fb0ff;">{html.escape(text)}</a>'
 
 
+def _guide_html() -> str:
+    """The guide, true to the install it runs in. Sections are split at <h2>; the same 9 sections exist in
+    every language (tests/store_mode.py checks it)."""
+    sections = re.split(r"(?=<h2>)", tr("help.guide"))
+    feedback = tr("menu.feedback").rstrip("\u2026.").strip()
+    if len(sections) > GUIDE_PRIVACY_INDEX:
+        # the optional feedback form is the one thing besides the Anthropic API that sends anything out
+        note = html.escape(tr("help.privacy_feedback").format(feedback=feedback))
+        sections[GUIDE_PRIVACY_INDEX] = sections[GUIDE_PRIVACY_INDEX].rstrip() + "\n<p>" + note + "</p>\n"
+    if winutil.is_packaged():
+        # Microsoft Store: no self-updater and no downloads from the website - the Store updates the app
+        sections = [sec for sec in sections if "SHA-256" not in sec]
+    return ("".join(sections)
+            .replace("{site}", _link(site_url(), "claudeusagemonitor.com"))
+            # inside the package the files live in the package's own copy of %APPDATA%
+            .replace("{cfg}", html.escape(winutil.visible_path(config_dir()))))
+
+
+GUIDE_PRIVACY_INDEX = 7         # re.split index of the "<h2>Privacy" section (0 = the text before the first <h2>)
+
+
 class HelpDialog(QDialog):
     def __init__(self, parent: Optional[QWidget] = None, start_tab: int = 0):
         super().__init__(parent)
@@ -92,9 +114,7 @@ class HelpDialog(QDialog):
         lay.setContentsMargins(6, 6, 6, 6)
         view = QTextBrowser(page)
         view.setOpenExternalLinks(True)
-        body = (tr("help.guide")
-                .replace("{site}", _link(site_url(), "claudeusagemonitor.com"))
-                .replace("{cfg}", html.escape(config_dir())))
+        body = _guide_html()
         view.setHtml('<style>h2{color:#f0f3fa;font-size:15px;margin:14px 0 4px 0;} li{margin:3px 0;} '
                      'code{color:#f3c9b8;}</style>' + body)
         lay.addWidget(view)
