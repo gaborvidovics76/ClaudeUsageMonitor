@@ -37,6 +37,10 @@ print("STORE_LABEL", any("Microsoft Store" in t for t in labels))
 from claude_usage import settings as _settings, store
 print("TITLE_STORE_NAME", _settings.APP_TITLE == store.STORE_NAME)
 print("TEXT_STORE_NAME", store.STORE_NAME in i18n.tr("set.backup_disclaimer") and store.BRAND not in i18n.tr("set.backup_disclaimer"))
+from claude_usage import help_dialog
+_guide = help_dialog._guide_html()
+print("GUIDE_UPDATES", "SHA-256" in _guide)
+print("GUIDE_FEEDBACK_NOTE", "claudeusagemonitor.com" in _guide and i18n.tr("help.privacy_feedback")[:20] in _guide.replace("&quot;", '"'))
 print("VISIBLE_PATH_UNCHANGED", winutil.visible_path(os.environ.get("APPDATA", "C:\\x")) == os.environ.get("APPDATA", "C:\\x"))
 """ % ROOT
 
@@ -55,15 +59,18 @@ def run(packaged: bool) -> dict:
 zipmode = run(False)
 assert zipmode == {"PACKAGED": False, "AUTOSTART_CHECKBOX": True, "AUTOSTART_BUTTON": False, "STORE_HINT": False,
                    "UPDATE_CHECKBOX": True, "UPDATE_BUTTON": True, "STORE_LABEL": False,
-                   "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
+                   "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "GUIDE_UPDATES": True,
+                   "GUIDE_FEEDBACK_NOTE": True, "VISIBLE_PATH_UNCHANGED": True}, zipmode
 print("1) ZIP install: autostart checkbox + update controls, as before: ok")
 
 store = run(True)
 assert store == {"PACKAGED": True, "AUTOSTART_CHECKBOX": False, "AUTOSTART_BUTTON": True, "STORE_HINT": True,
                  "UPDATE_CHECKBOX": False, "UPDATE_BUTTON": False, "STORE_LABEL": True,
-                 "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "VISIBLE_PATH_UNCHANGED": True}, store
+                 "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "GUIDE_UPDATES": False,
+                 "GUIDE_FEEDBACK_NOTE": True, "VISIBLE_PATH_UNCHANGED": True}, store
 print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version,")
-print("   the reserved Store name in the title and in the texts (ZIP keeps its own name): ok")
+print("   the reserved Store name in the title and in the texts (ZIP keeps its own name),")
+print("   no self-update section in the help guide; the feedback form is named in its privacy part: ok")
 
 import json  # noqa: E402
 
@@ -86,4 +93,17 @@ for lang in i18n.LANG_NAMES:
     text = i18n.lookup("set.autostart_store", lang)
     assert text and text != "set.autostart_store", lang
 print("4) the Store hint exists in all %d languages: ok" % len(i18n.LANG_NAMES))
+
+import re  # noqa: E402
+
+from claude_usage.help_dialog import GUIDE_PRIVACY_INDEX  # noqa: E402
+
+for lang in i18n.LANG_NAMES:
+    secs = re.split(r"(?=<h2>)", i18n.lookup("help.guide", lang))
+    assert len(secs) == 9, (lang, len(secs))
+    assert [i for i, sec in enumerate(secs) if "SHA-256" in sec] == [6], lang      # the updates section
+    assert GUIDE_PRIVACY_INDEX == 7 and "SHA-256" not in secs[GUIDE_PRIVACY_INDEX], lang
+    note = i18n.lookup("help.privacy_feedback", lang)
+    assert note != "help.privacy_feedback" and "{feedback}" in note and "claudeusagemonitor.com" in note, lang
+print("5) help guide: same 9 sections in every language, the feedback note in all of them: ok")
 print("ALL STORE-MODE TESTS OK")
