@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from . import __version__, winutil
+from . import __version__, store, winutil
 from .i18n import current_language, tr
 from .settings import APP_TITLE, config_dir
 from .settings_dialog import DIALOG_QSS
@@ -164,12 +164,15 @@ class HelpDialog(QDialog):
         info.setWordWrap(True)
         info.setOpenExternalLinks(True)
         info.setTextInteractionFlags(Qt.TextInteractionFlag.TextBrowserInteraction)
+        # the Store version has its own data controller and privacy policy (store.privacy_url)
+        privacy = store.privacy_url(current_language()) if winutil.is_packaged() else site_url() + "#privacy"
         info.setText(
             f"{html.escape(tr('help.made_by'))}: <b>{html.escape(AUTHOR)}</b><br>"
             f"{html.escape(tr('help.free'))}<br><br>"
             f"{_link(REPO, tr('help.source_code'))} &nbsp;·&nbsp; "
             f"{_link(site_url() + '#terms', tr('help.terms'))} &nbsp;·&nbsp; "
-            f"{_link(site_url() + '#privacy', tr('help.privacy'))}<br><br>"
+            f"{_link(privacy, tr('help.privacy'))} &nbsp;·&nbsp; "
+            f"{_link(store.STORE_URL, 'Microsoft Store')}<br><br>"
             f"{html.escape(tr('help.feedback'))}"
         )
         lay.addWidget(info)

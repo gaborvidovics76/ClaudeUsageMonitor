@@ -41,6 +41,11 @@ from claude_usage import help_dialog
 _guide = help_dialog._guide_html()
 print("GUIDE_UPDATES", "SHA-256" in _guide)
 print("GUIDE_FEEDBACK_NOTE", "claudeusagemonitor.com" in _guide and i18n.tr("help.privacy_feedback")[:20] in _guide.replace("&quot;", '"'))
+_help = help_dialog.HelpDialog()
+_author = _help.tabs.widget(1).findChildren(QLabel)
+_links = " ".join(l.text() for l in _author)
+print("AUTHOR_STORE_LINK", store.STORE_URL in _links)
+print("AUTHOR_STORE_PRIVACY", "legal/store-en.html" in _links and "#privacy" not in _links)
 from claude_usage.feedback_dialog import FeedbackDialog
 _priv = FeedbackDialog().privacy.toPlainText()
 print("PRIVACY_STORE_CONTROLLER", store.STORE_CONTROLLER["reg"] in _priv and "legal/store-en.html" in _priv)
@@ -63,18 +68,21 @@ zipmode = run(False)
 assert zipmode == {"PACKAGED": False, "AUTOSTART_CHECKBOX": True, "AUTOSTART_BUTTON": False, "STORE_HINT": False,
                    "UPDATE_CHECKBOX": True, "UPDATE_BUTTON": True, "STORE_LABEL": False,
                    "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "GUIDE_UPDATES": True,
-                   "GUIDE_FEEDBACK_NOTE": True, "PRIVACY_STORE_CONTROLLER": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
+                   "GUIDE_FEEDBACK_NOTE": True, "AUTHOR_STORE_LINK": True, "AUTHOR_STORE_PRIVACY": False,
+                   "PRIVACY_STORE_CONTROLLER": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
 print("1) ZIP install: autostart checkbox + update controls, as before: ok")
 
 store = run(True)
 assert store == {"PACKAGED": True, "AUTOSTART_CHECKBOX": False, "AUTOSTART_BUTTON": True, "STORE_HINT": True,
                  "UPDATE_CHECKBOX": False, "UPDATE_BUTTON": False, "STORE_LABEL": True,
                  "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "GUIDE_UPDATES": False,
-                 "GUIDE_FEEDBACK_NOTE": True, "PRIVACY_STORE_CONTROLLER": True, "VISIBLE_PATH_UNCHANGED": True}, store
+                 "GUIDE_FEEDBACK_NOTE": True, "AUTHOR_STORE_LINK": True, "AUTHOR_STORE_PRIVACY": True,
+                 "PRIVACY_STORE_CONTROLLER": True, "VISIBLE_PATH_UNCHANGED": True}, store
 print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version,")
 print("   the reserved Store name in the title and in the texts (ZIP keeps its own name),")
 print("   no self-update section in the help guide; the feedback form is named in its privacy part,")
-print("   and the privacy notice names the Store publisher as controller (ZIP keeps its own): ok")
+print("   the privacy notice names the Store publisher as controller (ZIP keeps its own), and the help window's")
+print("   Privacy link opens the Store privacy policy; both installs link the Microsoft Store page: ok")
 
 import json  # noqa: E402
 
@@ -119,6 +127,7 @@ for lang in i18n.LANG_NAMES:
     assert len(i18n.lookup("fb.privacy_text", lang).split("\n\n")) == 7, lang          # paragraph 0 = controller
     para = _store.controller_paragraph(i18n.lookup("fb.privacy_controller_store", lang), lang)
     assert _store.STORE_CONTROLLER["reg"] in para and "/legal/store-" in para, lang
+assert re.fullmatch(r"9[0-9A-Z]{11}", _store.STORE_ID) and _store.STORE_URL.endswith(_store.STORE_ID), _store.STORE_ID
 assert _store.privacy_url("hu").endswith("store-hu.html") and _store.privacy_url("de").endswith("store-en.html")
 print("6) Store controller filled in, its notice in all %d languages: ok" % len(i18n.LANG_NAMES))
 print("ALL STORE-MODE TESTS OK")
