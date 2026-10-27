@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.3] - 2026-10-27
+
+- The program is now also in the Microsoft Store, under the name "Usage Monitor for Claude AI" – updated by the Store. The version downloaded from this website works exactly as before.
+
+*Magyarul:*
+
+- A program már a Microsoft Store-ban is elérhető, „Usage Monitor for Claude AI” néven – ott a Store frissíti. Az erről a weboldalról letöltött változat pontosan úgy működik, mint eddig.
+
+
 ## [2.9.2] - 2026-10-24
 
 - Fix: without a Claude Desktop usage log, the program stopped at start-up in local mode instead of telling you what to do next. It now starts and shows the hint, as intended.

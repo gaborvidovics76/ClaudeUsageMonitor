@@ -15,9 +15,10 @@
 - **Άδεια**: MIT, ανοιχτός κώδικας στο GitHub
 - **Δημιουργός**: Gábor Vidovics, Ουγγαρία – ανεξάρτητος, χωρίς σχέση με την Anthropic
 
-- Έκδοση: 2.9.2
+- Έκδοση: 2.9.3
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Έρχεται σύντομα
+- Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
 - https://claudeusagemonitor.com/el/
 
 ## Όλα τα όρια χρήσης του Claude. Με μία ματιά.

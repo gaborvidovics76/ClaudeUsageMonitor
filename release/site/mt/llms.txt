@@ -15,9 +15,10 @@ App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd g
 - **Liċenzja**: MIT, sors miftuħ fuq GitHub
 - **Awtur**: Gábor Vidovics, l-Ungerija – indipendenti, mhux affiljat ma' Anthropic
 
-- Verżjoni: 2.9.2
+- Verżjoni: 2.9.3
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ġej dalwaqt
+- Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
 - https://claudeusagemonitor.com/mt/
 
 ## Il-limiti tal-użu kollha tiegħek ta' Claude. Ħarsa waħda.

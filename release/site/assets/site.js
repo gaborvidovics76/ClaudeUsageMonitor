@@ -365,6 +365,8 @@
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('[data-dl]');
     if (a && /dl\.php|\.zip/.test(a.href)) { var sec = a.closest('section,header,div.mbar'); track('file_download', { os: a.getAttribute('data-dl'), version: (state[a.getAttribute('data-dl') === 'mac' ? 'mac' : 'win'] || {}).version, item: (sec && (sec.id || sec.className.split(' ')[0])) || 'page', file_name: a.getAttribute('data-dl') === 'mac' ? 'macOS package' : 'Windows package' }); }
+    var st = e.target.closest && e.target.closest('[data-store]');
+    if (st) { var ss = st.closest('section,header,div.mbar'); track('store_click', { item: (ss && (ss.id || ss.className.split(' ')[0])) || 'page' }); }
   });
 
   /* ------------------------------------------------------------ studio: themes + layouts */

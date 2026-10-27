@@ -1,158 +1,122 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.2",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.2.zip",
-    "sha256":  "3316784c1cdf64647aa2b93b81a3798b7f3a5deec18899983c6ee0ea88ef2b6d",
-    "bytes":  49174231,
+    "version":  "2.9.3",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.3.zip",
+    "sha256":  "9178fc195786ae0e23c2b1780ebba2405db10d3828f8fa2ead87499e7794a672",
+    "bytes":  49184004,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-24T18:10:03Z",
+    "last_updated":  "2026-10-27T20:49:25Z",
     "notes":  {
                   "en":  [
-                             "Fix: without a Claude Desktop usage log, the program stopped at start-up in local mode instead of telling you what to do next. It now starts and shows the hint, as intended.",
-                             "Also fixed: signing out while a refresh is running really signs you out; switching the data source no longer triggers false limit notifications; the model gauge\u0027s rate is no longer distorted after a restart; start at sign-in and the Start menu entry also work when the user name or the folder contains \u0027 or \u0026."
+                             "The program is now also in the Microsoft Store, under the name \"Usage Monitor for Claude AI\" – updated by the Store. The version downloaded from this website works exactly as before."
                          ],
                   "hu":  [
-                             "Javítás: Claude Desktop használati napló nélkül a program helyi módban indításkor leállt, ahelyett hogy elmondta volna a következő lépést. Most elindul, és a tervezett tippet mutatja.",
-                             "Még javítva: a frissítés közbeni kijelentkezés tényleg kijelentkeztet; az adatforrás váltása nem küld téves limit-értesítést; a modell-mérő üteme újraindítás után nem torzul; az automatikus indítás és a Start menü bejegyzés akkor is működik, ha a felhasználónévben vagy a mappa nevében \u0027 vagy \u0026 van."
+                             "A program már a Microsoft Store-ban is elérhető, „Usage Monitor for Claude AI” néven – ott a Store frissíti. Az erről a weboldalról letöltött változat pontosan úgy működik, mint eddig."
                          ],
                   "de":  [
-                             "Korrektur: Ohne Claude-Desktop-Nutzungsprotokoll hat sich das Programm im lokalen Modus beim Start beendet, statt dir den nächsten Schritt zu nennen. Jetzt startet es und zeigt den Hinweis wie vorgesehen.",
-                             "Außerdem behoben: Abmelden während einer Aktualisierung meldet dich wirklich ab; der Wechsel der Datenquelle löst keine falschen Limit-Benachrichtigungen mehr aus; die Rate der Modellanzeige wird nach einem Neustart nicht mehr verfälscht; Autostart und Startmenü-Eintrag funktionieren auch, wenn Benutzername oder Ordner \u0027 oder \u0026 enthalten."
+                             "Das Programm gibt es jetzt auch im Microsoft Store, unter dem Namen „Usage Monitor for Claude AI“ – dort aktualisiert es der Store. Die von dieser Website geladene Version funktioniert genau wie bisher."
                          ],
                   "fr":  [
-                             "Correctif : sans journal d\u0027utilisation de Claude Desktop, le programme s\u0027arrêtait au démarrage en mode local au lieu de vous indiquer la marche à suivre. Il démarre désormais et affiche l\u0027indication prévue.",
-                             "Également corrigé : se déconnecter pendant une actualisation vous déconnecte vraiment ; changer de source de données ne déclenche plus de fausses alertes de limite ; le rythme de la jauge du modèle n\u0027est plus faussé après un redémarrage ; le lancement à l\u0027ouverture de session et le raccourci du menu Démarrer fonctionnent aussi si le nom d\u0027utilisateur ou le dossier contient \u0027 ou \u0026."
+                             "Le programme est désormais aussi disponible dans le Microsoft Store, sous le nom « Usage Monitor for Claude AI » – mis à jour par le Store. La version téléchargée sur ce site fonctionne exactement comme avant."
                          ],
                   "es":  [
-                             "Corrección: sin registro de uso de Claude Desktop, el programa se cerraba al iniciarse en modo local en lugar de indicarte el siguiente paso. Ahora se inicia y muestra la indicación prevista.",
-                             "También corregido: cerrar sesión durante una actualización cierra la sesión de verdad; cambiar la fuente de datos ya no provoca avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona tras reiniciar; el inicio automático y el acceso del menú Inicio funcionan aunque el nombre de usuario o la carpeta contengan \u0027 o \u0026."
+                             "El programa ya está también en Microsoft Store, con el nombre «Usage Monitor for Claude AI»; allí lo actualiza la Store. La versión descargada de este sitio web funciona exactamente igual que antes."
                          ],
                   "it":  [
-                             "Correzione: senza il registro di utilizzo di Claude Desktop, in modalità locale il programma si chiudeva all\u0027avvio invece di indicarti il passo successivo. Ora si avvia e mostra il suggerimento previsto.",
-                             "Corretti anche: disconnettersi durante un aggiornamento ti disconnette davvero; cambiare origine dei dati non genera più falsi avvisi di limite; il ritmo dell\u0027indicatore del modello non viene più falsato dopo un riavvio; l\u0027avvio automatico e la voce del menu Start funzionano anche se il nome utente o la cartella contengono \u0027 o \u0026."
+                             "Il programma è ora disponibile anche nel Microsoft Store, con il nome «Usage Monitor for Claude AI»: lì lo aggiorna lo Store. La versione scaricata da questo sito funziona esattamente come prima."
                          ],
                   "pt":  [
-                             "Correção: sem o registro de uso do Claude Desktop, o programa fechava ao iniciar no modo local em vez de mostrar o próximo passo. Agora ele inicia e mostra a dica, como previsto.",
-                             "Também corrigido: sair da conta durante uma atualização realmente encerra a sessão; trocar a fonte de dados não gera mais alertas de limite falsos; o ritmo do medidor do modelo não fica mais distorcido após reiniciar; a inicialização automática e o atalho no menu Iniciar funcionam mesmo que o nome de usuário ou a pasta contenha \u0027 ou \u0026."
+                             "O programa agora também está na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – lá a Store o atualiza. A versão baixada deste site funciona exatamente como antes."
                          ],
                   "pl":  [
-                             "Poprawka: bez dziennika użycia Claude Desktop program w trybie lokalnym zamykał się przy starcie, zamiast podpowiedzieć kolejny krok. Teraz uruchamia się i pokazuje przewidzianą wskazówkę.",
-                             "Poprawiono też: wylogowanie w trakcie odświeżania naprawdę wylogowuje; zmiana źródła danych nie wywołuje już fałszywych powiadomień o limicie; tempo wskaźnika modelu nie jest już zniekształcone po ponownym uruchomieniu; autostart i skrót w menu Start działają także wtedy, gdy nazwa użytkownika lub folderu zawiera \u0027 lub \u0026."
+                             "Program jest teraz dostępny także w Microsoft Store pod nazwą „Usage Monitor for Claude AI” – tam aktualizuje go Store. Wersja pobrana z tej strony działa dokładnie tak jak dotąd."
                          ],
                   "nl":  [
-                             "Oplossing: zonder gebruikslogboek van Claude Desktop stopte het programma in de lokale modus bij het opstarten, in plaats van je te vertellen wat je moet doen. Nu start het en toont het de bedoelde tip.",
-                             "Ook opgelost: afmelden tijdens een verversing meldt je echt af; wisselen van gegevensbron geeft geen valse limietmeldingen meer; het tempo van de modelmeter raakt na een herstart niet meer vertekend; automatisch starten en de snelkoppeling in het Startmenu werken ook als de gebruikersnaam of map \u0027 of \u0026 bevat."
+                             "Het programma staat nu ook in de Microsoft Store, onder de naam „Usage Monitor for Claude AI” – daar werkt de Store het bij. De versie van deze website werkt precies zoals voorheen."
                          ],
                   "ru":  [
-                             "Исправление: без журнала использования Claude Desktop программа в локальном режиме закрывалась при запуске, вместо того чтобы подсказать следующий шаг. Теперь она запускается и показывает подсказку, как задумано.",
-                             "Также исправлено: выход из аккаунта во время обновления действительно завершает сеанс; смена источника данных больше не вызывает ложных уведомлений о лимите; темп индикатора модели больше не искажается после перезапуска; автозапуск и ярлык в меню «Пуск» работают, даже если имя пользователя или папка содержат \u0027 или \u0026."
+                             "Программа теперь есть и в Microsoft Store под названием «Usage Monitor for Claude AI» – там её обновляет Store. Версия, загруженная с этого сайта, работает точно так же, как раньше."
                          ],
                   "cs":  [
-                             "Oprava: bez protokolu využití Claude Desktop se program v místním režimu při spuštění ukončil, místo aby ti řekl, co dál. Teď se spustí a zobrazí plánovanou nápovědu.",
-                             "Dále opraveno: odhlášení během obnovování tě opravdu odhlásí; přepnutí zdroje dat už nevyvolává falešná upozornění na limit; tempo ukazatele modelu se po restartu už nezkresluje; automatické spuštění a zástupce v nabídce Start fungují i tehdy, když uživatelské jméno nebo složka obsahuje \u0027 nebo \u0026."
+                             "Program je nyní také v Microsoft Storu pod názvem „Usage Monitor for Claude AI“ – tam ho aktualizuje Store. Verze stažená z tohoto webu funguje přesně jako dosud."
                          ],
                   "tr":  [
-                             "Düzeltme: Claude Desktop kullanım günlüğü yokken program yerel modda, bir sonraki adımı söylemek yerine açılışta kapanıyordu. Artık açılıyor ve planlanan ipucunu gösteriyor.",
-                             "Ayrıca düzeltildi: yenileme sürerken oturumu kapatmak oturumu gerçekten kapatıyor; veri kaynağını değiştirmek artık yanlış limit bildirimlerine yol açmıyor; model göstergesinin hızı yeniden başlatmadan sonra bozulmuyor; oturum açılışında başlatma ve Başlat menüsü kısayolu, kullanıcı adı veya klasör \u0027 ya da \u0026 içerse de çalışıyor."
+                             "Program artık Microsoft Store\u0027da da \"Usage Monitor for Claude AI\" adıyla yer alıyor; orada Store güncelliyor. Bu web sitesinden indirilen sürüm eskisi gibi çalışmaya devam ediyor."
                          ],
                   "pt-PT":  [
-                                "Correção: sem o registo de utilização do Claude Desktop, o programa fechava ao arrancar no modo local em vez de indicar o passo seguinte. Agora arranca e mostra a sugestão prevista.",
-                                "Também corrigido: terminar sessão durante uma atualização termina mesmo a sessão; mudar a origem dos dados já não gera falsos alertas de limite; o ritmo do indicador do modelo já não fica distorcido após reiniciar; o arranque automático e o atalho do menu Iniciar funcionam mesmo que o nome de utilizador ou a pasta contenha \u0027 ou \u0026."
+                                "O programa está agora também na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – aí é a Store que o atualiza. A versão transferida deste site funciona exatamente como antes."
                             ],
                   "pt-BR":  [
-                                "Correção: sem o registro de uso do Claude Desktop, o programa fechava ao iniciar no modo local em vez de mostrar o próximo passo. Agora ele inicia e mostra a dica, como previsto.",
-                                "Também corrigido: sair da conta durante uma atualização realmente encerra a sessão; trocar a fonte de dados não gera mais alertas de limite falsos; o ritmo do medidor do modelo não fica mais distorcido após reiniciar; a inicialização automática e o atalho no menu Iniciar funcionam mesmo que o nome de usuário ou a pasta contenha \u0027 ou \u0026."
+                                "O programa agora também está na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – lá a Store o atualiza. A versão baixada deste site funciona exatamente como antes."
                             ],
                   "es-ES":  [
-                                "Corrección: sin registro de uso de Claude Desktop, el programa se cerraba al iniciarse en modo local en lugar de indicarte el siguiente paso. Ahora se inicia y muestra la indicación prevista.",
-                                "También corregido: cerrar sesión durante una actualización cierra la sesión de verdad; cambiar la fuente de datos ya no provoca avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona tras reiniciar; el inicio automático y el acceso del menú Inicio funcionan aunque el nombre de usuario o la carpeta contengan \u0027 o \u0026."
+                                "El programa ya está también en Microsoft Store, con el nombre «Usage Monitor for Claude AI»; allí lo actualiza la Store. La versión descargada de este sitio web funciona exactamente igual que antes."
                             ],
                   "es-419":  [
-                                 "Corrección: sin el registro de uso de Claude Desktop, el programa se cerraba al iniciar en modo local en vez de indicarte el siguiente paso. Ahora inicia y muestra la indicación prevista.",
-                                 "También se corrigió: cerrar sesión durante una actualización realmente cierra la sesión; cambiar la fuente de datos ya no genera avisos de límite falsos; el ritmo del indicador del modelo ya no se distorsiona después de reiniciar; el inicio automático y el acceso directo del menú Inicio funcionan aunque el nombre de usuario o la carpeta tengan \u0027 o \u0026."
+                                 "El programa ahora también está en Microsoft Store, con el nombre \"Usage Monitor for Claude AI\"; ahí lo actualiza la Store. La versión descargada de este sitio funciona exactamente igual que antes."
                              ],
                   "ja":  [
-                             "修正: Claude Desktop の使用ログがない場合、ローカルモードでは次の手順を案内する代わりに起動時に終了していました。今は起動して、予定どおりヒントを表示します。",
-                             "そのほかの修正: 更新中にサインアウトしても確実にサインアウトされます。データソースを切り替えても誤った上限通知が出なくなりました。再起動後にモデルゲージのペースが乱れなくなりました。ユーザー名やフォルダーに \u0027 や \u0026 が含まれていても、自動起動とスタートメニューのショートカットが動作します。"
+                             "このプログラムは「Usage Monitor for Claude AI」という名前で Microsoft Store でも提供されるようになりました（更新は Store が行います）。このサイトからダウンロードした版はこれまでどおり動作します。"
                          ],
                   "ko":  [
-                             "수정: Claude Desktop 사용 기록이 없으면 로컬 모드에서 다음 단계를 안내하는 대신 시작할 때 프로그램이 종료되었습니다. 이제 정상적으로 시작하고 의도한 안내를 표시합니다.",
-                             "추가 수정: 새로 고침 중에 로그아웃해도 확실히 로그아웃됩니다. 데이터 원본을 바꿔도 잘못된 한도 알림이 더 이상 뜨지 않습니다. 다시 시작한 뒤 모델 게이지의 속도가 왜곡되지 않습니다. 사용자 이름이나 폴더에 \u0027 또는 \u0026가 있어도 자동 시작과 시작 메뉴 바로 가기가 작동합니다."
+                             "이제 이 프로그램을 Microsoft Store에서도 \"Usage Monitor for Claude AI\"라는 이름으로 받을 수 있습니다(업데이트는 Store가 합니다). 이 웹사이트에서 받은 버전은 지금까지와 똑같이 작동합니다."
                          ],
                   "zh-CN":  [
-                                "修复：没有 Claude Desktop 使用日志时，程序在本地模式下启动即退出，而不是提示下一步该做什么。现在它会正常启动并按设计显示提示。",
-                                "其他修复：刷新进行中退出登录会真正退出；切换数据源不再触发错误的限额通知；重启后模型仪表的速率不再失真；用户名或文件夹包含 \u0027 或 \u0026 时，开机自启和开始菜单快捷方式也能正常工作。"
+                                "本程序现已上架 Microsoft Store，名称为“Usage Monitor for Claude AI”，由 Store 负责更新。从本网站下载的版本仍和以前完全一样。"
                             ],
                   "zh-TW":  [
-                                "修正：沒有 Claude Desktop 使用記錄時，程式在本機模式下一啟動就結束，而不是告訴你下一步該怎麼做。現在會正常啟動並依設計顯示提示。",
-                                "其他修正：重新整理進行中登出會確實登出；切換資料來源不再觸發錯誤的限額通知；重新啟動後模型量表的速率不再失真；使用者名稱或資料夾包含 \u0027 或 \u0026 時，開機自動啟動與開始功能表捷徑也能正常運作。"
+                                "本程式現已上架 Microsoft Store，名稱為「Usage Monitor for Claude AI」，由 Store 負責更新。從本網站下載的版本仍與以前完全相同。"
                             ],
                   "id":  [
-                             "Perbaikan: tanpa log penggunaan Claude Desktop, program dalam mode lokal berhenti saat dimulai alih-alih memberi tahu langkah berikutnya. Sekarang program berjalan dan menampilkan petunjuk sesuai rencana.",
-                             "Juga diperbaiki: keluar dari akun saat penyegaran berjalan benar-benar mengeluarkan Anda; mengganti sumber data tidak lagi memicu notifikasi batas palsu; laju pengukur model tidak lagi terdistorsi setelah dimulai ulang; mulai otomatis dan pintasan menu Start tetap berfungsi meski nama pengguna atau folder mengandung \u0027 atau \u0026."
+                             "Program ini kini juga tersedia di Microsoft Store dengan nama \"Usage Monitor for Claude AI\" – di sana Store yang memperbaruinya. Versi yang diunduh dari situs ini tetap berfungsi persis seperti sebelumnya."
                          ],
                   "vi":  [
-                             "Sửa lỗi: khi không có nhật ký sử dụng Claude Desktop, chương trình ở chế độ cục bộ bị thoát lúc khởi động thay vì cho bạn biết bước tiếp theo. Giờ chương trình khởi động và hiển thị gợi ý như dự định.",
-                             "Cũng đã sửa: đăng xuất trong lúc đang làm mới sẽ thực sự đăng xuất; đổi nguồn dữ liệu không còn gây thông báo giới hạn sai; tốc độ của đồng hồ mô hình không còn bị sai lệch sau khi khởi động lại; tự khởi động và lối tắt trong menu Start vẫn hoạt động khi tên người dùng hoặc thư mục có \u0027 hoặc \u0026."
+                             "Chương trình giờ đã có trên Microsoft Store với tên \"Usage Monitor for Claude AI\" – ở đó Store sẽ cập nhật. Bản tải từ trang web này vẫn hoạt động y như trước."
                          ],
                   "ro":  [
-                             "Remediere: fără jurnalul de utilizare Claude Desktop, programul se închidea la pornire în modul local, în loc să-ți spună ce ai de făcut. Acum pornește și afișează indicația prevăzută.",
-                             "Remediate de asemenea: deconectarea în timpul unei actualizări te deconectează cu adevărat; schimbarea sursei de date nu mai declanșează notificări false de limită; ritmul indicatorului modelului nu mai este distorsionat după repornire; pornirea automată și scurtătura din meniul Start funcționează și când numele de utilizator sau folderul conține \u0027 sau \u0026."
+                             "Programul este acum și în Microsoft Store, cu numele „Usage Monitor for Claude AI” – acolo îl actualizează Store-ul. Versiunea descărcată de pe acest site funcționează exact ca până acum."
                          ],
                   "el":  [
-                             "Διόρθωση: χωρίς αρχείο καταγραφής χρήσης του Claude Desktop, το πρόγραμμα σε τοπική λειτουργία τερματιζόταν κατά την εκκίνηση αντί να σου πει το επόμενο βήμα. Τώρα ξεκινά και δείχνει την προβλεπόμενη υπόδειξη.",
-                             "Επίσης διορθώθηκαν: η αποσύνδεση κατά τη διάρκεια ανανέωσης σε αποσυνδέει πραγματικά· η αλλαγή πηγής δεδομένων δεν προκαλεί πια ψευδείς ειδοποιήσεις ορίου· ο ρυθμός του δείκτη μοντέλου δεν αλλοιώνεται πια μετά από επανεκκίνηση· η αυτόματη εκκίνηση και η συντόμευση στο μενού Έναρξη λειτουργούν ακόμη κι αν το όνομα χρήστη ή ο φάκελος περιέχει \u0027 ή \u0026."
+                             "Το πρόγραμμα είναι πλέον διαθέσιμο και στο Microsoft Store, με το όνομα «Usage Monitor for Claude AI» – εκεί το ενημερώνει το Store. Η έκδοση από αυτόν τον ιστότοπο λειτουργεί ακριβώς όπως πριν."
                          ],
                   "bg":  [
-                             "Поправка: без дневник за използване на Claude Desktop програмата в локален режим се затваряше при стартиране, вместо да ти подскаже следващата стъпка. Сега тя стартира и показва предвидената подсказка.",
-                             "Също поправено: излизането от профила по време на опресняване наистина те изписва; смяната на източника на данни вече не предизвиква фалшиви известия за лимит; темпото на индикатора на модела вече не се изкривява след рестарт; автоматичното стартиране и прекият път в менюто „Старт“ работят и когато потребителското име или папката съдържат \u0027 или \u0026."
+                             "Програмата вече е и в Microsoft Store под името „Usage Monitor for Claude AI“ – там я обновява Store. Версията, изтеглена от този сайт, работи точно както досега."
                          ],
                   "sk":  [
-                             "Oprava: bez denníka používania Claude Desktop sa program v lokálnom režime pri spustení ukončil, namiesto aby ti povedal, čo ďalej. Teraz sa spustí a zobrazí plánovanú nápovedu.",
-                             "Ďalej opravené: odhlásenie počas obnovovania ťa naozaj odhlási; prepnutie zdroja údajov už nespúšťa falošné upozornenia na limit; tempo ukazovateľa modelu sa po reštarte už neskresľuje; automatické spustenie a odkaz v ponuke Štart fungujú aj vtedy, keď používateľské meno alebo priečinok obsahuje \u0027 alebo \u0026."
+                             "Program je teraz aj v Microsoft Store pod názvom „Usage Monitor for Claude AI“ – tam ho aktualizuje Store. Verzia stiahnutá z tejto stránky funguje presne ako doteraz."
                          ],
                   "hr":  [
-                             "Ispravak: bez zapisnika korištenja Claude Desktopa program se u lokalnom načinu rada zatvarao pri pokretanju umjesto da ti kaže sljedeći korak. Sada se pokreće i prikazuje predviđeni savjet.",
-                             "Također ispravljeno: odjava tijekom osvježavanja zaista te odjavljuje; promjena izvora podataka više ne izaziva lažne obavijesti o ograničenju; tempo pokazivača modela više se ne iskrivljuje nakon ponovnog pokretanja; automatsko pokretanje i prečac u izborniku Start rade i kad korisničko ime ili mapa sadrže \u0027 ili \u0026."
+                             "Program je sada i u trgovini Microsoft Store pod nazivom „Usage Monitor for Claude AI” – ondje ga ažurira Store. Verzija preuzeta s ove stranice radi točno kao i dosad."
                          ],
                   "sv":  [
-                             "Rättning: utan användningslogg från Claude Desktop avslutades programmet vid start i lokalt läge i stället för att berätta vad du ska göra härnäst. Nu startar det och visar tipset som tänkt.",
-                             "Även rättat: att logga ut medan en uppdatering pågår loggar verkligen ut dig; byte av datakälla ger inte längre falska gränsaviseringar; modellmätarens takt förvrängs inte längre efter en omstart; autostart och genvägen i Start-menyn fungerar även när användarnamnet eller mappen innehåller \u0027 eller \u0026."
+                             "Programmet finns nu även i Microsoft Store, med namnet ”Usage Monitor for Claude AI” – där uppdateras det av Store. Versionen från den här webbplatsen fungerar precis som tidigare."
                          ],
                   "fi":  [
-                             "Korjaus: ilman Claude Desktopin käyttölokia ohjelma sulkeutui paikallisessa tilassa käynnistyksen yhteydessä sen sijaan, että olisi kertonut seuraavan askeleen. Nyt se käynnistyy ja näyttää suunnitellun vihjeen.",
-                             "Korjattu myös: uloskirjautuminen päivityksen aikana kirjaa sinut todella ulos; tietolähteen vaihtaminen ei enää aiheuta vääriä rajailmoituksia; mallimittarin tahti ei enää vääristy uudelleenkäynnistyksen jälkeen; automaattinen käynnistys ja Käynnistä-valikon pikakuvake toimivat, vaikka käyttäjänimessä tai kansiossa olisi \u0027 tai \u0026."
+                             "Ohjelma on nyt myös Microsoft Storessa nimellä ”Usage Monitor for Claude AI” – siellä Store päivittää sen. Tältä sivustolta ladattu versio toimii täsmälleen kuten ennenkin."
                          ],
                   "da":  [
-                             "Rettelse: uden brugslog fra Claude Desktop lukkede programmet ved start i lokal tilstand i stedet for at fortælle dig, hvad du skal gøre. Nu starter det og viser tippet som tiltænkt.",
-                             "Også rettet: at logge ud mens en opdatering kører, logger dig virkelig ud; skift af datakilde udløser ikke længere falske grænsemeddelelser; modelmålerens tempo forvrænges ikke længere efter en genstart; autostart og genvejen i menuen Start virker også, når brugernavnet eller mappen indeholder \u0027 eller \u0026."
+                             "Programmet findes nu også i Microsoft Store under navnet »Usage Monitor for Claude AI« – der opdateres det af Store. Versionen fra dette websted fungerer præcis som før."
                          ],
                   "lt":  [
-                             "Pataisa: be Claude Desktop naudojimo žurnalo programa vietiniame režime užsidarydavo paleidžiant, užuot pasakiusi, ką daryti toliau. Dabar ji pasileidžia ir rodo numatytą patarimą.",
-                             "Taip pat pataisyta: atsijungimas vykstant atnaujinimui tikrai jus atjungia; duomenų šaltinio keitimas nebesukelia klaidingų limito pranešimų; modelio matuoklio tempas po paleidimo iš naujo nebeiškraipomas; automatinis paleidimas ir nuoroda meniu Pradžia veikia net jei naudotojo vardas ar aplankas turi \u0027 arba \u0026."
+                             "Programa dabar yra ir „Microsoft Store“ pavadinimu „Usage Monitor for Claude AI“ – ten ją atnaujina „Store“. Iš šios svetainės atsisiųsta versija veikia lygiai taip pat kaip anksčiau."
                          ],
                   "sl":  [
-                             "Popravek: brez dnevnika uporabe Claude Desktop se je program v lokalnem načinu ob zagonu zaprl, namesto da bi ti povedal naslednji korak. Zdaj se zažene in prikaže predvideni namig.",
-                             "Popravljeno tudi: odjava med osveževanjem te res odjavi; zamenjava vira podatkov ne sproža več lažnih obvestil o omejitvi; tempo merilnika modela se po ponovnem zagonu ne izkrivlja več; samodejni zagon in bližnjica v meniju Start delujeta tudi, ko uporabniško ime ali mapa vsebuje \u0027 ali \u0026."
+                             "Program je zdaj tudi v trgovini Microsoft Store z imenom »Usage Monitor for Claude AI« – tam ga posodablja Store. Različica s tega spletnega mesta deluje povsem enako kot doslej."
                          ],
                   "lv":  [
-                             "Labojums: bez Claude Desktop lietojuma žurnāla programma lokālajā režīmā startējot aizvērās, nevis pateica, kas jādara tālāk. Tagad tā startē un parāda paredzēto padomu.",
-                             "Laboti arī: izrakstīšanās atsvaidzināšanas laikā tiešām jūs izraksta; datu avota maiņa vairs neizraisa nepatiesus limita paziņojumus; modeļa rādītāja temps pēc restartēšanas vairs netiek izkropļots; automātiskā palaišana un saīsne izvēlnē Sākt darbojas arī tad, ja lietotājvārdā vai mapē ir \u0027 vai \u0026."
+                             "Programma tagad ir pieejama arī Microsoft Store ar nosaukumu “Usage Monitor for Claude AI” – tur to atjaunina Store. No šīs vietnes lejupielādētā versija darbojas tieši tāpat kā līdz šim."
                          ],
                   "et":  [
-                             "Parandus: ilma Claude Desktopi kasutuslogita sulgus programm kohalikus režiimis käivitamisel, selle asemel et öelda, mida edasi teha. Nüüd see käivitub ja näitab ettenähtud vihjet.",
-                             "Parandatud ka: väljalogimine värskendamise ajal logib sind päriselt välja; andmeallika vahetamine ei põhjusta enam valesid limiiditeateid; mudelinäidiku tempo ei moonutu pärast taaskäivitust enam; automaatne käivitus ja Start-menüü otsetee töötavad ka siis, kui kasutajanimes või kaustas on \u0027 või \u0026."
+                             "Programm on nüüd ka Microsoft Store\u0027is nime all „Usage Monitor for Claude AI“ – seal uuendab seda Store. Sellelt veebisaidilt laaditud versioon töötab täpselt nagu varem."
                          ],
                   "mt":  [
-                             "Korrezzjoni: mingħajr ir-reġistru tal-użu ta\u0027 Claude Desktop, il-programm fil-modalità lokali kien jieqaf mal-bidu minflok jgħidlek x\u0027għandek tagħmel wara. Issa jibda u juri l-ħjiel kif suppost.",
-                             "Ikkoreġuti wkoll: meta toħroġ mill-kont waqt aġġornament, toħroġ tassew; il-bidla tas-sors tad-data ma tqanqalx aktar notifiki foloz dwar il-limitu; ir-ritmu tal-indikatur tal-mudell ma jibqax mgħawweġ wara li terġa\u0027 tibda; il-bidu awtomatiku u l-iskorċatura fil-menu Start jaħdmu anke meta l-isem tal-utent jew il-folder ikun fih \u0027 jew \u0026."
+                             "Il-programm issa jinsab ukoll fil-Microsoft Store, bl-isem \"Usage Monitor for Claude AI\" – hemmhekk jaġġornah il-Store. Il-verżjoni mniżżla minn dan is-sit taħdem eżattament bħal qabel."
                          ],
                   "ga":  [
-                             "Ceartúchán: gan loga úsáide Claude Desktop, stopadh an clár sa mhód áitiúil ag an tosú in ionad a insint duit cad ba cheart a dhéanamh ina dhiaidh sin. Tosaíonn sé anois agus taispeánann sé an leid mar a bhí beartaithe.",
-                             "Ceartaithe freisin: má shíníonn tú amach le linn athnuachana, síneofar amach thú i ndáiríre; ní spreagann athrú na foinse sonraí fógraí bréagacha teorann a thuilleadh; ní shaobhtar ráta mhéadar an mhúnla a thuilleadh tar éis atosaithe; oibríonn an tosú uathoibríoch agus aicearra an roghchláir Tosaigh fiú má tá \u0027 nó \u0026 in ainm an úsáideora nó an fhillteáin."
+                             "Tá an clár ar fáil sa Microsoft Store anois freisin, faoin ainm \"Usage Monitor for Claude AI\" – nuashonraíonn an Store ansin é. Oibríonn an leagan a íoslódáiltear ón suíomh seo díreach mar a d\u0027oibrigh sé roimhe seo."
                          ]
               }
 }

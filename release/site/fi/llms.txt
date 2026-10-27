@@ -15,9 +15,10 @@ Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan
 - **Lisenssi**: MIT, avoin lähdekoodi GitHubissa
 - **Tekijä**: Gábor Vidovics, Unkari – itsenäinen kehittäjä, ei yhteydessä Anthropiciin
 
-- Versio: 2.9.2
+- Versio: 2.9.3
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Tulossa pian
+- Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
 - https://claudeusagemonitor.com/fi/
 
 ## Kaikki Clauden käyttörajasi. Yhdellä silmäyksellä.

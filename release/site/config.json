@@ -15,10 +15,23 @@
     "hosting_contact": "info@serverkraft.hu",
     "effective": "2026-10-07"
   },
+  "store_legal": {
+    "_readme": "Microsoft Store version (Usage Monitor for Claude AI): its publisher is the data controller. tools/build_store_privacy.py builds legal/store-hu.html and store-en.html from this. Keep equal to STORE_CONTROLLER in the app (claude_usage/store.py).",
+    "name": "30 km.hu Kft.",
+    "seat": "2462 Martonvásár, Fehérvári út 73.",
+    "reg": "07-09-029835",
+    "email": "adatkezeles@30km.hu",
+    "effective": "2026-10-26"
+  },
   "recaptcha": {
     "site_key": "6Lej_sctAAAAABuCcQoTFYpcd8Tg5uy9xVGecues"
   },
   "mac": {
     "status": "soon"
+  },
+  "store": {
+    "_readme": "Microsoft Store version. live: false = the 'also in the Microsoft Store' line under the Windows download is left out of every page; set it to true once the product page is public, then rebuild (tools/build_site.py) and deploy.",
+    "id": "9MV20XBFCXTZ",
+    "live": true
   }
 }

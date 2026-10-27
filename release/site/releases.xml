@@ -5,8 +5,16 @@
   <subtitle>Free desktop widget for Claude usage limits (Windows and macOS): new versions and what changed.</subtitle>
   <link rel="self" href="https://claudeusagemonitor.com/releases.xml"/>
   <link rel="alternate" href="https://claudeusagemonitor.com/"/>
-  <updated>2026-10-24T18:10:03Z</updated>
+  <updated>2026-10-27T20:49:25Z</updated>
   <author><name>Vidovics Gábor</name><uri>https://claudeusagemonitor.com/</uri></author>
+  <entry>
+    <id>https://claudeusagemonitor.com/#release-2.9.3</id>
+    <title>Claude Usage Monitor 2.9.3</title>
+    <updated>2026-10-27T20:49:25Z</updated>
+    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
+    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.3.zip" length="49184004"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;The program is now also in the Microsoft Store, under the name &amp;quot;Usage Monitor for Claude AI&amp;quot; – updated by the Store. The version downloaded from this website works exactly as before.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://claudeusagemonitor.com/#release-2.9.2</id>
     <title>Claude Usage Monitor 2.9.2</title>
@@ -158,13 +166,5 @@
     <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
     <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.3.1.zip" length="48435339"/>
     <content type="html">&lt;ul&gt;&lt;li&gt;New: hover the status text in the panel header to see when the data was last updated and, if a request failed, why - plus the countdown to the automatic retry.&lt;/li&gt;&lt;li&gt;Improved: updating from the command line (--update-now) now also works while the panel is running.&lt;/li&gt;&lt;li&gt;First release delivered through the built-in online updater.&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>https://claudeusagemonitor.com/#release-2.3.0</id>
-    <title>Claude Usage Monitor 2.3.0</title>
-    <updated>2026-09-18T12:37:27Z</updated>
-    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
-    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.3.0.zip" length="48432620"/>
-    <content type="html">&lt;ul&gt;&lt;li&gt;New: installer - unzip, double-click INSTALL.bat, done. No admin rights; appears under Installed apps with a proper uninstaller.&lt;/li&gt;&lt;li&gt;New: online updates - the app checks for a newer version, downloads it, verifies the SHA-256, replaces itself and restarts. Your settings stay.&lt;/li&gt;&lt;li&gt;Fixed: &amp;quot;Refresh now&amp;quot; sometimes seemed to do nothing. The server rate-limits the usage endpoint (HTTP 429); a manual refresh now retries until it gets an answer.&lt;/li&gt;&lt;li&gt;Fixed: the data no longer goes stale every other minute - polling adapts to what the server allows and backs off when it pushes back.&lt;/li&gt;&lt;li&gt;New: visible activity - a spinning ring and &amp;quot;refreshing...&amp;quot; while a request runs, a countdown to the automatic retry, and a warning colour when the last request failed.&lt;/li&gt;&lt;li&gt;New: size and order of the per-model (Fable) gauge are adjustable; the gauge can be switched off on its own.&lt;/li&gt;&lt;li&gt;New (optional): backup status bar with traffic-light lamps for OneDrive / Nextcloud / Obsidian backups; click a lamp to see what was backed up. Configured per user, hidden unless set up.&lt;/li&gt;&lt;li&gt;Privacy: nothing about your machine is built into the program - backup locations come only from your own local profile.&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>

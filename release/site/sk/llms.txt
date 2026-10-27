@@ -15,9 +15,10 @@ Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tv
 - **Licencia**: MIT, otvorený zdrojový kód na GitHube
 - **Autor**: Gábor Vidovics, Maďarsko – nezávislý vývojár, bez prepojenia so spoločnosťou Anthropic
 
-- Verzia: 2.9.2
+- Verzia: 2.9.3
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Už čoskoro
+- Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
 - https://claudeusagemonitor.com/sk/
 
 ## Všetky tvoje limity využitia Claude. Na jeden pohľad.

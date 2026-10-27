@@ -15,9 +15,10 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 - **Licence**: MIT, atvērtais pirmkods GitHub
 - **Autors**: Gábor Vidovics, Ungārija – neatkarīgs izstrādātājs, nav saistīts ar Anthropic
 
-- Versija: 2.9.2
+- Versija: 2.9.3
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Drīzumā
+- Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
 - https://claudeusagemonitor.com/lv/
 
 ## Visi jūsu Claude lietojuma limiti. Vienā skatienā.

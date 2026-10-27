@@ -320,6 +320,8 @@ code{font:500 .86em var(--mono);background:rgba(255,255,255,.07);padding:2px 7px
 .dlcard header h3{font-size:1.7rem}.dlcard header p{color:var(--dim);font-size:.92rem}
 .freebadge{margin-left:auto;font-size:.76rem;font-weight:800;letter-spacing:.12em;padding:6px 12px;border-radius:99px;background:color-mix(in oklab,var(--acc) 18%,transparent);color:var(--acc);border:1px solid color-mix(in oklab,var(--acc) 40%,transparent)}
 .dlmeta{margin:14px 0 8px;text-align:center;font-size:.92rem;color:var(--dim)}.dlmeta b{color:var(--ink)}
+.storewhy{list-style:none;margin:16px 0 4px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:.9rem;color:var(--ink)}.storewhy li::before{content:"✓";margin-right:6px;color:var(--acc);font-weight:800}
+.dlzip{margin:4px 0 10px;text-align:center;font-size:.8rem;color:var(--dim)}.dlzip a{color:var(--dim);text-decoration:underline}.dlzip a:hover{color:var(--ink)}
 details{border-top:1px solid var(--line)}
 summary{cursor:pointer;list-style:none;padding:15px 30px 15px 0;position:relative;font-weight:600;color:var(--ink)}
 summary::-webkit-details-marker{display:none}
