@@ -1445,6 +1445,11 @@ from .i18n_feedback import STRINGS_FEEDBACK as _STRINGS_FEEDBACK  # noqa: E402
 
 STRINGS.update(_STRINGS_FEEDBACK)
 
+# one-time thank-you of the website (ZIP) install: the signed version is in the Microsoft Store
+from .i18n_thanks import STRINGS_THANKS as _STRINGS_THANKS  # noqa: E402
+
+STRINGS.update(_STRINGS_THANKS)
+
 # macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
 if sys.platform == "darwin":
     from .i18n_mac import STRINGS_MAC as _STRINGS_MAC  # noqa: E402

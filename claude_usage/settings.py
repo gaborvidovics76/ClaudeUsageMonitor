@@ -121,6 +121,7 @@ DEFAULTS: Dict[str, Any] = {
     "update_url": "",                # "" = the default release manifest
     "update_skip_version": "",       # "Skip this version" in the update window
     "first_run_done": False,
+    "store_thanks_shown": False,     # the one-time "thank you, the signed version is in the Store" window
 }
 
 

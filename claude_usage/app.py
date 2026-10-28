@@ -12,7 +12,7 @@ from PySide6.QtCore import QPoint, QSharedMemory, QTimer, Qt
 from PySide6.QtGui import QAction, QActionGroup
 from PySide6.QtWidgets import QApplication, QMenu, QMessageBox, QSystemTrayIcon
 
-from . import secretstore, winutil
+from . import secretstore, store_thanks, winutil
 from .apisource import ApiReader
 from . import __version__
 from .backups import BackupChecker
@@ -162,8 +162,15 @@ class MonitorApp:
 
         if not self.settings["first_run_done"]:
             self.settings["first_run_done"] = True
+            # a new install picked the ZIP on a download page that offers the Store first: no thank-you for that
+            self.settings["store_thanks_shown"] = True
             self.settings.save()
             self.notify(APP_TITLE, tr("notify.first_run"))
+
+        # one-time thank-you to the earlier ZIP users: the signed version is now in the Microsoft Store
+        self.store_thanks = None
+        if store_thanks.due(self.settings):
+            QTimer.singleShot(8_000, self.show_store_thanks)
 
     # ------------------------------------------------------------ setup
 
@@ -800,6 +807,15 @@ class MonitorApp:
         self.feedback_dialog.show()
         self.feedback_dialog.raise_()
         self.feedback_dialog.activateWindow()
+
+    def show_store_thanks(self) -> None:
+        # marked as shown the moment it appears, so it never comes back - not even after a crash or a quit
+        self.settings["store_thanks_shown"] = True
+        self.settings.save()
+        self.store_thanks = store_thanks.StoreThanksDialog()
+        self.store_thanks.show()
+        self.store_thanks.raise_()
+        self.store_thanks.activateWindow()
 
     def show_history(self) -> None:
         # always with the current source (not stale after a local/API switch)
