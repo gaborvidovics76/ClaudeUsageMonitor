@@ -1,122 +1,122 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.3",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.3.zip",
-    "sha256":  "9178fc195786ae0e23c2b1780ebba2405db10d3828f8fa2ead87499e7794a672",
-    "bytes":  49184004,
+    "version":  "2.9.4",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.4.zip",
+    "sha256":  "a34f5d05650b0441d8891ffd1be5ef2eadc91070c4beb8e23b25f244ab6e2d59",
+    "bytes":  49210283,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-27T20:49:25Z",
+    "last_updated":  "2026-10-28T12:03:49Z",
     "notes":  {
                   "en":  [
-                             "The program is now also in the Microsoft Store, under the name \"Usage Monitor for Claude AI\" – updated by the Store. The version downloaded from this website works exactly as before."
+                             "A small surprise for those who have been using the program for a while – it appears once, a few seconds after the first start."
                          ],
                   "hu":  [
-                             "A program már a Microsoft Store-ban is elérhető, „Usage Monitor for Claude AI” néven – ott a Store frissíti. Az erről a weboldalról letöltött változat pontosan úgy működik, mint eddig."
+                             "Egy kis meglepetés azoknak, akik már egy ideje használják a programot – az első indítás után pár másodperccel, egyszer jelenik meg."
                          ],
                   "de":  [
-                             "Das Programm gibt es jetzt auch im Microsoft Store, unter dem Namen „Usage Monitor for Claude AI“ – dort aktualisiert es der Store. Die von dieser Website geladene Version funktioniert genau wie bisher."
+                             "Eine kleine Überraschung für alle, die das Programm schon länger nutzen – sie erscheint einmal, wenige Sekunden nach dem ersten Start."
                          ],
                   "fr":  [
-                             "Le programme est désormais aussi disponible dans le Microsoft Store, sous le nom « Usage Monitor for Claude AI » – mis à jour par le Store. La version téléchargée sur ce site fonctionne exactement comme avant."
+                             "Une petite surprise pour celles et ceux qui utilisent le programme depuis un moment – elle apparaît une seule fois, quelques secondes après le premier démarrage."
                          ],
                   "es":  [
-                             "El programa ya está también en Microsoft Store, con el nombre «Usage Monitor for Claude AI»; allí lo actualiza la Store. La versión descargada de este sitio web funciona exactamente igual que antes."
+                             "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
                          ],
                   "it":  [
-                             "Il programma è ora disponibile anche nel Microsoft Store, con il nome «Usage Monitor for Claude AI»: lì lo aggiorna lo Store. La versione scaricata da questo sito funziona esattamente come prima."
+                             "Una piccola sorpresa per chi usa il programma già da un po\u0027 – compare una sola volta, pochi secondi dopo il primo avvio."
                          ],
                   "pt":  [
-                             "O programa agora também está na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – lá a Store o atualiza. A versão baixada deste site funciona exatamente como antes."
+                             "Uma pequena surpresa para quem já usa o programa há algum tempo – ela aparece uma única vez, alguns segundos depois da primeira inicialização."
                          ],
                   "pl":  [
-                             "Program jest teraz dostępny także w Microsoft Store pod nazwą „Usage Monitor for Claude AI” – tam aktualizuje go Store. Wersja pobrana z tej strony działa dokładnie tak jak dotąd."
+                             "Mała niespodzianka dla osób, które korzystają z programu już od jakiegoś czasu – pojawi się raz, kilka sekund po pierwszym uruchomieniu."
                          ],
                   "nl":  [
-                             "Het programma staat nu ook in de Microsoft Store, onder de naam „Usage Monitor for Claude AI” – daar werkt de Store het bij. De versie van deze website werkt precies zoals voorheen."
+                             "Een kleine verrassing voor wie het programma al een tijdje gebruikt – ze verschijnt één keer, enkele seconden na de eerste start."
                          ],
                   "ru":  [
-                             "Программа теперь есть и в Microsoft Store под названием «Usage Monitor for Claude AI» – там её обновляет Store. Версия, загруженная с этого сайта, работает точно так же, как раньше."
+                             "Небольшой сюрприз для тех, кто пользуется программой уже давно, – он появится один раз, через несколько секунд после первого запуска."
                          ],
                   "cs":  [
-                             "Program je nyní také v Microsoft Storu pod názvem „Usage Monitor for Claude AI“ – tam ho aktualizuje Store. Verze stažená z tohoto webu funguje přesně jako dosud."
+                             "Malé překvapení pro ty, kdo program používají už nějakou dobu – objeví se jednou, pár sekund po prvním spuštění."
                          ],
                   "tr":  [
-                             "Program artık Microsoft Store\u0027da da \"Usage Monitor for Claude AI\" adıyla yer alıyor; orada Store güncelliyor. Bu web sitesinden indirilen sürüm eskisi gibi çalışmaya devam ediyor."
+                             "Programı bir süredir kullananlar için küçük bir sürpriz – ilk açılıştan birkaç saniye sonra bir kez görünür."
                          ],
                   "pt-PT":  [
-                                "O programa está agora também na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – aí é a Store que o atualiza. A versão transferida deste site funciona exatamente como antes."
+                                "Uma pequena surpresa para quem já usa o programa há algum tempo – aparece uma única vez, alguns segundos após o primeiro arranque."
                             ],
                   "pt-BR":  [
-                                "O programa agora também está na Microsoft Store, com o nome \"Usage Monitor for Claude AI\" – lá a Store o atualiza. A versão baixada deste site funciona exatamente como antes."
+                                "Uma pequena surpresa para quem já usa o programa há algum tempo – ela aparece uma única vez, alguns segundos depois da primeira inicialização."
                             ],
                   "es-ES":  [
-                                "El programa ya está también en Microsoft Store, con el nombre «Usage Monitor for Claude AI»; allí lo actualiza la Store. La versión descargada de este sitio web funciona exactamente igual que antes."
+                                "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
                             ],
                   "es-419":  [
-                                 "El programa ahora también está en Microsoft Store, con el nombre \"Usage Monitor for Claude AI\"; ahí lo actualiza la Store. La versión descargada de este sitio funciona exactamente igual que antes."
+                                 "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
                              ],
                   "ja":  [
-                             "このプログラムは「Usage Monitor for Claude AI」という名前で Microsoft Store でも提供されるようになりました（更新は Store が行います）。このサイトからダウンロードした版はこれまでどおり動作します。"
+                             "しばらく前からお使いの方へ、ちょっとしたサプライズがあります。初回起動の数秒後に一度だけ表示されます。"
                          ],
                   "ko":  [
-                             "이제 이 프로그램을 Microsoft Store에서도 \"Usage Monitor for Claude AI\"라는 이름으로 받을 수 있습니다(업데이트는 Store가 합니다). 이 웹사이트에서 받은 버전은 지금까지와 똑같이 작동합니다."
+                             "한동안 프로그램을 사용해 오신 분들을 위한 작은 깜짝 선물이 있어요. 첫 실행 몇 초 뒤에 한 번만 나타나요."
                          ],
                   "zh-CN":  [
-                                "本程序现已上架 Microsoft Store，名称为“Usage Monitor for Claude AI”，由 Store 负责更新。从本网站下载的版本仍和以前完全一样。"
+                                "给已经使用这个程序一段时间的用户准备了一个小惊喜——首次启动几秒后出现，只出现一次。"
                             ],
                   "zh-TW":  [
-                                "本程式現已上架 Microsoft Store，名稱為「Usage Monitor for Claude AI」，由 Store 負責更新。從本網站下載的版本仍與以前完全相同。"
+                                "給已經使用這個程式一段時間的使用者準備了一個小驚喜——首次啟動幾秒後出現，只會出現一次。"
                             ],
                   "id":  [
-                             "Program ini kini juga tersedia di Microsoft Store dengan nama \"Usage Monitor for Claude AI\" – di sana Store yang memperbaruinya. Versi yang diunduh dari situs ini tetap berfungsi persis seperti sebelumnya."
+                             "Sebuah kejutan kecil bagi Anda yang sudah lama memakai program ini – muncul sekali, beberapa detik setelah pertama kali dijalankan."
                          ],
                   "vi":  [
-                             "Chương trình giờ đã có trên Microsoft Store với tên \"Usage Monitor for Claude AI\" – ở đó Store sẽ cập nhật. Bản tải từ trang web này vẫn hoạt động y như trước."
+                             "Một bất ngờ nhỏ dành cho những ai đã dùng chương trình một thời gian – chỉ hiện một lần, vài giây sau lần khởi động đầu tiên."
                          ],
                   "ro":  [
-                             "Programul este acum și în Microsoft Store, cu numele „Usage Monitor for Claude AI” – acolo îl actualizează Store-ul. Versiunea descărcată de pe acest site funcționează exact ca până acum."
+                             "O mică surpriză pentru cei care folosesc programul de ceva vreme – apare o singură dată, la câteva secunde după prima pornire."
                          ],
                   "el":  [
-                             "Το πρόγραμμα είναι πλέον διαθέσιμο και στο Microsoft Store, με το όνομα «Usage Monitor for Claude AI» – εκεί το ενημερώνει το Store. Η έκδοση από αυτόν τον ιστότοπο λειτουργεί ακριβώς όπως πριν."
+                             "Μια μικρή έκπληξη για όσους χρησιμοποιούν το πρόγραμμα εδώ και καιρό – εμφανίζεται μία φορά, λίγα δευτερόλεπτα μετά την πρώτη εκκίνηση."
                          ],
                   "bg":  [
-                             "Програмата вече е и в Microsoft Store под името „Usage Monitor for Claude AI“ – там я обновява Store. Версията, изтеглена от този сайт, работи точно както досега."
+                             "Малка изненада за тези, които използват програмата от известно време – появява се веднъж, няколко секунди след първото стартиране."
                          ],
                   "sk":  [
-                             "Program je teraz aj v Microsoft Store pod názvom „Usage Monitor for Claude AI“ – tam ho aktualizuje Store. Verzia stiahnutá z tejto stránky funguje presne ako doteraz."
+                             "Malé prekvapenie pre tých, ktorí program používajú už nejaký čas – objaví sa raz, pár sekúnd po prvom spustení."
                          ],
                   "hr":  [
-                             "Program je sada i u trgovini Microsoft Store pod nazivom „Usage Monitor for Claude AI” – ondje ga ažurira Store. Verzija preuzeta s ove stranice radi točno kao i dosad."
+                             "Malo iznenađenje za one koji program koriste već neko vrijeme – pojavljuje se jednom, nekoliko sekundi nakon prvog pokretanja."
                          ],
                   "sv":  [
-                             "Programmet finns nu även i Microsoft Store, med namnet ”Usage Monitor for Claude AI” – där uppdateras det av Store. Versionen från den här webbplatsen fungerar precis som tidigare."
+                             "En liten överraskning för dig som har använt programmet ett tag – den visas en gång, några sekunder efter första starten."
                          ],
                   "fi":  [
-                             "Ohjelma on nyt myös Microsoft Storessa nimellä ”Usage Monitor for Claude AI” – siellä Store päivittää sen. Tältä sivustolta ladattu versio toimii täsmälleen kuten ennenkin."
+                             "Pieni yllätys niille, jotka ovat käyttäneet ohjelmaa jo jonkin aikaa – se näkyy kerran, muutama sekunti ensimmäisen käynnistyksen jälkeen."
                          ],
                   "da":  [
-                             "Programmet findes nu også i Microsoft Store under navnet »Usage Monitor for Claude AI« – der opdateres det af Store. Versionen fra dette websted fungerer præcis som før."
+                             "En lille overraskelse til dem, der har brugt programmet et stykke tid – den vises én gang, et par sekunder efter første start."
                          ],
                   "lt":  [
-                             "Programa dabar yra ir „Microsoft Store“ pavadinimu „Usage Monitor for Claude AI“ – ten ją atnaujina „Store“. Iš šios svetainės atsisiųsta versija veikia lygiai taip pat kaip anksčiau."
+                             "Maža staigmena tiems, kurie programa naudojasi jau kurį laiką – ji pasirodys vieną kartą, praėjus kelioms sekundėms po pirmojo paleidimo."
                          ],
                   "sl":  [
-                             "Program je zdaj tudi v trgovini Microsoft Store z imenom »Usage Monitor for Claude AI« – tam ga posodablja Store. Različica s tega spletnega mesta deluje povsem enako kot doslej."
+                             "Majhno presenečenje za tiste, ki program uporabljate že nekaj časa – prikaže se enkrat, nekaj sekund po prvem zagonu."
                          ],
                   "lv":  [
-                             "Programma tagad ir pieejama arī Microsoft Store ar nosaukumu “Usage Monitor for Claude AI” – tur to atjaunina Store. No šīs vietnes lejupielādētā versija darbojas tieši tāpat kā līdz šim."
+                             "Neliels pārsteigums tiem, kas programmu lieto jau kādu laiku – tas parādīsies vienreiz, dažas sekundes pēc pirmās palaišanas."
                          ],
                   "et":  [
-                             "Programm on nüüd ka Microsoft Store\u0027is nime all „Usage Monitor for Claude AI“ – seal uuendab seda Store. Sellelt veebisaidilt laaditud versioon töötab täpselt nagu varem."
+                             "Väike üllatus neile, kes on programmi juba mõnda aega kasutanud – see ilmub korra, mõni sekund pärast esimest käivitamist."
                          ],
                   "mt":  [
-                             "Il-programm issa jinsab ukoll fil-Microsoft Store, bl-isem \"Usage Monitor for Claude AI\" – hemmhekk jaġġornah il-Store. Il-verżjoni mniżżla minn dan is-sit taħdem eżattament bħal qabel."
+                             "Sorpriża żgħira għal min ilu juża l-programm – tidher darba biss, ftit sekondi wara l-ewwel tnedija."
                          ],
                   "ga":  [
-                             "Tá an clár ar fáil sa Microsoft Store anois freisin, faoin ainm \"Usage Monitor for Claude AI\" – nuashonraíonn an Store ansin é. Oibríonn an leagan a íoslódáiltear ón suíomh seo díreach mar a d\u0027oibrigh sé roimhe seo."
+                             "Iontas beag dóibh siúd atá ag úsáid an chláir le tamall – taispeántar é uair amháin, cúpla soicind tar éis an chéad tosú."
                          ]
               }
 }

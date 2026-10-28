@@ -15,7 +15,7 @@ Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan: claude.a
 - **Licencia**: MIT, código abierto en GitHub
 - **Autor**: Gábor Vidovics, Hungría: independiente, sin afiliación con Anthropic
 
-- Versión: 2.9.3
+- Versión: 2.9.4
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Próximamente
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

@@ -15,7 +15,7 @@ Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csoma
 - **Licenc**: MIT, nyílt forráskód a GitHubon
 - **Szerző**: Vidovics Gábor, Magyarország – független fejlesztő, nem áll kapcsolatban az Anthropickal
 
-- Verzió:: 2.9.3
+- Verzió:: 2.9.4
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Hamarosan
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

@@ -15,7 +15,7 @@ Windows と Mac の両方で使える1つのアプリです。claude.ai、Claude
 - **ライセンス**: MIT、GitHub でオープンソースとして公開
 - **作者**: Vidovics Gábor（ハンガリー）。独立した個人開発者で、Anthropic とは提携関係にありません
 
-- バージョン: 2.9.3
+- バージョン: 2.9.4
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 近日公開
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

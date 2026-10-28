@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.4] - 2026-10-28
+
+- A small surprise for those who have been using the program for a while – it appears once, a few seconds after the first start.
+
+*Magyarul:*
+
+- Egy kis meglepetés azoknak, akik már egy ideje használják a programot – az első indítás után pár másodperccel, egyszer jelenik meg.
+
+
 ## [2.9.3] - 2026-10-27
 
 - The program is now also in the Microsoft Store, under the name "Usage Monitor for Claude AI" – updated by the Store. The version downloaded from this website works exactly as before.

@@ -15,7 +15,7 @@ Une seule application pour Windows et pour Mac. Elle couvre tout ce qui compte d
 - **Licence**: MIT, open source sur GitHub
 - **Auteur**: Gábor Vidovics, Hongrie – indépendant, sans lien avec Anthropic
 
-- Version: 2.9.3
+- Version: 2.9.4
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Bientôt disponible
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
