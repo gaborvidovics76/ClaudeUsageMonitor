@@ -50,6 +50,11 @@ from claude_usage.feedback_dialog import FeedbackDialog
 _priv = FeedbackDialog().privacy.toPlainText()
 print("PRIVACY_STORE_CONTROLLER", store.STORE_CONTROLLER["reg"] in _priv and "legal/store-en.html" in _priv)
 print("VISIBLE_PATH_UNCHANGED", winutil.visible_path(os.environ.get("APPDATA", "C:\\x")) == os.environ.get("APPDATA", "C:\\x"))
+from claude_usage import store_thanks
+print("THANKS_DUE", store_thanks.due({"store_thanks_shown": False}))
+print("THANKS_AGAIN", store_thanks.due({"store_thanks_shown": True}))
+_thanks = store_thanks.StoreThanksDialog(animate=False)
+print("THANKS_STORE_NAME_ONE_LINE", any(store.STORE_NAME.replace(" ", "\u00a0") in l.text() for l in _thanks.findChildren(QLabel)))
 """ % ROOT
 
 
@@ -69,20 +74,23 @@ assert zipmode == {"PACKAGED": False, "AUTOSTART_CHECKBOX": True, "AUTOSTART_BUT
                    "UPDATE_CHECKBOX": True, "UPDATE_BUTTON": True, "STORE_LABEL": False,
                    "TITLE_STORE_NAME": False, "TEXT_STORE_NAME": False, "GUIDE_UPDATES": True,
                    "GUIDE_FEEDBACK_NOTE": True, "AUTHOR_STORE_LINK": True, "AUTHOR_STORE_PRIVACY": False,
-                   "PRIVACY_STORE_CONTROLLER": False, "VISIBLE_PATH_UNCHANGED": True}, zipmode
-print("1) ZIP install: autostart checkbox + update controls, as before: ok")
+                   "PRIVACY_STORE_CONTROLLER": False, "VISIBLE_PATH_UNCHANGED": True,
+                   "THANKS_DUE": True, "THANKS_AGAIN": False, "THANKS_STORE_NAME_ONE_LINE": True}, zipmode
+print("1) ZIP install: autostart checkbox + update controls, as before; the one-time Store thank-you is due once: ok")
 
 store = run(True)
 assert store == {"PACKAGED": True, "AUTOSTART_CHECKBOX": False, "AUTOSTART_BUTTON": True, "STORE_HINT": True,
                  "UPDATE_CHECKBOX": False, "UPDATE_BUTTON": False, "STORE_LABEL": True,
                  "TITLE_STORE_NAME": True, "TEXT_STORE_NAME": True, "GUIDE_UPDATES": False,
                  "GUIDE_FEEDBACK_NOTE": True, "AUTHOR_STORE_LINK": True, "AUTHOR_STORE_PRIVACY": True,
-                 "PRIVACY_STORE_CONTROLLER": True, "VISIBLE_PATH_UNCHANGED": True}, store
+                 "PRIVACY_STORE_CONTROLLER": True, "VISIBLE_PATH_UNCHANGED": True,
+                 "THANKS_DUE": False, "THANKS_AGAIN": False, "THANKS_STORE_NAME_ONE_LINE": True}, store
 print("2) Store package: startup-settings button + hint, no update controls, 'Microsoft Store' by the version,")
 print("   the reserved Store name in the title and in the texts (ZIP keeps its own name),")
 print("   no self-update section in the help guide; the feedback form is named in its privacy part,")
 print("   the privacy notice names the Store publisher as controller (ZIP keeps its own), and the help window's")
-print("   Privacy link opens the Store privacy policy; both installs link the Microsoft Store page: ok")
+print("   Privacy link opens the Store privacy policy; both installs link the Microsoft Store page;")
+print("   the package never shows the ZIP users' Store thank-you: ok")
 
 import json  # noqa: E402
 
