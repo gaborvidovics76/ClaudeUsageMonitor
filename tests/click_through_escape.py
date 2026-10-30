@@ -24,8 +24,14 @@ from PySide6.QtWidgets import QApplication, QCheckBox, QLabel  # noqa: E402
 
 app = QApplication([])
 
-from claude_usage import i18n, wakeup  # noqa: E402
+from claude_usage import i18n, wakeup, winutil  # noqa: E402
 from claude_usage import settings as settings_mod  # noqa: E402
+
+# MonitorApp repairs the autostart entry and the Start menu shortcut of the install it runs from; from a checkout
+# that would register pythonw + main.py at logon - never from a test
+winutil.sync_autostart = lambda: False
+winutil.ensure_start_menu_shortcut = lambda: None
+winutil.sync_installed_version = lambda _v: None
 
 TMP = tempfile.mkdtemp(prefix="cum-wakeup-")
 wakeup.config_dir = lambda: TMP      # the marker never touches the real settings folder

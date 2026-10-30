@@ -158,11 +158,11 @@ class MonitorApp:
         self._busy_until = 0.0          # minimum visible duration of the indicator
         self._was_busy = False
         # a second start of the program asks for the Settings window (the way out of click-through mode)
+        wakeup.consume()                # a stale marker never opens Settings at start
         self.wake = QTimer()
         self.wake.setInterval(1000)
         self.wake.timeout.connect(self._poll_wakeup)
         self.wake.start()
-        wakeup.consume()                # a stale marker never opens Settings at start
         self._click_through_was = bool(self.settings["click_through"])
         self.apply_settings()
         self.refresh()
