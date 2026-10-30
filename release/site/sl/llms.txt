@@ -15,7 +15,7 @@ En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.
 - **Licenca**: MIT, odprta koda na GitHubu
 - **Avtor**: Gábor Vidovics, Madžarska – neodvisen, ni povezan z družbo Anthropic
 
-- Različica: 2.9.5
+- Različica: 2.9.6
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kmalu na voljo
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

@@ -15,7 +15,7 @@ Eén app voor Windows én Mac. Hij telt alles mee wat onder je abonnement valt �
 - **Licentie**: MIT, open source op GitHub
 - **Maker**: Gábor Vidovics, Hongarije – onafhankelijk, niet verbonden aan Anthropic
 
-- Versie: 2.9.5
+- Versie: 2.9.6
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Binnenkort
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

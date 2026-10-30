@@ -1,122 +1,122 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.5",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.5.zip",
-    "sha256":  "33c9cfef3113efec9b2893b1cc3187015f2662a35c7b80d983c951583f5c33ae",
-    "bytes":  49543655,
+    "version":  "2.9.6",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.6.zip",
+    "sha256":  "068b738b2259f174d1e8cd426ac5c3636deadb23c45eb0365c4125c40fd80895",
+    "bytes":  49552356,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-30T22:15:04Z",
+    "last_updated":  "2026-10-30T23:08:49Z",
     "notes":  {
                   "en":  [
-                             "Fixed: on some Windows PCs the sign-in stopped with \"certificate has expired\". The program now brings its own list of trusted root certificates (Mozilla) alongside the Windows store."
+                             "Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse."
                          ],
                   "hu":  [
-                             "Javítva: egyes Windows-gépeken a bejelentkezés „certificate has expired” hibával elakadt. A program mostantól a Windows tára mellett saját megbízható gyökértanúsítvány-listát (Mozilla) is hoz."
+                             "Kattintás-átengedés: bekapcsoláskor a program megmondja, hol éred el a menüt (jobb klikk a tálcaikonra), és ha a Start menüből újra elindítod, megnyílnak a Beállításai – így van kiút, amikor a panel nem reagál az egérre."
                          ],
                   "de":  [
-                             "Behoben: Auf manchen Windows-PCs blieb die Anmeldung mit „certificate has expired“ hängen. Das Programm bringt jetzt neben dem Windows-Speicher eine eigene Liste vertrauenswürdiger Stammzertifikate (Mozilla) mit."
+                             "Durchklicken: Beim Einschalten sagt das Programm jetzt, wo das Menü ist (Rechtsklick auf das Tray-Symbol), und ein erneuter Start über das Startmenü öffnet die Einstellungen – ein Weg zurück, wenn das Panel die Maus ignoriert."
                          ],
                   "fr":  [
-                             "Corrigé : sur certains PC Windows, la connexion s\u0027arrêtait avec « certificate has expired ». Le programme embarque désormais sa propre liste de certificats racines de confiance (Mozilla) en plus du magasin Windows."
+                             "Clic traversant : à l\u0027activation, le programme indique désormais où trouver le menu (clic droit sur l\u0027icône de la barre d\u0027état), et le relancer depuis le menu Démarrer ouvre ses Paramètres – une porte de sortie quand le panneau ignore la souris."
                          ],
                   "es":  [
-                             "Corregido: en algunos PC con Windows el inicio de sesión se detenía con «certificate has expired». El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
+                             "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
                          ],
                   "it":  [
-                             "Risolto: su alcuni PC Windows l\u0027accesso si bloccava con “certificate has expired”. Il programma ora include un proprio elenco di certificati radice attendibili (Mozilla) accanto all\u0027archivio di Windows."
+                             "Clic passante: quando lo attivi, il programma ora indica dove si trova il menu (clic destro sull\u0027icona nell\u0027area di notifica), e riavviarlo dal menu Start apre le Impostazioni – una via d\u0027uscita quando il pannello ignora il mouse."
                          ],
                   "pt":  [
-                             "Corrigido: em alguns PCs com Windows o login parava com “certificate has expired”. O programa agora traz sua própria lista de certificados raiz confiáveis (Mozilla) junto com o repositório do Windows."
+                             "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
                          ],
                   "pl":  [
-                             "Naprawiono: na niektórych komputerach z Windows logowanie zatrzymywało się z błędem „certificate has expired”. Program ma teraz własną listę zaufanych certyfikatów głównych (Mozilla) obok magazynu Windows."
+                             "Przepuszczanie kliknięć: po włączeniu program mówi teraz, gdzie jest menu (prawy przycisk na ikonie w obszarze powiadomień), a ponowne uruchomienie z menu Start otwiera jego Ustawienia – droga powrotu, gdy panel ignoruje mysz."
                          ],
                   "nl":  [
-                             "Opgelost: op sommige Windows-pc\u0027s stopte het aanmelden met \u0027certificate has expired\u0027. Het programma brengt nu naast het Windows-archief een eigen lijst met vertrouwde basiscertificaten (Mozilla) mee."
+                             "Klik-door: bij inschakelen vertelt het programma nu waar het menu is (rechtsklik op het pictogram in het systeemvak), en opnieuw starten via het Startmenu opent de Instellingen – een weg terug als het paneel de muis negeert."
                          ],
                   "ru":  [
-                             "Исправлено: на некоторых ПК с Windows вход останавливался с ошибкой «certificate has expired». Теперь программа, помимо хранилища Windows, использует собственный список доверенных корневых сертификатов (Mozilla)."
+                             "Пропуск кликов: при включении программа теперь подсказывает, где меню (правый клик по значку в области уведомлений), а повторный запуск из меню «Пуск» открывает её Параметры – выход, когда панель не реагирует на мышь."
                          ],
                   "cs":  [
-                             "Opraveno: na některých počítačích s Windows se přihlášení zastavilo s chybou „certificate has expired“. Program nyní vedle úložiště Windows přináší vlastní seznam důvěryhodných kořenových certifikátů (Mozilla)."
+                             "Průchozí klikání: při zapnutí program nyní řekne, kde je menu (pravý klik na ikonu v oznamovací oblasti), a opětovné spuštění z nabídky Start otevře jeho Nastavení – cesta zpět, když panel nereaguje na myš."
                          ],
                   "tr":  [
-                             "Düzeltildi: bazı Windows bilgisayarlarda oturum açma “certificate has expired” hatasıyla duruyordu. Program artık Windows deposunun yanında kendi güvenilir kök sertifika listesini (Mozilla) de getiriyor."
+                             "Tıklama geçişi: açıldığında program artık menünün nerede olduğunu söylüyor (bildirim alanındaki simgeye sağ tık), Başlat menüsünden yeniden başlatmak ise Ayarlarını açıyor – panel fareyi yok saydığında bir çıkış yolu."
                          ],
                   "pt-PT":  [
-                                "Corrigido: em alguns PCs com Windows o início de sessão parava com «certificate has expired». O programa passa a incluir a sua própria lista de certificados de raiz fidedignos (Mozilla) além do arquivo do Windows."
+                                "Clique transparente: ao ativá-lo, o programa indica agora onde está o menu (botão direito no ícone da área de notificação), e voltar a iniciá-lo no menu Iniciar abre as Definições – uma saída quando o painel ignora o rato."
                             ],
                   "pt-BR":  [
-                                "Corrigido: em alguns PCs com Windows o login parava com “certificate has expired”. O programa agora traz sua própria lista de certificados raiz confiáveis (Mozilla) junto com o repositório do Windows."
+                                "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
                             ],
                   "es-ES":  [
-                                "Corregido: en algunos PC con Windows el inicio de sesión se detenía con «certificate has expired». El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
+                                "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
                             ],
                   "es-419":  [
-                                 "Corregido: en algunas PC con Windows el inicio de sesión se detenía con “certificate has expired”. El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
+                                 "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el ícono de la bandeja), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el mouse."
                              ],
                   "ja":  [
-                             "修正：一部の Windows PC でサインインが「certificate has expired」で止まっていました。プログラムは Windows の証明書ストアに加えて、独自の信頼されたルート証明書リスト（Mozilla）を持つようになりました。"
+                             "クリック透過：オンにすると、メニューの場所（通知領域のアイコンを右クリック）を案内するようになりました。スタートメニューからもう一度起動すると設定が開き、パネルがマウスに反応しないときの戻り道になります。"
                          ],
                   "ko":  [
-                             "수정: 일부 Windows PC에서 로그인이 “certificate has expired” 오류로 멈췄어요. 이제 프로그램은 Windows 저장소와 함께 자체 신뢰할 수 있는 루트 인증서 목록(Mozilla)을 함께 가져가요."
+                             "클릭 통과: 켜면 메뉴 위치(알림 영역 아이콘 오른쪽 클릭)를 알려 주고, 시작 메뉴에서 프로그램을 다시 실행하면 설정이 열려요. 패널이 마우스를 무시할 때 돌아오는 길이에요."
                          ],
                   "zh-CN":  [
-                                "已修复：部分 Windows 电脑上登录会因“certificate has expired”而中断。程序现在在 Windows 证书存储之外，自带一份受信任的根证书列表（Mozilla）。"
+                                "点击穿透：开启时程序会提示菜单在哪里（右键点击托盘图标）；从“开始”菜单再次启动程序会打开它的设置——面板不响应鼠标时的退路。"
                             ],
                   "zh-TW":  [
-                                "已修正：部分 Windows 電腦上登入會因「certificate has expired」而中斷。程式現在在 Windows 憑證存放區之外，自帶一份受信任的根憑證清單（Mozilla）。"
+                                "點選穿透：開啟時程式會提示選單在哪裡（在系統匣圖示上按右鍵）；從「開始」功能表再次啟動程式會開啟它的設定——面板不回應滑鼠時的退路。"
                             ],
                   "id":  [
-                             "Diperbaiki: di beberapa PC Windows proses masuk berhenti dengan “certificate has expired”. Program kini membawa daftar sertifikat root tepercaya (Mozilla) sendiri di samping penyimpanan Windows."
+                             "Klik tembus: saat diaktifkan, program kini memberi tahu letak menu (klik kanan ikon baki), dan menjalankan program lagi dari menu Mulai membuka Pengaturannya – jalan kembali saat panel mengabaikan mouse."
                          ],
                   "vi":  [
-                             "Đã sửa: trên một số máy Windows, đăng nhập bị dừng với lỗi “certificate has expired”. Chương trình giờ mang theo danh sách chứng chỉ gốc tin cậy riêng (Mozilla) bên cạnh kho của Windows."
+                             "Xuyên nhấp: khi bật, chương trình giờ cho biết menu ở đâu (nhấp chuột phải vào biểu tượng khay), và khởi động lại từ menu Start sẽ mở Cài đặt – lối thoát khi bảng bỏ qua chuột."
                          ],
                   "ro":  [
-                             "Rezolvat: pe unele PC-uri cu Windows autentificarea se oprea cu „certificate has expired”. Programul aduce acum propria listă de certificate rădăcină de încredere (Mozilla) pe lângă depozitul Windows."
+                             "Clic transparent: la activare, programul îți spune acum unde este meniul (clic dreapta pe pictograma din zona de notificare), iar repornirea din meniul Start îi deschide Setările – o cale de întoarcere când panoul ignoră mouse-ul."
                          ],
                   "el":  [
-                             "Διορθώθηκε: σε ορισμένους υπολογιστές Windows η σύνδεση σταματούσε με «certificate has expired». Το πρόγραμμα περιλαμβάνει πλέον τη δική του λίστα αξιόπιστων πιστοποιητικών ρίζας (Mozilla) δίπλα στον χώρο αποθήκευσης των Windows."
+                             "Διαπερατότητα κλικ: με την ενεργοποίηση, το πρόγραμμα δείχνει πλέον πού είναι το μενού (δεξί κλικ στο εικονίδιο της περιοχής ειδοποιήσεων), και η επανεκκίνηση από το μενού Έναρξη ανοίγει τις Ρυθμίσεις – μια διέξοδος όταν ο πίνακας αγνοεί το ποντίκι."
                          ],
                   "bg":  [
-                             "Поправено: на някои компютри с Windows влизането спираше с „certificate has expired“. Програмата вече носи собствен списък с доверени коренови сертификати (Mozilla) наред с хранилището на Windows."
+                             "Пропускане на кликове: при включване програмата вече казва къде е менюто (десен бутон върху иконата в областта за известяване), а повторното ѝ стартиране от менюто Старт отваря настройките – изход, когато панелът не реагира на мишката."
                          ],
                   "sk":  [
-                             "Opravené: na niektorých počítačoch s Windows sa prihlásenie zastavilo s chybou „certificate has expired“. Program teraz popri úložisku Windows prináša vlastný zoznam dôveryhodných koreňových certifikátov (Mozilla)."
+                             "Priechodné klikanie: pri zapnutí program teraz povie, kde je ponuka (pravý klik na ikonu v oblasti oznámení), a opätovné spustenie z ponuky Štart otvorí jeho Nastavenia – cesta späť, keď panel nereaguje na myš."
                          ],
                   "hr":  [
-                             "Ispravljeno: na nekim Windows računalima prijava je stala uz „certificate has expired”. Program sada uz Windows spremište donosi vlastiti popis pouzdanih korijenskih certifikata (Mozilla)."
+                             "Prolaz klikova: pri uključivanju program sada kaže gdje je izbornik (desni klik na ikonu u području obavijesti), a ponovno pokretanje iz izbornika Start otvara njegove Postavke – izlaz kada panel ne reagira na miš."
                          ],
                   "sv":  [
-                             "Åtgärdat: på vissa Windows-datorer stannade inloggningen med ”certificate has expired”. Programmet har nu en egen lista över betrodda rotcertifikat (Mozilla) vid sidan av Windows-arkivet."
+                             "Klick igenom: när det slås på berättar programmet nu var menyn finns (högerklicka på ikonen i meddelandefältet), och att starta det igen från Start-menyn öppnar Inställningar – en väg tillbaka när panelen ignorerar musen."
                          ],
                   "fi":  [
-                             "Korjattu: joillakin Windows-koneilla kirjautuminen pysähtyi virheeseen ”certificate has expired”. Ohjelma tuo nyt Windowsin varaston rinnalle oman luotettujen juurivarmenteiden luettelon (Mozilla)."
+                             "Klikkausten läpäisy: kun se kytketään päälle, ohjelma kertoo nyt, missä valikko on (hiiren kakkospainike ilmoitusalueen kuvakkeessa), ja uudelleenkäynnistys Käynnistä-valikosta avaa asetukset – tie takaisin, kun paneeli ei reagoi hiireen."
                          ],
                   "da":  [
-                             "Rettet: På nogle Windows-pc\u0027er stoppede login med “certificate has expired”. Programmet medbringer nu sin egen liste over betroede rodcertifikater (Mozilla) ved siden af Windows-lageret."
+                             "Klik-igennem: Når det slås til, fortæller programmet nu, hvor menuen er (højreklik på ikonet i meddelelsesområdet), og at starte det igen fra Start-menuen åbner Indstillinger – en vej tilbage, når panelet ignorerer musen."
                          ],
                   "lt":  [
-                             "Pataisyta: kai kuriuose Windows kompiuteriuose prisijungimas sustodavo su klaida „certificate has expired“. Programa dabar šalia Windows saugyklos turi savo patikimų šakninių sertifikatų sąrašą (Mozilla)."
+                             "Paspaudimų praleidimas: įjungus programa dabar praneša, kur yra meniu (dešinysis pelės mygtukas ant pranešimų srities piktogramos), o paleidus ją iš naujo iš meniu Pradžia atsidaro Parametrai – kelias atgal, kai skydelis nereaguoja į pelę."
                          ],
                   "sl":  [
-                             "Popravljeno: na nekaterih računalnikih z Windows se je prijava ustavila z napako »certificate has expired«. Program ima zdaj poleg shrambe Windows svoj seznam zaupanja vrednih korenskih potrdil (Mozilla)."
+                             "Prepuščanje klikov: ob vklopu program zdaj pove, kje je meni (desni klik na ikono v območju za obvestila), ponovni zagon iz menija Start pa odpre njegove Nastavitve – pot nazaj, ko plošča ne reagira na miško."
                          ],
                   "lv":  [
-                             "Izlabots: dažos Windows datoros pieteikšanās apstājās ar kļūdu “certificate has expired”. Programma tagad līdzās Windows krātuvei nes savu uzticamo saknes sertifikātu sarakstu (Mozilla)."
+                             "Klikšķu caurlaide: ieslēdzot programma tagad pasaka, kur ir izvēlne (labais klikšķis uz paziņojumu apgabala ikonas), un atkārtota palaišana no izvēlnes Sākt atver tās Iestatījumus – ceļš atpakaļ, kad panelis nereaģē uz peli."
                          ],
                   "et":  [
-                             "Parandatud: mõnes Windowsi arvutis jäi sisselogimine seisma veaga „certificate has expired“. Programm toob nüüd Windowsi hoidla kõrvale oma usaldusväärsete juursertifikaatide loendi (Mozilla)."
+                             "Läbiklõps: sisselülitamisel ütleb programm nüüd, kus menüü on (paremklõps teavitusala ikoonil), ja uuesti käivitamine Start-menüüst avab selle sätted – tee tagasi, kui paneel hiirt ei kuula."
                          ],
                   "mt":  [
-                             "Issolvut: fuq xi PCs bil-Windows il-login kien jieqaf b\u0027“certificate has expired”. Il-programm issa jġib il-lista tiegħu stess ta\u0027 ċertifikati root fdati (Mozilla) flimkien mal-ħażna tal-Windows."
+                             "Klikk li jgħaddi: meta tixgħelu, il-programm issa jgħidlek fejn hu l-menu (klikk bil-lemin fuq l-ikona fiż-żona tan-notifiki), u jekk terġa\u0027 tibdih mill-menu Start jinfetħu s-Settings – triq lura meta l-pannell jinjora l-maws."
                          ],
                   "ga":  [
-                             "Socraithe: ar roinnt ríomhairí Windows stop an síniú isteach le “certificate has expired”. Tá liosta dá chuid féin de theastais fhréimhe iontaofa (Mozilla) ag an gclár anois in éineacht le stór Windows."
+                             "Cliceáil tríd: nuair a chuirtear ar siúl é, insíonn an clár anois cá bhfuil an roghchlár (deaschliceáil ar dheilbhín an tráidire), agus má thosaítear arís é ón roghchlár Tosaigh osclaítear a Shocruithe – bealach ar ais nuair a dhéanann an painéal neamhaird den luch."
                          ]
               }
 }

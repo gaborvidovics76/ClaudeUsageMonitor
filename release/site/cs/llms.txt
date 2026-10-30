@@ -15,7 +15,7 @@ Jedna aplikace pro Windows i Mac. Pokrývá všechno, co se počítá do tvého 
 - **Licence**: MIT, open source na GitHubu
 - **Autor**: Gábor Vidovics, Maďarsko – nezávislý vývojář, bez vazby na Anthropic
 
-- Verze: 2.9.5
+- Verze: 2.9.6
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Už brzy
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

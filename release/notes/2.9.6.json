@@ -1,0 +1,110 @@
+{
+  "en": [
+    "Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse."
+  ],
+  "hu": [
+    "Kattintás-átengedés: bekapcsoláskor a program megmondja, hol éred el a menüt (jobb klikk a tálcaikonra), és ha a Start menüből újra elindítod, megnyílnak a Beállításai – így van kiút, amikor a panel nem reagál az egérre."
+  ],
+  "de": [
+    "Durchklicken: Beim Einschalten sagt das Programm jetzt, wo das Menü ist (Rechtsklick auf das Tray-Symbol), und ein erneuter Start über das Startmenü öffnet die Einstellungen – ein Weg zurück, wenn das Panel die Maus ignoriert."
+  ],
+  "fr": [
+    "Clic traversant : à l'activation, le programme indique désormais où trouver le menu (clic droit sur l'icône de la barre d'état), et le relancer depuis le menu Démarrer ouvre ses Paramètres – une porte de sortie quand le panneau ignore la souris."
+  ],
+  "es": [
+    "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
+  ],
+  "it": [
+    "Clic passante: quando lo attivi, il programma ora indica dove si trova il menu (clic destro sull'icona nell'area di notifica), e riavviarlo dal menu Start apre le Impostazioni – una via d'uscita quando il pannello ignora il mouse."
+  ],
+  "pt": [
+    "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
+  ],
+  "pl": [
+    "Przepuszczanie kliknięć: po włączeniu program mówi teraz, gdzie jest menu (prawy przycisk na ikonie w obszarze powiadomień), a ponowne uruchomienie z menu Start otwiera jego Ustawienia – droga powrotu, gdy panel ignoruje mysz."
+  ],
+  "nl": [
+    "Klik-door: bij inschakelen vertelt het programma nu waar het menu is (rechtsklik op het pictogram in het systeemvak), en opnieuw starten via het Startmenu opent de Instellingen – een weg terug als het paneel de muis negeert."
+  ],
+  "ru": [
+    "Пропуск кликов: при включении программа теперь подсказывает, где меню (правый клик по значку в области уведомлений), а повторный запуск из меню «Пуск» открывает её Параметры – выход, когда панель не реагирует на мышь."
+  ],
+  "cs": [
+    "Průchozí klikání: při zapnutí program nyní řekne, kde je menu (pravý klik na ikonu v oznamovací oblasti), a opětovné spuštění z nabídky Start otevře jeho Nastavení – cesta zpět, když panel nereaguje na myš."
+  ],
+  "tr": [
+    "Tıklama geçişi: açıldığında program artık menünün nerede olduğunu söylüyor (bildirim alanındaki simgeye sağ tık), Başlat menüsünden yeniden başlatmak ise Ayarlarını açıyor – panel fareyi yok saydığında bir çıkış yolu."
+  ],
+  "pt-PT": [
+    "Clique transparente: ao ativá-lo, o programa indica agora onde está o menu (botão direito no ícone da área de notificação), e voltar a iniciá-lo no menu Iniciar abre as Definições – uma saída quando o painel ignora o rato."
+  ],
+  "pt-BR": [
+    "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
+  ],
+  "es-ES": [
+    "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
+  ],
+  "es-419": [
+    "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el ícono de la bandeja), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el mouse."
+  ],
+  "ja": [
+    "クリック透過：オンにすると、メニューの場所（通知領域のアイコンを右クリック）を案内するようになりました。スタートメニューからもう一度起動すると設定が開き、パネルがマウスに反応しないときの戻り道になります。"
+  ],
+  "ko": [
+    "클릭 통과: 켜면 메뉴 위치(알림 영역 아이콘 오른쪽 클릭)를 알려 주고, 시작 메뉴에서 프로그램을 다시 실행하면 설정이 열려요. 패널이 마우스를 무시할 때 돌아오는 길이에요."
+  ],
+  "zh-CN": [
+    "点击穿透：开启时程序会提示菜单在哪里（右键点击托盘图标）；从“开始”菜单再次启动程序会打开它的设置——面板不响应鼠标时的退路。"
+  ],
+  "zh-TW": [
+    "點選穿透：開啟時程式會提示選單在哪裡（在系統匣圖示上按右鍵）；從「開始」功能表再次啟動程式會開啟它的設定——面板不回應滑鼠時的退路。"
+  ],
+  "id": [
+    "Klik tembus: saat diaktifkan, program kini memberi tahu letak menu (klik kanan ikon baki), dan menjalankan program lagi dari menu Mulai membuka Pengaturannya – jalan kembali saat panel mengabaikan mouse."
+  ],
+  "vi": [
+    "Xuyên nhấp: khi bật, chương trình giờ cho biết menu ở đâu (nhấp chuột phải vào biểu tượng khay), và khởi động lại từ menu Start sẽ mở Cài đặt – lối thoát khi bảng bỏ qua chuột."
+  ],
+  "ro": [
+    "Clic transparent: la activare, programul îți spune acum unde este meniul (clic dreapta pe pictograma din zona de notificare), iar repornirea din meniul Start îi deschide Setările – o cale de întoarcere când panoul ignoră mouse-ul."
+  ],
+  "el": [
+    "Διαπερατότητα κλικ: με την ενεργοποίηση, το πρόγραμμα δείχνει πλέον πού είναι το μενού (δεξί κλικ στο εικονίδιο της περιοχής ειδοποιήσεων), και η επανεκκίνηση από το μενού Έναρξη ανοίγει τις Ρυθμίσεις – μια διέξοδος όταν ο πίνακας αγνοεί το ποντίκι."
+  ],
+  "bg": [
+    "Пропускане на кликове: при включване програмата вече казва къде е менюто (десен бутон върху иконата в областта за известяване), а повторното ѝ стартиране от менюто Старт отваря настройките – изход, когато панелът не реагира на мишката."
+  ],
+  "sk": [
+    "Priechodné klikanie: pri zapnutí program teraz povie, kde je ponuka (pravý klik na ikonu v oblasti oznámení), a opätovné spustenie z ponuky Štart otvorí jeho Nastavenia – cesta späť, keď panel nereaguje na myš."
+  ],
+  "hr": [
+    "Prolaz klikova: pri uključivanju program sada kaže gdje je izbornik (desni klik na ikonu u području obavijesti), a ponovno pokretanje iz izbornika Start otvara njegove Postavke – izlaz kada panel ne reagira na miš."
+  ],
+  "sv": [
+    "Klick igenom: när det slås på berättar programmet nu var menyn finns (högerklicka på ikonen i meddelandefältet), och att starta det igen från Start-menyn öppnar Inställningar – en väg tillbaka när panelen ignorerar musen."
+  ],
+  "fi": [
+    "Klikkausten läpäisy: kun se kytketään päälle, ohjelma kertoo nyt, missä valikko on (hiiren kakkospainike ilmoitusalueen kuvakkeessa), ja uudelleenkäynnistys Käynnistä-valikosta avaa asetukset – tie takaisin, kun paneeli ei reagoi hiireen."
+  ],
+  "da": [
+    "Klik-igennem: Når det slås til, fortæller programmet nu, hvor menuen er (højreklik på ikonet i meddelelsesområdet), og at starte det igen fra Start-menuen åbner Indstillinger – en vej tilbage, når panelet ignorerer musen."
+  ],
+  "lt": [
+    "Paspaudimų praleidimas: įjungus programa dabar praneša, kur yra meniu (dešinysis pelės mygtukas ant pranešimų srities piktogramos), o paleidus ją iš naujo iš meniu Pradžia atsidaro Parametrai – kelias atgal, kai skydelis nereaguoja į pelę."
+  ],
+  "sl": [
+    "Prepuščanje klikov: ob vklopu program zdaj pove, kje je meni (desni klik na ikono v območju za obvestila), ponovni zagon iz menija Start pa odpre njegove Nastavitve – pot nazaj, ko plošča ne reagira na miško."
+  ],
+  "lv": [
+    "Klikšķu caurlaide: ieslēdzot programma tagad pasaka, kur ir izvēlne (labais klikšķis uz paziņojumu apgabala ikonas), un atkārtota palaišana no izvēlnes Sākt atver tās Iestatījumus – ceļš atpakaļ, kad panelis nereaģē uz peli."
+  ],
+  "et": [
+    "Läbiklõps: sisselülitamisel ütleb programm nüüd, kus menüü on (paremklõps teavitusala ikoonil), ja uuesti käivitamine Start-menüüst avab selle sätted – tee tagasi, kui paneel hiirt ei kuula."
+  ],
+  "mt": [
+    "Klikk li jgħaddi: meta tixgħelu, il-programm issa jgħidlek fejn hu l-menu (klikk bil-lemin fuq l-ikona fiż-żona tan-notifiki), u jekk terġa' tibdih mill-menu Start jinfetħu s-Settings – triq lura meta l-pannell jinjora l-maws."
+  ],
+  "ga": [
+    "Cliceáil tríd: nuair a chuirtear ar siúl é, insíonn an clár anois cá bhfuil an roghchlár (deaschliceáil ar dheilbhín an tráidire), agus má thosaítear arís é ón roghchlár Tosaigh osclaítear a Shocruithe – bealach ar ais nuair a dhéanann an painéal neamhaird den luch."
+  ]
+}

@@ -15,7 +15,7 @@ Satu aplikasi untuk Windows dan Mac sekaligus. Mencakup semua yang dihitung ke d
 - **Lisensi**: MIT, sumber terbuka di GitHub
 - **Pembuat**: Gábor Vidovics, Hungaria – independen, tidak berafiliasi dengan Anthropic
 
-- Versi: 2.9.5
+- Versi: 2.9.6
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Segera hadir
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

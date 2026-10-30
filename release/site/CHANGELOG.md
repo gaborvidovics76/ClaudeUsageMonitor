@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.6] - 2026-10-31
+
+- Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse.
+
+*Magyarul:*
+
+- Kattintás-átengedés: bekapcsoláskor a program megmondja, hol éred el a menüt (jobb klikk a tálcaikonra), és ha a Start menüből újra elindítod, megnyílnak a Beállításai – így van kiút, amikor a panel nem reagál az egérre.
+
+
 ## [2.9.5] - 2026-10-30
 
 - Fixed: on some Windows PCs the sign-in stopped with "certificate has expired". The program now brings its own list of trusted root certificates (Mozilla) alongside the Windows store.

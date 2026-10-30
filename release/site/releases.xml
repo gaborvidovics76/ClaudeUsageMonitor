@@ -5,8 +5,16 @@
   <subtitle>Free desktop widget for Claude usage limits (Windows and macOS): new versions and what changed.</subtitle>
   <link rel="self" href="https://claudeusagemonitor.com/releases.xml"/>
   <link rel="alternate" href="https://claudeusagemonitor.com/"/>
-  <updated>2026-10-30T22:15:04Z</updated>
+  <updated>2026-10-30T23:08:49Z</updated>
   <author><name>Vidovics Gábor</name><uri>https://claudeusagemonitor.com/</uri></author>
+  <entry>
+    <id>https://claudeusagemonitor.com/#release-2.9.6</id>
+    <title>Claude Usage Monitor 2.9.6</title>
+    <updated>2026-10-30T23:08:49Z</updated>
+    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
+    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.6.zip" length="49552356"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://claudeusagemonitor.com/#release-2.9.5</id>
     <title>Claude Usage Monitor 2.9.5</title>
@@ -158,13 +166,5 @@
     <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
     <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.4.0.zip" length="48456537"/>
     <content type="html">&lt;ul&gt;&lt;li&gt;New: plan badge in the header - a little gradient pill with a sparkle: PRO, MAX 5×, MAX 20×, TEAM or ENTERPRISE. Hover it for your plan card (plan, rate-limit tier, extra usage, member since). Your name only appears on the badge if you switch that on.&lt;/li&gt;&lt;li&gt;New: a small list under the gauges shows every other limit the server reports - the weekly windows of the other models (Opus, Sonnet…), per-surface windows (Claude Code, connected apps…) and limits the app does not know by name yet. Each line has a status dot, a thin bar, the percentage and the time to reset.&lt;/li&gt;&lt;li&gt;New: extra usage (pay-as-you-go credit) - whether it is on, the monthly limit and what you have spent.&lt;/li&gt;&lt;li&gt;Everything is selectable: five switches in Settings → Details and in the right-click menu, plus a tick box for every single line the server currently sends for your account.&lt;/li&gt;&lt;li&gt;The list only takes room when there is something to show; the slim bar layout stays as it is.&lt;/li&gt;&lt;li&gt;Privacy: the plan is read from Anthropic&amp;#x27;s profile endpoint with your existing sign-in. Your name and e-mail are never written to any log.&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>https://claudeusagemonitor.com/#release-2.3.3</id>
-    <title>Claude Usage Monitor 2.3.3</title>
-    <updated>2026-09-18T13:10:03Z</updated>
-    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
-    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.3.3.zip" length="48434517"/>
-    <content type="html">&lt;ul&gt;&lt;li&gt;Clearer menu: &amp;quot;Refresh usage data now&amp;quot; (fetches your numbers) and &amp;quot;Check for program updates…&amp;quot; (looks for a new version) can no longer be mixed up - the program update now sits in its own section above Quit.&lt;/li&gt;&lt;li&gt;The header shows &amp;quot;fetching data…&amp;quot; while a request runs, and the update window is titled &amp;quot;Program update&amp;quot;.&lt;/li&gt;&lt;li&gt;The installer also cleans up the leftovers of an interrupted self-update.&lt;/li&gt;&lt;li&gt;Diagnostics: the log notes once per run which fields the server offers (names only, never values).&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>

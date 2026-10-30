@@ -15,7 +15,7 @@ Uma só aplicação para Windows e Mac. Abrange tudo o que conta para o teu plan
 - **Licença**: MIT, código aberto no GitHub
 - **Autor**: Gábor Vidovics, Hungria – independente, sem ligação à Anthropic
 
-- Versão: 2.9.5
+- Versão: 2.9.6
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Brevemente
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
