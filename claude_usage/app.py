@@ -12,7 +12,7 @@ from PySide6.QtCore import QPoint, QSharedMemory, QTimer, Qt
 from PySide6.QtGui import QAction, QActionGroup
 from PySide6.QtWidgets import QApplication, QMenu, QMessageBox, QSystemTrayIcon
 
-from . import secretstore, store_thanks, winutil
+from . import secretstore, store_thanks, tls, winutil
 from .apisource import ApiReader
 from . import __version__
 from .backups import BackupChecker
@@ -905,9 +905,9 @@ def run() -> int:
         monitor = MonitorApp(app)
         app._monitor = monitor  # keep a reference
         if winutil.is_packaged():
-            log(f"started - Microsoft Store package {winutil.package_family_name() or '(forced)'}")
+            log(f"started - Microsoft Store package {winutil.package_family_name() or '(forced)'}; tls: {tls.trust_summary()}")
         else:
-            log(f"started - autostart={winutil.autostart_method() or 'none'}")
+            log(f"started - autostart={winutil.autostart_method() or 'none'}; tls: {tls.trust_summary()}")
         return app.exec()
     except BaseException:
         log("ERROR:\n" + traceback.format_exc())

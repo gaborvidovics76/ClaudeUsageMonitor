@@ -18,6 +18,7 @@ from typing import Optional
 
 _lock = threading.Lock()
 _ctx: Optional[ssl.SSLContext] = None
+_bundle = False
 
 
 def add_bundle(ctx: ssl.SSLContext) -> bool:
@@ -34,11 +35,17 @@ def add_bundle(ctx: ssl.SSLContext) -> bool:
 
 def context() -> ssl.SSLContext:
     """One verified-only client context for the whole process (the bundle is read once)."""
-    global _ctx
+    global _ctx, _bundle
     with _lock:
         if _ctx is None:
             ctx = ssl.create_default_context()      # platform stores; verifies the certificate and the host name
             ctx.minimum_version = ssl.TLSVersion.TLSv1_2
-            add_bundle(ctx)
+            _bundle = add_bundle(ctx)
             _ctx = ctx
         return _ctx
+
+
+def trust_summary() -> str:
+    """For the log: "platform stores + certifi" or, when the bundle is missing from the build, "platform stores only"."""
+    context()
+    return "platform stores + certifi" if _bundle else "platform stores only"

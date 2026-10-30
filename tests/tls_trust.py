@@ -142,7 +142,8 @@ r = _verify(broken, "platform.claude.com")
 if r.startswith("network"):
     _fail(r)
 if "expired" not in r:
-    _fail(f"the contaminated store was expected to fail with 'certificate has expired', got: {r}")
+    _fail(f"the contaminated store was expected to fail with 'certificate has expired', got: {r} - does "
+          "platform.claude.com still send the ISRG Root X2 cross-signed chain? (openssl s_client -showcerts)")
 print(f"3) contaminated Windows store (expired X2 cross-sign cached, no X2 root) -> '{r}': reproduced")
 
 # 4) the fix: the same contaminated store plus the bundle verifies

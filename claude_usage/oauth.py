@@ -29,9 +29,10 @@ import urllib.parse
 import urllib.request
 from typing import Dict, Optional, Tuple
 
-# Claude Code's public OAuth client (for the user's own account).
 from . import tls
 from .i18n import tr
+
+# Claude Code's public OAuth client (for the user's own account).
 CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
 AUTHORIZE_URL = "https://claude.ai/oauth/authorize"
 # The current Claude Code uses platform.claude.com; the old

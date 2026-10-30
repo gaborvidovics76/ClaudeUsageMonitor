@@ -113,9 +113,7 @@ def _open(url: str, timeout: float):
         "Accept": "application/json, application/zip, */*",
         "Cache-Control": "no-cache",
     })
-    if url.startswith("https://"):
-        return urllib.request.urlopen(req, timeout=timeout, context=tls.context())
-    return urllib.request.urlopen(req, timeout=timeout)         # http://127.0.0.1 test target
+    return urllib.request.urlopen(req, timeout=timeout, context=tls.context())
 
 
 def fetch_manifest(url: str = "", timeout: float = 12.0) -> UpdateInfo:

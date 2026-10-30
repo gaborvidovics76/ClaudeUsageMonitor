@@ -71,8 +71,6 @@ def target_url() -> str:
     return FEEDBACK_URL
 
 
-
-
 def build_payload(name: str, email: str, message: str, rating: int, publish: bool, lang: str) -> Dict:
     return {
         "client": "app",
@@ -102,10 +100,7 @@ def send(payload: Dict, url: str = "") -> Tuple[bool, str]:
         "Cache-Control": "no-cache",
     })
     try:
-        kw = {"timeout": TIMEOUT_S}
-        if url.startswith("https://"):
-            kw["context"] = tls.context()
-        with urllib.request.urlopen(req, **kw) as resp:
+        with urllib.request.urlopen(req, timeout=TIMEOUT_S, context=tls.context()) as resp:
             data = json.loads(resp.read(20000).decode("utf-8", "replace") or "{}")
     except urllib.error.HTTPError as e:
         try:
