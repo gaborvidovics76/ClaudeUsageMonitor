@@ -1,3 +1,5 @@
 PySide6-Essentials>=6.6
+# Mozilla root bundle, loaded on top of the platform trust (claude_usage/tls.py)
+certifi>=2024.2.2
 # macOS only: the sign-in token goes into the Keychain
 keyring>=24; sys_platform == "darwin"

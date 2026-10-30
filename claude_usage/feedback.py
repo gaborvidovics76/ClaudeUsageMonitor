@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import json
 import platform
-import ssl
 import sys
 import threading
 import urllib.error
@@ -18,7 +17,7 @@ import urllib.parse
 import urllib.request
 from typing import Callable, Dict, Optional, Tuple
 
-from . import __version__
+from . import __version__, tls
 
 FEEDBACK_URL = "https://claudeusagemonitor.com/usage-api/app-feedback.php"
 CONSENT_VERSION = "2026-10-06"      # bump when the privacy notice text changes
@@ -72,14 +71,6 @@ def target_url() -> str:
     return FEEDBACK_URL
 
 
-def _tls_context() -> ssl.SSLContext:
-    ctx = ssl.create_default_context()
-    ctx.minimum_version = ssl.TLSVersion.TLSv1_2
-    ctx.check_hostname = True
-    ctx.verify_mode = ssl.CERT_REQUIRED
-    return ctx
-
-
 def build_payload(name: str, email: str, message: str, rating: int, publish: bool, lang: str) -> Dict:
     return {
         "client": "app",
@@ -109,10 +100,7 @@ def send(payload: Dict, url: str = "") -> Tuple[bool, str]:
         "Cache-Control": "no-cache",
     })
     try:
-        kw = {"timeout": TIMEOUT_S}
-        if url.startswith("https://"):
-            kw["context"] = _tls_context()
-        with urllib.request.urlopen(req, **kw) as resp:
+        with urllib.request.urlopen(req, timeout=TIMEOUT_S, context=tls.context()) as resp:
             data = json.loads(resp.read(20000).decode("utf-8", "replace") or "{}")
     except urllib.error.HTTPError as e:
         try:

@@ -29,8 +29,10 @@ import urllib.parse
 import urllib.request
 from typing import Dict, Optional, Tuple
 
-# Claude Code's public OAuth client (for the user's own account).
+from . import tls
 from .i18n import tr
+
+# Claude Code's public OAuth client (for the user's own account).
 CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
 AUTHORIZE_URL = "https://claude.ai/oauth/authorize"
 # The current Claude Code uses platform.claude.com; the old
@@ -145,7 +147,7 @@ def _post_token(payload: dict) -> Tuple[Optional[dict], str]:
         headers=_client_headers(),
     )
     try:
-        with urllib.request.urlopen(req, timeout=20) as r:
+        with urllib.request.urlopen(req, timeout=20, context=tls.context()) as r:
             return json.loads(r.read().decode("utf-8", "replace")), ""
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "replace")
@@ -228,7 +230,7 @@ def fetch_profile(access_token: str) -> Tuple[Optional[dict], int]:
         }),
     )
     try:
-        with urllib.request.urlopen(req, timeout=12) as r:
+        with urllib.request.urlopen(req, timeout=12, context=tls.context()) as r:
             return json.loads(r.read().decode("utf-8", "replace")), r.status
     except urllib.error.HTTPError as e:
         return None, e.code
@@ -261,7 +263,7 @@ def _get_usage(url: str, access_token: str) -> Tuple[Optional[dict], int, str, O
         }),
     )
     try:
-        with urllib.request.urlopen(req, timeout=12) as r:
+        with urllib.request.urlopen(req, timeout=12, context=tls.context()) as r:
             return json.loads(r.read().decode("utf-8", "replace")), r.status, "", None
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "replace")

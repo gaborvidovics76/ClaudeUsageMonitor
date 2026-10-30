@@ -28,6 +28,7 @@ Write-Host "[2/3] PyInstaller..." -ForegroundColor Cyan
 python -m PyInstaller --noconfirm --clean `
     --onedir --windowed `
     --collect-submodules claude_usage.langs `
+    --hidden-import certifi `
     --name ClaudeUsageMonitor `
     --icon app.ico `
     --manifest packaging\app.manifest `
@@ -57,7 +58,8 @@ Write-Host "[3/3] Csomag ellenorzese..." -ForegroundColor Cyan
 $need = @(
     "dist\ClaudeUsageMonitor\ClaudeUsageMonitor.exe",
     "dist\ClaudeUsageMonitor\_internal\base_library.zip",
-    "dist\ClaudeUsageMonitor\_internal\python312.dll"
+    "dist\ClaudeUsageMonitor\_internal\python312.dll",
+    "dist\ClaudeUsageMonitor\_internal\certifi\cacert.pem"     # the root bundle of claude_usage/tls.py
 )
 $missing = $need | Where-Object { -not (Test-Path $_) }
 $count = (Get-ChildItem dist\ClaudeUsageMonitor\_internal -Recurse -File | Measure-Object).Count
