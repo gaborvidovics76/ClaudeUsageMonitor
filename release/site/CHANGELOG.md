@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.5] - 2026-10-30
+
+- Fixed: on some Windows PCs the sign-in stopped with "certificate has expired". The program now brings its own list of trusted root certificates (Mozilla) alongside the Windows store.
+
+*Magyarul:*
+
+- Javítva: egyes Windows-gépeken a bejelentkezés „certificate has expired” hibával elakadt. A program mostantól a Windows tára mellett saját megbízható gyökértanúsítvány-listát (Mozilla) is hoz.
+
+
 ## [2.9.4] - 2026-10-28
 
 - A small surprise for those who have been using the program for a while – it appears once, a few seconds after the first start.

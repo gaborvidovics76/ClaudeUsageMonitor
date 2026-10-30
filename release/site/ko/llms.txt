@@ -15,7 +15,7 @@ Windows와 Mac 모두 앱 하나로 써요. claude.ai, Claude Desktop, Claude Co
 - **라이선스**: MIT, GitHub에 공개된 오픈 소스
 - **제작자**: Vidovics Gábor, 헝가리 – 독립 개발자, Anthropic과 무관
 
-- 버전: 2.9.4
+- 버전: 2.9.5
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 곧 출시
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ

@@ -1,122 +1,122 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.4",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.4.zip",
-    "sha256":  "a34f5d05650b0441d8891ffd1be5ef2eadc91070c4beb8e23b25f244ab6e2d59",
-    "bytes":  49210283,
+    "version":  "2.9.5",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.5.zip",
+    "sha256":  "33c9cfef3113efec9b2893b1cc3187015f2662a35c7b80d983c951583f5c33ae",
+    "bytes":  49543655,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-28T12:03:49Z",
+    "last_updated":  "2026-10-30T22:15:04Z",
     "notes":  {
                   "en":  [
-                             "A small surprise for those who have been using the program for a while – it appears once, a few seconds after the first start."
+                             "Fixed: on some Windows PCs the sign-in stopped with \"certificate has expired\". The program now brings its own list of trusted root certificates (Mozilla) alongside the Windows store."
                          ],
                   "hu":  [
-                             "Egy kis meglepetés azoknak, akik már egy ideje használják a programot – az első indítás után pár másodperccel, egyszer jelenik meg."
+                             "Javítva: egyes Windows-gépeken a bejelentkezés „certificate has expired” hibával elakadt. A program mostantól a Windows tára mellett saját megbízható gyökértanúsítvány-listát (Mozilla) is hoz."
                          ],
                   "de":  [
-                             "Eine kleine Überraschung für alle, die das Programm schon länger nutzen – sie erscheint einmal, wenige Sekunden nach dem ersten Start."
+                             "Behoben: Auf manchen Windows-PCs blieb die Anmeldung mit „certificate has expired“ hängen. Das Programm bringt jetzt neben dem Windows-Speicher eine eigene Liste vertrauenswürdiger Stammzertifikate (Mozilla) mit."
                          ],
                   "fr":  [
-                             "Une petite surprise pour celles et ceux qui utilisent le programme depuis un moment – elle apparaît une seule fois, quelques secondes après le premier démarrage."
+                             "Corrigé : sur certains PC Windows, la connexion s\u0027arrêtait avec « certificate has expired ». Le programme embarque désormais sa propre liste de certificats racines de confiance (Mozilla) en plus du magasin Windows."
                          ],
                   "es":  [
-                             "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
+                             "Corregido: en algunos PC con Windows el inicio de sesión se detenía con «certificate has expired». El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
                          ],
                   "it":  [
-                             "Una piccola sorpresa per chi usa il programma già da un po\u0027 – compare una sola volta, pochi secondi dopo il primo avvio."
+                             "Risolto: su alcuni PC Windows l\u0027accesso si bloccava con “certificate has expired”. Il programma ora include un proprio elenco di certificati radice attendibili (Mozilla) accanto all\u0027archivio di Windows."
                          ],
                   "pt":  [
-                             "Uma pequena surpresa para quem já usa o programa há algum tempo – ela aparece uma única vez, alguns segundos depois da primeira inicialização."
+                             "Corrigido: em alguns PCs com Windows o login parava com “certificate has expired”. O programa agora traz sua própria lista de certificados raiz confiáveis (Mozilla) junto com o repositório do Windows."
                          ],
                   "pl":  [
-                             "Mała niespodzianka dla osób, które korzystają z programu już od jakiegoś czasu – pojawi się raz, kilka sekund po pierwszym uruchomieniu."
+                             "Naprawiono: na niektórych komputerach z Windows logowanie zatrzymywało się z błędem „certificate has expired”. Program ma teraz własną listę zaufanych certyfikatów głównych (Mozilla) obok magazynu Windows."
                          ],
                   "nl":  [
-                             "Een kleine verrassing voor wie het programma al een tijdje gebruikt – ze verschijnt één keer, enkele seconden na de eerste start."
+                             "Opgelost: op sommige Windows-pc\u0027s stopte het aanmelden met \u0027certificate has expired\u0027. Het programma brengt nu naast het Windows-archief een eigen lijst met vertrouwde basiscertificaten (Mozilla) mee."
                          ],
                   "ru":  [
-                             "Небольшой сюрприз для тех, кто пользуется программой уже давно, – он появится один раз, через несколько секунд после первого запуска."
+                             "Исправлено: на некоторых ПК с Windows вход останавливался с ошибкой «certificate has expired». Теперь программа, помимо хранилища Windows, использует собственный список доверенных корневых сертификатов (Mozilla)."
                          ],
                   "cs":  [
-                             "Malé překvapení pro ty, kdo program používají už nějakou dobu – objeví se jednou, pár sekund po prvním spuštění."
+                             "Opraveno: na některých počítačích s Windows se přihlášení zastavilo s chybou „certificate has expired“. Program nyní vedle úložiště Windows přináší vlastní seznam důvěryhodných kořenových certifikátů (Mozilla)."
                          ],
                   "tr":  [
-                             "Programı bir süredir kullananlar için küçük bir sürpriz – ilk açılıştan birkaç saniye sonra bir kez görünür."
+                             "Düzeltildi: bazı Windows bilgisayarlarda oturum açma “certificate has expired” hatasıyla duruyordu. Program artık Windows deposunun yanında kendi güvenilir kök sertifika listesini (Mozilla) de getiriyor."
                          ],
                   "pt-PT":  [
-                                "Uma pequena surpresa para quem já usa o programa há algum tempo – aparece uma única vez, alguns segundos após o primeiro arranque."
+                                "Corrigido: em alguns PCs com Windows o início de sessão parava com «certificate has expired». O programa passa a incluir a sua própria lista de certificados de raiz fidedignos (Mozilla) além do arquivo do Windows."
                             ],
                   "pt-BR":  [
-                                "Uma pequena surpresa para quem já usa o programa há algum tempo – ela aparece uma única vez, alguns segundos depois da primeira inicialização."
+                                "Corrigido: em alguns PCs com Windows o login parava com “certificate has expired”. O programa agora traz sua própria lista de certificados raiz confiáveis (Mozilla) junto com o repositório do Windows."
                             ],
                   "es-ES":  [
-                                "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
+                                "Corregido: en algunos PC con Windows el inicio de sesión se detenía con «certificate has expired». El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
                             ],
                   "es-419":  [
-                                 "Una pequeña sorpresa para quienes ya llevan un tiempo usando el programa: aparece una sola vez, unos segundos después del primer inicio."
+                                 "Corregido: en algunas PC con Windows el inicio de sesión se detenía con “certificate has expired”. El programa ahora incluye su propia lista de certificados raíz de confianza (Mozilla) junto al almacén de Windows."
                              ],
                   "ja":  [
-                             "しばらく前からお使いの方へ、ちょっとしたサプライズがあります。初回起動の数秒後に一度だけ表示されます。"
+                             "修正：一部の Windows PC でサインインが「certificate has expired」で止まっていました。プログラムは Windows の証明書ストアに加えて、独自の信頼されたルート証明書リスト（Mozilla）を持つようになりました。"
                          ],
                   "ko":  [
-                             "한동안 프로그램을 사용해 오신 분들을 위한 작은 깜짝 선물이 있어요. 첫 실행 몇 초 뒤에 한 번만 나타나요."
+                             "수정: 일부 Windows PC에서 로그인이 “certificate has expired” 오류로 멈췄어요. 이제 프로그램은 Windows 저장소와 함께 자체 신뢰할 수 있는 루트 인증서 목록(Mozilla)을 함께 가져가요."
                          ],
                   "zh-CN":  [
-                                "给已经使用这个程序一段时间的用户准备了一个小惊喜——首次启动几秒后出现，只出现一次。"
+                                "已修复：部分 Windows 电脑上登录会因“certificate has expired”而中断。程序现在在 Windows 证书存储之外，自带一份受信任的根证书列表（Mozilla）。"
                             ],
                   "zh-TW":  [
-                                "給已經使用這個程式一段時間的使用者準備了一個小驚喜——首次啟動幾秒後出現，只會出現一次。"
+                                "已修正：部分 Windows 電腦上登入會因「certificate has expired」而中斷。程式現在在 Windows 憑證存放區之外，自帶一份受信任的根憑證清單（Mozilla）。"
                             ],
                   "id":  [
-                             "Sebuah kejutan kecil bagi Anda yang sudah lama memakai program ini – muncul sekali, beberapa detik setelah pertama kali dijalankan."
+                             "Diperbaiki: di beberapa PC Windows proses masuk berhenti dengan “certificate has expired”. Program kini membawa daftar sertifikat root tepercaya (Mozilla) sendiri di samping penyimpanan Windows."
                          ],
                   "vi":  [
-                             "Một bất ngờ nhỏ dành cho những ai đã dùng chương trình một thời gian – chỉ hiện một lần, vài giây sau lần khởi động đầu tiên."
+                             "Đã sửa: trên một số máy Windows, đăng nhập bị dừng với lỗi “certificate has expired”. Chương trình giờ mang theo danh sách chứng chỉ gốc tin cậy riêng (Mozilla) bên cạnh kho của Windows."
                          ],
                   "ro":  [
-                             "O mică surpriză pentru cei care folosesc programul de ceva vreme – apare o singură dată, la câteva secunde după prima pornire."
+                             "Rezolvat: pe unele PC-uri cu Windows autentificarea se oprea cu „certificate has expired”. Programul aduce acum propria listă de certificate rădăcină de încredere (Mozilla) pe lângă depozitul Windows."
                          ],
                   "el":  [
-                             "Μια μικρή έκπληξη για όσους χρησιμοποιούν το πρόγραμμα εδώ και καιρό – εμφανίζεται μία φορά, λίγα δευτερόλεπτα μετά την πρώτη εκκίνηση."
+                             "Διορθώθηκε: σε ορισμένους υπολογιστές Windows η σύνδεση σταματούσε με «certificate has expired». Το πρόγραμμα περιλαμβάνει πλέον τη δική του λίστα αξιόπιστων πιστοποιητικών ρίζας (Mozilla) δίπλα στον χώρο αποθήκευσης των Windows."
                          ],
                   "bg":  [
-                             "Малка изненада за тези, които използват програмата от известно време – появява се веднъж, няколко секунди след първото стартиране."
+                             "Поправено: на някои компютри с Windows влизането спираше с „certificate has expired“. Програмата вече носи собствен списък с доверени коренови сертификати (Mozilla) наред с хранилището на Windows."
                          ],
                   "sk":  [
-                             "Malé prekvapenie pre tých, ktorí program používajú už nejaký čas – objaví sa raz, pár sekúnd po prvom spustení."
+                             "Opravené: na niektorých počítačoch s Windows sa prihlásenie zastavilo s chybou „certificate has expired“. Program teraz popri úložisku Windows prináša vlastný zoznam dôveryhodných koreňových certifikátov (Mozilla)."
                          ],
                   "hr":  [
-                             "Malo iznenađenje za one koji program koriste već neko vrijeme – pojavljuje se jednom, nekoliko sekundi nakon prvog pokretanja."
+                             "Ispravljeno: na nekim Windows računalima prijava je stala uz „certificate has expired”. Program sada uz Windows spremište donosi vlastiti popis pouzdanih korijenskih certifikata (Mozilla)."
                          ],
                   "sv":  [
-                             "En liten överraskning för dig som har använt programmet ett tag – den visas en gång, några sekunder efter första starten."
+                             "Åtgärdat: på vissa Windows-datorer stannade inloggningen med ”certificate has expired”. Programmet har nu en egen lista över betrodda rotcertifikat (Mozilla) vid sidan av Windows-arkivet."
                          ],
                   "fi":  [
-                             "Pieni yllätys niille, jotka ovat käyttäneet ohjelmaa jo jonkin aikaa – se näkyy kerran, muutama sekunti ensimmäisen käynnistyksen jälkeen."
+                             "Korjattu: joillakin Windows-koneilla kirjautuminen pysähtyi virheeseen ”certificate has expired”. Ohjelma tuo nyt Windowsin varaston rinnalle oman luotettujen juurivarmenteiden luettelon (Mozilla)."
                          ],
                   "da":  [
-                             "En lille overraskelse til dem, der har brugt programmet et stykke tid – den vises én gang, et par sekunder efter første start."
+                             "Rettet: På nogle Windows-pc\u0027er stoppede login med “certificate has expired”. Programmet medbringer nu sin egen liste over betroede rodcertifikater (Mozilla) ved siden af Windows-lageret."
                          ],
                   "lt":  [
-                             "Maža staigmena tiems, kurie programa naudojasi jau kurį laiką – ji pasirodys vieną kartą, praėjus kelioms sekundėms po pirmojo paleidimo."
+                             "Pataisyta: kai kuriuose Windows kompiuteriuose prisijungimas sustodavo su klaida „certificate has expired“. Programa dabar šalia Windows saugyklos turi savo patikimų šakninių sertifikatų sąrašą (Mozilla)."
                          ],
                   "sl":  [
-                             "Majhno presenečenje za tiste, ki program uporabljate že nekaj časa – prikaže se enkrat, nekaj sekund po prvem zagonu."
+                             "Popravljeno: na nekaterih računalnikih z Windows se je prijava ustavila z napako »certificate has expired«. Program ima zdaj poleg shrambe Windows svoj seznam zaupanja vrednih korenskih potrdil (Mozilla)."
                          ],
                   "lv":  [
-                             "Neliels pārsteigums tiem, kas programmu lieto jau kādu laiku – tas parādīsies vienreiz, dažas sekundes pēc pirmās palaišanas."
+                             "Izlabots: dažos Windows datoros pieteikšanās apstājās ar kļūdu “certificate has expired”. Programma tagad līdzās Windows krātuvei nes savu uzticamo saknes sertifikātu sarakstu (Mozilla)."
                          ],
                   "et":  [
-                             "Väike üllatus neile, kes on programmi juba mõnda aega kasutanud – see ilmub korra, mõni sekund pärast esimest käivitamist."
+                             "Parandatud: mõnes Windowsi arvutis jäi sisselogimine seisma veaga „certificate has expired“. Programm toob nüüd Windowsi hoidla kõrvale oma usaldusväärsete juursertifikaatide loendi (Mozilla)."
                          ],
                   "mt":  [
-                             "Sorpriża żgħira għal min ilu juża l-programm – tidher darba biss, ftit sekondi wara l-ewwel tnedija."
+                             "Issolvut: fuq xi PCs bil-Windows il-login kien jieqaf b\u0027“certificate has expired”. Il-programm issa jġib il-lista tiegħu stess ta\u0027 ċertifikati root fdati (Mozilla) flimkien mal-ħażna tal-Windows."
                          ],
                   "ga":  [
-                             "Iontas beag dóibh siúd atá ag úsáid an chláir le tamall – taispeántar é uair amháin, cúpla soicind tar éis an chéad tosú."
+                             "Socraithe: ar roinnt ríomhairí Windows stop an síniú isteach le “certificate has expired”. Tá liosta dá chuid féin de theastais fhréimhe iontaofa (Mozilla) ag an gclár anois in éineacht le stór Windows."
                          ]
               }
 }

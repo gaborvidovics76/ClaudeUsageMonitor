@@ -5,12 +5,20 @@
   <subtitle>Free desktop widget for Claude usage limits (Windows and macOS): new versions and what changed.</subtitle>
   <link rel="self" href="https://claudeusagemonitor.com/releases.xml"/>
   <link rel="alternate" href="https://claudeusagemonitor.com/"/>
-  <updated>2026-10-28T12:03:49Z</updated>
+  <updated>2026-10-30T22:15:04Z</updated>
   <author><name>Vidovics Gábor</name><uri>https://claudeusagemonitor.com/</uri></author>
+  <entry>
+    <id>https://claudeusagemonitor.com/#release-2.9.5</id>
+    <title>Claude Usage Monitor 2.9.5</title>
+    <updated>2026-10-30T22:15:04Z</updated>
+    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
+    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.5.zip" length="49543655"/>
+    <content type="html">&lt;ul&gt;&lt;li&gt;Fixed: on some Windows PCs the sign-in stopped with &amp;quot;certificate has expired&amp;quot;. The program now brings its own list of trusted root certificates (Mozilla) alongside the Windows store.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://claudeusagemonitor.com/#release-2.9.4</id>
     <title>Claude Usage Monitor 2.9.4</title>
-    <updated>2026-10-28T12:03:49Z</updated>
+    <updated>2026-10-28T12:10:40Z</updated>
     <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
     <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.4.zip" length="49210283"/>
     <content type="html">&lt;ul&gt;&lt;li&gt;A small surprise for those who have been using the program for a while – it appears once, a few seconds after the first start.&lt;/li&gt;&lt;/ul&gt;</content>
@@ -158,13 +166,5 @@
     <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
     <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.3.3.zip" length="48434517"/>
     <content type="html">&lt;ul&gt;&lt;li&gt;Clearer menu: &amp;quot;Refresh usage data now&amp;quot; (fetches your numbers) and &amp;quot;Check for program updates…&amp;quot; (looks for a new version) can no longer be mixed up - the program update now sits in its own section above Quit.&lt;/li&gt;&lt;li&gt;The header shows &amp;quot;fetching data…&amp;quot; while a request runs, and the update window is titled &amp;quot;Program update&amp;quot;.&lt;/li&gt;&lt;li&gt;The installer also cleans up the leftovers of an interrupted self-update.&lt;/li&gt;&lt;li&gt;Diagnostics: the log notes once per run which fields the server offers (names only, never values).&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>https://claudeusagemonitor.com/#release-2.3.2</id>
-    <title>Claude Usage Monitor 2.3.2</title>
-    <updated>2026-09-18T12:53:32Z</updated>
-    <link rel="alternate" href="https://claudeusagemonitor.com/#whatsnew"/>
-    <link rel="enclosure" type="application/zip" href="https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.3.2.zip" length="48435311"/>
-    <content type="html">&lt;ul&gt;&lt;li&gt;Fixed: the self-update downloaded and verified the new version but never swapped it in (the helper process did not start). Found and fixed by updating a real installation end to end.&lt;/li&gt;&lt;li&gt;If you have 2.3.0 or 2.3.1: install this version once with INSTALL.bat - from here on updates install themselves.&lt;/li&gt;&lt;li&gt;The app now confirms that the update helper really started, and reports it if not.&lt;/li&gt;&lt;li&gt;New: --manifest-url=&amp;lt;https url&amp;gt; for the command-line update switches.&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>

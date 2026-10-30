@@ -15,7 +15,7 @@ Jedna aplikacija i za Windows i za Mac. Obuhvaća sve što se računa u vaš pak
 - **Licenca**: MIT, otvoreni kôd na GitHubu
 - **Autor**: Gábor Vidovics, Mađarska – neovisan, nije povezan s tvrtkom Anthropic
 
-- Verzija: 2.9.4
+- Verzija: 2.9.5
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Uskoro dostupno
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
