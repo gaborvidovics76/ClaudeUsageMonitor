@@ -1450,6 +1450,11 @@ from .i18n_thanks import STRINGS_THANKS as _STRINGS_THANKS  # noqa: E402
 
 STRINGS.update(_STRINGS_THANKS)
 
+# click-through mode: the way back to the menu (notification, Settings hint, second start)
+from .i18n_tray import STRINGS_TRAY as _STRINGS_TRAY  # noqa: E402
+
+STRINGS.update(_STRINGS_TRAY)
+
 # macOS wording ("Start at login" instead of "Start with Windows", menu bar instead of tray)
 if sys.platform == "darwin":
     from .i18n_mac import STRINGS_MAC as _STRINGS_MAC  # noqa: E402

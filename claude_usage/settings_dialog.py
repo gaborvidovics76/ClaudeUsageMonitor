@@ -188,6 +188,10 @@ class SettingsDialog(QDialog):
         form.addRow("", self._check("show_in_taskbar", tr("set.taskbar")))
         ct = self._check("click_through", tr("set.click_through"))
         form.addRow("", ct)
+        ct_hint = QLabel(tr("notify.click_through"))
+        ct_hint.setObjectName("hint")
+        ct_hint.setWordWrap(True)
+        form.addRow("", ct_hint)
 
         hint = QLabel(tr("set.tip"))
         hint.setObjectName("hint")
