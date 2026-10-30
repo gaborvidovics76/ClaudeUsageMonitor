@@ -35,7 +35,7 @@ import zipfile
 from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Optional, Tuple
 
-from . import __version__
+from . import __version__, tls
 
 IS_MAC = sys.platform == "darwin"
 # every platform has its own manifest, so the Windows and the macOS releases never touch each other
@@ -113,7 +113,9 @@ def _open(url: str, timeout: float):
         "Accept": "application/json, application/zip, */*",
         "Cache-Control": "no-cache",
     })
-    return urllib.request.urlopen(req, timeout=timeout)
+    if url.startswith("https://"):
+        return urllib.request.urlopen(req, timeout=timeout, context=tls.context())
+    return urllib.request.urlopen(req, timeout=timeout)         # http://127.0.0.1 test target
 
 
 def fetch_manifest(url: str = "", timeout: float = 12.0) -> UpdateInfo:
