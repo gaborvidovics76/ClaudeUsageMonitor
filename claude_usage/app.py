@@ -12,7 +12,7 @@ from PySide6.QtCore import QPoint, QSharedMemory, QTimer, Qt
 from PySide6.QtGui import QAction, QActionGroup
 from PySide6.QtWidgets import QApplication, QMenu, QMessageBox, QSystemTrayIcon
 
-from . import secretstore, store_thanks, tls, winutil
+from . import secretstore, store_thanks, tls, wakeup, winutil
 from .apisource import ApiReader
 from . import __version__
 from .backups import BackupChecker
@@ -157,6 +157,13 @@ class MonitorApp:
         self.pulse.timeout.connect(self._pulse)
         self._busy_until = 0.0          # minimum visible duration of the indicator
         self._was_busy = False
+        # a second start of the program asks for the Settings window (the way out of click-through mode)
+        self.wake = QTimer()
+        self.wake.setInterval(1000)
+        self.wake.timeout.connect(self._poll_wakeup)
+        self.wake.start()
+        wakeup.consume()                # a stale marker never opens Settings at start
+        self._click_through_was = bool(self.settings["click_through"])
         self.apply_settings()
         self.refresh()
 
@@ -177,6 +184,10 @@ class MonitorApp:
     def apply_settings(self) -> None:
         s = self.settings
         self.local_reader.path = s.resolved_data_path()
+        if bool(s["click_through"]) and not self._click_through_was:
+            # the panel stops taking the mouse from here on: say where the menu is before it is missed
+            self.notify(APP_TITLE, tr("notify.click_through"))
+        self._click_through_was = bool(s["click_through"])
 
         # source selection: "api" only if there is a valid sign-in
         use_api = s["source"] == "api" and self.api_reader.has_tokens()
@@ -758,6 +769,11 @@ class MonitorApp:
         if self.settings["visible"]:
             self.widget.raise_()
 
+    def _poll_wakeup(self) -> None:
+        if wakeup.consume():
+            log("wake-up: a second start asked for the Settings window")
+            self.show_settings()
+
     def show_settings(self) -> None:
         if self.dialog is not None and self.dialog.isVisible():
             self.dialog.raise_()
@@ -893,8 +909,10 @@ def run() -> int:
             # orphan, while a segment that a live instance holds survives this.
             lock.detach()
         if lock.attach():
-            log("another instance is already running, exiting")
-            QMessageBox.information(None, APP_TITLE, tr("err.already_running"))
+            # the running instance opens its Settings - the way back from click-through mode
+            asked = wakeup.request()
+            log(f"another instance is already running, exiting (settings requested: {asked})")
+            QMessageBox.information(None, APP_TITLE, tr("err.already_running_settings" if asked else "err.already_running"))
             return 0
         lock.create(1)
         app._lock = lock
