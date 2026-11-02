@@ -29257,6 +29257,215 @@
         }
       }
     },
+    "notify.click_through_mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "bg": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пропускането на кликове е включено: панелът не реагира на мишката. За менюто щракни върху иконата в лентата с менюта – или отвори приложението отново (Launchpad или Dock): това отваря настройките му."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Průchozí klikání je zapnuté: panel nereaguje na myš. Menu otevřete kliknutím na ikonu v řádku nabídek – nebo aplikaci znovu otevřete (Launchpad nebo Dock): tím se otevře její Nastavení."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klik-igennem er slået til: panelet ignorerer musen. Menuen får du ved at klikke på ikonet i menulinjen – eller åbn appen igen (Launchpad eller Dock): det åbner dens Indstillinger."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durchklicken ist an: Das Panel ignoriert die Maus. Für das Menü auf das Symbol in der Menüleiste klicken – oder die App erneut öffnen (Launchpad oder Dock): Das öffnet ihre Einstellungen."
+          }
+        },
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Η διαπερατότητα κλικ είναι ενεργή: ο πίνακας αγνοεί το ποντίκι. Για το μενού, κάντε κλικ στο εικονίδιο της γραμμής μενού – ή ανοίξτε ξανά την εφαρμογή (Launchpad ή Dock): έτσι ανοίγουν οι Ρυθμίσεις της."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click-through is on: the panel ignores the mouse. For the menu, click the icon in the menu bar – or open the app again (Launchpad or Dock): that opens its Settings."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El clic a través está activado: el panel ignora el ratón. Para el menú, haz clic en el icono de la barra de menús, o vuelve a abrir la app (Launchpad o Dock): eso abre sus Ajustes."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El clic a través está activado: el panel ignora el mouse. Para el menú, haz clic en el ícono de la barra de menús, o vuelve a abrir la app (Launchpad o Dock): eso abre su Configuración."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Läbiklõps on sees: paneel ei reageeri hiirele. Menüü avamiseks klõpsa menüüriba ikoonil – või ava rakendus uuesti (Launchpad või Dock): see avab tema seaded."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klikkausten läpäisy on päällä: paneeli ei reagoi hiireen. Valikon saat napsauttamalla valikkorivin kuvaketta – tai avaa sovellus uudelleen (Launchpad tai Dock): se avaa sen asetukset."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le clic traversant est activé : le panneau ignore la souris. Pour le menu, cliquez sur l'icône de la barre des menus – ou rouvrez l'app (Launchpad ou Dock) : cela ouvre ses Réglages."
+          }
+        },
+        "ga": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tá cliceáil tríd ar siúl: déanann an painéal neamhaird den luch. Don roghchlár, cliceáil ar an deilbhín sa bharra roghchláir – nó oscail an aip arís (Launchpad nó Dock): osclaíonn sé sin a Socruithe."
+          }
+        },
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prolaz klikova je uključen: panel ne reagira na miš. Za izbornik kliknite ikonu na traci izbornika – ili ponovno otvorite aplikaciju (Launchpad ili Dock): to otvara njezine Postavke."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A kattintás-átengedés be van kapcsolva: a panel nem reagál az egérre. A menühöz kattints a menüsor ikonjára – vagy nyisd meg újra az appot (Launchpad vagy Dock): az megnyitja a Beállításait."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klik tembus aktif: panel mengabaikan mouse. Untuk menu, klik ikon di bar menu – atau buka lagi aplikasinya (Launchpad atau Dock): itu membuka Pengaturannya."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il clic passante è attivo: il pannello ignora il mouse. Per il menu, fai clic sull'icona nella barra dei menu – oppure riapri l'app (Launchpad o Dock): si apriranno le sue Impostazioni."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリック透過がオンです。パネルはマウス操作に反応しません。メニューはメニューバーのアイコンをクリックするか、アプリをもう一度開く（Launchpad または Dock）と設定が開きます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "클릭 통과가 켜져 있어요. 패널은 마우스를 무시해요. 메뉴는 메뉴 막대의 아이콘을 클릭하거나, 앱을 다시 열면(Launchpad 또는 Dock) 설정이 열려요."
+          }
+        },
+        "lt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Įjungtas paspaudimų praleidimas: skydelis nereaguoja į pelę. Meniu atidarykite spustelėję meniu juostos piktogramą – arba atidarykite programą iš naujo („Launchpad“ arba „Dock“): tai atidarys jos Nustatymus."
+          }
+        },
+        "lv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klikšķu caurlaide ir ieslēgta: panelis nereaģē uz peli. Izvēlnei noklikšķiniet uz ikonas izvēļņu joslā – vai atveriet lietotni vēlreiz (Launchpad vai Dock): tas atver tās Iestatījumus."
+          }
+        },
+        "mt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il-klikk li jgħaddi huwa attiv: il-pannell jinjora l-maws. Għall-menu, ikklikkja l-ikona fil-menu bar – jew erġa' iftaħ l-app (Launchpad jew Dock): dan jiftaħ is-Settings tagħha."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klik-door is aan: het paneel negeert de muis. Voor het menu: klik op het symbool in de menubalk – of open de app opnieuw (Launchpad of Dock): dat opent de Instellingen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przepuszczanie kliknięć jest włączone: panel ignoruje mysz. Menu otworzysz, klikając ikonę na pasku menu – albo otwórz aplikację ponownie (Launchpad lub Dock): to otworzy jej Ustawienia."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O clique através está ativado: o painel ignora o mouse. Para o menu, clique no ícone da barra de menus – ou abra o app de novo (Launchpad ou Dock): isso abre os Ajustes dele."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O clique transparente está ativo: o painel ignora o rato. Para o menu, clique no ícone da barra de menus – ou volte a abrir a app (Launchpad ou Dock): isso abre as suas Definições."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clicul transparent este activat: panoul ignoră mouse-ul. Pentru meniu, dă clic pe pictograma din bara de meniu – sau deschide aplicația din nou (Launchpad sau Dock): asta îi deschide Setările."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пропуск кликов включён: панель не реагирует на мышь. Для меню нажмите на значок в строке меню – или откройте приложение ещё раз (Launchpad или Dock): это откроет его Настройки."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Priechodné klikanie je zapnuté: panel nereaguje na myš. Ponuku otvoríte kliknutím na ikonu v lište ponúk – alebo aplikáciu znova otvorte (Launchpad alebo Dock): tým sa otvoria jej Nastavenia."
+          }
+        },
+        "sl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prepuščanje klikov je vklopljeno: plošča ne reagira na miško. Za meni kliknite ikono v menijski vrstici – ali program znova odprite (Launchpad ali Dock): to odpre njegove Nastavitve."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klick igenom är på: panelen ignorerar musen. För menyn: klicka på symbolen i menyraden – eller öppna appen igen (Launchpad eller Dock): det öppnar dess Inställningar."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tıklama geçişi açık: panel fareyi yok sayar. Menü için menü çubuğundaki simgeye tıklayın – ya da uygulamayı yeniden açın (Launchpad veya Dock): bu, Ayarlarını açar."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chế độ xuyên nhấp đang bật: bảng bỏ qua chuột. Để mở menu, hãy nhấp vào biểu tượng trên thanh menu – hoặc mở lại ứng dụng (Launchpad hoặc Dock): thao tác này mở Cài đặt của nó."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击穿透已开启：面板不响应鼠标。要打开菜单，请点击菜单栏中的图标——或再次打开 App（启动台或程序坞），这会打开它的设置。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "點選穿透已開啟：面板不回應滑鼠。要開啟選單，請按一下選單列中的圖示——或再次開啟 App（啟動台或 Dock），這會開啟它的設定。"
+          }
+        }
+      }
+    },
     "notify.first_run": {
       "extractionState": "manual",
       "localizations": {
