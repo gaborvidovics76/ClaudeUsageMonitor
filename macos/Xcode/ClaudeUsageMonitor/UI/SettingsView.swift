@@ -134,6 +134,7 @@ private struct AppearanceTab: View {
                 Check(label: tr("set.snap"), on: $s.snapEdges)
                 Check(label: tr("set.dock"), on: $s.showInDock)
                 Check(label: tr("set.click_through"), on: $s.clickThrough)
+                HStack { Spacer().frame(width: 150); HintText(tr("notify.click_through_mac")) }
                 HStack { Spacer().frame(width: 150); HintText(tr("set.tip_mac")) }
             }.padding(14)
         }

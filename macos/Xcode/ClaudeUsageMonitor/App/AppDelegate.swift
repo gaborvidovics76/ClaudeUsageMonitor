@@ -46,8 +46,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        // the app was opened again (Launchpad, Finder): bring the panel back
-        controller?.settings.visible = true
+        // the app was opened again (Launchpad, Dock, Finder): the panel comes back; in click-through mode Settings opens
+        controller?.reopened()
         return false
     }
 

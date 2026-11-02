@@ -30,6 +30,7 @@ final class MonitorController {
     private var localWindow: Double? = nil
     private var cancellables = Set<AnyCancellable>()
     private var applyScheduled = false
+    private var clickThroughWas = false        // to notice click-through being switched on
 
     private var settingsWindow: WindowHost<SettingsView>?
     private var historyWindow: WindowHost<HistoryView>?
@@ -69,6 +70,7 @@ final class MonitorController {
         // every settings change (menu, window, scroll wheel) is applied once, on the next run-loop turn
         settings.objectWillChange.sink { [weak self] _ in self?.scheduleApply() }.store(in: &cancellables)
 
+        clickThroughWas = settings.clickThrough    // no notification for a mode that was already on at start
         applySettings()
         refresh()
 
@@ -101,6 +103,11 @@ final class MonitorController {
 
     func applySettings() {
         let s = settings
+        if s.clickThrough && !clickThroughWas {
+            // the panel stops taking the mouse from here on: say where the menu is before it is missed
+            Notifier.shared.notify(AppInfo.name, tr("notify.click_through_mac"))
+        }
+        clickThroughWas = s.clickThrough
         switch s.source {
         case "demo":
             reader = demo
@@ -501,6 +508,16 @@ final class MonitorController {
 
     func togglePanel() {
         settings.visible.toggle()
+    }
+
+    /// The app was opened again (Launchpad, Dock, Finder) while it is running: bring the panel back - and when
+    /// the panel ignores the mouse (click-through), open Settings, the way back to the menu.
+    func reopened() {
+        settings.visible = true
+        if settings.clickThrough {
+            Log.startup("reopened while click-through is on - opening Settings")
+            showSettings()
+        }
     }
 
     func showSettings() {
