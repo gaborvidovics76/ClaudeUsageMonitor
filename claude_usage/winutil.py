@@ -70,6 +70,35 @@ TASK_XML = """<?xml version="1.0" encoding="UTF-16"?>
 """
 
 
+def assert_topmost(hwnd: int, on_top: bool) -> bool:
+    """Puts the window's WS_EX_TOPMOST style back in line with the setting; True when it had to change it.
+
+    Windows drops the topmost flag of a window now and then ("Show desktop", a full-screen app, an Explorer
+    restart, some games) - Qt's WindowStaysOnTopHint is set once at creation and never re-checked, so the panel
+    quietly sank behind the browser until the next restart.
+    """
+    if not sys.platform.startswith("win") or not hwnd:
+        return False
+    try:
+        import ctypes
+
+        u = ctypes.windll.user32
+        u.GetWindowLongW.argtypes = [ctypes.c_void_p, ctypes.c_int]
+        u.GetWindowLongW.restype = ctypes.c_long
+        u.SetWindowPos.argtypes = [ctypes.c_void_p, ctypes.c_ssize_t, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_uint]
+        u.SetWindowPos.restype = ctypes.c_bool
+        gwl_exstyle, ws_ex_topmost = -20, 0x00000008
+        hwnd_topmost, hwnd_notopmost = -1, -2
+        swp_nosize, swp_nomove, swp_noactivate = 0x0001, 0x0002, 0x0010
+        is_top = bool(u.GetWindowLongW(hwnd, gwl_exstyle) & ws_ex_topmost)
+        if is_top == on_top:
+            return False
+        u.SetWindowPos(hwnd, hwnd_topmost if on_top else hwnd_notopmost, 0, 0, 0, 0, swp_nosize | swp_nomove | swp_noactivate)
+        return True
+    except Exception:                                                           # noqa: BLE001
+        return False
+
+
 def launch_command() -> str:
     if getattr(sys, "frozen", False):
         return f'"{sys.executable}"'

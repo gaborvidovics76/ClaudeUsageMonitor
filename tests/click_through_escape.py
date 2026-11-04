@@ -4,8 +4,9 @@
 
 1) switching click-through on (menu or Settings - both go through apply_settings) raises the notification once,
    and switching it on again later raises it again; switching it off never does;
-2) a second start leaves the wake-up marker and the running instance consumes it within its 1 s poll and opens
-   Settings; a stale marker from before the start is dropped without opening anything;
+2) a second start leaves the wake-up marker and the running instance consumes it within its 1 s poll: the panel
+   comes to the front, and Settings opens only while click-through is on; a stale marker from before the start is
+   dropped without doing anything;
 3) the texts exist in all 34 languages and the Settings page carries the hint under the checkbox.
 Settings are never written: a throw-away settings object is used, and the marker goes to a temporary folder.
 """
@@ -51,7 +52,7 @@ def fail(msg: str) -> None:
 
 
 # --- 3) texts and the Settings hint
-for key in ("notify.click_through", "err.already_running_settings"):
+for key in ("notify.click_through",):
     missing = [c for c in i18n.LANG_NAMES if not i18n.STRINGS.get(key, {}).get(c)]
     if missing:
         fail(f"{key} missing in: {missing}")
@@ -92,13 +93,31 @@ if shown != texts * 2:
     fail(f"notification count/text wrong: {shown}")
 print("1) click-through on -> one notification; repeated apply -> none; off -> none; on again -> one: ok")
 
+mon.widget.bring_to_front()       # the real thing once (offscreen): must not raise, panel visible afterwards
+if not mon.widget.isVisible() or not isinstance(mon.widget.keep_on_top(), bool):
+    fail("bring_to_front left the panel hidden, or keep_on_top did not answer with a bool")
+front: list = []
+mon.widget.bring_to_front = lambda: front.append(1)
+mon.widget.keep_on_top = lambda: False
+# click-through off: the panel comes to the front, Settings stays closed
+mon.settings["click_through"] = False
+mon.apply_settings()
+mon.settings["visible"] = False      # hidden from the menu - a second start must show it again
 if not wakeup.request():
     fail("wakeup.request() could not write the marker")
 mon._poll_wakeup()
 mon._poll_wakeup()                   # consumed once
-if opened != [1] or os.path.exists(os.path.join(TMP, wakeup.MARKER)):
-    fail(f"wake-up: opened={opened}, marker left={os.path.exists(os.path.join(TMP, wakeup.MARKER))}")
+if front != [1] or opened or not mon.settings["visible"] or os.path.exists(os.path.join(TMP, wakeup.MARKER)):
+    fail(f"wake-up (normal): front={front}, opened={opened}, visible={mon.settings['visible']}, "
+         f"marker left={os.path.exists(os.path.join(TMP, wakeup.MARKER))}")
+# click-through on: the panel comes to the front AND Settings opens (the way back to the menu)
+mon.settings["click_through"] = True
+mon.apply_settings()
+wakeup.request()
+mon._poll_wakeup()
+if front != [1, 1] or opened != [1]:
+    fail(f"wake-up (click-through): front={front}, opened={opened}")
 if mon.wake.interval() > 1500 or not mon.wake.isActive():
     fail(f"the wake-up poll must run about every second (interval {mon.wake.interval()}, active {mon.wake.isActive()})")
-print("2) second start -> marker -> the running instance opens Settings once, marker removed, 1 s poll active: ok")
+print("2) second start -> panel to the front; Settings only in click-through mode; marker removed; 1 s poll active: ok")
 print("ALL CLICK-THROUGH ESCAPE TESTS OK")

@@ -22,6 +22,7 @@ from PySide6.QtGui import (
 from PySide6.QtWidgets import QToolTip, QWidget
 
 from . import backups as bk
+from . import winutil
 from .backup_dialog import LAMP, level_of, short_age, tooltip_text
 from .datasource import Gauge, Metrics, detail_label, fmt_age, fmt_delta, product_label
 from .i18n import tr, ui_font_families
@@ -167,6 +168,24 @@ class UsageWidget(QWidget):
             return
         area = scr.availableGeometry()
         self.move(area.right() - self.width() - 8, area.top() + 24)
+
+    def bring_to_front(self) -> None:
+        """Back on screen and in front: un-minimised, on a connected monitor, raised - and on Windows the
+        topmost flag re-asserted. This is what a second start of the program and the tray click do."""
+        if self.isMinimized():
+            self.showNormal()
+        if not self._on_any_screen(self.x(), self.y()):
+            self._default_position()
+        self.show()
+        self.raise_()
+        self.activateWindow()
+        self.keep_on_top()
+
+    def keep_on_top(self) -> bool:
+        """Re-applies 'always on top' when Windows has dropped it; True when it had to (polled once a second)."""
+        if not sys.platform.startswith("win") or not self.isVisible() or self.isMinimized():
+            return False
+        return winutil.assert_topmost(int(self.winId()), bool(self.s["always_on_top"]))
 
     def set_metrics(self, metrics: Metrics) -> None:
         self.metrics = metrics

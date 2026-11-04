@@ -1,0 +1,110 @@
+{
+  "en": [
+    "Starting the program while it is already running now brings the panel to the front – no more “already running” box. “Always on top” is put back automatically when Windows drops it (after Show desktop, a full-screen app or an Explorer restart)."
+  ],
+  "hu": [
+    "Ha a már futó programot újra elindítod, a panel az előtérbe ugrik – nincs többé „már fut” ablak. A „Mindig legfelül” beállítást a program magától visszaállítja, ha a Windows elveszíti (asztal megjelenítése, teljes képernyős app, Intéző-újraindítás után)."
+  ],
+  "de": [
+    "Ein erneuter Start des bereits laufenden Programms holt das Panel jetzt nach vorn – kein „läuft bereits“-Fenster mehr. „Immer im Vordergrund“ wird automatisch wiederhergestellt, wenn Windows es verliert (nach „Desktop anzeigen“, einer Vollbild-App oder einem Explorer-Neustart)."
+  ],
+  "fr": [
+    "Relancer le programme déjà ouvert ramène désormais le panneau au premier plan – plus de message « déjà lancé ». « Toujours au premier plan » est rétabli automatiquement quand Windows le perd (après « Afficher le bureau », une application plein écran ou un redémarrage de l'Explorateur)."
+  ],
+  "es": [
+    "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de «ya está en ejecución». «Siempre encima» se restablece solo cuando Windows lo pierde (tras «Mostrar escritorio», una app a pantalla completa o un reinicio del Explorador)."
+  ],
+  "it": [
+    "Avviare il programma quando è già in esecuzione ora porta il pannello in primo piano: niente più finestra «già in esecuzione». «Sempre in primo piano» viene ripristinato da solo quando Windows lo perde (dopo «Mostra desktop», un'app a schermo intero o un riavvio di Esplora file)."
+  ],
+  "pt": [
+    "Iniciar o programa quando ele já está rodando agora traz o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é restaurado sozinho quando o Windows o perde (depois de “Mostrar área de trabalho”, um app em tela cheia ou uma reinicialização do Explorer)."
+  ],
+  "pl": [
+    "Uruchomienie programu, gdy już działa, wysuwa teraz panel na wierzch – koniec z komunikatem „już działa”. „Zawsze na wierzchu” jest przywracane automatycznie, gdy Windows je zgubi (po „Pokaż pulpit”, aplikacji pełnoekranowej lub restarcie Eksploratora)."
+  ],
+  "nl": [
+    "Het programma opnieuw starten terwijl het al draait brengt het paneel nu naar voren – geen „draait al”-venster meer. „Altijd bovenaan” wordt automatisch hersteld als Windows het laat vallen (na „Bureaublad weergeven”, een app op volledig scherm of een herstart van Verkenner)."
+  ],
+  "ru": [
+    "Повторный запуск уже работающей программы теперь выводит панель на передний план – без окна «уже запущено». «Поверх всех окон» восстанавливается автоматически, когда Windows сбрасывает его (после «Свернуть все окна», полноэкранного приложения или перезапуска Проводника)."
+  ],
+  "cs": [
+    "Spuštění programu, který už běží, teď vysune panel do popředí – žádné okno „už běží“. „Vždy navrchu“ se automaticky obnoví, když ho Windows ztratí (po „Zobrazit plochu“, celoobrazovkové aplikaci nebo restartu Průzkumníka)."
+  ],
+  "tr": [
+    "Zaten çalışan programı yeniden başlatmak artık paneli öne getiriyor – „zaten çalışıyor” kutusu yok. „Her zaman üstte” Windows onu düşürdüğünde kendiliğinden geri geliyor (Masaüstünü göster, tam ekran bir uygulama veya Gezgin yeniden başlatması sonrasında)."
+  ],
+  "pt-PT": [
+    "Iniciar o programa quando já está a correr traz agora o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é reposto automaticamente quando o Windows o perde (depois de “Mostrar ambiente de trabalho”, uma app em ecrã inteiro ou um reinício do Explorador)."
+  ],
+  "pt-BR": [
+    "Iniciar o programa quando ele já está rodando agora traz o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é restaurado sozinho quando o Windows o perde (depois de “Mostrar área de trabalho”, um app em tela cheia ou uma reinicialização do Explorer)."
+  ],
+  "es-ES": [
+    "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de «ya está en ejecución». «Siempre encima» se restablece solo cuando Windows lo pierde (tras «Mostrar escritorio», una app a pantalla completa o un reinicio del Explorador)."
+  ],
+  "es-419": [
+    "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de “ya está en ejecución”. “Siempre encima” se restablece solo cuando Windows lo pierde (tras “Mostrar escritorio”, una app a pantalla completa o un reinicio del Explorador)."
+  ],
+  "ja": [
+    "起動中のプログラムをもう一度起動すると、パネルが前面に出るようになりました。「すでに実行中です」の表示はなくなります。「常に手前に表示」は、Windowsが解除してしまったとき（デスクトップの表示、全画面アプリ、エクスプローラーの再起動後）に自動で戻ります。"
+  ],
+  "ko": [
+    "이미 실행 중인 프로그램을 다시 실행하면 이제 패널이 앞으로 나와요. “이미 실행 중” 창은 더 이상 뜨지 않아요. Windows가 “항상 위에”를 해제해 버리면(바탕 화면 보기, 전체 화면 앱, 탐색기 재시작 후) 자동으로 되돌려요."
+  ],
+  "zh-CN": [
+    "程序已在运行时再次启动，现在会把面板带到前台——不再弹出“已在运行”提示。当 Windows 丢掉“始终置顶”（显示桌面、全屏应用或资源管理器重启之后），程序会自动恢复它。"
+  ],
+  "zh-TW": [
+    "程式已在執行時再次啟動，現在會把面板帶到最前面——不再跳出「已在執行」視窗。當 Windows 取消「永遠在最上層」（顯示桌面、全螢幕 App 或檔案總管重新啟動之後），程式會自動恢復。"
+  ],
+  "id": [
+    "Menjalankan program yang sudah berjalan kini membawa panel ke depan – tidak ada lagi kotak “sudah berjalan”. “Selalu di atas” dipulihkan otomatis saat Windows melepaskannya (setelah Tampilkan desktop, aplikasi layar penuh, atau Explorer dimulai ulang)."
+  ],
+  "vi": [
+    "Khởi động lại chương trình đang chạy giờ sẽ đưa bảng lên trước – không còn hộp “đã đang chạy”. “Luôn ở trên cùng” được khôi phục tự động khi Windows bỏ nó (sau Hiện màn hình nền, ứng dụng toàn màn hình hoặc khởi động lại Explorer)."
+  ],
+  "ro": [
+    "Pornirea programului când rulează deja aduce acum panoul în față – gata cu fereastra „rulează deja”. „Întotdeauna deasupra” este restabilit automat când Windows îl pierde (după „Afișare desktop”, o aplicație pe tot ecranul sau o repornire a Explorerului)."
+  ],
+  "el": [
+    "Η εκκίνηση του προγράμματος ενώ ήδη τρέχει φέρνει τώρα τον πίνακα μπροστά – τέλος το μήνυμα «εκτελείται ήδη». Το «Πάντα σε πρώτο πλάνο» επανέρχεται αυτόματα όταν τα Windows το χάνουν (μετά από «Εμφάνιση επιφάνειας εργασίας», εφαρμογή πλήρους οθόνης ή επανεκκίνηση της Εξερεύνησης)."
+  ],
+  "bg": [
+    "Стартирането на програмата, докато вече работи, сега извежда панела отпред – без прозорец „вече работи“. „Винаги отгоре“ се възстановява автоматично, когато Windows го изпусне (след „Показване на работния плот“, приложение на цял екран или рестарт на Explorer)."
+  ],
+  "sk": [
+    "Spustenie programu, ktorý už beží, teraz vysunie panel do popredia – žiadne okno „už beží“. „Vždy navrchu“ sa automaticky obnoví, keď ho Windows stratí (po „Zobraziť pracovnú plochu“, aplikácii na celú obrazovku alebo reštarte Prieskumníka)."
+  ],
+  "hr": [
+    "Pokretanje programa dok već radi sada dovodi panel u prvi plan – nema više prozora „već radi”. „Uvijek na vrhu” automatski se vraća kad ga Windows izgubi (nakon „Prikaži radnu površinu”, aplikacije preko cijelog zaslona ili ponovnog pokretanja Explorera)."
+  ],
+  "sv": [
+    "Att starta programmet när det redan körs tar nu fram panelen – ingen ”körs redan”-ruta längre. ”Alltid överst” återställs automatiskt när Windows tappar det (efter ”Visa skrivbordet”, en helskärmsapp eller en omstart av Utforskaren)."
+  ],
+  "fi": [
+    "Jo käynnissä olevan ohjelman käynnistäminen uudelleen tuo nyt paneelin eteen – ei enää ”on jo käynnissä” -ikkunaa. ”Aina päällimmäisenä” palautetaan automaattisesti, kun Windows pudottaa sen (Näytä työpöytä -toiminnon, koko näytön sovelluksen tai Resurssienhallinnan uudelleenkäynnistyksen jälkeen)."
+  ],
+  "da": [
+    "At starte programmet, mens det allerede kører, bringer nu panelet frem – ingen ”kører allerede”-boks mere. ”Altid øverst” genoprettes automatisk, når Windows mister det (efter ”Vis skrivebord”, en fuldskærmsapp eller en genstart af Stifinder)."
+  ],
+  "lt": [
+    "Paleidus jau veikiančią programą dar kartą, skydelis dabar iškeliamas į priekį – nebėra lango „jau veikia“. „Visada viršuje“ automatiškai atkuriama, kai „Windows“ ją praranda (po „Rodyti darbalaukį“, viso ekrano programos ar „Explorer“ paleidimo iš naujo)."
+  ],
+  "sl": [
+    "Zagon programa, ko ta že teče, zdaj prinese ploščo v ospredje – nič več okna »že teče«. »Vedno na vrhu« se samodejno obnovi, ko ga Windows izgubi (po »Pokaži namizje«, aplikaciji na celotnem zaslonu ali ponovnem zagonu Raziskovalca)."
+  ],
+  "lv": [
+    "Jau darbojošās programmas atkārtota palaišana tagad izvirza paneli priekšplānā – vairs nav loga „jau darbojas”. „Vienmēr virspusē” tiek automātiski atjaunots, kad Windows to zaudē (pēc „Rādīt darbvirsmu”, pilnekrāna lietotnes vai Explorer restarta)."
+  ],
+  "et": [
+    "Juba töötava programmi uuesti käivitamine toob nüüd paneeli esile – enam pole akent „juba töötab“. „Alati pealmine“ taastatakse automaatselt, kui Windows selle kaotab (pärast „Kuva töölaud“, täisekraanirakendust või Exploreri taaskäivitust)."
+  ],
+  "mt": [
+    "Jekk tibda l-programm meta diġà qed jaħdem, issa l-pannell jiġi quddiem – m'hemmx aktar il-kaxxa “diġà qed jaħdem”. “Dejjem fuq” jerġa' jiġi lura waħdu meta Windows jitilfu (wara “Uri d-desktop”, app fuq l-iskrin kollu jew restart tal-Explorer)."
+  ],
+  "ga": [
+    "Má thosaítear an clár agus é ag rith cheana, tugtar an painéal chun tosaigh anois – níl bosca “ag rith cheana” ann a thuilleadh. Cuirtear “I gcónaí ar barr” ar ais go huathoibríoch nuair a chailleann Windows é (tar éis “Taispeáin an deasc”, aip lánscáileáin nó atosú an Taiscéalaí)."
+  ]
+}
