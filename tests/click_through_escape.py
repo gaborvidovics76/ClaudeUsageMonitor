@@ -93,6 +93,9 @@ if shown != texts * 2:
     fail(f"notification count/text wrong: {shown}")
 print("1) click-through on -> one notification; repeated apply -> none; off -> none; on again -> one: ok")
 
+mon.widget.bring_to_front()       # the real thing once (offscreen): must not raise, panel visible afterwards
+if not mon.widget.isVisible() or not isinstance(mon.widget.keep_on_top(), bool):
+    fail("bring_to_front left the panel hidden, or keep_on_top did not answer with a bool")
 front: list = []
 mon.widget.bring_to_front = lambda: front.append(1)
 mon.widget.keep_on_top = lambda: False

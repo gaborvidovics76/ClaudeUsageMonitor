@@ -183,7 +183,7 @@ class UsageWidget(QWidget):
 
     def keep_on_top(self) -> bool:
         """Re-applies 'always on top' when Windows has dropped it; True when it had to (polled once a second)."""
-        if not self.isVisible() or self.isMinimized():
+        if not sys.platform.startswith("win") or not self.isVisible() or self.isMinimized():
             return False
         return winutil.assert_topmost(int(self.winId()), bool(self.s["always_on_top"]))
 
