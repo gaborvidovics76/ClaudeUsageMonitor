@@ -7,7 +7,7 @@ Claude Usage Monitor är en gratis skrivbordswidget med öppen källkod för Win
 En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnemang – claude.ai, Claude Desktop och Claude Code, på alla dina enheter. Det är inte terminalverktyget ”Claude Code Usage Monitor”: det här är en grafisk panel med en ikon i meddelandefältet, och den kräver ingen kommandorad.
 
 - **Pris**: Gratis – den fullständiga versionen, ingen betalversion, ingen provperiod
-- **Plattformar**: Windows 10 / 11 (64-bitars) och macOS 12 eller senare
+- **Plattformar**: Windows 10 / 11 (64-bitars) och macOS 13 eller senare
 - **Språk**: 34 gränssnittsspråk
 - **Det här visas**: 5-timmarssession, veckogräns, veckogräns per modell, nedräkning till nollställning, takt och förbrukningstakt
 - **Datakälla**: Claude Desktops lokala logg eller din claude.ai-inloggning för alla enheter
@@ -15,11 +15,15 @@ En app för både Windows och Mac. Den täcker allt som räknas mot ditt abonnem
 - **Licens**: MIT, öppen källkod på GitHub
 - **Utvecklare**: Gábor Vidovics, Ungern – oberoende, inte knuten till Anthropic
 
-- Version: 2.9.6
+- Version: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kommer snart
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/sv/
+
+## Claude Usage Monitor finns nu i Mac App Store (2026-11-02)
+Sedan den 2 november 2026 finns macOS-versionen i Apples Mac App Store som ”Usage Monitor for Claude AI” – granskad och signerad av Apple, installerad med ett klick, uppdaterad av butiken. Det är samma kostnadsfria app med öppen källkod: 5-timmarssessionen, veckogränsen och ditt tempo, direkt i menyraden.
 
 ## Alla dina användningsgränser i Claude. En blick.
 
@@ -46,7 +50,7 @@ Aldrig. Utan inloggning läser den Claude Desktops lokala logg. Vill du ha med a
 Eftersom appen inte är kodsignerad (certifikat kostar pengar, och appen är gratis). Klicka på Mer info → Kör ändå. Du kan verifiera nedladdningen med dess SHA-256-kontrollsumma och läsa källkoden på GitHub.
 
 ### Vilka Mac-datorer stöds?
-macOS 12 eller senare. Nedladdningskortet ovan visar alltid vilken processor den aktuella versionen är byggd för. macOS-versionen är ny – feedback är mycket välkommen.
+macOS 13 eller senare. Mac-versionen kommer från Mac App Store som ”Usage Monitor for Claude AI” – signerad av Apple och uppdaterad via App Store. macOS-versionen är ny – synpunkter är mycket välkomna.
 
 ### Hur fungerar uppdateringar?
 Appen kollar den här webbplatsen några gånger om dagen. När det finns en ny version får du veta det; ett klick laddar ned, verifierar och installerar den och startar sedan om appen. Du kan stänga av det.

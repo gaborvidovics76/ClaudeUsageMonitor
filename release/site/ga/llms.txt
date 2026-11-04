@@ -7,7 +7,7 @@ Is giuirléid deisce saor in aisce, foinse oscailte, é Claude Usage Monitor do 
 Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear i do phlean – claude.ai, Claude Desktop agus Claude Code, ar do ghléasanna go léir. Ní hé an uirlis teirminéil “Claude Code Usage Monitor” é: painéal grafach é seo le deilbhín sa tráidire, agus níl líne na n-orduithe de dhíth air.
 
 - **Praghas**: Saor in aisce – an leagan iomlán, gan leagan íoctha, gan triail
-- **Ardáin**: Windows 10 / 11 (64-giotán) agus macOS 12 nó níos nuaí
+- **Ardáin**: Windows 10 / 11 (64-giotán) agus macOS 13 nó níos nuaí
 - **Teangacha**: 34 teanga comhéadain
 - **Cad a thaispeánann sé**: Seisiún 5 huaire, teorainn seachtaine, teorainn seachtaine na samhla, comhaireamh síos go dtí an t-athshocrú, luas agus ráta caithimh
 - **Foinse sonraí**: Logchomhad áitiúil Claude Desktop, nó do shíniú isteach ar claude.ai do gach gléas
@@ -15,11 +15,15 @@ Aip amháin do Windows agus do Mac araon. Clúdaíonn sé gach rud a áirítear 
 - **Ceadúnas**: MIT, foinse oscailte ar GitHub
 - **Údar**: Gábor Vidovics, an Ungáir – neamhspleách, gan aon bhaint le hAnthropic
 
-- Leagan: 2.9.6
+- Leagan: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ag teacht go luath
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/ga/
+
+## Tá Claude Usage Monitor ar an Mac App Store anois (2026-11-02)
+Ón 2 Samhain 2026 tá an leagan macOS ar fáil ar Mac App Store Apple mar “Usage Monitor for Claude AI” – seiceáilte agus sínithe ag Apple, suiteáilte le cliceáil amháin, nuashonraithe ag an Store. Is é an aip chéanna shaor in aisce foinse oscailte é: an seisiún 5 uair, an teorainn sheachtainiúil agus do luas, díreach sa bharra roghchláir.
 
 ## Do theorainneacha úsáide Claude go léir. Sracfhéachaint amháin.
 
@@ -46,7 +50,7 @@ Ní chaithfidh, riamh. Gan síniú isteach léann sé logchomhad áitiúil Claud
 Toisc nach bhfuil an aip sínithe le cód (cosnaíonn teastais airgead; tá an aip saor in aisce). Cliceáil ar More info → Run anyway. Is féidir leat an íoslódáil a fhíorú lena suim sheiceála SHA-256, agus an cód foinseach a léamh ar GitHub.
 
 ### Cé na Macanna a dtacaítear leo?
-macOS 12 nó níos nuaí. Taispeánann an cárta íoslódála thuas i gcónaí cén próiseálaí a bhfuil an leagan reatha ceaptha dó. Is nua an leagan macOS – is mór againn d'aiseolas.
+macOS 13 nó níos nuaí. Tagann an leagan Mac ón Mac App Store mar “Usage Monitor for Claude AI” – sínithe ag Apple agus nuashonraithe tríd an App Store. Tá an leagan macOS nua – fáiltítear go mór roimh aiseolas.
 
 ### Conas a oibríonn na nuashonruithe?
 Seiceálann an aip an suíomh seo cúpla uair sa lá. Nuair atá leagan nua ann, insíonn sí duit é; le cliceáil amháin íoslódáiltear é, fíoraítear é agus suiteáiltear é, agus ansin atosaíonn an aip. Is féidir leat é seo a chasadh as.

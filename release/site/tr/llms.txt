@@ -7,7 +7,7 @@ Claude Usage Monitor, Claude aboneliğinin kullanım limitlerini gerçek zamanl�
 Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: claude.ai, Claude Desktop ve Claude Code, tüm cihazlarında. Terminal aracı “Claude Code Usage Monitor” ile aynı şey değildir: bu, tepsi simgesi olan grafik bir paneldir ve komut satırı gerektirmez.
 
 - **Fiyat**: Ücretsiz – tam sürüm; ücretli paket yok, deneme süresi yok
-- **Platformlar**: Windows 10 / 11 (64 bit) ve macOS 12 veya üzeri
+- **Platformlar**: Windows 10 / 11 (64 bit) ve macOS 13 veya üzeri
 - **Diller**: 34 arayüz dili
 - **Ne gösterir**: 5 saatlik oturum, haftalık limit, model bazında haftalık limit, sıfırlanmaya geri sayım, tempo ve harcama hızı
 - **Veri kaynağı**: Claude Desktop'ın yerel günlüğü ya da tüm cihazlar için claude.ai girişin
@@ -15,11 +15,15 @@ Hem Windows hem Mac için tek uygulama. Planına sayılan her şeyi kapsar: clau
 - **Lisans**: MIT, GitHub'da açık kaynak
 - **Geliştirici**: Gábor Vidovics, Macaristan – bağımsız, Anthropic ile bağlantısı yok
 
-- Sürüm: 2.9.6
+- Sürüm: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Çok yakında
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/tr/
+
+## Claude Usage Monitor artık Mac App Store'da (2026-11-02)
+2 Kasım 2026'dan itibaren macOS sürümü Apple'ın Mac App Store'unda “Usage Monitor for Claude AI” adıyla sunuluyor – Apple tarafından denetlenmiş ve imzalanmış, tek tıkla kuruluyor, mağaza tarafından güncelleniyor. Aynı ücretsiz, açık kaynaklı uygulama: 5 saatlik oturum, haftalık limit ve temponuz, doğrudan menü çubuğunda.
 
 ## Tüm Claude kullanım limitlerin. Tek bakışta.
 
@@ -46,7 +50,7 @@ Asla. Giriş yapmadan Claude Desktop'ın yerel günlüğünü okur. Tüm cihazla
 Çünkü uygulamanın kod imzası yok (sertifikalar paralı, uygulama ise ücretsiz). Ek bilgi → Yine de çalıştır'a tıkla. İndirdiğin dosyayı SHA-256 sağlama toplamıyla doğrulayabilir, kaynak kodunu GitHub'da okuyabilirsin.
 
 ### Hangi Mac'ler destekleniyor?
-macOS 12 veya daha yenisi. Yukarıdaki indirme kartı, güncel derlemenin hangi işlemci için olduğunu her zaman gösterir. macOS sürümü yeni – geri bildirimin çok değerli.
+macOS 13 veya üzeri. Mac sürümü Mac App Store'dan “Usage Monitor for Claude AI” adıyla gelir – Apple tarafından imzalanır ve App Store üzerinden güncellenir. macOS sürümü yeni – geri bildirimleriniz çok değerli.
 
 ### Güncellemeler nasıl işliyor?
 Uygulama günde birkaç kez bu siteyi kontrol eder. Yeni sürüm çıkınca sana haber verir; tek tıkla indirir, doğrular, kurar ve yeniden başlar. İstersen bunu kapatabilirsin.

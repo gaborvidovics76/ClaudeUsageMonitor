@@ -7,7 +7,7 @@ Claude Usage Monitor on ilmainen, avoimen lähdekoodin työpöytäwidget Windows
 Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan tilauksesi käyttöön – claude.ai, Claude Desktop ja Claude Code, kaikilla laitteillasi. Se ei ole päätteessä toimiva työkalu ”Claude Code Usage Monitor”: tämä on graafinen paneeli ilmoitusalueen kuvakkeineen, eikä se tarvitse komentoriviä.
 
 - **Hinta**: Ilmainen – täysi versio, ei maksullista versiota, ei kokeilujaksoa
-- **Alustat**: Windows 10 / 11 (64-bittinen) ja macOS 12 tai uudempi
+- **Alustat**: Windows 10 / 11 (64-bittinen) ja macOS 13 tai uudempi
 - **Kielet**: 34 käyttöliittymäkieltä
 - **Mitä se näyttää**: 5 tunnin istunto, viikkoraja, mallikohtainen viikkoraja, aika nollaukseen, tahti ja kulutusnopeus
 - **Tietolähde**: Claude Desktopin paikallinen loki tai claude.ai-kirjautuminen kaikille laitteille
@@ -15,11 +15,15 @@ Yksi sovellus sekä Windowsille että Macille. Se kattaa kaiken, mikä lasketaan
 - **Lisenssi**: MIT, avoin lähdekoodi GitHubissa
 - **Tekijä**: Gábor Vidovics, Unkari – itsenäinen kehittäjä, ei yhteydessä Anthropiciin
 
-- Versio: 2.9.6
+- Versio: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Tulossa pian
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/fi/
+
+## Claude Usage Monitor on nyt Mac App Storessa (2026-11-02)
+2. marraskuuta 2026 alkaen macOS-versio on saatavilla Applen Mac App Storesta nimellä ”Usage Monitor for Claude AI” – Applen tarkastama ja allekirjoittama, asentuu yhdellä napsautuksella, kauppa päivittää sen. Sama ilmainen avoimen lähdekoodin sovellus: 5 tunnin istunto, viikkoraja ja tahtisi suoraan valikkorivillä.
 
 ## Kaikki Clauden käyttörajasi. Yhdellä silmäyksellä.
 
@@ -46,7 +50,7 @@ Ei koskaan. Ilman kirjautumista se lukee Claude Desktopin paikallista lokia. Jos
 Koska sovelluksella ei ole koodiallekirjoitusta (varmenteet maksavat, sovellus on ilmainen). Valitse Lisätietoja → Suorita silti. Voit tarkistaa latauksen sen SHA-256-tarkistussummasta ja lukea lähdekoodin GitHubissa.
 
 ### Mitä Maceja tuetaan?
-macOS 12 tai uudempi. Yllä oleva latauskortti näyttää aina, mille prosessorille nykyinen versio on tehty. macOS-versio on uusi – palaute on erittäin tervetullutta.
+macOS 13 tai uudempi. Mac-versio tulee Mac App Storesta nimellä ”Usage Monitor for Claude AI” – Applen allekirjoittama ja App Storen kautta päivittyvä. macOS-versio on uusi – palaute on erittäin tervetullutta.
 
 ### Miten päivitykset toimivat?
 Sovellus tarkistaa tämän sivuston muutaman kerran päivässä. Kun uusi versio on saatavilla, se kertoo siitä; yhdellä napsautuksella se ladataan, tarkistetaan ja asennetaan, minkä jälkeen sovellus käynnistyy uudelleen. Voit poistaa tämän käytöstä.

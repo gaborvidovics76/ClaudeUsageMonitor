@@ -7,7 +7,7 @@ A Claude Usage Monitor ingyenes, nyílt forráskódú asztali widget Windows 10/
 Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csomagodba: a claude.ai-t, a Claude Desktopot és a Claude Code-ot, az összes eszközödön. Nem azonos a „Claude Code Usage Monitor” nevű terminálos eszközzel: ez grafikus panel tálcaikonnal, és nem kell hozzá parancssor.
 
 - **Ár**: Ingyenes – a teljes verzió, nincs fizetős csomag, nincs próbaidő
-- **Platformok**: Windows 10 / 11 (64 bites) és macOS 12 vagy újabb
+- **Platformok**: Windows 10 / 11 (64 bites) és macOS 13 vagy újabb
 - **Nyelvek**: 34 nyelvű kezelőfelület
 - **Mit mutat?**: 5 órás munkamenet, heti limit, modellenkénti heti limit, visszaszámlálás a resetig, tempó és fogyási ütem
 - **Adatforrás**: A Claude Desktop helyi naplója, vagy – az összes eszközödhöz – a claude.ai-bejelentkezésed
@@ -15,11 +15,15 @@ Egyetlen alkalmazás Windowsra és Macre. Mindent lát, ami beleszámít a csoma
 - **Licenc**: MIT, nyílt forráskód a GitHubon
 - **Szerző**: Vidovics Gábor, Magyarország – független fejlesztő, nem áll kapcsolatban az Anthropickal
 
-- Verzió:: 2.9.6
+- Verzió:: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Hamarosan
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/hu/
+
+## A Claude Usage Monitor megjelent a Mac App Store-ban (2026-11-02)
+2026. november 2-ától a macOS-változat az Apple Mac App Store-jából tölthető le „Usage Monitor for Claude AI” néven – az Apple ellenőrizte és aláírta, egy kattintással települ, a Store frissíti. Ugyanaz az ingyenes, nyílt forráskódú app: az 5 órás munkamenet, a heti limit és a tempód, egyenesen a menüsorban.
 
 ## A Claude összes használati limitje. Egyetlen pillantással.
 
@@ -46,7 +50,7 @@ Soha. Bejelentkezés nélkül a Claude Desktop helyi naplóját olvassa. Ha mind
 Mert az alkalmazásnak nincs kódaláírása (a tanúsítvány pénzbe kerül, az alkalmazás viszont ingyenes). Kattints ide: További információ → Futtatás mindenképpen. A letöltést ellenőrizheted az SHA-256 ellenőrzőösszeggel, a forráskódot pedig elolvashatod a GitHubon.
 
 ### Milyen Maceken fut?
-macOS 12 vagy újabb kell hozzá. A fenti letöltőkártya mindig mutatja, milyen processzorra készült az aktuális kiadás. A macOS-verzió új – minden visszajelzésnek nagyon örülök.
+macOS 13 vagy újabb. A Mac-változat a Mac App Store-ból jön „Usage Monitor for Claude AI” néven – az Apple aláírta, és az App Store frissíti. A macOS-változat új – minden visszajelzést szívesen veszünk.
 
 ### Hogyan működik a frissítés?
 Az alkalmazás naponta néhányszor ránéz erre az oldalra. Ha van új verzió, szól; egy kattintásra letölti, ellenőrzi és telepíti, majd újraindul. Ezt ki is kapcsolhatod.

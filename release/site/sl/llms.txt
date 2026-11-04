@@ -7,7 +7,7 @@ Claude Usage Monitor je brezplačen odprtokodni namizni pripomoček za Windows 1
 En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.ai, Claude Desktop in Claude Code, v vseh vaših napravah. To ni terminalsko orodje „Claude Code Usage Monitor“: to je grafična plošča z ikono v območju za obvestila in ne potrebuje ukazne vrstice.
 
 - **Cena**: Brezplačno – polna različica, brez plačljive ravni, brez preizkusnega obdobja
-- **Platforme**: Windows 10 / 11 (64-bitni) in macOS 12 ali novejši
+- **Platforme**: Windows 10 / 11 (64-bitni) in macOS 13 ali novejši
 - **Jeziki**: 34 jezikov vmesnika
 - **Kaj prikazuje**: 5-urna seja, tedenska omejitev, tedenska omejitev modela, odštevanje do ponastavitve, tempo in hitrost porabe
 - **Vir podatkov**: Lokalni dnevnik aplikacije Claude Desktop ali vaša prijava v claude.ai za vse naprave
@@ -15,11 +15,15 @@ En program za Windows in Mac. Zajema vse, kar se šteje v vaš paket – claude.
 - **Licenca**: MIT, odprta koda na GitHubu
 - **Avtor**: Gábor Vidovics, Madžarska – neodvisen, ni povezan z družbo Anthropic
 
-- Različica: 2.9.6
+- Različica: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Kmalu na voljo
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/sl/
+
+## Claude Usage Monitor je zdaj v Mac App Storu (2026-11-02)
+Od 2. novembra 2026 je različica za macOS na voljo v Applovem Mac App Storu kot »Usage Monitor for Claude AI« – preverjena in podpisana s strani Appla, nameščena z enim klikom, posodablja jo trgovina. Ista brezplačna odprtokodna aplikacija: 5-urna seja, tedenska omejitev in vaš tempo, naravnost v menijski vrstici.
 
 ## Vse omejitve porabe v Claudu. Na en pogled.
 
@@ -46,7 +50,7 @@ Nikoli. Brez prijave bere lokalni dnevnik aplikacije Claude Desktop. Če želite
 Ker program ni digitalno podpisan (potrdila stanejo, program pa je brezplačen). Kliknite Več informacij → Vseeno zaženi. Prenos lahko preverite z njegovo kontrolno vsoto SHA-256, izvorno kodo pa preberete na GitHubu.
 
 ### Kateri računalniki Mac so podprti?
-macOS 12 ali novejši. Kartica za prenos zgoraj vedno pokaže, za kateri procesor je trenutna različica. Različica za macOS je nova – povratne informacije so zelo dobrodošle.
+macOS 13 ali novejši. Različica za Mac prihaja iz Mac App Stora kot »Usage Monitor for Claude AI« – podpisana s strani Appla in posodobljena prek App Stora. Različica za macOS je nova – povratne informacije so zelo dobrodošle.
 
 ### Kako delujejo posodobitve?
 Program nekajkrat na dan preveri to spletno mesto. Ko je na voljo nova različica, vam to sporoči; z enim klikom jo prenese, preveri in namesti, nato pa se znova zažene. To lahko izklopite.

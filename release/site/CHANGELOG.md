@@ -2,6 +2,15 @@
 
 <!-- newer-versions-here -->
 
+## [2.9.7] - 2026-11-05
+
+- Starting the program while it is already running now brings the panel to the front – no more “already running” box. “Always on top” is put back automatically when Windows drops it (after Show desktop, a full-screen app or an Explorer restart).
+
+*Magyarul:*
+
+- Ha a már futó programot újra elindítod, a panel az előtérbe ugrik – nincs többé „már fut” ablak. A „Mindig legfelül” beállítást a program magától visszaállítja, ha a Windows elveszíti (asztal megjelenítése, teljes képernyős app, Intéző-újraindítás után).
+
+
 ## [2.9.6] - 2026-10-31
 
 - Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse.

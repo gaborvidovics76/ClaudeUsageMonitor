@@ -7,7 +7,7 @@ Claude Usage Monitor je bezplatný widget s otvoreným zdrojovým kódom pre Win
 Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tvojho plánu – claude.ai, Claude Desktop a Claude Code na všetkých tvojich zariadeniach. Nie je to terminálový nástroj „Claude Code Usage Monitor“: toto je grafický panel s ikonou v oblasti oznámení a príkazový riadok nepotrebuje.
 
 - **Cena**: Zadarmo – plná verzia, žiadna platená úroveň, žiadna skúšobná verzia
-- **Platformy**: Windows 10 / 11 (64-bitové) a macOS 12 alebo novší
+- **Platformy**: Windows 10 / 11 (64-bitové) a macOS 13 alebo novší
 - **Jazyky**: 34 jazykov rozhrania
 - **Čo ukazuje**: 5-hodinovú reláciu, týždenný limit, týždenný limit modelu, odpočet do resetu, tempo a rýchlosť čerpania
 - **Zdroj údajov**: Lokálny záznam aplikácie Claude Desktop alebo tvoje prihlásenie na claude.ai pre všetky zariadenia
@@ -15,11 +15,15 @@ Jedna aplikácia pre Windows aj Mac. Pokrýva všetko, čo sa započítava do tv
 - **Licencia**: MIT, otvorený zdrojový kód na GitHube
 - **Autor**: Gábor Vidovics, Maďarsko – nezávislý vývojár, bez prepojenia so spoločnosťou Anthropic
 
-- Verzia: 2.9.6
+- Verzia: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Už čoskoro
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/sk/
+
+## Claude Usage Monitor je už v Mac App Store (2026-11-02)
+Od 2. novembra 2026 je verzia pre macOS dostupná v Mac App Store od Apple ako „Usage Monitor for Claude AI“ – skontrolovaná a podpísaná Applom, inštaluje sa jedným kliknutím a aktualizuje ju obchod. Je to tá istá bezplatná open-source aplikácia: 5-hodinová relácia, týždenný limit a vaše tempo priamo v lište s menu.
 
 ## Všetky tvoje limity využitia Claude. Na jeden pohľad.
 
@@ -46,7 +50,7 @@ Nikdy. Bez prihlásenia číta lokálny záznam aplikácie Claude Desktop. Ak ch
 Pretože aplikácia nie je digitálne podpísaná (certifikáty stoja peniaze a aplikácia je zadarmo). Klikni na Ďalšie informácie → Spustiť aj tak. Stiahnutý súbor si môžeš overiť kontrolným súčtom SHA-256 a zdrojový kód si prečítať na GitHube.
 
 ### Ktoré Macy sú podporované?
-macOS 12 alebo novší. Karta na stiahnutie vyššie vždy ukazuje, pre aký procesor je aktuálne zostavenie určené. Verzia pre macOS je nová – spätná väzba je veľmi vítaná.
+macOS 13 alebo novší. Verzia pre Mac pochádza z Mac App Store ako „Usage Monitor for Claude AI“ – podpísaná Applom a aktualizovaná cez App Store. Verzia pre macOS je nová – spätná väzba je veľmi vítaná.
 
 ### Ako fungujú aktualizácie?
 Aplikácia niekoľkokrát denne skontroluje tento web. Keď vyjde nová verzia, dá ti vedieť; jedným kliknutím ju stiahne, overí, nainštaluje a potom sa reštartuje. Dá sa to vypnúť.

@@ -7,7 +7,7 @@ Claude Usage Monitor – nemokamas atvirojo kodo darbalaukio valdiklis, skirtas 
 Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiuojama į jūsų planą, – claude.ai, Claude Desktop ir Claude Code visuose jūsų įrenginiuose. Tai ne terminalo įrankis „Claude Code Usage Monitor“: šis yra grafinis skydelis su piktograma pranešimų srityje, ir komandinės eilutės jam nereikia.
 
 - **Kaina**: Nemokama – pilna versija, be mokamo plano, be bandomojo laikotarpio
-- **Platformos**: Windows 10 / 11 (64 bitų) ir macOS 12 ar naujesnė
+- **Platformos**: Windows 10 / 11 (64 bitų) ir macOS 13 ar naujesnė
 - **Kalbos**: 34 sąsajos kalbos
 - **Ką rodo**: 5 valandų sesiją, savaitės limitą, modelio savaitės limitą, atgalinį skaičiavimą iki atsinaujinimo, tempą ir naudojimo spartą
 - **Duomenų šaltinis**: Vietinis Claude Desktop žurnalas arba jūsų prisijungimas prie claude.ai visiems įrenginiams
@@ -15,11 +15,15 @@ Viena programa ir Windows, ir Mac kompiuteriams. Ji apima viską, kas įskaičiu
 - **Licencija**: MIT, atvirasis kodas GitHub
 - **Autorius**: Gábor Vidovics, Vengrija – nepriklausomas kūrėjas, nesusijęs su Anthropic
 
-- Versija: 2.9.6
+- Versija: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Jau netrukus
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/lt/
+
+## „Claude Usage Monitor“ jau yra „Mac App Store“ parduotuvėje (2026-11-02)
+Nuo 2026 m. lapkričio 2 d. „macOS“ versija pasiekiama „Apple“ parduotuvėje „Mac App Store“ pavadinimu „Usage Monitor for Claude AI“ – „Apple“ patikrinta ir pasirašyta, įdiegiama vienu spustelėjimu, atnaujinama parduotuvės. Ta pati nemokama atvirojo kodo programa: 5 valandų sesija, savaitės limitas ir jūsų tempas tiesiog meniu juostoje.
 
 ## Visi jūsų Claude naudojimo limitai. Vienu žvilgsniu.
 
@@ -46,7 +50,7 @@ Niekada. Neprisijungus jis skaito vietinį Claude Desktop žurnalą. Jei norite 
 Todėl, kad programa nėra pasirašyta skaitmeniniu parašu (sertifikatai kainuoja, o programa nemokama). Spustelėkite Daugiau informacijos → Vis tiek paleisti. Atsisiuntimą galite patikrinti pagal jo SHA-256 kontrolinę sumą, o pirminį kodą – perskaityti GitHub.
 
 ### Kurie Mac kompiuteriai palaikomi?
-macOS 12 ar naujesnė. Aukščiau esančioje atsisiuntimo kortelėje visada nurodyta, kokiam procesoriui skirta dabartinė versija. macOS versija nauja – atsiliepimai labai laukiami.
+„macOS“ 13 ar naujesnė. „Mac“ versija ateina iš „Mac App Store“ pavadinimu „Usage Monitor for Claude AI“ – „Apple“ pasirašyta ir atnaujinama per „App Store“. „macOS“ versija nauja – atsiliepimai labai laukiami.
 
 ### Kaip veikia naujinimai?
 Programa kelis kartus per dieną patikrina šią svetainę. Kai pasirodo nauja versija, ji apie tai praneša; vienu spustelėjimu versija atsisiunčiama, patikrinama ir įdiegiama, tada programa paleidžiama iš naujo. Tai galima išjungti.

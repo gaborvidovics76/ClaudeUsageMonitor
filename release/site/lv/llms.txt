@@ -7,7 +7,7 @@ Claude Usage Monitor ir bezmaksas atvērtā pirmkoda darbvirsmas logrīks Window
 Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskaitīts jūsu plānā, – claude.ai, Claude Desktop un Claude Code visās jūsu ierīcēs. Tas nav termināļa rīks „Claude Code Usage Monitor”: šis ir grafisks panelis ar ikonu paziņojumu apgabalā, un komandrinda tam nav vajadzīga.
 
 - **Cena**: Bez maksas – pilna versija, bez maksas līmeņa, bez izmēģinājuma perioda
-- **Platformas**: Windows 10 / 11 (64 bitu) un macOS 12 vai jaunāka
+- **Platformas**: Windows 10 / 11 (64 bitu) un macOS 13 vai jaunāka
 - **Valodas**: 34 saskarnes valodas
 - **Ko rāda**: 5 stundu sesiju, nedēļas limitu, modeļa nedēļas limitu, atpakaļskaitīšanu līdz atiestatīšanai, tempu un patēriņa ātrumu
 - **Datu avots**: Claude Desktop lokālais žurnāls vai jūsu claude.ai pierakstīšanās visām ierīcēm
@@ -15,11 +15,15 @@ Viena programma gan Windows, gan Mac datoriem. Tā aptver visu, kas tiek ieskait
 - **Licence**: MIT, atvērtais pirmkods GitHub
 - **Autors**: Gábor Vidovics, Ungārija – neatkarīgs izstrādātājs, nav saistīts ar Anthropic
 
-- Versija: 2.9.6
+- Versija: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Drīzumā
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/lv/
+
+## Claude Usage Monitor tagad ir pieejams Mac App Store (2026-11-02)
+Kopš 2026. gada 2. novembra macOS versija ir pieejama Apple Mac App Store ar nosaukumu “Usage Monitor for Claude AI” – Apple pārbaudīta un parakstīta, instalējama ar vienu klikšķi, atjaunina veikals. Tā pati bezmaksas atvērtā pirmkoda lietotne: 5 stundu sesija, nedēļas limits un jūsu temps tieši izvēļņu joslā.
 
 ## Visi jūsu Claude lietojuma limiti. Vienā skatienā.
 
@@ -46,7 +50,7 @@ Nekad. Bez pierakstīšanās tas nolasa Claude Desktop lokālo žurnālu. Ja vē
 Tāpēc, ka programma nav digitāli parakstīta (sertifikāti maksā naudu, bet programma ir bez maksas). Noklikšķiniet uz Papildinformācija → Tomēr palaist. Lejupielādi varat pārbaudīt ar tās SHA-256 kontrolsummu, un pirmkodu varat izlasīt GitHub.
 
 ### Kuri Mac datori tiek atbalstīti?
-macOS 12 vai jaunāka. Lejupielādes kartītē augstāk vienmēr redzams, kādam procesoram paredzēta pašreizējā versija. macOS versija ir jauna – atsauksmes ļoti gaidītas.
+macOS 13 vai jaunāka. Mac versija nāk no Mac App Store ar nosaukumu “Usage Monitor for Claude AI” – Apple parakstīta un atjaunināta caur App Store. macOS versija ir jauna – atsauksmes ir ļoti gaidītas.
 
 ### Kā notiek atjaunināšana?
 Programma dažas reizes dienā pārbauda šo vietni. Kad iznāk jauna versija, tā par to paziņo; ar vienu klikšķi versija tiek lejupielādēta, pārbaudīta un instalēta, un programma restartējas. To var izslēgt.

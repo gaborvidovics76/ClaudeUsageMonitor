@@ -33,5 +33,15 @@
     "_readme": "Microsoft Store version. live: false = the 'also in the Microsoft Store' line under the Windows download is left out of every page; set it to true once the product page is public, then rebuild (tools/build_site.py) and deploy.",
     "id": "9MV20XBFCXTZ",
     "live": true
+  },
+  "macstore": {
+    "_readme": "Mac App Store version (Usage Monitor for Claude AI, publisher 30 km.hu Kft., bundle hu.dinorr.claudeusagemonitor). live: true = the App Store leads every macOS button, the News section and the news ribbon are shown, and /usage-api/dl.php?os=mac sends to the App Store while mac.status is \"soon\". id + slug = the App Store URL; since = the day it went live (the date of the news). version / minos / size are fallbacks only: tools/build_site.py reads the live values from Apple's lookup API at build time.",
+    "id": "6820559262",
+    "slug": "usage-monitor-for-claude-ai",
+    "live": true,
+    "since": "2026-11-02",
+    "version": "2.9.1",
+    "minos": "13",
+    "size": "1 MB"
   }
 }

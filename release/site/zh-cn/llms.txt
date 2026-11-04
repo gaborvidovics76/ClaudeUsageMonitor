@@ -7,7 +7,7 @@ Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Wind
 一个应用，同时支持 Windows 和 Mac。它涵盖所有计入你套餐的用量——claude.ai、Claude Desktop 和 Claude Code，覆盖你的所有设备。它不是终端工具“Claude Code Usage Monitor”：本应用是带托盘图标的图形化面板，不需要命令行。
 
 - **价格**: 免费——完整版，没有付费版本，也不是试用版
-- **平台**: Windows 10 / 11（64 位）和 macOS 12 或更高版本
+- **平台**: Windows 10 / 11（64 位）和 macOS 13 或更高版本
 - **语言**: 34 种界面语言
 - **显示内容**: 5 小时会话、每周限额、模型每周限额、重置倒计时、进度和消耗速率
 - **数据源**: Claude Desktop 的本地日志，或通过 claude.ai 登录查看所有设备
@@ -15,11 +15,15 @@ Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Wind
 - **许可证**: MIT，在 GitHub 上开源
 - **作者**: Vidovics Gábor，匈牙利——独立开发者，与 Anthropic 无关联
 
-- 版本: 2.9.6
+- 版本: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 即将推出
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/zh-cn/
+
+## Claude Usage Monitor 现已登陆 Mac App Store (2026-11-02)
+自 2026 年 11 月 2 日起，macOS 版以 “Usage Monitor for Claude AI” 的名称在 Apple 的 Mac App Store 上架——经 Apple 审核并签名，一键安装，由商店自动更新。还是同一款免费开源应用：5 小时会话、每周限额和你的使用速度，直接显示在菜单栏。
 
 ## 所有 Claude 用量限额，一眼看清。
 
@@ -46,7 +50,7 @@ Claude Usage Monitor 是一款免费、开源的桌面小组件，适用于 Wind
 因为本应用没有代码签名（证书要花钱，而应用是免费的）。点击“更多信息”→“仍要运行”即可。你可以用 SHA-256 校验和验证下载文件，也可以在 GitHub 上阅读源代码。
 
 ### 支持哪些 Mac？
-macOS 12 或更高版本。上方的下载卡片始终会显示当前版本适用的处理器。macOS 版刚刚推出——非常欢迎反馈。
+macOS 13 或更高。Mac 版来自 Mac App Store，名为“Usage Monitor for Claude AI”——由 Apple 签名并通过 App Store 更新。macOS 版是新推出的，非常欢迎反馈。
 
 ### 更新是怎样进行的？
 应用每天会向本网站检查几次。有新版本时会通知你；一键即可下载、校验并安装，然后自动重启。你也可以关闭此功能。

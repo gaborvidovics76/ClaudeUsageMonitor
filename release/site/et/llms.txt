@@ -7,7 +7,7 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 Üks rakendus nii Windowsile kui ka Macile. See arvestab kõike, mis läheb sinu paketi kasutuse hulka – claude.ai, Claude Desktop ja Claude Code, kõigis sinu seadmetes. See ei ole terminalitööriist „Claude Code Usage Monitor“: see siin on graafiline paneel teavitusala ikooniga ja käsurida see ei vaja.
 
 - **Hind**: Tasuta – täisversioon, tasulist versiooni ega prooviperioodi pole
-- **Platvormid**: Windows 10 / 11 (64-bitine) ja macOS 12 või uuem
+- **Platvormid**: Windows 10 / 11 (64-bitine) ja macOS 13 või uuem
 - **Keeled**: 34 kasutajaliidese keelt
 - **Mida see näitab**: 5-tunni seanss, nädalalimiit, mudelipõhine nädalalimiit, pöördloendus lähtestuseni, tempo ja kulumiskiirus
 - **Andmeallikas**: Claude Desktopi kohalik logi või sinu claude.ai sisselogimine kõigi seadmete jaoks
@@ -15,11 +15,15 @@ Claude Usage Monitor on tasuta avatud lähtekoodiga töölauavidin Windows 10/11
 - **Litsents**: MIT, avatud lähtekood GitHubis
 - **Autor**: Gábor Vidovics, Ungari – sõltumatu, Anthropicuga mitte seotud
 
-- Versioon: 2.9.6
+- Versioon: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Varsti saadaval
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/et/
+
+## Claude Usage Monitor on nüüd Mac App Store'is (2026-11-02)
+Alates 2. novembrist 2026 on macOS-i versioon saadaval Apple'i Mac App Store'is nime all „Usage Monitor for Claude AI“ – Apple'i kontrollitud ja allkirjastatud, paigaldatav ühe klõpsuga, uuendusi teeb pood. See on sama tasuta avatud lähtekoodiga rakendus: 5-tunnine seanss, nädalalimiit ja sinu tempo otse menüüribal.
 
 ## Kõik Claude'i kasutuslimiidid. Ühe pilguga.
 
@@ -46,7 +50,7 @@ Mitte kunagi. Sisselogimiseta loeb see Claude Desktopi kohalikku logi. Kui soovi
 Sest rakendusel pole koodiallkirja (sertifikaadid maksavad raha, rakendus on tasuta). Klõpsa Lisateave → Käivita ikkagi. Allalaaditud faili saad kontrollida selle SHA-256 kontrollsumma järgi ja lähtekoodi lugeda GitHubis.
 
 ### Milliseid Mac-arvuteid toetatakse?
-macOS 12 või uuem. Ülal olev allalaadimiskaart näitab alati, millise protsessori jaoks praegune versioon on tehtud. macOS-i versioon on uus – tagasiside on väga oodatud.
+macOS 13 või uuem. Maci versioon tuleb Mac App Store'ist nime all „Usage Monitor for Claude AI“ – Apple'i allkirjastatud ja App Store'i kaudu uuendatav. macOS-i versioon on uus – tagasiside on väga teretulnud.
 
 ### Kuidas värskendused töötavad?
 Rakendus kontrollib seda saiti paar korda päevas. Kui on uus versioon, annab see sulle teada; ühe klõpsuga laaditakse see alla, kontrollitakse, installitakse ja rakendus taaskäivitub. Saad selle välja lülitada.

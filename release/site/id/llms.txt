@@ -7,7 +7,7 @@ Claude Usage Monitor adalah widget desktop gratis dan sumber terbuka untuk Windo
 Satu aplikasi untuk Windows dan Mac sekaligus. Mencakup semua yang dihitung ke dalam paket Anda – claude.ai, Claude Desktop, dan Claude Code, di semua perangkat Anda. Ini bukan alat terminal “Claude Code Usage Monitor”: yang ini berupa panel grafis dengan ikon di baki sistem dan tidak memerlukan baris perintah.
 
 - **Harga**: Gratis – versi lengkap, tanpa versi berbayar, tanpa masa uji coba
-- **Platform**: Windows 10 / 11 (64-bit) dan macOS 12 atau lebih baru
+- **Platform**: Windows 10 / 11 (64-bit) dan macOS 13 atau lebih baru
 - **Bahasa**: 34 bahasa antarmuka
 - **Yang ditampilkan**: Sesi 5 jam, batas mingguan, batas mingguan per model, hitung mundur hingga reset, tempo, dan laju pemakaian
 - **Sumber data**: Log lokal Claude Desktop, atau masuk dengan akun claude.ai Anda untuk semua perangkat
@@ -15,11 +15,15 @@ Satu aplikasi untuk Windows dan Mac sekaligus. Mencakup semua yang dihitung ke d
 - **Lisensi**: MIT, sumber terbuka di GitHub
 - **Pembuat**: Gábor Vidovics, Hungaria – independen, tidak berafiliasi dengan Anthropic
 
-- Versi: 2.9.6
+- Versi: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Segera hadir
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/id/
+
+## Claude Usage Monitor kini tersedia di Mac App Store (2026-11-02)
+Sejak 2 November 2026, versi macOS tersedia di Mac App Store milik Apple dengan nama “Usage Monitor for Claude AI” – diperiksa dan ditandatangani oleh Apple, terpasang dengan sekali klik, diperbarui oleh Store. Aplikasi gratis dan open source yang sama: sesi 5 jam, batas mingguan, dan kecepatan pemakaian Anda, langsung di bilah menu.
 
 ## Semua batas penggunaan Claude Anda. Sekali lirik.
 
@@ -46,7 +50,7 @@ Tidak pernah. Tanpa masuk, aplikasi membaca log lokal Claude Desktop. Jika Anda 
 Karena aplikasi ini tidak ditandatangani secara digital (sertifikatnya berbayar, sedangkan aplikasinya gratis). Klik Info selengkapnya → Tetap jalankan. Anda bisa memverifikasi unduhan dengan checksum SHA-256-nya dan membaca kode sumbernya di GitHub.
 
 ### Mac mana saja yang didukung?
-macOS 12 atau lebih baru. Kartu unduhan di atas selalu menunjukkan prosesor yang didukung build saat ini. Versi macOS masih baru – masukan Anda sangat kami harapkan.
+macOS 13 atau lebih baru. Versi Mac berasal dari Mac App Store dengan nama “Usage Monitor for Claude AI” – ditandatangani oleh Apple dan diperbarui melalui App Store. Versi macOS masih baru – masukan sangat kami harapkan.
 
 ### Bagaimana cara kerja pembaruan?
 Aplikasi memeriksa situs ini beberapa kali sehari. Jika ada versi baru, Anda akan diberi tahu; satu klik untuk mengunduh, memverifikasi, dan menginstalnya, lalu aplikasi dimulai ulang. Fitur ini bisa Anda matikan.

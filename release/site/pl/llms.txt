@@ -7,7 +7,7 @@ Claude Usage Monitor to darmowy widżet na pulpit o otwartym kodzie źródłowym
 Jedna aplikacja na Windows i na Maca. Obejmuje wszystko, co liczy się do twojego planu – claude.ai, Claude Desktop i Claude Code, na wszystkich twoich urządzeniach. To nie jest terminalowe narzędzie „Claude Code Usage Monitor”: to graficzny panel z ikoną w zasobniku, który nie wymaga wiersza poleceń.
 
 - **Cena**: Za darmo – pełna wersja, bez płatnego pakietu i bez okresu próbnego
-- **Platformy**: Windows 10 / 11 (64-bit) i macOS 12 lub nowszy
+- **Platformy**: Windows 10 / 11 (64-bit) i macOS 13 lub nowszy
 - **Języki**: Interfejs w 34 językach
 - **Co pokazuje**: Sesję 5-godzinną, limit tygodniowy, tygodniowy limit modelu, odliczanie do resetu, tempo i szybkość zużycia
 - **Źródło danych**: Lokalny dziennik Claude Desktop albo twoje logowanie do claude.ai – dla wszystkich urządzeń
@@ -15,11 +15,15 @@ Jedna aplikacja na Windows i na Maca. Obejmuje wszystko, co liczy się do twojeg
 - **Licencja**: MIT, open source na GitHubie
 - **Autor**: Gábor Vidovics, Węgry – niezależny twórca, niepowiązany z Anthropic
 
-- Wersja: 2.9.6
+- Wersja: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Już wkrótce
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/pl/
+
+## Claude Usage Monitor jest już w Mac App Store (2026-11-02)
+Od 2 listopada 2026 r. wersja na macOS jest dostępna w Mac App Store firmy Apple jako „Usage Monitor for Claude AI” – sprawdzona i podpisana przez Apple, instalowana jednym kliknięciem, aktualizowana przez sklep. Ta sama darmowa aplikacja open source: sesja 5-godzinna, limit tygodniowy i Twoje tempo, prosto na pasku menu.
 
 ## Wszystkie twoje limity użycia Claude. Jedno spojrzenie.
 
@@ -46,7 +50,7 @@ Nigdy. Bez logowania aplikacja czyta lokalny dziennik Claude Desktop. Jeśli chc
 Bo aplikacja nie ma podpisu cyfrowego (certyfikaty kosztują, a aplikacja jest darmowa). Kliknij Więcej informacji → Uruchom mimo to. Pobrany plik możesz zweryfikować sumą kontrolną SHA-256, a kod źródłowy przeczytać na GitHub.
 
 ### Które komputery Mac są obsługiwane?
-macOS 12 lub nowszy. Karta pobierania powyżej zawsze pokazuje, dla jakiego procesora jest aktualna kompilacja. Wersja na macOS jest nowa – każda opinia jest bardzo mile widziana.
+macOS 13 lub nowszy. Wersja na Maca pochodzi z Mac App Store jako „Usage Monitor for Claude AI” – podpisana przez Apple i aktualizowana przez App Store. Wersja na macOS jest nowa – uwagi są bardzo mile widziane.
 
 ### Jak działają aktualizacje?
 Aplikacja kilka razy dziennie zagląda na tę stronę. Gdy pojawi się nowa wersja, daje ci znać; jedno kliknięcie pobiera ją, weryfikuje i instaluje, a potem uruchamia aplikację ponownie. Możesz to wyłączyć.

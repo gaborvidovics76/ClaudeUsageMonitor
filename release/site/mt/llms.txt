@@ -7,7 +7,7 @@ Claude Usage Monitor huwa widget b'xejn u b'sors miftuħ għad-desktop, għal Wi
 App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd għall-pjan tiegħek – claude.ai, Claude Desktop u Claude Code, fuq l-apparati kollha tiegħek. Mhix l-għodda tat-terminal “Claude Code Usage Monitor”: din hija pannell grafiku b'ikona fiż-żona tan-notifiki, u ma teħtieġ l-ebda linja tal-kmand.
 
 - **Prezz**: B'xejn – il-verżjoni sħiħa, l-ebda verżjoni bi ħlas, l-ebda prova
-- **Pjattaformi**: Windows 10 / 11 (64-bit) u macOS 12 jew aktar ġdid
+- **Pjattaformi**: Windows 10 / 11 (64-bit) u macOS 13 jew aktar ġdid
 - **Lingwi**: 34 lingwa tal-interfaċċja
 - **X'juri**: Sessjoni ta' 5 sigħat, limitu tal-ġimgħa, limitu tal-ġimgħa għal kull mudell, għadd lura sar-reset, ritmu u rata ta' konsum
 - **Sors tad-data**: Il-log lokali ta' Claude Desktop, jew il-login tiegħek ta' claude.ai għall-apparati kollha
@@ -15,11 +15,15 @@ App waħda kemm għal Windows kif ukoll għal Mac. Tkopri dak kollu li jgħodd g
 - **Liċenzja**: MIT, sors miftuħ fuq GitHub
 - **Awtur**: Gábor Vidovics, l-Ungerija – indipendenti, mhux affiljat ma' Anthropic
 
-- Verżjoni: 2.9.6
+- Verżjoni: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Ġej dalwaqt
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/mt/
+
+## Claude Usage Monitor issa jinsab fil-Mac App Store (2026-11-02)
+Mit-2 ta' Novembru 2026 il-verżjoni għal macOS tinsab fil-Mac App Store ta' Apple bħala “Usage Monitor for Claude AI” – iċċekkjata u ffirmata minn Apple, tiġi installata bi klikk waħda, u aġġornata mill-Istore. Hija l-istess app b'xejn u open source: is-sessjoni ta' 5 sigħat, il-limitu ta' kull ġimgħa u l-pass tiegħek, dritt fil-menu bar.
 
 ## Il-limiti tal-użu kollha tiegħek ta' Claude. Ħarsa waħda.
 
@@ -46,7 +50,7 @@ Qatt. Mingħajr login jaqra l-log lokali ta' Claude Desktop. Jekk trid l-apparat
 Għax l-app mhix iffirmata b'ċertifikat tal-kodiċi (iċ-ċertifikati jiswew il-flus; l-app hija b'xejn). Ikklikkja More info → Run anyway. Tista' tivverifika t-tniżżil bis-checksum SHA-256 tiegħu, u taqra s-sors fuq GitHub.
 
 ### Liema Macs huma appoġġjati?
-macOS 12 jew aktar ġdid. Il-kard tat-tniżżil hawn fuq dejjem turi għal liema proċessur hija l-verżjoni attwali. Il-verżjoni għal macOS hija ġdida – il-feedback huwa milqugħ ħafna.
+macOS 13 jew aktar reċenti. Il-verżjoni għall-Mac tiġi mill-Mac App Store bħala “Usage Monitor for Claude AI” – iffirmata minn Apple u aġġornata permezz tal-App Store. Il-verżjoni għal macOS hija ġdida – il-feedback huwa milqugħ ħafna.
 
 ### Kif jaħdmu l-aġġornamenti?
 L-app tiċċekkja dan is-sit ftit drabi kuljum. Meta toħroġ verżjoni ġdida, tgħidlek; bi klikk wieħed tniżżilha, tivverifikaha u tinstallaha, imbagħad terġa' tibda. Tista' titfi din il-funzjoni.

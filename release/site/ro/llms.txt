@@ -7,7 +7,7 @@ Claude Usage Monitor este un widget desktop gratuit și open source pentru Windo
 O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în planul tău – claude.ai, Claude Desktop și Claude Code, pe toate dispozitivele tale. Nu este instrumentul de terminal „Claude Code Usage Monitor”: acesta este un panou grafic cu pictogramă în zona de notificare și nu are nevoie de linia de comandă.
 
 - **Preț**: Gratuit – versiunea completă, fără variantă plătită, fără perioadă de probă
-- **Platforme**: Windows 10 / 11 (64 de biți) și macOS 12 sau mai nou
+- **Platforme**: Windows 10 / 11 (64 de biți) și macOS 13 sau mai nou
 - **Limbi**: 34 de limbi ale interfeței
 - **Ce afișează**: Sesiunea de 5 ore, limita săptămânală, limita săptămânală per model, numărătoarea inversă până la resetare, ritmul și rata de consum
 - **Sursă de date**: Jurnalul local al Claude Desktop sau conectarea ta la claude.ai, pentru toate dispozitivele
@@ -15,11 +15,15 @@ O singură aplicație pentru Windows și Mac. Acoperă tot ce se socotește în 
 - **Licență**: MIT, open source pe GitHub
 - **Autor**: Gábor Vidovics, Ungaria – independent, fără legătură cu Anthropic
 
-- Versiunea: 2.9.6
+- Versiunea: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: În curând
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/ro/
+
+## Claude Usage Monitor este acum în Mac App Store (2026-11-02)
+Din 2 noiembrie 2026, versiunea pentru macOS este disponibilă în Mac App Store de la Apple sub numele „Usage Monitor for Claude AI” – verificată și semnată de Apple, instalată cu un clic, actualizată de magazin. Este aceeași aplicație gratuită, open source: sesiunea de 5 ore, limita săptămânală și ritmul tău, direct în bara de meniu.
 
 ## Toate limitele tale de utilizare Claude. Dintr-o privire.
 
@@ -46,7 +50,7 @@ Niciodată. Fără conectare, citește jurnalul local al Claude Desktop. Dacă v
 Pentru că aplicația nu este semnată digital (certificatele costă bani, iar aplicația e gratuită). Dă clic pe Mai multe informații → Rulează oricum. Poți verifica descărcarea cu suma de control SHA-256 și poți citi codul sursă pe GitHub.
 
 ### Ce modele de Mac sunt acceptate?
-macOS 12 sau mai nou. Cardul de descărcare de mai sus arată mereu pentru ce procesor este versiunea curentă. Versiunea pentru macOS este nouă – feedbackul este binevenit.
+macOS 13 sau mai nou. Versiunea pentru Mac vine din Mac App Store sub numele „Usage Monitor for Claude AI” – semnată de Apple și actualizată prin App Store. Versiunea pentru macOS este nouă – părerile sunt foarte binevenite.
 
 ### Actualizările se fac automat?
 Da. Aplicația verifică acest site de câteva ori pe zi. Când apare o versiune nouă, te anunță; un clic o descarcă, o verifică și o instalează, apoi aplicația repornește. Poți dezactiva această funcție.

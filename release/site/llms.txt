@@ -2,7 +2,7 @@
 
 > Claude Usage Monitor is a free, open-source desktop widget for Windows 10/11 and macOS that shows a Claude subscriber's usage limits in real time: the five-hour session, the weekly limit and the per-model weekly limit, with countdown to each reset, pace, burn rate and alerts. It covers claude.ai, Claude Desktop and Claude Code on all devices and needs no terminal.
 
-- Current version: 2.9.6 (released 2026-10-30)
+- Current version: 2.9.7 (released 2026-11-04)
 - Price: free (0). Not a demo, not a trial, no paid tier, no ads, no telemetry. Licence: MIT, open source.
 - Platforms: Windows 10/11 (64-bit) and macOS 12 or newer.
 - Author: Vidovics Gábor (Gábor Vidovics), Hungary. Independent community tool, not affiliated with Anthropic.
@@ -51,11 +51,19 @@
 - [Latest Windows package](https://claudeusagemonitor.com/usage-api/dl.php?os=win): always redirects to the newest release
 - macOS package: coming soon - temporarily not available for download
 - [Microsoft Store](https://apps.microsoft.com/detail/9MV20XBFCXTZ): the same program as "Usage Monitor for Claude AI", installed and updated by the Store
+- [Mac App Store](https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12): the macOS version as "Usage Monitor for Claude AI" (since 2026-11-02, version 2.9.1, macOS 13 or newer, 1 MB), signed by Apple and updated by the App Store
 - [Release manifest (JSON)](https://claudeusagemonitor.com/manifest.json): version, size, SHA-256, release notes
 - [Changelog](https://claudeusagemonitor.com/CHANGELOG.md)
 - [Source code](https://github.com/gaborvidovics76/ClaudeUsageMonitor)
 
 ## What it does
+
+
+## News
+
+### Claude Usage Monitor is now on the Mac App Store (2026-11-02)
+Since 2 November 2026 the macOS version is available from Apple's Mac App Store as “Usage Monitor for Claude AI” – checked and signed by Apple, installed with one click, updated by the Store. It is the same free, open-source app: the 5-hour session, the weekly limit and your pace, right in the menu bar.
+Windows users get the same from the Microsoft Store. One app, two stores, zero cost – and the source code stays open on GitHub.
 
 - **See it coming**: Green, yellow, red. The panel changes colour long before you run out – with a countdown to the reset and an estimate of when you'd hit 100%.
 - **Are you burning too fast?**: The pace indicator tells you if your weekly limit is melting faster than the week passes – and projects where you'll end up.
@@ -91,7 +99,7 @@ Never. Without signing in it reads Claude Desktop's local log. If you want all d
 Because the app isn't code-signed (certificates cost money; the app is free). Click More info → Run anyway. You can verify the download with its SHA-256 checksum, and read the source on GitHub.
 
 ### Which Macs are supported?
-macOS 12 or newer. The download card above always shows which processor the current build is for. The macOS version is new – feedback is very welcome.
+macOS 13 or newer. The Mac version comes from the Mac App Store as “Usage Monitor for Claude AI” – signed by Apple and updated by the App Store. The macOS version is new – feedback is very welcome.
 
 ### How do updates work?
 The app checks this site a few times a day. When there's a new version it tells you; one click downloads, verifies and installs it, then restarts. You can switch this off.

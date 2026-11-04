@@ -1,122 +1,122 @@
 {
     "name":  "Claude Usage Monitor",
     "slug":  "claude-usage-monitor",
-    "version":  "2.9.6",
-    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.6.zip",
-    "sha256":  "068b738b2259f174d1e8cd426ac5c3636deadb23c45eb0365c4125c40fd80895",
-    "bytes":  49552356,
+    "version":  "2.9.7",
+    "download_url":  "https://claudeusagemonitor.com/versions/ClaudeUsageMonitor-Setup-2.9.7.zip",
+    "sha256":  "2c4c94923fdaadfafdc9f66abb4f6e3da264d9077e43e3fc915c7ad87ef30f4d",
+    "bytes":  49553379,
     "requires":  "Windows 10/11 64-bit",
     "author":  "Vidovics Gabor",
     "homepage":  "https://claudeusagemonitor.com/",
-    "last_updated":  "2026-10-30T23:08:49Z",
+    "last_updated":  "2026-11-04T23:03:55Z",
     "notes":  {
                   "en":  [
-                             "Click-through mode: switching it on now tells you where the menu is (right-click the tray icon), and starting the program again from the Start menu opens its Settings – a way back when the panel ignores the mouse."
+                             "Starting the program while it is already running now brings the panel to the front – no more “already running” box. “Always on top” is put back automatically when Windows drops it (after Show desktop, a full-screen app or an Explorer restart)."
                          ],
                   "hu":  [
-                             "Kattintás-átengedés: bekapcsoláskor a program megmondja, hol éred el a menüt (jobb klikk a tálcaikonra), és ha a Start menüből újra elindítod, megnyílnak a Beállításai – így van kiút, amikor a panel nem reagál az egérre."
+                             "Ha a már futó programot újra elindítod, a panel az előtérbe ugrik – nincs többé „már fut” ablak. A „Mindig legfelül” beállítást a program magától visszaállítja, ha a Windows elveszíti (asztal megjelenítése, teljes képernyős app, Intéző-újraindítás után)."
                          ],
                   "de":  [
-                             "Durchklicken: Beim Einschalten sagt das Programm jetzt, wo das Menü ist (Rechtsklick auf das Tray-Symbol), und ein erneuter Start über das Startmenü öffnet die Einstellungen – ein Weg zurück, wenn das Panel die Maus ignoriert."
+                             "Ein erneuter Start des bereits laufenden Programms holt das Panel jetzt nach vorn – kein „läuft bereits“-Fenster mehr. „Immer im Vordergrund“ wird automatisch wiederhergestellt, wenn Windows es verliert (nach „Desktop anzeigen“, einer Vollbild-App oder einem Explorer-Neustart)."
                          ],
                   "fr":  [
-                             "Clic traversant : à l\u0027activation, le programme indique désormais où trouver le menu (clic droit sur l\u0027icône de la barre d\u0027état), et le relancer depuis le menu Démarrer ouvre ses Paramètres – une porte de sortie quand le panneau ignore la souris."
+                             "Relancer le programme déjà ouvert ramène désormais le panneau au premier plan – plus de message « déjà lancé ». « Toujours au premier plan » est rétabli automatiquement quand Windows le perd (après « Afficher le bureau », une application plein écran ou un redémarrage de l\u0027Explorateur)."
                          ],
                   "es":  [
-                             "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
+                             "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de «ya está en ejecución». «Siempre encima» se restablece solo cuando Windows lo pierde (tras «Mostrar escritorio», una app a pantalla completa o un reinicio del Explorador)."
                          ],
                   "it":  [
-                             "Clic passante: quando lo attivi, il programma ora indica dove si trova il menu (clic destro sull\u0027icona nell\u0027area di notifica), e riavviarlo dal menu Start apre le Impostazioni – una via d\u0027uscita quando il pannello ignora il mouse."
+                             "Avviare il programma quando è già in esecuzione ora porta il pannello in primo piano: niente più finestra «già in esecuzione». «Sempre in primo piano» viene ripristinato da solo quando Windows lo perde (dopo «Mostra desktop», un\u0027app a schermo intero o un riavvio di Esplora file)."
                          ],
                   "pt":  [
-                             "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
+                             "Iniciar o programa quando ele já está rodando agora traz o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é restaurado sozinho quando o Windows o perde (depois de “Mostrar área de trabalho”, um app em tela cheia ou uma reinicialização do Explorer)."
                          ],
                   "pl":  [
-                             "Przepuszczanie kliknięć: po włączeniu program mówi teraz, gdzie jest menu (prawy przycisk na ikonie w obszarze powiadomień), a ponowne uruchomienie z menu Start otwiera jego Ustawienia – droga powrotu, gdy panel ignoruje mysz."
+                             "Uruchomienie programu, gdy już działa, wysuwa teraz panel na wierzch – koniec z komunikatem „już działa”. „Zawsze na wierzchu” jest przywracane automatycznie, gdy Windows je zgubi (po „Pokaż pulpit”, aplikacji pełnoekranowej lub restarcie Eksploratora)."
                          ],
                   "nl":  [
-                             "Klik-door: bij inschakelen vertelt het programma nu waar het menu is (rechtsklik op het pictogram in het systeemvak), en opnieuw starten via het Startmenu opent de Instellingen – een weg terug als het paneel de muis negeert."
+                             "Het programma opnieuw starten terwijl het al draait brengt het paneel nu naar voren – geen „draait al”-venster meer. „Altijd bovenaan” wordt automatisch hersteld als Windows het laat vallen (na „Bureaublad weergeven”, een app op volledig scherm of een herstart van Verkenner)."
                          ],
                   "ru":  [
-                             "Пропуск кликов: при включении программа теперь подсказывает, где меню (правый клик по значку в области уведомлений), а повторный запуск из меню «Пуск» открывает её Параметры – выход, когда панель не реагирует на мышь."
+                             "Повторный запуск уже работающей программы теперь выводит панель на передний план – без окна «уже запущено». «Поверх всех окон» восстанавливается автоматически, когда Windows сбрасывает его (после «Свернуть все окна», полноэкранного приложения или перезапуска Проводника)."
                          ],
                   "cs":  [
-                             "Průchozí klikání: při zapnutí program nyní řekne, kde je menu (pravý klik na ikonu v oznamovací oblasti), a opětovné spuštění z nabídky Start otevře jeho Nastavení – cesta zpět, když panel nereaguje na myš."
+                             "Spuštění programu, který už běží, teď vysune panel do popředí – žádné okno „už běží“. „Vždy navrchu“ se automaticky obnoví, když ho Windows ztratí (po „Zobrazit plochu“, celoobrazovkové aplikaci nebo restartu Průzkumníka)."
                          ],
                   "tr":  [
-                             "Tıklama geçişi: açıldığında program artık menünün nerede olduğunu söylüyor (bildirim alanındaki simgeye sağ tık), Başlat menüsünden yeniden başlatmak ise Ayarlarını açıyor – panel fareyi yok saydığında bir çıkış yolu."
+                             "Zaten çalışan programı yeniden başlatmak artık paneli öne getiriyor – „zaten çalışıyor” kutusu yok. „Her zaman üstte” Windows onu düşürdüğünde kendiliğinden geri geliyor (Masaüstünü göster, tam ekran bir uygulama veya Gezgin yeniden başlatması sonrasında)."
                          ],
                   "pt-PT":  [
-                                "Clique transparente: ao ativá-lo, o programa indica agora onde está o menu (botão direito no ícone da área de notificação), e voltar a iniciá-lo no menu Iniciar abre as Definições – uma saída quando o painel ignora o rato."
+                                "Iniciar o programa quando já está a correr traz agora o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é reposto automaticamente quando o Windows o perde (depois de “Mostrar ambiente de trabalho”, uma app em ecrã inteiro ou um reinício do Explorador)."
                             ],
                   "pt-BR":  [
-                                "Clique através: ao ativá-lo, o programa agora mostra onde fica o menu (clique direito no ícone da bandeja), e iniciá-lo de novo pelo menu Iniciar abre as Configurações – uma saída quando o painel ignora o mouse."
+                                "Iniciar o programa quando ele já está rodando agora traz o painel para a frente – acabou o aviso de “já está em execução”. “Sempre no topo” é restaurado sozinho quando o Windows o perde (depois de “Mostrar área de trabalho”, um app em tela cheia ou uma reinicialização do Explorer)."
                             ],
                   "es-ES":  [
-                                "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el icono del área de notificación), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el ratón."
+                                "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de «ya está en ejecución». «Siempre encima» se restablece solo cuando Windows lo pierde (tras «Mostrar escritorio», una app a pantalla completa o un reinicio del Explorador)."
                             ],
                   "es-419":  [
-                                 "Clic a través: al activarlo, el programa ahora indica dónde está el menú (clic derecho en el ícono de la bandeja), y volver a iniciarlo desde el menú Inicio abre su Configuración: una salida cuando el panel ignora el mouse."
+                                 "Iniciar el programa cuando ya está en ejecución ahora trae el panel al frente: se acabó el aviso de “ya está en ejecución”. “Siempre encima” se restablece solo cuando Windows lo pierde (tras “Mostrar escritorio”, una app a pantalla completa o un reinicio del Explorador)."
                              ],
                   "ja":  [
-                             "クリック透過：オンにすると、メニューの場所（通知領域のアイコンを右クリック）を案内するようになりました。スタートメニューからもう一度起動すると設定が開き、パネルがマウスに反応しないときの戻り道になります。"
+                             "起動中のプログラムをもう一度起動すると、パネルが前面に出るようになりました。「すでに実行中です」の表示はなくなります。「常に手前に表示」は、Windowsが解除してしまったとき（デスクトップの表示、全画面アプリ、エクスプローラーの再起動後）に自動で戻ります。"
                          ],
                   "ko":  [
-                             "클릭 통과: 켜면 메뉴 위치(알림 영역 아이콘 오른쪽 클릭)를 알려 주고, 시작 메뉴에서 프로그램을 다시 실행하면 설정이 열려요. 패널이 마우스를 무시할 때 돌아오는 길이에요."
+                             "이미 실행 중인 프로그램을 다시 실행하면 이제 패널이 앞으로 나와요. “이미 실행 중” 창은 더 이상 뜨지 않아요. Windows가 “항상 위에”를 해제해 버리면(바탕 화면 보기, 전체 화면 앱, 탐색기 재시작 후) 자동으로 되돌려요."
                          ],
                   "zh-CN":  [
-                                "点击穿透：开启时程序会提示菜单在哪里（右键点击托盘图标）；从“开始”菜单再次启动程序会打开它的设置——面板不响应鼠标时的退路。"
+                                "程序已在运行时再次启动，现在会把面板带到前台——不再弹出“已在运行”提示。当 Windows 丢掉“始终置顶”（显示桌面、全屏应用或资源管理器重启之后），程序会自动恢复它。"
                             ],
                   "zh-TW":  [
-                                "點選穿透：開啟時程式會提示選單在哪裡（在系統匣圖示上按右鍵）；從「開始」功能表再次啟動程式會開啟它的設定——面板不回應滑鼠時的退路。"
+                                "程式已在執行時再次啟動，現在會把面板帶到最前面——不再跳出「已在執行」視窗。當 Windows 取消「永遠在最上層」（顯示桌面、全螢幕 App 或檔案總管重新啟動之後），程式會自動恢復。"
                             ],
                   "id":  [
-                             "Klik tembus: saat diaktifkan, program kini memberi tahu letak menu (klik kanan ikon baki), dan menjalankan program lagi dari menu Mulai membuka Pengaturannya – jalan kembali saat panel mengabaikan mouse."
+                             "Menjalankan program yang sudah berjalan kini membawa panel ke depan – tidak ada lagi kotak “sudah berjalan”. “Selalu di atas” dipulihkan otomatis saat Windows melepaskannya (setelah Tampilkan desktop, aplikasi layar penuh, atau Explorer dimulai ulang)."
                          ],
                   "vi":  [
-                             "Xuyên nhấp: khi bật, chương trình giờ cho biết menu ở đâu (nhấp chuột phải vào biểu tượng khay), và khởi động lại từ menu Start sẽ mở Cài đặt – lối thoát khi bảng bỏ qua chuột."
+                             "Khởi động lại chương trình đang chạy giờ sẽ đưa bảng lên trước – không còn hộp “đã đang chạy”. “Luôn ở trên cùng” được khôi phục tự động khi Windows bỏ nó (sau Hiện màn hình nền, ứng dụng toàn màn hình hoặc khởi động lại Explorer)."
                          ],
                   "ro":  [
-                             "Clic transparent: la activare, programul îți spune acum unde este meniul (clic dreapta pe pictograma din zona de notificare), iar repornirea din meniul Start îi deschide Setările – o cale de întoarcere când panoul ignoră mouse-ul."
+                             "Pornirea programului când rulează deja aduce acum panoul în față – gata cu fereastra „rulează deja”. „Întotdeauna deasupra” este restabilit automat când Windows îl pierde (după „Afișare desktop”, o aplicație pe tot ecranul sau o repornire a Explorerului)."
                          ],
                   "el":  [
-                             "Διαπερατότητα κλικ: με την ενεργοποίηση, το πρόγραμμα δείχνει πλέον πού είναι το μενού (δεξί κλικ στο εικονίδιο της περιοχής ειδοποιήσεων), και η επανεκκίνηση από το μενού Έναρξη ανοίγει τις Ρυθμίσεις – μια διέξοδος όταν ο πίνακας αγνοεί το ποντίκι."
+                             "Η εκκίνηση του προγράμματος ενώ ήδη τρέχει φέρνει τώρα τον πίνακα μπροστά – τέλος το μήνυμα «εκτελείται ήδη». Το «Πάντα σε πρώτο πλάνο» επανέρχεται αυτόματα όταν τα Windows το χάνουν (μετά από «Εμφάνιση επιφάνειας εργασίας», εφαρμογή πλήρους οθόνης ή επανεκκίνηση της Εξερεύνησης)."
                          ],
                   "bg":  [
-                             "Пропускане на кликове: при включване програмата вече казва къде е менюто (десен бутон върху иконата в областта за известяване), а повторното ѝ стартиране от менюто Старт отваря настройките – изход, когато панелът не реагира на мишката."
+                             "Стартирането на програмата, докато вече работи, сега извежда панела отпред – без прозорец „вече работи“. „Винаги отгоре“ се възстановява автоматично, когато Windows го изпусне (след „Показване на работния плот“, приложение на цял екран или рестарт на Explorer)."
                          ],
                   "sk":  [
-                             "Priechodné klikanie: pri zapnutí program teraz povie, kde je ponuka (pravý klik na ikonu v oblasti oznámení), a opätovné spustenie z ponuky Štart otvorí jeho Nastavenia – cesta späť, keď panel nereaguje na myš."
+                             "Spustenie programu, ktorý už beží, teraz vysunie panel do popredia – žiadne okno „už beží“. „Vždy navrchu“ sa automaticky obnoví, keď ho Windows stratí (po „Zobraziť pracovnú plochu“, aplikácii na celú obrazovku alebo reštarte Prieskumníka)."
                          ],
                   "hr":  [
-                             "Prolaz klikova: pri uključivanju program sada kaže gdje je izbornik (desni klik na ikonu u području obavijesti), a ponovno pokretanje iz izbornika Start otvara njegove Postavke – izlaz kada panel ne reagira na miš."
+                             "Pokretanje programa dok već radi sada dovodi panel u prvi plan – nema više prozora „već radi”. „Uvijek na vrhu” automatski se vraća kad ga Windows izgubi (nakon „Prikaži radnu površinu”, aplikacije preko cijelog zaslona ili ponovnog pokretanja Explorera)."
                          ],
                   "sv":  [
-                             "Klick igenom: när det slås på berättar programmet nu var menyn finns (högerklicka på ikonen i meddelandefältet), och att starta det igen från Start-menyn öppnar Inställningar – en väg tillbaka när panelen ignorerar musen."
+                             "Att starta programmet när det redan körs tar nu fram panelen – ingen ”körs redan”-ruta längre. ”Alltid överst” återställs automatiskt när Windows tappar det (efter ”Visa skrivbordet”, en helskärmsapp eller en omstart av Utforskaren)."
                          ],
                   "fi":  [
-                             "Klikkausten läpäisy: kun se kytketään päälle, ohjelma kertoo nyt, missä valikko on (hiiren kakkospainike ilmoitusalueen kuvakkeessa), ja uudelleenkäynnistys Käynnistä-valikosta avaa asetukset – tie takaisin, kun paneeli ei reagoi hiireen."
+                             "Jo käynnissä olevan ohjelman käynnistäminen uudelleen tuo nyt paneelin eteen – ei enää ”on jo käynnissä” -ikkunaa. ”Aina päällimmäisenä” palautetaan automaattisesti, kun Windows pudottaa sen (Näytä työpöytä -toiminnon, koko näytön sovelluksen tai Resurssienhallinnan uudelleenkäynnistyksen jälkeen)."
                          ],
                   "da":  [
-                             "Klik-igennem: Når det slås til, fortæller programmet nu, hvor menuen er (højreklik på ikonet i meddelelsesområdet), og at starte det igen fra Start-menuen åbner Indstillinger – en vej tilbage, når panelet ignorerer musen."
+                             "At starte programmet, mens det allerede kører, bringer nu panelet frem – ingen ”kører allerede”-boks mere. ”Altid øverst” genoprettes automatisk, når Windows mister det (efter ”Vis skrivebord”, en fuldskærmsapp eller en genstart af Stifinder)."
                          ],
                   "lt":  [
-                             "Paspaudimų praleidimas: įjungus programa dabar praneša, kur yra meniu (dešinysis pelės mygtukas ant pranešimų srities piktogramos), o paleidus ją iš naujo iš meniu Pradžia atsidaro Parametrai – kelias atgal, kai skydelis nereaguoja į pelę."
+                             "Paleidus jau veikiančią programą dar kartą, skydelis dabar iškeliamas į priekį – nebėra lango „jau veikia“. „Visada viršuje“ automatiškai atkuriama, kai „Windows“ ją praranda (po „Rodyti darbalaukį“, viso ekrano programos ar „Explorer“ paleidimo iš naujo)."
                          ],
                   "sl":  [
-                             "Prepuščanje klikov: ob vklopu program zdaj pove, kje je meni (desni klik na ikono v območju za obvestila), ponovni zagon iz menija Start pa odpre njegove Nastavitve – pot nazaj, ko plošča ne reagira na miško."
+                             "Zagon programa, ko ta že teče, zdaj prinese ploščo v ospredje – nič več okna »že teče«. »Vedno na vrhu« se samodejno obnovi, ko ga Windows izgubi (po »Pokaži namizje«, aplikaciji na celotnem zaslonu ali ponovnem zagonu Raziskovalca)."
                          ],
                   "lv":  [
-                             "Klikšķu caurlaide: ieslēdzot programma tagad pasaka, kur ir izvēlne (labais klikšķis uz paziņojumu apgabala ikonas), un atkārtota palaišana no izvēlnes Sākt atver tās Iestatījumus – ceļš atpakaļ, kad panelis nereaģē uz peli."
+                             "Jau darbojošās programmas atkārtota palaišana tagad izvirza paneli priekšplānā – vairs nav loga „jau darbojas”. „Vienmēr virspusē” tiek automātiski atjaunots, kad Windows to zaudē (pēc „Rādīt darbvirsmu”, pilnekrāna lietotnes vai Explorer restarta)."
                          ],
                   "et":  [
-                             "Läbiklõps: sisselülitamisel ütleb programm nüüd, kus menüü on (paremklõps teavitusala ikoonil), ja uuesti käivitamine Start-menüüst avab selle sätted – tee tagasi, kui paneel hiirt ei kuula."
+                             "Juba töötava programmi uuesti käivitamine toob nüüd paneeli esile – enam pole akent „juba töötab“. „Alati pealmine“ taastatakse automaatselt, kui Windows selle kaotab (pärast „Kuva töölaud“, täisekraanirakendust või Exploreri taaskäivitust)."
                          ],
                   "mt":  [
-                             "Klikk li jgħaddi: meta tixgħelu, il-programm issa jgħidlek fejn hu l-menu (klikk bil-lemin fuq l-ikona fiż-żona tan-notifiki), u jekk terġa\u0027 tibdih mill-menu Start jinfetħu s-Settings – triq lura meta l-pannell jinjora l-maws."
+                             "Jekk tibda l-programm meta diġà qed jaħdem, issa l-pannell jiġi quddiem – m\u0027hemmx aktar il-kaxxa “diġà qed jaħdem”. “Dejjem fuq” jerġa\u0027 jiġi lura waħdu meta Windows jitilfu (wara “Uri d-desktop”, app fuq l-iskrin kollu jew restart tal-Explorer)."
                          ],
                   "ga":  [
-                             "Cliceáil tríd: nuair a chuirtear ar siúl é, insíonn an clár anois cá bhfuil an roghchlár (deaschliceáil ar dheilbhín an tráidire), agus má thosaítear arís é ón roghchlár Tosaigh osclaítear a Shocruithe – bealach ar ais nuair a dhéanann an painéal neamhaird den luch."
+                             "Má thosaítear an clár agus é ag rith cheana, tugtar an painéal chun tosaigh anois – níl bosca “ag rith cheana” ann a thuilleadh. Cuirtear “I gcónaí ar barr” ar ais go huathoibríoch nuair a chailleann Windows é (tar éis “Taispeáin an deasc”, aip lánscáileáin nó atosú an Taiscéalaí)."
                          ]
               }
 }

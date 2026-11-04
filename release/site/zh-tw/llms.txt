@@ -7,7 +7,7 @@ Claude Usage Monitor 是一款免費、開放原始碼的桌面小工具，適�
 同一個程式，Windows 和 Mac 都能用。所有計入你方案的使用量它都涵蓋：claude.ai、Claude Desktop 與 Claude Code，橫跨你所有的裝置。它不是終端機工具「Claude Code Usage Monitor」：這是一個附系統匣圖示的圖形化面板，完全不需要命令列。
 
 - **價格**: 免費：完整版，沒有付費版，也沒有試用期
-- **平台**: Windows 10／11（64 位元）與 macOS 12 或更新版本
+- **平台**: Windows 10／11（64 位元）與 macOS 13 或更新版本
 - **語言**: 34 種介面語言
 - **顯示內容**: 5 小時工作階段、每週上限、各模型每週上限、重設倒數計時、步調與消耗速率
 - **資料來源**: Claude Desktop 的本機記錄檔，或透過 claude.ai 登入涵蓋所有裝置
@@ -15,11 +15,15 @@ Claude Usage Monitor 是一款免費、開放原始碼的桌面小工具，適�
 - **授權**: MIT，在 GitHub 上開放原始碼
 - **作者**: Vidovics Gábor（匈牙利），獨立開發者，與 Anthropic 無任何隸屬關係
 
-- 版本: 2.9.6
+- 版本: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 即將推出
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/zh-tw/
+
+## Claude Usage Monitor 現已在 Mac App Store 上架 (2026-11-02)
+自 2026 年 11 月 2 日起，macOS 版以 「Usage Monitor for Claude AI」 之名在 Apple 的 Mac App Store 上架——經 Apple 審查並簽署，一鍵安裝，由商店自動更新。同一款免費開源 App：5 小時工作階段、每週上限與你的使用速度，直接顯示在選單列。
 
 ## 所有 Claude 使用上限，一眼看清。
 
@@ -46,7 +50,7 @@ Claude Usage Monitor 是一款免費、開放原始碼的桌面小工具，適�
 因為本程式沒有程式碼簽章（憑證要花錢，而程式是免費的）。按「其他資訊」→「仍要執行」即可。你可以用 SHA-256 總和檢查碼驗證下載的檔案，也可以在 GitHub 上閱讀原始碼。
 
 ### 支援哪些 Mac？
-macOS 12 或更新版本。上方的下載卡片一律會標示目前版本適用的處理器。macOS 版是新推出的，非常歡迎提供意見回饋。
+macOS 13 或更新版本。Mac 版來自 Mac App Store，名為「Usage Monitor for Claude AI」——由 Apple 簽署並透過 App Store 更新。macOS 版是新推出的，非常歡迎回饋。
 
 ### 更新是怎麼運作的？
 程式每天會向本網站檢查幾次。有新版本時會通知你；按一下就會下載、驗證並安裝，然後重新啟動。你也可以關閉這項功能。

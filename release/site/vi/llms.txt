@@ -7,7 +7,7 @@ Claude Usage Monitor là tiện ích (widget) máy tính miễn phí, mã nguồ
 Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được tính vào gói của bạn – claude.ai, Claude Desktop và Claude Code, trên tất cả thiết bị. Đây không phải công cụ dòng lệnh “Claude Code Usage Monitor”: đây là bảng có giao diện đồ họa, có biểu tượng ở khay hệ thống và không cần dòng lệnh.
 
 - **Giá**: Miễn phí – bản đầy đủ, không có gói trả phí, không dùng thử
-- **Nền tảng**: Windows 10 / 11 (64-bit) và macOS 12 trở lên
+- **Nền tảng**: Windows 10 / 11 (64-bit) và macOS 13 trở lên
 - **Ngôn ngữ**: 34 ngôn ngữ giao diện
 - **Hiển thị**: Phiên 5 giờ, giới hạn tuần, giới hạn tuần theo mô hình, đếm ngược đến lúc đặt lại, nhịp và tốc độ tiêu hao
 - **Nguồn dữ liệu**: Nhật ký cục bộ của Claude Desktop, hoặc đăng nhập claude.ai để xem mọi thiết bị
@@ -15,11 +15,15 @@ Một ứng dụng cho cả Windows lẫn Mac. Bao quát mọi thứ được t�
 - **Giấy phép**: MIT, mã nguồn mở trên GitHub
 - **Tác giả**: Gábor Vidovics, Hungary – độc lập, không liên kết với Anthropic
 
-- Phiên bản: 2.9.6
+- Phiên bản: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Sắp ra mắt
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/vi/
+
+## Claude Usage Monitor đã có mặt trên Mac App Store (2026-11-02)
+Từ ngày 2 tháng 11 năm 2026, phiên bản macOS đã có trên Mac App Store của Apple với tên “Usage Monitor for Claude AI” – được Apple kiểm tra và ký, cài đặt chỉ với một cú nhấp, cập nhật qua Store. Vẫn là ứng dụng miễn phí, mã nguồn mở quen thuộc: phiên 5 giờ, giới hạn tuần và tốc độ dùng của bạn, ngay trên thanh menu.
 
 ## Mọi giới hạn sử dụng Claude của bạn. Chỉ một cái liếc.
 
@@ -46,7 +50,7 @@ Không bao giờ. Khi chưa đăng nhập, ứng dụng đọc nhật ký cục 
 Vì ứng dụng chưa được ký số (chứng chỉ thì tốn tiền, còn ứng dụng thì miễn phí). Nhấp Thông tin thêm → Vẫn chạy. Bạn có thể xác minh tệp tải về bằng mã băm SHA-256 và đọc mã nguồn trên GitHub.
 
 ### Hỗ trợ những máy Mac nào?
-macOS 12 trở lên. Thẻ tải xuống ở trên luôn cho biết bản dựng hiện tại dành cho bộ xử lý nào. Bản macOS còn mới – rất mong nhận được góp ý của bạn.
+macOS 13 trở lên. Phiên bản Mac đến từ Mac App Store với tên “Usage Monitor for Claude AI” – được Apple ký và cập nhật qua App Store. Phiên bản macOS còn mới – rất mong nhận được phản hồi.
 
 ### Cập nhật hoạt động thế nào?
 Ứng dụng kiểm tra trang này vài lần mỗi ngày. Khi có phiên bản mới, ứng dụng sẽ báo bạn; một cú nhấp là tải xuống, xác minh và cài đặt, rồi khởi động lại. Bạn có thể tắt tính năng này.

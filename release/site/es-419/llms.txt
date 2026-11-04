@@ -7,7 +7,7 @@ Claude Usage Monitor es un widget de escritorio gratuito y de código abierto pa
 Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan: claude.ai, Claude Desktop y Claude Code, en todos tus dispositivos. No es la herramienta de terminal “Claude Code Usage Monitor”: esta es un panel gráfico con ícono en la bandeja del sistema y no necesita línea de comandos.
 
 - **Precio**: Gratis: la versión completa, sin plan de pago ni período de prueba
-- **Plataformas**: Windows 10 / 11 (64 bits) y macOS 12 o posterior
+- **Plataformas**: Windows 10 / 11 (64 bits) y macOS 13 o posterior
 - **Idiomas**: 34 idiomas de interfaz
 - **Qué muestra**: Sesión de 5 horas, límite semanal, límite semanal por modelo, cuenta regresiva hasta el reinicio, ritmo y velocidad de consumo
 - **Fuente de datos**: El registro local de Claude Desktop, o tu inicio de sesión en claude.ai para todos los dispositivos
@@ -15,11 +15,15 @@ Una sola app para Windows y Mac. Cubre todo lo que cuenta para tu plan: claude.a
 - **Licencia**: MIT, código abierto en GitHub
 - **Autor**: Gábor Vidovics, Hungría: independiente, sin afiliación con Anthropic
 
-- Versión: 2.9.6
+- Versión: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: Próximamente
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/es-419/
+
+## Claude Usage Monitor ya está en la Mac App Store (2026-11-02)
+Desde el 2 de noviembre de 2026, la versión para macOS está disponible en la Mac App Store de Apple como “Usage Monitor for Claude AI” : revisada y firmada por Apple, se instala con un clic y la tienda la actualiza sola. Es la misma app gratuita y de código abierto: la sesión de 5 horas, el límite semanal y tu ritmo, directo en la barra de menús.
 
 ## Todos tus límites de uso de Claude, de un vistazo.
 
@@ -46,7 +50,7 @@ Nunca. Sin iniciar sesión, lee el registro local de Claude Desktop. Si quieres 
 Porque la app no tiene firma de código (los certificados cuestan dinero y la app es gratis). Haz clic en Más información → Ejecutar de todas formas. Puedes verificar la descarga con su suma de comprobación SHA-256 y revisar el código en GitHub.
 
 ### ¿Qué Mac son compatibles?
-macOS 12 o posterior. La tarjeta de descarga de arriba siempre indica para qué procesador está compilada la versión actual. La versión para macOS es nueva, así que tus comentarios son muy bienvenidos.
+macOS 13 o posterior. La versión para Mac viene de la Mac App Store como “Usage Monitor for Claude AI”: firmada por Apple y actualizada por la App Store. La versión para macOS es nueva: tus comentarios son muy bienvenidos.
 
 ### ¿Cómo funcionan las actualizaciones?
 La app consulta este sitio algunas veces al día. Cuando hay una versión nueva, te avisa; con un clic la descarga, la verifica, la instala y se reinicia. Puedes desactivarlo.

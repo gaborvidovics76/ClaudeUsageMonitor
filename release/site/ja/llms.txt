@@ -7,7 +7,7 @@ Claude Usage Monitor は、Claude（クロード）のサブスクリプショ�
 Windows と Mac の両方で使える1つのアプリです。claude.ai、Claude Desktop、Claude Code など、プランの使用量にカウントされるものはすべて、お使いのすべてのデバイスの分まで対象になります。ターミナル用ツールの「Claude Code Usage Monitor」とは別物です。こちらは通知領域のアイコンを備えたグラフィカルなパネルで、コマンドラインは必要ありません。
 
 - **価格**: 無料。完全版で、有料プランも試用期間もありません
-- **対応 OS**: Windows 10 / 11（64ビット）、macOS 12 以降
+- **対応 OS**: Windows 10 / 11（64ビット）、macOS 13 以降
 - **言語**: 34の表示言語
 - **表示内容**: 5時間セッション、週間上限、モデル別の週間上限、リセットまでのカウントダウン、ペース、消費速度
 - **データソース**: Claude Desktop のローカルログ、またはすべてのデバイスを対象とする claude.ai へのサインイン
@@ -15,11 +15,15 @@ Windows と Mac の両方で使える1つのアプリです。claude.ai、Claude
 - **ライセンス**: MIT、GitHub でオープンソースとして公開
 - **作者**: Vidovics Gábor（ハンガリー）。独立した個人開発者で、Anthropic とは提携関係にありません
 
-- バージョン: 2.9.6
+- バージョン: 2.9.7
 - Windows: https://claudeusagemonitor.com/usage-api/dl.php?os=win
 - macOS: 近日公開
 - Microsoft Store: https://apps.microsoft.com/detail/9MV20XBFCXTZ
+- Mac App Store: https://apps.apple.com/app/usage-monitor-for-claude-ai/id6820559262?mt=12
 - https://claudeusagemonitor.com/ja/
+
+## Claude Usage MonitorがMac App Storeに登場 (2026-11-02)
+2026年11月2日より、macOS版はAppleのMac App Storeで 「Usage Monitor for Claude AI」 として配信中です。Appleが審査・署名し、ワンクリックでインストール、更新はStoreにおまかせ。無料・オープンソースの同じアプリで、5時間セッション、週間上限、ペースをメニューバーで確認できます。
 
 ## Claude の使用制限を、すべてひと目で。
 
@@ -46,7 +50,7 @@ Windows と Mac の両方で使える1つのアプリです。claude.ai、Claude
 アプリにコード署名がされていないためです（証明書は有料ですが、アプリは無料です）。「詳細情報」→「実行」をクリックしてください。ダウンロードしたファイルは SHA-256 チェックサムで検証でき、ソースコードも GitHub で確認できます。
 
 ### どの Mac に対応していますか？
-macOS 12 以降に対応しています。現在のビルドがどのプロセッサ向けかは、上のダウンロードカードに常に表示されています。macOS 版はリリースされたばかりなので、ご意見を大歓迎します。
+macOS 13以降。Mac版はMac App Storeから「Usage Monitor for Claude AI」として提供され、Appleが署名し、App Store経由で更新されます。macOS版は新しいので、フィードバックを歓迎します。
 
 ### アップデートはどのように行われますか？
 アプリは1日に数回このサイトを確認し、新しいバージョンがあればお知らせします。ワンクリックでダウンロード、検証、インストールを行い、再起動します。この機能はオフにできます。
