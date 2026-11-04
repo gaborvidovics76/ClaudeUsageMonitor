@@ -157,12 +157,14 @@ class MonitorApp:
         self.pulse.timeout.connect(self._pulse)
         self._busy_until = 0.0          # minimum visible duration of the indicator
         self._was_busy = False
-        # a second start of the program asks for the Settings window (the way out of click-through mode)
-        wakeup.consume()                # a stale marker never opens Settings at start
+        # a second start of the program brings the panel to the front (and opens Settings in click-through mode);
+        # the same 1 s poll puts the always-on-top flag back when Windows drops it
+        wakeup.consume()                # a stale marker never acts at start
         self.wake = QTimer()
         self.wake.setInterval(1000)
         self.wake.timeout.connect(self._poll_wakeup)
         self.wake.start()
+        self._topmost_fixes = 0
         self._click_through_was = bool(self.settings["click_through"])
         self.apply_settings()
         self.refresh()
@@ -765,14 +767,30 @@ class MonitorApp:
     def toggle_widget(self) -> None:
         self.settings["visible"] = not bool(self.settings["visible"])
         self.settings.save()
-        self.widget.setVisible(bool(self.settings["visible"]))
         if self.settings["visible"]:
-            self.widget.raise_()
+            self.widget.bring_to_front()
+        else:
+            self.widget.hide()
+
+    def show_panel(self) -> None:
+        """The panel back in front - also when it was hidden from the menu, minimised or pushed off-screen."""
+        if not self.settings["visible"]:
+            self.settings["visible"] = True
+            self.settings.save()
+        self.widget.bring_to_front()
 
     def _poll_wakeup(self) -> None:
         if wakeup.consume():
-            log("wake-up: a second start asked for the Settings window")
-            self.show_settings()
+            click_through = bool(self.settings["click_through"])
+            log("wake-up: a second start - panel to the front" + (" and Settings (click-through mode)" if click_through else ""))
+            self.show_panel()
+            if click_through:
+                self.show_settings()
+            return
+        if self.settings["visible"] and self.widget.keep_on_top():
+            self._topmost_fixes += 1
+            if self._topmost_fixes <= 3:
+                log("always on top: Windows had dropped the topmost flag - put back")
 
     def show_settings(self) -> None:
         if self.dialog is not None and self.dialog.isVisible():
@@ -909,10 +927,12 @@ def run() -> int:
             # orphan, while a segment that a live instance holds survives this.
             lock.detach()
         if lock.attach():
-            # the running instance opens its Settings - the way back from click-through mode
+            # the running instance brings its panel to the front (and opens Settings in click-through mode):
+            # no message box - the panel appearing is the answer. The box stays only when the marker cannot be left.
             asked = wakeup.request()
-            log(f"another instance is already running, exiting (settings requested: {asked})")
-            QMessageBox.information(None, APP_TITLE, tr("err.already_running_settings" if asked else "err.already_running"))
+            log(f"another instance is already running, exiting (wake-up requested: {asked})")
+            if not asked:
+                QMessageBox.information(None, APP_TITLE, tr("err.already_running"))
             return 0
         lock.create(1)
         app._lock = lock
