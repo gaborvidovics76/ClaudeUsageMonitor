@@ -13,7 +13,7 @@ import sys
 from typing import Optional
 
 BRAND = "Claude Usage Monitor"                  # the website / ZIP install
-STORE_NAME = "Usage Monitor for Claude AI"      # = packaging\msix\identity.json "display_name" (Partner Center)
+STORE_NAME = "Usage Limit Monitor"      # = packaging\msix\identity.json "display_name" (Partner Center)
 STORE_ID = "9MV20XBFCXTZ"                       # Partner Center > Product identity > Store ID
 STORE_URL = f"https://apps.microsoft.com/detail/{STORE_ID}"
 
