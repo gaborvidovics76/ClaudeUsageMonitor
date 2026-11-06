@@ -1,6 +1,6 @@
-# Microsoft Store – listing texts (Usage Monitor for Claude AI)
+# Microsoft Store – listing texts (Usage Limit Monitor)
 
-Partner Center > Usage Monitor for Claude AI > Submission > Store listings > <language>.
+Partner Center > Usage Limit Monitor > Submission > Store listings > <language>.
 Four listing languages: English (United States), Hungarian, German, French. For every language:
 
 | Field | Value |
@@ -37,7 +37,7 @@ Unofficial community tool, not affiliated with or endorsed by Anthropic. "Claude
 See how much of your Claude subscription you have used – 5-hour and weekly limits, reset times and pace, always on top.
 ```
 
-**Search terms** (one per box): `claude` · `usage` · `limits` · `monitor` · `anthropic` · `quota` · `tray`
+**Search terms** (one per box): `usage` · `limits` · `monitor` · `quota` · `tray`
 
 **Copyright and trademark info**
 
@@ -72,7 +72,7 @@ Nem hivatalos közösségi eszköz, nem kapcsolódik az Anthropichoz, és az Ant
 Lásd, mennyit használtál el a Claude-előfizetésedből – 5 órás és heti limit, visszaállás, tempó, mindig felül.
 ```
 
-**Search terms**: `claude` · `használat` · `limit` · `monitor` · `anthropic` · `kvóta` · `tálca`
+**Search terms**: `használat` · `limit` · `monitor` · `kvóta` · `tálca`
 
 **Copyright and trademark info**
 
@@ -107,7 +107,7 @@ Inoffizielles Community-Tool, nicht mit Anthropic verbunden und nicht von Anthro
 Sieh, wie viel deines Claude-Abos verbraucht ist – 5-Stunden- und Wochenlimit, Zurücksetzung und Tempo, immer im Vordergrund.
 ```
 
-**Search terms**: `claude` · `nutzung` · `limits` · `monitor` · `anthropic` · `kontingent` · `taskleiste`
+**Search terms**: `nutzung` · `limits` · `monitor` · `kontingent` · `taskleiste`
 
 **Copyright and trademark info**
 
@@ -142,7 +142,7 @@ Outil communautaire non officiel, sans lien avec Anthropic et non approuvé par 
 Voyez quelle part de votre abonnement Claude est utilisée – limites de 5 heures et hebdomadaire, réinitialisation et rythme.
 ```
 
-**Search terms**: `claude` · `utilisation` · `limites` · `moniteur` · `anthropic` · `quota` · `barre des tâches`
+**Search terms**: `utilisation` · `limites` · `moniteur` · `quota` · `barre des tâches`
 
 **Copyright and trademark info**
 

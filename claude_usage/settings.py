@@ -11,7 +11,7 @@ from .datasource import default_data_path
 from .store import app_title
 
 APP_NAME = "ClaudeUsageMonitor"
-APP_TITLE = app_title()               # "Usage Monitor for Claude AI" inside the Microsoft Store package
+APP_TITLE = app_title()               # "Usage Limit Monitor" inside the Microsoft Store package
 
 
 def user_data_root() -> str:

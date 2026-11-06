@@ -179,85 +179,85 @@ STRINGS_THANKS = {
                  "它。這需要信任，對我來說意義非凡。",
     },
     "thanks.p2": {
-        "en": "Good news: it's now in the Microsoft Store as “Usage Monitor for Claude AI”, checked and signed by "
+        "en": "Good news: it's now in the Microsoft Store as “Usage Limit Monitor”, checked and signed by "
               "Microsoft. No more blue warning, and the Store keeps it up to date.",
-        "bg": "Добра новина: програмата вече е в Microsoft Store под името „Usage Monitor for Claude AI“, проверена "
+        "bg": "Добра новина: програмата вече е в Microsoft Store под името „Usage Limit Monitor“, проверена "
               "и подписана от Microsoft. Край на синьото предупреждение, а Store се грижи за обновяванията.",
-        "cs": "Dobrá zpráva: program je teď v Microsoft Storu jako „Usage Monitor for Claude AI“, ověřený a "
+        "cs": "Dobrá zpráva: program je teď v Microsoft Storu jako „Usage Limit Monitor“, ověřený a "
               "podepsaný Microsoftem. Žádné modré varování a aktualizace obstarává Store.",
-        "da": "Gode nyheder: Programmet findes nu i Microsoft Store som “Usage Monitor for Claude AI”, kontrolleret "
+        "da": "Gode nyheder: Programmet findes nu i Microsoft Store som “Usage Limit Monitor”, kontrolleret "
               "og signeret af Microsoft. Ikke flere blå advarsler, og Store holder det opdateret.",
-        "de": "Gute Nachricht: Das Programm gibt es jetzt im Microsoft Store als „Usage Monitor for Claude AI“, "
+        "de": "Gute Nachricht: Das Programm gibt es jetzt im Microsoft Store als „Usage Limit Monitor“, "
               "geprüft und signiert von Microsoft. Keine blaue Warnung mehr, und der Store hält es aktuell.",
-        "et": "Hea uudis: programm on nüüd Microsoft Store'is nime all „Usage Monitor for Claude AI“, Microsofti "
+        "et": "Hea uudis: programm on nüüd Microsoft Store'is nime all „Usage Limit Monitor“, Microsofti "
               "kontrollitud ja allkirjastatud. Pole enam sinist hoiatust ning värskendused toob Store.",
-        "el": "Καλά νέα: το πρόγραμμα βρίσκεται πλέον στο Microsoft Store με το όνομα «Usage Monitor for Claude AI», "
+        "el": "Καλά νέα: το πρόγραμμα βρίσκεται πλέον στο Microsoft Store με το όνομα «Usage Limit Monitor», "
               "ελεγμένο και υπογεγραμμένο από τη Microsoft. Τέλος η μπλε προειδοποίηση, και το Store το κρατά "
               "ενημερωμένο.",
-        "es-ES": "Buenas noticias: el programa ya está en Microsoft Store como «Usage Monitor for Claude AI», "
+        "es-ES": "Buenas noticias: el programa ya está en Microsoft Store como «Usage Limit Monitor», "
                  "revisado y firmado por Microsoft. Se acabó el aviso azul, y la Store lo mantiene actualizado.",
-        "es-419": "Buenas noticias: el programa ya está en Microsoft Store como “Usage Monitor for Claude AI”, "
+        "es-419": "Buenas noticias: el programa ya está en Microsoft Store como “Usage Limit Monitor”, "
                   "revisado y firmado por Microsoft. Se acabó la advertencia azul, y la Store lo mantiene "
                   "actualizado.",
-        "fr": "Bonne nouvelle : le programme est désormais dans le Microsoft Store sous le nom « Usage Monitor for "
-              "Claude AI », vérifié et signé par Microsoft. Plus d'avertissement bleu, et le Store le tient à jour.",
-        "ga": "Dea-scéal: tá an clár anois i Microsoft Store faoin ainm “Usage Monitor for Claude AI”, seiceáilte "
+        "fr": "Bonne nouvelle : le programme est désormais dans le Microsoft Store sous le nom « Usage Limit Monitor », "
+              "vérifié et signé par Microsoft. Plus d'avertissement bleu, et le Store le tient à jour.",
+        "ga": "Dea-scéal: tá an clár anois i Microsoft Store faoin ainm “Usage Limit Monitor”, seiceáilte "
               "agus sínithe ag Microsoft. Níl aon rabhadh gorm ann níos mó, agus coinníonn an Store cothrom le dáta "
               "é.",
-        "hr": "Dobre vijesti: program je sada u trgovini Microsoft Store pod imenom „Usage Monitor for Claude AI”, "
+        "hr": "Dobre vijesti: program je sada u trgovini Microsoft Store pod imenom „Usage Limit Monitor”, "
               "provjeren i potpisan od Microsofta. Nema više plavog upozorenja, a Store se brine za ažuriranja.",
-        "id": "Kabar baik: program ini kini tersedia di Microsoft Store dengan nama “Usage Monitor for Claude AI”, "
+        "id": "Kabar baik: program ini kini tersedia di Microsoft Store dengan nama “Usage Limit Monitor”, "
               "diperiksa dan ditandatangani oleh Microsoft. Tidak ada lagi peringatan biru, dan Store menjaganya "
               "tetap mutakhir.",
-        "it": "Buone notizie: il programma ora è nel Microsoft Store come “Usage Monitor for Claude AI”, verificato "
+        "it": "Buone notizie: il programma ora è nel Microsoft Store come “Usage Limit Monitor”, verificato "
               "e firmato da Microsoft. Niente più avviso blu, e lo Store lo mantiene aggiornato.",
-        "lv": "Labas ziņas: programma tagad ir pieejama Microsoft Store ar nosaukumu “Usage Monitor for Claude AI”, "
+        "lv": "Labas ziņas: programma tagad ir pieejama Microsoft Store ar nosaukumu “Usage Limit Monitor”, "
               "Microsoft pārbaudīta un parakstīta. Vairs nekādu zilo brīdinājumu, un par atjauninājumiem rūpējas "
               "Store.",
-        "lt": "Gera žinia: programa dabar yra Microsoft Store pavadinimu „Usage Monitor for Claude AI“, patikrinta "
+        "lt": "Gera žinia: programa dabar yra Microsoft Store pavadinimu „Usage Limit Monitor“, patikrinta "
               "ir pasirašyta Microsoft. Jokių mėlynų įspėjimų, o naujinimais pasirūpina Store.",
-        "hu": "Jó hír: a program most már a Microsoft Store-ban is megvan „Usage Monitor for Claude AI” néven, a "
+        "hu": "Jó hír: a program most már a Microsoft Store-ban is megvan „Usage Limit Monitor” néven, a "
               "Microsoft által ellenőrizve és aláírva. Nincs több kék figyelmeztetés, a frissítéseket pedig a Store "
               "hozza.",
-        "mt": "Aħbar tajba: il-programm issa jinsab fil-Microsoft Store bl-isem “Usage Monitor for Claude AI”, "
+        "mt": "Aħbar tajba: il-programm issa jinsab fil-Microsoft Store bl-isem “Usage Limit Monitor”, "
               "ivverifikat u ffirmat minn Microsoft. M'hemmx aktar twissija blu, u l-Store iżommu aġġornat.",
-        "nl": "Goed nieuws: het programma staat nu in de Microsoft Store als ‘Usage Monitor for Claude AI’, "
+        "nl": "Goed nieuws: het programma staat nu in de Microsoft Store als ‘Usage Limit Monitor’, "
               "gecontroleerd en ondertekend door Microsoft. Geen blauwe waarschuwing meer, en de Store houdt het "
               "up-to-date.",
-        "pl": "Dobra wiadomość: program jest teraz w Microsoft Store jako „Usage Monitor for Claude AI”, sprawdzony "
+        "pl": "Dobra wiadomość: program jest teraz w Microsoft Store jako „Usage Limit Monitor”, sprawdzony "
               "i podpisany przez Microsoft. Koniec z niebieskim ostrzeżeniem, a Store sam dba o aktualizacje.",
-        "pt-BR": "Boa notícia: o programa agora está na Microsoft Store como “Usage Monitor for Claude AI”, "
+        "pt-BR": "Boa notícia: o programa agora está na Microsoft Store como “Usage Limit Monitor”, "
                  "verificado e assinado pela Microsoft. Chega de aviso azul, e a Store mantém tudo atualizado.",
-        "pt-PT": "Boa notícia: o programa já está na Microsoft Store como «Usage Monitor for Claude AI», verificado "
+        "pt-PT": "Boa notícia: o programa já está na Microsoft Store como «Usage Limit Monitor», verificado "
                  "e assinado pela Microsoft. Acabou o aviso azul, e a Store mantém-no atualizado.",
-        "ro": "Vești bune: programul este acum în Microsoft Store sub numele „Usage Monitor for Claude AI”, "
+        "ro": "Vești bune: programul este acum în Microsoft Store sub numele „Usage Limit Monitor”, "
               "verificat și semnat de Microsoft. Gata cu avertismentul albastru, iar Store-ul îl ține la zi.",
-        "ru": "Хорошая новость: программа теперь есть в Microsoft Store под названием «Usage Monitor for Claude AI» "
+        "ru": "Хорошая новость: программа теперь есть в Microsoft Store под названием «Usage Limit Monitor» "
               "– проверенная и подписанная Microsoft. Больше никаких синих предупреждений, а обновления приходят "
               "через Store.",
-        "sk": "Dobrá správa: program je teraz v Microsoft Store ako „Usage Monitor for Claude AI“, overený a "
+        "sk": "Dobrá správa: program je teraz v Microsoft Store ako „Usage Limit Monitor“, overený a "
               "podpísaný spoločnosťou Microsoft. Žiadne modré varovanie a o aktualizácie sa stará Store.",
-        "sl": "Dobra novica: program je zdaj v trgovini Microsoft Store z imenom »Usage Monitor for Claude AI«, "
+        "sl": "Dobra novica: program je zdaj v trgovini Microsoft Store z imenom »Usage Limit Monitor«, "
               "preverjen in podpisan s strani Microsofta. Nič več modrega opozorila, za posodobitve pa skrbi Store.",
-        "fi": "Hyviä uutisia: ohjelma löytyy nyt Microsoft Storesta nimellä ”Usage Monitor for Claude AI”, "
+        "fi": "Hyviä uutisia: ohjelma löytyy nyt Microsoft Storesta nimellä ”Usage Limit Monitor”, "
               "Microsoftin tarkistamana ja allekirjoittamana. Ei enää sinistä varoitusta, ja Store pitää sen ajan "
               "tasalla.",
-        "sv": "Goda nyheter: programmet finns nu i Microsoft Store som ”Usage Monitor for Claude AI”, granskat och "
+        "sv": "Goda nyheter: programmet finns nu i Microsoft Store som ”Usage Limit Monitor”, granskat och "
               "signerat av Microsoft. Inga fler blå varningar, och Store håller det uppdaterat.",
-        "tr": "Güzel haber: program artık Microsoft Store'da “Usage Monitor for Claude AI” adıyla, Microsoft "
+        "tr": "Güzel haber: program artık Microsoft Store'da “Usage Limit Monitor” adıyla, Microsoft "
               "tarafından denetlenmiş ve imzalanmış olarak yer alıyor. Mavi uyarı yok, güncellemeleri de Store "
               "getiriyor.",
-        "vi": "Tin vui: chương trình nay đã có trên Microsoft Store với tên “Usage Monitor for Claude AI”, được "
+        "vi": "Tin vui: chương trình nay đã có trên Microsoft Store với tên “Usage Limit Monitor”, được "
               "Microsoft kiểm tra và ký. Không còn cảnh báo màu xanh, và Store sẽ tự cập nhật cho bạn.",
-        "ja": "うれしいお知らせです。このプログラムは「Usage Monitor for Claude AI」という名前で Microsoft Store "
+        "ja": "うれしいお知らせです。このプログラムは「Usage Limit Monitor」という名前で Microsoft Store "
               "から入手できるようになりました。Microsoft が確認し、署名しています。青い警告はもう表示されず、更新も "
               "Store が届けてくれます。",
-        "ko": "좋은 소식이 있어요. 이제 Microsoft Store에서 “Usage Monitor for Claude AI”라는 이름으로 만나실 수 "
+        "ko": "좋은 소식이 있어요. 이제 Microsoft Store에서 “Usage Limit Monitor”라는 이름으로 만나실 수 "
               "있어요. Microsoft가 검사하고 서명했어요. 더 이상 파란 경고는 없고, 업데이트는 Store가 알아서 해 "
               "드려요.",
-        "zh-CN": "好消息：这个程序现在已上架 Microsoft Store，名称为“Usage Monitor for Claude AI”，经过 Microsoft "
+        "zh-CN": "好消息：这个程序现在已上架 Microsoft Store，名称为“Usage Limit Monitor”，经过 Microsoft "
                  "审核并签名。不会再有蓝色警告，更新也由 Store 负责。",
-        "zh-TW": "好訊息：這個程式現在已在 Microsoft Store 上架，名稱為「Usage Monitor for Claude AI」，經過 "
+        "zh-TW": "好訊息：這個程式現在已在 Microsoft Store 上架，名稱為「Usage Limit Monitor」，經過 "
                  "Microsoft 審核並簽署。不會再有藍色警告，更新也由 Store 負責。",
     },
     "thanks.tip": {

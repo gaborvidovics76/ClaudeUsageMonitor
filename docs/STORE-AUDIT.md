@@ -60,7 +60,7 @@ a te gépeden / a Partner Centerben ellenőrizhető.
 **Notes for certification** (angol; a tesztelőnek szól):
 
 ```
-Usage Monitor for Claude AI is a utility for subscribers of Anthropic's Claude (Pro/Max/Team). It shows the
+Usage Limit Monitor is a utility for subscribers of Anthropic's Claude (Pro/Max/Team). It shows the
 subscription's usage limits in an always-on-top panel and a tray icon. (On the developer's website the same
 open-source program is called "Claude Usage Monitor"; inside this package it uses the Store name everywhere.)
 
